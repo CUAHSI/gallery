@@ -40,7 +40,7 @@ extensions = ['sphinx.ext.todo',
     'sphinx.ext.napoleon',
     'sphinx.ext.graphviz',
     'sphinx.ext.intersphinx',
-    'sphinxcontrib.exceltable',
+#    'sphinxcontrib.exceltable',
     'sphinxcontrib.matlab',
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
@@ -48,16 +48,10 @@ extensions = ['sphinx.ext.todo',
     'sphinxcontrib.images',
     'sphinx_git',
     'nbsphinx',
-    'sphinx_gallery.load_style',
     'sphinx.ext.mathjax',
     'sphinx_gallery.load_style',
     'sphinx_copybutton',
     'sphinxcontrib.bibtex',
-   
- 
-              
-    
-              
 ]
 
 
