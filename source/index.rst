@@ -96,3 +96,5 @@ In order for a gallery example to be included, the code must be written in:
     .. nbwarning:: **Jupyter Notebook:** `Simple Analysis <./simple-analysis.ipynb>`_.
 
 
+.. tagtoctree::
+   ::maxdepth: 2

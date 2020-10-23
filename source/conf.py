@@ -53,6 +53,7 @@ extensions = ['sphinx.ext.todo',
     'sphinx_gallery.load_style',
     'sphinx_copybutton',
     'sphinxcontrib.bibtex',
+    'sphinx_tagtoctree', 
    
  
               
@@ -66,6 +67,8 @@ nbsphinx_thumbnails = {
     'gallery/thumbnail-from-conf-py': 'gallery/a-local-file.png',
    
 }
+
+tagtoctree_tag = 'tagtoctree'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
