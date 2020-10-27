@@ -1,13 +1,10 @@
 .. _plot_PythonJupyter:
 
-==========================
-Python Jupyter Notebooks
-==========================
 
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_auto_examples_PythonJupyter_plot_PythonJupyter.py>`     to download the full example code
+        Click :ref:`here <sphx_glr_download_auto_examples_PythonJupyter_plot_PythonJupyter.py>`     to download the full example code or to run this example in your browser via Binder
     .. rst-class:: sphx-glr-example-title
 
     .. _sphx_glr_auto_examples_PythonJupyter_plot_PythonJupyter.py:
@@ -180,7 +177,7 @@ That's all folks !
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.002 seconds)
+   **Total running time of the script:** ( 0 minutes  0.003 seconds)
 
 
 .. _sphx_glr_download_auto_examples_PythonJupyter_plot_PythonJupyter.py:
@@ -191,6 +188,13 @@ That's all folks !
  .. container:: sphx-glr-footer
     :class: sphx-glr-footer-example
 
+
+  .. container:: binder-badge
+
+    .. image:: images/binder_badge_logo.svg
+      :target: https://mybinder.org/v2/gh/CUAHSI/gallery/master?filepath=notebooks/auto_examples/PythonJupyter/plot_PythonJupyter.ipynb
+      :alt: Launch binder
+      :width: 150 px
 
 
   .. container:: sphx-glr-download sphx-glr-download-python

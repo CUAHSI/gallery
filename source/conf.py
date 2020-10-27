@@ -76,10 +76,11 @@ sphinx_gallery_conf = {
      'gallery_dirs': 'auto_examples',# path to where to save gallery generated output
      'plot_gallery': 'True',
      'download_all_examples': 'True',
-'doc_module': ('sphinx_gallery', 'numpy'),
-    'reference_url': {
-        'sphinx_gallery': None,
-    },
+     'first_notebook_cell': ("# This cell is added by sphinx-gallery\n"
+                            "# It can be customized to whatever you like\n"
+                            "%matplotlib inline"),
+
+    
 
 
 'binder': {
@@ -91,13 +92,9 @@ sphinx_gallery_conf = {
      'dependencies': './binder/requirements.txt',
      # Optional keys
     # 'filepath_prefix': '<prefix>' # A prefix to prepend to any filepaths in Binder links.
-     'notebooks_dir': 'notebooks' # Jupyter notebooks for Binder will be copied to this directory (relative to built documentation root).
+     'notebooks_dir': 'notebooks', # Jupyter notebooks for Binder will be copied to this directory (relative to built documentation root).
     # 'use_jupyter_lab': <bool> # Whether Binder links should start Jupyter Lab instead of the Jupyter Notebook interface.
-     },
-
-
-
-
+     }
 
 
      

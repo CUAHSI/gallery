@@ -1,14 +1,15 @@
 
-====================
-CUAHSI Gallery Types
-====================
+===================================
+CUAHSI Compute and Modeling Gallery
+===================================
 
 .. image:: officiallogo.png
-   :scale: 15 %
+   :scale: 20 %
    :align: right
 
 
 .. toctree::
+   :caption: Table of Contents
    :maxdepth: 2
    :titlesonly:
    :numbered:
@@ -21,8 +22,8 @@ CUAHSI Gallery Types
 
 
 
-Indices and tables
-==================
+Gallery Mission Statement and Purpose
+=====================================
 
 .. sidebar:: **Navigation**
    :subtitle: Content Categories
@@ -39,15 +40,6 @@ Indices and tables
 
 .. _some-label-name:
 
-Gallery Example Criteria
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-In order for a gallery example to be included, the code must be written in:
-
-* Python-Jupyter Notebooks
-* R-Jupyter Notebooks
-* R-Shiny App
-* MATLAB Live Scripts
 
 |GitHub forks|
 
@@ -55,26 +47,6 @@ In order for a gallery example to be included, the code must be written in:
    :target: https://github.com/gdg12/Environmental_Data_Analytics/network
 
 
-**Code Block**::
-
-   import math
-   print 'import done'
-
-
-**Cakes**
-
-.. image:: Cake.jpg
-   :width: 300
-   :align: center
-
-**Figure 1**: This is a delicious rainbow sprinkles cake that will take hours to bake and frost.
-
-.. caution:: This is a simple Warning note.
-
-.. exceltable:: LAGOS Data
-   :file: LAGOStrophic.xls
-   :header: 1
-   :selection: A1:G50
 
 
 .. nbinfo::
@@ -87,5 +59,4 @@ In order for a gallery example to be included, the code must be written in:
     .. nbwarning:: **Jupyter Notebook:** `Simple Analysis <./simple-analysis.ipynb>`_.
 
 
-.. tagtoctree::
-   ::maxdepth: 2
+
