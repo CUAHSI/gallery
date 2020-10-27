@@ -15,6 +15,7 @@
 # sys.path.insert(0, os.path.abspath('.'))
 
 
+
 # -- Project information -----------------------------------------------------
 
 project = 'BuildDocs'
@@ -53,7 +54,7 @@ extensions = ['sphinx.ext.todo',
     'sphinx_gallery.load_style',
     'sphinx_copybutton',
     'sphinxcontrib.bibtex',
-              'sphinx_gallery.gen_gallery',
+    'sphinx_gallery.gen_gallery',
  
    
  
@@ -64,10 +65,7 @@ extensions = ['sphinx.ext.todo',
 
 
 
-nbsphinx_thumbnails = {
-    'gallery/thumbnail-from-conf-py': 'gallery/a-local-file.png',
-   
-}
+
 
 tagtoctree_tag = 'tagtoctree'
 
@@ -75,7 +73,34 @@ tagtoctree_tag = 'tagtoctree'
 
 sphinx_gallery_conf = {
      'examples_dirs': '../examples',   # path to your example scripts
-     'gallery_dirs': 'auto_examples',  # path to where to save gallery generated output
+     'gallery_dirs': 'auto_examples',# path to where to save gallery generated output
+     'plot_gallery': 'True',
+     'download_all_examples': 'True',
+'doc_module': ('sphinx_gallery', 'numpy'),
+    'reference_url': {
+        'sphinx_gallery': None,
+    },
+
+
+'binder': {
+     # Required keys
+     'org': 'CUAHSI',
+     'repo': 'gallery',
+     'branch': 'master',  # Can be any branch, tag, or commit hash. Use a branch that hosts your docs.
+     'binderhub_url': 'https://mybinder.org',  # Any URL of a binderhub deployment. Must be full URL (e.g. https://mybinder.org).
+     'dependencies': './binder/requirements.txt',
+     # Optional keys
+    # 'filepath_prefix': '<prefix>' # A prefix to prepend to any filepaths in Binder links.
+     'notebooks_dir': 'notebooks' # Jupyter notebooks for Binder will be copied to this directory (relative to built documentation root).
+    # 'use_jupyter_lab': <bool> # Whether Binder links should start Jupyter Lab instead of the Jupyter Notebook interface.
+     },
+
+
+
+
+
+
+     
 }
 
 # Add any paths that contain templates here, relative to this directory.

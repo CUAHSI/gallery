@@ -1,11 +1,3 @@
- BuildDocs documentation master file, created by
-   sphinx-quickstart on Mon Oct  5 13:03:41 2020.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-
-
-
 
 ====================
 CUAHSI Gallery Types
@@ -17,15 +9,14 @@ CUAHSI Gallery Types
 
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :titlesonly:
-   :hidden:
    :numbered:
 
-   RShiny
-   RJupyter
-   PythonJupyter
-   Matlab
+   plot_RShiny
+   plot_RJupyter
+   plot_PythonJupyter
+   plot_MATLAB
 
 
 
@@ -34,13 +25,13 @@ Indices and tables
 ==================
 
 .. sidebar:: **Navigation**
-   :subtitle: Categories
+   :subtitle: Content Categories
 
 
-   * :ref:`genindex`
-   * :ref:`modindex`
-   * :ref:`search`
-   * :ref:`RShiny`
+   * :ref:`plot_MATLAB`
+   * :ref:`plot_PythonJupyter`
+   * :ref:`plot_RJupyter`
+   * :ref:`plot_RShiny`
 
 
 `For a comprehensive reference on reStructuredText <https://docs.typo3.org/m/typo3/docs-how-to-document/master/en-us/WritingReST/Index.html/>`_
