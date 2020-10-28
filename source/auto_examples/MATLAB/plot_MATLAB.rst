@@ -1,27 +1,17 @@
 .. _plot_MATLAB:
 
 ===================
-MATLAB Live Scripts
+MATLAB LIVE SCRIPTS
 ===================
 
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_auto_examples_MATLAB_plot_MATLAB.py>`     to download the full example code
+        Click :ref:`here <sphx_glr_download_auto_examples_MATLAB_plot_MATLAB.py>`     to download the full example code or to run this example in your browser via Binder
     .. rst-class:: sphx-glr-example-title
 
     .. _sphx_glr_auto_examples_MATLAB_plot_MATLAB.py:
 
-
-
-.. sidebar:: **Navigation**
-   :subtitle: Categories
-
-
-   * :ref:`genindex`
-   * :ref:`modindex`
-   * :ref:`search`
-   * :ref:`RShiny`
 
 Alternating text and code
 =========================
@@ -30,15 +20,15 @@ Sphinx-Gallery is capable of transforming Python files into rST files
 with a notebook structure. For this to be used you need to respect some syntax
 rules. This example demonstrates how to alternate text and code blocks and some
 edge cases. It was designed to be compared with the
-:download:`source Python script <plot_parse.py>`.
-
-This is the first text block and directly follows the header docstring above.
+:download:`source Python script <plot_MATLAB.py>`.
 
 
 .. code-block:: default
 
 
+
     import numpy as np
+
 
 
 
@@ -183,14 +173,14 @@ Last text block.
 
 That's all folks !
 
-.. literalinclude:: plot_parse.py
+.. literalinclude:: plot_MATLAB.py
 
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.002 seconds)
+   **Total running time of the script:** ( 0 minutes  0.003 seconds)
 
 
 .. _sphx_glr_download_auto_examples_MATLAB_plot_MATLAB.py:
@@ -201,6 +191,13 @@ That's all folks !
  .. container:: sphx-glr-footer
     :class: sphx-glr-footer-example
 
+
+  .. container:: binder-badge
+
+    .. image:: images/binder_badge_logo.svg
+      :target: https://mybinder.org/v2/gh/CUAHSI/gallery/master?filepath=notebooks/auto_examples/MATLAB/plot_MATLAB.ipynb
+      :alt: Launch binder
+      :width: 150 px
 
 
   .. container:: sphx-glr-download sphx-glr-download-python

@@ -1,7 +1,10 @@
 .. _plot_PythonJupyter:
 
+========================
+Python Jupyter Notebooks
+========================
 
-    .. note::
+   .. note::
         :class: sphx-glr-download-link-note
 
         Click :ref:`here <sphx_glr_download_auto_examples_PythonJupyter_plot_PythonJupyter.py>`     to download the full example code or to run this example in your browser via Binder
@@ -17,7 +20,7 @@ Sphinx-Gallery is capable of transforming Python files into rST files
 with a notebook structure. For this to be used you need to respect some syntax
 rules. This example demonstrates how to alternate text and code blocks and some
 edge cases. It was designed to be compared with the
-:download:`source Python script <plot_parse.py>`.
+:download:`source Python script <plot_PythonJupyter.py>`.
 
 This is the first text block and directly follows the header docstring above.
 
@@ -170,14 +173,14 @@ Last text block.
 
 That's all folks !
 
-.. literalinclude:: plot_parse.py
+.. literalinclude:: plot_PythonJupyter.py
 
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.003 seconds)
+   **Total running time of the script:** ( 0 minutes  0.002 seconds)
 
 
 .. _sphx_glr_download_auto_examples_PythonJupyter_plot_PythonJupyter.py:

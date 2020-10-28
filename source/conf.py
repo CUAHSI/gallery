@@ -13,7 +13,8 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
-
+import sys
+from sphinx_gallery.sorting import FileNameSortKey
 
 
 # -- Project information -----------------------------------------------------
@@ -55,23 +56,23 @@ extensions = ['sphinx.ext.todo',
     'sphinx_copybutton',
     'sphinxcontrib.bibtex',
     'sphinx_gallery.gen_gallery',
+
  
-   
- 
-              
-    
               
 ]
 
 
 
-
+# Generate Autosummary even if no references
+autosummary_generate = 'True'
 
 tagtoctree_tag = 'tagtoctree'
 
 # Sphinx Gallery
 
+
 sphinx_gallery_conf = {
+    
      'examples_dirs': '../examples',   # path to your example scripts
      'gallery_dirs': 'auto_examples',# path to where to save gallery generated output
      'plot_gallery': 'True',
@@ -79,8 +80,6 @@ sphinx_gallery_conf = {
      'first_notebook_cell': ("# This cell is added by sphinx-gallery\n"
                             "# It can be customized to whatever you like\n"
                             "%matplotlib inline"),
-
-    
 
 
 'binder': {
@@ -94,11 +93,13 @@ sphinx_gallery_conf = {
     # 'filepath_prefix': '<prefix>' # A prefix to prepend to any filepaths in Binder links.
      'notebooks_dir': 'notebooks', # Jupyter notebooks for Binder will be copied to this directory (relative to built documentation root).
     # 'use_jupyter_lab': <bool> # Whether Binder links should start Jupyter Lab instead of the Jupyter Notebook interface.
-     }
+     },
 
 
      
 }
+
+plot_gallery= 'True'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -106,7 +107,7 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = []
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
@@ -132,6 +133,11 @@ html_theme_options = {
     'github_type': 'fork',
 }
 
+
+html_sidebars = {
+   '**': ['globaltoc.html', 'sourcelink.html', 'searchbox.html'],
+   'using/windows': ['windowssidebar.html', 'searchbox.html'],
+}
 
 html_context = {
     "display_github": True,  # Integrate GitHub

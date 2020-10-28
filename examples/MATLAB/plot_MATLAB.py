@@ -11,9 +11,10 @@ edge cases. It was designed to be compared with the
 
 
 # %%
-# This is the first text block and directly follows the header docstring above.
+
 
 import numpy as np
+
 
 # %%
 
