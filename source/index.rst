@@ -51,7 +51,7 @@ CUAHSI Compute and Modeling Gallery
 
     Community examples using the Python programming language. This includes both Python scripts as well as Python Jupyter notebooks.
 
-    .. link-button:: examples/python
+    .. link-button:: python-gallery
         :type: ref
         :text: Python Gallery
         :classes: btn-outline-primary btn-block stretched-link
@@ -76,4 +76,14 @@ CUAHSI Compute and Modeling Gallery
         :classes: btn-outline-primary btn-block stretched-link
 
 
+..
+    This is an example of a subgallery panel
+    ---
+    :img-top: _static/r-logo.jpeg
+
+
+    .. link-button:: examples/r
+        :type: ref
+        :text: Spatial Plotting with RGdal
+        :classes: btn-block stretched-link
 

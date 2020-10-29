@@ -53,7 +53,7 @@ extensions = ['sphinx.ext.todo',
     'sphinx.ext.mathjax',
     'sphinx_copybutton',
     'sphinxcontrib.bibtex',
-    'sphinx_gallery.gen_gallery',
+#    'sphinx_gallery.gen_gallery',
     'sphinx_panels',
 ]
 
@@ -64,20 +64,20 @@ autosummary_generate = True
 
 tagtoctree_tag = 'tagtoctree'
 
-# Sphinx Gallery
-
-
-sphinx_gallery_conf = {
-    
-     'examples_dirs': ['../examples/python'],   # path to your example scripts
-     'gallery_dirs': 'examples',# path to where to save gallery generated output
-     'plot_gallery': 'True',
-     'download_all_examples': 'True',
-     'first_notebook_cell': ("# This cell is added by sphinx-gallery\n"
-                            "# It can be customized to whatever you like\n"
-                            "%matplotlib inline"),
-
-
+## Sphinx Gallery
+#
+#
+#sphinx_gallery_conf = {
+#    
+#     'examples_dirs': ['../examples/python'],   # path to your example scripts
+#     'gallery_dirs': 'examples',# path to where to save gallery generated output
+#     'plot_gallery': 'True',
+#     'download_all_examples': 'True',
+#     'first_notebook_cell': ("# This cell is added by sphinx-gallery\n"
+#                            "# It can be customized to whatever you like\n"
+#                            "%matplotlib inline"),
+#
+#
 #'binder': {
 #     # Required keys
 #     'org': 'CUAHSI',
@@ -90,12 +90,12 @@ sphinx_gallery_conf = {
 #     'notebooks_dir': 'notebooks', # Jupyter notebooks for Binder will be copied to this directory (relative to built documentation root).
 #    # 'use_jupyter_lab': <bool> # Whether Binder links should start Jupyter Lab instead of the Jupyter Notebook interface.
 #     },
+#
+#
+#     
+#}
 
-
-     
-}
-
-plot_gallery = True
+#plot_gallery = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
