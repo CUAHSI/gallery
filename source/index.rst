@@ -3,7 +3,7 @@
 CUAHSI Compute and Modeling Gallery
 ===================================
 
-.. image:: officiallogo.png
+.. image:: ourlogo.png
    :scale: 20 %
    :align: right
 
@@ -17,23 +17,13 @@ CUAHSI Compute and Modeling Gallery
 
 ..
 .. sidebar:: **Navigation**
-   :subtitle: Content Categories
+    #:subtitle: Content Categories
 
 ..
-   * :ref:`plot_PythonJupyter`
+   * :ref:`python-gallery`
    * :ref:`plot_RJupyter`
    * :ref:`plot_MATLAB`
-   * :ref:`plot_RShiny`
 
-..
-    `For a comprehensive reference on reStructuredText <https://docs.typo3.org/m/typo3/docs-how-to-document/master/en-us/WritingReST/Index.html/>`_
-
-..
-.. _some-label-name:
-
-..
-.. |GitHub forks| image:: https://img.shields.io/github/forks/Naereen/StrapDown.js.svg?style=social&label=Fork&maxAge=2592000
-   :target: https://github.com/gdg12/Environmental_Data_Analytics/network
 
 
 ..
