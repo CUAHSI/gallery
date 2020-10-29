@@ -17,8 +17,8 @@
 
 
 
-Educational Gallery
-=====================
+Research Gallery
+=================
 
 
 
@@ -79,8 +79,8 @@ Educational Gallery
 
 
 
-Research Gallery
-================
+Educational Gallery
+===================
 
 
 

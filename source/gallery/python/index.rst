@@ -1,58 +1,44 @@
 .. _creating_curve_number:
-========================
-Python Jupyter Notebooks
-========================
 
 
 
-..
-  This is where we construct the homepage thumbnail panels.
-  For more details, see https://sphinx-panels.readthedocs.io/en/latest/
+
 
 .. panels::
     :card: shadow
-    :img-top-cls: pl-5 pr-5
-    :column: col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2
+    :column: col-lg-4 p-2
 
 
-    ---
-    :img-top: _python/landuse.jpeg
+    -----
+    :column: col-lg-15 p-2
+    **Creating Curve Number Grid using PyQGIS through Jupyter Notebook in mygeohub**
 
-    Community examples using the Python programming language. This includes both Python scripts as well as Python Jupyter notebooks.
 
-    .. link-button:: python-gallery
+    -----
+    :column: col-lg-4 p-2
+    .. link-button:: https://www.google.com
         :type: ref
-        :text: Python Gallery
+        :text: Launch Binder
         :classes: btn-outline-primary btn-block stretched-link
-
-    ---
-    :img-top: _static/matlab-logo.jpeg
-
-    Community examples using the MATLAB programming language. This includes MATLAB \*.m scripts as well as MATLAB Live scripts.
-
-    .. link-button:: examples/matlab
+    -----
+    :column: col-lg-4 p-2
+    .. link-button:: https://www.google.com
         :type: ref
-        :text: MATLAB Gallery
+        :text: Execute in JupyterHub
         :classes: btn-outline-primary btn-block stretched-link
-    ---
-    :img-top: _static/r-logo.jpeg
-
-    Community examples using the R programming language. This includes R Jupyter notebooks, R scripts, as well as R Shiny web applications.
-
-    .. link-button:: examples/r
+    -----
+    :column: col-lg-4 p-2
+    .. link-button:: https://www.google.com
         :type: ref
-        :text: R Gallery
+        :text: Launch CyberGIS
         :classes: btn-outline-primary btn-block stretched-link
-
-
-..
-    This is an example of a subgallery panel
-    ---
-    :img-top: _static/r-logo.jpeg
-
-
-    .. link-button:: examples/r
-        :type: ref
-        :text: Spatial Plotting with RGdal
-        :classes: btn-block stretched-link
-
+    -----
+    :column: col-lg-12 p-2
+    **Description**
+     This resource serves as a template for creating a curve number grid raster file which could be used to create
+     corresponding maps or for further utilization, soil data and reclassified land-use raster files are created along
+     the process, user has to provided or connect to a set of shape-files including boundary of watershed, soil data
+     and land-use containing this watershed, land-use reclassification and curve number look up table. Script contained
+     in this resource mainly uses PyQGIS through Jupyter Notebook for majority of the processing with a touch of Pandas
+     for data manipulation. Detailed description of procedure are commented in the script.
+    -----
