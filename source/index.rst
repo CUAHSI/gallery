@@ -1,11 +1,12 @@
+.. image:: ourlogo.png
+   :scale: 30 %
+   :align: center
 
 ===================================
 CUAHSI Compute and Modeling Gallery
 ===================================
 
-.. image:: ourlogo.png
-   :scale: 20 %
-   :align: right
+
 
 
 .. toctree::
