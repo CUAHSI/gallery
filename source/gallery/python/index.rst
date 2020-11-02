@@ -12,15 +12,15 @@
     -----
      .. link-button:: https://mybinder.org
         :text: Launch Binder
-        :classes: stretched-link btn-outline-primary
+        :classes: stretched-link btn-outline-primary font-weight-bold
     ------
     .. link-button:: https://jupyterhub.cuahsi.org/hub/login
         :text: Execute in JupyterHub
-        :classes: stretched-link btn-outline-primary
+        :classes: stretched-link btn-outline-primary font-weight-bold
     ------
      .. link-button:: https://cybergis.illinois.edu/
         :text: Launch CyberGIS
-        :classes: stretched-link btn-outline-primary
+        :classes: stretched-link btn-outline-primary font-weight-bold
 
     -------
     :column: col-lg-17 p-2
@@ -35,6 +35,8 @@
 
     -------
     :column: col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2
+       **Keyword**
+       ^^^^^^^^^^^
      .. link-button:: https://www.hydroshare.org/search/?q=&selected_facets=subject_exact:Python%20PyQGIS
         :text: Python PyQGIS
         :classes: stretched-link text-center
