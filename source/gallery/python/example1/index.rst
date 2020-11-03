@@ -4,15 +4,24 @@
 ===================
 
 .. image:: ourlogo.png
-   :scale: 31 %
+   :scale: 35 %
    :align: center
 
-.. nbinfo::
-   Gallery Purpose
+.. panels::
+    :container: container pb-2
+    :body: text-center
+    :header: text-center
+    :column: col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2
+    :card: shadow
+
+    :column: col-lg-18 p-2
+
+       **Gallery Mission**
+       ^^^^^^^^^^^^^^^^^^^
+       The purpose of this gallery is to share open source hydrologic code with...
 
 
 
-   The purpose of this gallery is to share open source hydrologic code with...
 
 
 

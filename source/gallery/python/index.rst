@@ -1,5 +1,13 @@
 .. _creating_curve_number:
 
+.. toctree::
+ :maxdepth: 2
+ :titlesonly:
+ :hidden:
+
+ source/index.rst
+ example1/index.rst
+
 .. panels::
     :container: container pb-2
     :body: text-center

@@ -1,29 +1,18 @@
-.. image:: ourlogo.png
-   :scale: 30 %
-   :align: center
-
 ===================================
 CUAHSI Compute and Modeling Gallery
 ===================================
 
-
-
-
 .. toctree::
    :caption: Table of Contents
-   :maxdepth: 2
-   :numbered:
-   :includehidden:
+   :maxdepth: 3
+   :hidden:
 
+   example1/index.rst
+   python/index.rst
 
-..
-.. sidebar:: **Navigation**
-    #:subtitle: Content Categories
-
-..
-   * :ref:`python-gallery`
-   * :ref:`plot_RJupyter`
-   * :ref:`plot_MATLAB`
+.. image:: ourlogo.png
+   :scale: 35 %
+   :align: center
 
 
 
