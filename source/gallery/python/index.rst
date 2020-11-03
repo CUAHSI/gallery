@@ -12,10 +12,10 @@
     :container: container pb-2
     :body: text-center
     :header: text-center
-    :column: col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2
+    :column: col-lg-3.5 col-md-6 col-sm-6 col-xs-12 p-2
     :card: shadow
 
-    :column: col-lg-18 p-2
+    :column: col-lg-20 p-2
     **Creating Curve Number Grid using PyQGIS through Jupyter Notebook in mygeohub**
     -----
      .. link-button:: https://mybinder.org
@@ -29,8 +29,33 @@
      .. link-button:: https://cybergis.illinois.edu/
         :text: Launch CyberGIS
         :classes: stretched-link btn-outline-primary font-weight-bold
+    ------
+     .. link-button:: https://www.hydroshare.org/home/
+        :text: Open in Hydroshare
+        :classes: stretched-link btn-outline-primary font-weight-bold
 
     -------
+    :column: col-lg-12 col-md-6 col-sm-6 col-xs-12 p-2
+    :body: text-center
+    **Metadata**
+    ^^^^^^^^^^^^
+      **Author(s):**
+     .. link-button:: https://www.hydroshare.org/user/2983/
+        :type: url
+        :text: Sayan Dey
+     .. link-button:: https://www.hydroshare.org/user/6348/
+        :type: url
+        :text: Shizhang Wang
+     .. link-button:: https://www.hydroshare.org/user/64/
+        :type: url
+        :text: Venkatesh Merwade
+
+
+     **Affiliation(s):** Purdue University
+
+     **Contact Email:** wang2846@purdue.edu
+
+    -----
     :column: col-lg-18 p-2
     **Description**
     ^^^^^^^^^^^^^^^
@@ -62,36 +87,16 @@
      .. link-button:: https://www.hydroshare.org/search/?q=&selected_facets=subject_exact:Jupyter%20Notebook
         :text: Jupyter Notebook
         :classes: stretched-link text-center
-    --------
-    :column: col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2
-    :body: text-center
-      **Author(s):**
-     .. link-button:: https://www.hydroshare.org/user/2983/
-        :type: url
-        :text: Sayan Dey
-     .. link-button:: https://www.hydroshare.org/user/6348/
-        :type: url
-        :text: Shizhang Wang
-     .. link-button:: https://www.hydroshare.org/user/64/
-        :type: url
-        :text: Venkatesh Merwade
-
-
-     **Affiliation(s):** Purdue University
-
-     **Contact Email:** wang2846@purdue.edu
-
-     **Date Modified:** Apr 28, 2020
 
     ------
-    :column: col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2
-       **Files**
+    :column: col-lg-12 p-2
+       **Preview**
        ^^^^^^^^^^^
 
-    .. link-button:: https://www.hydroshare.org/resource/abf67aad0eb64a53bf787d369afdcc84/data/contents/CN_Grid_Markdown_Exercise.ipynb
+     .. link-button:: https://www.hydroshare.org/resource/abf67aad0eb64a53bf787d369afdcc84/data/contents/CN_Grid_Markdown_Exercise.ipynb
         :type: url
         :text: notebook.ipynb
 
-    data.csv
+     data.csv
 
-    readme.txt
+     readme.txt
