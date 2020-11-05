@@ -8,6 +8,7 @@
  source/index.rst
  example1/index.rst
 
+
 .. panels::
     :container: container pb-2
     :body: text-center
@@ -96,7 +97,13 @@
      .. link-button:: https://www.hydroshare.org/resource/abf67aad0eb64a53bf787d369afdcc84/data/contents/CN_Grid_Markdown_Exercise.ipynb
         :type: url
         :text: notebook.ipynb
+     .. link-button:: https://www.hydroshare.org/resource/abf67aad0eb64a53bf787d369afdcc84/data/contents/readme.txt
+        :type: url
+        :text: readme.txt
 
-     data.csv
+    -----
+    `Use this notebook`_
 
-     readme.txt
+     .. _Use this notebook: https://nbviewer.jupyter.org/github/CUAHSI/gallery/blob/master/notebooks/CN_Grid_Markdown_Exercise.ipynb
+
+    :pdfembed:`src:_static/onelast.pdf, height:500, width:200, align:bottom`
