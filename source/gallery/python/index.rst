@@ -102,8 +102,7 @@
         :text: readme.txt
 
     -----
-    `Use this notebook`_
+    `Preview  this notebook`_
 
-     .. _Use this notebook: https://nbviewer.jupyter.org/github/CUAHSI/gallery/blob/master/notebooks/CN_Grid_Markdown_Exercise.ipynb
+     .. _Preview this notebook: https://nbviewer.jupyter.org/github/CUAHSI/gallery/blob/master/notebooks/CN_Grid_Markdown_Exercise.ipynb
 
-    :pdfembed:`src:_static/onelast.pdf, height:500, width:200, align:bottom`
