@@ -54,6 +54,7 @@ extensions = ['sphinx.ext.todo',
     'sphinx_panels',
     'rst2pdf.pdfbuilder',
     'sphinxcontrib.pdfembed',
+    'RunNotebook',
               
 ]
 
@@ -154,3 +155,15 @@ html_static_path = ['_static']
 
 nbsphinx_allow_errors = True
 
+# Run notebook configuration
+
+# The template used when exporting from nbconvert
+#   full  - Outputs the full HTML document [Default]
+#   basic - Outputs a single div (with no additional resources)
+run_notebook_export_template = 'basic'  # Default: 'full'
+
+# Display the source links to the generated evaluated files
+run_notebook_display_source_links = False  # Default: True
+
+# Whether or not to evaluate the notebooks prior to embedding them
+evaluate_notebooks = False  # Default: True

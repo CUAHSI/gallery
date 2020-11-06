@@ -106,3 +106,6 @@
 
      .. _Preview this notebook: https://nbviewer.jupyter.org/github/CUAHSI/gallery/blob/master/notebooks/CN_Grid_Markdown_Exercise.ipynb
 
+     .. notebook:: CN_Grid_Markdown_Exercise.ipynb
+
+     .. literalinclude:: CN_Grid_Markdown_Exercise
