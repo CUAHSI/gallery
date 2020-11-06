@@ -1,13 +1,5 @@
 .. _creating_curve_number:
 
-.. toctree::
- :maxdepth: 2
- :titlesonly:
- :hidden:
-
- source/index.rst
- example1/index.rst
-
 
 .. panels::
     :container: container pb-2
@@ -93,6 +85,14 @@
     :column: col-lg-12 p-2
        **Preview**
        ^^^^^^^^^^^
+     .. toctree::
+        :maxdepth: 1
+        :titlesonly:
+        :glob:
+
+        notebooks/**
+
+    -----
 
      .. link-button:: https://www.hydroshare.org/resource/abf67aad0eb64a53bf787d369afdcc84/data/contents/CN_Grid_Markdown_Exercise.ipynb
         :type: url
@@ -100,12 +100,3 @@
      .. link-button:: https://www.hydroshare.org/resource/abf67aad0eb64a53bf787d369afdcc84/data/contents/readme.txt
         :type: url
         :text: readme.txt
-
-    -----
-    `Preview  this notebook`_
-
-     .. _Preview this notebook: https://nbviewer.jupyter.org/github/CUAHSI/gallery/blob/master/notebooks/CN_Grid_Markdown_Exercise.ipynb
-
-     .. notebook:: CN_Grid_Markdown_Exercise.ipynb
-
-     .. literalinclude:: CN_Grid_Markdown_Exercise

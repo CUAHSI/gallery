@@ -10,6 +10,7 @@ CUAHSI Compute and Modeling Gallery
    example1/index.rst
    python/index.rst
 
+
 .. image:: ourlogo.png
    :scale: 35 %
    :align: center

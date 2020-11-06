@@ -3,6 +3,7 @@
 **Python Gallery**
 ===================
 
+
 .. image:: ourlogo.png
    :scale: 35 %
    :align: center
@@ -90,12 +91,13 @@ Research Gallery
 
 Educational Gallery
 ===================
-
+to do
 
 
 Reproducible Science Gallery
 ============================
-
+to do
 
 Practitioner Gallery
 ====================
+to do
