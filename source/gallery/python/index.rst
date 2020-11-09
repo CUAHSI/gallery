@@ -83,7 +83,7 @@
 
     ------
     :column: col-lg-12 p-2
-       **Preview**
+       **Preview Jupyter Notebook**
        ^^^^^^^^^^^
      .. toctree::
         :maxdepth: 1
