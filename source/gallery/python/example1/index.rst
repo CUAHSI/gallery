@@ -51,7 +51,7 @@ Research Gallery
 
     .. link-button:: creating_curve_number
         :type: ref
-        :text: Launch Python Gallery
+        :text: Open Example
         :classes: btn-outline-primary btn-block stretched-link
 
     ---
@@ -62,7 +62,7 @@ Research Gallery
 
     .. link-button:: examples/matlab
         :type: ref
-        :text: Launch Python Gallery
+        :text: Open Example
         :classes: btn-outline-primary btn-block stretched-link
     ---
     :img-top: soiltexture.jpeg
@@ -72,7 +72,7 @@ Research Gallery
 
     .. link-button:: examples/r
         :type: ref
-        :text: Launch Python Gallery
+        :text: Open Example
         :classes: btn-outline-primary btn-block stretched-link
 
 

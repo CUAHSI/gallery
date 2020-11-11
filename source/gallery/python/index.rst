@@ -23,7 +23,7 @@
         :text: Launch CyberGIS
         :classes: stretched-link btn-outline-primary font-weight-bold
     ------
-     .. link-button:: https://www.hydroshare.org/home/
+     .. link-button:: https://www.hydroshare.org/resource/abf67aad0eb64a53bf787d369afdcc84/
         :text: Open in Hydroshare
         :classes: stretched-link btn-outline-primary font-weight-bold
 
@@ -92,11 +92,5 @@
 
         notebooks/**
 
-    -----
 
-     .. link-button:: https://www.hydroshare.org/resource/abf67aad0eb64a53bf787d369afdcc84/data/contents/CN_Grid_Markdown_Exercise.ipynb
-        :type: url
-        :text: notebook.ipynb
-     .. link-button:: https://www.hydroshare.org/resource/abf67aad0eb64a53bf787d369afdcc84/data/contents/readme.txt
-        :type: url
-        :text: readme.txt
+

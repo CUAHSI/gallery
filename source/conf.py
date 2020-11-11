@@ -46,16 +46,11 @@ extensions = ['sphinx.ext.todo',
     'sphinxcontrib.images',
     'sphinx_git',
     'nbsphinx',
-    'sphinx_gallery.load_style',
     'sphinx.ext.mathjax',
     'sphinx_copybutton',
     'sphinxcontrib.bibtex',
-    'sphinx_gallery.gen_gallery',
     'sphinx_panels',
-    'rst2pdf.pdfbuilder',
-    'sphinxcontrib.pdfembed',
-    'RunNotebook',
-              
+
 ]
 
 
@@ -158,4 +153,6 @@ nbsphinx_allow_errors = True
 suppress_warnings=['nbsphinx',]
 
 nbsphinx_execute= 'never'
+
+highlight_language= 'python3'
 
