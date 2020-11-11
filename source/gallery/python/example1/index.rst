@@ -1,26 +1,23 @@
 .. _python-gallery:
-===================
-**Python Gallery**
-===================
-
-
-.. image:: ourlogo.png
-   :scale: 35 %
-   :align: center
 
 .. panels::
-    :container: container pb-2
+    :column: col-lg-12 p-2
     :body: text-center
     :header: text-center
-    :column: col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2
-    :card: shadow
 
-    :column: col-lg-18 p-2
+       **Python Gallery**
+       ^^^^^^^^^^^^^^^^^^
+    .. image:: ourlogo.png
+       :scale: 20 %
+       :align: center
 
+
+    -------
+    :column: col-lg-12 p-2
+    :body: text-center
        **Gallery Mission**
-       ^^^^^^^^^^^^^^^^^^^
-       The purpose of this gallery is to share open source hydrologic code with...
 
+       The purpose of this gallery is to share open source hydrologic code with...
 
 
 

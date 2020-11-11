@@ -1,6 +1,6 @@
-===================================
-CUAHSI Compute and Modeling Gallery
-===================================
+=======================================
+    CUAHSI Compute and Modeling Gallery
+=======================================
 
 .. toctree::
    :caption: Table of Contents
