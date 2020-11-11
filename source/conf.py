@@ -155,4 +155,7 @@ html_static_path = ['_static']
 
 nbsphinx_allow_errors = True
 
+suppress_warnings=['nbsphinx',]
+
+nbsphinx_execute= 'never'
 
