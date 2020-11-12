@@ -50,7 +50,7 @@ extensions = ['sphinx.ext.todo',
     'sphinx_copybutton',
     'sphinxcontrib.bibtex',
     'sphinx_panels',
-
+              
 ]
 
 
@@ -58,6 +58,7 @@ extensions = ['sphinx.ext.todo',
 # Generate Autosummary even if no references
 autosummary_generate = True
 
+tagtoctree_tag = 'tagtoctree'
 
 
 # Add any paths that contain templates here, relative to this directory.
@@ -66,7 +67,7 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_build']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
@@ -98,19 +99,21 @@ html_theme_options = {
 
 
 html_sidebars = {
-   '**': ['globaltoc.html', 'sourcelink.html', 'searchbox.html'],
+   '**': ['globaltoc.html', 'sourcelink.html', 'relations.html', 'searchbox.html'],
    'using/windows': ['windowssidebar.html', 'searchbox.html'],
 }
 
 html_context = {
     "display_github": True,  # Integrate GitHub
     "github_user": "gdg12",  # Username
-    "github_repo": "Gallery",  # Repo name
+    "github_repo": "gallery",  # Repo name
     "github_version": "master",  # Version
     "last_updated": True,
     "conf_py_path": "/Gallery/source/conf.py",  # Path in the checkout to the docs root
 }
 
+# Output file base name for HTML help builder
+htmlhelp_basename= 'testdoc'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -118,12 +121,32 @@ html_context = {
 html_static_path = ['_static']
 
 
+
+
+
+
+
+# The name of the Pygments (syntax highlighting) style to use.
+pygments_style = 'sphinx'
+
+# This is default language for syntax highlighting in reST and Markdown cells
+highlight_language= 'python3' 
+
+
+
+
+
+# Nbsphinx Configuration
+
+## Use this kernel instead of the one stored in the notebook metadata
+nbsphinx_kernel_name = 'python3' 
+
+# suppress_warnings=['nbsphinx',]
+
 nbsphinx_allow_errors = True
 
-suppress_warnings=['nbsphinx',]
-
+## Execute notebooks before conversion: 'always', 'never', 'auto' (default)
 nbsphinx_execute= 'never'
 
-
-pygments_style= 'sphinx'
-
+## Default Pygments lexer for syntax highlighting in code cells
+nbsphinx_codecell_lexer = 'ipython3'

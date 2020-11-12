@@ -32,6 +32,7 @@
     :body: text-center
     **Metadata**
     ^^^^^^^^^^^^
+
       **Author(s):**
      .. link-button:: https://www.hydroshare.org/user/2983/
         :type: url

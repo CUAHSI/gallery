@@ -90,9 +90,6 @@ Educational Gallery
 *******************
 to do
 
-.. code-block:: rest
-
-   $a = 'b';
 
 
 Reproducible Science Gallery
