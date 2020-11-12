@@ -25,7 +25,7 @@
 
 
 Research Gallery
-=================
+****************
 
 
 
@@ -87,14 +87,18 @@ Research Gallery
 
 
 Educational Gallery
-===================
+*******************
 to do
+
+.. code-block:: rest
+
+   $a = 'b';
 
 
 Reproducible Science Gallery
-============================
+****************************
 to do
 
 Practitioner Gallery
-====================
+********************
 to do

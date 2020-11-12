@@ -2,14 +2,6 @@
     CUAHSI Compute and Modeling Gallery
 =======================================
 
-.. toctree::
-   :caption: Table of Contents
-   :maxdepth: 3
-   :hidden:
-
-   example1/index.rst
-   python/index.rst
-
 
 .. image:: ourlogo.png
    :scale: 35 %

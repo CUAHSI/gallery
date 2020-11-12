@@ -58,40 +58,7 @@ extensions = ['sphinx.ext.todo',
 # Generate Autosummary even if no references
 autosummary_generate = True
 
-tagtoctree_tag = 'tagtoctree'
 
-# Sphinx Gallery
-
-
-#sphinx_gallery_conf = {
-    
-    # 'examples_dirs': ['../examples/python'],   # path to your example scripts
-     #'gallery_dirs': 'examples',# path to where to save gallery generated output
-     #'plot_gallery': 'True',
-     #'download_all_examples': 'True',
-     #'first_notebook_cell': ("# This cell is added by sphinx-gallery\n"
-                           # "# It can be customized to whatever you like\n"
-                           # "%matplotlib inline"),
-
-
-#'binder': {
-#     # Required keys
-#     'org': 'CUAHSI',
-#     'repo': 'gallery',
-#     'branch': 'master',  # Can be any branch, tag, or commit hash. Use a branch that hosts your docs.
-#     'binderhub_url': 'https://mybinder.org',  # Any URL of a binderhub deployment. Must be full URL (e.g. https://mybinder.org).
-#     'dependencies': './binder/requirements.txt',
-#     # Optionalkeys
-#    # 'filepath_prefix': '<prefix>' # A prefix to prepend to any filepaths in Binder links.
-#     'notebooks_dir': 'notebooks', # Jupyter notebooks for Binder will be copied to this directory (relative to built documentation root).
-#    # 'use_jupyter_lab': <bool> # Whether Binder links should start Jupyter Lab instead of the Jupyter Notebook interface.
-#     },
-
-
-     
-#}
-
-#plot_gallery = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -106,6 +73,9 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 #
 # source_suffix = ['.rst', '.md']
 source_suffix = '.rst'
+
+#source encoding
+source_encoding= 'utf-8-sig'
 
 # The master toctree document.
 master_doc = 'index'
@@ -135,7 +105,7 @@ html_sidebars = {
 html_context = {
     "display_github": True,  # Integrate GitHub
     "github_user": "gdg12",  # Username
-    "github_repo": "FinalDataAnalyticsProject",  # Repo name
+    "github_repo": "Gallery",  # Repo name
     "github_version": "master",  # Version
     "last_updated": True,
     "conf_py_path": "/Gallery/source/conf.py",  # Path in the checkout to the docs root
@@ -154,5 +124,6 @@ suppress_warnings=['nbsphinx',]
 
 nbsphinx_execute= 'never'
 
-highlight_language= 'python3'
+
+pygments_style= 'sphinx'
 
