@@ -33,7 +33,7 @@
 
     Community examples using the MATLAB programming language. This includes MATLAB \*.m scripts as well as MATLAB Live scripts.
     
-    .. link-button:: examples/matlab
+    .. link-button:: Matlab-gallery
         :type: ref
         :text: MATLAB Gallery
         :classes: btn-outline-primary btn-block stretched-link
@@ -42,7 +42,7 @@
 
     Community examples using the R programming language. This includes R Jupyter notebooks, R scripts, as well as R Shiny web applications.
 
-    .. link-button:: examples/r
+    .. link-button:: R-gallery
         :type: ref
         :text: R Gallery
         :classes: btn-outline-primary btn-block stretched-link
