@@ -5,6 +5,7 @@
 
 .. |foo| image:: ourlogo.png
    :width: 50
+   :height: 50
 
 .. panels::
     :column: col-lg-12 p-2

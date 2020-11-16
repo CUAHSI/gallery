@@ -1,11 +1,8 @@
-=======================================
-    CUAHSI Compute and Modeling Gallery
-=======================================
+|foo| **CUAHSI Compute and Modeling Gallery**
+=============================================
 
-.. image:: ourlogo.png
-   :scale: 35 %
-   :align: center
-
+.. |foo| image:: ourlogo.png
+   :width: 80
 
 
 ..
