@@ -1,23 +1,23 @@
 .. _R-gallery:
 
+|foo| **R Gallery**
+===================
+
+.. |foo| image:: ourlogo.png
+   :width: 50
+
 .. panels::
     :column: col-lg-12 p-2
     :body: text-center
     :header: text-center
 
-       **R Gallery**
-       ^^^^^^^^^^^^^
-    .. image:: ourlogo.png
-       :scale: 20 %
-       :align: center
-
-
     -------
     :column: col-lg-12 p-2
     :body: text-center
        **Gallery Mission**
-
+       ^^^^^^^^^^^^^^^^^^^
        The purpose of this gallery is to share open source hydrologic code with...
+
 
 
 
