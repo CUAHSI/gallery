@@ -1,3 +1,12 @@
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   source/gallery/Matlab/index
+
+
+
+
 |foo| **CUAHSI Compute and Modeling Gallery**
 =============================================
 

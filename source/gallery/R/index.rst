@@ -1,15 +1,16 @@
 .. _R-gallery:
 
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   educationalgallery/**
+   reproduciblesciencegallery
+
 ===================
 |foo| **R Gallery**
 ===================
-
-.. toctree::
-   :hidden:
-   :glob:
-
-   CN_Grid_Markdown_Exercise
-
 
 
 .. |foo| image:: ourlogo.png
@@ -34,8 +35,8 @@
 
 
 
-Research Gallery
-****************
+**Research Gallery**
+
 
 
 
@@ -96,16 +97,16 @@ Research Gallery
 
 
 
-Educational Gallery
-*******************
+**Educational Gallery**
+
 to do
 
 
 
-Reproducible Science Gallery
-****************************
+**Reproducible Science Gallery**
+
 to do
 
-Practitioner Gallery
-********************
+**Practitioner Gallery**
+
 to do
