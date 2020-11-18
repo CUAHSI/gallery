@@ -33,8 +33,8 @@
 
 
 
-Research Gallery
-****************
+**Research Gallery**
+********************
 
 
 
@@ -95,16 +95,16 @@ Research Gallery
 
 
 
-Educational Gallery
-*******************
+**Educational Gallery**
+***********************
 to do
 
 
 
-Reproducible Science Gallery
-****************************
+**Reproducible Science Gallery**
+********************************
 to do
 
-Practitioner Gallery
-********************
+**Practitioner Gallery**
+************************
 to do
