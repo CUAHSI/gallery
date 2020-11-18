@@ -1,8 +1,17 @@
 .. _python-gallery:
 
-
+========================
 |foo| **Python Gallery**
 ========================
+
+.. toctree::
+   :caption: Table of Contents
+   :name: mastertoc
+   :glob:
+
+
+
+
 
 .. |foo| image:: ourlogo.png
    :width: 50

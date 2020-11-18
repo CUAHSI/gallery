@@ -1,7 +1,16 @@
 .. _R-gallery:
 
+===================
 |foo| **R Gallery**
 ===================
+
+.. toctree::
+   :hidden:
+   :glob:
+
+   CN_Grid_Markdown_Exercise
+
+
 
 .. |foo| image:: ourlogo.png
    :width: 50
