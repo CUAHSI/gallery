@@ -1,5 +1,14 @@
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+   :titlesonly:
+   :glob:
+
+   **
 
 
+
+=============================================
 |foo| **CUAHSI Compute and Modeling Gallery**
 =============================================
 

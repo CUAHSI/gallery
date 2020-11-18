@@ -1,13 +1,16 @@
 .. _python-gallery:
 
-========================
-|foo| **Python Gallery**
-========================
-
 .. toctree::
    :caption: Table of Contents
    :name: mastertoc
    :glob:
+
+
+
+========================
+|foo| **Python Gallery**
+========================
+
 
 
 
