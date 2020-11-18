@@ -2,11 +2,13 @@
 
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :glob:
+   :hidden:
+   :titlesonly:
 
-   educationalgallery/**
-   reproduciblesciencegallery
+   *
+
 
 ===================
 |foo| **R Gallery**
@@ -98,15 +100,18 @@
 
 
 **Educational Gallery**
+=======================
 
 to do
 
 
 
 **Reproducible Science Gallery**
+================================
 
 to do
 
 **Practitioner Gallery**
+========================
 
 to do

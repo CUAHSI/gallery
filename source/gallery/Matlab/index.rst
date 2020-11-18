@@ -1,5 +1,13 @@
 .. _Matlab-gallery:
 
+.. toctree::
+   :maxdepth: 2
+   :glob:
+   :hidden:
+   :titlesonly:
+
+   *
+
 ========================
 |foo| **MATLAB Gallery**
 ========================
