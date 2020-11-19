@@ -86,7 +86,7 @@ master_doc = 'index'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = 'sphinx_rtd_theme'
 
 
 html_theme_options = {
@@ -95,7 +95,10 @@ html_theme_options = {
     'github_repo': 'alabaster',
     'github_type': 'fork',
     
-   
+    'collapse_navigation': True,
+    'sticky_navigation': True,
+    'navigation_depth': 4,
+  
    
 }
 
