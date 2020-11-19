@@ -70,7 +70,7 @@
     **Agua Salud Discharge Data**
        Authors: Jason A. Regina, Fred L. Ogden, Jefferson S. Hall, Robert F. Stallard
 
-    .. link-button:: examples/matlab
+    .. link-button:: creating_curve_number
         :type: ref
         :text: Open Example
         :classes: btn-outline-primary btn-block stretched-link
@@ -80,7 +80,7 @@
     **Green Infrastructure Designer with RHESSys Workflow**
       Authors: Lorne Leonard, Lawrence Band, Laurence Lin, Brian Miles
 
-    .. link-button:: examples/r
+    .. link-button:: creating_curve_number
         :type: ref
         :text: Open Example
         :classes: btn-outline-primary btn-block stretched-link

@@ -98,6 +98,7 @@ html_theme_options = {
     'collapse_navigation': True,
     'sticky_navigation': True,
     'navigation_depth': 4,
+
   
    
 }
@@ -109,14 +110,12 @@ html_sidebars = {
 }
 
 html_context = {
-    "display_github": True,  # Integrate GitHub
-    "github_user": "gdg12",  # Username
-    "github_repo": "gallery",  # Repo name
-    "github_version": "master",  # Version
+   
     "last_updated": True,
     "conf_py_path": "/Gallery/source/conf.py",  # Path in the checkout to the docs root
 }
 
+html_logo= 'ourlogo.png'
 # Output file base name for HTML help builder
 htmlhelp_basename= 'testdoc'
 
