@@ -117,6 +117,9 @@ html_context = {
 }
 
 html_logo= 'ourlogo.png'
+
+
+
 # Output file base name for HTML help builder
 htmlhelp_basename= 'testdoc'
 
