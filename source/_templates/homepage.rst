@@ -21,6 +21,7 @@ CUAHSI Compute and Modeling Gallery
 
 {% for gallery in galleries %}
 
+    {% if 'label' in gallery %}
     ---
     :img-top: {{ gallery['thumbnail'] }}
 
@@ -30,6 +31,8 @@ CUAHSI Compute and Modeling Gallery
         :type: ref
         :text: {{ gallery['display_name'] }} Gallery
         :classes: btn-outline-primary btn-block stretched-link
+
+     {% endif %}
 
 {% endfor %}
 

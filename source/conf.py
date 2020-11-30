@@ -116,7 +116,7 @@ html_context = {
 #    'css_files': ['_static/custom.css', '_static/css/theme.css'],
 }
 
-html_logo= 'ourlogo.png'
+html_logo = '_static/cuahsi-logo.png'
 
 
 
