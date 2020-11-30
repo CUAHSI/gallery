@@ -1,0 +1,21 @@
+#### GALLERY PREPROCESSING VARIABLES #####
+# This block of code was added by Tony Castronova to provide
+# input args to the preprocessing build script.
+
+galleries:
+  - display_name: Python
+    thumbnail: /_static/python-logo.jpeg
+    gallery_path: ./source/gallery/python
+    description: Community examples using the Python programming language. This includes both Python scripts as well as Python Jupyter notebooks.
+
+  - display_name: R
+    thumbnail: /_static/r-logo.jpeg
+    gallery_path: ./source/gallery/r
+    description: Community examples using the R programming language. This includes R Jupyter notebooks, R scripts, as well as R Shiny web applications.
+  
+  - display_name: MatLab
+    thumbnail: /_static/matlab-logo.jpeg
+    gallery_path: ./source/gallery/matlab
+    description: Community examples using the MATLAB programming language. This includes MATLAB scripts as well as MATLAB Live scripts.
+
+#########################################
