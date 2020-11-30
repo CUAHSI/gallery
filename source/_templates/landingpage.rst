@@ -46,7 +46,7 @@
         {% else -%}
             :badge:`{{ author['name'] }},badge-secondary`
         {% endif -%}
-        - {{ author['title'] }}, {{ author['affiliation'] }} 
+            - {{ author['organization'] }} 
         {% if 'email' in author -%}
             (`contact <{{ author['email'] }}>`_)
         {% endif -%}
@@ -66,5 +66,9 @@
         :maxdepth: 2
         :titlesonly:
         :glob:
-    
+        
+        {% if code_path %}
+        {{ code_path }}/**
+        {% else %}
         data/**
+        {% endif %}
