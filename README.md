@@ -11,6 +11,6 @@ $ conda env create -f environment.yml
 ## Build Instructions
 
 ```
-$ sphinx-build -b html source build
+$ ./build.sh
 ```
 
