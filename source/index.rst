@@ -1,9 +1,8 @@
 .. toctree::
-   :maxdepth: 1
-   :hidden:
+   :maxdepth: 2
    :glob:
 
-   **
+   gallery/Python/*
 
 
 CUAHSI Compute and Modeling Gallery
@@ -22,17 +21,6 @@ CUAHSI Compute and Modeling Gallery
 
 
     
-    ---
-    :img-top: /_static/python-logo.jpeg
-
-    Community examples using the Python programming language. This includes both Python scripts as well as Python Jupyter notebooks.
-
-    .. link-button:: python_9703c13ad97d43b094b74f47ac1eeb48
-        :type: ref
-        :text: Python Gallery
-        :classes: btn-outline-primary btn-block stretched-link
-
-     
 
 
 

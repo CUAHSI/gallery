@@ -13,17 +13,12 @@
 
 
 
-.. image:: /_static/cuahsi-logo.png
-   :width: 50
-   :height: 50
-
-
 ..
   This is where we construct the homepage thumbnail panels.
   For more details, see https://sphinx-panels.readthedocs.io/en/latest/
 {% for category, cat_data in categories.items() %}
 
-{{ category }}
+{{ category }} Examples
 **************
 
 .. panels::

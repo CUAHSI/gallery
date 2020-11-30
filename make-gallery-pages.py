@@ -118,9 +118,11 @@ if __name__ == '__main__':
                 data['thumbnail'] = thumbnail_new_name
 
                 if subgallery_path not in subgalleries.keys():
-                    subgalleries[subgallery_path] = {category: [data]}
-                else:
-                    subgalleries[subgallery_path][category].append(data)
+                    subgalleries[subgallery_path] = {}
+                #    {category: [data]}
+                if category not in subgalleries[subgallery_path].keys():
+                    subgalleries[subgallery_path][category] = []
+                subgalleries[subgallery_path][category].append(data)
 
     # build the sub-gallery pages
     gallery_labels = {}
@@ -128,9 +130,13 @@ if __name__ == '__main__':
         # create a label for the subgallery page
         id = f'{os.path.basename(sub)}_{uuid.uuid4().hex}'
         gallery_labels[sub] = id
-
+        
+        # generate page title. This is necessary for the TOC
+        title = f'{os.path.basename(sub)} Gallery'
         render_page(os.path.join(template_dir, 'gallery.rst'),
-                {'label': id, 'categories': sub_data},
+                {'label': id,
+                 'gallery_title': title,
+                 'categories': sub_data},
                     outpath=os.path.join(sub, 'index.rst'))
 
     # build the homepage
