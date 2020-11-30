@@ -8,7 +8,7 @@
 
 
 ========================
-
+{{ gallery_title }}
 ========================
 
 
@@ -21,9 +21,9 @@
 ..
   This is where we construct the homepage thumbnail panels.
   For more details, see https://sphinx-panels.readthedocs.io/en/latest/
+{% for category, cat_data in data.items() %}
 
-
-research
+{{ category }}
 **************
 
 .. panels::
@@ -31,39 +31,24 @@ research
     :img-top-cls: pl-5 pr-5
     :column: col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2
 
-    
+    {% for example in cat_data %}
     ---
-    :img-top: /_static/thumbnail-white-clay-cree
+    :img-top: /_static/{{ example['thumbnail'] }}
 
-    **White Clay Creek - Stage, Streamflow / Discharg...**
-
-
-    Continuous streamflow data collected by the Stroud Water Research Center within the 3rd-order research watershed, White Clay Creek above McCue Road...
+    **{{ example['title']|truncate(50, True) }}**
 
 
-    .. link-button:: white-clay-cree
+    {{ example['description']|truncate(150, True) }}
+
+
+    .. link-button:: {{ example['label'] }}
         :type: ref
         :text: Open Example
         :classes: btn-outline-primary btn-block stretched-link
     
-     
-    ---
-    :img-top: /_static/thumbnail-lczo-stream-wat
+     {% endfor %}
 
-    **LCZO-Stream Water Chemistry, Streamflow / Disch...**
-
-
-    Concentration-discharge relationships are a key tool for understanding the sourcing and transport of material from watersheds to fluvial networks. ...
-
-
-    .. link-button:: lczo-stream-wat
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
-    
-     
-
-
+{% endfor %}
 
 
 
@@ -80,4 +65,5 @@ research
         :type: ref
         :text: Spatial Plotting with RGdal
         :classes: btn-block stretched-link
+
 
