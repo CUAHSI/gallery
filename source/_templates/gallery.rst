@@ -1,4 +1,4 @@
-.. _python-gallery:
+.. _{{ label }}:
 
 .. toctree::
    :caption: Table of Contents
@@ -21,7 +21,7 @@
 ..
   This is where we construct the homepage thumbnail panels.
   For more details, see https://sphinx-panels.readthedocs.io/en/latest/
-{% for category, cat_data in data.items() %}
+{% for category, cat_data in categories.items() %}
 
 {{ category }}
 **************

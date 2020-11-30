@@ -1,4 +1,4 @@
-.. _python-gallery:
+.. _python_c1c255407f884fa4bea1b2a81cd55b20:
 
 .. toctree::
    :caption: Table of Contents
@@ -23,7 +23,7 @@
   For more details, see https://sphinx-panels.readthedocs.io/en/latest/
 
 
-research
+Research
 **************
 
 .. panels::
