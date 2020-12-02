@@ -157,14 +157,20 @@ if __name__ == "__main__":
     # build the homepage
     with open(os.path.join(source_dir, "conf.yaml"), "r") as f:
         yaml_data = yaml.load(f, Loader=yaml.FullLoader)
-
+        
         # add gallery labels
+        homepage_panels = []
         for v in yaml_data["galleries"]:
             if v["gallery_path"] in gallery_labels:
                 v["label"] = gallery_labels[v["gallery_path"]]
 
+                # only render galleries on the homepage that have labels. 
+                # this will ignore any galleries defined in conf.yaml that
+                # do not have rendered example pages.
+                homepage_panels.append(v)
+
         render_page(
             os.path.join(template_dir, "homepage.rst"),
-            yaml_data,
+            {'galleries': homepage_panels},
             outpath=os.path.join(source_dir, "index.rst"),
         )

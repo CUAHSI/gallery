@@ -1,4 +1,4 @@
-.. _Python_88af40951b9d49a0aaa164c4de1c3140:
+.. _Python_d803dcfcfb054dad92945ee3c26a9fb3:
 
 .. toctree::
    :caption: Table of Contents
@@ -69,6 +69,21 @@ Instructional Examples
     :column: col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2
 
     
+    ---
+    :img-top: /_static/thumbnail-hurricane-harve
+
+    **Hurricane Harvey NWM Subsetting Exercise**
+
+
+    This notebook provides a very brief introduction to the process of subsetting NWM forecast results for small watershed areas using Thredds and Open...
+
+
+    .. link-button:: hurricane-harve
+        :type: ref
+        :text: Open Example
+        :classes: btn-outline-primary btn-block stretched-link
+    
+     
     ---
     :img-top: /_static/thumbnail-white-clay-cree
 

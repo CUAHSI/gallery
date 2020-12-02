@@ -21,14 +21,17 @@ CUAHSI Compute and Modeling Gallery
 
 
     
+    ---
+    :img-top: /_static/python-logo.jpeg
 
+    Community examples using the Python programming language. This includes both Python scripts as well as Python Jupyter notebooks.
 
+    .. link-button:: Python_d803dcfcfb054dad92945ee3c26a9fb3
+        :type: ref
+        :text: Python Gallery
+        :classes: btn-outline-primary btn-block stretched-link
 
-    
-
-
-
-    
+     
 
 
 
