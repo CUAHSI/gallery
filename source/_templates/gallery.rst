@@ -3,8 +3,10 @@
 .. toctree::
    :caption: Table of Contents
    :name: mastertoc
+   :hidden:
    :glob:
 
+    index
 
 
 ========================

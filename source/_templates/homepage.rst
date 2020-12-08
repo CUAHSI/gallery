@@ -1,9 +1,9 @@
 .. toctree::
    :maxdepth: 2
-   :hidden
+   :hidden:
    :glob:
 
-   gallery/Python/*
+   gallery/Python/index
 
 
 CUAHSI Compute and Modeling Gallery

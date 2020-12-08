@@ -14,6 +14,10 @@ This notebook provides a very brief introduction to the process of subsetting NW
 
 .. container:: launch-container
     
+         
+            :link-badge:`https://hydroshare.org/resource/3db192783bcb4599bab36d43fc3413d,"Open In HydroShare",cls=badge-primary text-white launch-badge`
+        
+    
 
 .. raw:: html
    
@@ -56,5 +60,5 @@ This notebook provides a very brief introduction to the process of subsetting NW
         :glob:
         
         
-        ./code/**
+        ./notebooks/**
         

@@ -35,7 +35,7 @@ extensions = ['sphinx.ext.todo',
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode', 
     'sphinx.ext.extlinks',
-    'sphinx.ext.githubpages',
+#    'sphinx.ext.githubpages',
     'sphinx.ext.napoleon',
     'sphinx.ext.graphviz',
     'sphinx.ext.intersphinx',
@@ -67,7 +67,7 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build']
+exclude_patterns = ['_build', '**.ipynb_checkpoints']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
@@ -90,10 +90,10 @@ html_theme = 'sphinx_rtd_theme'
 
 
 html_theme_options = {
-    'github_button': 'false',
-    'github_user': 'gdg12',
-    'github_repo': 'alabaster',
-    'github_type': 'fork',
+#    'github_button': 'false',
+#    'github_user': 'gdg12',
+#    'github_repo': 'alabaster',
+#    'github_type': 'fork',
     
     'collapse_navigation': True,
     'sticky_navigation': True,

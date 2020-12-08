@@ -1,10 +1,12 @@
-.. _Python_d803dcfcfb054dad92945ee3c26a9fb3:
+.. _Python_4ce34e9558a14b268a77f73074182167:
 
 .. toctree::
    :caption: Table of Contents
    :name: mastertoc
+   :hidden:
    :glob:
 
+    index
 
 
 ========================
@@ -79,36 +81,6 @@ Instructional Examples
 
 
     .. link-button:: hurricane-harve
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
-    
-     
-    ---
-    :img-top: /_static/thumbnail-white-clay-cree
-
-    **White Clay Creek - Stage, Streamflow / Discharg...**
-
-
-    Continuous streamflow data collected by the Stroud Water Research Center within the 3rd-order research watershed, White Clay Creek above McCue Road...
-
-
-    .. link-button:: white-clay-cree
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
-    
-     
-    ---
-    :img-top: /_static/thumbnail-lczo-stream-wat
-
-    **LCZO-Stream Water Chemistry, Streamflow / Disch...**
-
-
-    Concentration-discharge relationships are a key tool for understanding the sourcing and transport of material from watersheds to fluvial networks. ...
-
-
-    .. link-button:: lczo-stream-wat
         :type: ref
         :text: Open Example
         :classes: btn-outline-primary btn-block stretched-link
