@@ -27,7 +27,7 @@ CUAHSI Compute and Modeling Gallery
 
     Community examples using the Python programming language. This includes both Python scripts as well as Python Jupyter notebooks.
 
-    .. link-button:: Python_8a0e651625d3438c8d70752b56b92154
+    .. link-button:: Python_eb331a5aaae54ee2949130756bb1f7d3
         :type: ref
         :text: Python Gallery
         :classes: btn-outline-primary btn-block stretched-link

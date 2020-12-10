@@ -12,9 +12,9 @@ from lxml import etree
 
 # global vars
 source_dir = "./source"
-gallery_dir = "./source/gallery"
-template_dir = "./source/_templates"
-static_dir = "./source/_static"
+gallery_dir = f"./source/gallery"
+template_dir = f"./source/_templates"
+static_dir = f"./source/_static"
 
 
 def render_page(template, data, outpath="./index.rst"):
@@ -91,6 +91,7 @@ if __name__ == "__main__":
 
     args = p.parse_args()
     subgalleries = {}
+#    import pdb; pdb.set_trace()
     for subdir, dirs, files in os.walk(args.gallery):
         if "conf.yaml" in files:
             conf = os.path.join(subdir, "conf.yaml")

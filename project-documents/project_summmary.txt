@@ -1,0 +1,19 @@
+CUAHSI Compute: Gallery of Scientific Notebooks
+Create page for hosting gallery of notebooks on CUAHSI Compute
+Use GitHub and Pangeo pattern
+Crosslist with the Pangeo gallery
+Develop form/method for community submitted notebooks
+Policy plan
+Documentation
+Newsletter article?
+Assemble the gallery
+Add WHW notebooks and examples
+Write HIS Python and R introductory notebooks
+These should teach how to use access the HIS catalog programmatically
+Write GIS and data munging notebooks
+Scrape HS to find resources that contain notebooks
+Identify “high quality” notebooks and reach out to owners
+Convert scripts into notebooks.
+Make sure they are running correctly
+
+:x
