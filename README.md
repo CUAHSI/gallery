@@ -10,7 +10,20 @@ $ conda env create -f environment.yml
 
 ## Build Instructions
 
+To list all options: 
+
 ```
-$ ./build.sh
+$ make help
 ```
 
+Build in development mode: 
+
+```
+$ make html 
+```
+
+Build for publishing to GitHub pages:
+
+```
+$ make github
+```
