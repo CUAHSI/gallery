@@ -88,6 +88,11 @@ master_doc = 'index'
 #
 html_theme = 'sphinx_rtd_theme'
 
+# removing default footer elements
+html_show_copyright = False
+html_show_sphinx = False
+html_last_updated_fmt = None
+
 
 html_theme_options = {
 #    'github_button': 'false',
@@ -98,6 +103,16 @@ html_theme_options = {
     'collapse_navigation': True,
     'sticky_navigation': True,
     'navigation_depth': 4,
+
+    # suppress MkDocs from appearing above logo
+    'logo_only': True,
+
+    # suppress version from being displayed below logo
+    'display_version': False,
+    
+    # suppress 'next' and 'previous' page buttons
+    'prev_next_buttons_location': None,
+
 
   
    
@@ -111,7 +126,6 @@ html_sidebars = {
 
 html_context = {
    
-    "last_updated": True,
     "conf_py_path": "/Gallery/source/conf.py",  # Path in the checkout to the docs root
 #    'css_files': ['_static/custom.css', '_static/css/theme.css'],
 }
