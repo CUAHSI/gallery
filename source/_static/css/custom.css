@@ -7,3 +7,6 @@
 .wy-nav-content {
     max-width: none;
 }
+div.card {
+    max-width: 400px;
+}

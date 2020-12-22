@@ -17,7 +17,7 @@ CUAHSI Compute and Modeling Gallery
 .. panels::
     :card: shadow
     :img-top-cls: pl-5 pr-5
-    :column: col-lg-3 col-md-6 col-sm-6 col-xs-12 p-2
+    :column: col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2
 
 
 
@@ -27,7 +27,7 @@ CUAHSI Compute and Modeling Gallery
 
     Community examples using the Python programming language. This includes both Python scripts as well as Python Jupyter notebooks.
 
-    .. link-button:: Python_d9e8a4ceebfe490190f5ea7a605f616c
+    .. link-button:: Python_f25f28b24f844207a7b9fa128fa8f5eb
         :type: ref
         :text: Python Gallery
         :classes: btn-outline-primary btn-block stretched-link
