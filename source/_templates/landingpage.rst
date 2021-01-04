@@ -1,16 +1,14 @@
 .. _{{ label }}:
 
-{{ title }}
--------
+.. raw:: html
 
+    <div class=example-title>
+        <h1> {{ title }} </h1>
+    </div>
 
-**Description**
-
-{{ description }}
-
-{# ############# #}
-{# COMPUTE BLOCK #}
-{# ############# #}
+{# ############### #}
+{# COMPUTE OPTIONS #}
+{# ############### #}
 
 .. container:: launch-container pb-1
     {% for option in launch_options %}
@@ -22,8 +20,18 @@
     {% endfor %}
 
 .. raw:: html
-   
-   <br />&nbsp;
+
+    <br />&nbsp;
+    <hr>
+    <br />&nbsp;
+
+.. raw:: html
+
+    <div class=example-description>
+        <h2> Description </h2>
+        <p>{{ description }}</p>
+    </div>
+
 
 {# ############ #}
 {# AUTHOR BLOCK #}
@@ -31,9 +39,9 @@
 
 {% if authors %}
 .. panels::
-    :container: container pb-2
+    :container: container pb-2 example-panels
     :card: shadow
-    :column: col-lg-12 col-md-6 col-sm-6 col-xs-12 p-2
+    :column: col-lg-6 col-md-6 col-sm-12 col-xs-12 p-2
     :body: text-left
 
 
@@ -53,14 +61,8 @@
      {% endfor %}
 {% endif %}
 
-.. panels::
-    :container: container pb-2
-    :card: shadow
-    :column: col-lg-12 col-md-6 col-sm-6 col-xs-12 p-2
-    :body: text-left
-
-    :column: col-lg-12 p-2
-       **Code Examples**
+    ---
+       **Source Code**
        ^^^^^^^^^^^
      .. toctree::
         :maxdepth: 2
