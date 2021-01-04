@@ -12,7 +12,7 @@
 {# COMPUTE BLOCK #}
 {# ############# #}
 
-.. container:: launch-container
+.. container:: launch-container pb-1
     {% for option in launch_options %}
         {% if 'tooltip' in option %}
             :link-badge:`{{ option['url'] }},"{{ option['name'] }}",cls=badge-primary text-white launch-badge, tooltip={{ option['tooltip'] }}`

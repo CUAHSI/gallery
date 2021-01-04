@@ -4,9 +4,23 @@
 }
 .launch-container {
 }
-.wy-nav-content {
+
+/*.wy-nav-content {
     max-width: none;
+    height: auto !important;
+    width: 100%;
 }
+*/
+.wy-nav-content-wrap {
+    background: #fcfcfc;
+
+    /*
+    display: flex;
+    min-width: 100%;
+    */
+}
+
+
 div.card {
     max-width: 400px;
 }
