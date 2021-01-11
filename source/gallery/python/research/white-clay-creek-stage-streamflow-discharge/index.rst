@@ -11,7 +11,6 @@
 
 
 .. container:: launch-container pb-1
-    Launch In: 
     
 
 .. raw:: html
@@ -63,13 +62,17 @@
 
 
     ---
+    
+
        **Source Code**
        ^^^^^^^^^^^
      .. toctree::
-        :maxdepth: 2
+        :maxdepth: 1
         :titlesonly:
         :glob:
         
         
         ./data/**
         
+     
+     

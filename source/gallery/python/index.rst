@@ -1,4 +1,4 @@
-.. _Python_cfe32524c83e466898f6f128aacedd8f:
+.. _Python_8072e239aa994a8680045a5be19b3036:
 
 .. toctree::
    :caption: Table of Contents
@@ -21,7 +21,7 @@ Python Gallery
 
 
 Research Examples
-**************
+******************************
 
 .. panels::
     :card: shadow
@@ -31,12 +31,12 @@ Research Examples
     
     ---
     :img-top: /_static/thumbnail-white-clay-cree
-
+    
     **White Clay Creek - Stage, Streamflow / Discharg...**
 
-
-    Continuous streamflow data collected by the Stroud Water Research Center within the 3rd-order research watershed, White Clay Creek above McCue Road...
-
+    
+        Continuous streamflow data collected by the Stroud Water Research Center within the 3rd-order research watershed, White Clay Creek above McCue Road...
+    
 
     .. link-button:: white-clay-cree
         :type: ref
@@ -46,12 +46,12 @@ Research Examples
      
     ---
     :img-top: /_static/thumbnail-lczo-stream-wat
-
+    
     **LCZO-Stream Water Chemistry, Streamflow / Disch...**
 
-
-    Concentration-discharge relationships are a key tool for understanding the sourcing and transport of material from watersheds to fluvial networks. ...
-
+    
+        Concentration-discharge relationships are a key tool for understanding the sourcing and transport of material from watersheds to fluvial networks. ...
+    
 
     .. link-button:: lczo-stream-wat
         :type: ref
@@ -62,8 +62,35 @@ Research Examples
 
 
 
+Reproducible Science Examples
+******************************
+
+.. panels::
+    :card: shadow
+    :img-top-cls: pl-5 pr-5
+    :column: col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2
+
+    
+    ---
+    :img-top: /_static/thumbnail-enabling-collab
+    
+    **Enabling Collaborative Numerical Modeling in Ea...**
+
+    
+        The ability to test hypotheses about hydrology, geomorphology, and atmospheric processes is invaluable to research in the Earth and planetary scien...
+    
+
+    .. link-button:: enabling-collab
+        :type: ref
+        :text: Open Example
+        :classes: btn-outline-primary btn-block stretched-link
+    
+     
+
+
+
 Instructional Examples
-**************
+******************************
 
 .. panels::
     :card: shadow
@@ -73,12 +100,12 @@ Instructional Examples
     
     ---
     :img-top: /_static/thumbnail-hurricane-harve
-
+    
     **Hurricane Harvey NWM Subsetting Exercise**
 
-
-    This notebook provides a very brief introduction to the process of subsetting NWM forecast results for small watershed areas using Thredds and Open...
-
+    
+        An introduction to collecting and processing National Water Model operational forecast data using THREDDs and OpenDAP.
+    
 
     .. link-button:: hurricane-harve
         :type: ref

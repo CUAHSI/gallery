@@ -54,13 +54,17 @@
 
 
     ---
+    
+
        **Source Code**
        ^^^^^^^^^^^
      .. toctree::
-        :maxdepth: 2
+        :maxdepth: 1
         :titlesonly:
         :glob:
         
         
         ./notebooks/**
         
+     
+     

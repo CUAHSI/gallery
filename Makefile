@@ -16,7 +16,9 @@ ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) ./s
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
-	@echo "  html       to make standalone HTML files"
+	@echo "  html       builds standalone HTML files"
+	@echo "  github     builds website ready to be pushed to GitHub"
+	@echo "  clean      cleans all local build files"
 
 clean:
 	-rm -rf $(BUILDDIR)/*

@@ -62,10 +62,12 @@
 {% endif %}
 
     ---
+    {% if code_path %}
+
        **Source Code**
        ^^^^^^^^^^^
      .. toctree::
-        :maxdepth: 2
+        :maxdepth: 1
         :titlesonly:
         :glob:
         
@@ -74,3 +76,15 @@
         {% else %}
         data/**
         {% endif %}
+     {% endif %}
+     {% if notebooks %}
+       **Source Code**
+       ^^^^^^^^^^^
+     .. toctree::
+        :maxdepth: 1
+
+        {% for item in notebooks %}
+        {{ item['label'] }} <{{ item['name'] }}>
+        {% endfor %}
+     {% endif %}
+

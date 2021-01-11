@@ -21,7 +21,7 @@
 {% for category, cat_data in categories.items() %}
 
 {{ category }} Examples
-**************
+******************************
 
 .. panels::
     :card: shadow
@@ -31,12 +31,14 @@
     {% for example in cat_data %}
     ---
     :img-top: /_static/{{ example['thumbnail'] }}
-
+    
     **{{ example['title']|truncate(50, True) }}**
 
-
-    {{ example['description']|truncate(150, True) }}
-
+    {% if 'card_description' in example %}
+        {{ example['card_description']|truncate(150, True) }}
+    {% else %}
+        {{ example['description']|truncate(150, True) }}
+    {% endif %}
 
     .. link-button:: {{ example['label'] }}
         :type: ref
