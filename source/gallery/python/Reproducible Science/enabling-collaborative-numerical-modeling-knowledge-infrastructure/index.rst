@@ -87,6 +87,7 @@
        **Source Code**
        ^^^^^^^^^^^
      .. toctree::
+        :titlesonly:
         :maxdepth: 1
 
         

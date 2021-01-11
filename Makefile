@@ -29,6 +29,9 @@ html:
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
+rebuild: 
+	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
+
 github:
 	@make html
 	@cp -a $(BUILDDIR)/html/. docs
