@@ -80,6 +80,29 @@ def get_metadata_from_hs(hsguid):
     return data
 
 
+def copy_static(data):
+    """
+    copy static files to _static directory
+    """
+
+    if 'thumbnail' in data.keys():
+        # move thumbnail to _static and rename it
+        thumbnail_path = os.path.abspath(
+            os.path.join(subdir, data["thumbnail"])
+        )
+
+        thumbnail_new_name = f'thumbnail-{data["label"]}'
+        shutil.copyfile(thumbnail_path, f"{static_dir}/{thumbnail_new_name}")
+        data["thumbnail"] = thumbnail_new_name
+
+    else:
+        # set thumbnail using the default "unknown" image
+        data['thumbnail'] = 'missing-thumbnail.png'
+
+    return data
+
+
+
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument(
@@ -125,13 +148,8 @@ if __name__ == "__main__":
                 subgallery_path = os.path.dirname(os.path.dirname(subdir))
                 category = os.path.basename(os.path.dirname(subdir))
 
-                # move thumbnail to _static and rename it
-                thumbnail_path = os.path.abspath(
-                    os.path.join(subdir, data["thumbnail"])
-                )
-                thumbnail_new_name = f'thumbnail-{data["label"]}'
-                shutil.copyfile(thumbnail_path, f"{static_dir}/{thumbnail_new_name}")
-                data["thumbnail"] = thumbnail_new_name
+                # move static data
+                data = copy_static(data)
 
                 if subgallery_path not in subgalleries.keys():
                     subgalleries[subgallery_path] = {}

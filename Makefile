@@ -18,6 +18,7 @@ help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo "  html       builds standalone HTML files"
 	@echo "  github     builds website ready to be pushed to GitHub"
+	@echo "  rebuild    rebuilds the website in-place, without querying data from HydroShare"
 	@echo "  clean      cleans all local build files"
 
 clean:

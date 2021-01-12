@@ -1,4 +1,4 @@
-.. _Python_880fff3ffe4b4eba9238ff99c825af52:
+.. _Python_33fb0567e61d45e4b62c30719fcda997:
 
 .. toctree::
    :caption: Table of Contents
@@ -99,7 +99,7 @@ Instructional Examples
 
     
     ---
-    :img-top: /_static/thumbnail-creating-curve-
+    :img-top: /_static/missing-thumbnail.png
     
     **Creating Curve Number Grid using PyQGIS through...**
 
