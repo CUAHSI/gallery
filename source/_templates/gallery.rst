@@ -6,7 +6,7 @@
    :hidden:
    :glob:
 
-    index
+   index
 
 
 ========================

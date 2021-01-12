@@ -1,4 +1,4 @@
-.. _Python_33fb0567e61d45e4b62c30719fcda997:
+.. _Python_b1fc0503b5744040bb2c21c528e8aa43:
 
 .. toctree::
    :caption: Table of Contents
@@ -6,7 +6,7 @@
    :hidden:
    :glob:
 
-    index
+   index
 
 
 ========================

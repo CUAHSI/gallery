@@ -95,12 +95,8 @@ html_last_updated_fmt = None
 
 
 html_theme_options = {
-#    'github_button': 'false',
-#    'github_user': 'gdg12',
-#    'github_repo': 'alabaster',
-#    'github_type': 'fork',
     
-    'collapse_navigation': True,
+    'collapse_navigation': False,
     'sticky_navigation': True,
     'navigation_depth': 4,
 

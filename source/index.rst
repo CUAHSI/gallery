@@ -2,6 +2,7 @@
    :maxdepth: 2
    :hidden:
    :glob:
+   :caption: Galleries
 
    gallery/Python/index
 
@@ -27,7 +28,7 @@ CUAHSI Compute and Modeling Gallery
 
     Community examples using the Python programming language. This includes both Python scripts as well as Python Jupyter notebooks.
 
-    .. link-button:: Python_33fb0567e61d45e4b62c30719fcda997
+    .. link-button:: Python_b1fc0503b5744040bb2c21c528e8aa43
         :type: ref
         :text: Python Gallery
         :classes: btn-outline-primary btn-block stretched-link
