@@ -37,10 +37,13 @@ def get_metadata_from_hs(hsguid):
         if r.status_code != 200:
             raise Exception
 
-        # parse the response
-        root = etree.fromstring(r.text)
+        # encode response as bytestring
+        txt = r.text.encode()
 
-        creators = root.findall("rdf:Description/dc:creator", root.nsmap)
+        # parse into lxml object
+        root = etree.fromstring(txt)
+
+        creators = root.findall(".//dc:creator", root.nsmap)
         data["authors"] = []
         for creator in creators:
             terms = creator.find("rdf:Description", root.nsmap)
@@ -55,14 +58,11 @@ def get_metadata_from_hs(hsguid):
             data["authors"].append(d)
 
         # get the resource title and description
-        data["title"] = root.find("rdf:Description/dc:title", root.nsmap).text
+        data["title"] = root.find(".//dc:title", root.nsmap).text
 
         # todo: the encoding of description does not preserve newlines.
         data["description"] = (
-            root.find(
-                "rdf:Description/dc:description/rdf:Description/dcterms:abstract",
-                root.nsmap,
-            )
+            root.find(".//dcterms:abstract", root.nsmap)
             .text.encode("ascii", "ignore")
             .decode()
         )

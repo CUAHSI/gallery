@@ -27,7 +27,7 @@
 
     <div class=example-description>
         <h2> Description </h2>
-        <p>This resource serves as a template for creating a curve number grid raster file which could be used to create corresponding maps or for further utilization, soil data and reclassified land-use raster files are created along the process, user has to provided or connect to a set of shape-files including boundary of watershed, soil data and land-use containing this watershed, land-use reclassification and curve number look up table. Script contained in this resource mainly uses PyQGIS through Jupyter Notebook for majority of the processing with a touch of Pandas for data manipulation. Detailed description of procedure are commented in the script.</p>
+        <p>This resource serves as a template for creating a curve number grid raster file which could be used to create corresponding maps or for further utilization,  soil data and reclassified land-use raster files are created along the process, user has to provided or connect to a set of shape-files including boundary of watershed, soil data and land-use containing this watershed, land-use reclassification and curve number look up table. Script contained in this resource mainly uses PyQGIS through Jupyter Notebook for majority of the processing with a touch of Pandas for data manipulation. Detailed description of procedure are commented in the script.</p>
     </div>
 
 
@@ -47,17 +47,17 @@
       **Authors**
       ^^^^^
     
-        :link-badge:`http://www.hydroshare.org/user/2983/,"Sayan Dey",cls=badge-primary text-white`
+        :badge:`Merwade, Venkatesh,badge-secondary`
+        - Purdue University 
+        (`contact <vmerwade@purdue.edu>`_)
+        
+        :badge:`Dey, Sayan,badge-secondary`
         - Purdue University 
         (`contact <dey6@purdue.edu>`_)
         
-        :link-badge:`http://www.hydroshare.org/user/6348/,"Shizhang Wang",cls=badge-primary text-white`
+        :badge:`Wang, Shizhang,badge-secondary`
         - Purdue 
         (`contact <wang2846@purdue.edu>`_)
-        
-        :link-badge:`http://www.hydroshare.org/user/64/,"Venkatesh Merwade",cls=badge-primary text-white`
-        - Purdue University 
-        (`contact <vmerwade@purdue.edu>`_)
         
 
 
