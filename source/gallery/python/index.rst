@@ -1,4 +1,4 @@
-.. _Python_f3f9e6f3033a40659555531d2477c5fa:
+.. _python_2203f74f05054a5eada0d6838456d55d:
 
 .. toctree::
    :caption: Table of Contents
@@ -10,7 +10,7 @@
 
 
 ========================
-Python Gallery
+python Gallery
 ========================
 
 
@@ -20,7 +20,7 @@ Python Gallery
   For more details, see https://sphinx-panels.readthedocs.io/en/latest/
 
 
-Research Examples
+research Examples
 ******************************
 
 .. panels::

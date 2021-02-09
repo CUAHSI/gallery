@@ -44,7 +44,6 @@ extensions = ['sphinx.ext.todo',
     'sphinx.ext.autosummary',
     'numpydoc',
     'sphinxcontrib.images',
-    'sphinx_git',
     'nbsphinx',
     'sphinx.ext.mathjax',
     'sphinx_copybutton',
@@ -171,3 +170,4 @@ nbsphinx_codecell_lexer = 'ipython3'
 
 
 
+bibtex_bibfiles = ['refs.bib']
