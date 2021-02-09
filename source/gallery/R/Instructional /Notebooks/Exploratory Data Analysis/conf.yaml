@@ -2,7 +2,6 @@ hydroshare:
   id: 42052357655f4ad39f8ec7d0bef351c7
 code_path: ./Notebooks
 thumbnail: ./thumbnail.png
-card_description: 
 launch_options:
   - name: Open In HydroShare
     url: https://hydroshare.org/resource/42052357655f4ad39f8ec7d0bef351c7
