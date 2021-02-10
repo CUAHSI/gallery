@@ -114,7 +114,6 @@ if __name__ == "__main__":
 
     args = p.parse_args()
     subgalleries = {}
-#    import pdb; pdb.set_trace()
     for subdir, dirs, files in os.walk(args.gallery):
         if "conf.yaml" in files:
             conf = os.path.join(subdir, "conf.yaml")
@@ -136,7 +135,12 @@ if __name__ == "__main__":
 
                 # make sure a page label exists in data. If not, create one.
                 if "label" not in data.keys():
-                    data["label"] = "-".join(data["title"][:15].lower().split(" "))
+                    try:
+                        # set the label as the HS id if it exists
+                        data['label'] = data['hydroshare']['id']
+                    except Exception:
+                        # set to a base64 encoding of the title
+                        data['label'] = base64.b64encode(data['title'].encode()).decode()
 
                 render_page(
                     os.path.join(template_dir, "landingpage.rst"),
