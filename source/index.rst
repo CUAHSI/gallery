@@ -5,6 +5,7 @@
    :caption: Galleries
 
    gallery/Python/index
+   gallery/R/index
 
 
 CUAHSI Compute and Modeling Gallery
@@ -28,7 +29,7 @@ CUAHSI Compute and Modeling Gallery
 
     Community examples using the Python programming language. This includes both Python scripts as well as Python Jupyter notebooks.
 
-    .. link-button:: Python_6a69c5ad749e41ef96a23fcecad30742
+    .. link-button:: Python_4cceb1d12b3f40bbb4581c2cf184941a
         :type: ref
         :text: Python Gallery
         :classes: btn-outline-primary btn-block stretched-link
@@ -43,7 +44,7 @@ CUAHSI Compute and Modeling Gallery
 
     Community examples using the R programming language. This includes R Jupyter notebooks, R scripts, as well as R Shiny web applications.
 
-    .. link-button:: R_448240b1de0440e5a66c2ee129fbab41
+    .. link-button:: R_2446713cac6a47dfab00f5199d059de8
         :type: ref
         :text: R Gallery
         :classes: btn-outline-primary btn-block stretched-link

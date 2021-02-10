@@ -1,4 +1,4 @@
-.. _Python_6a69c5ad749e41ef96a23fcecad30742:
+.. _Python_4cceb1d12b3f40bbb4581c2cf184941a:
 
 .. toctree::
    :caption: Table of Contents
@@ -30,7 +30,7 @@ Research Examples
 
     
     ---
-    :img-top: /_static/thumbnail-white-clay-cree
+    :img-top: /_static/thumbnail-0886014659d443d4a2b9b189c96bab68
     
     **White Clay Creek - Stage, Streamflow / Discharg...**
 
@@ -38,14 +38,14 @@ Research Examples
         Continuous streamflow data collected by the Stroud Water Research Center within the 3rd-order research watershed, White Clay Creek above McCue Road...
     
 
-    .. link-button:: white-clay-cree
+    .. link-button:: 0886014659d443d4a2b9b189c96bab68
         :type: ref
         :text: Open Example
         :classes: btn-outline-primary btn-block stretched-link
     
      
     ---
-    :img-top: /_static/thumbnail-lczo-stream-wat
+    :img-top: /_static/thumbnail-f8420c1447fe440eb93e656b2db0b64d
     
     **LCZO-Stream Water Chemistry, Streamflow / Disch...**
 
@@ -53,7 +53,7 @@ Research Examples
         Concentration-discharge relationships are a key tool for understanding the sourcing and transport of material from watersheds to fluvial networks. ...
     
 
-    .. link-button:: lczo-stream-wat
+    .. link-button:: f8420c1447fe440eb93e656b2db0b64d
         :type: ref
         :text: Open Example
         :classes: btn-outline-primary btn-block stretched-link
@@ -72,7 +72,7 @@ Reproducible Science Examples
 
     
     ---
-    :img-top: /_static/thumbnail-enabling-collab
+    :img-top: /_static/thumbnail-fdc3a06e6ad842abacfa5b896df73a76
     
     **Enabling Collaborative Numerical Modeling in Ea...**
 
@@ -80,7 +80,7 @@ Reproducible Science Examples
         The ability to test hypotheses about hydrology, geomorphology, and atmospheric processes is invaluable to research in the Earth and planetary scien...
     
 
-    .. link-button:: enabling-collab
+    .. link-button:: fdc3a06e6ad842abacfa5b896df73a76
         :type: ref
         :text: Open Example
         :classes: btn-outline-primary btn-block stretched-link
@@ -107,14 +107,14 @@ Instructional Examples
         A template for creating a curve number grid raster file using PyQGIS and Pandas.
     
 
-    .. link-button:: creating-curve-
+    .. link-button:: abf67aad0eb64a53bf787d369afdcc84
         :type: ref
         :text: Open Example
         :classes: btn-outline-primary btn-block stretched-link
     
      
     ---
-    :img-top: /_static/thumbnail-hurricane-harve
+    :img-top: /_static/thumbnail-3db192783bcb4599bab36d43fc3413db
     
     **Hurricane Harvey NWM Subsetting Exercise**
 
@@ -122,7 +122,7 @@ Instructional Examples
         An introduction to collecting and processing National Water Model operational forecast data using THREDDs and OpenDAP.
     
 
-    .. link-button:: hurricane-harve
+    .. link-button:: 3db192783bcb4599bab36d43fc3413db
         :type: ref
         :text: Open Example
         :classes: btn-outline-primary btn-block stretched-link
