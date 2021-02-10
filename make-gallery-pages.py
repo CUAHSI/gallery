@@ -90,17 +90,17 @@ def copy_static(data):
         thumbnail_path = os.path.abspath(
             os.path.join(subdir, data["thumbnail"])
         )
+        if os.path.exists(thumbnail_path):
+            thumbnail_new_name = f'thumbnail-{data["label"]}'
+            shutil.copyfile(thumbnail_path, f"{static_dir}/{thumbnail_new_name}")
+            data["thumbnail"] = thumbnail_new_name
+            return data
 
-        thumbnail_new_name = f'thumbnail-{data["label"]}'
-        shutil.copyfile(thumbnail_path, f"{static_dir}/{thumbnail_new_name}")
-        data["thumbnail"] = thumbnail_new_name
-
-    else:
-        # set thumbnail using the default "unknown" image
-        data['thumbnail'] = 'missing-thumbnail.png'
+    # set thumbnail using the default "unknown" image
+    print('WARNING: Missing thumbnail, setting to default image')
+    data['thumbnail'] = 'missing-thumbnail.png'
 
     return data
-
 
 
 if __name__ == "__main__":
