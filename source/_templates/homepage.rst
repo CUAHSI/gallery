@@ -5,6 +5,7 @@
    :caption: Galleries
 
    gallery/Python/index
+   gallery/R/index
 
 
 CUAHSI Compute and Modeling Gallery
