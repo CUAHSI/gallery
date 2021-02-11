@@ -45,7 +45,6 @@ def get_metadata_from_hs(hsguid):
         root = etree.fromstring(txt)
 
         creators = root.findall(".//dc:creator", root.nsmap)
-        import pdb; pdb.set_trace()
         data["authors"] = []
         for creator in creators:
             terms = creator.find("rdf:Description", root.nsmap)
@@ -54,8 +53,7 @@ def get_metadata_from_hs(hsguid):
                 val = terms.find(f"hsterms:{att}", root.nsmap)
                 if val is not None:
                     d[att] = val.text
-                    print(val.text)
-
+                
             about = f'{{{root.nsmap["rdf"]}}}about'
             if about in terms.attrib:
                 d["url"] = terms.attrib[about]
@@ -76,7 +74,7 @@ def get_metadata_from_hs(hsguid):
         keywords = [kw.text for kw in subject_kw]
         if len(keywords) > 0:
             data["keywords"] = keywords
-    
+
     except Exception:
         print(f"Failed to get hydroshare data for resource id: {hsguid}")
         return None
@@ -131,6 +129,9 @@ if __name__ == "__main__":
                 if hsid is not None:
                     # load data from hydroshare
                     hsdata = get_metadata_from_hs(hsid)
+                    if hsdata is None:
+                        # something happened when collecting hs metadata
+                        continue
 
                 # combine hsdata and yaml data.
                 # note, yaml data will overwite hs data

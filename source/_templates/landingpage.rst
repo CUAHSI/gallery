@@ -52,7 +52,7 @@
         {% if 'url' in author -%}
             :link-badge:`{{ author['url'] }},"{{ author['name'] }}",cls=badge-primary text-white`
         {% else -%}
-            :badge:`{{ author['name'] }},badge-secondary`
+            :badge:`"{{ author['name'] }}", badge-secondary`
         {% endif -%}
             - {{ author['organization'] }} 
         {% if 'email' in author -%}
