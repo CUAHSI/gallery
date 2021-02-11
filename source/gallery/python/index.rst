@@ -1,4 +1,4 @@
-.. _UHl0aG9u:
+.. _cHl0aG9u:
 
 .. toctree::
    :caption: Table of Contents
@@ -10,7 +10,7 @@
 
 
 ========================
-Python Gallery
+python Gallery
 ========================
 
 
@@ -20,7 +20,7 @@ Python Gallery
   For more details, see https://sphinx-panels.readthedocs.io/en/latest/
 
 
-Research Examples
+research Examples
 ******************************
 
 .. panels::
