@@ -46,6 +46,7 @@ def get_metadata_from_hs(hsguid):
 
         creators = root.findall(".//dc:creator", root.nsmap)
         data["authors"] = []
+
         for creator in creators:
             terms = creator.find("rdf:Description", root.nsmap)
             d = {}
@@ -53,10 +54,12 @@ def get_metadata_from_hs(hsguid):
                 val = terms.find(f"hsterms:{att}", root.nsmap)
                 if val is not None:
                     d[att] = val.text
-                
-            about = f'{{{root.nsmap["rdf"]}}}about'
-            if about in terms.attrib:
-                d["url"] = terms.attrib[about]
+
+            # save the user's profile page if it exists
+            user_url = terms.find(f'hsterms:description',root.nsmap)
+            if user_url is not None:
+                d['url'] = f'https://hydroshare.org{user_url.text}'
+
             data["authors"].append(d)
 
         # get the resource title and description
