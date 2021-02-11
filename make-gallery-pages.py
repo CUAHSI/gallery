@@ -4,6 +4,7 @@ import os
 import yaml
 import uuid
 import shutil
+import base64
 import jinja2
 import requests
 import argparse
@@ -44,6 +45,7 @@ def get_metadata_from_hs(hsguid):
         root = etree.fromstring(txt)
 
         creators = root.findall(".//dc:creator", root.nsmap)
+        import pdb; pdb.set_trace()
         data["authors"] = []
         for creator in creators:
             terms = creator.find("rdf:Description", root.nsmap)
@@ -52,6 +54,8 @@ def get_metadata_from_hs(hsguid):
                 val = terms.find(f"hsterms:{att}", root.nsmap)
                 if val is not None:
                     d[att] = val.text
+                    print(val.text)
+
             about = f'{{{root.nsmap["rdf"]}}}about'
             if about in terms.attrib:
                 d["url"] = terms.attrib[about]
@@ -72,8 +76,8 @@ def get_metadata_from_hs(hsguid):
         keywords = [kw.text for kw in subject_kw]
         if len(keywords) > 0:
             data["keywords"] = keywords
-
-    except:
+    
+    except Exception:
         print(f"Failed to get hydroshare data for resource id: {hsguid}")
         return None
 
@@ -141,6 +145,10 @@ if __name__ == "__main__":
                     except Exception:
                         # set to a base64 encoding of the title
                         data['label'] = base64.b64encode(data['title'].encode()).decode()
+
+                # clean newlines from description
+                data['description'] = data['description'].replace('\n', '')
+                data['description'] = data['description'].replace('\r', '<br>')
 
                 render_page(
                     os.path.join(template_dir, "landingpage.rst"),
