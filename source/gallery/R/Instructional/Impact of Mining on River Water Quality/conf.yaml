@@ -1,0 +1,8 @@
+hydroshare:
+  id: 106b934d0e4f40c98ba10b9fea773db5
+code_path: ./notebooks
+thumbnail: ./thumbnail.png
+launch_options:
+  - name: Open In HydroShare
+    url: https://hydroshare.org/resource/106b934d0e4f40c98ba10b9fea773db5
+

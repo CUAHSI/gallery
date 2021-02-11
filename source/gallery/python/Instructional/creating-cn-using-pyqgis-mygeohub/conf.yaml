@@ -1,0 +1,10 @@
+hydroshare:
+  id: abf67aad0eb64a53bf787d369afdcc84
+notebooks: 
+  - name: ./notebooks/CN_Grid_Markdown_Exercise.ipynb
+    label: CN Grid Exercise
+card_description: A template for creating a curve number grid raster file using PyQGIS and Pandas.
+launch_options:
+  - name: Open In HydroShare
+    url: https://www.hydroshare.org/resource/abf67aad0eb64a53bf787d369afdcc84/
+
