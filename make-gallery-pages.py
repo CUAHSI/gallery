@@ -178,7 +178,9 @@ if __name__ == "__main__":
     gallery_labels = {}
     for sub, sub_data in subgalleries.items():
         # create a label for the subgallery page
-        id = f"{os.path.basename(sub)}_{uuid.uuid4().hex}"
+        # set to a base64 encoding of the title
+        subname = os.path.basename(sub)
+        id = base64.b64encode(subname.encode()).decode()
         gallery_labels[sub] = id
 
         # generate page title. This is necessary for the TOC
