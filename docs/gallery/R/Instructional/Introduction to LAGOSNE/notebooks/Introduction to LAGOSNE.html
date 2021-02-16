@@ -1,0 +1,1153 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Chemical Properties of Lakes: Introduction to the Lake Multi-Scaled Geospatial and Temporal Database (LAGOSNE) &mdash; BuildDocs version documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/language_data.js"></script>
+        <script src="../../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../../_static/copybutton.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html">
+          
+
+          
+            
+            <img src="../../../../../_static/cuahsi-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Galleries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../python/index.html">python Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../python/index.html#research-examples">Research Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../python/index.html#reproducible-science-examples">Reproducible Science Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../python/index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">R Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">BuildDocs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          <!--
+The purpose of this template is to override (i.e. supress) the breadcrumbs that appear at the top of each page.
+-->
+
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Chemical-Properties-of-Lakes:-Introduction-to-the-Lake-Multi-Scaled-Geospatial-and-Temporal-Database-(LAGOSNE)">
+<h1>Chemical Properties of Lakes: Introduction to the Lake Multi-Scaled Geospatial and Temporal Database (LAGOSNE)<a class="headerlink" href="#Chemical-Properties-of-Lakes:-Introduction-to-the-Lake-Multi-Scaled-Geospatial-and-Temporal-Database-(LAGOSNE)" title="Permalink to this headline">¶</a></h1>
+<p>This lesson was adapted from educational material written by <a class="reference external" href="https://www.hydroshare.org/user/4912/">Dr. Kateri Salk</a> for her Fall 2019 Hydrologic Data Analysis course at Duke University.</p>
+<div class="section" id="Introduction">
+<h2>Introduction<a class="headerlink" href="#Introduction" title="Permalink to this headline">¶</a></h2>
+<p>Trophic states are based on lake fertility. The root “trophy” means nutrients; therefore, lakes are classified based on the amount of available nutrients for organisms. More fertile lakes have more nutrients and therefore more plants and algae. There are four lake trophic states:</p>
+<p>“Oligo” means very little; therefore, oligotrophic means very little nutrients (Phosphorus and Nitrogen). In oligotrophic lakes, oxygen is found at high levels throughout the water column. Cold water can hold more dissolved oxygen than warm water, and the deep region of oligotrophic lakes stays very cold. In addition, low algal concentration allows deeper light penetration and less decomposition.</p>
+<p>“Meso” means middle or mid; therefore, mesotrophic means a medium amount of nutrients (Phosphorus and Nitrogen). Mesotrophic lakes behave differently than oligotrophic lakes in that they stratify, meaning they separate into layers in the summer (more on lake stratification). The top layer of water becomes warm from the sun and contains algae. Since the by-product of photosynthesis is oxygen, oxygen concentration remains high at the surface of the lake. The bottom layer remains cooler and can
+become anoxic in mid-summer.</p>
+<p>“Eu” means true; therefore, eutrophic literally means true nutrients or truly nutrient rich (Phosphorus and Nitrogen). Eutrophic lakes are found in southern Minnesota where the soils are more fertile and where there is a lot of farmland. Eutrophic lakes are shallow and have murky water and mucky, soft bottoms.</p>
+<p>Hypereutrophic lakes are at the extreme end of the eutrophic range with exceedingly high nutrient concentrations and associated biomass production. In temperate regions the fish communities are dominated by roach and bream. Anoxia or complete loss of oxygen often occurs in the hypolimnion during summer stratification.</p>
+<p>For more information on lake trophic states, please visit <a class="reference external" href="http://www.lake.wateratlas.usf.edu/library/learn-more/learnmore.aspx?toolsection=lm_tsi">http://www.lake.wateratlas.usf.edu/library/learn-more/learnmore.aspx?toolsection=lm_tsi</a> and <a class="reference external" href="http://www.manitowoccountylakesassociation.org/oligotrophic-vs-mesotrophic-vs-eutrophic/">http://www.manitowoccountylakesassociation.org/oligotrophic-vs-mesotrophic-vs-eutrophic/</a>.</p>
+</div>
+<div class="section" id="Learning-Objectives">
+<h2>Learning Objectives<a class="headerlink" href="#Learning-Objectives" title="Permalink to this headline">¶</a></h2>
+<p>After successfully completing this exercise, you will be able to:</p>
+<ol class="arabic simple">
+<li><p>Navigate and explore the LAGOSNE database and R package</p></li>
+<li><p>Evaluate lake water quality using the trophic state index</p></li>
+<li><p>Analyze spatial and temporal patterns of water quality across the northeast U.S.</p></li>
+</ol>
+</div>
+<div class="section" id="Requirements-to-Complete-Lesson">
+<h2>Requirements to Complete Lesson<a class="headerlink" href="#Requirements-to-Complete-Lesson" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="Packages">
+<h3>Packages<a class="headerlink" href="#Packages" title="Permalink to this headline">¶</a></h3>
+<p>This lesson requires the installation of the following R packages to run the provided script: - <code class="docutils literal notranslate"><span class="pre">tidyverse</span></code>- Version 1.3.0. A collection of R packages designed for data science. - <code class="docutils literal notranslate"><span class="pre">lubridate</span></code>- Version 1.7.9. Functions for working with dates/times. - <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code>- Version 3.3.3. Creates elegant data visualisations using the Grammar of Graphics. - <code class="docutils literal notranslate"><span class="pre">scales</span></code>- Version 1.1.1. Graphical scales provide methods for automatically determining breaks and labels for axes and legends. - <code class="docutils literal notranslate"><span class="pre">repr</span></code>- Version
+1.1.0. String and binary representations of objects for several formats / mime types. - <code class="docutils literal notranslate"><span class="pre">LAGOSNE</span></code>- Version 2.0.2. Client for programmatic access to the Lake Multi-scaled Geospatial and Temporal database <a class="reference external" href="https://lagoslakes.org">https://lagoslakes.org</a>, with functions for accessing lake water quality and ecological context data for the US.</p>
+</div>
+<div class="section" id="Data-and-Code">
+<h3>Data and Code<a class="headerlink" href="#Data-and-Code" title="Permalink to this headline">¶</a></h3>
+<p>This lesson will query data from LAGOSNE, a combination of three data modules (LAGOSlocus, LAGOSlimno, LAGOSgeo) designed to be of use for researchers and managers to facilitate further development of our basic understanding of lake water quality at broad scales using water quality data on thousands of lakes collected over the last several decades. The database includes information about lakes in a lake-rich region of 17 states in the United States, including Minnesota, Iowa, Wisconsin,
+Illinois, Missouri, Michigan, Indiana, Ohio, Pennsylvania, New York, New Jersey, Connecticut, New Hampshire, Rhode Island, Massachusetts, Vermont, and Maine. LAGOSNE contains a complete census of all lakes greater than 4 hectares in the region with supporting ecological context information. Additionally, for a subset of lakes, LAGOSNE contains water quality data. The LAGOSNE package was built so that future data users could easily retrieve and manipulate the data, as well as easily access
+metadata.</p>
+<p>It should be noted that the databases are not static as data is constantly being added. For more in-depth information on the <code class="docutils literal notranslate"><span class="pre">LAGOSNE</span></code> package, please visit <a class="reference external" href="https://github.com/cont-limno/LAGOSNE">https://github.com/cont-limno/LAGOSNE</a> and <a class="reference external" href="https://cont-limno.github.io/LAGOSNE/articles/lagosne_structure.html">https://cont-limno.github.io/LAGOSNE/articles/lagosne_structure.html</a>.</p>
+<p>The code provided in this resource was developed using R version 3.6.1.</p>
+</div>
+<div class="section" id="Set-Working-Directory">
+<h3>Set Working Directory<a class="headerlink" href="#Set-Working-Directory" title="Permalink to this headline">¶</a></h3>
+<p>In R, the working directory is the directory where R starts when looking for any file to open (as directed by a file path) and where it saves any output. This lesson assumes that you have set your working directory to the folder location of the downloaded and unzipped data subsets.</p>
+</div>
+<div class="section" id="Load-Packages-and-set-ggplot-theme">
+<h3>Load Packages and set ggplot theme<a class="headerlink" href="#Load-Packages-and-set-ggplot-theme" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="nf">options</span><span class="p">(</span><span class="n">warn</span><span class="o">=</span><span class="m">-1</span><span class="p">)</span>
+
+<span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">lubridate</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">scales</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">repr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">LAGOSNE</span><span class="p">)</span>
+<span class="nf">lagosne_get</span><span class="p">(</span><span class="n">dest_folder</span> <span class="o">=</span> <span class="n">LAGOSNE</span><span class="o">:::</span><span class="nf">lagos_path</span><span class="p">(),</span> <span class="n">overwrite</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="c1">#this will take a couple of minutes to load all of the CSVs</span>
+
+<span class="nf">theme_set</span><span class="p">(</span><span class="nf">theme_classic</span><span class="p">())</span>
+<span class="nf">options</span><span class="p">(</span><span class="n">scipen</span> <span class="o">=</span> <span class="m">100</span><span class="p">)</span> <span class="c1">#remove scientific notation from data frames</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+── <span class="ansi-bold">Attaching packages</span> ─────────────────────────────────────── tidyverse 1.3.0 ──
+
+<span class="ansi-green-fg">✓</span> <span class="ansi-blue-fg">ggplot2</span> 3.3.3     <span class="ansi-green-fg">✓</span> <span class="ansi-blue-fg">purrr  </span> 0.3.4
+<span class="ansi-green-fg">✓</span> <span class="ansi-blue-fg">tibble </span> 3.0.4     <span class="ansi-green-fg">✓</span> <span class="ansi-blue-fg">dplyr  </span> 1.0.2
+<span class="ansi-green-fg">✓</span> <span class="ansi-blue-fg">tidyr  </span> 1.1.2     <span class="ansi-green-fg">✓</span> <span class="ansi-blue-fg">stringr</span> 1.4.0
+<span class="ansi-green-fg">✓</span> <span class="ansi-blue-fg">readr  </span> 1.4.0     <span class="ansi-green-fg">✓</span> <span class="ansi-blue-fg">forcats</span> 0.5.0
+
+── <span class="ansi-bold">Conflicts</span> ────────────────────────────────────────── tidyverse_conflicts() ──
+<span class="ansi-red-fg">x</span> <span class="ansi-blue-fg">dplyr</span>::<span class="ansi-green-fg">filter()</span> masks <span class="ansi-blue-fg">stats</span>::filter()
+<span class="ansi-red-fg">x</span> <span class="ansi-blue-fg">dplyr</span>::<span class="ansi-green-fg">lag()</span>    masks <span class="ansi-blue-fg">stats</span>::lag()
+
+
+Attaching package: ‘lubridate’
+
+
+The following objects are masked from ‘package:base’:
+
+    date, intersect, setdiff, union
+
+
+
+Attaching package: ‘scales’
+
+
+The following object is masked from ‘package:purrr’:
+
+    discard
+
+
+The following object is masked from ‘package:readr’:
+
+    col_factor
+
+
+Downloading the &#39;locus&#39; module ...
+
+Downloading LAGOSNE_lakeslocus101.csv ...
+
+Downloading the &#39;limno&#39; module ...
+
+Downloading epi_waterquality10873.csv ...
+
+Downloading lakeslimno10873.csv ...
+
+Downloading sourceprogram10873.csv ...
+
+Downloading the &#39;geo&#39; module ...
+
+Downloading LAGOSNE_buffer100m_105.csv ...
+
+Downloading LAGOSNE_buffer100m_lulc105.csv ...
+
+Downloading LAGOSNE_buffer500m_105.csv ...
+
+Downloading LAGOSNE_buffer500m_conn105.csv ...
+
+Downloading LAGOSNE_buffer500m_lulc105.csv ...
+
+Downloading LAGOSNE_county_105.csv ...
+
+Downloading LAGOSNE_county_chag105.csv ...
+
+Downloading LAGOSNE_county_conn105.csv ...
+
+Downloading LAGOSNE_county_lulc105.csv ...
+
+Downloading LAGOSNE_edu_105.csv ...
+
+Downloading LAGOSNE_edu_chag105.csv ...
+
+Downloading LAGOSNE_edu_conn105.csv ...
+
+Downloading LAGOSNE_edu_lulc105.csv ...
+
+Downloading LAGOSNE_hu4_105.csv ...
+
+Downloading LAGOSNE_hu4_chag105.csv ...
+
+Downloading LAGOSNE_hu4_conn105.csv ...
+
+Downloading LAGOSNE_hu4_lulc105.csv ...
+
+Downloading LAGOSNE_hu8_105.csv ...
+
+Downloading LAGOSNE_hu8_chag105.csv ...
+
+Downloading LAGOSNE_hu8_conn105.csv ...
+
+Downloading LAGOSNE_hu8_lulc105.csv ...
+
+Downloading LAGOSNE_hu12_105.csv ...
+
+Downloading LAGOSNE_hu12_chag105.csv ...
+
+Downloading LAGOSNE_hu12_conn105.csv ...
+
+Downloading LAGOSNE_hu12_lulc105.csv ...
+
+Downloading LAGOSNE_iws_105.csv ...
+
+Downloading LAGOSNE_iws_conn105.csv ...
+
+Downloading LAGOSNE_iws_lulc105.csv ...
+
+Downloading LAGOSNE_lakesgeo105.csv ...
+
+Downloading LAGOSNE_state_105.csv ...
+
+Downloading LAGOSNE_state_chag105.csv ...
+
+Downloading LAGOSNE_state_conn105.csv ...
+
+Downloading LAGOSNE_state_lulc105.csv ...
+
+LAGOSNE downloaded. Now compressing to native R object ...
+
+
+  Reading geo county data [==========&gt;---------------------------------------]
+
+  Reading geo edu data [=================&gt;-----------------------------------]
+
+  Reading geo huc4 data [======================&gt;-----------------------------]
+
+  Reading geo huc8 data [============================&gt;-----------------------]
+
+  Reading geo huc12 data [=================================&gt;-----------------]
+
+  Reading geo iws data [========================================&gt;------------]
+
+  Reading geo buffer data [===========================================&gt;------]
+
+  Reading lake locus data [==================================================]
+
+
+LAGOSNE compiled to /Users/gabrielagarcia/Library/Application Support/LAGOSNE//data_1.087.3.qs
+
+</pre></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="Import-LAGOSNE-data-and-view-the-names-of-all-37-of-the-data-frames">
+<h2>Import LAGOSNE data and view the names of all 37 of the data frames<a class="headerlink" href="#Import-LAGOSNE-data-and-view-the-names-of-all-37-of-the-data-frames" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">LAGOSdata</span> <span class="o">&lt;-</span> <span class="nf">lagosne_load</span><span class="p">()</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">LAGOSdata</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'county'</li><li>'county.chag'</li><li>'county.conn'</li><li>'county.lulc'</li><li>'edu'</li><li>'edu.chag'</li><li>'edu.conn'</li><li>'edu.lulc'</li><li>'hu4'</li><li>'hu4.chag'</li><li>'hu4.conn'</li><li>'hu4.lulc'</li><li>'hu8'</li><li>'hu8.chag'</li><li>'hu8.conn'</li><li>'hu8.lulc'</li><li>'hu12'</li><li>'hu12.chag'</li><li>'hu12.conn'</li><li>'hu12.lulc'</li><li>'iws'</li><li>'iws.conn'</li><li>'iws.lulc'</li><li>'state'</li><li>'state.chag'</li><li>'state.conn'</li><li>'state.lulc'</li><li>'buffer100m'</li><li>'buffer100m.lulc'</li><li>'buffer500m'</li><li>'buffer500m.conn'</li><li>'buffer500m.lulc'</li><li>'lakes.geo'</li><li>'epi_nutr'</li><li>'lakes_limno'</li><li>'lagos_source_program'</li><li>'locus'</li></ol></div>
+</div>
+<div class="section" id="Create-3-new-data-frames-from-the-following:-locus,-state,-and-epi_nutr">
+<h3>Create 3 new data frames from the following: locus, state, and epi_nutr<a class="headerlink" href="#Create-3-new-data-frames-from-the-following:-locus,-state,-and-epi_nutr" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">LAGOSlocus</span> <span class="o">&lt;-</span> <span class="n">LAGOSdata</span><span class="o">$</span><span class="n">locus</span> <span class="c1">#metadata</span>
+<span class="n">LAGOSstate</span> <span class="o">&lt;-</span> <span class="n">LAGOSdata</span><span class="o">$</span><span class="n">state</span> <span class="c1">#U.S. state information</span>
+<span class="n">LAGOSnutrient</span> <span class="o">&lt;-</span> <span class="n">LAGOSdata</span><span class="o">$</span><span class="n">epi_nutr</span> <span class="c1">#Epilimnion Water Quality Data</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="c1">### View new data frames</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="nf">head</span><span class="p">(</span><span class="n">LAGOSlocus</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<table>
+<caption>A data.frame: 6 × 18</caption>
+<thead>
+    <tr><th></th><th scope=col>lagoslakeid</th><th scope=col>nhdid</th><th scope=col>gnis_name</th><th scope=col>nhd_lat</th><th scope=col>nhd_long</th><th scope=col>lake_area_ha</th><th scope=col>lake_perim_meters</th><th scope=col>nhd_fcode</th><th scope=col>nhd_ftype</th><th scope=col>iws_zoneid</th><th scope=col>hu4_zoneid</th><th scope=col>hu6_zoneid</th><th scope=col>hu8_zoneid</th><th scope=col>hu12_zoneid</th><th scope=col>edu_zoneid</th><th scope=col>county_zoneid</th><th scope=col>state_zoneid</th><th scope=col>elevation_m</th></tr>
+    <tr><th></th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+    <tr><th scope=row>1</th><td>1</td><td>50524769 </td><td>NA         </td><td>42.54739</td><td>-73.17425</td><td>114.947012</td><td>9296.332</td><td>43613</td><td>436</td><td>IWS_45400</td><td>HU4_12</td><td>HU6_15</td><td>HU8_49</td><td>HU12_16694</td><td>EDU_75</td><td>County_319</td><td>State_2</td><td>295.855</td></tr>
+    <tr><th scope=row>2</th><td>2</td><td>123632625</td><td>Benton Pond</td><td>42.18409</td><td>-73.04728</td><td> 24.865899</td><td>2938.701</td><td>39009</td><td>390</td><td>IWS_41585</td><td>HU4_7 </td><td>HU6_10</td><td>HU8_41</td><td>HU12_16612</td><td>EDU_27</td><td>County_319</td><td>State_2</td><td>447.835</td></tr>
+    <tr><th scope=row>3</th><td>3</td><td>50524793 </td><td>NA         </td><td>42.53081</td><td>-73.19155</td><td> 75.410999</td><td>5821.829</td><td>43613</td><td>436</td><td>IWS_44511</td><td>HU4_12</td><td>HU6_15</td><td>HU8_49</td><td>HU12_16694</td><td>EDU_75</td><td>County_319</td><td>State_2</td><td>295.855</td></tr>
+    <tr><th scope=row>4</th><td>4</td><td>135695054</td><td>Wedge Pond </td><td>42.45435</td><td>-71.14079</td><td>  9.255881</td><td>1416.710</td><td>39004</td><td>390</td><td>IWS_42712</td><td>HU4_10</td><td>HU6_11</td><td>HU8_35</td><td>HU12_16625</td><td>EDU_58</td><td>County_326</td><td>State_2</td><td>  4.256</td></tr>
+    <tr><th scope=row>5</th><td>5</td><td>135693974</td><td>Beck Pond  </td><td>42.60405</td><td>-70.82267</td><td> 13.998481</td><td>2012.668</td><td>39004</td><td>390</td><td>IWS_42817</td><td>HU4_10</td><td>HU6_11</td><td>HU8_35</td><td>HU12_16621</td><td>EDU_58</td><td>County_322</td><td>State_2</td><td> 13.650</td></tr>
+    <tr><th scope=row>6</th><td>6</td><td>122373608</td><td>Alum Pond  </td><td>42.14209</td><td>-72.11992</td><td> 80.290834</td><td>4911.859</td><td>39010</td><td>390</td><td>IWS_43912</td><td>HU4_11</td><td>HU6_12</td><td>HU8_47</td><td>HU12_16684</td><td>EDU_27</td><td>County_331</td><td>State_2</td><td>219.804</td></tr>
+</tbody>
+</table></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="nf">head</span><span class="p">(</span><span class="n">LAGOSstate</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<table>
+<caption>A data.frame: 6 × 8</caption>
+<thead>
+    <tr><th></th><th scope=col>state</th><th scope=col>state_name</th><th scope=col>state_zoneid</th><th scope=col>state_lat</th><th scope=col>state_long</th><th scope=col>state_pct_in_nwi</th><th scope=col>state_ha_in_nwi</th><th scope=col>state_ha</th></tr>
+    <tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+    <tr><th scope=row>1</th><td>ME</td><td>Maine      </td><td>State_1 </td><td>45.38166</td><td>-69.23067</td><td>100</td><td> 8412288</td><td> 8412288</td></tr>
+    <tr><th scope=row>2</th><td>CT</td><td>Connecticut</td><td>State_10</td><td>41.62171</td><td>-72.72643</td><td>100</td><td> 1287793</td><td> 1287793</td></tr>
+    <tr><th scope=row>3</th><td>IL</td><td>Illinois   </td><td>State_11</td><td>40.06480</td><td>-89.19829</td><td>100</td><td>14592003</td><td>14592003</td></tr>
+    <tr><th scope=row>4</th><td>IN</td><td>Indiana    </td><td>State_12</td><td>39.90813</td><td>-86.27554</td><td>100</td><td> 9371664</td><td> 9371664</td></tr>
+    <tr><th scope=row>5</th><td>IA</td><td>Iowa       </td><td>State_13</td><td>42.07456</td><td>-93.49983</td><td>100</td><td>14573561</td><td>14573561</td></tr>
+    <tr><th scope=row>6</th><td>MN</td><td>Minnesota  </td><td>State_14</td><td>46.31652</td><td>-94.30929</td><td>100</td><td>21854347</td><td>21854347</td></tr>
+</tbody>
+</table></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="nf">head</span><span class="p">(</span><span class="n">LAGOSnutrient</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<table>
+<caption>A data.frame: 6 × 92</caption>
+<thead>
+    <tr><th></th><th scope=col>eventida10873</th><th scope=col>lagoslakeid</th><th scope=col>programid</th><th scope=col>sampledate</th><th scope=col>programname</th><th scope=col>programtype</th><th scope=col>chla</th><th scope=col>chla_qual</th><th scope=col>chla_censorcode</th><th scope=col>chla_detectionlimit</th><th scope=col>⋯</th><th scope=col>ton_labmethodname</th><th scope=col>tp</th><th scope=col>tp_qual</th><th scope=col>tp_censorcode</th><th scope=col>tp_detectionlimit</th><th scope=col>tp_labmethodname</th><th scope=col>secchi</th><th scope=col>secchi_qual</th><th scope=col>secchi_censorcode</th><th scope=col>secchi_methodinfo</th></tr>
+    <tr><th></th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;date&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>⋯</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+    <tr><th scope=row>1</th><td>181212</td><td>126841</td><td>47</td><td>1985-11-05</td><td>NY_LCI_CHEM</td><td>State Agency</td><td>  8.40</td><td>NA</td><td>NC1</td><td>2</td><td>⋯</td><td>NA</td><td>100</td><td>NA</td><td>NC1</td><td>3</td><td>EPA_365.1</td><td>1.0000</td><td>NA</td><td>NC3</td><td>NA                 </td></tr>
+    <tr><th scope=row>2</th><td>102404</td><td>  6456</td><td>11</td><td>2006-06-15</td><td>IL_ALMP    </td><td>State Agency</td><td>  5.64</td><td>NA</td><td>NC2</td><td>1</td><td>⋯</td><td>NA</td><td> 14</td><td>NA</td><td>NC2</td><td>4</td><td>MULTIPLE </td><td>2.2098</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+    <tr><th scope=row>3</th><td>102487</td><td>  6469</td><td>11</td><td>2006-06-19</td><td>IL_ALMP    </td><td>State Agency</td><td> 41.90</td><td>Q </td><td>NC1</td><td>1</td><td>⋯</td><td>NA</td><td> 88</td><td>NA</td><td>NC2</td><td>4</td><td>MULTIPLE </td><td>0.4572</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+    <tr><th scope=row>4</th><td>164262</td><td> 81320</td><td>47</td><td>1985-11-07</td><td>NY_LCI_CHEM</td><td>State Agency</td><td>  1.40</td><td>NA</td><td>LE1</td><td>2</td><td>⋯</td><td>NA</td><td>100</td><td>NA</td><td>NC1</td><td>3</td><td>EPA_365.1</td><td>0.5000</td><td>NA</td><td>NC3</td><td>NA                 </td></tr>
+    <tr><th scope=row>5</th><td>179320</td><td>122514</td><td>47</td><td>1988-06-23</td><td>NY_LCI_CHEM</td><td>State Agency</td><td>133.20</td><td>NA</td><td>NC1</td><td>2</td><td>⋯</td><td>NA</td><td>700</td><td>NA</td><td>NC1</td><td>3</td><td>EPA_365.1</td><td>0.4000</td><td>NA</td><td>NC3</td><td>NA                 </td></tr>
+    <tr><th scope=row>6</th><td>102364</td><td>  6450</td><td>11</td><td>2006-08-23</td><td>IL_ALMP    </td><td>State Agency</td><td> 12.30</td><td>NA</td><td>NC2</td><td>1</td><td>⋯</td><td>NA</td><td> 14</td><td>NA</td><td>NC2</td><td>4</td><td>MULTIPLE </td><td>0.9144</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="section" id="Convert-“lagoslakeid”-field-from-an-integer-to-a-factor">
+<h3>Convert “lagoslakeid” field from an integer to a factor<a class="headerlink" href="#Convert-“lagoslakeid”-field-from-an-integer-to-a-factor" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">LAGOSlocus</span><span class="o">$</span><span class="n">lagoslakeid</span> <span class="o">&lt;-</span> <span class="nf">as.factor</span><span class="p">(</span><span class="n">LAGOSlocus</span><span class="o">$</span><span class="n">lagoslakeid</span><span class="p">)</span>
+<span class="n">LAGOSnutrient</span><span class="o">$</span><span class="n">lagoslakeid</span> <span class="o">&lt;-</span> <span class="nf">as.factor</span><span class="p">(</span><span class="n">LAGOSnutrient</span><span class="o">$</span><span class="n">lagoslakeid</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="Wrangling-data-frames-in-LAGOSNE">
+<h2>Wrangling data frames in LAGOSNE<a class="headerlink" href="#Wrangling-data-frames-in-LAGOSNE" title="Permalink to this headline">¶</a></h2>
+<p>LAGOSNE is stored in several pieces, comprising metadata about given lakes (one observation per lake), metadata about each state (one observation per state), and data collected from lakes (one to many observations per lake over time). To connect observations from one data frame to the next, we need to find a common variable between the data frames.</p>
+<p>For example, let’s find out how many lakes are in each state. Note that LAGOSlocus only includes the state_zoneid, whereas LAGOSstate connects state_zoneid for each state.</p>
+<div class="section" id="Left-Join-LAGOSlocus-and-LAGOSstate-data-frames">
+<h3>Left Join LAGOSlocus and LAGOSstate data frames<a class="headerlink" href="#Left-Join-LAGOSlocus-and-LAGOSstate-data-frames" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">LAGOSlocations</span> <span class="o">&lt;-</span> <span class="nf">left_join</span><span class="p">(</span><span class="n">LAGOSlocus</span><span class="p">,</span> <span class="n">LAGOSstate</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="s">&quot;state_zoneid&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Order-LAGOSlocations-data-frame-by-number-of-lakes">
+<h3>Order LAGOSlocations data frame by number of lakes<a class="headerlink" href="#Order-LAGOSlocations-data-frame-by-number-of-lakes" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">LAGOSlocations</span> <span class="o">&lt;-</span>
+  <span class="nf">within</span><span class="p">(</span><span class="n">LAGOSlocations</span><span class="p">,</span>
+         <span class="n">state</span> <span class="o">&lt;-</span> <span class="nf">factor</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">levels</span> <span class="o">=</span> <span class="nf">names</span><span class="p">(</span><span class="nf">sort</span><span class="p">(</span><span class="nf">table</span><span class="p">(</span><span class="n">state</span><span class="p">),</span> <span class="n">decreasing</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">))))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="Plot-Number-of-Lakes-by-State">
+<h2>Plot Number of Lakes by State<a class="headerlink" href="#Plot-Number-of-Lakes-by-State" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">LakeCounts</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">LAGOSlocations</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">state</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span> <span class="o">=</span> <span class="s">&quot;count&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">ggtitle</span><span class="p">(</span><span class="s">&quot;Lake Count by State&quot;</span><span class="p">)</span><span class="o">+</span>
+  <span class="nf">theme</span><span class="p">(</span><span class="n">plot.title</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">margin</span> <span class="o">=</span> <span class="nf">margin</span><span class="p">(</span><span class="n">b</span> <span class="o">=</span> <span class="m">10</span><span class="p">),</span> <span class="n">size</span> <span class="o">=</span> <span class="m">18</span><span class="p">,</span> <span class="n">hjust</span><span class="o">=</span><span class="m">0.5</span><span class="p">,</span> <span class="n">vjust</span><span class="o">=</span><span class="m">0.5</span><span class="p">,</span> <span class="n">face</span><span class="o">=</span><span class="s">&#39;bold&#39;</span><span class="p">),</span><span class="n">axis.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">),</span> <span class="n">axis.text.y</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">LakeCounts</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../../_images/gallery_R_Instructional_Introduction_to_LAGOSNE_notebooks_Introduction_to_LAGOSNE_28_0.png" class="no-scaled-link" src="../../../../../_images/gallery_R_Instructional_Introduction_to_LAGOSNE_notebooks_Introduction_to_LAGOSNE_28_0.png" style="width: 420px; height: 420px;" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="Trophic-State-as-a-Water-Quality-Metric">
+<h1>Trophic State as a Water Quality Metric<a class="headerlink" href="#Trophic-State-as-a-Water-Quality-Metric" title="Permalink to this headline">¶</a></h1>
+<p>Robert Carlson’s 1977 paper, “A trophic state index for lakes,” established the first numeric categorization system for a lake’s <strong>trophic state</strong>, the amount of biomass a given system can sustain. Trophic state is a useful water quality metric, as it can give insight into the propensity of a system to develop algal blooms, the degree of nutrient loading in the system, and a range of other potential water quality concerns experienced by other lakes with a similar trophic state (e.g., hypoxia).</p>
+<blockquote>
+<div><p>A direct measure of trophic state is the amount of biomass or phytoplankton in the system. The more nutrients in a system, the higher the amount of biomass the system can support. The more biomass in a system, the lower the clarity of the water.</p>
+</div></blockquote>
+<p>To calculate the <strong>Trophic State Index</strong> (specific number that correlates to a specific trophic state) Three variables can be used. Note these should not be used to define trophic state, but as indicators of the broader condition. Comparing these values in a given lake can give insight into the broader mechanisms at play.</p>
+<p><strong>Chlorophyll a concentration</strong> A proxy for algal (phytoplankton) biomass. Pros: direct measure of primary productivity. Higher chlorophyll–&gt;higher phytoplankton biomass</p>
+<p><strong>Secchi disk transparency</strong> A quantitative measure of water clarity in which you drop a colored disk into the lake to see how far down you can make out the colors. Pros: simple and cheap. Cons: may yield a high TSI in highly colored lakes and in lakes where particulate matter is comprised of non-algal material. This method is inversely related to chlorophyll concentrations. Suspended sediment in the system may decrease your calculated Sechhi depth.</p>
+<p><strong>Total phosphorus (TP)</strong> A nutrient essential for growth of primary producers. Assumptions: phosphorus is the limiting nutrient for phytoplankton growth over the course of decades (this assumption often holds only for summer months and this isn’t true for every lake). When total phosphorus is high, the lake will support more primary production.</p>
+<div class="section" id="Equations-we-use-to-calculate-trophic-state-index:">
+<h2>Equations we use to calculate trophic state index:<a class="headerlink" href="#Equations-we-use-to-calculate-trophic-state-index:" title="Permalink to this headline">¶</a></h2>
+<p><strong>TSI(Chl) = 10(6 - (2.04 - 0.68 ln Chl/ln 2))</strong></p>
+<p><strong>TSI(SD) = 10(6 - (ln SD/ln 2))</strong></p>
+<p><strong>TSI(TP) = 10(6 - (ln(48/TP)/ln 2))</strong></p>
+<p>TSI values correspond to the following trophic states:</p>
+<p><strong>0-40</strong>: Oligotrophic</p>
+<p><strong>40-50</strong>: Mesotrophic</p>
+<p><strong>50-70</strong>: Eutrophic</p>
+<p><strong>70-100</strong>: Hypereutrophic</p>
+<div class="section" id="View-the-dimensions-of-the-nutrient-data-frame">
+<h3>View the dimensions of the nutrient data frame<a class="headerlink" href="#View-the-dimensions-of-the-nutrient-data-frame" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="nf">dim</span><span class="p">(</span><span class="n">LAGOSnutrient</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>816095</li><li>92</li></ol></div>
+</div>
+</div>
+</div>
+<div class="section" id="Create-new-data-frame">
+<h2>Create new data frame<a class="headerlink" href="#Create-new-data-frame" title="Permalink to this headline">¶</a></h2>
+<p>First we will join the nutrient and locations data frames by their common key value column. Next we will select all relevant fields and create sample year, sample month, and season columns. Finally we will drop all observations with missing values.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">LAGOStrophic</span> <span class="o">&lt;-</span>
+<span class="nf">left_join</span><span class="p">(</span><span class="n">LAGOSnutrient</span><span class="p">,</span> <span class="n">LAGOSlocations</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="s">&quot;lagoslakeid&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>  <span class="c1">#join of lagosnutrient and LAGOS locations by lagoslakeid</span>
+
+  <span class="nf">select</span><span class="p">(</span><span class="n">lagoslakeid</span><span class="p">,</span> <span class="n">sampledate</span><span class="p">,</span> <span class="n">chla</span><span class="p">,</span> <span class="n">tp</span><span class="p">,</span> <span class="n">secchi</span><span class="p">,</span>
+         <span class="n">gnis_name</span><span class="p">,</span> <span class="n">lake_area_ha</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">state_name</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="c1">#select relevant columns</span>
+
+  <span class="nf">mutate</span><span class="p">(</span><span class="n">sampleyear</span> <span class="o">=</span> <span class="nf">year</span><span class="p">(</span><span class="n">sampledate</span><span class="p">),</span>
+         <span class="n">samplemonth</span> <span class="o">=</span> <span class="nf">month</span><span class="p">(</span><span class="n">sampledate</span><span class="p">),</span>
+         <span class="n">season</span> <span class="o">=</span> <span class="nf">as.factor</span><span class="p">(</span><span class="nf">quarter</span><span class="p">(</span><span class="n">sampledate</span><span class="p">,</span> <span class="n">fiscal_start</span> <span class="o">=</span> <span class="m">12</span><span class="p">)))</span> <span class="o">%&gt;%</span> <span class="c1">#Creating a season column. Quarter function divides your year into 4 quarters of three months. Here we start it at month 12, so winter is dec, january, feb, spring is march, april, may, and so on. We want these numbers to be considered factors.</span>
+
+
+  <span class="nf">drop_na</span><span class="p">(</span><span class="n">chla</span><span class="o">:</span><span class="n">secchi</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="c1">#removing NA&#39;s from columns chla:secchi. If there is a NA in the row, it&#39;ll remove the entire row.</span>
+  <span class="nf">levels</span><span class="p">(</span><span class="n">LAGOStrophic</span><span class="o">$</span><span class="n">season</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Winter&quot;</span><span class="p">,</span> <span class="s">&quot;Spring&quot;</span><span class="p">,</span> <span class="s">&quot;Summer&quot;</span><span class="p">,</span> <span class="s">&quot;Fall&quot;</span><span class="p">)</span> <span class="c1">#In Season Column, replace the season numbers (1-4) with their actual names</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Error in left_join(LAGOSnutrient, LAGOSlocations, by = &#34;lagoslakeid&#34;) %&gt;% : could not find function &#34;%&gt;%&lt;-&#34;
+Traceback:
+
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Plot-Chlorophyll-Concentrations-by-Month">
+<h2>Plot Chlorophyll Concentrations by Month<a class="headerlink" href="#Plot-Chlorophyll-Concentrations-by-Month" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">chlbymonth</span> <span class="o">&lt;-</span>  <span class="nf">ggplot</span><span class="p">(</span><span class="n">LAGOStrophic</span><span class="p">,</span>
+       <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="nf">as.factor</span><span class="p">(</span><span class="n">samplemonth</span><span class="p">),</span> <span class="n">y</span> <span class="o">=</span> <span class="n">chla</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">sampleyear</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">geom_jitter</span><span class="p">(</span><span class="n">alpha</span> <span class="o">=</span> <span class="m">0.2</span><span class="p">)</span> <span class="o">+</span>
+  <span class="o">+</span>
+  <span class="nf">labs</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Month&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="nf">expression</span><span class="p">(</span><span class="n">Chlorophyll</span> <span class="o">~</span> <span class="n">a</span> <span class="o">~</span> <span class="p">(</span><span class="n">mu</span><span class="o">*</span><span class="n">g</span> <span class="o">/</span> <span class="n">L</span><span class="p">)),</span> <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;Year&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_color_viridis_c</span><span class="p">(</span><span class="n">option</span> <span class="o">=</span> <span class="s">&quot;magma&quot;</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">chlbymonth</span><span class="p">)</span><span class="nf">ggtitle</span><span class="p">(</span><span class="s">&quot;Chlorophyll Concentrations by Month&quot;</span><span class="p">)</span><span class="o">+</span>
+ <span class="nf">theme</span><span class="p">(</span><span class="n">plot.title</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">margin</span> <span class="o">=</span> <span class="nf">margin</span><span class="p">(</span><span class="n">b</span> <span class="o">=</span> <span class="m">10</span><span class="p">),</span> <span class="n">size</span> <span class="o">=</span> <span class="m">18</span><span class="p">,</span> <span class="n">hjust</span><span class="o">=</span><span class="m">0.5</span><span class="p">,</span> <span class="n">vjust</span><span class="o">=</span><span class="m">0.5</span><span class="p">,</span> <span class="n">face</span><span class="o">=</span><span class="s">&#39;bold&#39;</span><span class="p">),</span> <span class="n">axis.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">),</span> <span class="n">axis.text.y</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Plot-Secchi-Depth-Concentrations-by-Month">
+<h2>Plot Secchi Depth Concentrations by Month<a class="headerlink" href="#Plot-Secchi-Depth-Concentrations-by-Month" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">secchibymonth</span> <span class="o">&lt;-</span>  <span class="nf">ggplot</span><span class="p">(</span><span class="n">LAGOStrophic</span><span class="p">,</span>
+       <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="nf">as.factor</span><span class="p">(</span><span class="n">samplemonth</span><span class="p">),</span> <span class="n">y</span> <span class="o">=</span> <span class="n">secchi</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">sampleyear</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">geom_jitter</span><span class="p">(</span><span class="n">alpha</span> <span class="o">=</span> <span class="m">0.2</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">ggtitle</span><span class="p">(</span><span class="s">&quot;Secchi Depth Concentrations by Month&quot;</span><span class="p">)</span><span class="o">+</span>
+ <span class="nf">theme</span><span class="p">(</span><span class="n">plot.title</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">margin</span> <span class="o">=</span> <span class="nf">margin</span><span class="p">(</span><span class="n">b</span> <span class="o">=</span> <span class="m">10</span><span class="p">),</span> <span class="n">size</span> <span class="o">=</span> <span class="m">18</span><span class="p">,</span> <span class="n">hjust</span><span class="o">=</span><span class="m">0.5</span><span class="p">,</span> <span class="n">vjust</span><span class="o">=</span><span class="m">0.5</span><span class="p">,</span> <span class="n">face</span><span class="o">=</span><span class="s">&#39;bold&#39;</span><span class="p">),</span> <span class="n">axis.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">),</span> <span class="n">axis.text.y</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">))</span><span class="o">+</span>
+  <span class="nf">labs</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Month&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Secchi depth (m)&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;Year&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_color_viridis_c</span><span class="p">(</span><span class="n">option</span> <span class="o">=</span> <span class="s">&quot;magma&quot;</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">secchibymonth</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Plot-Total-Phosphorus-Concentrations-by-Month">
+<h2>Plot Total Phosphorus Concentrations by Month<a class="headerlink" href="#Plot-Total-Phosphorus-Concentrations-by-Month" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">tpbymonth</span> <span class="o">&lt;-</span>  <span class="nf">ggplot</span><span class="p">(</span><span class="n">LAGOStrophic</span><span class="p">,</span>
+       <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="nf">as.factor</span><span class="p">(</span><span class="n">samplemonth</span><span class="p">),</span> <span class="n">y</span> <span class="o">=</span> <span class="n">tp</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">sampleyear</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">geom_jitter</span><span class="p">(</span><span class="n">alpha</span> <span class="o">=</span> <span class="m">0.2</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">ggtitle</span><span class="p">(</span><span class="s">&quot;Total Phosphorus Concentrations by Month&quot;</span><span class="p">)</span><span class="o">+</span>
+ <span class="nf">theme</span><span class="p">(</span><span class="n">plot.title</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">margin</span> <span class="o">=</span> <span class="nf">margin</span><span class="p">(</span><span class="n">b</span> <span class="o">=</span> <span class="m">10</span><span class="p">),</span> <span class="n">size</span> <span class="o">=</span> <span class="m">18</span><span class="p">,</span> <span class="n">hjust</span><span class="o">=</span><span class="m">0.5</span><span class="p">,</span> <span class="n">vjust</span><span class="o">=</span><span class="m">0.5</span><span class="p">,</span> <span class="n">face</span><span class="o">=</span><span class="s">&#39;bold&#39;</span><span class="p">),</span> <span class="n">axis.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">),</span> <span class="n">axis.text.y</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">))</span><span class="o">+</span>
+  <span class="nf">labs</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Month&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="nf">expression</span><span class="p">(</span><span class="n">Total</span> <span class="o">~</span> <span class="n">P</span> <span class="o">~</span> <span class="p">(</span><span class="n">mu</span><span class="o">*</span><span class="n">g</span> <span class="o">/</span> <span class="n">L</span><span class="p">)),</span> <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;Year&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_color_viridis_c</span><span class="p">(</span><span class="n">option</span> <span class="o">=</span> <span class="s">&quot;magma&quot;</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">tpbymonth</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>What do you notice about the seasonality of these variables? If we were to characterize a lake based on the value of a given variable, how might seasonality affect our interpretations? &gt;</p>
+</div>
+<div class="section" id="Calculating-Trophic-State-Index">
+<h2>Calculating Trophic State Index<a class="headerlink" href="#Calculating-Trophic-State-Index" title="Permalink to this headline">¶</a></h2>
+<p>Let’s add a TSI value calculated from each of the three water quaity measurements to the data frame. Let’s also add a column that designates the lake as oligotrophic, mesotrophic, eutrophic, or hypereutrophic based on the TSI.chl value. Any data that doesn’t fall into the first three categories will be called hypereutrophic.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">LAGOStrophic</span> <span class="o">&lt;-</span>
+  <span class="nf">mutate</span><span class="p">(</span><span class="n">LAGOStrophic</span><span class="p">,</span>
+  <span class="n">TSI.chl</span> <span class="o">=</span> <span class="nf">round</span><span class="p">(</span><span class="m">10</span><span class="o">*</span><span class="p">(</span><span class="m">6</span> <span class="o">-</span> <span class="p">(</span><span class="m">2.04</span> <span class="o">-</span> <span class="m">0.68</span><span class="o">*</span><span class="nf">log</span><span class="p">(</span><span class="n">chla</span><span class="p">)</span><span class="o">/</span><span class="nf">log</span><span class="p">(</span><span class="m">2</span><span class="p">)))),</span>
+  <span class="n">TSI.secchi</span> <span class="o">=</span> <span class="nf">round</span><span class="p">(</span><span class="m">10</span><span class="o">*</span><span class="p">(</span><span class="m">6</span> <span class="o">-</span> <span class="p">(</span><span class="nf">log</span><span class="p">(</span><span class="n">secchi</span><span class="p">)</span><span class="o">/</span><span class="nf">log</span><span class="p">(</span><span class="m">2</span><span class="p">)))),</span>
+  <span class="n">TSI.tp</span> <span class="o">=</span> <span class="nf">round</span><span class="p">(</span><span class="m">10</span><span class="o">*</span><span class="p">(</span><span class="m">6</span> <span class="o">-</span> <span class="p">(</span><span class="nf">log</span><span class="p">(</span><span class="m">48</span><span class="o">/</span><span class="n">tp</span><span class="p">)</span><span class="o">/</span><span class="nf">log</span><span class="p">(</span><span class="m">2</span><span class="p">)))),</span>
+  <span class="n">trophic.class.cl</span> <span class="o">=</span> <span class="c1">###Create trophic class based on the chlorophyll column. We chose chlorophyll over the others b/c of sechhi depth errors, and chlorophyll is the most direct productivity measurement.</span>
+  <span class="nf">ifelse</span><span class="p">(</span><span class="n">TSI.chl</span> <span class="o">&lt;</span> <span class="m">40</span><span class="p">,</span> <span class="s">&quot;Oligotrophic&quot;</span><span class="p">,</span>
+  <span class="nf">ifelse</span><span class="p">(</span><span class="n">TSI.chl</span> <span class="o">&lt;</span> <span class="m">50</span><span class="p">,</span> <span class="s">&quot;Mesotrophic&quot;</span><span class="p">,</span>
+  <span class="nf">ifelse</span><span class="p">(</span><span class="n">TSI.chl</span> <span class="o">&lt;</span> <span class="m">70</span><span class="p">,</span> <span class="s">&quot;Eutrophic&quot;</span><span class="p">,</span> <span class="s">&quot;Hypereutrophic&quot;</span><span class="p">))))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="Create-4-factor-levels-for-the-“trophic.class”-field">
+<h3>Create 4 factor levels for the “trophic.class” field<a class="headerlink" href="#Create-4-factor-levels-for-the-“trophic.class”-field" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">LAGOStrophic</span><span class="o">$</span><span class="n">trophic.class</span> <span class="o">&lt;-</span>
+  <span class="nf">factor</span><span class="p">(</span><span class="n">LAGOStrophic</span><span class="o">$</span><span class="n">trophic.class</span><span class="p">,</span>
+         <span class="n">levels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Oligotrophic&quot;</span><span class="p">,</span> <span class="s">&quot;Mesotrophic&quot;</span><span class="p">,</span> <span class="s">&quot;Eutrophic&quot;</span><span class="p">,</span> <span class="s">&quot;Hypereutrophic&quot;</span><span class="p">))</span>
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Create-4-factor-levels-for-the-“trophic.season”field">
+<h3>Create 4 factor levels for the “trophic.season”field<a class="headerlink" href="#Create-4-factor-levels-for-the-“trophic.season”field" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">LAGOStrophic</span><span class="o">$</span><span class="n">season</span> <span class="o">&lt;-</span>
+  <span class="nf">factor</span><span class="p">(</span><span class="n">LAGOStrophic</span><span class="o">$</span><span class="n">season</span><span class="p">,</span>
+         <span class="n">levels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Spring&quot;</span><span class="p">,</span> <span class="s">&quot;Summer&quot;</span><span class="p">,</span> <span class="s">&quot;Fall&quot;</span><span class="p">,</span> <span class="s">&quot;Winter&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="Plot-Chlorophyll-point-values-against-Secchi-Depth-point-values-and-add-a-reference-line-with-slope-of-1-and-intercept-of-0">
+<h2>Plot Chlorophyll point values against Secchi Depth point values and add a reference line with slope of 1 and intercept of 0<a class="headerlink" href="#Plot-Chlorophyll-point-values-against-Secchi-Depth-point-values-and-add-a-reference-line-with-slope-of-1-and-intercept-of-0" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">chlvssecchi</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">LAGOStrophic</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">TSI.chl</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">TSI.secchi</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">geom_point</span><span class="p">(</span><span class="n">alpha</span> <span class="o">=</span> <span class="m">0.1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;#ec6163ff&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">limits</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">100</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">scale_x_continuous</span><span class="p">(</span><span class="n">limits</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">100</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">geom_abline</span><span class="p">(</span><span class="n">slope</span> <span class="o">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">intercept</span> <span class="o">=</span> <span class="m">0</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">chlvssecchi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Plot-Chlorophyll-point-values-against-Total-Phosphorus-point-values-and-add-a-reference-line-with-a-slope-of-1-and-intercept-of-0">
+<h2>Plot Chlorophyll point values against Total Phosphorus point values and add a reference line with a slope of 1 and intercept of 0<a class="headerlink" href="#Plot-Chlorophyll-point-values-against-Total-Phosphorus-point-values-and-add-a-reference-line-with-a-slope-of-1-and-intercept-of-0" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">chlvstp</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">LAGOStrophic</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">TSI.chl</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">TSI.tp</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">geom_point</span><span class="p">(</span><span class="n">alpha</span> <span class="o">=</span> <span class="m">0.1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;#ec6163ff&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">limits</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">100</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">scale_x_continuous</span><span class="p">(</span><span class="n">limits</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">100</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">geom_abline</span><span class="p">(</span><span class="n">slope</span> <span class="o">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">intercept</span> <span class="o">=</span> <span class="m">0</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">chlvstp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>What is the observed relationship of the two plots, and how does it depart from the 1:1 relationship? What do values above or below the 1:1 line tell us about the conditions present in a lake? &gt;</p>
+</div>
+<div class="section" id="Create-Violin-Plot-comparing-State-and-Chlorophyll-A-concentrations">
+<h2>Create Violin Plot comparing State and Chlorophyll A concentrations<a class="headerlink" href="#Create-Violin-Plot-comparing-State-and-Chlorophyll-A-concentrations" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">stateTSIviolin</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">LAGOStrophic</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">state</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">TSI.chl</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">geom_violin</span><span class="p">(</span><span class="n">draw_quantiles</span> <span class="o">=</span> <span class="m">0.50</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">stateTSIviolin</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Again, remember the values for the Trophic State Index (the TSI.chl field):</p>
+<p>0-40: Oligotrophic</p>
+<p>40-50: Mesotrophic</p>
+<p>50-70: Eutrophic</p>
+<p>70-100: Hypereutrophic</p>
+<p>Which states have more lakes negatively impacted by humans? How can you tell? &gt;</p>
+</div>
+<div class="section" id="Create-Bar-Plot-comparing-State-and-Number-of-Observations;-fill-by-trophic-class">
+<h2>Create Bar Plot comparing State and Number of Observations; fill by trophic class<a class="headerlink" href="#Create-Bar-Plot-comparing-State-and-Number-of-Observations;-fill-by-trophic-class" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">stateTSIbar</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">LAGOStrophic</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">state</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="n">trophic.class</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span> <span class="o">=</span> <span class="s">&quot;count&quot;</span><span class="p">,</span> <span class="n">position</span> <span class="o">=</span> <span class="nf">position_dodge</span><span class="p">(</span><span class="n">preserve</span> <span class="o">=</span> <span class="s">&quot;single&quot;</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span> <span class="o">=</span> <span class="s">&quot;top&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">labs</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Number of Observations&quot;</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="s">&quot;Trophic Class&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_fill_viridis_d</span><span class="p">(</span><span class="n">option</span> <span class="o">=</span> <span class="s">&quot;magma&quot;</span><span class="p">,</span> <span class="n">begin</span> <span class="o">=</span> <span class="m">0.2</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="m">0.8</span><span class="p">,</span> <span class="n">direction</span> <span class="o">=</span> <span class="m">-1</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">stateTSIbar</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Create-Jitter-Plot-comparing-Trophic-State-Index-by-State-using-the-geom_rect-function-to-represent-TSI">
+<h2>Create Jitter Plot comparing Trophic State Index by State using the geom_rect function to represent TSI<a class="headerlink" href="#Create-Jitter-Plot-comparing-Trophic-State-Index-by-State-using-the-geom_rect-function-to-represent-TSI" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">stateTSIjitter</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">LAGOStrophic</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">state</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">TSI.chl</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">season</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">geom_rect</span><span class="p">(</span><span class="n">xmin</span> <span class="o">=</span> <span class="m">-1</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="m">19</span><span class="p">,</span> <span class="n">ymin</span> <span class="o">=</span> <span class="m">0</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="m">40</span><span class="p">,</span> <span class="c1">###these are dimensions of geom_rect. xmin=-1 to fill up plot on left hand side.</span>
+            <span class="n">fill</span> <span class="o">=</span> <span class="s">&quot;gray90&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;gray90&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_rect</span><span class="p">(</span><span class="n">xmin</span> <span class="o">=</span> <span class="m">-1</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="m">19</span><span class="p">,</span> <span class="n">ymin</span> <span class="o">=</span> <span class="m">40</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="m">50</span><span class="p">,</span>
+            <span class="n">fill</span> <span class="o">=</span> <span class="s">&quot;gray80&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;gray80&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_rect</span><span class="p">(</span><span class="n">xmin</span> <span class="o">=</span> <span class="m">-1</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="m">19</span><span class="p">,</span> <span class="n">ymin</span> <span class="o">=</span> <span class="m">50</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="m">70</span><span class="p">,</span>
+            <span class="n">fill</span> <span class="o">=</span> <span class="s">&quot;gray70&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;gray70&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_rect</span><span class="p">(</span><span class="n">xmin</span> <span class="o">=</span> <span class="m">-1</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="m">19</span><span class="p">,</span> <span class="n">ymin</span> <span class="o">=</span> <span class="m">70</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="m">100</span><span class="p">,</span>
+            <span class="n">fill</span> <span class="o">=</span> <span class="s">&quot;gray60&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;gray60&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_jitter</span><span class="p">(</span><span class="n">alpha</span> <span class="o">=</span> <span class="m">0.3</span><span class="p">)</span> <span class="o">+</span>
+  <span class="c1"># geom_hline(yintercept = 40, lty = 2) +</span>
+  <span class="c1"># geom_hline(yintercept = 50, lty = 2) +</span>
+  <span class="c1"># geom_hline(yintercept = 70, lty = 2) +</span>
+  <span class="nf">labs</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;TSI(chl)&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">limits</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">100</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span> <span class="o">=</span> <span class="s">&quot;top&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_color_viridis_d</span><span class="p">(</span><span class="n">option</span> <span class="o">=</span> <span class="s">&quot;magma&quot;</span><span class="p">)</span>
+
+<span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="o">=</span><span class="m">8</span><span class="p">,</span> <span class="n">repr.plot.height</span><span class="o">=</span><span class="m">14</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">stateTSIjitter</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>What insights do we gain from the different visualizations?</p>
+<blockquote>
+<div><p>Violin:</p>
+</div></blockquote>
+<blockquote>
+<div><p>Bar:</p>
+<p>Jitter:</p>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <!-- 
+This file modifies the default sphinx_rtd_theme footer
+-->
+
+
+
+<footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+  <!-- your html code here -->
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

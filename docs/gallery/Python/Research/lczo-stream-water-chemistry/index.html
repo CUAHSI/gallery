@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>LCZO-Stream Water Chemistry, Streamflow / Discharge, Hysteretic response of solutes and turbidity at the event scale across forested tropical montane watersheds - Luquillo Experimental Forest (2016-2017) &mdash; BuildDocs version documentation</title>
+  <title>&lt;no title&gt; &mdash; BuildDocs version documentation</title>
   
 
   
@@ -40,6 +40,8 @@
         <script src="../../../../_static/clipboard.min.js"></script>
         <script src="../../../../_static/copybutton.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
         <script src="../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
         <script src="../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
         <script src="../../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
@@ -93,8 +95,18 @@
               
             
             
-              <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../index.html">Python Gallery</a></li>
+              <p class="caption"><span class="caption-text">Galleries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">python Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#research-examples">Research Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#reproducible-science-examples">Reproducible Science Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../R/index.html">R Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../R/index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -151,13 +163,16 @@ The purpose of this template is to override (i.e. supress) the breadcrumbs that 
     text-align: unset;
 }
 </style>
-<div class="section" id="lczo-stream-water-chemistry-streamflow-discharge-hysteretic-response-of-solutes-and-turbidity-at-the-event-scale-across-forested-tropical-montane-watersheds-luquillo-experimental-forest-2016-2017">
-<span id="lczo-stream-wat"></span><h1>LCZO-Stream Water Chemistry, Streamflow / Discharge, Hysteretic response of solutes and turbidity at the event scale across forested tropical montane watersheds - Luquillo Experimental Forest (2016-2017)<a class="headerlink" href="#lczo-stream-water-chemistry-streamflow-discharge-hysteretic-response-of-solutes-and-turbidity-at-the-event-scale-across-forested-tropical-montane-watersheds-luquillo-experimental-forest-2016-2017" title="Permalink to this headline">¶</a></h1>
-<p><strong>Description</strong></p>
-<p>Concentration-discharge relationships are a key tool for understanding the sourcing and transport of material from watersheds to fluvial networks. Storm events in particular provide insight into variability in the sources of solutes and sediment within watersheds, and the hydrologic pathways that connect hillslope to stream channel. Here we examine high-frequency sensor-based specific conductance and turbidity data from multiple storm events across two watersheds (Quebrada Sonadora and Rio Icacos) with different lithology in the Luquillo Mountains of Puerto Rico, a forested tropical ecosystem. Our analyses include Hurricane Maria, a category 5 hurricane. To analyze hysteresis, we used a recently developed set of metrics to describe and quantify storm events including the hysteresis index (HI), which describes the directionality of hysteresis loops, and the flushing index (FI), which describes whether the mobilization of material is source or transport limited. We also examine the role of antecedent discharge to predict hysteretic behavior during storms. Overall, specific conductance and turbidity showed contrasting responses to storms. The hysteretic behavior of specific conductance was very similar across sites, displaying clockwise hysteresis and a negative flushing index indicating proximal sources of solutes and consistent source limitation. In contrast, the directionality of turbidity hysteresis was significantly different between watersheds, although both had strong flushing behavior indicative of transport limitation. Overall, models that included antecedent discharge did not perform any better than models with peak discharge alone, suggesting that the magnitude and trajectory of an individual event was the strongest driver of material flux and hysteretic behavior. Hurricane Maria produced unique hysteresis metrics within both watersheds, indicating a distinctive response to this major hydrological event. The similarity in response of specific conductance to storms suggests that solute sources and pathways are similar in the two watersheds. The divergence in behavior for turbidity suggests that sources and pathways of particulate matter vary between the two watersheds. The use of high-frequency sensor data allows the quantification of storm events while index-based metrics of hysteresis allow for the direct comparison of complex storm events across a heterogeneous landscape and variable flow conditions.  Additional scripts for hysteresis analysis are available here in the ‘python scripts for analysis’ folder and at <a class="reference external" href="https://github.com/miguelcleon/HysteresisAnalysis/">https://github.com/miguelcleon/HysteresisAnalysis/</a></p>
-<br />&nbsp;<div class="sphinx-bs container pb-2 docutils">
+<div class=example-title>
+    <h1> LCZO-Stream Water Chemistry, Streamflow / Discharge, Hysteretic response of solutes and turbidity at the event scale across forested tropical montane watersheds - Luquillo Experimental Forest (2016-2017) </h1>
+</div><br />&nbsp;
+<hr>
+<br />&nbsp;<div class=example-description>
+    <h2> Description </h2>
+    <p>Concentration-discharge relationships are a key tool for understanding the sourcing and transport of material from watersheds to fluvial networks. Storm events in particular provide insight into variability in the sources of solutes and sediment within watersheds, and the hydrologic pathways that connect hillslope to stream channel. Here we examine high-frequency sensor-based specific conductance and turbidity data from multiple storm events across two watersheds (Quebrada Sonadora and Rio Icacos) with different lithology in the Luquillo Mountains of Puerto Rico, a forested tropical ecosystem. Our analyses include Hurricane Maria, a category 5 hurricane. To analyze hysteresis, we used a recently developed set of metrics to describe and quantify storm events including the hysteresis index (HI), which describes the directionality of hysteresis loops, and the flushing index (FI), which describes whether the mobilization of material is source or transport limited. We also examine the role of antecedent discharge to predict hysteretic behavior during storms. Overall, specific conductance and turbidity showed contrasting responses to storms. The hysteretic behavior of specific conductance was very similar across sites, displaying clockwise hysteresis and a negative flushing index indicating proximal sources of solutes and consistent source limitation. In contrast, the directionality of turbidity hysteresis was significantly different between watersheds, although both had strong flushing behavior indicative of transport limitation. Overall, models that included antecedent discharge did not perform any better than models with peak discharge alone, suggesting that the magnitude and trajectory of an individual event was the strongest driver of material flux and hysteretic behavior. Hurricane Maria produced unique hysteresis metrics within both watersheds, indicating a distinctive response to this major hydrological event. The similarity in response of specific conductance to storms suggests that solute sources and pathways are similar in the two watersheds. The divergence in behavior for turbidity suggests that sources and pathways of particulate matter vary between the two watersheds. The use of high-frequency sensor data allows the quantification of storm events while index-based metrics of hysteresis allow for the direct comparison of complex storm events across a heterogeneous landscape and variable flow conditions.<br><br>Additional scripts for hysteresis analysis are available here in the 'python scripts for analysis' folder and at https://github.com/miguelcleon/HysteresisAnalysis/</p>
+</div><div class="sphinx-bs container pb-2 example-panels docutils">
 <div class="row docutils">
-<div class="d-flex col-lg-12 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-12 col-xs-12 p-2 docutils">
 <div class="card w-100 shadow docutils">
 <div class="card-header docutils">
 <blockquote>
@@ -166,31 +181,27 @@ The purpose of this template is to override (i.e. supress) the breadcrumbs that 
 </div>
 <div class="card-body text-left docutils">
 <blockquote>
-<div><p class="card-text"><a class="sphinx-bs badge badge-primary text-white reference external" href="http://www.hydroshare.org/user/4165/"><span>Adam Wymore</span></a>
-- University of New Hampshire
-(<a class="reference external" href="mailto:adam&#46;wymore&#37;&#52;&#48;unh&#46;edu">contact</a>)</p>
-<p class="card-text"><a class="sphinx-bs badge badge-primary text-white reference external" href="http://www.hydroshare.org/user/602/"><span>Miguel C Leon</span></a>
+<div><p class="card-text"><a class="sphinx-bs badge badge-primary text-white reference external" href="https://hydroshare.org/user/602/"><span>Miguel C Leon</span></a>
 - University of Pennslyvania
 (<a class="reference external" href="mailto:leonmi&#37;&#52;&#48;sas&#46;upenn&#46;edu">contact</a>)</p>
-<p class="card-text"><a class="sphinx-bs badge badge-primary text-white reference external" href="http://www.hydroshare.org/user/1008/"><span>James B Shanley</span></a>
+<p class="card-text"><a class="sphinx-bs badge badge-primary text-white reference external" href="https://hydroshare.org/user/1008/"><span>James B Shanley</span></a>
 -
 (<a class="reference external" href="mailto:jshanley&#37;&#52;&#48;usgs&#46;gov">contact</a>)</p>
-<p class="card-text"><a class="sphinx-bs badge badge-primary text-white reference external" href="http://www.hydroshare.org/user/1009/"><span>William H McDowell</span></a>
+<p class="card-text"><a class="sphinx-bs badge badge-primary text-white reference external" href="https://hydroshare.org/user/4165/"><span>Adam Wymore</span></a>
+- University of New Hampshire
+(<a class="reference external" href="mailto:adam&#46;wymore&#37;&#52;&#48;unh&#46;edu">contact</a>)</p>
+<p class="card-text"><a class="sphinx-bs badge badge-primary text-white reference external" href="https://hydroshare.org/user/1009/"><span>William H McDowell</span></a>
 - University of New Hampshire Main Campus
 (<a class="reference external" href="mailto:bill&#46;mcdowell&#37;&#52;&#48;unh&#46;edu">contact</a>)</p>
 </div></blockquote>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="sphinx-bs container pb-2 docutils">
-<div class="row docutils">
-<div class="d-flex col-lg-12 p-2 docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-12 col-xs-12 p-2 docutils">
 <div class="card w-100 shadow docutils">
 <div class="card-header docutils">
 <blockquote>
-<div><p class="card-text"><strong>Code Examples</strong></p>
+<div><p class="card-text"><strong>Source Code</strong></p>
 </div></blockquote>
 </div>
 <div class="card-body text-left docutils">
@@ -198,7 +209,6 @@ The purpose of this template is to override (i.e. supress) the breadcrumbs that 
 <div><div class="toctree-wrapper compound">
 </div>
 </div></blockquote>
-</div>
 </div>
 </div>
 </div>

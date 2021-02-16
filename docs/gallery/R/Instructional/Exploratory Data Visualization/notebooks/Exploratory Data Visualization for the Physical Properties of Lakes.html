@@ -1,0 +1,850 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Exploratory Data Visualization for the Physical Properties of Lakes &mdash; BuildDocs version documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/language_data.js"></script>
+        <script src="../../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../../_static/copybutton.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html">
+          
+
+          
+            
+            <img src="../../../../../_static/cuahsi-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Galleries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">R Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">BuildDocs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          <!--
+The purpose of this template is to override (i.e. supress) the breadcrumbs that appear at the top of each page.
+-->
+
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Exploratory-Data-Visualization-for-the-Physical-Properties-of-Lakes">
+<h1>Exploratory Data Visualization for the Physical Properties of Lakes<a class="headerlink" href="#Exploratory-Data-Visualization-for-the-Physical-Properties-of-Lakes" title="Permalink to this headline">¶</a></h1>
+<p>This lesson was adapted from educational material written by <a class="reference external" href="https://www.hydroshare.org/user/4912/">Dr. Kateri Salk</a> for her Fall 2019 Hydrologic Data Analysis course at Duke University. This is the second part of a two-part exercise focusing on the physical properties of lakes.</p>
+<div class="section" id="Introduction">
+<h2>Introduction<a class="headerlink" href="#Introduction" title="Permalink to this headline">¶</a></h2>
+<p>The field of <strong>limnology</strong>, the study of inland waters, uses a unique graph format to display relationships of variables by depth in a lake (the field of oceanography uses the same convention). Depth is placed on the y-axis in reverse order and the other variable(s) are placed on the x-axis. In this manner, the graph appears as if a cross section were taken from that point in the lake, with the surface at the top of the graph. This lesson introduces physical properties of lakes, namely
+stratification, and its visualization using the package <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code>.</p>
+</div>
+<div class="section" id="Learning-Objectives">
+<h2>Learning Objectives<a class="headerlink" href="#Learning-Objectives" title="Permalink to this headline">¶</a></h2>
+<p>After successfully completing this notebook, you will be able to:</p>
+<ol class="arabic simple">
+<li><p>Investigate the concepts of lake stratification and mixing by analyzing monitoring data</p></li>
+<li><p>Apply data analytics skills to applied questions about physical properties of lakes</p></li>
+<li><p>Communicate findings with peers through oral, visual, and written modes</p></li>
+</ol>
+</div>
+<div class="section" id="Requirements-to-Complete-Lesson">
+<h2>Requirements to Complete Lesson<a class="headerlink" href="#Requirements-to-Complete-Lesson" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="Packages">
+<h3>Packages<a class="headerlink" href="#Packages" title="Permalink to this headline">¶</a></h3>
+<p>This lesson requires the installation of the following R packages to run the provided script: - <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code>- Version 3.3.3. Creates elegant data visualisations using the Grammar of Graphics. - <code class="docutils literal notranslate"><span class="pre">tidyverse</span></code>- Version 1.3.0. A collection of R packages designed for data science. - <code class="docutils literal notranslate"><span class="pre">lubridate</span></code>- Version 1.7.9. Functions for working with dates/times. - <code class="docutils literal notranslate"><span class="pre">scales</span></code>-Version 1.1.1. Graphical scales provide methods for automatically determining breaks and labels for axes and legends.</p>
+</div>
+<div class="section" id="Data-and-Code">
+<h3>Data and Code<a class="headerlink" href="#Data-and-Code" title="Permalink to this headline">¶</a></h3>
+<p>The input files are made available to you in a public folder.</p>
+<p>This lesson also requires the dataset NTER-LTER_Lake_ChemistryPhysics_Raw.csv.</p>
+<p>The dataset used in this lesson contains data from studies on several lakes in the North Temperate Lakes District in the state of Wisconsin. The data were collected as part of the Long Term Ecological Research station created by the National Science Foundation. More information can be found here: <a class="reference external" href="https://lter.limnology.wisc.edu/about/overview">https://lter.limnology.wisc.edu/about/overview</a>.</p>
+<p>The code provided in this resource was developed using R version 3.6.1.</p>
+</div>
+<div class="section" id="Set-Working-Directory">
+<h3>Set Working Directory<a class="headerlink" href="#Set-Working-Directory" title="Permalink to this headline">¶</a></h3>
+<p>In R, the working directory is the directory where R starts when looking for any file to open (as directed by a file path) and where it saves any output. This lesson assumes that you have set your working directory to the folder location of the downloaded and unzipped data subsets.</p>
+</div>
+<div class="section" id="Load-Packages-and-set-ggplot-theme">
+<h3>Load Packages and set ggplot theme<a class="headerlink" href="#Load-Packages-and-set-ggplot-theme" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="nf">options</span><span class="p">(</span><span class="n">warn</span><span class="o">=</span><span class="m">-1</span><span class="p">)</span>
+
+<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">lubridate</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">scales</span><span class="p">)</span>
+
+<span class="nf">theme_set</span><span class="p">(</span><span class="nf">theme_gray</span><span class="p">())</span> <span class="c1">#set ggplot2 theme</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Load-Data-from-Part-1">
+<h3>Load Data from Part 1<a class="headerlink" href="#Load-Data-from-Part-1" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">NTLdata</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&quot;NTL-LTER_Lake_ChemistryPhysics_Raw.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="From-Part-1:-Filter-data">
+<h3>From Part 1: Filter data<a class="headerlink" href="#From-Part-1:-Filter-data" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">NTLdata</span> <span class="o">&lt;-</span> <span class="n">NTLdata</span> <span class="o">%&gt;%</span>
+  <span class="nf">filter</span><span class="p">(</span><span class="n">lakename</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Paul Lake&quot;</span><span class="p">,</span> <span class="s">&quot;Peter Lake&quot;</span><span class="p">,</span> <span class="s">&quot;Tuesday Lake&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="From-Part-1:-Use-drop_nafunction-to-omit-rows-containing-missing-Temperature-values">
+<h3>From Part 1: Use <code class="docutils literal notranslate"><span class="pre">drop_na</span></code>function to omit rows containing missing Temperature values<a class="headerlink" href="#From-Part-1:-Use-drop_nafunction-to-omit-rows-containing-missing-Temperature-values" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">NTLdata</span> <span class="o">&lt;-</span> <span class="n">NTLdata</span> <span class="o">%&gt;%</span>
+  <span class="nf">drop_na</span><span class="p">(</span><span class="n">temperature_C</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="From-Part-1:-Use-as.Date-function-to-convert-“sampledate”-field-into-a-Date-class">
+<h3>From Part 1: Use <code class="docutils literal notranslate"><span class="pre">as.Date</span></code> function to convert “sampledate” field into a Date class<a class="headerlink" href="#From-Part-1:-Use-as.Date-function-to-convert-“sampledate”-field-into-a-Date-class" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">NTLdata</span><span class="o">$</span><span class="n">sampledate</span> <span class="o">&lt;-</span> <span class="nf">as.Date</span><span class="p">(</span><span class="n">NTLdata</span><span class="o">$</span><span class="n">sampledate</span><span class="p">,</span> <span class="s">&quot;%m/%d/%y&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="From-Part-1:-Create-three-separate-data-frames-for-each-lake">
+<h3>From Part 1: Create three separate data frames for each lake<a class="headerlink" href="#From-Part-1:-Create-three-separate-data-frames-for-each-lake" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">Pauldata</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">NTLdata</span><span class="p">,</span> <span class="n">lakename</span> <span class="o">==</span> <span class="s">&quot;Paul Lake&quot;</span><span class="p">)</span>
+<span class="n">Peterdata</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">NTLdata</span><span class="p">,</span> <span class="n">lakename</span> <span class="o">==</span> <span class="s">&quot;Peter Lake&quot;</span><span class="p">)</span>
+<span class="n">Tuesdaydata</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">NTLdata</span><span class="p">,</span> <span class="n">lakename</span> <span class="o">==</span> <span class="s">&quot;Tuesday Lake&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="Exploratory-Data-Visualization">
+<h1>Exploratory Data Visualization<a class="headerlink" href="#Exploratory-Data-Visualization" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="Plot-of-Temperature-by-Depth-at-Paul-Lake">
+<h2>Plot of Temperature by Depth at Paul Lake<a class="headerlink" href="#Plot-of-Temperature-by-Depth-at-Paul-Lake" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+
+<span></span><span class="n">TempvsDepth</span> <span class="o">&lt;-</span>
+  <span class="nf">ggplot</span><span class="p">(</span><span class="n">Pauldata</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">depth</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">temperature_C</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">geom_point</span><span class="p">(</span><span class="n">alpha</span> <span class="o">=</span> <span class="m">0.5</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">labs</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="nf">expression</span><span class="p">(</span><span class="s">&quot;Temperature &quot;</span><span class="p">(</span><span class="n">degree</span><span class="o">*</span><span class="n">C</span><span class="p">)),</span> <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Depth (m)&quot;</span><span class="p">)</span><span class="o">+</span>
+ <span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">),</span> <span class="n">axis.text.y</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">TempvsDepth</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../../_images/gallery_R_Instructional_Exploratory_Data_Visualization_notebooks_Exploratory_Data_Visualization_for_the_Physical_Properties_of_Lakes_24_0.png" class="no-scaled-link" src="../../../../../_images/gallery_R_Instructional_Exploratory_Data_Visualization_notebooks_Exploratory_Data_Visualization_for_the_Physical_Properties_of_Lakes_24_0.png" style="width: 420px; height: 420px;" />
+</div>
+</div>
+<p>Based on the resulting plot, how do temperatures at the surface compare to temperatures at the mid-depths and bottom?</p>
+<blockquote>
+<div><p>Answer:</p>
+</div></blockquote>
+<div class="section" id="Create-data-frames-of-Paul-Lake-data-at-specific-depths-(meters)-from-2000s-and-later">
+<h3>Create data frames of Paul Lake data at specific depths (meters) from 2000s and later<a class="headerlink" href="#Create-data-frames-of-Paul-Lake-data-at-specific-depths-(meters)-from-2000s-and-later" title="Permalink to this headline">¶</a></h3>
+<p>First, filter the Paul Lake dataframe by observations taken from the year 2000 and later.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">Pauldata2000s</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">Pauldata</span><span class="p">,</span> <span class="n">year4</span> <span class="o">&gt;</span> <span class="m">1999</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Next, filter the Paul Lake 2000s dataframe by different depth values in meters (start at the surface and end at bottom depth value of Paul Lake). For brevity, we will skip a couple of depth values.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">Pauldata.surface</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">Pauldata2000s</span><span class="p">,</span> <span class="n">depth</span> <span class="o">==</span> <span class="m">0</span><span class="p">)</span>
+<span class="n">Pauldata.2m</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">Pauldata2000s</span><span class="p">,</span> <span class="n">depth</span> <span class="o">==</span> <span class="m">2</span><span class="p">)</span>
+<span class="n">Pauldata.3m</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">Pauldata2000s</span><span class="p">,</span> <span class="n">depth</span> <span class="o">==</span> <span class="m">3</span><span class="p">)</span>
+<span class="n">Pauldata.4m</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">Pauldata2000s</span><span class="p">,</span> <span class="n">depth</span> <span class="o">==</span> <span class="m">4</span><span class="p">)</span>
+<span class="n">Pauldata.5m</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">Pauldata2000s</span><span class="p">,</span> <span class="n">depth</span> <span class="o">==</span> <span class="m">5</span><span class="p">)</span>
+<span class="n">Pauldata.6m</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">Pauldata2000s</span><span class="p">,</span> <span class="n">depth</span> <span class="o">==</span> <span class="m">6</span><span class="p">)</span>
+<span class="n">Pauldata.7m</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">Pauldata2000s</span><span class="p">,</span> <span class="n">depth</span> <span class="o">==</span> <span class="m">7</span><span class="p">)</span>
+<span class="n">Pauldata.9m</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">Pauldata2000s</span><span class="p">,</span> <span class="n">depth</span> <span class="o">==</span> <span class="m">9</span><span class="p">)</span>
+<span class="n">Pauldata.bottom</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">Pauldata2000s</span><span class="p">,</span> <span class="n">depth</span> <span class="o">==</span> <span class="m">12</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="Plot-a-graph-of-date-vs. temperature-at-0-m,-2-m,-9-meters,-and-12-m">
+<h2>Plot a graph of date vs. temperature at 0 m, 2 m, 9 meters, and 12 m<a class="headerlink" href="#Plot-a-graph-of-date-vs. temperature-at-0-m,-2-m,-9-meters,-and-12-m" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">Tempplot.mixed</span> <span class="o">&lt;-</span>
+  <span class="nf">ggplot</span><span class="p">(</span><span class="n">Pauldata.surface</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">sampledate</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">temperature_C</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">geom_point</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;#6baed6&quot;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_point</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">Pauldata.2m</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">sampledate</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">temperature_C</span><span class="p">),</span>
+             <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;#2171b5&quot;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_point</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">Pauldata.9m</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">sampledate</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">temperature_C</span><span class="p">),</span>
+             <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;#08519c&quot;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_point</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">Pauldata.bottom</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">sampledate</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">temperature_C</span><span class="p">),</span>
+             <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;#08306b&quot;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">labs</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="nf">expression</span><span class="p">(</span><span class="s">&quot;Temperature &quot;</span><span class="p">(</span><span class="n">degree</span><span class="o">*</span><span class="n">C</span><span class="p">)),</span> <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Month and Year&quot;</span><span class="p">)</span><span class="o">+</span>
+<span class="nf">scale_x_date</span><span class="p">(</span><span class="n">breaks</span><span class="o">=</span><span class="n">scales</span><span class="o">::</span><span class="nf">breaks_width</span><span class="p">(</span><span class="s">&quot;2 years&quot;</span><span class="p">),</span> <span class="n">date_labels</span> <span class="o">=</span> <span class="s">&quot;%m/%Y&quot;</span><span class="p">)</span><span class="o">+</span>
+<span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">),</span> <span class="n">axis.text.y</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">Tempplot.mixed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../../_images/gallery_R_Instructional_Exploratory_Data_Visualization_notebooks_Exploratory_Data_Visualization_for_the_Physical_Properties_of_Lakes_33_0.png" class="no-scaled-link" src="../../../../../_images/gallery_R_Instructional_Exploratory_Data_Visualization_notebooks_Exploratory_Data_Visualization_for_the_Physical_Properties_of_Lakes_33_0.png" style="width: 420px; height: 420px;" />
+</div>
+</div>
+<p>How do temperatures at the surface compare to those at 2 m depth? How do temperatures at the bottom compare to those at 9 m depth?</p>
+<blockquote>
+<div><p>Answer:</p>
+</div></blockquote>
+</div>
+<div class="section" id="Plot-a-graph-of-date-vs. temperature-at-0-m,-4-m,-6-meters,-and-12-m">
+<h2>Plot a graph of date vs. temperature at 0 m, 4 m, 6 meters, and 12 m<a class="headerlink" href="#Plot-a-graph-of-date-vs. temperature-at-0-m,-4-m,-6-meters,-and-12-m" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">Tempplot.thermocline</span> <span class="o">&lt;-</span>
+  <span class="nf">ggplot</span><span class="p">(</span><span class="n">Pauldata.surface</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">sampledate</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">temperature_C</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">geom_point</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;#6baed6&quot;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_point</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">Pauldata.4m</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">sampledate</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">temperature_C</span><span class="p">),</span>
+             <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;#2171b5&quot;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_point</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">Pauldata.6m</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">sampledate</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">temperature_C</span><span class="p">),</span>
+             <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;#08519c&quot;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_point</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">Pauldata.bottom</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">sampledate</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">temperature_C</span><span class="p">),</span>
+             <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;#08306b&quot;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">labs</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="nf">expression</span><span class="p">(</span><span class="s">&quot;Temperature &quot;</span><span class="p">(</span><span class="n">degree</span><span class="o">*</span><span class="n">C</span><span class="p">)),</span> <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Month and Year&quot;</span><span class="p">)</span><span class="o">+</span>
+<span class="nf">scale_x_date</span><span class="p">(</span><span class="n">breaks</span><span class="o">=</span><span class="n">scales</span><span class="o">::</span><span class="nf">breaks_width</span><span class="p">(</span><span class="s">&quot;2 years&quot;</span><span class="p">),</span> <span class="n">date_labels</span> <span class="o">=</span> <span class="s">&quot;%m/%Y&quot;</span><span class="p">)</span><span class="o">+</span>
+<span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">),</span> <span class="n">axis.text.y</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">))</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">Tempplot.thermocline</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../../_images/gallery_R_Instructional_Exploratory_Data_Visualization_notebooks_Exploratory_Data_Visualization_for_the_Physical_Properties_of_Lakes_37_0.png" class="no-scaled-link" src="../../../../../_images/gallery_R_Instructional_Exploratory_Data_Visualization_notebooks_Exploratory_Data_Visualization_for_the_Physical_Properties_of_Lakes_37_0.png" style="width: 420px; height: 420px;" />
+</div>
+</div>
+<p>How do temperatures at 4 meters depth and 6 meters depth compare to the surface and bottom temperatures?</p>
+<blockquote>
+<div><p>Answer:</p>
+</div></blockquote>
+<div class="section" id="Create-four-new-dataframes-from-the-Paul-Lake-Dataframe-for-the-following-sample-dates-in-2016:-May-17,-June-21,-July-26,-and-August-16">
+<h3>Create four new dataframes from the Paul Lake Dataframe for the following sample dates in 2016: May 17, June 21, July 26, and August 16<a class="headerlink" href="#Create-four-new-dataframes-from-the-Paul-Lake-Dataframe-for-the-following-sample-dates-in-2016:-May-17,-June-21,-July-26,-and-August-16" title="Permalink to this headline">¶</a></h3>
+<p>First, <code class="docutils literal notranslate"><span class="pre">filter</span></code> out data only from the year 2016 from the column <code class="docutils literal notranslate"><span class="pre">year4</span></code>.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">Pauldata.2016</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">Pauldata</span><span class="p">,</span> <span class="n">year4</span> <span class="o">==</span> <span class="m">2016</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Next, <code class="docutils literal notranslate"><span class="pre">filter</span></code> out four sample dates from the 2016 Paul Lake dataframe from the column <code class="docutils literal notranslate"><span class="pre">sampledate</span></code>.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">Pauldata.May2016</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">Pauldata</span><span class="p">,</span> <span class="n">sampledate</span> <span class="o">==</span> <span class="s">&quot;2016-05-17&quot;</span><span class="p">)</span>
+<span class="n">Pauldata.June2016</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">Pauldata</span><span class="p">,</span> <span class="n">sampledate</span> <span class="o">==</span> <span class="s">&quot;2016-06-21&quot;</span><span class="p">)</span>
+<span class="n">Pauldata.July2016</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">Pauldata</span><span class="p">,</span> <span class="n">sampledate</span> <span class="o">==</span> <span class="s">&quot;2016-07-26&quot;</span><span class="p">)</span>
+<span class="n">Pauldata.Aug2016</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">Pauldata</span><span class="p">,</span> <span class="n">sampledate</span> <span class="o">==</span> <span class="s">&quot;2016-08-16&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="Temperature-Profile-at-Paul-Lake-in-May-2016">
+<h2>Temperature Profile at Paul Lake in May 2016<a class="headerlink" href="#Temperature-Profile-at-Paul-Lake-in-May-2016" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">TempprofileMay2016</span> <span class="o">&lt;-</span>
+  <span class="nf">ggplot</span><span class="p">(</span><span class="n">Pauldata.May2016</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">temperature_C</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">depth</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">geom_line</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;#081d58&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_vline</span><span class="p">(</span><span class="n">xintercept</span> <span class="o">=</span> <span class="m">4</span><span class="p">,</span> <span class="n">lty</span> <span class="o">=</span> <span class="m">2</span><span class="p">)</span> <span class="o">+</span> <span class="c1">###this line represents 4 degrees celsius-this is the temp of the maximum density of water. 4 degrees is the coldest a lake will get.</span>
+  <span class="nf">scale_y_reverse</span><span class="p">(</span><span class="n">breaks</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="m">6</span><span class="p">,</span> <span class="m">8</span><span class="p">,</span> <span class="m">10</span><span class="p">,</span> <span class="m">12</span><span class="p">))</span> <span class="o">+</span> <span class="c1">###this is to flip the scales</span>
+  <span class="nf">scale_x_continuous</span><span class="p">(</span><span class="n">position</span> <span class="o">=</span> <span class="s">&quot;top&quot;</span><span class="p">,</span> <span class="n">limits</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">30</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">labs</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="nf">expression</span><span class="p">(</span><span class="s">&quot;Temperature &quot;</span><span class="p">(</span><span class="n">degree</span><span class="o">*</span><span class="n">C</span><span class="p">)),</span> <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Depth (m)&quot;</span><span class="p">)</span><span class="o">+</span>
+<span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">),</span> <span class="n">axis.text.y</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">TempprofileMay2016</span><span class="p">)</span>
+
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../../_images/gallery_R_Instructional_Exploratory_Data_Visualization_notebooks_Exploratory_Data_Visualization_for_the_Physical_Properties_of_Lakes_46_0.png" class="no-scaled-link" src="../../../../../_images/gallery_R_Instructional_Exploratory_Data_Visualization_notebooks_Exploratory_Data_Visualization_for_the_Physical_Properties_of_Lakes_46_0.png" style="width: 420px; height: 420px;" />
+</div>
+</div>
+</div>
+<div class="section" id="Add-Temperature-Profile-at-Paul-Lake-in-June-2016-to-May-2016-graph">
+<h2>Add Temperature Profile at Paul Lake in June 2016 to May 2016 graph<a class="headerlink" href="#Add-Temperature-Profile-at-Paul-Lake-in-June-2016-to-May-2016-graph" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[54]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+
+<span></span><span class="n">TempprofileJune2016</span> <span class="o">&lt;-</span>
+  <span class="n">TempprofileMay2016</span> <span class="o">+</span>
+  <span class="nf">geom_line</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">Pauldata.June2016</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">temperature_C</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">depth</span><span class="p">),</span>
+            <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;#253494&quot;</span><span class="p">)</span><span class="o">+</span>
+<span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">),</span> <span class="n">axis.text.y</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">))</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">TempprofileJune2016</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../../_images/gallery_R_Instructional_Exploratory_Data_Visualization_notebooks_Exploratory_Data_Visualization_for_the_Physical_Properties_of_Lakes_48_0.png" class="no-scaled-link" src="../../../../../_images/gallery_R_Instructional_Exploratory_Data_Visualization_notebooks_Exploratory_Data_Visualization_for_the_Physical_Properties_of_Lakes_48_0.png" style="width: 420px; height: 420px;" />
+</div>
+</div>
+</div>
+<div class="section" id="Add-Temperature-Profile-at-Paul-Lake-in-July-2016-to-May-and-June-graphs">
+<h2>Add Temperature Profile at Paul Lake in July 2016 to May and June graphs<a class="headerlink" href="#Add-Temperature-Profile-at-Paul-Lake-in-July-2016-to-May-and-June-graphs" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[55]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">TempprofileJuly2016</span> <span class="o">&lt;-</span>
+  <span class="n">TempprofileJune2016</span> <span class="o">+</span>
+  <span class="nf">geom_line</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">Pauldata.July2016</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">temperature_C</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">depth</span><span class="p">),</span>
+            <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;#225ea8&quot;</span><span class="p">)</span><span class="o">+</span>
+<span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">),</span> <span class="n">axis.text.y</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">TempprofileJuly2016</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../../_images/gallery_R_Instructional_Exploratory_Data_Visualization_notebooks_Exploratory_Data_Visualization_for_the_Physical_Properties_of_Lakes_50_0.png" class="no-scaled-link" src="../../../../../_images/gallery_R_Instructional_Exploratory_Data_Visualization_notebooks_Exploratory_Data_Visualization_for_the_Physical_Properties_of_Lakes_50_0.png" style="width: 420px; height: 420px;" />
+</div>
+</div>
+</div>
+<div class="section" id="Add-Temperature-Profile-at-Paul-Lake-in-August-2016-to-May,-June,-and-July-graphs">
+<h2>Add Temperature Profile at Paul Lake in August 2016 to May, June, and July graphs<a class="headerlink" href="#Add-Temperature-Profile-at-Paul-Lake-in-August-2016-to-May,-June,-and-July-graphs" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[56]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">TempprofileAug2016</span> <span class="o">&lt;-</span>
+  <span class="n">TempprofileJuly2016</span> <span class="o">+</span>
+  <span class="nf">geom_line</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">Pauldata.Aug2016</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">temperature_C</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">depth</span><span class="p">),</span>
+            <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;#1d91c0&quot;</span><span class="p">)</span><span class="o">+</span>
+<span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">),</span> <span class="n">axis.text.y</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">TempprofileAug2016</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../../_images/gallery_R_Instructional_Exploratory_Data_Visualization_notebooks_Exploratory_Data_Visualization_for_the_Physical_Properties_of_Lakes_52_0.png" class="no-scaled-link" src="../../../../../_images/gallery_R_Instructional_Exploratory_Data_Visualization_notebooks_Exploratory_Data_Visualization_for_the_Physical_Properties_of_Lakes_52_0.png" style="width: 420px; height: 420px;" />
+</div>
+</div>
+</div>
+<div class="section" id="Visualize-all-of-the-2016-sampled-dates-at-once">
+<h2>Visualize all of the 2016 sampled dates at once<a class="headerlink" href="#Visualize-all-of-the-2016-sampled-dates-at-once" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[57]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">Tempprofiles2016</span> <span class="o">&lt;-</span>
+  <span class="nf">ggplot</span><span class="p">(</span><span class="n">Pauldata.2016</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">temperature_C</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">depth</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">daynum</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">geom_point</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">scale_y_reverse</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">scale_x_continuous</span><span class="p">(</span><span class="n">position</span> <span class="o">=</span> <span class="s">&quot;top&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_color_viridis_c</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">labs</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="nf">expression</span><span class="p">(</span><span class="s">&quot;Temperature &quot;</span><span class="p">(</span><span class="n">degree</span><span class="o">*</span><span class="n">C</span><span class="p">)),</span> <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Depth (m)&quot;</span><span class="p">,</span>
+       <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;Julian Day&quot;</span><span class="p">)</span><span class="o">+</span>
+<span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">),</span> <span class="n">axis.text.y</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">Tempprofiles2016</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../../_images/gallery_R_Instructional_Exploratory_Data_Visualization_notebooks_Exploratory_Data_Visualization_for_the_Physical_Properties_of_Lakes_54_0.png" class="no-scaled-link" src="../../../../../_images/gallery_R_Instructional_Exploratory_Data_Visualization_notebooks_Exploratory_Data_Visualization_for_the_Physical_Properties_of_Lakes_54_0.png" style="width: 420px; height: 420px;" />
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <!-- 
+This file modifies the default sphinx_rtd_theme footer
+-->
+
+
+
+<footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+  <!-- your html code here -->
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

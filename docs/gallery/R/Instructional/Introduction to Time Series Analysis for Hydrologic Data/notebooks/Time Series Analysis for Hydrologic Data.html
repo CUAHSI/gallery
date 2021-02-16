@@ -1,0 +1,822 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introduction to Time Series Analysis for Hydrologic Data &mdash; BuildDocs version documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/language_data.js"></script>
+        <script src="../../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../../_static/copybutton.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html">
+          
+
+          
+            
+            <img src="../../../../../_static/cuahsi-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Galleries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../python/index.html">python Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../python/index.html#research-examples">Research Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../python/index.html#reproducible-science-examples">Reproducible Science Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../python/index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">R Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">BuildDocs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          <!--
+The purpose of this template is to override (i.e. supress) the breadcrumbs that appear at the top of each page.
+-->
+
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Introduction-to-Time-Series-Analysis-for-Hydrologic-Data">
+<h1>Introduction to Time Series Analysis for Hydrologic Data<a class="headerlink" href="#Introduction-to-Time-Series-Analysis-for-Hydrologic-Data" title="Permalink to this headline">¶</a></h1>
+<p>This lesson was adapted from educational material written by <a class="reference external" href="https://www.hydroshare.org/user/4912/">Dr. Kateri Salk</a> for her Fall 2019 Hydrologic Data Analysis course at Duke University. This is the first part of a two-part exercise focusing on time series analysis.</p>
+<div class="section" id="Introduction">
+<h2>Introduction<a class="headerlink" href="#Introduction" title="Permalink to this headline">¶</a></h2>
+<p>Time series are a special class of dataset, where a response variable is tracked over time. The frequency of measurement and the timespan of the dataset can vary widely. At its most simple, a time series model includes an explanatory time component and a response variable. Mixed models can include additional explanatory variables (check out the <code class="docutils literal notranslate"><span class="pre">nlme</span></code> and <code class="docutils literal notranslate"><span class="pre">lme4</span></code> R packages). We will be covering a few simple applications of time series analysis in these lessons.</p>
+<div class="section" id="Opportunities">
+<h3>Opportunities<a class="headerlink" href="#Opportunities" title="Permalink to this headline">¶</a></h3>
+<p>Analysis of time series presents several opportunities. In aquatic sciences, some of the most common questions we can answer with time series modeling are:</p>
+<ul class="simple">
+<li><p>Has there been an increasing or decreasing <strong>trend</strong> in the response variable over time?</p></li>
+<li><p>Can we <strong>forecast</strong> conditions in the future?</p></li>
+</ul>
+</div>
+<div class="section" id="Challenges">
+<h3>Challenges<a class="headerlink" href="#Challenges" title="Permalink to this headline">¶</a></h3>
+<p>Time series datasets come with several caveats, which need to be addressed in order to effectively model the system. A few common challenges that arise (and can occur together within a single dataset) are:</p>
+<ul class="simple">
+<li><p><strong>Autocorrelation</strong>: Data points are not independent from one another (i.e., the measurement at a given time point is dependent on previous time point(s)).</p></li>
+<li><p><strong>Data gaps</strong>: Data are not collected at regular intervals, necessitating <em>interpolation</em> between measurements. There are often gaps between monitoring periods. For many time series analyses, we need equally spaced points.</p></li>
+<li><p><strong>Seasonality</strong>: Cyclic patterns in variables occur at regular intervals, impeding clear interpretation of a monotonic (unidirectional) trend. Ex. We can assume that summer temperatures are higher.</p></li>
+<li><p><strong>Heteroscedasticity</strong>: The variance of the time series is not constant over time.</p></li>
+<li><p><strong>Covariance</strong>: the covariance of the time series is not constant over time. Many of these models assume that the variance and covariance are similar over the time–&gt;heteroschedasticity.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="Learning-Objectives">
+<h2>Learning Objectives<a class="headerlink" href="#Learning-Objectives" title="Permalink to this headline">¶</a></h2>
+<p>After successfully completing this notebook, you will be able to: 1. Choose appropriate time series analyses for trend detection and forecasting 2. Discuss the influence of seasonality on time series analysis 3. Interpret and communicate results of time series analyses</p>
+</div>
+<div class="section" id="Requirements-to-Complete-Lesson">
+<h2>Requirements to Complete Lesson<a class="headerlink" href="#Requirements-to-Complete-Lesson" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="Packages">
+<h3>Packages<a class="headerlink" href="#Packages" title="Permalink to this headline">¶</a></h3>
+<p>This lesson requires the installation of the following R packages to run the provided script: - <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code>- Version 3.3.3. Creates elegant data visualisations using the Grammar of Graphics. - <code class="docutils literal notranslate"><span class="pre">tidyverse</span></code>- Version 1.3.0. A collection of R packages designed for data science. - <code class="docutils literal notranslate"><span class="pre">lubridate</span></code>- Version 1.7.9. Functions for working with dates/times. - <code class="docutils literal notranslate"><span class="pre">scales</span></code>-Version 1.1.1. Graphical scales provide methods for automatically determining breaks and labels for axes and legends. -
+<code class="docutils literal notranslate"><span class="pre">dataRetrival</span></code>-Version 2.7.6. Retrieval Functions for USGS and EPA Hydrologic and Water Quality Data. - <code class="docutils literal notranslate"><span class="pre">stats</span></code>-Version 4.0.3. This package contains functions for statistical calculations and random number generation. - <code class="docutils literal notranslate"><span class="pre">stlplus</span></code>-Version 0.5.1. Decompose a time series into seasonal, trend, and remainder components using an implementation of Seasonal Decomposition of Time Series by Loess (STL) that provides several enhancements over the STL method in the stats package.</p>
+</div>
+<div class="section" id="Data-and-Code">
+<h3>Data and Code<a class="headerlink" href="#Data-and-Code" title="Permalink to this headline">¶</a></h3>
+<p>This lesson will import daily discharge data for Clear Creek near Denver, Colorado for the entire period of record using the <code class="docutils literal notranslate"><span class="pre">dataRetrieval</span></code> package. The package was created to make querying and downloading hydrologic data from the USGS National Water Information System (NWIS) and the multi-agency database, Water Quality Portal (WQP) easier. NWIS contains streamflow, peak flow, rating curves, groundwater, and water quality data data collected by or for the USGS. WQP only contains water quality
+data.</p>
+<p>It should be noted that the databases are not static as data is constantly being added. For more in-depth information on the <code class="docutils literal notranslate"><span class="pre">dataRetrieval</span></code> package, please visit <a class="reference external" href="https://cran.r-project.org/web/packages/dataRetrieval/vignettes/dataRetrieval.html">https://cran.r-project.org/web/packages/dataRetrieval/vignettes/dataRetrieval.html</a>.</p>
+<p>The code provided in this resource was developed using R version 3.6.1.</p>
+</div>
+<div class="section" id="Set-Working-Directory">
+<h3>Set Working Directory<a class="headerlink" href="#Set-Working-Directory" title="Permalink to this headline">¶</a></h3>
+<p>In R, the working directory is the directory where R starts when looking for any file to open (as directed by a file path) and where it saves any output. This lesson assumes that you have set your working directory to the folder location of the downloaded and unzipped data subsets.</p>
+</div>
+<div class="section" id="Load-packages-and-set-ggplot-theme">
+<h3>Load packages and set ggplot theme<a class="headerlink" href="#Load-packages-and-set-ggplot-theme" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="nf">options</span><span class="p">(</span><span class="n">warn</span><span class="o">=</span><span class="m">-1</span><span class="p">)</span>
+
+<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">lubridate</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">scales</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">dataRetrieval</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">stats</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">stlplus</span><span class="p">)</span>
+
+<span class="nf">theme_set</span><span class="p">(</span><span class="nf">theme_gray</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+── <span class="ansi-bold">Attaching packages</span> ─────────────────────────────────────── tidyverse 1.3.0 ──
+
+<span class="ansi-green-fg">✓</span> <span class="ansi-blue-fg">tibble </span> 3.0.5     <span class="ansi-green-fg">✓</span> <span class="ansi-blue-fg">dplyr  </span> 1.0.3
+<span class="ansi-green-fg">✓</span> <span class="ansi-blue-fg">tidyr  </span> 1.1.2     <span class="ansi-green-fg">✓</span> <span class="ansi-blue-fg">stringr</span> 1.4.0
+<span class="ansi-green-fg">✓</span> <span class="ansi-blue-fg">readr  </span> 1.4.0     <span class="ansi-green-fg">✓</span> <span class="ansi-blue-fg">forcats</span> 0.5.0
+<span class="ansi-green-fg">✓</span> <span class="ansi-blue-fg">purrr  </span> 0.3.4
+
+── <span class="ansi-bold">Conflicts</span> ────────────────────────────────────────── tidyverse_conflicts() ──
+<span class="ansi-red-fg">x</span> <span class="ansi-blue-fg">dplyr</span>::<span class="ansi-green-fg">filter()</span> masks <span class="ansi-blue-fg">stats</span>::filter()
+<span class="ansi-red-fg">x</span> <span class="ansi-blue-fg">dplyr</span>::<span class="ansi-green-fg">lag()</span>    masks <span class="ansi-blue-fg">stats</span>::lag()
+
+
+Attaching package: ‘lubridate’
+
+
+The following objects are masked from ‘package:base’:
+
+    date, intersect, setdiff, union
+
+
+
+Attaching package: ‘scales’
+
+
+The following object is masked from ‘package:purrr’:
+
+    discard
+
+
+The following object is masked from ‘package:readr’:
+
+    col_factor
+
+
+</pre></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="Import-Daily-Discharge-Data-from-Clear-Creek">
+<h2>Import Daily Discharge Data from Clear Creek<a class="headerlink" href="#Import-Daily-Discharge-Data-from-Clear-Creek" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="readNWISdv">
+<h2><code class="docutils literal notranslate"><span class="pre">readNWISdv</span></code><a class="headerlink" href="#readNWISdv" title="Permalink to this headline">¶</a></h2>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">readNWISdv</span></code> function to import daily discharge data from the NWIS web service. You can access the complete list of NWIS parameter codes here: <a class="reference external" href="https://nwis.waterdata.usgs.gov/nwis/pmcodes">https://nwis.waterdata.usgs.gov/nwis/pmcodes</a>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">ClearCreekDischarge</span> <span class="o">&lt;-</span> <span class="nf">readNWISdv</span><span class="p">(</span><span class="n">siteNumbers</span> <span class="o">=</span> <span class="s">&quot;06719505&quot;</span><span class="p">,</span>
+                     <span class="n">parameterCd</span> <span class="o">=</span> <span class="s">&quot;00060&quot;</span><span class="p">,</span> <span class="c1">#discharge (ft3/s)</span>
+                     <span class="n">startDate</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span>
+                     <span class="n">endDate</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
+
+<span class="nf">names</span><span class="p">(</span><span class="n">ClearCreekDischarge</span><span class="p">)[</span><span class="m">4</span><span class="o">:</span><span class="m">5</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Discharge&quot;</span><span class="p">,</span> <span class="s">&quot;Approval.Code&quot;</span><span class="p">)</span><span class="c1">#change last two column headers</span>
+
+<span class="nf">head</span><span class="p">(</span><span class="n">ClearCreekDischarge</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<table>
+<caption>A data.frame: 6 × 5</caption>
+<thead>
+    <tr><th></th><th scope=col>agency_cd</th><th scope=col>site_no</th><th scope=col>Date</th><th scope=col>Discharge</th><th scope=col>Approval.Code</th></tr>
+    <tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;date&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+    <tr><th scope=row>1</th><td>USGS</td><td>06719505</td><td>1974-10-01</td><td>89</td><td>A</td></tr>
+    <tr><th scope=row>2</th><td>USGS</td><td>06719505</td><td>1974-10-02</td><td>94</td><td>A</td></tr>
+    <tr><th scope=row>3</th><td>USGS</td><td>06719505</td><td>1974-10-03</td><td>91</td><td>A</td></tr>
+    <tr><th scope=row>4</th><td>USGS</td><td>06719505</td><td>1974-10-04</td><td>89</td><td>A</td></tr>
+    <tr><th scope=row>5</th><td>USGS</td><td>06719505</td><td>1974-10-05</td><td>91</td><td>A</td></tr>
+    <tr><th scope=row>6</th><td>USGS</td><td>06719505</td><td>1974-10-06</td><td>93</td><td>A</td></tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="section" id="Plot-Discharge-over-Time">
+<h2>Plot Discharge over Time<a class="headerlink" href="#Plot-Discharge-over-Time" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[63]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">ClearCreekPlot</span> <span class="o">&lt;-</span>
+  <span class="nf">ggplot</span><span class="p">(</span><span class="n">ClearCreekDischarge</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">Date</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">Discharge</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">geom_line</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">labs</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="nf">expression</span><span class="p">(</span><span class="s">&quot;Discharge (ft&quot;</span><span class="o">^</span><span class="m">3</span><span class="o">*</span><span class="s">&quot;/s)&quot;</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">theme</span><span class="p">(</span><span class="n">plot.title</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">margin</span> <span class="o">=</span> <span class="nf">margin</span><span class="p">(</span><span class="n">b</span> <span class="o">=</span> <span class="m">-10</span><span class="p">),</span> <span class="n">size</span> <span class="o">=</span> <span class="m">12</span><span class="p">),</span>
+       <span class="n">axis.title.x</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">())</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">ClearCreekPlot</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../../_images/gallery_R_Instructional_Introduction_to_Time_Series_Analysis_for_Hydrologic_Data_notebooks_Time_Series_Analysis_for_Hydrologic_Data_16_0.png" class="no-scaled-link" src="../../../../../_images/gallery_R_Instructional_Introduction_to_Time_Series_Analysis_for_Hydrologic_Data_notebooks_Time_Series_Analysis_for_Hydrologic_Data_16_0.png" style="width: 420px; height: 420px;" />
+</div>
+</div>
+</div>
+<div class="section" id="Decomposing-a-Time-Series-Dataset">
+<h2>Decomposing a Time Series Dataset<a class="headerlink" href="#Decomposing-a-Time-Series-Dataset" title="Permalink to this headline">¶</a></h2>
+<p>A given time series can be made up of several component series:</p>
+<ol class="arabic simple">
+<li><p>A <strong>seasonal</strong> component, which repeats over a fixed known period (e.g., seasons of the year, months, days of the week, hour of the day).</p></li>
+<li><p>A <strong>trend</strong> component, which quantifies the upward or downward progression over time. The trend component of a time series does not have to be monotonic. This doesn’t need to be unidirectional: it could go up for a little bit, and go down again.</p></li>
+<li><p>An <strong>error</strong> or <strong>random</strong> component, which makes up the remainder of the time series after other components have been accounted for. This component reflects the noise in the dataset. Anything not explained by the seasons will be classified as error-we’ll alwys have randomness in our data incorporated into our model.</p></li>
+<li><p>(optional) A <strong>cyclical</strong> component, which repeats over periods greater than the seasonal component. A good example of this in hydrologic data is El Niño Southern Oscillation (ENSO) cycles, which occur over a period of 2-8 years.</p></li>
+</ol>
+<p>We first need to turn the discharge data into a time series object in R. This is done using the <code class="docutils literal notranslate"><span class="pre">ts</span></code> function. Notice we can only specify one column of data and need to specify the period at which the data are sampled. The resulting time series object cannot be viewed like a regular data frame.</p>
+<div class="section" id="Determine-number-of-observations-in-dataset">
+<h3>Determine number of observations in dataset<a class="headerlink" href="#Determine-number-of-observations-in-dataset" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[64]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">nobsCC</span><span class="o">&lt;-</span><span class="nf">nrow</span><span class="p">(</span><span class="n">ClearCreekDischarge</span><span class="p">)</span>
+<span class="n">nobsCC</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+16911</div>
+</div>
+</div>
+<div class="section" id="Create-a-vector-for-the-number-of-observations">
+<h3>Create a vector for the number of observations<a class="headerlink" href="#Create-a-vector-for-the-number-of-observations" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">tCC</span><span class="o">&lt;-</span><span class="m">1</span><span class="o">:</span><span class="n">nobsCC</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="Create-a-time-series-object">
+<h2>Create a time series object<a class="headerlink" href="#Create-a-time-series-object" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="ts">
+<h2><code class="docutils literal notranslate"><span class="pre">ts</span></code><a class="headerlink" href="#ts" title="Permalink to this headline">¶</a></h2>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">ts</span></code> function to create time series objects.</p>
+<p><strong>timeseries.object.name &lt;- ts(data, start, end, frequency)</strong></p>
+<p>“data” is a vector or matrix containing the values used in the time series.</p>
+<p>“start” specifies the start time for the first observation in time series.</p>
+<p>“end” specifies the end time for the last observation in time series. This is optional.</p>
+<p>“frequency” specifies the number of observations per unit time.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[66]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">ClearCreek_ts</span> <span class="o">&lt;-</span> <span class="nf">ts</span><span class="p">(</span><span class="n">ClearCreekDischarge</span><span class="p">[</span><span class="n">tCC</span><span class="p">,</span><span class="m">4</span><span class="p">],</span> <span class="n">frequency</span> <span class="o">=</span> <span class="m">365</span><span class="p">,</span>  <span class="n">start</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">1974</span><span class="p">,</span> <span class="m">10</span><span class="p">))</span>
+<span class="n">ClearCreek_ts</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+A Time Series:<br><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>89</li><li>94</li><li>91</li><li>89</li><li>91</li><li>93</li><li>91</li><li>89</li><li>86</li><li>88</li><li>91</li><li>114</li><li>103</li><li>107</li><li>98</li><li>93</li><li>91</li><li>91</li><li>93</li><li>91</li><li>86</li><li>91</li><li>94</li><li>101</li><li>107</li><li>98</li><li>93</li><li>89</li><li>91</li><li>98</li><li>81</li><li>80</li><li>84</li><li>88</li><li>78</li><li>73</li><li>75</li><li>73</li><li>72</li><li>78</li><li>73</li><li>67</li><li>66</li><li>70</li><li>67</li><li>67</li><li>66</li><li>62</li><li>67</li><li>63</li><li>59</li><li>73</li><li>75</li><li>72</li><li>63</li><li>70</li><li>72</li><li>52</li><li>47</li><li>43</li><li>43</li><li>52</li><li>55</li><li>58</li><li>60</li><li>60</li><li>58</li><li>51</li><li>38</li><li>40</li><li>47</li><li>53</li><li>55</li><li>43</li><li>41</li><li>43</li><li>45</li><li>47</li><li>45</li><li>43</li><li>43</li><li>45</li><li>45</li><li>42</li><li>39</li><li>42</li><li>45</li><li>47</li><li>49</li><li>47</li><li>45</li><li>43</li><li>45</li><li>48</li><li>46</li><li>46</li><li>46</li><li>48</li><li>48</li><li>46</li><li>46</li><li>43</li><li>40</li><li>36</li><li>39</li><li>42</li><li>44</li><li>46</li><li>48</li><li>50</li><li>50</li><li>52</li><li>52</li><li>45</li><li>46</li><li>48</li><li>48</li><li>46</li><li>46</li><li>44</li><li>42</li><li>44</li><li>44</li><li>42</li><li>42</li><li>44</li><li>42</li><li>40</li><li>40</li><li>44</li><li>48</li><li>54</li><li>52</li><li>52</li><li>50</li><li>50</li><li>48</li><li>50</li><li>48</li><li>50</li><li>46</li><li>46</li><li>51</li><li>48</li><li>44</li><li>50</li><li>55</li><li>52</li><li>48</li><li>46</li><li>48</li><li>50</li><li>53</li><li>50</li><li>46</li><li>46</li><li>45</li><li>41</li><li>45</li><li>46</li><li>44</li><li>41</li><li>41</li><li>46</li><li>47</li><li>48</li><li>46</li><li>48</li><li>44</li><li>53</li><li>56</li><li>62</li><li>60</li><li>48</li><li>43</li><li>49</li><li>54</li><li>49</li><li>30</li><li>53</li><li>59</li><li>64</li><li>47</li><li>42</li><li>45</li><li>54</li><li>56</li><li>62</li><li>63</li><li>38</li><li>34</li><li>38</li><li>33</li><li>31</li><li>32</li><li>32</li><li>31</li><li>34</li><li>39</li><li>47</li><li>⋯</li><li>335</li><li>329</li><li>331</li><li>323</li><li>314</li><li>297</li><li>275</li><li>248</li><li>233</li><li>225</li><li>221</li><li>222</li><li>226</li><li>211</li><li>200</li><li>194</li><li>181</li><li>172</li><li>162</li><li>152</li><li>147</li><li>183</li><li>226</li><li>249</li><li>211</li><li>180</li><li>174</li><li>157</li><li>152</li><li>149</li><li>143</li><li>140</li><li>135</li><li>136</li><li>138</li><li>129</li><li>125</li><li>122</li><li>119</li><li>116</li><li>119</li><li>117</li><li>109</li><li>107</li><li>103</li><li>104</li><li>101</li><li>98.4</li><li>97</li><li>102</li><li>94</li><li>88</li><li>86.8</li><li>90.9</li><li>103</li><li>125</li><li>125</li><li>117</li><li>106</li><li>94.7</li><li>96</li><li>89.6</li><li>83.1</li><li>76.9</li><li>74.9</li><li>68.8</li><li>68.1</li><li>73.6</li><li>80.4</li><li>83.5</li><li>86.7</li><li>76.6</li><li>76.6</li><li>69.1</li><li>66.4</li><li>65.8</li><li>69.2</li><li>67.4</li><li>64.2</li><li>61.2</li><li>62.7</li><li>63.7</li><li>61.4</li><li>60.5</li><li>59.8</li><li>57.9</li><li>57.1</li><li>57.5</li><li>61.1</li><li>55.1</li><li>57.1</li><li>54.1</li><li>52.2</li><li>53.8</li><li>55.5</li><li>52.1</li><li>51.7</li><li>49.3</li><li>49.2</li><li>47</li><li>48</li><li>51.1</li><li>50.3</li><li>54.3</li><li>48.8</li><li>49.3</li><li>48.3</li><li>50</li><li>52.1</li><li>45.1</li><li>49.9</li><li>50.1</li><li>48.4</li><li>52.5</li><li>41.3</li><li>33.1</li><li>27.5</li><li>54.9</li><li>57.7</li><li>52.8</li><li>49.2</li><li>46.3</li><li>43</li><li>44.4</li><li>40.8</li><li>39.3</li><li>38.6</li><li>38.4</li><li>40.9</li><li>42.9</li><li>40.3</li><li>32.9</li><li>36.8</li><li>31.8</li><li>42</li><li>34.3</li><li>42.1</li><li>38.8</li><li>40.6</li><li>42.9</li><li>40.1</li><li>42</li><li>37.7</li><li>39.2</li><li>44.1</li><li>38.6</li><li>&lt;NA&gt;</li><li>&lt;NA&gt;</li><li>&lt;NA&gt;</li><li>&lt;NA&gt;</li><li>&lt;NA&gt;</li><li>&lt;NA&gt;</li><li>&lt;NA&gt;</li><li>21.6</li><li>25.1</li><li>37.5</li><li>42</li><li>43.5</li><li>40.6</li><li>38.5</li><li>42.8</li><li>42.9</li><li>34.6</li><li>32.4</li><li>35.9</li><li>42.1</li><li>42.8</li><li>36.9</li><li>43.9</li><li>41.6</li><li>38.9</li><li>44.4</li><li>41.7</li><li>31.3</li><li>21.9</li><li>28.2</li><li>41.2</li><li>43</li><li>39.3</li><li>38.7</li><li>34.2</li><li>35.7</li><li>41.3</li><li>38.3</li><li>37</li><li>38.2</li><li>36.3</li><li>33.5</li><li>34.4</li><li>34.8</li><li>33.1</li><li>33.6</li><li>25.5</li><li>28.9</li><li>38.9</li><li>35.9</li><li>20.3</li><li>29.8</li><li>39.9</li><li>38.7</li></ol></div>
+</div>
+</div>
+<div class="section" id="Decompose-the-Time-Series">
+<h2>Decompose the Time Series<a class="headerlink" href="#Decompose-the-Time-Series" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="stlplus">
+<h2><code class="docutils literal notranslate"><span class="pre">stlplus</span></code><a class="headerlink" href="#stlplus" title="Permalink to this headline">¶</a></h2>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">stlplus</span></code> function to decompose the time series object into its component parts. We must specify that the window for seasonal extraction is either “periodic” or a specific number of at least 7. The decomposition proceeds through a loess (locally estimated scatterplot smoothing) function.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[67]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">ClearCreek_Decomposed</span> <span class="o">&lt;-</span> <span class="nf">stlplus</span><span class="p">(</span><span class="n">ClearCreek_ts</span><span class="p">,</span> <span class="n">s.window</span> <span class="o">=</span> <span class="s">&quot;periodic&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Visualize-the-decomposed-time-series">
+<h2>Visualize the decomposed time series<a class="headerlink" href="#Visualize-the-decomposed-time-series" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[68]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="nf">plot</span><span class="p">(</span><span class="n">ClearCreek_Decomposed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../../_images/gallery_R_Instructional_Introduction_to_Time_Series_Analysis_for_Hydrologic_Data_notebooks_Time_Series_Analysis_for_Hydrologic_Data_30_0.png" class="no-scaled-link" src="../../../../../_images/gallery_R_Instructional_Introduction_to_Time_Series_Analysis_for_Hydrologic_Data_notebooks_Time_Series_Analysis_for_Hydrologic_Data_30_0.png" style="width: 420px; height: 420px;" />
+</div>
+</div>
+<div class="section" id="Extract-components-from-decomposed-time-series-and-turn-them-into-data-frames">
+<h3>Extract components from decomposed time series and turn them into data frames<a class="headerlink" href="#Extract-components-from-decomposed-time-series-and-turn-them-into-data-frames" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[69]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">ClearCreek_Components</span> <span class="o">&lt;-</span> <span class="nf">as.data.frame</span><span class="p">(</span><span class="n">ClearCreek_Decomposed</span><span class="o">$</span><span class="n">data</span><span class="p">[,</span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">])</span> <span class="c1">#Pull in the &quot;data&quot; list to create a dataframe</span>
+
+<span class="n">ClearCreek_Components</span> <span class="o">&lt;-</span> <span class="nf">mutate</span><span class="p">(</span><span class="n">ClearCreek_Components</span><span class="p">,</span>
+                      <span class="n">Observed</span> <span class="o">=</span> <span class="n">ClearCreekDischarge</span><span class="o">$</span><span class="n">Discharge</span><span class="p">,</span>
+                      <span class="n">Date</span> <span class="o">=</span> <span class="n">ClearCreekDischarge</span><span class="o">$</span><span class="n">Date</span><span class="p">)</span> <span class="c1">#add in date so we can look at these over time</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="Visualize-the-trend-component-over-time">
+<h2>Visualize the trend component over time<a class="headerlink" href="#Visualize-the-trend-component-over-time" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[70]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">ClearCreek_Components</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_line</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="n">Observed</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">Date</span><span class="p">),</span>  <span class="n">size</span> <span class="o">=</span> <span class="m">0.25</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_line</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="n">trend</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">Date</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;#c13d75ff&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_hline</span><span class="p">(</span><span class="n">yintercept</span> <span class="o">=</span> <span class="m">0</span><span class="p">,</span> <span class="n">lty</span> <span class="o">=</span> <span class="m">2</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">ylab</span><span class="p">(</span><span class="nf">expression</span><span class="p">(</span><span class="s">&quot;Discharge (ft&quot;</span><span class="o">^</span><span class="m">3</span><span class="o">*</span><span class="s">&quot;/s)&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../../_images/gallery_R_Instructional_Introduction_to_Time_Series_Analysis_for_Hydrologic_Data_notebooks_Time_Series_Analysis_for_Hydrologic_Data_34_0.png" class="no-scaled-link" src="../../../../../_images/gallery_R_Instructional_Introduction_to_Time_Series_Analysis_for_Hydrologic_Data_notebooks_Time_Series_Analysis_for_Hydrologic_Data_34_0.png" style="width: 420px; height: 420px;" />
+</div>
+</div>
+</div>
+<div class="section" id="Visualize-the-seasonal-component-over-time">
+<h2>Visualize the seasonal component over time<a class="headerlink" href="#Visualize-the-seasonal-component-over-time" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[71]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">ClearCreek_Components</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_line</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="n">Observed</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">Date</span><span class="p">),</span>  <span class="n">size</span> <span class="o">=</span> <span class="m">0.25</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_line</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="n">seasonal</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">Date</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;#c13d75ff&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_hline</span><span class="p">(</span><span class="n">yintercept</span> <span class="o">=</span> <span class="m">0</span><span class="p">,</span> <span class="n">lty</span> <span class="o">=</span> <span class="m">2</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">ylab</span><span class="p">(</span><span class="nf">expression</span><span class="p">(</span><span class="s">&quot;Discharge (ft&quot;</span><span class="o">^</span><span class="m">3</span><span class="o">*</span><span class="s">&quot;/s)&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../../_images/gallery_R_Instructional_Introduction_to_Time_Series_Analysis_for_Hydrologic_Data_notebooks_Time_Series_Analysis_for_Hydrologic_Data_36_0.png" class="no-scaled-link" src="../../../../../_images/gallery_R_Instructional_Introduction_to_Time_Series_Analysis_for_Hydrologic_Data_notebooks_Time_Series_Analysis_for_Hydrologic_Data_36_0.png" style="width: 420px; height: 420px;" />
+</div>
+</div>
+<p>Note that the decomposition can yield negative values when we apply a seasonal adjustment or a trend adjustment to the data. The decomposition is not constrained by a lower bound of zero as discharge is in real life. Make sure to interpret with caution!</p>
+</div>
+<div class="section" id="Visualize-the-remainder-component-over-time">
+<h2>Visualize the remainder component over time<a class="headerlink" href="#Visualize-the-remainder-component-over-time" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[72]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">ClearCreek_Components</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_line</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="n">Observed</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">Date</span><span class="p">),</span>  <span class="n">size</span> <span class="o">=</span> <span class="m">0.25</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_line</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="n">remainder</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">Date</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;#c13d75ff&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_hline</span><span class="p">(</span><span class="n">yintercept</span> <span class="o">=</span> <span class="m">0</span><span class="p">,</span> <span class="n">lty</span> <span class="o">=</span> <span class="m">2</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">ylab</span><span class="p">(</span><span class="nf">expression</span><span class="p">(</span><span class="s">&quot;Discharge (ft&quot;</span><span class="o">^</span><span class="m">3</span><span class="o">*</span><span class="s">&quot;/s)&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../../_images/gallery_R_Instructional_Introduction_to_Time_Series_Analysis_for_Hydrologic_Data_notebooks_Time_Series_Analysis_for_Hydrologic_Data_39_0.png" class="no-scaled-link" src="../../../../../_images/gallery_R_Instructional_Introduction_to_Time_Series_Analysis_for_Hydrologic_Data_notebooks_Time_Series_Analysis_for_Hydrologic_Data_39_0.png" style="width: 420px; height: 420px;" />
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <!-- 
+This file modifies the default sphinx_rtd_theme footer
+-->
+
+
+
+<footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+  <!-- your html code here -->
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

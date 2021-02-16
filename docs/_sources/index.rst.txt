@@ -2,8 +2,10 @@
    :maxdepth: 2
    :hidden:
    :glob:
+   :caption: Galleries
 
-   gallery/Python/index
+   gallery/python/index
+   gallery/R/index
 
 
 CUAHSI Compute and Modeling Gallery
@@ -17,19 +19,19 @@ CUAHSI Compute and Modeling Gallery
 .. panels::
     :card: shadow
     :img-top-cls: pl-5 pr-5
-    :column: col-lg-3 col-md-6 col-sm-6 col-xs-12 p-2
+    :column: col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2
 
 
 
     
     ---
-    :img-top: /_static/python-logo.jpeg
+    :img-top: /_static/r-logo.jpeg
 
-    Community examples using the Python programming language. This includes both Python scripts as well as Python Jupyter notebooks.
+    Community examples using the R programming language. This includes R Jupyter notebooks, R scripts, as well as R Shiny web applications.
 
-    .. link-button:: Python_d9e8a4ceebfe490190f5ea7a605f616c
+    .. link-button:: Ug==
         :type: ref
-        :text: Python Gallery
+        :text: R Gallery
         :classes: btn-outline-primary btn-block stretched-link
 
      

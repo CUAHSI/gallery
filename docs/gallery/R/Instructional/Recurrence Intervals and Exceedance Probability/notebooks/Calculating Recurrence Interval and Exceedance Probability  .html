@@ -1,0 +1,847 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Physical Properties of Rivers: Calculating Recurrence Interval and Exceedance Probability &mdash; BuildDocs version documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/language_data.js"></script>
+        <script src="../../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../../_static/copybutton.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html">
+          
+
+          
+            
+            <img src="../../../../../_static/cuahsi-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Galleries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../python/index.html">python Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../python/index.html#research-examples">Research Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../python/index.html#reproducible-science-examples">Reproducible Science Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../python/index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">R Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">BuildDocs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          <!--
+The purpose of this template is to override (i.e. supress) the breadcrumbs that appear at the top of each page.
+-->
+
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Physical-Properties-of-Rivers:-Calculating-Recurrence-Interval-and-Exceedance-Probability">
+<h1>Physical Properties of Rivers: Calculating Recurrence Interval and Exceedance Probability<a class="headerlink" href="#Physical-Properties-of-Rivers:-Calculating-Recurrence-Interval-and-Exceedance-Probability" title="Permalink to this headline">¶</a></h1>
+<p>This lesson was adapted from educational material written by <a class="reference external" href="https://www.hydroshare.org/user/4912/">Dr. Kateri Salk</a> for her Fall 2019 Hydrologic Data Analysis course at Duke University. This is the first part of a two-part exercise focusing on the physical properties of rivers.</p>
+<div class="section" id="Introduction">
+<h2>Introduction<a class="headerlink" href="#Introduction" title="Permalink to this headline">¶</a></h2>
+<p>Rivers are bodies of freshwater flowing from higher elevations to lower elevations due to the force of gravity. One of the most important physical characteristics of a stream or river is <strong>discharge</strong>, the volume of water moving through the river or stream over a given amount of time. This exercise will introduce the concepts of <strong>Recurrence Intervals</strong> and <strong>Exceedance Probability</strong> for the prediction of streamflow discharge.</p>
+</div>
+<div class="section" id="Learning-Objectives">
+<h2>Learning Objectives<a class="headerlink" href="#Learning-Objectives" title="Permalink to this headline">¶</a></h2>
+<p>After successfully completing this exercise, you will be able to:</p>
+<ol class="arabic simple">
+<li><p>Execute queries to pull a variety of National Water Information System (NWIS) and Water Quality Portal (WQP) data into R.</p></li>
+<li><p>Calculate recurrence interval and exceedance probability from daily discharge data.</p></li>
+</ol>
+</div>
+<div class="section" id="Requirements-to-Complete-Lesson">
+<h2>Requirements to Complete Lesson<a class="headerlink" href="#Requirements-to-Complete-Lesson" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="Packages">
+<h3>Packages<a class="headerlink" href="#Packages" title="Permalink to this headline">¶</a></h3>
+<p>This lesson requires the installation of the following R packages to run the provided script: - <code class="docutils literal notranslate"><span class="pre">tidyverse</span></code>- Version 1.3.0. A collection of R packages designed for data science. - <code class="docutils literal notranslate"><span class="pre">lubridate</span></code>- Version 1.7.9. Functions for working with dates/times. - <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code>- Version 3.3.3. Creates elegant data visualisations using the Grammar of Graphics. - <code class="docutils literal notranslate"><span class="pre">scales</span></code>- Version 1.1.1. Graphical scales provide methods for automatically determining breaks and labels for axes and legends. -
+<code class="docutils literal notranslate"><span class="pre">dataRetrieval</span></code>- Version 2.7.6. Retrieval Functions for USGS and EPA Hydrologic and Water Quality Data.</p>
+</div>
+<div class="section" id="Data-and-Code">
+<h3>Data and Code<a class="headerlink" href="#Data-and-Code" title="Permalink to this headline">¶</a></h3>
+<p>This lesson will import daily discharge data for the Eno River near Durham, North Carolina for the entire period of record using the <code class="docutils literal notranslate"><span class="pre">dataRetrieval</span></code> package. The package was created to make querying and downloading hydrologic data from the USGS National Water Information System (NWIS) and the multi-agency database, Water Quality Portal (WQP) easier. NWIS contains streamflow, peak flow, rating curves, groundwater, and water quality data data collected by or for the USGS. WQP only contains water
+quality data.</p>
+<p>It should be noted that the databases are not static as data is constantly being added. For more in-depth information on the <code class="docutils literal notranslate"><span class="pre">dataRetrieval</span></code> package, please visit <a class="reference external" href="https://cran.r-project.org/web/packages/dataRetrieval/vignettes/dataRetrieval.html">https://cran.r-project.org/web/packages/dataRetrieval/vignettes/dataRetrieval.html</a>.</p>
+<p>The code provided in this resource was developed using R version 3.6.1.</p>
+</div>
+<div class="section" id="Set-Working-Directory">
+<h3>Set Working Directory<a class="headerlink" href="#Set-Working-Directory" title="Permalink to this headline">¶</a></h3>
+<p>In R, the working directory is the directory where R starts when looking for any file to open (as directed by a file path) and where it saves any output. This lesson assumes that you have set your working directory to the folder location of the downloaded and unzipped data subsets.</p>
+</div>
+<div class="section" id="Load-Packages-and-set-ggplot-theme">
+<h3>Load Packages and set ggplot theme<a class="headerlink" href="#Load-Packages-and-set-ggplot-theme" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="nf">options</span><span class="p">(</span><span class="n">warn</span><span class="o">=</span><span class="m">-1</span><span class="p">)</span>
+
+<span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">lubridate</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">scales</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">dataRetrieval</span><span class="p">)</span>
+
+<span class="nf">theme_set</span><span class="p">(</span><span class="nf">theme_gray</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="Recurrence-Intervals-and-Exceedance-Probability">
+<h2>Recurrence Intervals and Exceedance Probability<a class="headerlink" href="#Recurrence-Intervals-and-Exceedance-Probability" title="Permalink to this headline">¶</a></h2>
+<p>A <strong>recurrence interval</strong> is the past recurrence of an event, in this case a peak annual discharge measurement of a given magnitude. We use this to predict what we’d expect a peak discharge to be annually. The value of a recurrence interval corresponds to the average number of years between discharge of a given magnitude. Typically the minimum amount of years required to construct a recurrence interval is 10, but 30 is more robust. The more years we have of data, the more statistical power we
+have and the more robust our model. A recurrence interval, T, is calculated as:</p>
+<p><strong>:math:`T = (n+1)/m`</strong></p>
+<p>where n is the number of years and m is the ranking of an event within the observed period. We add one to n because we are computing the recurrence interval for a discharge event of a given magnitude <em>or greater</em>.</p>
+<p>Similarly, we can calculate an <strong>exceedance probability</strong>, or the probability of encountering a discharge event of a given magnitude or greater in any given year:</p>
+<p><strong>:math:`P = 1/T`</strong></p>
+<p>This is where the terms “100-year flood” and similar are derived. Remember this is a probability based on past occurrence, not an accurate forecast of how often we will see that event happening. When current patterns of discharge differ from past patterns, we observe <strong>nonstationary</strong> behavior. Nonstationarity results in events that occur more or less frequency than predicted based on the exceedance probability.</p>
+</div>
+<div class="section" id="Import-Daily-Discharge-Data-from-the-Eno-River">
+<h2>Import Daily Discharge Data from the Eno River<a class="headerlink" href="#Import-Daily-Discharge-Data-from-the-Eno-River" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="readNWISdv">
+<h2><code class="docutils literal notranslate"><span class="pre">readNWISdv</span></code><a class="headerlink" href="#readNWISdv" title="Permalink to this headline">¶</a></h2>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">readNWISdv</span></code> function to import daily discharge data from NWIS web service. You can access the complete list of NWIS parameter codes here: <a class="reference external" href="https://nwis.waterdata.usgs.gov/nwis/pmcodes">https://nwis.waterdata.usgs.gov/nwis/pmcodes</a>.</p>
+<p>The following are key parameter codes that serve as arguments for the <code class="docutils literal notranslate"><span class="pre">readNWISdv</span></code> function:</p>
+<p><strong>siteNumbers</strong>: character USGS site number. This is usually an 8 digit number. Multiple sites can be requested with a character vector.</p>
+<p><strong>parameterCd</strong>: character of USGS parameter code(s). This is usually an 5 digit number.</p>
+<p><strong>startDate</strong>: character starting date for data retrieval in the form YYYY-MM-DD. Default is “” which indicates retrieval for the earliest possible record. Date arguments are always specified in local time.</p>
+<p><strong>endDate</strong>: character ending date for data retrieval in the form YYYY-MM-DD. Default is “” which indicates retrieval for the latest possible record. Date arguments are always specified in local time.</p>
+<p><strong>statCd</strong>: character USGS statistic code. This is usually 5 digits. Daily mean (00003) is the default.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+
+<span></span><span class="n">EnoDischarge</span> <span class="o">&lt;-</span> <span class="nf">readNWISdv</span><span class="p">(</span><span class="n">siteNumbers</span> <span class="o">=</span> <span class="s">&quot;02085070&quot;</span><span class="p">,</span> <span class="c1">#site number for Eno River</span>
+                     <span class="n">parameterCd</span> <span class="o">=</span> <span class="s">&quot;00060&quot;</span><span class="p">,</span> <span class="c1"># parameter code for discharge (ft3/s)</span>
+                     <span class="n">startDate</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span>
+                     <span class="n">endDate</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
+
+<span class="nf">names</span><span class="p">(</span><span class="n">EnoDischarge</span><span class="p">)[</span><span class="m">4</span><span class="o">:</span><span class="m">5</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Discharge&quot;</span><span class="p">,</span> <span class="s">&quot;Approval.Code&quot;</span><span class="p">)</span> <span class="c1">#rename column headers</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="nf">head</span><span class="p">(</span><span class="n">EnoDischarge</span><span class="p">)</span> <span class="c1">#only view the first six observations of the dataframe</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<table>
+<caption>A data.frame: 6 × 5</caption>
+<thead>
+    <tr><th></th><th scope=col>agency_cd</th><th scope=col>site_no</th><th scope=col>Date</th><th scope=col>Discharge</th><th scope=col>Approval.Code</th></tr>
+    <tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;date&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+    <tr><th scope=row>1</th><td>USGS</td><td>02085070</td><td>1963-09-01</td><td>6.3</td><td>A</td></tr>
+    <tr><th scope=row>2</th><td>USGS</td><td>02085070</td><td>1963-09-02</td><td>5.7</td><td>A</td></tr>
+    <tr><th scope=row>3</th><td>USGS</td><td>02085070</td><td>1963-09-03</td><td>5.1</td><td>A</td></tr>
+    <tr><th scope=row>4</th><td>USGS</td><td>02085070</td><td>1963-09-04</td><td>4.8</td><td>A</td></tr>
+    <tr><th scope=row>5</th><td>USGS</td><td>02085070</td><td>1963-09-05</td><td>5.4</td><td>A</td></tr>
+    <tr><th scope=row>6</th><td>USGS</td><td>02085070</td><td>1963-09-06</td><td>5.4</td><td>A</td></tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="Create-a-‘Year’-column-and-view-the-first-six-observations">
+<h3>Create a ‘Year’ column and view the first six observations<a class="headerlink" href="#Create-a-‘Year’-column-and-view-the-first-six-observations" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">EnoDischarge</span> <span class="o">&lt;-</span>
+  <span class="n">EnoDischarge</span> <span class="o">%&gt;%</span>
+  <span class="nf">mutate</span><span class="p">(</span><span class="n">Year</span> <span class="o">=</span> <span class="nf">year</span><span class="p">(</span><span class="n">Date</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="nf">head</span><span class="p">(</span><span class="n">EnoDischarge</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<table>
+<caption>A data.frame: 6 × 6</caption>
+<thead>
+    <tr><th></th><th scope=col>agency_cd</th><th scope=col>site_no</th><th scope=col>Date</th><th scope=col>Discharge</th><th scope=col>Approval.Code</th><th scope=col>Year</th></tr>
+    <tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;date&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+    <tr><th scope=row>1</th><td>USGS</td><td>02085070</td><td>1963-09-01</td><td>6.3</td><td>A</td><td>1963</td></tr>
+    <tr><th scope=row>2</th><td>USGS</td><td>02085070</td><td>1963-09-02</td><td>5.7</td><td>A</td><td>1963</td></tr>
+    <tr><th scope=row>3</th><td>USGS</td><td>02085070</td><td>1963-09-03</td><td>5.1</td><td>A</td><td>1963</td></tr>
+    <tr><th scope=row>4</th><td>USGS</td><td>02085070</td><td>1963-09-04</td><td>4.8</td><td>A</td><td>1963</td></tr>
+    <tr><th scope=row>5</th><td>USGS</td><td>02085070</td><td>1963-09-05</td><td>5.4</td><td>A</td><td>1963</td></tr>
+    <tr><th scope=row>6</th><td>USGS</td><td>02085070</td><td>1963-09-06</td><td>5.4</td><td>A</td><td>1963</td></tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="section" id="Construct-a-plot-comparing-Year-and-Discharge-at-Eno-River">
+<h2>Construct a plot comparing Year and Discharge at Eno River<a class="headerlink" href="#Construct-a-plot-comparing-Year-and-Discharge-at-Eno-River" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">EnoPlot</span> <span class="o">&lt;-</span>
+  <span class="nf">ggplot</span><span class="p">(</span><span class="n">EnoDischarge</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">Year</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">Discharge</span><span class="p">))</span> <span class="o">+</span>
+         <span class="nf">geom_line</span><span class="p">()</span> <span class="o">+</span>
+         <span class="nf">xlab</span><span class="p">(</span><span class="s">&quot;Year&quot;</span><span class="p">)</span><span class="o">+</span>
+         <span class="nf">ylab</span><span class="p">(</span><span class="s">&quot;Discharge (CF/S)&quot;</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">EnoPlot</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../../_images/gallery_R_Instructional_Recurrence_Intervals_and_Exceedance_Probability_notebooks_Calculating_Recurrence_Interval_and_Exceedance_Probability___24_0.png" class="no-scaled-link" src="../../../../../_images/gallery_R_Instructional_Recurrence_Intervals_and_Exceedance_Probability_notebooks_Calculating_Recurrence_Interval_and_Exceedance_Probability___24_0.png" style="width: 420px; height: 420px;" />
+</div>
+</div>
+</div>
+<div class="section" id="Compute-Recurrence-Intervals-and-Exceedance-Probabilities-based-on-the-first-30-years-of-data-at-Eno-River">
+<h2>Compute Recurrence Intervals and Exceedance Probabilities based on the first 30 years of data at Eno River<a class="headerlink" href="#Compute-Recurrence-Intervals-and-Exceedance-Probabilities-based-on-the-first-30-years-of-data-at-Eno-River" title="Permalink to this headline">¶</a></h2>
+<p>1.) Use the <code class="docutils literal notranslate"><span class="pre">filter</span></code> function to extract the years before 1993 to create a 30 year period of record</p>
+<p>2.) Use the <code class="docutils literal notranslate"><span class="pre">group_by</span></code> function to group by year (so each year has its own separate set of data)</p>
+<p>3.) Use the <code class="docutils literal notranslate"><span class="pre">summarise</span></code> function to create a new column summarizing the maximum discharge per year</p>
+<p>4.) Use the <code class="docutils literal notranslate"><span class="pre">mutate</span></code> function to:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span>-Add a Rank column using the `rank` function
+
+-Add a Recurrence Interval column by using the 𝑇=(𝑛+1)/𝑚 equation
+
+-Add an Exceedance Probability column by using the 𝑇=(𝑛+1)/𝑚 equation
+</pre></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">EnoRecurrence</span> <span class="o">&lt;-</span>
+  <span class="n">EnoDischarge</span> <span class="o">%&gt;%</span>
+  <span class="nf">filter</span><span class="p">(</span><span class="n">Year</span> <span class="o">&lt;</span> <span class="m">1993</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">group_by</span><span class="p">(</span><span class="n">Year</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">summarise</span><span class="p">(</span><span class="n">PeakDischarge</span> <span class="o">=</span> <span class="nf">max</span><span class="p">(</span><span class="n">Discharge</span><span class="p">))</span> <span class="o">%&gt;%</span>   <span class="c1">#computes max discharge of each year through 1992</span>
+  <span class="nf">mutate</span><span class="p">(</span><span class="n">Rank</span> <span class="o">=</span> <span class="nf">rank</span><span class="p">(</span><span class="n">PeakDischarge</span><span class="p">),</span>    <span class="c1">#Add Rank column. The Rank function ranks peak discharge measurements from 1-30</span>
+         <span class="n">RecurrenceInterval</span> <span class="o">=</span> <span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">Year</span><span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">)</span><span class="o">/</span><span class="n">Rank</span><span class="p">,</span> <span class="c1">#Take equation from above and compute it; number of years in data frame +1/Rank.</span>
+         <span class="n">ExceedanceProbability</span> <span class="o">=</span> <span class="m">1</span><span class="o">/</span><span class="n">RecurrenceInterval</span><span class="p">)</span>  <span class="c1">#compute exceedance probability</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+`summarise()` ungrouping output (override with `.groups` argument)
+
+</pre></div></div>
+</div>
+<div class="section" id="View-newly-created-Dataframe-and-order-the-rank-column">
+<h3>View newly created Dataframe and <code class="docutils literal notranslate"><span class="pre">order</span></code> the rank column<a class="headerlink" href="#View-newly-created-Dataframe-and-order-the-rank-column" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">EnoRecurrence</span><span class="p">[</span>
+  <span class="nf">with</span><span class="p">(</span><span class="n">EnoRecurrence</span><span class="p">,</span> <span class="nf">order</span><span class="p">(</span><span class="n">Rank</span><span class="p">)),</span>
+<span class="p">]</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<table>
+<caption>A tibble: 30 × 5</caption>
+<thead>
+    <tr><th scope=col>Year</th><th scope=col>PeakDischarge</th><th scope=col>Rank</th><th scope=col>RecurrenceInterval</th><th scope=col>ExceedanceProbability</th></tr>
+    <tr><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+    <tr><td>1977</td><td> 818</td><td> 1</td><td>31.000000</td><td>0.03225806</td></tr>
+    <tr><td>1976</td><td> 873</td><td> 2</td><td>15.500000</td><td>0.06451613</td></tr>
+    <tr><td>1967</td><td>1200</td><td> 3</td><td>10.333333</td><td>0.09677419</td></tr>
+    <tr><td>1986</td><td>1210</td><td> 4</td><td> 7.750000</td><td>0.12903226</td></tr>
+    <tr><td>1963</td><td>1250</td><td> 5</td><td> 6.200000</td><td>0.16129032</td></tr>
+    <tr><td>1988</td><td>1260</td><td> 6</td><td> 5.166667</td><td>0.19354839</td></tr>
+    <tr><td>1980</td><td>1310</td><td> 7</td><td> 4.428571</td><td>0.22580645</td></tr>
+    <tr><td>1969</td><td>1540</td><td> 8</td><td> 3.875000</td><td>0.25806452</td></tr>
+    <tr><td>1968</td><td>1600</td><td> 9</td><td> 3.444444</td><td>0.29032258</td></tr>
+    <tr><td>1970</td><td>1960</td><td>10</td><td> 3.100000</td><td>0.32258065</td></tr>
+    <tr><td>1991</td><td>2280</td><td>11</td><td> 2.818182</td><td>0.35483871</td></tr>
+    <tr><td>1990</td><td>2310</td><td>12</td><td> 2.583333</td><td>0.38709677</td></tr>
+    <tr><td>1983</td><td>2590</td><td>13</td><td> 2.384615</td><td>0.41935484</td></tr>
+    <tr><td>1966</td><td>2870</td><td>14</td><td> 2.214286</td><td>0.45161290</td></tr>
+    <tr><td>1964</td><td>2900</td><td>15</td><td> 2.066667</td><td>0.48387097</td></tr>
+    <tr><td>1972</td><td>3040</td><td>16</td><td> 1.937500</td><td>0.51612903</td></tr>
+    <tr><td>1982</td><td>3060</td><td>17</td><td> 1.823529</td><td>0.54838710</td></tr>
+    <tr><td>1989</td><td>3280</td><td>18</td><td> 1.722222</td><td>0.58064516</td></tr>
+    <tr><td>1965</td><td>3330</td><td>19</td><td> 1.631579</td><td>0.61290323</td></tr>
+    <tr><td>1985</td><td>3530</td><td>20</td><td> 1.550000</td><td>0.64516129</td></tr>
+    <tr><td>1974</td><td>3680</td><td>21</td><td> 1.476190</td><td>0.67741935</td></tr>
+    <tr><td>1984</td><td>3850</td><td>22</td><td> 1.409091</td><td>0.70967742</td></tr>
+    <tr><td>1981</td><td>3870</td><td>23</td><td> 1.347826</td><td>0.74193548</td></tr>
+    <tr><td>1979</td><td>4010</td><td>24</td><td> 1.291667</td><td>0.77419355</td></tr>
+    <tr><td>1992</td><td>4290</td><td>25</td><td> 1.240000</td><td>0.80645161</td></tr>
+    <tr><td>1973</td><td>4570</td><td>26</td><td> 1.192308</td><td>0.83870968</td></tr>
+    <tr><td>1971</td><td>4690</td><td>27</td><td> 1.148148</td><td>0.87096774</td></tr>
+    <tr><td>1975</td><td>5610</td><td>28</td><td> 1.107143</td><td>0.90322581</td></tr>
+    <tr><td>1987</td><td>5930</td><td>29</td><td> 1.068966</td><td>0.93548387</td></tr>
+    <tr><td>1978</td><td>6210</td><td>30</td><td> 1.033333</td><td>0.96774194</td></tr>
+</tbody>
+</table></div>
+</div>
+<p>In any given year, for rank 30, we have a 97% probability that we’ll see that amount of discharge or higher in a given year. For rank 1, we have a 3% probability of seeing that amount of discharge or higher in a given year.</p>
+</div>
+</div>
+<div class="section" id="Create-a-barplot-displaying-the-Peak-Discharge-over-time">
+<h2>Create a barplot displaying the Peak Discharge over time<a class="headerlink" href="#Create-a-barplot-displaying-the-Peak-Discharge-over-time" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">EnoPeakPlot</span> <span class="o">&lt;-</span>
+  <span class="nf">ggplot</span><span class="p">(</span><span class="n">EnoRecurrence</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">Year</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">PeakDischarge</span><span class="p">))</span> <span class="o">+</span>
+         <span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="o">=</span><span class="s">&quot;identity&quot;</span><span class="p">)</span> <span class="o">+</span>  <span class="c1">#If you want the heights of the bars to represent values in the data, use stat=&quot;identity&quot; and map a value to the y aesthetic</span>
+         <span class="nf">xlab</span><span class="p">(</span><span class="s">&quot;Year&quot;</span><span class="p">)</span> <span class="o">+</span>
+         <span class="nf">ylab</span><span class="p">(</span><span class="s">&quot;Peak Discharge (CF/S)&quot;</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">EnoPeakPlot</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../../_images/gallery_R_Instructional_Recurrence_Intervals_and_Exceedance_Probability_notebooks_Calculating_Recurrence_Interval_and_Exceedance_Probability___32_0.png" class="no-scaled-link" src="../../../../../_images/gallery_R_Instructional_Recurrence_Intervals_and_Exceedance_Probability_notebooks_Calculating_Recurrence_Interval_and_Exceedance_Probability___32_0.png" style="width: 420px; height: 420px;" />
+</div>
+</div>
+</div>
+<div class="section" id="Construct-a-scatterplot-comparing-the-relationship-between-Recurrence-Interval-and-Peak-Discharge">
+<h2>Construct a scatterplot comparing the relationship between Recurrence Interval and Peak Discharge<a class="headerlink" href="#Construct-a-scatterplot-comparing-the-relationship-between-Recurrence-Interval-and-Peak-Discharge" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">EnoRecurrencePlot</span> <span class="o">&lt;-</span>
+  <span class="nf">ggplot</span><span class="p">(</span><span class="n">EnoRecurrence</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">RecurrenceInterval</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">PeakDischarge</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">geom_point</span><span class="p">()</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">EnoRecurrencePlot</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../../_images/gallery_R_Instructional_Recurrence_Intervals_and_Exceedance_Probability_notebooks_Calculating_Recurrence_Interval_and_Exceedance_Probability___34_0.png" class="no-scaled-link" src="../../../../../_images/gallery_R_Instructional_Recurrence_Intervals_and_Exceedance_Probability_notebooks_Calculating_Recurrence_Interval_and_Exceedance_Probability___34_0.png" style="width: 420px; height: 420px;" />
+</div>
+</div>
+</div>
+<div class="section" id="Model-the-linear-relationship-between-Peak-Annual-Discharge-and-Recurrence-Interval-and-display-summary-statistics-of-the-model">
+<h2>Model the linear relationship between Peak Annual Discharge and Recurrence Interval and display summary statistics of the model<a class="headerlink" href="#Model-the-linear-relationship-between-Peak-Annual-Discharge-and-Recurrence-Interval-and-display-summary-statistics-of-the-model" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="lm">
+<h2><code class="docutils literal notranslate"><span class="pre">lm</span></code><a class="headerlink" href="#lm" title="Permalink to this headline">¶</a></h2>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">lm</span></code> function to fit a linear regression. A linear regression is a statistical model that analyzes the relationship between a response variable (often called y) and one or more variables and their interactions (often called x or explanatory variables). The lm command takes the variables in the format:</p>
+<p><strong>lm([response variable] ~ [explanatory variable], data =[dataframe])</strong></p>
+</div>
+<div class="section" id="summary">
+<h2><code class="docutils literal notranslate"><span class="pre">summary</span></code><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">summary</span></code>function produces result summaries of the results of various model fitting functions. For more information on summary statistics, visit <a class="reference external" href="http://r-statistics.co/Linear-Regression.html">http://r-statistics.co/Linear-Regression.html</a>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">Eno.RImodel</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">EnoRecurrence</span><span class="p">,</span> <span class="n">PeakDischarge</span> <span class="o">~</span><span class="n">RecurrenceInterval</span><span class="p">)</span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">Eno.RImodel</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+Call:
+lm(formula = PeakDischarge ~ RecurrenceInterval, data = EnoRecurrence)
+
+Residuals:
+    Min      1Q  Median      3Q     Max
+-1609.6  -881.3  -246.4   593.6  2788.4
+
+Coefficients:
+                   Estimate Std. Error t value Pr(&gt;|t|)
+(Intercept)          3574.4      281.0  12.722 3.71e-13 ***
+RecurrenceInterval   -147.9       39.1  -3.782 0.000752 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1260 on 28 degrees of freedom
+Multiple R-squared:  0.3381,    Adjusted R-squared:  0.3145
+F-statistic:  14.3 on 1 and 28 DF,  p-value: 0.0007518
+
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Using-the-summary-results-from-the-linear-model,-calculate-the-resultant-discharge-for-a-100-year-flood">
+<h2>Using the summary results from the linear model, calculate the resultant discharge for a 100-year flood<a class="headerlink" href="#Using-the-summary-results-from-the-linear-model,-calculate-the-resultant-discharge-for-a-100-year-flood" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">Eno.RImodel</span><span class="o">$</span><span class="n">coefficients</span><span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">Eno.RImodel</span><span class="o">$</span><span class="n">coefficients</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">*</span><span class="nf">log</span><span class="p">(</span><span class="m">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<strong>(Intercept):</strong> 2893.50185087908</div>
+</div>
+<p>[1] is the y-intercept of the model, and [2] is the coefficient of the predictor variable (Recurrence Interval). This takes the coefficient of the y-intercept plus the coefficient of the recurrence interval times the log of the 100 year flood value. Therefore, the resultant discharge for a 100-year flood at the Eno River is 2893.5 cfs.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <!-- 
+This file modifies the default sphinx_rtd_theme footer
+-->
+
+
+
+<footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+  <!-- your html code here -->
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

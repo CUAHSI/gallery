@@ -1,0 +1,1111 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Reuse Ecohydrology Model with Gridded Hydrometeorology Forcing &mdash; BuildDocs version documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/language_data.js"></script>
+        <script src="../../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../../_static/copybutton.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html">
+          
+
+          
+            
+            <img src="../../../../../_static/cuahsi-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Galleries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">Python Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#research-examples">Research Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#reproducible-science-examples">Reproducible Science Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../R/index.html">R Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../R/index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">BuildDocs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          <!--
+The purpose of this template is to override (i.e. supress) the breadcrumbs that appear at the top of each page.
+-->
+
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<p><img alt="4070b43cd23544e0a9b04b50d7d773f1" src="https://avatars3.githubusercontent.com/u/7543483?s=200&amp;v=4" /></p>
+<div class="section" id="Reuse-Ecohydrology-Model-with-Gridded-Hydrometeorology-Forcing">
+<h1>Reuse Ecohydrology Model with Gridded Hydrometeorology Forcing<a class="headerlink" href="#Reuse-Ecohydrology-Model-with-Gridded-Hydrometeorology-Forcing" title="Permalink to this headline">¶</a></h1>
+<ul>
+<li><p>Define a geographic subset (New Mexico) within the North America and download gridded meteorological data for this region. (for brevity, this is done in a supplemental notebook)</p></li>
+<li><p>Calculate mean climatology for a range of elevation bands.</p></li>
+<li><p>Run the Landlab ecohydrology model for a watershed given various climate scenarios.</p></li>
+<li><p>Observe sensitivity to climate by comparing the watershed model results.</p>
+<hr></li>
+</ul>
+</div>
+<div class="section" id="To-run-this-notebook:">
+<h1>To run this notebook:<a class="headerlink" href="#To-run-this-notebook:" title="Permalink to this headline">¶</a></h1>
+<p>Click in or on each shaded code block below and use <strong>shift + enter</strong> or <strong>shift + return</strong> keys. Alternatively, you can run groups of cells by clicking <strong>Cell</strong> on the menu above and selecting among the various run options. This is also where you can clear outputs from previous runs.</p>
+<p>If an error occurs, click on <strong>Kernel</strong> and then select <strong>Restart and Clear Outputs</strong> in the menu above. While exiting the notebook, click <strong>File</strong> and then select <strong>Close and Halt</strong>. For more instructions on how to run an interactive IPython notebook, click here: <a class="reference external" href="https://github.com/landlab/tutorials/blob/master/README.md">https://github.com/landlab/tutorials/blob/master/README.md</a> For tutorials on learning Landlab, click here: <a class="reference external" href="https://github.com/landlab/landlab/wiki/Tutorials">https://github.com/landlab/landlab/wiki/Tutorials</a> For the unexpanded version to download and run, click here:
+<a class="reference external" href="http://nbviewer.jupyter.org/github/landlab/tutorials/blob/master/ecohydrology/cellular_automaton_vegetation_DEM/cellular_automaton_vegetation_DEM_unexpanded.ipynb">http://nbviewer.jupyter.org/github/landlab/tutorials/blob/master/ecohydrology/cellular_automaton_vegetation_DEM/cellular_automaton_vegetation_DEM_unexpanded.ipynb</a></p>
+</div>
+<div class="section" id="1.-Introduction">
+<h1>1. Introduction<a class="headerlink" href="#1.-Introduction" title="Permalink to this headline">¶</a></h1>
+<p><strong>1.1 Landlab Ecohydrology Model</strong></p>
+<p>In this tutorial you will explore the role of climatology on the spatial development of tree, shrub, and grass Plant Functional Types (PFTs) in a semiarid setting. You will run an ecohydrologic vegetation dynamics model, written using Landlab - a python toolkit for modeling earth surface processes, on a hypothetical flat watershed with varied climatology. The ecohydrologic vegetation dynamics model you will use is based on CATGraSS, a discrete time cellular automata (CA) model for spatial
+evolution of PFTs [Zhou et al., 2013]. Each cell in the domain can be occupied by a single PFT: Tree, Shrub, Grass or left unoccupied as bare soil. The model couples local ecohydrologic vegetation dynamics, which simulate biomass production based on local soil moisture and actual evapotranspiration, with spatial processes for plant establishment and mortality controlled by seed dispersal rules, water stress tolerance, and space availability (Figure 1). Tree and shrub plants disperse seeds to
+their neighbors. Grass seeds are assumed to be available at each cell. Establishment of plants in empty cells is determined probabilistically based on water stress of each PFT. Plants with lower water stress have higher probability of establishment. Plant mortality is simulated probabilistically as a result of aging and drought stress.</p>
+<p><img alt="CATGraSSFlowChart" src="https://www.hydroshare.org/resource/70b977e22af544f8a7e5a803935c329c/data/contents/figures/CATGraSSFlowChart.jpeg" /></p>
+<center><p>Figure 1. Ecohydrologic vegetation dynamics model [Modified from Zhou et al., 2013]</p>
+</center><p>The model is driven by rainfall pulses (observed or generated), solar radiation and temperature. The latter two variables can also be used to prescribe a seasonal potential evapotranspiration input. In Landlab, the model is implemented as a set of interacting components, each describing a different element of the coupled system: PrecipitationDistribution, Radiation, PotentialEvapotranspiration, SoilMoisture, Vegetation (component for local vegetation growth), and VegCA (component for cellular
+automaton establishment and mortality of PFTs, i.e. spatial dynamics of vegetation pattern evolution). Each process can also operate in isolation, outside the context of this example model. Landlab components and the flow chart used to couple the components in the model driver is given below [Hobley et al., 2017].</p>
+<p><img alt="CATGraSSComponents" src="https://www.hydroshare.org/resource/70b977e22af544f8a7e5a803935c329c/data/contents/figures/CATGraSSComponents.jpg" /></p>
+<center><p>Figure 2. Landlab components (left column) and the flow chart of their implementation in Landlab to develop the cellular automaton plant competition model [Hobley et al. 2017]</p>
+</center><p>This model is available as a function ‘run_ecohydrology_model’, that can be imported from python script ‘supporting_files/ecohydrology_model_functions.py’. It contains [Ref. Figure 2]: - A local vegetation dynamics model that simulates storm and inter-storm water balance and ecohydrologic fluxes (ET, runoff), and plant biomass dynamics by coupling the following components: - PrecipitationDistribution - Radiation - PotentialEvapotranspiration - SoilMoisture - Vegetation</p>
+<ul class="simple">
+<li><p>A spatially explicit probabilistic cellular automaton component that simulates plant competition by tracking establishment and mortality of plants based on soil moisture stress: - VegCA</p></li>
+</ul>
+<p><strong>For Acknowledgements, citation information and References, please see the end of this notebook</strong>:</p>
+<p><strong>1.2 Landscape</strong></p>
+<p>In this tutorial, we are going to work with a hypothetical rectangular domain over which we will impose elevation-dependent climatology from New Mexico, USA to simulate vegetation patterns using the ecohydrologic model discussed in Figure 1 and 2. The climate in this area is semi-arid with Mean Annual Precipitation (MAP) in the range 200 - 350 mm depending on the elevation.</p>
+<p>The steps used for downloading gridded meteorology data and processing it are included in a separate Notebook <a class="reference external" href="https://www.hydroshare.org/resource/70b977e22af544f8a7e5a803935c329c/data/contents/ogh_newmexico/observatory_gridmet_newmexico.ipynb">New Mexico Climate Data Notebook</a> in this Hydroshare resource, and is imported as part of this exercise.</p>
+<p><strong>1.3 Steps to Explore the Model</strong></p>
+<p>We will do the following: - Import and review pre-processed gridded hydroclimatology data dictionaries for three different elevation bands. - Run the coupled Ecohydrology and cellular automata plant competition model for ~250 years with a daily timestep. - Visualize and examine spatio-temporal outputs.</p>
+<p>Start at the top by reading each block of text and sequentially running each code block (put your curser in a code block and type shift + enter OR got to the <em>Cell</em> pulldown menu at the top and choose <em>Run Cells</em>).</p>
+<p>Remember that you can always go to the <em>Kernel</em> pulldown menu at the top and choose <em>Restart &amp; Clear Output</em> or <em>Restart &amp; Run All</em> if you change things and want to start afresh.</p>
+</div>
+<div class="section" id="2.0-Data-Science-&amp;-Cyberinfrastructure-Methods">
+<h1>2.0 Data Science &amp; Cyberinfrastructure Methods<a class="headerlink" href="#2.0-Data-Science-&-Cyberinfrastructure-Methods" title="Permalink to this headline">¶</a></h1>
+<p>Update or add libraries that are not installed on the CUAHSI JupyterHub server. At the time of publication, the Landlab library was dependent on a different numpy library than installed in the software environment. The code block below was added as an example of how to update a library to a new version and restart the notebook kernel. If this update is not needed, comment with a &lt;#&gt;. If other updates are needed, add them below.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># comment this out if this update is not needed</span>
+<span class="o">!</span>conda update -y numpy
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display_html</span>
+<span class="n">display_html</span><span class="p">(</span><span class="s2">&quot;&lt;script&gt;Jupyter.notebook.kernel.restart()&lt;/script&gt;&quot;</span><span class="p">,</span><span class="n">raw</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="2.1-Data-Science-Methods">
+<h2>2.1 Data Science Methods<a class="headerlink" href="#2.1-Data-Science-Methods" title="Permalink to this headline">¶</a></h2>
+<p><strong>2.1.1 Import Landlab components, functions for importing data, plotting tools, and HydroShare utilities</strong></p>
+<p>To run this notebook, we must import several libraries. The hs_utils library provides functions for interacting with HydroShare, including resource querying, dowloading. and creation. Additional libraries support the functions of Landlab.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1">#Landlab toolkit available on CUAHSI JupyterHub</span>
+<span class="kn">from</span> <span class="nn">landlab</span> <span class="kn">import</span> <span class="n">RasterModelGrid</span> <span class="k">as</span> <span class="n">rmg</span>
+
+<span class="c1">#Python libraries available on CUAHSI JupyterHub</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span><span class="o">,</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span><span class="o">,</span> <span class="nn">dask</span><span class="o">,</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+
+<span class="c1"># plotting and shape libraries</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># tools for processing gridded hydro-meteorology data</span>
+<span class="kn">import</span> <span class="nn">ogh</span>
+
+<span class="c1"># silencing warning</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="c1">#HydroShare Utilities</span>
+<span class="kn">from</span> <span class="nn">hstools</span> <span class="kn">import</span> <span class="n">hydroshare</span>
+<span class="n">hs</span> <span class="o">=</span> <span class="n">hydroshare</span><span class="o">.</span><span class="n">hydroshare</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<p><strong>2.1.2 Where are we in Hydroshare space?</strong></p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">homedir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Data will be loaded from and saved to:</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">homedir</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p><strong>2.1.3 Import python functions from a subfolder in this HydroShare resource</strong></p>
+<p>Import the functions ‘run_ecohydrology_model’ (to run the ecohydrology model) and ‘plot_results’ (to plot outputs) from supporting python script into this Jupyter Notebook.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">supporting_files.ecohydrology_model_functions</span> <span class="kn">import</span> <span class="n">run_ecohydrology_model</span><span class="p">,</span> <span class="n">plot_results</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="3.-Climate-Science-Methods">
+<h1>3. Climate Science Methods<a class="headerlink" href="#3.-Climate-Science-Methods" title="Permalink to this headline">¶</a></h1>
+<p><strong>3.1.1 Read in climate data that has been processed (in a separate notebook for convenience)</strong></p>
+<p>In this test case, we want to demonstrate how to download existing downscaled gridded national/global datasets for a region and run ecohydrology model for hypothetical flat watersheds at different elevation bands. We used the Linvneh et al.(2015) gridded hydrometeorological data in this example. ‘ogh’, a conda package, is used to download the data for the state of New Mexico. We then bin the data into three elevation ranges and within each bin daily precipitation (mm), minimum and maximum
+temperature (oC) data are spatially averaged for every day. This led to time series of daily precipitation (mm), minimum and maximum temperature in each elevation band. To keep this notebook concise (and to focus on data processing and ecohydrology model implementation), we placed the code used for this hydrometeorological data processing in a separate notebook called: ‘observatory_gridmet_newmexico.ipynb’, available in the sub-folder ogh_newmexico. We saved synthesized data into JSONs (‘.json’)
+files by running the notebook ‘observatory_gridmet_newmexico.ipynb’. These JSONs are stored in the sub-folder ‘ogh_newmexico’ and are loaded into Python dicitonaries in the next code block below.</p>
+<p>Ranges used in the three elevation bins:</p>
+<p>Low elevation = 1200 - 1700 m</p>
+<p>Mid elevation = 1700 - 2000 m</p>
+<p>High elevation = 2000 - 2500 m</p>
+<p><img alt="New Mexico Climate by ELevation" src="https://www.hydroshare.org/resource/70b977e22af544f8a7e5a803935c329c/data/contents/figures/NewMexico_elevationbands.JPG" /></p>
+<center><p><strong>Figure 3.</strong> New Mexico climate bands by elevation correspond with high elevation (white) with trees (dark green in aerial photography).</p>
+</center><p>Let’s download the saved meteorological data (JSON files) into Python dictionaries. We create one dictionary for each elevation band. Each dictionary contains time series of 28 variables. These time series are stored as ‘key’:‘value’ pairs, where each variable name is a ‘key’ and the corresponding time series is the ‘value’.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># These files are processed from</span>
+<span class="c1"># https://www.hydroshare.org/resource/70b977e22af544f8a7e5a803935c329c/data/contents/observatory_gridmet_newmexico.ipynb</span>
+<span class="n">ltm_low</span><span class="o">=</span><span class="n">ogh</span><span class="o">.</span><span class="n">readDictOfDf</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">homedir</span><span class="p">,</span> <span class="s1">&#39;ogh_newmexico/NewMexico_lowElevation.json&#39;</span><span class="p">))</span>
+<span class="n">ltm_mid</span><span class="o">=</span><span class="n">ogh</span><span class="o">.</span><span class="n">readDictOfDf</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">homedir</span><span class="p">,</span> <span class="s1">&#39;ogh_newmexico/NewMexico_midElevation.json&#39;</span><span class="p">))</span>
+<span class="n">ltm_high</span><span class="o">=</span><span class="n">ogh</span><span class="o">.</span><span class="n">readDictOfDf</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">homedir</span><span class="p">,</span> <span class="s1">&#39;ogh_newmexico/NewMexico_highElevation.json&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<p><strong>3.1.2 Review statistics and variables available within a dictionary, e.g. Low Elevation</strong></p>
+<p>We can look at the names of all 28 variables in each dictionary below.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">sorted</span><span class="p">(</span><span class="n">ltm_low</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<p><strong>3.1.3 Extract selected variables from the dictionary</strong></p>
+<p>The ecohydrology model uses daily precipitation, daily maximum and minimum temperature time series as spatially uniform input over the modeled domain. This model uses daily maximum and minimum temperatures to calculate Potential Evapotranspiration (PET) using ‘The Priestley Taylor’ method. In the code block below we assign a variable for each input time series and load data from the dictionaries listed above.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Mean daily precipitation</span>
+<span class="n">P_met_low</span> <span class="o">=</span> <span class="n">ltm_low</span><span class="p">[</span><span class="s1">&#39;meandaily_PRECIP_dailymet_livneh2015&#39;</span><span class="p">]</span> <span class="c1"># Precipitation in mm</span>
+<span class="n">P_met_mid</span> <span class="o">=</span> <span class="n">ltm_mid</span><span class="p">[</span><span class="s1">&#39;meandaily_PRECIP_dailymet_livneh2015&#39;</span><span class="p">]</span> <span class="c1"># Precipitation in mm</span>
+<span class="n">P_met_high</span> <span class="o">=</span> <span class="n">ltm_high</span><span class="p">[</span><span class="s1">&#39;meandaily_PRECIP_dailymet_livneh2015&#39;</span><span class="p">]</span> <span class="c1"># Precipitation in mm</span>
+
+<span class="c1"># Mean daily maximum temperature</span>
+<span class="n">Tmax_met_low</span> <span class="o">=</span> <span class="n">ltm_low</span><span class="p">[</span><span class="s1">&#39;meandaily_TMAX_dailymet_livneh2015&#39;</span><span class="p">]</span> <span class="c1"># Tmax in C</span>
+<span class="n">Tmax_met_mid</span> <span class="o">=</span> <span class="n">ltm_mid</span><span class="p">[</span><span class="s1">&#39;meandaily_TMAX_dailymet_livneh2015&#39;</span><span class="p">]</span> <span class="c1"># Tmax in C</span>
+<span class="n">Tmax_met_high</span> <span class="o">=</span> <span class="n">ltm_high</span><span class="p">[</span><span class="s1">&#39;meandaily_TMAX_dailymet_livneh2015&#39;</span><span class="p">]</span> <span class="c1"># Tmax in C</span>
+
+<span class="c1"># Mean daily minimum temperature</span>
+<span class="n">Tmin_met_low</span> <span class="o">=</span> <span class="n">ltm_low</span><span class="p">[</span><span class="s1">&#39;meandaily_TMIN_dailymet_livneh2015&#39;</span><span class="p">]</span> <span class="c1"># Tmin in C</span>
+<span class="n">Tmin_met_mid</span> <span class="o">=</span> <span class="n">ltm_mid</span><span class="p">[</span><span class="s1">&#39;meandaily_TMIN_dailymet_livneh2015&#39;</span><span class="p">]</span> <span class="c1"># Tmin in C</span>
+<span class="n">Tmin_met_high</span> <span class="o">=</span> <span class="n">ltm_high</span><span class="p">[</span><span class="s1">&#39;meandaily_TMIN_dailymet_livneh2015&#39;</span><span class="p">]</span> <span class="c1"># Tmin in C</span>
+</pre></div>
+</div>
+</div>
+<p>In the code blocks below, we calculate and print Mean Annual Precipitation (MAP) values in each elevation band.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Check Mean Annual Precipitation</span>
+<span class="n">P_met_low_MAP</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">P_met_low</span><span class="o">.</span><span class="n">values</span><span class="p">)</span><span class="o">*</span><span class="mf">365.</span>
+<span class="n">P_met_mid_MAP</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">P_met_mid</span><span class="o">.</span><span class="n">values</span><span class="p">)</span><span class="o">*</span><span class="mf">365.</span>
+<span class="n">P_met_high_MAP</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">P_met_high</span><span class="o">.</span><span class="n">values</span><span class="p">)</span><span class="o">*</span><span class="mf">365.</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Low Elevation MAP = </span><span class="si">{:0.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">P_met_low_MAP</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mid Elevation MAP = </span><span class="si">{:0.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">P_met_mid_MAP</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;High Elevation MAP = </span><span class="si">{:0.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">P_met_high_MAP</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<p><strong>3.1.4 Bias Correction</strong></p>
+<p>From prior experience of working with watersheds in New Mexico, we suspect that MAP values obtained from downscaled climate data product are higher than observations, especially in low elevations, indicating a wetter bias. It is common to find biases in downscaled climate products. Therefore, we downloaded precipitation data from meteorological stations located in Sevilleta LTER, New Mexico [Moore 2011]. Table below lists these meteorological stations and MAP calculated from the precipitation
+data that extends over multiple years at respective stations. We can immediately note that MAP values derived from Livneh dataset, reported above, are higher than the observed MAP values at meteorological stations in Sevilleta.</p>
+<center><p>Table 1. MAP and elevation data gathered from meteorological stations in Sevilleta LTER [Moore 2011] <img alt="TableBiasCorrection" src="https://www.hydroshare.org/resource/70b977e22af544f8a7e5a803935c329c/data/contents/figures/TableBiasCorrection.PNG" /></p>
+<p>One approach to deal with the incoherence between the gridded hydrometeorological data and observations is to correct any biases that might exist in the gridded data. For this purpose we can use a linear relationship derived from observations. In the figure below, MAP from each meterological station is plotted with respect to elevation and the linear relationship between MAP at a location and it’s elevation is obtained.</p>
+<p><img alt="BiasCorrectionPlot" src="https://www.hydroshare.org/resource/70b977e22af544f8a7e5a803935c329c/data/contents/figures/BiasCorrectionPlot.PNG" /></p>
+<center><p><strong>Figure 4.</strong> Plotting MAP at meteorological stations in Sevilleta LTER [Table 1] with respect to elevation</p>
+<p>We will rearrange this model to represent <strong>MAP at a location</strong> in terms of the <strong>difference between it’s elevation</strong> and <strong>minimum elevation of all hypothetical meteorological stations (centroids of the cells in gridded dataset) of New Mexico</strong>, and <strong>MAP at the location with minimum elevation</strong>.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># z_min is the minimum elevation of all hypothetical meteorological stations in New Mexico</span>
+<span class="n">z_min</span> <span class="o">=</span> <span class="mi">850</span>   <span class="c1"># in meters</span>
+
+<span class="c1"># Calculating &#39;MAP_z_min&#39;: MAP at z_min</span>
+<span class="n">MAP_z_min</span> <span class="o">=</span> <span class="mf">0.1697</span><span class="o">*</span><span class="n">z_min</span> <span class="o">-</span> <span class="mf">28.34</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Print MAP_z_min</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;MAP_z_min = </span><span class="si">{:0.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">MAP_z_min</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; mm&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Now, the model is rearranged as: <em>MAP_at_a_location</em> = (<em>elevation_at_a_location</em> - <em>z_min</em>) + <em>MAP_z_min</em>. Note that we use the mid value of each elevation band for input as <em>elevation_at_a_location</em> (i.e. for lowest elevation band, <em>elevation_at_a_location</em> = (1200.+1700.)/2. = 1450 m). We now calculate MAP for each elevation band below.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Bias corrections to Livneh Data (ref: Caylor et. al 2005 AWR; using meteorological data from Sevilleta,NM)</span>
+<span class="n">MAP_lit_low</span> <span class="o">=</span> <span class="p">((</span><span class="mf">1200.</span><span class="o">+</span><span class="mf">1700.</span><span class="p">)</span><span class="o">/</span><span class="mf">2.</span><span class="o">-</span><span class="mi">850</span><span class="p">)</span><span class="o">*</span><span class="mf">0.1697</span> <span class="o">+</span> <span class="n">MAP_z_min</span>   <span class="c1"># Mean annual precipitation in elev band 1 from literature in mm</span>
+<span class="n">MAP_lit_mid</span> <span class="o">=</span> <span class="p">((</span><span class="mf">1700.</span><span class="o">+</span><span class="mf">2000.</span><span class="p">)</span><span class="o">/</span><span class="mf">2.</span><span class="o">-</span><span class="mi">850</span><span class="p">)</span><span class="o">*</span><span class="mf">0.1697</span> <span class="o">+</span> <span class="n">MAP_z_min</span>   <span class="c1"># Mean annual precipitation in elev band 1 from literature in mm</span>
+<span class="n">MAP_lit_high</span> <span class="o">=</span> <span class="p">((</span><span class="mf">2000.</span><span class="o">+</span><span class="mf">2500.</span><span class="p">)</span><span class="o">/</span><span class="mf">2.</span><span class="o">-</span><span class="mi">850</span><span class="p">)</span><span class="o">*</span><span class="mf">0.1697</span> <span class="o">+</span> <span class="n">MAP_z_min</span>   <span class="c1"># Mean annual precipitation in elev band 1 from literature in mm</span>
+</pre></div>
+</div>
+</div>
+<p>We can print calculated MAPs for each elevation band.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;MAP for Low Elevation band = </span><span class="si">{:0.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">MAP_lit_low</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;MAP for Mid Elevation band = </span><span class="si">{:0.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">MAP_lit_mid</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;MAP for High Elevation band = </span><span class="si">{:0.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">MAP_lit_high</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<p>We use the ratio of MAP derived from gridded dataset for each elevation band and the corresponding calculated MAP from observations above, to estimate bias correction factors. Assuming that these biases persist for daily precipitation, we will adjust the daily precipitation time series obtained from gridded dataset with the estimated bias correction factors.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Calculate bias correction factors for each elevation band</span>
+<span class="n">bc_low</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">P_met_low_MAP</span><span class="p">)</span><span class="o">/</span><span class="n">MAP_lit_low</span>
+<span class="n">bc_mid</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">P_met_mid_MAP</span><span class="p">)</span><span class="o">/</span><span class="n">MAP_lit_mid</span>
+<span class="n">bc_high</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">P_met_high_MAP</span><span class="p">)</span><span class="o">/</span><span class="n">MAP_lit_high</span>
+
+<span class="c1"># Bias corrected precipitation:</span>
+<span class="n">P_met_low</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">P_met_low</span><span class="o">.</span><span class="n">values</span><span class="p">)</span><span class="o">/</span><span class="n">bc_low</span>
+<span class="n">P_met_mid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">P_met_mid</span><span class="o">.</span><span class="n">values</span><span class="p">)</span><span class="o">/</span><span class="n">bc_mid</span>
+<span class="n">P_met_high</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">P_met_high</span><span class="o">.</span><span class="n">values</span><span class="p">)</span><span class="o">/</span><span class="n">bc_high</span>
+</pre></div>
+</div>
+</div>
+<p>The estimated bias correction factors are:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correction Factor - Low Elevation = </span><span class="si">{:0.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">bc_low</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correction Factor - Mid Elevation = </span><span class="si">{:0.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">bc_mid</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correction Factor - High Elevation = </span><span class="si">{:0.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">bc_high</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<p><strong>3.1.5 Plotting corrected MAP for each elevation band</strong></p>
+<p>Below, we plot bias corrected MAP for each elevation band.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># print annual precipitation by elevation bands</span>
+<span class="n">P_fig1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">fontdict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fontsize&#39;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">:</span> <span class="s1">&#39;bold&#39;</span><span class="p">}</span>
+<span class="n">ax4</span> <span class="o">=</span> <span class="n">P_fig1</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+<span class="n">ax4</span><span class="o">.</span><span class="n">plot</span><span class="p">((</span><span class="n">ltm_low</span><span class="p">[</span><span class="s1">&#39;meanyear_PRECIP_dailymet_livneh2015&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">365.</span><span class="o">/</span><span class="n">bc_low</span><span class="p">),</span> <span class="s1">&#39;r-*&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;elev_1200_1700&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax4</span><span class="o">.</span><span class="n">plot</span><span class="p">((</span><span class="n">ltm_mid</span><span class="p">[</span><span class="s1">&#39;meanyear_PRECIP_dailymet_livneh2015&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">365.</span><span class="o">/</span><span class="n">bc_mid</span><span class="p">),</span> <span class="s1">&#39;b-*&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;elev_1700_2000&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax4</span><span class="o">.</span><span class="n">plot</span><span class="p">((</span><span class="n">ltm_high</span><span class="p">[</span><span class="s1">&#39;meanyear_PRECIP_dailymet_livneh2015&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">365.</span><span class="o">/</span><span class="n">bc_high</span><span class="p">),</span> <span class="s1">&#39;k-*&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;elev_2000_2500&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">1950</span><span class="p">,</span> <span class="mi">2013</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Annual Precipitation (mm)&#39;</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="n">fontdict</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="n">fontdict</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1950</span><span class="p">,</span> <span class="mi">2013</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">10</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">prop</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;weight&#39;</span><span class="p">:</span><span class="s1">&#39;bold&#39;</span><span class="p">})</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<p><strong>3.1.6 Plotting mean monthly temperature for each elevation band</strong></p>
+<p>Below, we plot mean monthly maximum and minimum temperature for each elevation band. Note that we haven’t bias corrected this data.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">T_fig2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">ax4</span> <span class="o">=</span> <span class="n">T_fig2</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+<span class="n">ax4</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ltm_low</span><span class="p">[</span><span class="s1">&#39;meanmonth_TMAX_dailymet_livneh2015&#39;</span><span class="p">],</span><span class="s1">&#39;r-*&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Tmax - low elevation&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax4</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ltm_mid</span><span class="p">[</span><span class="s1">&#39;meanmonth_TMAX_dailymet_livneh2015&#39;</span><span class="p">],</span><span class="s1">&#39;b-*&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Tmax - mid elevation&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax4</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ltm_high</span><span class="p">[</span><span class="s1">&#39;meanmonth_TMAX_dailymet_livneh2015&#39;</span><span class="p">],</span><span class="s1">&#39;k-*&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Tmax - high elevation&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="n">ax4</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ltm_low</span><span class="p">[</span><span class="s1">&#39;meanmonth_TMIN_dailymet_livneh2015&#39;</span><span class="p">],</span><span class="s1">&#39;r--*&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Tmin - low elevation&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax4</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ltm_mid</span><span class="p">[</span><span class="s1">&#39;meanmonth_TMIN_dailymet_livneh2015&#39;</span><span class="p">],</span><span class="s1">&#39;b--*&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Tmin - mid elevation&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax4</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ltm_high</span><span class="p">[</span><span class="s1">&#39;meanmonth_TMIN_dailymet_livneh2015&#39;</span><span class="p">],</span><span class="s1">&#39;k--*&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Tmin - high elevation&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span> <span class="mi">40</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Monthly Temperature (C)&#39;</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="n">fontdict</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Month&#39;</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="n">fontdict</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">prop</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;weight&#39;</span><span class="p">:</span><span class="s1">&#39;bold&#39;</span><span class="p">})</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<p>We can observe that there is an inverse relationship between elevation and temperature, and a positive relationship between elevation and precipitation.</p>
+<p><strong>3.1.7 Tiling of data - Extension of meteorological records by repeating available data</strong></p>
+<p>The meteorological data downloaded from Livneh et al. (2015) extends from year 1950 through 2013, for a total of 64 years. Some shrubs in this area can live up to 600 years and trees up to 300 years. Therefore, we need a longer record to evolve natural vegetation patterns from a random initial condition using Landlab’s ecohydrology model. To circumvent this issue, we extended the historical data by tiling (i.e., repeating the arrays for a set number of times) for 150 times so that we have input
+time series for 9600 years preserving the historical climate.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Tiling meteorological data to extend the record to approximately 9.6k yrs.</span>
+<span class="n">P_met_low</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">P_met_low</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span>
+<span class="n">P_met_mid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">P_met_mid</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span>
+<span class="n">P_met_high</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">P_met_high</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span>
+
+<span class="n">Tmax_met_low</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">Tmax_met_low</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span>
+<span class="n">Tmax_met_mid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">Tmax_met_mid</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span>
+<span class="n">Tmax_met_high</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">Tmax_met_high</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span>
+
+<span class="n">Tmin_met_low</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">Tmin_met_low</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span>
+<span class="n">Tmin_met_mid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">Tmin_met_mid</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span>
+<span class="n">Tmin_met_high</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">Tmin_met_high</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="4.-Ecohydrology-Modeling-using-Landlab">
+<h1>4. Ecohydrology Modeling using Landlab<a class="headerlink" href="#4.-Ecohydrology-Modeling-using-Landlab" title="Permalink to this headline">¶</a></h1>
+<p>With all the input forcings prepared, we can now run the <strong>ecohydrology model</strong>. To run the <em>model</em>, we need the following:</p>
+<ul class="simple">
+<li><p>a Landlab grid to represent the domain/watershed</p></li>
+<li><p>a collective input file <strong>‘InputFile’</strong> that includes inputs for all components used in this model</p></li>
+<li><p>a Python dictionary <strong>‘input_data’</strong> that includes all meteorological forcings to run the model</p></li>
+<li><p>define an initial spatial organization of Plant Functional Types (PFTs) in the watershed</p></li>
+<li><p>number of days <strong>‘n’</strong> for which you want to run the model</p></li>
+</ul>
+<p><strong>4.1.1 Initialize Landlab grids</strong></p>
+<p>Landlab’s ecohydrology model can operate on Landlab’s raster grids (RasterModelGrid objects). We have already imported <strong>RasterModelGrid</strong> (Landlab’s gridding module for raster grids) as <strong>rmg</strong>. We will create three <strong>grid</strong> objects, one for each elevation band.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">grid_low</span> <span class="o">=</span> <span class="n">rmg</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">spacing</span><span class="o">=</span><span class="p">(</span><span class="mf">5.</span><span class="p">,</span> <span class="mf">5.</span><span class="p">))</span>  <span class="c1"># Initialize grid for low-elevation band</span>
+<span class="n">grid_mid</span> <span class="o">=</span> <span class="n">rmg</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">spacing</span><span class="o">=</span><span class="p">(</span><span class="mf">5.</span><span class="p">,</span> <span class="mf">5.</span><span class="p">))</span>  <span class="c1"># Initialize grid for mid-elevation band</span>
+<span class="n">grid_high</span> <span class="o">=</span> <span class="n">rmg</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">spacing</span><span class="o">=</span><span class="p">(</span><span class="mf">5.</span><span class="p">,</span> <span class="mf">5.</span><span class="p">))</span>  <span class="c1"># Initialize grid for high-elevation band</span>
+</pre></div>
+</div>
+</div>
+<p><strong>4.1.2 Loading an input file for the model</strong></p>
+<p>Each Landlab component used in this ecohydrology model accepts various input parameters as arguments. All input parameters for all the components used in the model can be collectively included in a single <strong>‘.yaml’</strong> file and passed along to the <strong>run_ecohydrology_model</strong> function, where each component is initialized internally. For this exercise, we have calibrated each component of the model with respective input parameters and included those input values in the file named
+<strong>ecohyd_inputs.yaml</strong>, which is available in the subfolder <strong>supporting_files</strong>. Note that we will use the same input file for all elevation bands.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">InputFile</span> <span class="o">=</span> <span class="s1">&#39;supporting_files/ecohyd_inputs.yaml&#39;</span>
+</pre></div>
+</div>
+</div>
+<p><strong>4.1.3 Prepare dictionary that includes meteorological forcings</strong></p>
+<p>For each elevation band, we will create a separate Python dictionary that includes time series of <strong>daily precipitation</strong>, <strong>daily maximum temperature</strong>, and <strong>daily minimum temperature</strong>.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Python dictionary for meteorological inputs for low-elevation band</span>
+<span class="n">input_data_low</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;precip_met&#39;</span><span class="p">:</span> <span class="n">P_met_low</span><span class="p">,</span>
+                  <span class="s1">&#39;Tmax_met&#39;</span><span class="p">:</span> <span class="n">Tmax_met_low</span><span class="p">,</span>
+                  <span class="s1">&#39;Tmin_met&#39;</span><span class="p">:</span> <span class="n">Tmin_met_low</span><span class="p">}</span>
+<span class="c1"># Python dictionary for meteorological inputs for mid-elevation band</span>
+<span class="n">input_data_mid</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;precip_met&#39;</span><span class="p">:</span> <span class="n">P_met_mid</span><span class="p">,</span>
+                  <span class="s1">&#39;Tmax_met&#39;</span><span class="p">:</span> <span class="n">Tmax_met_mid</span><span class="p">,</span>
+                  <span class="s1">&#39;Tmin_met&#39;</span><span class="p">:</span> <span class="n">Tmin_met_mid</span><span class="p">}</span>
+<span class="c1"># Python dictionary for meteorological inputs for high-elevation band</span>
+<span class="n">input_data_high</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;precip_met&#39;</span><span class="p">:</span> <span class="n">P_met_high</span><span class="p">,</span>
+                  <span class="s1">&#39;Tmax_met&#39;</span><span class="p">:</span> <span class="n">Tmax_met_high</span><span class="p">,</span>
+                  <span class="s1">&#39;Tmin_met&#39;</span><span class="p">:</span> <span class="n">Tmin_met_high</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p><strong>4.1.4 Define initial spatial organization of PFTs in the watershed</strong></p>
+<p>In Landlab’s ecohydrologic components, each grid cell can be occupied by one PFT (grass = 0, shrub = 1, tree = 2, bare soil =3, shrub seedling = 4, or tree seedling = 5). This spatial organization is managed by a <strong>cellular field</strong> (please see documentation for <strong>fields</strong> in Landlab for more information) named ***vegetation__plant_functional_type***. We need to set the initial spatial organization. For this tutorial, we will initialize each grid with a random organization of PFTs where each
+plant type (grass, shrub, and tree) will each occupy 25% of watershed area. Rest of the watershed will be left unoccupied (bare soil).</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Initializing PFT organization for low-elevation band</span>
+<span class="n">grid_low</span><span class="o">.</span><span class="n">at_cell</span><span class="p">[</span><span class="s1">&#39;vegetation__plant_functional_type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">grid_low</span><span class="o">.</span><span class="n">number_of_cells</span><span class="p">)</span>
+<span class="c1"># Initializing PFT organization for mid-elevation band</span>
+<span class="n">grid_mid</span><span class="o">.</span><span class="n">at_cell</span><span class="p">[</span><span class="s1">&#39;vegetation__plant_functional_type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">grid_mid</span><span class="o">.</span><span class="n">number_of_cells</span><span class="p">)</span>
+<span class="c1"># Initializing PFT organization for high-elevation band</span>
+<span class="n">grid_high</span><span class="o">.</span><span class="n">at_cell</span><span class="p">[</span><span class="s1">&#39;vegetation__plant_functional_type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">grid_high</span><span class="o">.</span><span class="n">number_of_cells</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>We can plot to see the random organization of PFTs that we just initialized.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Plot initial vegetation PFT state for low-elevation band</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span><span class="p">,</span> <span class="n">display</span>
+<span class="kn">from</span> <span class="nn">landlab.plot</span> <span class="kn">import</span> <span class="n">imshow_grid</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+<span class="k">def</span> <span class="nf">printmd</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="n">string</span><span class="p">))</span>
+<span class="n">cmap</span> <span class="o">=</span> <span class="n">mpl</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">ListedColormap</span><span class="p">(</span>
+            <span class="p">[</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;black&#39;</span><span class="p">])</span>
+<span class="n">bounds</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">]</span>
+<span class="n">norm</span> <span class="o">=</span> <span class="n">mpl</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">BoundaryNorm</span><span class="p">(</span><span class="n">bounds</span><span class="p">,</span> <span class="n">cmap</span><span class="o">.</span><span class="n">N</span><span class="p">)</span>
+<span class="n">printmd</span><span class="p">(</span><span class="s1">&#39;**Green: Grass; Red: Shrub; Black: Tree; White: Bare Soil**&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>
+<span class="n">imshow_grid</span><span class="p">(</span><span class="n">grid_low</span><span class="p">,</span> <span class="s1">&#39;vegetation__plant_functional_type&#39;</span><span class="p">,</span> <span class="n">values_at</span><span class="o">=</span><span class="s1">&#39;cell&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">,</span>
+            <span class="n">grid_units</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">),</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">,</span> <span class="n">limits</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+            <span class="n">allow_colorbar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p><strong>4.1.5 Set the number of days for which you want to run the model</strong></p>
+<p>In this tutorial, we will run the ecohydrology model at a daily time step. Therefore, we can set the value for <strong>number of days</strong> by approximately fixing the number of years we want to run the model. For this demonstration, we will set the value of <strong>number of days</strong> to <strong>550,000 days</strong>, i.e. for approximately <strong>1500</strong> years.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Setting number of storms</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">550000</span>  <span class="c1"># approximately 1500 years</span>
+</pre></div>
+</div>
+</div>
+<p><strong>Note:</strong> If you are re-running this notebook, please note that the code blocks below that run the model (i.e. where <strong>run_ecohydrology_model</strong> is called), take <strong>approximately 15 minutes each</strong> to run. If you want to run the model for shorter times, select a smaller value for <strong>n (number of days)</strong>.</p>
+<p><strong>4.1.6 Run the model!</strong></p>
+<p>We can now run the model. We will run the model thrice (once for each elevation band). Please note that, in the call to the function <strong>run_ecohydrology_model</strong>, for a daily simulation <strong>number_of_storms</strong> represent the <strong>number of days</strong> for which the model is run. On a day when there is no rainfall, storm depth is set to 0. Also, note that every function run returns three outputs: - VegType_elevation-band: a numpy ndarray of size [number_of_years, number_of_cells_in_the_grid] - this variable
+can get large in size for longer simulations. - yrs_elevation-band: the total number of years this model has run (float) - debug_low: ignore this output. This is only for debugging.</p>
+<p><strong>Low elevation band:</strong></p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="p">(</span><span class="n">VegType_low</span><span class="p">,</span> <span class="n">yrs_low</span><span class="p">,</span> <span class="n">debug_low</span><span class="p">)</span> <span class="o">=</span> <span class="n">run_ecohydrology_model</span><span class="p">(</span><span class="n">grid_low</span><span class="p">,</span>
+                                                           <span class="n">input_data</span><span class="o">=</span><span class="n">input_data_low</span><span class="p">,</span>
+                                                           <span class="n">input_file</span><span class="o">=</span><span class="n">InputFile</span><span class="p">,</span>
+                                                           <span class="n">synthetic_storms</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                                                           <span class="n">number_of_storms</span><span class="o">=</span><span class="n">n</span><span class="p">,</span>
+                                                           <span class="n">pet_method</span><span class="o">=</span><span class="s1">&#39;PriestleyTaylor&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p><strong>Mid elevation band:</strong></p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="p">(</span><span class="n">VegType_mid</span><span class="p">,</span> <span class="n">yrs_mid</span><span class="p">,</span> <span class="n">debug_mid</span><span class="p">)</span> <span class="o">=</span> <span class="n">run_ecohydrology_model</span><span class="p">(</span><span class="n">grid_mid</span><span class="p">,</span>
+                                                           <span class="n">input_data</span><span class="o">=</span><span class="n">input_data_mid</span><span class="p">,</span>
+                                                           <span class="n">input_file</span><span class="o">=</span><span class="n">InputFile</span><span class="p">,</span>
+                                                           <span class="n">synthetic_storms</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                                                           <span class="n">number_of_storms</span><span class="o">=</span><span class="n">n</span><span class="p">,</span>
+                                                           <span class="n">pet_method</span><span class="o">=</span><span class="s1">&#39;PriestleyTaylor&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p><strong>High elevation band</strong></p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="p">(</span><span class="n">VegType_high</span><span class="p">,</span> <span class="n">yrs_high</span><span class="p">,</span> <span class="n">debug_high</span><span class="p">)</span> <span class="o">=</span> <span class="n">run_ecohydrology_model</span><span class="p">(</span><span class="n">grid_high</span><span class="p">,</span>
+                                                              <span class="n">input_data</span><span class="o">=</span><span class="n">input_data_high</span><span class="p">,</span>
+                                                              <span class="n">input_file</span><span class="o">=</span><span class="n">InputFile</span><span class="p">,</span>
+                                                              <span class="n">synthetic_storms</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                                                              <span class="n">number_of_storms</span><span class="o">=</span><span class="n">n</span><span class="p">,</span>
+                                                              <span class="n">pet_method</span><span class="o">=</span><span class="s1">&#39;PriestleyTaylor&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p><strong>4.1.7 Plot and compare the results</strong></p>
+<p>Now that we have run the model, we can plot results using the function <strong>plot_results</strong> for each elevation band.</p>
+<p>This function will first plot spatial organization of PFTs at a frequency of <strong>yr_step_elevation-band</strong> years. For the plots of spatial organization, a Green cell indicates Grass, a Red cell indicates Shrub, a Black cell indicates Tree, and a White cell indicates that it is un-occupied (bare soil). At the end, annual areal vegetation cover of each PFT is plotted with respect to time in years.</p>
+<p><strong>Low elevation band:</strong></p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">plot_results</span><span class="p">(</span><span class="n">grid_low</span><span class="p">,</span> <span class="n">VegType_low</span><span class="p">,</span> <span class="n">yrs_low</span><span class="p">,</span> <span class="n">yr_step</span><span class="o">=</span><span class="n">yrs_low</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;grid_low.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p><strong>Mid elevation band:</strong></p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">plot_results</span><span class="p">(</span><span class="n">grid_mid</span><span class="p">,</span> <span class="n">VegType_mid</span><span class="p">,</span> <span class="n">yrs_mid</span><span class="p">,</span> <span class="n">yr_step</span><span class="o">=</span><span class="n">yrs_mid</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;grid_mid.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p><strong>High elevation band:</strong></p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">plot_results</span><span class="p">(</span><span class="n">grid_high</span><span class="p">,</span> <span class="n">VegType_high</span><span class="p">,</span> <span class="n">yrs_high</span><span class="p">,</span> <span class="n">yr_step</span><span class="o">=</span><span class="n">yrs_high</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;grid_high.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p><strong>4.1.4 Discussion</strong></p>
+<p>By comparing the <strong>areal vegetation cover</strong> and <strong>spatial organization</strong> plots above, we can make some interesting observations:</p>
+<ul class="simple">
+<li><p>In the low elevation band, the climate is arid (Aridity Index (AI) = 7.34) [Middleton et al. (1997)]. Drought-tolerant shrubs outcompete trees, leaving few trees. Grass gradually retreats resulting in a shrub dominant ecosystem with grass becoming the secondary PFT.</p></li>
+<li><p>In the mid elevation band, the climate is cooler and wetter than low elevation band (AI = 5) with aridity in the transition zone from arid to semi-arid climate [Middleton et al. (1997)]. It is interesting to note that all three PFTs co-exist in this climate with trees dominating, grass as secondary PFT and shrubs as tertiary PFT.</p></li>
+<li><p>In the high elevation band, the climate is the coolest and wettest among all elevation bands. The climate is seim-arid (AI = 3.66) [Middleton et al. (1997)]. Trees dominate the relatively moisture abundant ecosystem. Grass gradually retreats with few shrubs left behind.</p></li>
+</ul>
+<p><strong>Things you can explore further:</strong></p>
+<ul class="simple">
+<li><p>You can re-run the simulations for longer periods to see if the trajectories we obtained above are stable. You can do this by increasing <strong>n</strong>. You can check if the ecosystem responses observed in this example still hold when the model is run for longer periods of time.</p></li>
+<li><p>You can re-run the model with a different set of input parameters. You can edit <strong>ecohyd_inputs.yaml</strong> and re-run the model by changing the input parameters (e.g., soil properties, PFT properties, etc..)</p></li>
+</ul>
+</div>
+<div class="section" id="5.0.-Save-the-results-back-into-HydroShare">
+<h1>5.0. Save the results back into HydroShare<a class="headerlink" href="#5.0.-Save-the-results-back-into-HydroShare" title="Permalink to this headline">¶</a></h1>
+<p>Using the <code class="docutils literal notranslate"><span class="pre">hs_utils</span></code> library, the results of the Geoprocessing steps above can be saved back into HydroShare. First, define all of the required metadata for resource creation, i.e. <em>title</em>, <em>abstract</em>, <em>keywords</em>, <em>content files</em>. In addition, we must define the type of resource that will be created, in this case <em>genericresource</em>.</p>
+<p><strong>Note:</strong> Make sure you save the notebook at this point, so that all notebook changes will be saved into the new HydroShare resource.</p>
+<p><strong>Option A</strong> : define the resource from which this “NEW” content has been derived. This is one method for tracking resource provenance.</p>
+<p>Create list of files to save to HydroShare. Verify location and names.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">ThisNotebook</span><span class="o">=</span><span class="s1">&#39;reuse_ecohydrology_gridhydromet.ipynb&#39;</span> <span class="c1">#check name for consistency</span>
+<span class="n">files</span><span class="o">=</span><span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">homedir</span><span class="p">,</span> <span class="n">ThisNotebook</span><span class="p">),</span>
+       <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">homedir</span><span class="p">,</span><span class="s1">&#39;grid_high.png&#39;</span><span class="p">),</span>
+       <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">homedir</span><span class="p">,</span> <span class="s1">&#39;grid_mid.png&#39;</span><span class="p">),</span>
+       <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">homedir</span><span class="p">,</span> <span class="s1">&#39;grid_low.png&#39;</span><span class="p">)]</span>
+
+<span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">[ERROR] invalid path: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Create an instance of hydroshare(). If you need more information about this instance, use <code class="docutils literal notranslate"><span class="pre">help()</span></code>.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># For more information on the hstools library</span>
+<span class="n">help</span><span class="p">(</span><span class="n">hs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Create a new resource.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Save the results back to HydroShare</span>
+
+<span class="c1"># title for the new resource</span>
+<span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Ecohydrology model run with climatologies of different elevation bands&#39;</span>
+
+<span class="c1"># abstract for the new resource</span>
+<span class="n">abstract</span> <span class="o">=</span> <span class="s1">&#39;This is a demonstration of reuse of a Landlab ecohydrology model.&#39;</span>
+
+<span class="c1"># keywords for the new resource</span>
+<span class="n">keywords</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Landlab&#39;</span><span class="p">,</span> <span class="s1">&#39;ecohydrology&#39;</span><span class="p">,</span> <span class="s1">&#39;CATGraSS&#39;</span><span class="p">,</span><span class="s1">&#39;vegetation patterns&#39;</span><span class="p">,</span><span class="s1">&#39;reuse&#39;</span><span class="p">,</span><span class="s1">&#39;elevation&#39;</span><span class="p">]</span>
+
+<span class="c1"># Hydroshare resource type</span>
+<span class="n">rtype</span> <span class="o">=</span> <span class="s1">&#39;compositeresource&#39;</span>
+
+<span class="c1"># create the new resource</span>
+<span class="n">resource_id</span> <span class="o">=</span> <span class="n">hs</span><span class="o">.</span><span class="n">createHydroShareResource</span><span class="p">(</span><span class="n">abstract</span><span class="p">,</span>
+                                          <span class="n">title</span><span class="p">,</span>
+                                          <span class="n">keywords</span><span class="o">=</span><span class="n">keywords</span><span class="p">,</span>
+                                          <span class="n">resource_type</span><span class="o">=</span><span class="n">rtype</span><span class="p">,</span>
+                                          <span class="n">content_files</span><span class="o">=</span><span class="n">files</span><span class="p">,</span>
+                                          <span class="n">public</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="Click-here-for-more-Landlab-tutorials">
+<h2>Click here for more Landlab tutorials<a class="headerlink" href="#Click-here-for-more-Landlab-tutorials" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="References">
+<h2>References<a class="headerlink" href="#References" title="Permalink to this headline">¶</a></h2>
+<p>Hobley, D. E. J., Adams, J. M., Nudurupati, S. S., Hutton, E. W. H., Gasparini, N. M., Istanbulluoglu, E., and Tucker, G. E. (2017). Creative computing with Landlab: an open-source toolkit for building, coupling, and exploring two-dimensional numerical models of Earth-surface dynamics, Earth Surf. Dynam. doi:10.5194/esurf-5-21-2017.</p>
+<p>Livneh B., T.J. Bohn, D.S. Pierce, F. Munoz-Ariola, B. Nijssen, R. Vose, D. Cayan, and Brekke, L.D. (2015). A spatially comprehensive, hydrometeorological data set for Mexico, the U.S., and southern Canada 1950-2013, Nature Scientific Data, 5:150042, doi:10.1038/sdata.2015.42.</p>
+<p>Middleton, N. J., and Thomas, D. S. G., (1997)., World Atlas of Desertification, UNEP Edward Arnold, London, UK, 2nd edition.</p>
+<p>Moore D. (2011). Meteorology Data from the Sevilleta National Wildlife Refuge, New Mexico (1988- present). Environmental Data Initiative. <a class="reference external" href="https://doi.org/10.6073/pasta/4d71c09b242602114fb684c843e9d6ac">https://doi.org/10.6073/pasta/4d71c09b242602114fb684c843e9d6ac</a>.</p>
+<p>Phuong, J., Bandaragoda C., Istanbulluoglu, E., Beveridge, C., Strauch, R., Setiawan, L., Mooney, S. D. (2019). Automated retrieval, preprocessing, and visualization of gridded hydrometeorology data products for spatial-temporal exploratory analysis and intercomparison. Environmental Modelling &amp; Software Volume 116, June 2019, Pages 119-130 <a class="reference external" href="https://doi.org/10.1016/j.envsoft.2019.01.007">https://doi.org/10.1016/j.envsoft.2019.01.007</a></p>
+<p>Zhou, X., Istanbulluoglu, E., &amp; Vivoni, E. R. (2013). Modeling the ecohydrological role of aspect‐controlled radiation on tree‐grass‐shrub coexistence in a semiarid climate. Water Resources Research, 49(5), 2872-2895.</p>
+</div>
+<div class="section" id="Acknowledgements">
+<h2>Acknowledgements<a class="headerlink" href="#Acknowledgements" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://zenodo.org/badge/latestdoi/187289993"><img alt="DOI" src="https://zenodo.org/badge/187289993.svg" /></a></p>
+<p>This Notebooks serves as content for:</p>
+<p>Bandaragoda, C. J., A. Castronova, E. Istanbulluoglu, R. Strauch, S. S. Nudurupati, J. Phuong, J. M. Adams, et al. “Enabling Collaborative Numerical Modeling in Earth Sciences Using Knowledge Infrastructure.” Environmental Modelling &amp; Software, April 24, 2019. <a class="reference external" href="https://doi.org/10.1016/j.envsoft.2019.03.020">https://doi.org/10.1016/j.envsoft.2019.03.020</a>.</p>
+<p>and</p>
+<p>Bandaragoda, C., A. M. Castronova, J. Phuong, E. Istanbulluoglu, S. S. Nudurupati, R. Strauch, N. Lyons, K. Barnhart (2019). Enabling Collaborative Numerical Modeling in Earth Sciences using Knowledge Infrastructure: Landlab Notebooks, HydroShare, <a class="reference external" href="http://www.hydroshare.org/resource/fdc3a06e6ad842abacfa5b896df73a76">http://www.hydroshare.org/resource/fdc3a06e6ad842abacfa5b896df73a76</a></p>
+<p>This notebook was developed from code written by Sai Siddhartha Nudurupathi as part of his Ph.D. disseration at the University of Washington.</p>
+<p>Use or citation of this notebook should also reference the forthcoming PhD Dissertation and publications by Nudurupathi et al. (2019).</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <!-- 
+This file modifies the default sphinx_rtd_theme footer
+-->
+
+
+
+<footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+  <!-- your html code here -->
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

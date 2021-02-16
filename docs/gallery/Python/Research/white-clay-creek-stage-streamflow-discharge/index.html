@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>White Clay Creek - Stage, Streamflow / Discharge (1968-2014) &mdash; BuildDocs version documentation</title>
+  <title>&lt;no title&gt; &mdash; BuildDocs version documentation</title>
   
 
   
@@ -40,6 +40,8 @@
         <script src="../../../../_static/clipboard.min.js"></script>
         <script src="../../../../_static/copybutton.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
         <script src="../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
         <script src="../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
         <script src="../../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
@@ -93,8 +95,18 @@
               
             
             
-              <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../index.html">Python Gallery</a></li>
+              <p class="caption"><span class="caption-text">Galleries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">python Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#research-examples">Research Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#reproducible-science-examples">Reproducible Science Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../R/index.html">R Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../R/index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -151,13 +163,16 @@ The purpose of this template is to override (i.e. supress) the breadcrumbs that 
     text-align: unset;
 }
 </style>
-<div class="section" id="white-clay-creek-stage-streamflow-discharge-1968-2014">
-<span id="white-clay-cree"></span><h1>White Clay Creek - Stage, Streamflow / Discharge (1968-2014)<a class="headerlink" href="#white-clay-creek-stage-streamflow-discharge-1968-2014" title="Permalink to this headline">¶</a></h1>
-<p><strong>Description</strong></p>
-<p>Continuous streamflow data collected by the Stroud Water Research Center within the 3rd-order research watershed, White Clay Creek above McCue Road.  Variables: Gage height, Discharge  Date Range: (1968-2014)  Dataset Creators/Authors: Stroud Water Research Center  Contact: Sara G. Damiano, Stroud Water Research Center, 970 Spencer Road, Avondale, PA 19311, &lt;<a class="reference external" href="mailto:sdamiano&#37;&#52;&#48;stroudcenter&#46;org">sdamiano<span>&#64;</span>stroudcenter<span>&#46;</span>org</a>&gt;  Denis Newbold, Stroud Water Research Center, 970 Spencer Road, Avondale, PA 19311. &lt;<a class="reference external" href="mailto:newbold&#37;&#52;&#48;stroudcenter&#46;org">newbold<span>&#64;</span>stroudcenter<span>&#46;</span>org</a>&gt;  Anthony Aufdenkampe, Stroud Water Research Center, 970 Spencer Road, Avondale, PA 1931.1 &lt;<a class="reference external" href="mailto:aufdenkampe&#37;&#52;&#48;stroudcenter&#46;org">aufdenkampe<span>&#64;</span>stroudcenter<span>&#46;</span>org</a>&gt;  Field Area: White Clay Creek &#64; SWRC | Christina River Basin  Copied from:  Stroud Water Research Center (2014). “CZO Dataset: White Clay Creek - Stage, Streamflow / Discharge (1968-2014).” Retrieved 09 Nov 2017, from <a class="reference external" href="http://criticalzone.org/christina/data/dataset/2464/">http://criticalzone.org/christina/data/dataset/2464/</a>.  NOTE: does not include data in this CZO Data listing that was from this site: WCC2154: White Clay Creek, west branch at Rt. 926, downstream side.  In addition, Aufdenkampe added an example Jupyter Notebook in Python (CZODisplaytoDataFrame_WCC-Flow.ipynb), to create a single concatenated data frame and export to a single CSV file (CRB_WCC_STAGEFLOW_from_df.csv). The full example can be found at <a class="reference external" href="https://github.com/aufdenkampe/EnviroDataScripts/tree/master/CZODisplayParsePlot">https://github.com/aufdenkampe/EnviroDataScripts/tree/master/CZODisplayParsePlot</a>.</p>
-<br />&nbsp;<div class="sphinx-bs container pb-2 docutils">
+<div class=example-title>
+    <h1> White Clay Creek - Stage, Streamflow / Discharge (1968-2014) </h1>
+</div><br />&nbsp;
+<hr>
+<br />&nbsp;<div class=example-description>
+    <h2> Description </h2>
+    <p>Continuous streamflow data collected by the Stroud Water Research Center within the 3rd-order research watershed, White Clay Creek above McCue Road.Variables:  Gage height, DischargeDate Range:  (1968-2014)Dataset Creators/Authors:  Stroud Water Research CenterContact:  Sara G. Damiano, Stroud Water Research Center, 970 Spencer Road, Avondale, PA 19311, <sdamiano@stroudcenter.org>Denis Newbold, Stroud Water Research Center, 970 Spencer Road, Avondale, PA 19311. <newbold@stroudcenter.org>Anthony Aufdenkampe, Stroud Water Research Center, 970 Spencer Road, Avondale, PA 1931.1 <aufdenkampe@stroudcenter.org> Field Area:   White Clay Creek @ SWRC | Christina River BasinCopied from:Stroud Water Research Center (2014). "CZO Dataset: White Clay Creek - Stage, Streamflow / Discharge (1968-2014)." Retrieved 09 Nov 2017, from http://criticalzone.org/christina/data/dataset/2464/.NOTE: does not include data in this CZO Data listing that was from this site: WCC2154: White Clay Creek, west branch at Rt. 926, downstream side.In addition,  Aufdenkampe added an example Jupyter Notebook in Python (CZODisplaytoDataFrame_WCC-Flow.ipynb), to create a single concatenated data frame and export to a single CSV file (CRB_WCC_STAGEFLOW_from_df.csv). The full example can be found at https://github.com/aufdenkampe/EnviroDataScripts/tree/master/CZODisplayParsePlot.</p>
+</div><div class="sphinx-bs container pb-2 example-panels docutils">
 <div class="row docutils">
-<div class="d-flex col-lg-12 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-12 col-xs-12 p-2 docutils">
 <div class="card w-100 shadow docutils">
 <div class="card-header docutils">
 <blockquote>
@@ -166,31 +181,27 @@ The purpose of this template is to override (i.e. supress) the breadcrumbs that 
 </div>
 <div class="card-body text-left docutils">
 <blockquote>
-<div><p class="card-text"><span class="sphinx-bs badge badge-secondary">Denis Newbold</span>
-- Stroud Water Research Center
-(<a class="reference external" href="mailto:newbold&#37;&#52;&#48;stroudcenter&#46;org">contact</a>)</p>
-<p class="card-text"><a class="sphinx-bs badge badge-primary text-white reference external" href="http://www.hydroshare.org/user/2079/"><span>Sara Geleskie Damiano</span></a>
-- Stroud Water Research Center
-(<a class="reference external" href="mailto:sdamiano&#37;&#52;&#48;stroudcenter&#46;org">contact</a>)</p>
-<p class="card-text"><a class="sphinx-bs badge badge-primary text-white reference external" href="http://www.hydroshare.org/user/987/"><span>Anthony Aufdenkampe</span></a>
+<div><p class="card-text"><a class="sphinx-bs badge badge-primary text-white reference external" href="https://hydroshare.org/user/987/"><span>Anthony Aufdenkampe</span></a>
 - LimnoTech
 (<a class="reference external" href="mailto:aaufdenkampe&#37;&#52;&#48;limno&#46;com">contact</a>)</p>
-<p class="card-text"><a class="sphinx-bs badge badge-primary text-white reference external" href="http://www.hydroshare.org/user/1326/"><span>Charles Dow</span></a>
+<p class="card-text"><span class="sphinx-bs badge badge-secondary">Denis Newbold</span>
+- Stroud Water Research Center
+(<a class="reference external" href="mailto:newbold&#37;&#52;&#48;stroudcenter&#46;org">contact</a>)</p>
+<p class="card-text"><a class="sphinx-bs badge badge-primary text-white reference external" href="https://hydroshare.org/user/2079/"><span>Sara Geleskie Damiano</span></a>
+- Stroud Water Research Center
+(<a class="reference external" href="mailto:sdamiano&#37;&#52;&#48;stroudcenter&#46;org">contact</a>)</p>
+<p class="card-text"><a class="sphinx-bs badge badge-primary text-white reference external" href="https://hydroshare.org/user/1326/"><span>Charles Dow</span></a>
 -
 (<a class="reference external" href="mailto:cdow&#37;&#52;&#48;stroudcenter&#46;org">contact</a>)</p>
 </div></blockquote>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="sphinx-bs container pb-2 docutils">
-<div class="row docutils">
-<div class="d-flex col-lg-12 p-2 docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-12 col-xs-12 p-2 docutils">
 <div class="card w-100 shadow docutils">
 <div class="card-header docutils">
 <blockquote>
-<div><p class="card-text"><strong>Code Examples</strong></p>
+<div><p class="card-text"><strong>Source Code</strong></p>
 </div></blockquote>
 </div>
 <div class="card-body text-left docutils">
@@ -201,7 +212,6 @@ The purpose of this template is to override (i.e. supress) the breadcrumbs that 
 </ul>
 </div>
 </div></blockquote>
-</div>
 </div>
 </div>
 </div>

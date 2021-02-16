@@ -1,0 +1,1263 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Exploring overland flow routing with Landlab &mdash; BuildDocs version documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/language_data.js"></script>
+        <script src="../../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../../_static/copybutton.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html">
+          
+
+          
+            
+            <img src="../../../../../_static/cuahsi-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Galleries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">Python Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#research-examples">Research Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#reproducible-science-examples">Reproducible Science Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../R/index.html">R Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../R/index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">BuildDocs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          <!--
+The purpose of this template is to override (i.e. supress) the breadcrumbs that appear at the top of each page.
+-->
+
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<p><img alt="f3f824f6318045a39f267df9c246fe59" src="http://landlab.github.io/assets/Landlab-logo.png" /></p>
+<div class="section" id="Exploring-overland-flow-routing-with-Landlab">
+<h1>Exploring overland flow routing with Landlab<a class="headerlink" href="#Exploring-overland-flow-routing-with-Landlab" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="Objectives">
+<h2>Objectives<a class="headerlink" href="#Objectives" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Introduce the shallow water equation, modeling domains, model steps, and curriculum questions.</p></li>
+<li><p>Use Landlab to set up a comparative model experiment.</p></li>
+<li><p>Run Landlab flow routing components for different conditions.</p></li>
+<li><p>Explore flow sensitivity to model selection and parameter values using model outputs.</p></li>
+<li><p>Save results to a new HydroShare resource.</p></li>
+</ul>
+</div>
+<div class="section" id="About-this-notebook">
+<h2>About this notebook<a class="headerlink" href="#About-this-notebook" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="Data-Science-and-Cyberinfrastructure">
+<h3>Data Science and Cyberinfrastructure<a class="headerlink" href="#Data-Science-and-Cyberinfrastructure" title="Permalink to this headline">¶</a></h3>
+<p>This notebook is a computational narrative using the <a class="reference external" href="http://landlab.github.io">Landlab</a> Python-based modeling toolkit that allows scientists and students to build numerical models for earth surface processes. This notebook also utilizes the following open source research software libraries: <a class="reference external" href="http://www.numpy.org">NumPy</a>, <a class="reference external" href="https://matplotlib.org">Matplotlib</a>, <a class="reference external" href="https://pandas.pydata.org">Pandas</a>, and <a class="reference external" href="https://www.hydroshare.org">HydroShare</a>. The software environment is provided by
+the <a class="reference external" href="https://jupyter.cuahsi.org">CUAHSI JupyterHub server</a>.</p>
+<hr><p><a class="reference external" href="https://github.com/landlab/landlab/wiki/Tutorials">Click here for additional Landlab tutorials</a></p>
+<hr></div>
+<div class="section" id="How-to-use-this-notebook">
+<h3>How to use this notebook<a class="headerlink" href="#How-to-use-this-notebook" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="Navigation">
+<h4>Navigation<a class="headerlink" href="#Navigation" title="Permalink to this headline">¶</a></h4>
+<p>This notebook is made of text cells, including the cell you are reading now, and code cells. The order in which you run the cells matters. The notebook cells are generally designed to be run top to bottom.</p>
+<p>Code cells have the following characters to their left: * <code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">[</span> <span class="pre">]:</span></code> is a cell yet to be run. * <code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">[*]:</span></code> is a cell that is running. * <code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">[n]:</span></code> where <code class="docutils literal notranslate"><span class="pre">n</span></code> is an integer, is a cell that has run. The number indicates the sequence the cell was run, i.e. the first cell run is <code class="docutils literal notranslate"><span class="pre">n</span></code>=1.</p>
+<p>The code in a notebook is ran one cell at a time. Place your cursor in a code cell, hold down <code class="docutils literal notranslate"><span class="pre">shift</span></code> and then also press <code class="docutils literal notranslate"><span class="pre">enter</span></code>. You can even experiment with typing your own code into a cell and running it.</p>
+<p>Alternatively, you can run groups of cells by clicking <code class="docutils literal notranslate"><span class="pre">Cell</span></code> on the menu above and then selecting among the various run options. This is also where you can clear outputs from previous runs.</p>
+<p>You can also <code class="docutils literal notranslate"><span class="pre">shift</span></code> + <code class="docutils literal notranslate"><span class="pre">enter</span></code> in a text cell to advance your place in the notebook.</p>
+<p>See <a class="reference external" href="https://github.com/landlab/tutorials/blob/master/README.md">this page</a> for more instructions on how to use an interactive Jupyter notebook.</p>
+</div>
+<div class="section" id="Output">
+<h4>Output<a class="headerlink" href="#Output" title="Permalink to this headline">¶</a></h4>
+<p>Every time you run this notebook the model outputs you generate are saved in your personal user space in the virtual computer through Hydroshare. These outputs are available for you to plot and explore using the plotting functions. We will plot model output at the end of this tutorial.</p>
+<p>Your final results can be saved to Hydroshare as a resource (see section 9.0 below). Unwanted model output can be deleted at anytime from your space, including by running the final code block of this tutorial.</p>
+<p>If an error occurs, click on the upper menu bar item, <code class="docutils literal notranslate"><span class="pre">Kernel</span></code> and then select <code class="docutils literal notranslate"><span class="pre">Restart</span> <span class="pre">and</span> <span class="pre">Clear</span> <span class="pre">Outputs</span></code> in the drop down menu.</p>
+</div>
+</div>
+</div>
+<div class="section" id="1.0.-Introduction">
+<h2>1.0. Introduction<a class="headerlink" href="#1.0.-Introduction" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="1.1.-Theory">
+<h3>1.1. Theory<a class="headerlink" href="#1.1.-Theory" title="Permalink to this headline">¶</a></h3>
+<p>The 1-D Saint Venant equation for transient shallow water flow is in the core of most hydrodynamics models:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial Q}{\partial t} + \frac{\partial}{\partial x}\left(\frac{Q^2}{A_{xs}}\right) + gA_{xs} \frac{\partial (h+z)}{\partial x} + \frac{gn^2 \lvert{Q}\rvert Q}{R^{4/3}A_{xs}} = 0 \space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space(1)\]</div>
+<div class="line-block">
+<div class="line">where</div>
+<div class="line">    <span class="math notranslate nohighlight">\(Q = discharge \left[L^3{T^{-1}}\right]\)</span></div>
+<div class="line">    <span class="math notranslate nohighlight">\(t = time \left[T\right]\)</span></div>
+<div class="line">    <span class="math notranslate nohighlight">\(x = location \space in \space space \left[L\right]\)</span></div>
+<div class="line">    <span class="math notranslate nohighlight">\(g = acceleration \space due \space to \space gravity \left[L{T^{-2}}\right]\)</span></div>
+<div class="line">    <span class="math notranslate nohighlight">\(h = water \space depth \left[L\right]\)</span></div>
+<div class="line">    <span class="math notranslate nohighlight">\(z = bed \space elevation \left[L\right]\)</span></div>
+<div class="line">    <span class="math notranslate nohighlight">\(n = Manning's \space roughness \space coeffiecient \left[T{L^{{-1}/{3}}}\right]\)</span></div>
+<div class="line">    <span class="math notranslate nohighlight">\(R = hydraulic \space radius \left[L\right]\)</span></div>
+<div class="line">    <span class="math notranslate nohighlight">\(A_{xs} = cross-sectional \space area \left[L^2\right]\)</span></div>
+</div>
+<p>From left to right, the terms in Equation (1) represent local acceleration, convective acceleration, gradients of fluid pressure and bed elevation, and friction. Because this equation is difficult (i.e., almost impossible) to solve explicitly, approximations are commonly used. The simplest approximation, the Kinematic Wave model, only retains the friction term, making it the simplest approximation one can use. The Landlab <code class="docutils literal notranslate"><span class="pre">KinwaveImplicitOverlandFlow</span></code> component provides a 2-D locally implicit
+kinematic wave solution in which energy slope is assumed to be equal to the bed slope.</p>
+<p>The diffusive wave model developed from Equation (1) neglects the first two terms. The Landlab <code class="docutils literal notranslate"><span class="pre">OverlandFlow</span></code> component (Adams et al. 2017) adapts a 2D hydrodynamic algorithm similar to the diffusive approximation with negligible advection term (de Almeida et al., 2012) used in LISFLOOD-FP. The flow geometry is assumed to be rectangular and of constant flow width. The approximation used in <code class="docutils literal notranslate"><span class="pre">OverlandFlow</span></code> is more accurate but also more computationally expensive than the approximation used in
+<code class="docutils literal notranslate"><span class="pre">KinwaveImplicitOverlandFlow</span></code>.</p>
+<p>Click here for the OverlandFlow Component Users Manual: <a class="reference external" href="https://github.com/landlab/landlab/wiki/OverlandFlow-Component-Users-Manual">https://github.com/landlab/landlab/wiki/OverlandFlow-Component-Users-Manual</a></p>
+<p>This tutorial illustrates the use of both the <code class="docutils literal notranslate"><span class="pre">KinwaveImplicitOverlandFlow</span></code> and the <code class="docutils literal notranslate"><span class="pre">OverlandFlow</span></code> components to map overland flow depth across two modeling domains and plot a flow hydrograph at the outlet and several internal nodes. We will use two domains:</p>
+<ul class="simple">
+<li><p>Spring Creek watershed, CO, USA</p></li>
+<li><p>A synthetic landscape modeled with Landlab</p></li>
+</ul>
+<p>We will investigate the roles of watershed shape and runoff intensity and duration on the characteristics of hydrographs. Runoff is assumed to be generated at a spatially constant rate on the landscape and flows downhill, driving overland flow and a hydrograph at every location on the landscape.</p>
+<p><strong>Terms:</strong> runoff intensity, runoff duration, peak discharge, hydrograph time to peak, rising limb, falling limb.</p>
+</div>
+<div class="section" id="1.2.-Model-Domains">
+<h3>1.2. Model Domains<a class="headerlink" href="#1.2.-Model-Domains" title="Permalink to this headline">¶</a></h3>
+<p>The natural catchment used in this tutorial and studied in Adams et al. (2017) is the Spring Creek watershed, a steep 27 km<span class="math notranslate nohighlight">\(^2\)</span> watershed located in central Colorado. The digital elevation model (DEM) we will use has a resolution of 30 m. To clearly contrast landscape shape, this notebook uses a modeled “synthetic” landscape produced using a model developed in Landlab by coupling hillslope diffusion and stream-power erosion rules. The landscape evolution model was run on a 36
+km<span class="math notranslate nohighlight">\(^2\)</span> area represented by regular grids with a node spacing of 30 m.</p>
+<p>These watershed domains are available at the Landlab Github site and as Hydroshare resources, and will be imported as part of this exercise.</p>
+</div>
+<div class="section" id="1.3.-Steps-to-Explore-the-Model">
+<h3>1.3. Steps to Explore the Model<a class="headerlink" href="#1.3.-Steps-to-Explore-the-Model" title="Permalink to this headline">¶</a></h3>
+<p>We will run the two overland flow models for 6 hours. A storm begins at the onset of the simulation and lasts for 2 hours. We will visualize water depths across the watershed over the course of the simulation and plot hydrographs at the outlet and two internal nodes.</p>
+<p>In repeated model experiments you can investigate the influence of runoff intensity, runoff duration, and surface resistance on streamflow hydrographs. You can organize your approach by running the two models and saving results from each watershed domain before running the models for the other domain.</p>
+<p>Revisit the ‘How to use this notebook’ section at the top of the page as needed.</p>
+</div>
+<div class="section" id="1.4.-Questions-to-consider-before-running-this-notebook">
+<h3>1.4. Questions to consider before running this notebook<a class="headerlink" href="#1.4.-Questions-to-consider-before-running-this-notebook" title="Permalink to this headline">¶</a></h3>
+<p>We will focus on the hydrograph characteristics, time to peak, peak discharge, and hydrograph shape.</p>
+<ol class="arabic simple">
+<li><p>How do watershed shape and drainage area affect hydrograph characteristics?</p></li>
+<li><p>How does runoff intensity impact the time to peak and peak discharge across the channel network?</p></li>
+<li><p>How does runoff duration impact the time to peak and peak discharge across the channel network?</p></li>
+<li><p>How does surface roughness due to soil and land cover influence hydrograph peak discharge and shape?</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="2.0-Data-Science-&amp;-Cyberinfrastructure-Methods">
+<h2>2.0 Data Science &amp; Cyberinfrastructure Methods<a class="headerlink" href="#2.0-Data-Science-&-Cyberinfrastructure-Methods" title="Permalink to this headline">¶</a></h2>
+<p>Update or add libraries that are not installed on the CUAHSI JupyterHub server. At the time of publication, the Landlab library was dependent on a different numpy library than installed in the software environment. The code block below was added as an example of how to update a library to a new version and restart the notebook kernel. If this update is not needed, comment with a &lt;#&gt;. If other updates are needed, add them below.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># comment this out if this update is not needed</span>
+<span class="o">!</span>conda update -y numpy
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display_html</span>
+<span class="n">display_html</span><span class="p">(</span><span class="s2">&quot;&lt;script&gt;Jupyter.notebook.kernel.restart()&lt;/script&gt;&quot;</span><span class="p">,</span><span class="n">raw</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="2.1-Import-Landlab-components-and-additional-modules">
+<h3>2.1 Import Landlab components and additional modules<a class="headerlink" href="#2.1-Import-Landlab-components-and-additional-modules" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">landlab.components</span> <span class="kn">import</span> <span class="n">OverlandFlow</span>
+<span class="kn">from</span> <span class="nn">landlab.components</span> <span class="kn">import</span> <span class="n">KinwaveImplicitOverlandFlow</span>
+<span class="kn">from</span> <span class="nn">landlab.io</span> <span class="kn">import</span> <span class="n">read_esri_ascii</span>
+<span class="kn">from</span> <span class="nn">landlab</span> <span class="kn">import</span> <span class="n">imshow_grid</span>
+<span class="kn">from</span> <span class="nn">landlab.components.flow_accum</span> <span class="kn">import</span> <span class="n">flow_accumulation</span>
+<span class="kn">from</span> <span class="nn">landlab.components.flow_accum</span> <span class="kn">import</span> <span class="n">find_drainage_area_and_discharge</span>
+<span class="kn">from</span> <span class="nn">landlab.components.flow_accum</span> <span class="kn">import</span> <span class="n">FlowAccumulator</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="2.2-Import-standard,-plotting,-and-numeric-modules">
+<h3>2.2 Import standard, plotting, and numeric modules<a class="headerlink" href="#2.2-Import-standard,-plotting,-and-numeric-modules" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">copy</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.animation</span> <span class="k">as</span> <span class="nn">animation</span>
+<span class="kn">import</span> <span class="nn">matplotlib.image</span> <span class="k">as</span> <span class="nn">mgimg</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Set the environment to place plots in Jupyter cells.</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="2.3-Import-HydroShare-tools">
+<h3>2.3 Import HydroShare tools<a class="headerlink" href="#2.3-Import-HydroShare-tools" title="Permalink to this headline">¶</a></h3>
+<p>The results of the Geoprocessing steps below will be saved in the HydroShare environment using the <code class="docutils literal notranslate"><span class="pre">hydroshare</span></code> library. These are needed to import data from HydroShare and create new HydroShare resources with your results.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">hstools</span> <span class="kn">import</span> <span class="n">hydroshare</span>
+
+<span class="n">hs</span> <span class="o">=</span> <span class="n">hydroshare</span><span class="o">.</span><span class="n">hydroshare</span><span class="p">()</span>
+
+<span class="c1">#print(&#39;This is the list of folders in your directory of this HydroShare resource.&#39;)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="3.0-Landlab-Methods">
+<h2>3.0 Landlab Methods<a class="headerlink" href="#3.0-Landlab-Methods" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="3.1.-Use-Landlab-to-read-in-the-ASCII-DEM-and-set-boundary-conditions">
+<h3>3.1. Use Landlab to read in the ASCII DEM and set boundary conditions<a class="headerlink" href="#3.1.-Use-Landlab-to-read-in-the-ASCII-DEM-and-set-boundary-conditions" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Square Basin</span>
+<span class="n">watershed_dem_sq</span> <span class="o">=</span> <span class="s1">&#39;supporting_files/Square_TestBasin.asc&#39;</span>
+<span class="p">(</span><span class="n">rmg_sq</span><span class="p">,</span> <span class="n">z_sq</span><span class="p">)</span> <span class="o">=</span> <span class="n">read_esri_ascii</span><span class="p">(</span><span class="n">watershed_dem_sq</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;topographic__elevation&#39;</span><span class="p">)</span>
+<span class="n">rmg_sq</span><span class="o">.</span><span class="n">set_watershed_boundary_condition</span><span class="p">(</span><span class="n">z_sq</span><span class="p">)</span>
+
+<span class="c1"># Spring Creek Basin</span>
+<span class="n">watershed_dem_sc</span> <span class="o">=</span> <span class="s1">&#39;supporting_files/SpringCreek_DEM.asc&#39;</span>
+<span class="p">(</span><span class="n">rmg_sc</span><span class="p">,</span> <span class="n">z_sc</span><span class="p">)</span> <span class="o">=</span> <span class="n">read_esri_ascii</span><span class="p">(</span><span class="n">watershed_dem_sc</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;topographic__elevation&#39;</span><span class="p">)</span>
+<span class="n">rmg_sc</span><span class="o">.</span><span class="n">set_watershed_boundary_condition</span><span class="p">(</span><span class="n">z_sc</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="3.2.-Use-Landlab-to-calculate-flow-accumulation-and-drainage-area">
+<h3>3.2. Use Landlab to calculate flow accumulation and drainage area<a class="headerlink" href="#3.2.-Use-Landlab-to-calculate-flow-accumulation-and-drainage-area" title="Permalink to this headline">¶</a></h3>
+<p>Drainage areas derived in this step will be used in selecting internal points for plotting hydrographs.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Square Basin</span>
+<span class="n">fa_sq</span> <span class="o">=</span> <span class="n">FlowAccumulator</span><span class="p">(</span><span class="n">rmg_sq</span><span class="p">)</span>
+<span class="n">fa_sq</span><span class="o">.</span><span class="n">run_one_step</span><span class="p">()</span>
+<span class="p">(</span><span class="n">da_sq</span><span class="p">,</span> <span class="n">q_sq</span><span class="p">)</span> <span class="o">=</span> <span class="n">fa_sq</span><span class="o">.</span><span class="n">accumulate_flow</span><span class="p">()</span>
+
+<span class="c1"># Spring Creek</span>
+<span class="n">fa_sc</span> <span class="o">=</span> <span class="n">FlowAccumulator</span><span class="p">(</span><span class="n">rmg_sc</span><span class="p">)</span>
+<span class="n">fa_sc</span><span class="o">.</span><span class="n">run_one_step</span><span class="p">()</span>
+<span class="p">(</span><span class="n">da_sc</span><span class="p">,</span> <span class="n">q_sc</span><span class="p">)</span> <span class="o">=</span> <span class="n">fa_sc</span><span class="o">.</span><span class="n">accumulate_flow</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="3.3.-List-and-select-the-nodes-with-a-drainage-area-greater-than-a-threshold">
+<h3>3.3. List and select the nodes with a drainage area greater than a threshold<a class="headerlink" href="#3.3.-List-and-select-the-nodes-with-a-drainage-area-greater-than-a-threshold" title="Permalink to this headline">¶</a></h3>
+<p>Below we show how you can identify internal nodes in the two domains for plotting streamflow hydrographs. We selected nodes using drainge area thresholds such that the watershed areas above midstream and upstream nodes of the two watersheds are close to each other. This gives us the opportunity to compare hydrographs in relation to watershed shape and watershed relief above each node, given the similar watershed sizes.</p>
+<p>The midstream and upstream node drainage area thresholds can be identified by drainage area ranges in km<span class="math notranslate nohighlight">\(^2\)</span>. The range used to identify a midstream location should be larger than the range used to identify an upstream location. These internal nodes can be identified by trial using different drainage area values, and plotting the locations selected. After we select the drainage area ranges we will print the node IDs, drainge areas, and elevations of the locations we select and map the
+locations on the elevation map of the watershed. To continue your project with the Square domain you can skip the steps in 3.3.2 that pertains to Spring Creek and move to 4.0. After modeling flows in the Square domain you will need to come back to 3.3.2. and identify the nodes you would like to include for hydrograph analysis in Spring Creek.</p>
+<div class="section" id="3.3.1-Square-Basin:-a)-set-thresholds-and-b)-select-output-nodes">
+<h4>3.3.1 Square Basin: a) set thresholds and b) select output nodes<a class="headerlink" href="#3.3.1-Square-Basin:-a)-set-thresholds-and-b)-select-output-nodes" title="Permalink to this headline">¶</a></h4>
+<p>We will identify the nodes for the outlet, midstream, and upstream locations for plotting hydrographs using drainage area thresholds for the latter two. Code is written to set the outlet at the node with the largest drainage area. Below we will first identify the outlet node ID, its elevation and drainage area.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">outlet_node_to_sample_sq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">rmg_sq</span><span class="o">.</span><span class="n">at_node</span><span class="p">[</span><span class="s1">&#39;drainage_area&#39;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Outlet Node = &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">outlet_node_to_sample_sq</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;; Drainage Area = &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">da_sq</span><span class="p">[</span><span class="n">outlet_node_to_sample_sq</span><span class="p">]</span> <span class="o">/</span> <span class="mi">1000000</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; km^2; Elev = &#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">z_sq</span><span class="p">[</span><span class="n">outlet_node_to_sample_sq</span><span class="p">],</span><span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39; m&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>The midstream and upstream node drainge area thresholds can be identified by drainge area ranges in km<span class="math notranslate nohighlight">\(^2\)</span>. The range used to identify a midstream location should be larger than the range used to identify an upstream location. These internal nodes can be identified by trial using different drainge area values, and plotting the locations selected. After we select the drainage area ranges we will print the node IDs, drainge areas, and elevations of the locations we select and map the
+locations on the elevation map of the watershed.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Set drainge area threshold ranges in km^2 to identify nodes that fall into these ranges.</span>
+<span class="c1"># Values can be changed to set different locations on the landscape for plotting hydrographs.</span>
+<span class="n">midstream_da_upperbound</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">midstream_da_lowerbound</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">upstream_da_upperbound</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">upstream_da_lowerbound</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">midstream_node_to_sample_sq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">rmg_sq</span><span class="o">.</span><span class="n">at_node</span><span class="p">[</span><span class="s1">&#39;drainage_area&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">midstream_da_lowerbound</span> <span class="o">*</span> <span class="mi">1000000</span><span class="p">,</span> <span class="n">rmg_sq</span><span class="o">.</span><span class="n">at_node</span><span class="p">[</span><span class="s1">&#39;drainage_area&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">midstream_da_upperbound</span> <span class="o">*</span> <span class="mi">1000000</span><span class="p">))[</span><span class="mi">0</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">upstream_node_to_sample_sq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">rmg_sq</span><span class="o">.</span><span class="n">at_node</span><span class="p">[</span><span class="s1">&#39;drainage_area&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">upstream_da_lowerbound</span> <span class="o">*</span> <span class="mi">1000000</span><span class="p">,</span> <span class="n">rmg_sq</span><span class="o">.</span><span class="n">at_node</span><span class="p">[</span><span class="s1">&#39;drainage_area&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">upstream_da_upperbound</span> <span class="o">*</span> <span class="mi">1000000</span><span class="p">))[</span><span class="mi">0</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Outlet Node = &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">outlet_node_to_sample_sq</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;; Drainage Area= &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">da_sq</span><span class="p">[</span><span class="n">outlet_node_to_sample_sq</span><span class="p">]</span> <span class="o">/</span> <span class="mi">1000000</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; km^2; Elev = &#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">z_sq</span><span class="p">[</span><span class="n">outlet_node_to_sample_sq</span><span class="p">],</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39; m&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Midstream Node = &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">midstream_node_to_sample_sq</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;; Drainage Area= &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">da_sq</span><span class="p">[</span><span class="n">midstream_node_to_sample_sq</span><span class="p">]</span> <span class="o">/</span> <span class="mi">1000000</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; km^2; Elev = &#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">z_sq</span><span class="p">[</span><span class="n">midstream_node_to_sample_sq</span><span class="p">],</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39; m&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Upstream Node = &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">upstream_node_to_sample_sq</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;; Drainage Area= &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">da_sq</span><span class="p">[</span><span class="n">upstream_node_to_sample_sq</span><span class="p">]</span> <span class="o">/</span> <span class="mi">1000000</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; km^2; Elev = &#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">z_sq</span><span class="p">[</span><span class="n">upstream_node_to_sample_sq</span><span class="p">],</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39; m&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Plot Square Basin</span>
+
+<span class="c1"># set up the figure</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># plot the DEM</span>
+<span class="n">imshow_grid</span><span class="p">(</span><span class="n">rmg_sq</span><span class="p">,</span> <span class="n">z_sq</span><span class="p">,</span> <span class="n">plot_name</span><span class="o">=</span><span class="s1">&#39;Square&#39;</span><span class="p">,</span> <span class="n">color_for_closed</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">colorbar_label</span><span class="o">=</span><span class="s1">&#39;Elevation (m)&#39;</span><span class="p">)</span>
+
+<span class="c1"># plot the sample nodes</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rmg_sq</span><span class="o">.</span><span class="n">node_x</span><span class="p">[</span><span class="n">outlet_node_to_sample_sq</span><span class="p">],</span> <span class="n">rmg_sq</span><span class="o">.</span><span class="n">node_y</span><span class="p">[</span><span class="n">outlet_node_to_sample_sq</span><span class="p">],</span> <span class="s1">&#39;ro&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;outlet&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rmg_sq</span><span class="o">.</span><span class="n">node_x</span><span class="p">[</span><span class="n">midstream_node_to_sample_sq</span><span class="p">],</span> <span class="n">rmg_sq</span><span class="o">.</span><span class="n">node_y</span><span class="p">[</span><span class="n">midstream_node_to_sample_sq</span><span class="p">],</span> <span class="s1">&#39;go&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;midstream&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rmg_sq</span><span class="o">.</span><span class="n">node_x</span><span class="p">[</span><span class="n">upstream_node_to_sample_sq</span><span class="p">],</span> <span class="n">rmg_sq</span><span class="o">.</span><span class="n">node_y</span><span class="p">[</span><span class="n">upstream_node_to_sample_sq</span><span class="p">],</span> <span class="s1">&#39;bo&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;upstream&#39;</span><span class="p">)</span>
+
+<span class="n">_</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="3.3.2-Spring-Creek:-set-thresholds-and-select-the-output-nodes-listed-by-threshold">
+<h4>3.3.2 Spring Creek: set thresholds and select the output nodes listed by threshold<a class="headerlink" href="#3.3.2-Spring-Creek:-set-thresholds-and-select-the-output-nodes-listed-by-threshold" title="Permalink to this headline">¶</a></h4>
+<p>We will identify the nodes for outlet, midstream, and upstream locations for plotting hydrographs using drainge area thresholds for the latter two. Code is written to set the outlet at the node with the largest drainage area. Below we will first identify the outlet node ID, its elevation and drainage area.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">outlet_node_to_sample_sc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">rmg_sc</span><span class="o">.</span><span class="n">at_node</span><span class="p">[</span><span class="s1">&#39;drainage_area&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Outlet Node = &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">outlet_node_to_sample_sc</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;; Drainage Area= &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">da_sc</span><span class="p">[</span><span class="n">outlet_node_to_sample_sc</span><span class="p">]</span> <span class="o">/</span> <span class="mi">1000000</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; km^2; Elev = &#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">z_sc</span><span class="p">[</span><span class="n">outlet_node_to_sample_sc</span><span class="p">],</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39; m&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>The midstream and upstream node drainge area thresholds can be identified by drainge area ranges in km<span class="math notranslate nohighlight">\(^2\)</span>. The range used to identify a midstream location should be larger than the range used to identify an upstream location. These internal nodes can be identified by trial using different drainge area values, and plotting the locations selected. After we select the drainage area ranges we will print the node IDs, drainge areas, and elevations of the locations we select and map the
+locations on the elevation map of the watershed.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># These values can be change to set drainage area thresholds in km^2</span>
+<span class="n">midstream_da_upperbound</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">midstream_da_lowerbound</span> <span class="o">=</span> <span class="mf">17.5</span>
+<span class="n">upstream_da_upperbound</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">upstream_da_lowerbound</span> <span class="o">=</span> <span class="mf">3.2</span>
+
+<span class="c1"># Identify sample nodes.</span>
+<span class="n">outlet_node_to_sample_sc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">rmg_sc</span><span class="o">.</span><span class="n">at_node</span><span class="p">[</span><span class="s1">&#39;drainage_area&#39;</span><span class="p">])</span>
+<span class="n">midstream_node_to_sample_sc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">rmg_sc</span><span class="o">.</span><span class="n">at_node</span><span class="p">[</span><span class="s1">&#39;drainage_area&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">midstream_da_lowerbound</span> <span class="o">*</span> <span class="mi">1000000</span><span class="p">,</span> <span class="n">rmg_sc</span><span class="o">.</span><span class="n">at_node</span><span class="p">[</span><span class="s1">&#39;drainage_area&#39;</span><span class="p">]</span><span class="o">&lt;</span><span class="n">midstream_da_upperbound</span><span class="o">*</span><span class="mi">1000000</span><span class="p">))[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">upstream_node_to_sample_sc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">rmg_sc</span><span class="o">.</span><span class="n">at_node</span><span class="p">[</span><span class="s1">&#39;drainage_area&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">upstream_da_lowerbound</span><span class="o">*</span><span class="mi">1000000</span><span class="p">,</span> <span class="n">rmg_sc</span><span class="o">.</span><span class="n">at_node</span><span class="p">[</span><span class="s1">&#39;drainage_area&#39;</span><span class="p">]</span><span class="o">&lt;</span><span class="n">upstream_da_upperbound</span><span class="o">*</span><span class="mi">1000000</span><span class="p">))[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Outlet Node = &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">outlet_node_to_sample_sc</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;; Drainage Area= &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">da_sc</span><span class="p">[</span><span class="n">outlet_node_to_sample_sc</span><span class="p">]</span> <span class="o">/</span> <span class="mi">1000000</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; km^2; Elev = &#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">z_sc</span><span class="p">[</span><span class="n">outlet_node_to_sample_sc</span><span class="p">],</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39; m&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Midstream Node = &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">midstream_node_to_sample_sc</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;; Drainage Area= &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">da_sc</span><span class="p">[</span><span class="n">midstream_node_to_sample_sc</span><span class="p">]</span> <span class="o">/</span> <span class="mi">1000000</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; km^2; Elev = &#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">z_sc</span><span class="p">[</span><span class="n">midstream_node_to_sample_sc</span><span class="p">],</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39; m&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Upstream Node = &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">upstream_node_to_sample_sc</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;; Drainage Area= &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">da_sc</span><span class="p">[</span><span class="n">upstream_node_to_sample_sc</span><span class="p">]</span> <span class="o">/</span> <span class="mi">1000000</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; km^2; Elev = &#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">z_sc</span><span class="p">[</span><span class="n">upstream_node_to_sample_sc</span><span class="p">],</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39; m&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1">## Plot Spring Creek</span>
+
+<span class="c1"># Set up the figure.</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Plot the DEM.</span>
+<span class="n">imshow_grid</span><span class="p">(</span><span class="n">rmg_sc</span><span class="p">,</span> <span class="n">z_sc</span><span class="p">,</span> <span class="n">plot_name</span><span class="o">=</span><span class="s1">&#39;Spring Creek&#39;</span><span class="p">,</span> <span class="n">var_name</span><span class="o">=</span><span class="s1">&#39;Elevation&#39;</span><span class="p">,</span> <span class="n">var_units</span><span class="o">=</span><span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="n">grid_units</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">),</span>
+            <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;terrain&#39;</span><span class="p">,</span> <span class="n">limits</span><span class="o">=</span><span class="p">(</span><span class="mi">1875</span><span class="p">,</span> <span class="mi">2615</span><span class="p">),</span> <span class="n">color_for_closed</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s2">&quot;white&quot;</span><span class="p">)</span>
+
+<span class="c1"># Plot the sample nodes.</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rmg_sc</span><span class="o">.</span><span class="n">node_x</span><span class="p">[</span><span class="n">outlet_node_to_sample_sc</span><span class="p">],</span> <span class="n">rmg_sc</span><span class="o">.</span><span class="n">node_y</span><span class="p">[</span><span class="n">outlet_node_to_sample_sc</span><span class="p">],</span> <span class="s1">&#39;ro&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;outlet&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rmg_sc</span><span class="o">.</span><span class="n">node_x</span><span class="p">[</span><span class="n">midstream_node_to_sample_sc</span><span class="p">],</span> <span class="n">rmg_sc</span><span class="o">.</span><span class="n">node_y</span><span class="p">[</span><span class="n">midstream_node_to_sample_sc</span><span class="p">],</span> <span class="s1">&#39;go&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;midstream&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rmg_sc</span><span class="o">.</span><span class="n">node_x</span><span class="p">[</span><span class="n">upstream_node_to_sample_sc</span><span class="p">],</span> <span class="n">rmg_sc</span><span class="o">.</span><span class="n">node_y</span><span class="p">[</span><span class="n">upstream_node_to_sample_sc</span><span class="p">],</span> <span class="s1">&#39;bo&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;upstream&#39;</span><span class="p">)</span>
+
+<span class="n">_</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower right&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr></div>
+</div>
+</div>
+<div class="section" id="4.0.-Make-Model-Decisions">
+<h2>4.0. Make Model Decisions<a class="headerlink" href="#4.0.-Make-Model-Decisions" title="Permalink to this headline">¶</a></h2>
+<p>We used the following runoff categories for this exercise, which can be changed by the user: * <code class="docutils literal notranslate"><span class="pre">Base</span></code> has an intensity of 5.0 mm/hr, with a duration of 2 hr. * <code class="docutils literal notranslate"><span class="pre">HigherIntensity</span></code> has an intensity of 10.0 mm/hr, with a duration of 2 hr. * <code class="docutils literal notranslate"><span class="pre">LongerDuration</span></code> has an intensity of 5.0 mm/hr, with a duration of 4 hr. Longer duration is hardcoded as twice the storm duration of the base case. However it can be changed.</p>
+<p>Below you will indicate the domain, storm category, and algorithm you would like to use. You can change the runoff generation intesity and duration. Note that time is given in hours, and the model is run in <em>seconds</em></p>
+<p><strong>Change your model with the options below</strong></p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">basin_flag</span> <span class="o">=</span> <span class="s1">&#39;Spring Creek&#39;</span>      <span class="c1"># &#39;Square&#39; or &#39;Spring Creek&#39;</span>
+<span class="n">storm_flag</span> <span class="o">=</span> <span class="s1">&#39;HigherIntensity&#39;</span>   <span class="c1"># &#39;Base&#39; or&#39;HigherIntensity&#39; or &#39;LongerDuration&#39;</span>
+<span class="n">routing_method</span> <span class="o">=</span> <span class="s1">&#39;KinwaveImplicitOverlandFlow&#39;</span>  <span class="c1"># use &#39;OverlandFlow&#39; OR &#39;KinwaveImplicitOverlandFlow&#39;</span>
+</pre></div>
+</div>
+</div>
+<p>Advanced users only: if you know what you are doing, change the options below.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">image_save</span> <span class="o">=</span> <span class="mi">1</span>                  <span class="c1"># 1: save image; 0: don&#39;t save</span>
+<span class="n">hours</span> <span class="o">=</span> <span class="mi">6</span>                       <span class="c1"># hours of model run time</span>
+<span class="n">Number_frames</span> <span class="o">=</span> <span class="mi">6</span>               <span class="c1"># number of frames to plot</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mf">0.03</span>                        <span class="c1"># Manning&#39;s roughness coefficient, (s/m^(1/3))</span>
+<span class="n">Base_runoff_rate</span> <span class="o">=</span> <span class="mi">10</span>           <span class="c1"># Base runoff rate (mm/h)</span>
+<span class="n">HigherIntesity_runoff_rate</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1"># High intensity runoff rate (mm/h)</span>
+<span class="n">Storm_duration</span> <span class="o">=</span> <span class="mi">2</span>              <span class="c1"># Storm duration (hours)</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mi">600</span>                        <span class="c1"># time step for `KinwaveImplicitOverlandFlow`, (s) [i.e., 10 minutes]</span>
+</pre></div>
+</div>
+</div>
+<hr></div>
+<div class="section" id="5.0-Model-Computations">
+<h2>5.0 Model Computations<a class="headerlink" href="#5.0-Model-Computations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="5.1.-Initialize-model-run-time-and-output-variables-used-for-plotting-and-animation">
+<h3>5.1. Initialize model run time and output variables used for plotting and animation<a class="headerlink" href="#5.1.-Initialize-model-run-time-and-output-variables-used-for-plotting-and-animation" title="Permalink to this headline">¶</a></h3>
+<p>The cell below is designed to set up the model with the decisions made in the cell above. Do not modify the cell unless necessary.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Convert time.</span>
+<span class="n">elapsed_time</span> <span class="o">=</span> <span class="mf">1.0</span>             <span class="c1"># seconds</span>
+<span class="n">model_run_time</span> <span class="o">=</span> <span class="n">hours</span> <span class="o">*</span> <span class="mi">3600</span>  <span class="c1"># converted to seconds</span>
+
+<span class="c1"># Set up the number of frames to be recorded for creating the animation.</span>
+<span class="n">ani_inc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">hours</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">true_divide</span><span class="p">(</span><span class="n">hours</span><span class="p">,</span> <span class="n">Number_frames</span><span class="p">))</span>  <span class="c1"># list of timesteps for animation</span>
+<span class="n">snap</span> <span class="o">=</span> <span class="mi">0</span>   <span class="c1"># first snapshot for animation</span>
+
+<span class="c1"># Create lists for saving data.</span>
+<span class="n">discharge_at_outlet</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">discharge_upstream</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">discharge_midstream</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">hydrograph_time</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">if</span> <span class="n">basin_flag</span> <span class="o">==</span> <span class="s1">&#39;Square&#39;</span><span class="p">:</span>
+    <span class="c1">#watershed_dem = &#39;Square_TestBasin.asc&#39;</span>
+    <span class="n">outlet_node_to_sample</span> <span class="o">=</span> <span class="n">outlet_node_to_sample_sq</span>
+    <span class="n">midstream_node_to_sample</span> <span class="o">=</span> <span class="n">midstream_node_to_sample_sq</span>
+    <span class="n">upstream_node_to_sample</span> <span class="o">=</span> <span class="n">upstream_node_to_sample_sq</span>
+
+    <span class="c1"># Read in the DEM given the filename from above.</span>
+    <span class="p">(</span><span class="n">rmg</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="o">=</span> <span class="n">read_esri_ascii</span><span class="p">(</span><span class="n">watershed_dem_sq</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;topographic__elevation&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Set initial fields.</span>
+    <span class="n">rmg</span><span class="p">[</span><span class="s1">&#39;node&#39;</span><span class="p">][</span><span class="s1">&#39;surface_water__discharge&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">rmg</span><span class="o">.</span><span class="n">number_of_nodes</span><span class="p">)</span>
+    <span class="n">rmg_sq</span><span class="o">.</span><span class="n">set_watershed_boundary_condition_outlet_id</span><span class="p">(</span><span class="n">outlet_node_to_sample_sq</span><span class="p">,</span> <span class="n">z_sq</span><span class="p">,</span> <span class="o">-</span><span class="mf">9999.</span><span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1">#watershed_dem = &#39;SpringCreek_DEM.asc&#39;</span>
+    <span class="n">outlet_node_to_sample</span> <span class="o">=</span> <span class="n">outlet_node_to_sample_sc</span>
+    <span class="n">midstream_node_to_sample</span> <span class="o">=</span> <span class="n">midstream_node_to_sample_sc</span>
+    <span class="n">upstream_node_to_sample</span> <span class="o">=</span> <span class="n">upstream_node_to_sample_sc</span>
+
+    <span class="c1"># Read in the DEM given the filename from above.</span>
+    <span class="p">(</span><span class="n">rmg</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="o">=</span> <span class="n">read_esri_ascii</span><span class="p">(</span><span class="n">watershed_dem_sc</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;topographic__elevation&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Set initial fields.</span>
+    <span class="n">rmg</span><span class="p">[</span><span class="s1">&#39;node&#39;</span><span class="p">][</span><span class="s1">&#39;surface_water__discharge&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">rmg</span><span class="o">.</span><span class="n">number_of_nodes</span><span class="p">)</span>
+
+    <span class="c1"># Set boundary coditions on the grid.</span>
+    <span class="n">rmg</span><span class="o">.</span><span class="n">set_watershed_boundary_condition</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+
+<span class="c1"># Instantiate OverlandFlow object.</span>
+<span class="k">if</span> <span class="n">routing_method</span> <span class="o">==</span> <span class="s1">&#39;OverlandFlow&#39;</span><span class="p">:</span>
+    <span class="n">of</span> <span class="o">=</span> <span class="n">OverlandFlow</span><span class="p">(</span><span class="n">rmg</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span> <span class="n">mannings_n</span><span class="o">=</span><span class="n">n</span><span class="p">,</span> <span class="n">steep_slopes</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">kw</span> <span class="o">=</span> <span class="n">KinwaveImplicitOverlandFlow</span><span class="p">(</span><span class="n">rmg</span><span class="p">,</span> <span class="n">runoff_rate</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">roughness</span><span class="o">=</span><span class="n">n</span><span class="p">,</span> <span class="n">depth_exp</span><span class="o">=</span><span class="mi">5</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># Assign storm conditions based on flag in code cell above.</span>
+<span class="k">if</span> <span class="n">storm_flag</span> <span class="o">==</span> <span class="s1">&#39;Base&#39;</span><span class="p">:</span>
+    <span class="n">runoff_mmhr</span> <span class="o">=</span> <span class="n">Base_runoff_rate</span>
+    <span class="n">runoff_ms</span> <span class="o">=</span> <span class="n">runoff_mmhr</span> <span class="o">*</span> <span class="p">(</span><span class="mf">2.77778</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**-</span><span class="mi">7</span><span class="p">)</span>
+    <span class="n">storm_duration</span> <span class="o">=</span> <span class="n">Storm_duration</span> <span class="o">*</span> <span class="mf">3600.</span>
+<span class="k">elif</span> <span class="n">storm_flag</span> <span class="o">==</span> <span class="s1">&#39;HigherIntensity&#39;</span><span class="p">:</span>
+    <span class="n">runoff_mmhr</span> <span class="o">=</span> <span class="n">HigherIntesity_runoff_rate</span>
+    <span class="n">runoff_ms</span> <span class="o">=</span> <span class="n">runoff_mmhr</span> <span class="o">*</span> <span class="p">(</span><span class="mf">2.77778</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**-</span><span class="mi">7</span><span class="p">)</span>
+    <span class="n">storm_duration</span> <span class="o">=</span> <span class="n">Storm_duration</span> <span class="o">*</span> <span class="mf">3600.</span>
+<span class="k">elif</span> <span class="n">storm_flag</span> <span class="o">==</span> <span class="s1">&#39;LongerDuration&#39;</span><span class="p">:</span>
+    <span class="n">runoff_mmhr</span> <span class="o">=</span> <span class="n">Base_runoff_rate</span>
+    <span class="n">runoff_ms</span> <span class="o">=</span> <span class="n">runoff_mmhr</span> <span class="o">*</span> <span class="p">(</span><span class="mf">2.77778</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**-</span><span class="mi">7</span><span class="p">)</span>
+    <span class="n">storm_duration</span> <span class="o">=</span> <span class="n">Storm_duration</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="mf">3600.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="5.2.-Run-Overland-Flow-Model">
+<h3>5.2. Run Overland Flow Model<a class="headerlink" href="#5.2.-Run-Overland-Flow-Model" title="Permalink to this headline">¶</a></h3>
+<p>For each timestep, discharge is calculated at each node. Using the depth slope product, shear stress is calculated at every node. Outputs for each node include: water depth, discharge and shear stress values through time at every point in the input grid. Read more on the <a class="reference external" href="https://landlab.readthedocs.io/en/release/landlab.components.overland_flow.html">Landlab component description</a> by Jordan Adams.</p>
+<p>This make take up to 10 minutes to run for a six hour storm. The elapsed time (the simulated time, not run time) will print immediately below the code cell.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">animate_fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">animation_file_name</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">basin_flag</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">storm_flag</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">routing_method</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.mp4&#39;</span>
+<span class="n">writer</span> <span class="o">=</span> <span class="n">animation</span><span class="o">.</span><span class="n">FFMpegWriter</span><span class="p">(</span><span class="n">fps</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">writer</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">animate_fig</span><span class="p">,</span> <span class="s1">&#39;animation.mp4&#39;</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="n">elapsed_time</span> <span class="o">&lt;</span> <span class="n">model_run_time</span><span class="p">:</span>
+    <span class="c1"># Set the adaptive time step.</span>
+    <span class="k">if</span> <span class="n">routing_method</span> <span class="o">==</span> <span class="s1">&#39;OverlandFlow&#39;</span><span class="p">:</span>
+        <span class="n">of</span><span class="o">.</span><span class="n">dt</span> <span class="o">=</span> <span class="n">of</span><span class="o">.</span><span class="n">calc_time_step</span><span class="p">()</span>
+
+    <span class="c1"># The storm starts when the model starts. While the elapsed time is less</span>
+    <span class="c1"># than the storm duration, we add water to the system as runoff.</span>
+    <span class="k">if</span> <span class="n">routing_method</span> <span class="o">==</span> <span class="s1">&#39;OverlandFlow&#39;</span><span class="p">:</span>
+
+        <span class="k">if</span> <span class="n">elapsed_time</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">storm_duration</span><span class="p">):</span>
+            <span class="n">of</span><span class="o">.</span><span class="n">rainfall_intensity</span> <span class="o">=</span>  <span class="n">runoff_ms</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># elapsed time exceeds the storm duration, rainfall ceases.</span>
+            <span class="n">of</span><span class="o">.</span><span class="n">rainfall_intensity</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+    <span class="k">if</span> <span class="n">routing_method</span> <span class="o">==</span> <span class="s1">&#39;OverlandFlow&#39;</span><span class="p">:</span>
+        <span class="n">of</span><span class="o">.</span><span class="n">overland_flow</span><span class="p">()</span> <span class="c1"># Generating overland flow based on the deAlmeida solution.</span>
+        <span class="n">rmg</span><span class="o">.</span><span class="n">at_node</span><span class="p">[</span><span class="s1">&#39;surface_water__discharge&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">of</span><span class="o">.</span><span class="n">discharge_mapper</span><span class="p">(</span><span class="n">of</span><span class="o">.</span><span class="n">q</span><span class="p">,</span> <span class="n">convert_to_volume</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">elapsed_time</span> <span class="o">&lt;</span> <span class="n">storm_duration</span><span class="p">:</span>
+            <span class="n">kw</span><span class="o">.</span><span class="n">run_one_step</span><span class="p">(</span><span class="n">dt</span><span class="p">,</span> <span class="n">current_time</span> <span class="o">=</span> <span class="n">elapsed_time</span><span class="p">,</span> <span class="n">runoff_rate</span><span class="o">=</span><span class="n">runoff_ms</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">kw</span><span class="o">.</span><span class="n">run_one_step</span><span class="p">(</span><span class="n">dt</span><span class="p">,</span> <span class="n">current_time</span> <span class="o">=</span> <span class="n">elapsed_time</span><span class="p">,</span> <span class="n">runoff_rate</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">routing_method</span> <span class="o">==</span> <span class="s1">&#39;OverlandFlow&#39;</span><span class="p">:</span>
+        <span class="n">discharge_at_outlet</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rmg</span><span class="o">.</span><span class="n">at_node</span><span class="p">[</span><span class="s1">&#39;surface_water__discharge&#39;</span><span class="p">][</span><span class="n">outlet_node_to_sample</span><span class="p">])</span>
+        <span class="n">discharge_midstream</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rmg</span><span class="o">.</span><span class="n">at_node</span><span class="p">[</span><span class="s1">&#39;surface_water__discharge&#39;</span><span class="p">][</span><span class="n">midstream_node_to_sample</span><span class="p">])</span>
+        <span class="n">discharge_upstream</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rmg</span><span class="o">.</span><span class="n">at_node</span><span class="p">[</span><span class="s1">&#39;surface_water__discharge&#39;</span><span class="p">][</span><span class="n">upstream_node_to_sample</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">discharge_at_outlet</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rmg</span><span class="o">.</span><span class="n">at_node</span><span class="p">[</span><span class="s1">&#39;surface_water_inflow__discharge&#39;</span><span class="p">][</span><span class="n">outlet_node_to_sample</span><span class="p">])</span>
+        <span class="n">discharge_midstream</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rmg</span><span class="o">.</span><span class="n">at_node</span><span class="p">[</span><span class="s1">&#39;surface_water_inflow__discharge&#39;</span><span class="p">][</span><span class="n">midstream_node_to_sample</span><span class="p">])</span>
+        <span class="n">discharge_upstream</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rmg</span><span class="o">.</span><span class="n">at_node</span><span class="p">[</span><span class="s1">&#39;surface_water_inflow__discharge&#39;</span><span class="p">][</span><span class="n">upstream_node_to_sample</span><span class="p">])</span>
+
+    <span class="c1"># Append time and discharge to their lists to save data and for plotting.</span>
+    <span class="n">hydrograph_time</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">elapsed_time</span> <span class="o">/</span> <span class="mi">3600</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span> <span class="c1"># saved in hours</span>
+
+    <span class="c1"># Output time every now and then so that you know the code is actually running</span>
+    <span class="c1"># each time loop a new image is mapped. This sequence will build the animation.</span>
+
+    <span class="k">if</span> <span class="n">snap</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">ani_inc</span><span class="p">):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">elapsed_time</span> <span class="o">/</span> <span class="mi">3600</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">ani_inc</span><span class="p">[</span><span class="n">snap</span><span class="p">]:</span>
+
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;elapsed time = &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">elapsed_time</span> <span class="o">/</span> <span class="mi">3600</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39; hours&#39;</span><span class="p">)</span>
+
+            <span class="n">imshow_grid</span><span class="p">(</span><span class="n">rmg</span><span class="p">,</span> <span class="s1">&#39;surface_water__depth&#39;</span><span class="p">,</span> <span class="n">colorbar_label</span><span class="o">=</span><span class="s1">&#39;Depth (m)&#39;</span><span class="p">,</span>
+                        <span class="n">plot_name</span><span class="o">=</span><span class="s1">&#39;Surface Water Depth&#39;</span><span class="p">,</span> <span class="n">var_name</span><span class="o">=</span><span class="s1">&#39;Water Depth&#39;</span><span class="p">,</span>
+                        <span class="n">var_units</span><span class="o">=</span><span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="n">grid_units</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">,</span>
+                        <span class="n">limits</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> hours&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">elapsed_time</span> <span class="o">/</span> <span class="mi">3600</span><span class="p">,</span> <span class="mi">2</span><span class="p">))),</span>
+                      <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">image_save</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">basin_flag</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">storm_flag</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">routing_method</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ani_inc</span><span class="p">[</span><span class="n">snap</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39;hr_map.png&#39;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">2500</span><span class="p">)</span>
+
+            <span class="n">writer</span><span class="o">.</span><span class="n">grab_frame</span><span class="p">()</span>
+
+            <span class="n">snap</span> <span class="o">+=</span> <span class="mi">1</span>
+
+            <span class="c1"># Remove the colorbar to reset the figure for the next animation timestep.</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">gci</span><span class="p">()</span><span class="o">.</span><span class="n">colorbar</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+
+    <span class="c1"># Update elapsed_time.</span>
+    <span class="k">if</span> <span class="n">routing_method</span> <span class="o">==</span> <span class="s1">&#39;OverlandFlow&#39;</span><span class="p">:</span>
+        <span class="n">elapsed_time</span> <span class="o">+=</span> <span class="n">of</span><span class="o">.</span><span class="n">dt</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">elapsed_time</span> <span class="o">+=</span> <span class="n">dt</span>
+
+<span class="n">writer</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="n">animate_fig</span><span class="p">)</span>
+
+<span class="c1"># Display animation.</span>
+<span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;&lt;div align=&quot;middle&quot;&gt; &lt;video width=&quot;80%&quot; controls loop&gt;&lt;source src=&quot;animation.mp4&quot; type=&quot;video/mp4&quot;&gt; &lt;/video&gt;&lt;/div&gt;&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>See <a class="reference external" href="https://github.com/landlab/tutorials/blob/master/plotting/animate-landlab-output.ipynb">this Landlab animation tutorial</a> for more on animating model output.</p>
+</div>
+</div>
+<div class="section" id="6.0-Results">
+<h2>6.0 Results<a class="headerlink" href="#6.0-Results" title="Permalink to this headline">¶</a></h2>
+<p>In this section you will create figures of the model simulations you ran above. You will plot hydrographs from modeled data at each location in the same figure for the selected study domain. In this plot you will notice differences in the time to peak and peak discharge magnitudes at different locations. You may also notice differences in the results generated by the two methods.</p>
+<div class="section" id="6.1.-Plot-hydrograph-for-one-model-result">
+<h3>6.1. Plot hydrograph for one model result<a class="headerlink" href="#6.1.-Plot-hydrograph-for-one-model-result" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">hydrograph_fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># Plot hydrograph series.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hydrograph_time</span><span class="p">,</span> <span class="n">discharge_at_outlet</span><span class="p">,</span> <span class="s1">&#39;r-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;outlet&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hydrograph_time</span><span class="p">,</span> <span class="n">discharge_midstream</span><span class="p">,</span> <span class="s1">&#39;g-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;midstream&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hydrograph_time</span><span class="p">,</span> <span class="n">discharge_upstream</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;upstream&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Configure plot elements.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Discharge (cms)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (hours)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">title_text</span> <span class="o">=</span> <span class="s1">&#39;Model=&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">basin_flag</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; + &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">storm_flag</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; + &#39;</span> <span class="o">+</span> <span class="n">routing_method</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">title_text</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">150</span><span class="p">)</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">basin_flag</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">storm_flag</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">routing_method</span> <span class="o">+</span> <span class="s1">&#39;_hydrograph.png&#39;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="6.2.-Show-map-for-one-model-result-at-the-time-step-of-interest-to-you">
+<h3>6.2. Show map for one model result at the time step of interest to you<a class="headerlink" href="#6.2.-Show-map-for-one-model-result-at-the-time-step-of-interest-to-you" title="Permalink to this headline">¶</a></h3>
+<p>The code you ran above produced image files of model output.</p>
+<p>List the available image files printed in each model run. The files have a naming structure that includes the model time. Note that you will need to change the last line of the code block below get the file names for a given model.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Image file names:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Change the shell script below to list all file names for a png based on your model (e.g., *png, Spring*png, or Square*png)</span>
+<span class="c1">#!ls Spring*png</span>
+<span class="o">!</span>ls *png
+</pre></div>
+</div>
+</div>
+<p>Choose and visualize an image file by changing the name of the image input to be consistent with the name of a image listed above.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">img</span> <span class="o">=</span> <span class="n">mgimg</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">fname</span><span class="o">=</span><span class="s1">&#39;Spring Creek_HigherIntensity_KinwaveImplicitOverlandFlow_2.0hr_map.png&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="6.3.-Save-model-results-into-a-text-file-at-the-end-of-each-model-run">
+<h3>6.3. Save model results into a text file at the end of each model run<a class="headerlink" href="#6.3.-Save-model-results-into-a-text-file-at-the-end-of-each-model-run" title="Permalink to this headline">¶</a></h3>
+<p>If you want to explore the hydrographs created in this application in another software environment, you will run the code below to create a single .csv file that contains modeled hydrograps at each location in the watershed. Please run this code for each run you completed separately. The .csv file can be used in Excel, Matlab or any other software. The name of the new file will be printed.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">modeldata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="n">modeldata</span><span class="p">[</span><span class="s1">&#39;Timestep&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">hydrograph_time</span>
+<span class="n">modeldata</span><span class="p">[</span><span class="s1">&#39;outlet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">discharge_at_outlet</span>
+<span class="n">modeldata</span><span class="p">[</span><span class="s1">&#39;midstream&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">discharge_midstream</span>
+<span class="n">modeldata</span><span class="p">[</span><span class="s1">&#39;upstream&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">discharge_upstream</span>
+<span class="n">header</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Timestep&#39;</span><span class="p">,</span> <span class="s1">&#39;Outlet_cms&#39;</span><span class="p">,</span> <span class="s1">&#39;Midstream_cms&#39;</span><span class="p">,</span> <span class="s1">&#39;Upstream_cms&#39;</span><span class="p">}</span>
+<span class="n">modeldata</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">basin_flag</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">storm_flag</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">routing_method</span>  <span class="o">+</span> <span class="s1">&#39;_flow.csv&#39;</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">header</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Now we will explore where your data is saved. First execute “pwd” (as below) to identify your working directory and copy the HydroShare resource ID (alpha numeric code) for future use. Next we will locate this directory. Go to the top left corner of your browser and find the CUAHSI logo. Right-click on the logo; this opens the file browser of your work space. Go to notebooks/data directory. There find your resource ID (alpha numeric code) and click on it. Follow the link until you get to
+data/contents. You can download these files to your own computer as you wish.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The code you ran above produced image files of model output.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The files have a naming structure that includes the model time. The files:&#39;</span><span class="p">)</span>
+
+<span class="c1"># Change the shell script below to list all the file names for a png based on your model (e.g., *png, Spring*png, or Square*png).</span>
+<span class="o">!</span>ls *png
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;To download this file, go to the File Dashbard and browse the JupyterHub server&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p><strong>You completed the tutorial to run the model. You can now explore different routing methods and model parameters by editing and re-executing sections by making model decisions (4.0), running the model (5.0) and saving results (6.0). Repeat as many model runs as you like and save all of your results before you start comparing results.</strong></p>
+</div>
+</div>
+<div class="section" id="7.0.-Discussion">
+<h2>7.0. Discussion<a class="headerlink" href="#7.0.-Discussion" title="Permalink to this headline">¶</a></h2>
+<p>In this section you will visualize results from your model runs to compare results obtained in the two study watersheds and begin writing your observations from model runs. In this section you may also generate more research questions to explore with the two models. You will also see how the two methods can yield different results.</p>
+<div class="section" id="7.1.-Plot-maps-of-water-depth-for-two-model-runs">
+<h3>7.1. Plot maps of water depth for two model runs<a class="headerlink" href="#7.1.-Plot-maps-of-water-depth-for-two-model-runs" title="Permalink to this headline">¶</a></h3>
+<p>Choose two image files printed in each animation increment <strong>from two different models</strong> to compare at a timestep that is most interesting.</p>
+<p><strong>Note:</strong> You will get the error <code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">such</span> <span class="pre">file</span> <span class="pre">or</span> <span class="pre">directory</span></code> following the code block below if you have not run the <code class="docutils literal notranslate"><span class="pre">OverlandFlow</span></code> option of the <code class="docutils literal notranslate"><span class="pre">routing_method</span></code>. In summary, you must the routing method, rerun the model, then the code block below can be run successfully.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">hydrograph_fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">18</span><span class="p">))</span>
+<span class="n">ax1</span> <span class="o">=</span> <span class="n">hydrograph_fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">221</span><span class="p">)</span>
+<span class="n">fname1</span> <span class="o">=</span> <span class="s1">&#39;Spring Creek_HigherIntensity_KinwaveImplicitOverlandFlow_2.0hr_map.png&#39;</span>
+<span class="n">img1</span> <span class="o">=</span> <span class="n">mgimg</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">fname1</span><span class="p">)</span>
+<span class="n">imgplot</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img1</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+
+<span class="c1"># Plotting the hydrographs from the Spring Creek DEM at the outlet</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">hydrograph_fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">222</span><span class="p">)</span>
+<span class="n">fname2</span> <span class="o">=</span> <span class="s1">&#39;Spring Creek_HigherIntensity_OverlandFlow_3.0hr_map.png&#39;</span>
+<span class="n">img2</span> <span class="o">=</span> <span class="n">mgimg</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">fname2</span><span class="p">)</span>
+<span class="n">imgplot</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img2</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="7.2.-Plot-hydrographs-for-two-model-runs">
+<h3>7.2. Plot hydrographs for two model runs<a class="headerlink" href="#7.2.-Plot-hydrographs-for-two-model-runs" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Here</span>
+<span class="n">hydrograph_fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+<span class="n">ax1</span> <span class="o">=</span> <span class="n">hydrograph_fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">221</span><span class="p">)</span>
+<span class="n">fname1</span> <span class="o">=</span> <span class="s1">&#39;Spring Creek_HigherIntensity_KinwaveImplicitOverlandFlow_hydrograph.png&#39;</span>
+<span class="n">img1</span> <span class="o">=</span> <span class="n">mgimg</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">fname1</span><span class="p">)</span>
+<span class="n">imgplot</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img1</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+
+<span class="c1"># Plot the hydrographs from the Spring Creek DEM at the outlet.</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">hydrograph_fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">222</span><span class="p">)</span>
+<span class="n">fname2</span> <span class="o">=</span> <span class="s1">&#39;Spring Creek_HigherIntensity_OverlandFlow_hydrograph.png&#39;</span>
+<span class="n">img2</span> <span class="o">=</span> <span class="n">mgimg</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">fname2</span><span class="p">)</span>
+<span class="n">imgplot</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img2</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="8.0.-Conclusions">
+<h2>8.0. Conclusions<a class="headerlink" href="#8.0.-Conclusions" title="Permalink to this headline">¶</a></h2>
+<p>At this point in the notebook, you should have produced a plot of three hydrographs from different points in the Spring Creek watershed or in the Square domain, produced from overland flow driven by a select storm.</p>
+<p>There are six scenarios to explore: two different watersheds and three different storms, if you use the default parameters. If you explore different Manning’s roughness values, run all six scenarios by systematically changing the <code class="docutils literal notranslate"><span class="pre">basin_flag</span></code> and <code class="docutils literal notranslate"><span class="pre">storm_flag</span></code> in Code Block 2 and rerunning all of the code blocks sequentially. Save the hydrograph plots for each scenario.</p>
+<div class="section" id="Directions-if-you-are-using-this-as-a-laboratory-exercise">
+<h3>Directions if you are using this as a laboratory exercise<a class="headerlink" href="#Directions-if-you-are-using-this-as-a-laboratory-exercise" title="Permalink to this headline">¶</a></h3>
+<p>Include the plots of hydrographs and mapped flow depths in a document with your typed answers to each of the questions below with complete sentences. Try to be as specific and as quantitative as you can. For example, you can compare times to peak discharge and peak discharge values among the scenarios. You are encouraged to discuss the results of the models with your classmates, but the text you turn in must be your own thoughts and words.</p>
+<ol class="arabic simple">
+<li><p>What aspects of the hydrograph change at the outlet as the storm gets longer or more intense? Are there aspects of the outlet hydrograph that are not sensitive to the storm duration or intensity? Do the midstream and upstream hydrographs exhibit the same sensitivity to storm duration and intensity? Explain why.</p></li>
+<li><p>What are the differences in the hydrograph response in the outlets of the two watersheds? How does the watershed shape influence the hydrograph shape?</p></li>
+<li><p>Now compare the hydrograph shapes across the three different locations in the watersheds. Compare only between similar points (e.g. mid or upstream locations) and between the same storm characteristics. How does watershed shape affect hydrograph shape? Does it impact all locations in the same manner? Do different storm characteristics exaggerate the differences between the different watersheds?</p></li>
+<li><p>Now compare the results between the two different watershed. How different are hydrograph characteristics between the square and natural watershed (Spring Creek)?</p></li>
+<li><p>Please compare your answers to the questions you answered before running the models. Do the model results match your intuition? If not, do you think your intuition was wrong, or the model was wrong, or both? Remember, models are helpful for learning but they are highly simplified representations of the real world. Without knowing the details of the model, does it seem like something is missing from your model results?</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="9.0.-Save-the-results-in-HydroShare">
+<h2>9.0. Save the results in HydroShare<a class="headerlink" href="#9.0.-Save-the-results-in-HydroShare" title="Permalink to this headline">¶</a></h2>
+<p>Using the HydroShare utilities library, the results of the Geoprocessing steps above can be saved in HydroShare. First, define all of the required metadata for resource creation, i.e. <em>title</em>, <em>abstract</em>, <em>keywords</em>, <em>content files</em>. In addition, we must define the type of resource that will be created, in this case <em>genericresource</em>.</p>
+<div class="section" id="9.1.-List-files-to-export-to-new-HydroShare-resource">
+<h3>9.1. List files to export to new HydroShare resource<a class="headerlink" href="#9.1.-List-files-to-export-to-new-HydroShare-resource" title="Permalink to this headline">¶</a></h3>
+<p>The name of files listed below need to be consistent with what exists in your file directory</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">ThisNotebook</span> <span class="o">=</span> <span class="s1">&#39;explore_routing_tutorial.ipynb&#39;</span> <span class="c1"># check name for consistency</span>
+<span class="n">modelresults</span> <span class="o">=</span> <span class="s1">&#39;Square_HigherIntensity_OverlandFlow_flow.csv&#39;</span>
+<span class="n">animation</span> <span class="o">=</span> <span class="s1">&#39;animation.mp4&#39;</span>
+<span class="n">waterdepth</span> <span class="o">=</span><span class="s1">&#39;Square_HigherIntensity_OverlandFlow_3.0hr_map.png&#39;</span>
+
+<span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="n">ThisNotebook</span><span class="p">,</span> <span class="n">modelresults</span><span class="p">,</span> <span class="n">animation</span><span class="p">,</span> <span class="n">waterdepth</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="9.2.-Generate-a-new-HydroShare-resource-with-Title,-Abstract,-Keyword-and-files-(listed-above)">
+<h3>9.2. Generate a new HydroShare resource with Title, Abstract, Keyword and files (listed above)<a class="headerlink" href="#9.2.-Generate-a-new-HydroShare-resource-with-Title,-Abstract,-Keyword-and-files-(listed-above)" title="Permalink to this headline">¶</a></h3>
+<p>The metadata can be edited from HydroShare once the new resource is created.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># For each file downloaded onto the server folder, move to a new HydroShare Composite Resource.</span>
+<span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Test Delete&#39;</span>
+<span class="n">abstract</span> <span class="o">=</span> <span class="s1">&#39;abstract text &#39;</span>
+<span class="n">keywords</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Landlab&#39;</span><span class="p">,</span> <span class="s1">&#39;routing&#39;</span><span class="p">]</span>
+<span class="n">rtype</span> <span class="o">=</span> <span class="s1">&#39;compositeresource&#39;</span>
+
+<span class="c1"># Create the new resource.</span>
+<span class="n">resource_id</span> <span class="o">=</span> <span class="n">hs</span><span class="o">.</span><span class="n">createHydroShareResource</span><span class="p">(</span><span class="n">abstract</span><span class="p">,</span>
+                                          <span class="n">title</span><span class="p">,</span>
+                                          <span class="n">keywords</span><span class="o">=</span><span class="n">keywords</span><span class="p">,</span>
+                                          <span class="n">resource_type</span><span class="o">=</span><span class="n">rtype</span><span class="p">,</span>
+                                          <span class="n">content_files</span><span class="o">=</span><span class="n">files</span><span class="p">,</span>
+                                          <span class="n">public</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="10.0-Clean-up—be-a-good-community-data-steward—thank-you!">
+<h2>10.0 Clean up—be a good community data steward—thank you!<a class="headerlink" href="#10.0-Clean-up—be-a-good-community-data-steward—thank-you!" title="Permalink to this headline">¶</a></h2>
+<p>Check that all of the files you want are saved on HydroShare. Then use shell scripting from the Notebook to view and delete data.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Print current working directory and make sure you are in the directory you want to clean up.</span>
+<span class="o">!</span>pwd
+
+<span class="c1"># List files in directory with date of creation. Check that you do not need any of these files.</span>
+<span class="o">!</span>ls -lt
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Remove all files you created. This will not remove the Notebook you are using now.</span>
+<span class="o">!</span>rm *png
+<span class="o">!</span>rm *mp4
+<span class="o">!</span>rm *csv
+
+<span class="c1"># List everything remaining in the folder - this should be only what you downloaded from</span>
+<span class="c1"># HydroShare. Note that all of this will be overwritten the next time you `Open With`</span>
+<span class="c1"># from the HydroShare webpage for this resource, execute the Welcome page, and answer</span>
+<span class="c1"># ‘Yes’ to download the data again from HydroShare.</span>
+<span class="o">!</span>ls -lt
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Acknowledgements">
+<h2>Acknowledgements<a class="headerlink" href="#Acknowledgements" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://zenodo.org/badge/latestdoi/187289993"><img alt="DOI" src="https://zenodo.org/badge/187289993.svg" /></a></p>
+<p>This Notebooks serves as content for:</p>
+<p>Bandaragoda, C. J., A. Castronova, E. Istanbulluoglu, R. Strauch, S. S. Nudurupati, J. Phuong, J. M. Adams, et al. “Enabling Collaborative Numerical Modeling in Earth Sciences Using Knowledge Infrastructure.” Environmental Modelling &amp; Software, April 24, 2019. <a class="reference external" href="https://doi.org/10.1016/j.envsoft.2019.03.020">https://doi.org/10.1016/j.envsoft.2019.03.020</a>.</p>
+<p>and</p>
+<p>Bandaragoda, C., A. M. Castronova, J. Phuong, E. Istanbulluoglu, S. S. Nudurupati, R. Strauch, N. Lyons, K. Barnhart (2019). Enabling Collaborative Numerical Modeling in Earth Sciences using Knowledge Infrastructure: Landlab Notebooks, HydroShare, <a class="reference external" href="http://www.hydroshare.org/resource/fdc3a06e6ad842abacfa5b896df73a76">http://www.hydroshare.org/resource/fdc3a06e6ad842abacfa5b896df73a76</a></p>
+<p>This notebook was developed from code written by Jordan Adams as part of her Ph.D. disseration at Tulane University and Amanda Manaster as a tutorial for a Landlab workshop at the Geophysical Society of America Annual Meeting, Seattle, WA, 2018. Nathan Lyons provided code and technical support on animations.</p>
+<p>Use or citation of this notebook should also reference:</p>
+<p>Adams, J. M., Gasparini, N. M., Hobley, D. E. J., Tucker, G. E., Hutton, E. W. H., Nudurupati, S. S., and Istanbulluoglu, E.: The Landlab v1.0 OverlandFlow component: a Python tool for computing shallow-water flow across watersheds, Geosci. Model Dev., 10, 1645-1663, <a class="reference external" href="https://doi.org/10.5194/gmd-10-1645-2017">https://doi.org/10.5194/gmd-10-1645-2017</a>, 2017.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <!-- 
+This file modifies the default sphinx_rtd_theme footer
+-->
+
+
+
+<footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+  <!-- your html code here -->
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

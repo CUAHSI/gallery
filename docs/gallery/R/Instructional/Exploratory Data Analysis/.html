@@ -1,0 +1,874 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Exploratory Data Analysis for the Physical Properties of Lakes &mdash; BuildDocs version documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/language_data.js"></script>
+        <script src="../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../_static/copybutton.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+        <script src="../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html">
+          
+
+          
+            
+            <img src="../../../../_static/cuahsi-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Galleries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">R Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">BuildDocs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          <!--
+The purpose of this template is to override (i.e. supress) the breadcrumbs that appear at the top of each page.
+-->
+
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Exploratory-Data-Analysis-for-the-Physical-Properties-of-Lakes">
+<h1>Exploratory Data Analysis for the Physical Properties of Lakes<a class="headerlink" href="#Exploratory-Data-Analysis-for-the-Physical-Properties-of-Lakes" title="Permalink to this headline">¶</a></h1>
+<p>This lesson was adapted from educational material written by <a class="reference external" href="https://www.hydroshare.org/user/4912/">Dr. Kateri Salk</a> for her Fall 2019 Hydrologic Data Analysis course at Duke University. This is the first part of a two-part exercise focusing on the physical properties of lakes.</p>
+<div class="section" id="Introduction">
+<h2>Introduction<a class="headerlink" href="#Introduction" title="Permalink to this headline">¶</a></h2>
+<p>Lakes are dynamic, nonuniform bodies of water in which the physical, biological, and chemical properties interact. Lakes also contain the majority of Earth’s fresh water supply. This lesson introduces exploratory data analysis in the context of the physical properties of lakes.</p>
+</div>
+<div class="section" id="Learning-Objectives">
+<h2>Learning Objectives<a class="headerlink" href="#Learning-Objectives" title="Permalink to this headline">¶</a></h2>
+<p>After successfully completing this exercise, you will be able to:</p>
+<ol class="arabic simple">
+<li><p>Apply exploratory data analytics skills to applied questions about physical properties of lakes</p></li>
+</ol>
+</div>
+<div class="section" id="Requirements-to-Complete-Lesson">
+<h2>Requirements to Complete Lesson<a class="headerlink" href="#Requirements-to-Complete-Lesson" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="Packages">
+<h3>Packages<a class="headerlink" href="#Packages" title="Permalink to this headline">¶</a></h3>
+<p>This lesson requires the installation of the following R packages to run the provided script: - <code class="docutils literal notranslate"><span class="pre">tidyverse</span></code>- Version 1.3.0. A collection of R packages designed for data science. - <code class="docutils literal notranslate"><span class="pre">lubridate</span></code>- Version 1.7.9. Functions for working with dates/times.</p>
+</div>
+<div class="section" id="Data-and-Code">
+<h3>Data and Code<a class="headerlink" href="#Data-and-Code" title="Permalink to this headline">¶</a></h3>
+<p>The input files are made available to you in a public folder.</p>
+<p>This lesson also requires the dataset NTER-LTER_Lake_ChemistryPhysics_Raw.csv.</p>
+<p>The dataset used in this lesson contains data from studies on several lakes in the North Temperate Lakes District in the state of Wisconsin. The data were collected as part of the Long Term Ecological Research station created by the National Science Foundation. More information can be found here: <a class="reference external" href="https://lter.limnology.wisc.edu/about/overview">https://lter.limnology.wisc.edu/about/overview</a>. A ReadMe file for the dataset is also available in the Lesson3Lakes Folder.</p>
+<p>The code provided in this resource was developed using R version 3.6.1.</p>
+</div>
+<div class="section" id="Set-Working-Directory">
+<h3>Set Working Directory<a class="headerlink" href="#Set-Working-Directory" title="Permalink to this headline">¶</a></h3>
+<p>In R, the working directory is the directory where R starts when looking for any file to open (as directed by a file path) and where it saves any output. This lesson assumes that you have set your working directory to the folder location of the downloaded and unzipped data subsets.</p>
+</div>
+<div class="section" id="Load-Packages">
+<h3>Load Packages<a class="headerlink" href="#Load-Packages" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">lubridate</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Load-Data">
+<h3>Load Data<a class="headerlink" href="#Load-Data" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">NTLdata</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&quot;NTL-LTER_Lake_ChemistryPhysics_Raw.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="Data-Wrangling-and-Exploration">
+<h1>Data Wrangling and Exploration<a class="headerlink" href="#Data-Wrangling-and-Exploration" title="Permalink to this headline">¶</a></h1>
+<p>The purpose of this section is to perform exploratory data analysis to investigate the structure of the provided dataset.</p>
+<div class="section" id="NTLdata">
+<h2><code class="docutils literal notranslate"><span class="pre">NTLdata</span></code><a class="headerlink" href="#NTLdata" title="Permalink to this headline">¶</a></h2>
+<p>To create a spreadsheet-style data viewer on a matrix-like R object, simply execute the name of the dataframe.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">NTLdata</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<table>
+<caption>A data.frame: 38614 × 11</caption>
+<thead>
+    <tr><th scope=col>lakeid</th><th scope=col>lakename</th><th scope=col>year4</th><th scope=col>daynum</th><th scope=col>sampledate</th><th scope=col>depth</th><th scope=col>temperature_C</th><th scope=col>dissolvedOxygen</th><th scope=col>irradianceWater</th><th scope=col>irradianceDeck</th><th scope=col>comments</th></tr>
+    <tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+    <tr><td>L</td><td>Paul Lake </td><td>1984</td><td>148</td><td>5/27/84</td><td> 0.00</td><td>14.5</td><td> 9.5</td><td>1750.0</td><td>1620</td><td>NA</td></tr>
+    <tr><td>L</td><td>Paul Lake </td><td>1984</td><td>148</td><td>5/27/84</td><td> 0.25</td><td>  NA</td><td>  NA</td><td>1550.0</td><td>1620</td><td>NA</td></tr>
+    <tr><td>L</td><td>Paul Lake </td><td>1984</td><td>148</td><td>5/27/84</td><td> 0.50</td><td>  NA</td><td>  NA</td><td>1150.0</td><td>1620</td><td>NA</td></tr>
+    <tr><td>L</td><td>Paul Lake </td><td>1984</td><td>148</td><td>5/27/84</td><td> 0.75</td><td>  NA</td><td>  NA</td><td> 975.0</td><td>1620</td><td>NA</td></tr>
+    <tr><td>L</td><td>Paul Lake </td><td>1984</td><td>148</td><td>5/27/84</td><td> 1.00</td><td>14.5</td><td> 8.8</td><td> 870.0</td><td>1620</td><td>NA</td></tr>
+    <tr><td>L</td><td>Paul Lake </td><td>1984</td><td>148</td><td>5/27/84</td><td> 1.50</td><td>  NA</td><td>  NA</td><td> 610.0</td><td>1620</td><td>NA</td></tr>
+    <tr><td>L</td><td>Paul Lake </td><td>1984</td><td>148</td><td>5/27/84</td><td> 2.00</td><td>14.2</td><td> 8.6</td><td> 420.0</td><td>1620</td><td>NA</td></tr>
+    <tr><td>L</td><td>Paul Lake </td><td>1984</td><td>148</td><td>5/27/84</td><td> 3.00</td><td>11.0</td><td>11.5</td><td> 220.0</td><td>1620</td><td>NA</td></tr>
+    <tr><td>L</td><td>Paul Lake </td><td>1984</td><td>148</td><td>5/27/84</td><td> 4.00</td><td> 7.0</td><td>11.9</td><td> 100.0</td><td>1620</td><td>NA</td></tr>
+    <tr><td>L</td><td>Paul Lake </td><td>1984</td><td>148</td><td>5/27/84</td><td> 5.00</td><td> 6.1</td><td> 2.5</td><td>  34.0</td><td>1620</td><td>NA</td></tr>
+    <tr><td>L</td><td>Paul Lake </td><td>1984</td><td>148</td><td>5/27/84</td><td> 6.00</td><td> 5.5</td><td> 1.6</td><td>   7.6</td><td>1620</td><td>NA</td></tr>
+    <tr><td>L</td><td>Paul Lake </td><td>1984</td><td>148</td><td>5/27/84</td><td> 7.00</td><td> 5.0</td><td> 0.4</td><td>   1.3</td><td>1610</td><td>NA</td></tr>
+    <tr><td>L</td><td>Paul Lake </td><td>1984</td><td>148</td><td>5/27/84</td><td> 8.00</td><td> 4.5</td><td> 0.3</td><td>    NA</td><td>  NA</td><td>NA</td></tr>
+    <tr><td>L</td><td>Paul Lake </td><td>1984</td><td>148</td><td>5/27/84</td><td> 9.00</td><td> 4.5</td><td> 0.3</td><td>    NA</td><td>  NA</td><td>NA</td></tr>
+    <tr><td>L</td><td>Paul Lake </td><td>1984</td><td>148</td><td>5/27/84</td><td>10.00</td><td> 4.5</td><td> 0.3</td><td>    NA</td><td>  NA</td><td>NA</td></tr>
+    <tr><td>L</td><td>Paul Lake </td><td>1984</td><td>148</td><td>5/27/84</td><td>11.00</td><td> 4.5</td><td> 0.3</td><td>    NA</td><td>  NA</td><td>NA</td></tr>
+    <tr><td>L</td><td>Paul Lake </td><td>1984</td><td>148</td><td>5/27/84</td><td>12.00</td><td> 4.5</td><td> 0.3</td><td>    NA</td><td>  NA</td><td>NA</td></tr>
+    <tr><td>R</td><td>Peter Lake</td><td>1984</td><td>149</td><td>5/28/84</td><td> 0.00</td><td>14.8</td><td> 9.2</td><td>1630.0</td><td>1540</td><td>NA</td></tr>
+    <tr><td>R</td><td>Peter Lake</td><td>1984</td><td>149</td><td>5/28/84</td><td> 0.25</td><td>  NA</td><td>  NA</td><td>1530.0</td><td>1540</td><td>NA</td></tr>
+    <tr><td>R</td><td>Peter Lake</td><td>1984</td><td>149</td><td>5/28/84</td><td> 0.50</td><td>  NA</td><td>  NA</td><td>1250.0</td><td>1540</td><td>NA</td></tr>
+    <tr><td>R</td><td>Peter Lake</td><td>1984</td><td>149</td><td>5/28/84</td><td> 0.75</td><td>  NA</td><td>  NA</td><td>1050.0</td><td>1540</td><td>NA</td></tr>
+    <tr><td>R</td><td>Peter Lake</td><td>1984</td><td>149</td><td>5/28/84</td><td> 1.00</td><td>14.8</td><td> 8.8</td><td> 890.0</td><td>1540</td><td>NA</td></tr>
+    <tr><td>R</td><td>Peter Lake</td><td>1984</td><td>149</td><td>5/28/84</td><td> 1.50</td><td>  NA</td><td>  NA</td><td> 660.0</td><td>1540</td><td>NA</td></tr>
+    <tr><td>R</td><td>Peter Lake</td><td>1984</td><td>149</td><td>5/28/84</td><td> 2.00</td><td>14.8</td><td> 8.9</td><td> 500.0</td><td>1540</td><td>NA</td></tr>
+    <tr><td>R</td><td>Peter Lake</td><td>1984</td><td>149</td><td>5/28/84</td><td> 3.00</td><td>12.3</td><td>11.4</td><td> 250.0</td><td>1540</td><td>NA</td></tr>
+    <tr><td>R</td><td>Peter Lake</td><td>1984</td><td>149</td><td>5/28/84</td><td> 4.00</td><td> 8.2</td><td>11.5</td><td> 110.0</td><td>1540</td><td>NA</td></tr>
+    <tr><td>R</td><td>Peter Lake</td><td>1984</td><td>149</td><td>5/28/84</td><td> 5.00</td><td> 7.0</td><td>11.0</td><td>  70.0</td><td>1540</td><td>NA</td></tr>
+    <tr><td>R</td><td>Peter Lake</td><td>1984</td><td>149</td><td>5/28/84</td><td> 6.00</td><td> 5.9</td><td> 8.6</td><td>  33.0</td><td>1540</td><td>NA</td></tr>
+    <tr><td>R</td><td>Peter Lake</td><td>1984</td><td>149</td><td>5/28/84</td><td> 7.00</td><td> 4.5</td><td> 0.8</td><td>  17.5</td><td>1540</td><td>NA</td></tr>
+    <tr><td>R</td><td>Peter Lake</td><td>1984</td><td>149</td><td>5/28/84</td><td> 8.00</td><td> 4.0</td><td> 0.3</td><td>   8.5</td><td>1540</td><td>NA</td></tr>
+    <tr><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td></tr>
+    <tr><td>L</td><td>Paul Lake   </td><td>2016</td><td>229</td><td>8/16/16</td><td> 5.00</td><td>12.6</td><td>1.8</td><td>  12.800</td><td> 668</td><td>NA</td></tr>
+    <tr><td>L</td><td>Paul Lake   </td><td>2016</td><td>229</td><td>8/16/16</td><td> 5.50</td><td>10.6</td><td>0.3</td><td>   6.550</td><td> 639</td><td>NA</td></tr>
+    <tr><td>L</td><td>Paul Lake   </td><td>2016</td><td>229</td><td>8/16/16</td><td> 6.00</td><td> 9.0</td><td>0.1</td><td>   1.930</td><td> 627</td><td>NA</td></tr>
+    <tr><td>L</td><td>Paul Lake   </td><td>2016</td><td>229</td><td>8/16/16</td><td> 6.50</td><td> 7.5</td><td>0.0</td><td>      NA</td><td>  NA</td><td>NA</td></tr>
+    <tr><td>L</td><td>Paul Lake   </td><td>2016</td><td>229</td><td>8/16/16</td><td> 7.00</td><td> 6.7</td><td>0.0</td><td>      NA</td><td>  NA</td><td>NA</td></tr>
+    <tr><td>L</td><td>Paul Lake   </td><td>2016</td><td>229</td><td>8/16/16</td><td> 8.00</td><td> 5.9</td><td>0.0</td><td>      NA</td><td>  NA</td><td>NA</td></tr>
+    <tr><td>L</td><td>Paul Lake   </td><td>2016</td><td>229</td><td>8/16/16</td><td> 9.00</td><td> 5.5</td><td>0.0</td><td>      NA</td><td>  NA</td><td>NA</td></tr>
+    <tr><td>L</td><td>Paul Lake   </td><td>2016</td><td>229</td><td>8/16/16</td><td>10.00</td><td> 5.4</td><td>0.0</td><td>      NA</td><td>  NA</td><td>NA</td></tr>
+    <tr><td>L</td><td>Paul Lake   </td><td>2016</td><td>229</td><td>8/16/16</td><td>11.00</td><td> 5.4</td><td>0.0</td><td>      NA</td><td>  NA</td><td>NA</td></tr>
+    <tr><td>L</td><td>Paul Lake   </td><td>2016</td><td>229</td><td>8/16/16</td><td>12.00</td><td> 5.3</td><td>0.0</td><td>      NA</td><td>  NA</td><td>NA</td></tr>
+    <tr><td>T</td><td>Tuesday Lake</td><td>2016</td><td>230</td><td>8/17/16</td><td> 0.00</td><td>24.1</td><td>6.6</td><td>1113.000</td><td>1049</td><td>NA</td></tr>
+    <tr><td>T</td><td>Tuesday Lake</td><td>2016</td><td>230</td><td>8/17/16</td><td> 0.25</td><td>  NA</td><td> NA</td><td> 749.400</td><td>1045</td><td>NA</td></tr>
+    <tr><td>T</td><td>Tuesday Lake</td><td>2016</td><td>230</td><td>8/17/16</td><td> 0.50</td><td>23.7</td><td>6.4</td><td> 471.900</td><td>1041</td><td>NA</td></tr>
+    <tr><td>T</td><td>Tuesday Lake</td><td>2016</td><td>230</td><td>8/17/16</td><td> 0.75</td><td>  NA</td><td> NA</td><td> 327.900</td><td>1012</td><td>NA</td></tr>
+    <tr><td>T</td><td>Tuesday Lake</td><td>2016</td><td>230</td><td>8/17/16</td><td> 1.00</td><td>23.5</td><td>6.2</td><td> 233.300</td><td>1026</td><td>NA</td></tr>
+    <tr><td>T</td><td>Tuesday Lake</td><td>2016</td><td>230</td><td>8/17/16</td><td> 1.50</td><td>23.3</td><td>5.7</td><td> 100.900</td><td>1028</td><td>NA</td></tr>
+    <tr><td>T</td><td>Tuesday Lake</td><td>2016</td><td>230</td><td>8/17/16</td><td> 2.00</td><td>21.8</td><td>1.6</td><td>  53.210</td><td>1018</td><td>NA</td></tr>
+    <tr><td>T</td><td>Tuesday Lake</td><td>2016</td><td>230</td><td>8/17/16</td><td> 2.50</td><td>18.4</td><td>0.2</td><td>  19.750</td><td>1027</td><td>NA</td></tr>
+    <tr><td>T</td><td>Tuesday Lake</td><td>2016</td><td>230</td><td>8/17/16</td><td> 3.00</td><td>14.3</td><td>0.3</td><td>   8.128</td><td>1037</td><td>NA</td></tr>
+    <tr><td>T</td><td>Tuesday Lake</td><td>2016</td><td>230</td><td>8/17/16</td><td> 3.50</td><td>10.1</td><td>0.1</td><td>   3.187</td><td>1016</td><td>NA</td></tr>
+    <tr><td>T</td><td>Tuesday Lake</td><td>2016</td><td>230</td><td>8/17/16</td><td> 4.00</td><td> 7.9</td><td>0.1</td><td>   1.080</td><td>1018</td><td>NA</td></tr>
+    <tr><td>T</td><td>Tuesday Lake</td><td>2016</td><td>230</td><td>8/17/16</td><td> 4.50</td><td> 6.3</td><td>0.1</td><td>      NA</td><td>  NA</td><td>NA</td></tr>
+    <tr><td>T</td><td>Tuesday Lake</td><td>2016</td><td>230</td><td>8/17/16</td><td> 5.00</td><td> 5.4</td><td>0.1</td><td>      NA</td><td>  NA</td><td>NA</td></tr>
+    <tr><td>T</td><td>Tuesday Lake</td><td>2016</td><td>230</td><td>8/17/16</td><td> 5.50</td><td> 4.9</td><td>0.1</td><td>      NA</td><td>  NA</td><td>NA</td></tr>
+    <tr><td>T</td><td>Tuesday Lake</td><td>2016</td><td>230</td><td>8/17/16</td><td> 6.00</td><td> 4.6</td><td>0.0</td><td>      NA</td><td>  NA</td><td>NA</td></tr>
+    <tr><td>T</td><td>Tuesday Lake</td><td>2016</td><td>230</td><td>8/17/16</td><td> 6.50</td><td> 4.4</td><td>0.0</td><td>      NA</td><td>  NA</td><td>NA</td></tr>
+    <tr><td>T</td><td>Tuesday Lake</td><td>2016</td><td>230</td><td>8/17/16</td><td> 7.00</td><td> 4.3</td><td>0.0</td><td>      NA</td><td>  NA</td><td>NA</td></tr>
+    <tr><td>T</td><td>Tuesday Lake</td><td>2016</td><td>230</td><td>8/17/16</td><td> 8.00</td><td> 4.3</td><td>0.0</td><td>      NA</td><td>  NA</td><td>NA</td></tr>
+    <tr><td>T</td><td>Tuesday Lake</td><td>2016</td><td>230</td><td>8/17/16</td><td> 9.00</td><td> 4.3</td><td>0.0</td><td>      NA</td><td>  NA</td><td>NA</td></tr>
+    <tr><td>T</td><td>Tuesday Lake</td><td>2016</td><td>230</td><td>8/17/16</td><td>10.00</td><td> 4.3</td><td>0.0</td><td>      NA</td><td>  NA</td><td>NA</td></tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="section" id="Date-Formatting">
+<h2>Date Formatting<a class="headerlink" href="#Date-Formatting" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="class">
+<h3><code class="docutils literal notranslate"><span class="pre">class</span></code><a class="headerlink" href="#class" title="Permalink to this headline">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">class</span></code> function to print the vector of names of classes an object inherits from.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="nf">class</span><span class="p">(</span><span class="n">NTLdata</span><span class="o">$</span><span class="n">sampledate</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+'character'</div>
+</div>
+<p>The results indicate that the <code class="docutils literal notranslate"><span class="pre">sampledate</span></code> column of the NTLdata dataframe is a factor.</p>
+</div>
+<div class="section" id="as.Date">
+<h3><code class="docutils literal notranslate"><span class="pre">as.Date</span></code><a class="headerlink" href="#as.Date" title="Permalink to this headline">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">as.Date</span></code> function to convert a string to a date.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">NTLdata</span><span class="o">$</span><span class="n">sampledate</span> <span class="o">&lt;-</span> <span class="nf">as.Date</span><span class="p">(</span><span class="n">NTLdata</span><span class="o">$</span><span class="n">sampledate</span><span class="p">,</span> <span class="s">&quot;%m/%d/%y&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Check the class of the sampledate column now</span>
+<span class="nf">class</span><span class="p">(</span><span class="n">NTLdata</span><span class="o">$</span><span class="n">sampledate</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+'Date'</div>
+</div>
+</div>
+</div>
+<div class="section" id="Addressing-NA’s">
+<h2>Addressing NA’s<a class="headerlink" href="#Addressing-NA’s" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="dim">
+<h3><code class="docutils literal notranslate"><span class="pre">dim</span></code><a class="headerlink" href="#dim" title="Permalink to this headline">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">dim</span></code> function to retrieve the dimensions of an object.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="nf">dim</span><span class="p">(</span><span class="n">NTLdata</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>38614</li><li>11</li></ol></div>
+</div>
+</div>
+<div class="section" id="drop_na">
+<h3><code class="docutils literal notranslate"><span class="pre">drop_na</span></code><a class="headerlink" href="#drop_na" title="Permalink to this headline">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">drop_na</span></code> function to drop any rows containing missing Temperature values.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">NTLdata</span> <span class="o">&lt;-</span> <span class="n">NTLdata</span> <span class="o">%&gt;%</span>
+  <span class="nf">drop_na</span><span class="p">(</span><span class="n">temperature_C</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Check the dimensions of the main data frame now</span>
+<span class="nf">dim</span><span class="p">(</span><span class="n">NTLdata</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>34756</li><li>11</li></ol></div>
+</div>
+</div>
+<div class="section" id="summary">
+<h3><code class="docutils literal notranslate"><span class="pre">summary</span></code><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">summary</span></code> function to compute summary statistics of data and model objects. In this lesson, we will use <code class="docutils literal notranslate"><span class="pre">summary</span></code> to determine how many observations are present for each lake.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="nf">summary</span><span class="p">(</span><span class="n">NTLdata</span><span class="o">$</span><span class="n">lakename</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+   Length     Class      Mode
+    34756 character character
+</pre></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="Subsetting-and-Filtering">
+<h2>Subsetting and Filtering<a class="headerlink" href="#Subsetting-and-Filtering" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="filter">
+<h3><code class="docutils literal notranslate"><span class="pre">filter</span></code><a class="headerlink" href="#filter" title="Permalink to this headline">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">filter</span></code> function to choose rows/cases where conditions are true. In this lesson, we will use <code class="docutils literal notranslate"><span class="pre">filter</span></code> to select the three lakes with the most observations.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">NTLdata</span> <span class="o">&lt;-</span> <span class="n">NTLdata</span> <span class="o">%&gt;%</span>
+  <span class="nf">filter</span><span class="p">(</span><span class="n">lakename</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Paul Lake&quot;</span><span class="p">,</span> <span class="s">&quot;Peter Lake&quot;</span><span class="p">,</span> <span class="s">&quot;Tuesday Lake&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="c1">## You could also filter the data frame using this notation to get the same results</span>
+<span class="n">NTLdata</span> <span class="o">&lt;-</span> <span class="n">NTLdata</span> <span class="o">%&gt;%</span>
+  <span class="nf">filter</span><span class="p">(</span><span class="n">lakename</span> <span class="o">==</span> <span class="s">&quot;Paul Lake&quot;</span> <span class="o">|</span> <span class="n">lakename</span> <span class="o">==</span> <span class="s">&quot;Peter Lake&quot;</span> <span class="o">|</span>
+           <span class="n">lakename</span> <span class="o">==</span> <span class="s">&quot;Tuesday Lake&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Create-three-separate-data-frames-for-each-lake">
+<h3>Create three separate data frames for each lake<a class="headerlink" href="#Create-three-separate-data-frames-for-each-lake" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">Pauldata</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">NTLdata</span><span class="p">,</span> <span class="n">lakename</span> <span class="o">==</span> <span class="s">&quot;Paul Lake&quot;</span><span class="p">)</span>
+<span class="n">Peterdata</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">NTLdata</span><span class="p">,</span> <span class="n">lakename</span> <span class="o">==</span> <span class="s">&quot;Peter Lake&quot;</span><span class="p">)</span>
+<span class="n">Tuesdaydata</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">NTLdata</span><span class="p">,</span> <span class="n">lakename</span> <span class="o">==</span> <span class="s">&quot;Tuesday Lake&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Determine-the-beginning-and-end-dates-of-each-lake’s-period-of-record">
+<h3>Determine the beginning and end dates of each lake’s period of record<a class="headerlink" href="#Determine-the-beginning-and-end-dates-of-each-lake’s-period-of-record" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="min-and-max">
+<h3><code class="docutils literal notranslate"><span class="pre">min</span></code> and <code class="docutils literal notranslate"><span class="pre">max</span></code><a class="headerlink" href="#min-and-max" title="Permalink to this headline">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">min</span></code> and <code class="docutils literal notranslate"><span class="pre">max</span></code> functions to return the minimum and maximum values of a numeric vector or column.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="nf">min</span><span class="p">(</span><span class="n">Pauldata</span><span class="o">$</span><span class="n">sampledate</span><span class="p">)</span>
+<span class="nf">max</span><span class="p">(</span><span class="n">Pauldata</span><span class="o">$</span><span class="n">sampledate</span><span class="p">)</span>
+<span class="nf">min</span><span class="p">(</span><span class="n">Peterdata</span><span class="o">$</span><span class="n">sampledate</span><span class="p">)</span>
+<span class="nf">max</span><span class="p">(</span><span class="n">Peterdata</span><span class="o">$</span><span class="n">sampledate</span><span class="p">)</span>
+<span class="nf">min</span><span class="p">(</span><span class="n">Tuesdaydata</span><span class="o">$</span><span class="n">sampledate</span><span class="p">)</span>
+<span class="nf">max</span><span class="p">(</span><span class="n">Tuesdaydata</span><span class="o">$</span><span class="n">sampledate</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<time datetime="1984-05-27">1984-05-27</time></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<time datetime="2016-08-16">2016-08-16</time></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<time datetime="1984-05-28">1984-05-28</time></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<time datetime="2016-08-15">2016-08-15</time></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<time datetime="1984-05-29">1984-05-29</time></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<time datetime="2016-08-17">2016-08-17</time></div>
+</div>
+</div>
+<div class="section" id="Determine-the-unique-depth-values-(meters)-sampled-in-each-lake">
+<h3>Determine the unique depth values (meters) sampled in each lake<a class="headerlink" href="#Determine-the-unique-depth-values-(meters)-sampled-in-each-lake" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="unique">
+<h3><code class="docutils literal notranslate"><span class="pre">unique</span></code><a class="headerlink" href="#unique" title="Permalink to this headline">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">unique</span></code> function to extract unique elements by removing duplicate elements/rows from a vector, data frame or array.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="nf">unique</span><span class="p">(</span><span class="n">Pauldata</span><span class="o">$</span><span class="n">depth</span><span class="p">)</span>
+<span class="nf">unique</span><span class="p">(</span><span class="n">Peterdata</span><span class="o">$</span><span class="n">depth</span><span class="p">)</span>
+<span class="nf">unique</span><span class="p">(</span><span class="n">Tuesdaydata</span><span class="o">$</span><span class="n">depth</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>0</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li><li>11</li><li>12</li><li>0.5</li><li>1.5</li><li>2.5</li><li>3.5</li><li>20</li><li>4.5</li><li>5.5</li><li>6.5</li><li>7.5</li><li>11.5</li><li>13</li><li>8.5</li><li>9.5</li></ol></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>0</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li><li>11</li><li>12</li><li>13</li><li>14</li><li>15</li><li>16</li><li>17</li><li>0.5</li><li>1.5</li><li>2.5</li><li>3.5</li><li>4.5</li><li>5.5</li><li>6.5</li><li>7.5</li><li>8.5</li><li>0.75</li></ol></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>0</li><li>1</li><li>1.5</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li><li>12</li><li>0.5</li><li>2.5</li><li>3.5</li><li>14</li><li>16</li><li>15</li><li>13</li><li>11</li><li>4.5</li><li>5.5</li><li>6.5</li></ol></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <!-- 
+This file modifies the default sphinx_rtd_theme footer
+-->
+
+
+
+<footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+  <!-- your html code here -->
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

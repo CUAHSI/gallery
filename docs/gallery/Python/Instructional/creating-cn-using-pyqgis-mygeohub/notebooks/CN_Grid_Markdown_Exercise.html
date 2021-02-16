@@ -1,0 +1,767 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Creating Curve Number Grid from Soil and Landuse &mdash; BuildDocs version documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/language_data.js"></script>
+        <script src="../../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../../_static/copybutton.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html">
+          
+
+          
+            
+            <img src="../../../../../_static/cuahsi-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Galleries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">Python Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#research-examples">Research Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#reproducible-science-examples">Reproducible Science Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../R/index.html">R Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../R/index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">BuildDocs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          <!--
+The purpose of this template is to override (i.e. supress) the breadcrumbs that appear at the top of each page.
+-->
+
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Creating-Curve-Number-Grid-from-Soil-and-Landuse">
+<h1>Creating Curve Number Grid from Soil and Landuse<a class="headerlink" href="#Creating-Curve-Number-Grid-from-Soil-and-Landuse" title="Permalink to this headline">¶</a></h1>
+<p>Prepared by Sayan Dey and Venkatesh Merwade Purdue University FAIR Science in Water Resources</p>
+</center><div class="section" id="Initialize-PyQGIS">
+<h2>Initialize PyQGIS<a class="headerlink" href="#Initialize-PyQGIS" title="Permalink to this headline">¶</a></h2>
+<p>This code is used for initializing PyQGIS. You only need to execute this once per session.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;QT_QPA_PLATFORM&#39;</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;offscreen&#39;</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;/apps/share64/debian7/anaconda/anaconda3-5.1/envs/qgis/&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">qgis.analysis</span> <span class="kn">import</span> <span class="n">QgsNativeAlgorithms</span>
+<span class="c1">#from qgis.utils import *</span>
+<span class="kn">import</span> <span class="nn">processing</span>
+<span class="kn">from</span> <span class="nn">processing.core.Processing</span> <span class="kn">import</span> <span class="n">Processing</span>
+
+<span class="n">qgs</span> <span class="o">=</span> <span class="n">QgsApplication</span><span class="p">([],</span> <span class="kc">False</span><span class="p">)</span>
+<span class="n">qgs</span><span class="o">.</span><span class="n">initQgis</span><span class="p">()</span>
+<span class="n">Processing</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
+<span class="n">QgsApplication</span><span class="o">.</span><span class="n">processingRegistry</span><span class="p">()</span><span class="o">.</span><span class="n">addProvider</span><span class="p">(</span><span class="n">QgsNativeAlgorithms</span><span class="p">())</span>
+
+<span class="kn">from</span> <span class="nn">PyQt5.QtCore</span> <span class="kn">import</span> <span class="n">QVariant</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Import-libraries">
+<h2>Import libraries<a class="headerlink" href="#Import-libraries" title="Permalink to this headline">¶</a></h2>
+<p>For this exercise, you will need one additional library: pandas. Note that os and sys were already imported in the previous cell</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Define-path-and-file-names-for-input-and-output">
+<h2>Define path and file names for input and output<a class="headerlink" href="#Define-path-and-file-names-for-input-and-output" title="Permalink to this headline">¶</a></h2>
+<p>The input files are made available to you in a public folder. The path of the public folder is: /srv/projects/cybertrainingfair/files/public/FAIR_Data_Processing/CN_Grid It has the following files: 1) Boundary shapefile - Boundary.shp 2) Soil data shapefile - Soil.shp 3) Landuse raster - LU.tif 4) Curve Number Lookup Table - LookUp.csv 5) Landuse reclassify table - NLCD_reclass.csv Assign variables to these filenames (including the full path). You can use os.path.join() or string operations.
+Finally, define your output folder here. This is where you will store your intermediate files and final output. This should be located in your mygeohub storage space. Note that your mygeohub home location is /home/mygeohub/username</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">input_folder</span> <span class="o">=</span> <span class="s1">&#39;/srv/projects/cybertrainingfair/files/public/FAIR_Data_Processing/CN_Grid&#39;</span>
+<span class="n">boundary_sh</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">input_folder</span><span class="p">,</span> <span class="s2">&quot;Boundary.shp&quot;</span><span class="p">)</span>
+<span class="n">soil_sh</span> <span class="o">=</span> <span class="n">input_folder</span><span class="o">+</span><span class="s1">&#39;/Soil.shp&#39;</span>
+<span class="n">landuse_tif</span> <span class="o">=</span> <span class="n">input_folder</span><span class="o">+</span><span class="s1">&#39;/LU.tif&#39;</span>
+<span class="n">cn_lookup</span> <span class="o">=</span> <span class="n">input_folder</span><span class="o">+</span><span class="s1">&#39;/LookUp.csv&#39;</span>
+<span class="n">lu_reclass</span> <span class="o">=</span> <span class="n">input_folder</span><span class="o">+</span><span class="s1">&#39;/NLCD_reclass.csv&#39;</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span><span class="o">+</span><span class="s1">&#39;/output&#39;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span><span class="o">+</span><span class="s1">&#39;/output&#39;</span><span class="p">)</span>
+<span class="n">output_folder</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span><span class="o">+</span><span class="s1">&#39;/output&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># help(QgsVectorLayer)</span>
+<span class="c1"># help(QgsRasterLayer)</span>
+<span class="c1"># os.path.exists(landuse_tif)</span>
+<span class="c1"># os.listdir(input_folder)</span>
+<span class="n">output_folder</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">landuse_tif</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">input_folder</span><span class="p">,</span> <span class="s2">&quot;Boundary.shp&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Check-Data">
+<h2>Check Data<a class="headerlink" href="#Check-Data" title="Permalink to this headline">¶</a></h2>
+<p>Check if all three geospatial input files are in the same coordinate system</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">boundary_crs</span> <span class="o">=</span> <span class="n">QgsVectorLayer</span><span class="p">(</span><span class="n">boundary_sh</span><span class="p">,</span> <span class="n">baseName</span><span class="o">=</span><span class="s1">&#39;Boundary CRS&#39;</span><span class="p">,</span> <span class="n">providerLib</span><span class="o">=</span><span class="s1">&#39;ogr&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">crs</span><span class="p">()</span><span class="o">.</span><span class="n">authid</span><span class="p">()</span>
+<span class="n">soil_crs</span> <span class="o">=</span> <span class="n">QgsVectorLayer</span><span class="p">(</span><span class="n">soil_sh</span><span class="p">,</span> <span class="n">baseName</span><span class="o">=</span><span class="s1">&#39;Soil CRS&#39;</span><span class="p">,</span> <span class="n">providerLib</span><span class="o">=</span><span class="s1">&#39;ogr&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">crs</span><span class="p">()</span><span class="o">.</span><span class="n">authid</span><span class="p">()</span>
+<span class="c1"># import rasterio as rio</span>
+<span class="c1"># with rio.open(landuse_tif) as landuse: # not available in qgis?</span>
+<span class="c1">#     landuse.bounds</span>
+<span class="c1"># landuse.crs</span>
+<span class="n">landuse_crs</span> <span class="o">=</span> <span class="n">QgsRasterLayer</span><span class="p">(</span><span class="n">landuse_tif</span><span class="p">,</span> <span class="n">baseName</span><span class="o">=</span><span class="s1">&#39;Landuse CRS&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">crs</span><span class="p">()</span><span class="o">.</span><span class="n">authid</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;boundary:&#39;</span><span class="p">,</span> <span class="n">boundary_crs</span><span class="p">,</span> <span class="s1">&#39;soil:&#39;</span><span class="p">,</span> <span class="n">soil_crs</span><span class="p">,</span> <span class="s1">&#39;landuse:&#39;</span><span class="p">,</span> <span class="n">landuse_crs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Preparing-Landuse-Raster">
+<h2>Preparing Landuse Raster<a class="headerlink" href="#Preparing-Landuse-Raster" title="Permalink to this headline">¶</a></h2>
+<p>The NLCD landuse raster contains many classes ranging from 11 to 95 as per NLCD code. We will be reclassifying these into 4 categories: Water (1), Medium Residential (2), Forest (3) and Agricultural (4). Print the NLCD_reclass.csv file to see the reclassification criterion.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">lu_table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">lu_reclass</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">lu_table</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="Create-table-layer-for-reclassification-criterion">
+<h3>Create table layer for reclassification criterion<a class="headerlink" href="#Create-table-layer-for-reclassification-criterion" title="Permalink to this headline">¶</a></h3>
+<p>The following code creates a layer containing the reclassification table using <a class="reference external" href="https://qgis.org/pyqgis/3.4/core/QgsVectorLayer.html#qgis.core.QgsVectorLayer">QgsVectorLayer()</a> from a delimited file. This layer is required for specifying the reclassification cirterion. The text file needs to be input as a URI (Universal Resource Identifier). The URI for NLCD_reclass.csv is provided below.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">table_uri</span> <span class="o">=</span> <span class="s1">&#39;file:///srv/projects/cybertrainingfair/files/public/FAIR_Data_Processing/CN_Grid/NLCD_reclass.csv?type=csv&amp;detectTypes=yes&amp;geomType=none&amp;subsetIndex=no&amp;watchFile=no&#39;</span>
+<span class="n">table_lyr</span> <span class="o">=</span> <span class="n">QgsVectorLayer</span><span class="p">(</span><span class="n">table_uri</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;delimitedtext&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># table_lyr</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Reclassify-landuse-raster">
+<h3>Reclassify landuse raster<a class="headerlink" href="#Reclassify-landuse-raster" title="Permalink to this headline">¶</a></h3>
+<p>We will use <a class="reference external" href="https://docs.qgis.org/3.4/en/docs/user_manual/processing_algs/qgis/rasteranalysis.html#reclassify-by-layer">native:reclassifybylayer</a> with processing.run(). You will need to specify the following arguments: ‘INPUT_RASTER’: full path to LU.tif, ‘RASTER_BAND’: 1, ‘INPUT_TABLE’: table_lyr, ‘MIN_FIELD’: ‘min’, ‘MAX_FIELD’: ‘max’, ‘VALUE_FIELD’: ‘value’ ‘NO_DATA’: -9999, ‘RANGE_BOUNDARIES’: 0, ‘NODATA_FOR_MISSING’: False, ‘DATA_TYPE’: 5, ‘OUTPUT’: full path to output file example:
+output_folder/lu_reclass_raster.tif</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">processing</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;native:reclassifybylayer&quot;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="s1">&#39;INPUT_RASTER&#39;</span><span class="p">:</span> <span class="n">landuse_tif</span><span class="p">,</span><span class="s1">&#39;RASTER_BAND&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+    <span class="s1">&#39;INPUT_TABLE&#39;</span><span class="p">:</span> <span class="n">table_lyr</span><span class="p">,</span>
+    <span class="s1">&#39;MIN_FIELD&#39;</span><span class="p">:</span><span class="s1">&#39;min&#39;</span><span class="p">,</span><span class="s1">&#39;MAX_FIELD&#39;</span><span class="p">:</span><span class="s1">&#39;max&#39;</span><span class="p">,</span><span class="s1">&#39;VALUE_FIELD&#39;</span><span class="p">:</span><span class="s1">&#39;value&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;NO_DATA&#39;</span><span class="p">:</span><span class="o">-</span><span class="mi">9999</span><span class="p">,</span><span class="s1">&#39;RANGE_BOUNDARIES&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;NODATA_FOR_MISSING&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span><span class="s1">&#39;DATA_TYPE&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span>
+    <span class="s1">&#39;OUTPUT&#39;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_folder</span><span class="p">,</span><span class="s2">&quot;lu_reclass_raster.tif&quot;</span><span class="p">)})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Landuse raster is ready!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="Create-Soil-Raster">
+<h2>Create Soil Raster<a class="headerlink" href="#Create-Soil-Raster" title="Permalink to this headline">¶</a></h2>
+<p>Soil data is available as polygon (vector) dataset. We convert it into raster dataset using gdal:rasterize. We need to ensure that the soil raster has the same extent and pixel size (resolution) as the landuse raster. This is done using the “EXTENT” argument of gdal:rasterize.</p>
+<div class="section" id="Creating-requisite-expression-for-EXTENT">
+<h3>Creating requisite expression for EXTENT<a class="headerlink" href="#Creating-requisite-expression-for-EXTENT" title="Permalink to this headline">¶</a></h3>
+<p>The EXTENT argument of gdal:rasterize needs an expression (string) stating the west, east, south and north bounds of the raster as well as its coordinate system. The string has the syntax: “west bound, east bound, south bound, north bound [CRS Auth ID]”</p>
+<p>For this case, it should look like ‘224850.725009,296730.725009,3403431.244106,3516291.244106 [EPSG:26917]’.</p>
+<p>Create a raster layer for the landuse raster. From the layer’s extent, extract the coordinate system and bounds to create the string shown above.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># extent</span>
+<span class="n">lu_lyr</span> <span class="o">=</span> <span class="n">QgsRasterLayer</span><span class="p">(</span><span class="n">landuse_tif</span><span class="p">)</span>
+<span class="c1"># ext = QgsRasterLayer(landuse_tif, baseName=&#39;Landuse Extent&#39;).extent()</span>
+<span class="n">ext</span> <span class="o">=</span> <span class="n">lu_lyr</span><span class="o">.</span><span class="n">extent</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">ext_str</span><span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">ext</span><span class="o">.</span><span class="n">xMinimum</span><span class="p">())</span><span class="o">+</span><span class="s1">&#39;,&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ext</span><span class="o">.</span><span class="n">xMaximum</span><span class="p">())</span><span class="o">+</span><span class="s1">&#39;,&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ext</span><span class="o">.</span><span class="n">yMinimum</span><span class="p">())</span><span class="o">+</span><span class="s1">&#39;,&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ext</span><span class="o">.</span><span class="n">yMaximum</span><span class="p">())</span><span class="o">+</span><span class="s1">&#39; &#39;</span><span class="o">+</span> <span class="s1">&#39;[&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">landuse_crs</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;]&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">ext_str</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># help(QgsRasterLayer)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Extracting-horizontal-and-vertical-resolution-of-landuse">
+<h3>Extracting horizontal and vertical resolution of landuse<a class="headerlink" href="#Extracting-horizontal-and-vertical-resolution-of-landuse" title="Permalink to this headline">¶</a></h3>
+<p>From the landuse layer, get its resolution in X and Y direction using rasterUnitsPerPixelX and rasterUnitsPerPixelY attribute.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">pixelSizeX</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">lu_lyr</span><span class="o">.</span><span class="n">rasterUnitsPerPixelX</span><span class="p">())</span>
+<span class="n">pixelSizeY</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">lu_lyr</span><span class="o">.</span><span class="n">rasterUnitsPerPixelY</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Converting-Soil-polygon-to-raster">
+<h3>Converting Soil polygon to raster<a class="headerlink" href="#Converting-Soil-polygon-to-raster" title="Permalink to this headline">¶</a></h3>
+<p>Create a vector layer for soil data. Use processing.run to execute gdal:rasterize. It has the following arguments: ‘INPUT’: soil layer, ‘FIELD’:‘HSG_Index’, ‘BURN’:None, ‘UNITS’:1, ‘WIDTH’:pixelSizeX, ‘HEIGHT’:pixelSizeY, ‘EXTENT’: expression, ‘NODATA’:0, ‘OPTIONS’:’‘, ’DATA_TYPE’:5, ‘INIT’:None, ‘INVERT’:False, ‘OUTPUT’:full path to file where output is saved</p>
+<p>Hint: See how the reclassifybylayer tool has been used above.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">soil_lyr</span> <span class="o">=</span> <span class="n">QgsVectorLayer</span><span class="p">(</span><span class="n">soil_sh</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">processing</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;gdal:rasterize&quot;</span><span class="p">,{</span><span class="s1">&#39;INPUT&#39;</span><span class="p">:</span><span class="n">soil_lyr</span><span class="p">,</span> <span class="s1">&#39;FIELD&#39;</span><span class="p">:</span><span class="s1">&#39;HSG_Index&#39;</span><span class="p">,</span> <span class="s1">&#39;BURN&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;UNITS&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;WIDTH&#39;</span><span class="p">:</span> <span class="n">pixelSizeX</span><span class="p">,</span> <span class="s1">&#39;HEIGHT&#39;</span><span class="p">:</span> <span class="n">pixelSizeY</span><span class="p">,</span> <span class="s1">&#39;EXTENT&#39;</span><span class="p">:</span><span class="n">ext_str</span><span class="p">,</span> <span class="s1">&#39;NODATA&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+                                <span class="s1">&#39;OPTIONS&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;DATA_TYPE&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;INIT&#39;</span><span class="p">:</span><span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;INVERT&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;OUTPUT&#39;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_folder</span><span class="p">,</span> <span class="s1">&#39;soil_raster.tif&#39;</span><span class="p">)})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Soil raster is ready!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="Calculating-CN-for-each-cell">
+<h2>Calculating CN for each cell<a class="headerlink" href="#Calculating-CN-for-each-cell" title="Permalink to this headline">¶</a></h2>
+<p>We are going to use the gdal:rastercalculator to calculate the CN value for each corresponding cell of soil and landuse raster. The look up table provides the CN value for each pair of soil and landuse value/category. The information in the look up table needs to be converted to a formula (string) that the raster calculator can use to create the CN raster.</p>
+<p>The formula is as follows: ‘100* (A==1) + 57* logical_and(A==2, B==1) + 72* logical_and(A==2,B==2) + 81* logical_and(A==2,B==3) + 86* logical_and(A==2,B==4) + ’30* logical_and(A==3, B==1) + 58* logical_and(A==3,B==2) + 71* logical_and(A==3,B==3) + 78* logical_and(A==3,B==4) + ’67* logical_and(A==4, B==1) + 77* logical_and(A==4,B==2) + 83* logical_and(A==4,B==3) + 87* logical_and(A==4,B==4)’</p>
+<p>Can you read the look up table from LookUp.csv file and parse the text to create the above string? Here A is landuse, B is soil.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">cn_table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">cn_lookup</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">cn_table</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">cn_formula</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;100* (A==1) + 57* logical_and(A==2, B==1) + 72* logical_and(A==2,B==2) + 81* logical_and(A==2,B==3) + 86* logical_and(A==2,B==4) + 30* logical_and(A==3, B==1) + 58* logical_and(A==3,B==2) + 71* logical_and(A==3,B==3) + 78* logical_and(A==3,B==4) + 67* logical_and(A==4, B==1) + 77* logical_and(A==4,B==2) + 83* logical_and(A==4,B==3) + 87* logical_and(A==4,B==4)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Finally, use the gdal:rastercalculator to get the CN grid. It needs the following arguments (similar to reclassifybylayer tool) ‘INPUT_A’: full path to reclassified landuse raster, ‘BAND_A’:1, ‘INPUT_B’: full path to soil raster, ‘BAND_B’:1, ‘FORMULA’: CN formula defined above, ‘NO_DATA’:None, ‘RTYPE’:4, ‘OPTIONS’:’‘, ’OUTPUT’: full path to output file, make sure the output file is a .tif file</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">processing</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;gdal:rastercalculator&#39;</span><span class="p">,{</span><span class="s1">&#39;INPUT_A&#39;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_folder</span><span class="p">,</span><span class="s2">&quot;lu_reclass_raster.tif&quot;</span><span class="p">),</span> <span class="s1">&#39;BAND_A&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;INPUT_B&#39;</span><span class="p">:</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_folder</span><span class="p">,</span> <span class="s1">&#39;soil_raster.tif&#39;</span><span class="p">),</span>
+                                       <span class="s1">&#39;BAND_B&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;FORMULA&#39;</span><span class="p">:</span><span class="n">cn_formula</span><span class="p">,</span> <span class="s1">&#39;NO_DATA&#39;</span><span class="p">:</span><span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;RTYPE&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;OPTIONS&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;OUTPUT&#39;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_folder</span><span class="p">,</span> <span class="s1">&#39;cn_raster.tif&#39;</span><span class="p">)})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;CN raster is ready!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <!-- 
+This file modifies the default sphinx_rtd_theme footer
+-->
+
+
+
+<footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+  <!-- your html code here -->
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

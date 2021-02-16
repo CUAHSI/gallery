@@ -1,9 +1,40 @@
 .launch-badge {
     float: left;
     margin: 10px;
+    padding: 10px !important;
 }
+
 .launch-container {
 }
-.wy-nav-content {
+
+/*.wy-nav-content {
     max-width: none;
+    height: auto !important;
+    width: 100%;
+}
+*/
+.wy-nav-content-wrap {
+    background: #fcfcfc;
+
+    /*
+    display: flex;
+    min-width: 100%;
+    */
+}
+
+
+div.card {
+    max-width: 400px;
+}
+
+.example-title {
+    padding: 2px;
+}
+
+/* This is really messy but just navigates the panel hierarchy 
+ * This is necessary to change the formatting of the panel titles 
+ */
+div.example-panels > div > div > div > div > blockquote {
+    margin-bottom: 0px;
+
 }

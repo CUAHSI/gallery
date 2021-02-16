@@ -1,0 +1,1139 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Trend Detection and Forecasting &mdash; BuildDocs version documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/language_data.js"></script>
+        <script src="../../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../../_static/copybutton.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html">
+          
+
+          
+            
+            <img src="../../../../../_static/cuahsi-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Galleries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../python/index.html">python Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../python/index.html#research-examples">Research Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../python/index.html#reproducible-science-examples">Reproducible Science Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../python/index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">R Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">BuildDocs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          <!--
+The purpose of this template is to override (i.e. supress) the breadcrumbs that appear at the top of each page.
+-->
+
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Trend-Detection-and-Forecasting">
+<h1>Trend Detection and Forecasting<a class="headerlink" href="#Trend-Detection-and-Forecasting" title="Permalink to this headline">¶</a></h1>
+<p>This lesson was adapted from educational material written by <a class="reference external" href="https://www.hydroshare.org/user/4912/">Dr. Kateri Salk</a> for her Fall 2019 Hydrologic Data Analysis course at Duke University. This is the second part of a two-part exercise focusing on time series analysis.</p>
+<div class="section" id="Introduction">
+<h2>Introduction<a class="headerlink" href="#Introduction" title="Permalink to this headline">¶</a></h2>
+<p>Time series are a special class of dataset, where a response variable is tracked over time. Time series analysis is a powerful technique that can be used to understand the various temporal patterns in our data by decomposing data into different cyclic trends. Time series analysis can also be used to predict how levels of a variable will change in the future, taking into account what has happened in the past.</p>
+</div>
+<div class="section" id="Learning-Objectives">
+<h2>Learning Objectives<a class="headerlink" href="#Learning-Objectives" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Choose appropriate time series analyses for trend detection and forecasting</p></li>
+<li><p>Discuss the influence of seasonality on time series analysis</p></li>
+<li><p>Interpret and communicate results of time series analyses</p></li>
+</ol>
+</div>
+<div class="section" id="Requirements-to-Complete-Lesson">
+<h2>Requirements to Complete Lesson<a class="headerlink" href="#Requirements-to-Complete-Lesson" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="Packages">
+<h3>Packages<a class="headerlink" href="#Packages" title="Permalink to this headline">¶</a></h3>
+<p>This lesson requires the installation of the following R packages to run the provided script: - <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code>- Version 3.3.3. Creates elegant data visualisations using the Grammar of Graphics. - <code class="docutils literal notranslate"><span class="pre">tidyverse</span></code>- Version 1.3.0. A collection of R packages designed for data science. - <code class="docutils literal notranslate"><span class="pre">lubridate</span></code>- Version 1.7.9. Functions for working with dates/times. - <code class="docutils literal notranslate"><span class="pre">scales</span></code>-Version 1.1.1. Graphical scales provide methods for automatically determining breaks and labels for axes and legends. -
+<code class="docutils literal notranslate"><span class="pre">dataRetrival</span></code>-Version 2.7.6. Retrieval Functions for USGS and EPA Hydrologic and Water Quality Data. - <code class="docutils literal notranslate"><span class="pre">stats</span></code>-Version 4.0.3. This package contains functions for statistical calculations and random number generation. - <code class="docutils literal notranslate"><span class="pre">stlplus</span></code>-Version 0.5.1. Decompose a time series into seasonal, trend, and remainder components using an implementation of Seasonal Decomposition of Time Series by Loess (STL) that provides several enhancements over the STL method in the stats package. - <code class="docutils literal notranslate"><span class="pre">LAGOSNE</span></code>-
+Version 2.0.2. Client for programmatic access to the Lake Multi-scaled Geospatial and Temporal database <a class="reference external" href="https://lagoslakes.org">https://lagoslakes.org</a>, with functions for accessing lake water quality and ecological context data for the US. - <code class="docutils literal notranslate"><span class="pre">trend</span></code>- Version 1.1.4. Non-Parametric Trend Tests and Change-Point Detection. - <code class="docutils literal notranslate"><span class="pre">forecast</span></code>- Version 8.13. Methods and tools for displaying and analysing univariate time series forecasts including exponential smoothing via state space models and automatic ARIMA modelling. -
+<code class="docutils literal notranslate"><span class="pre">tseries</span></code>- Version 0.10-48. Time series analysis and computational finance.</p>
+</div>
+<div class="section" id="Data-and-Code">
+<h3>Data and Code<a class="headerlink" href="#Data-and-Code" title="Permalink to this headline">¶</a></h3>
+<p>This lesson will query data from LAGOSNE, a combination of three data modules (LAGOSlocus, LAGOSlimno, LAGOSgeo) designed to be of use for researchers and managers to facilitate further development of our basic understanding of lake water quality at broad scales using water quality data on thousands of lakes collected over the last several decades. The database includes information about lakes in a lake-rich region of 17 states in the United States, including Minnesota, Iowa, Wisconsin,
+Illinois, Missouri, Michigan, Indiana, Ohio, Pennsylvania, New York, New Jersey, Connecticut, New Hampshire, Rhode Island, Massachusetts, Vermont, and Maine. LAGOSNE contains a complete census of all lakes greater than 4 hectares in the region with supporting ecological context information. Additionally, for a subset of lakes, LAGOSNE contains water quality data. The LAGOSNE package was built so that future data users could easily retrieve and manipulate the data, as well as easily access
+metadata.</p>
+<p>It should be noted that the databases are not static as data is constantly being added. For more in-depth information on the <code class="docutils literal notranslate"><span class="pre">LAGOSNE</span></code> package, please visit <a class="reference external" href="https://github.com/cont-limno/LAGOSNE">https://github.com/cont-limno/LAGOSNE</a> and <a class="reference external" href="https://cont-limno.github.io/LAGOSNE/articles/lagosne_structure.html">https://cont-limno.github.io/LAGOSNE/articles/lagosne_structure.html</a>.</p>
+<p>The code provided in this resource was developed using R version 3.6.1.</p>
+</div>
+<div class="section" id="Set-Working-Directory">
+<h3>Set Working Directory<a class="headerlink" href="#Set-Working-Directory" title="Permalink to this headline">¶</a></h3>
+<p>In R, the working directory is the directory where R starts when looking for any file to open (as directed by a file path) and where it saves any output. This lesson assumes that you have set your working directory to the folder location of the downloaded and unzipped data subsets.</p>
+</div>
+<div class="section" id="Load-packages-and-set-ggplot-theme">
+<h3>Load packages and set ggplot theme<a class="headerlink" href="#Load-packages-and-set-ggplot-theme" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="nf">options</span><span class="p">(</span><span class="n">warn</span><span class="o">=</span><span class="m">-1</span><span class="p">)</span>
+
+<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">lubridate</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">scales</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">dataRetrieval</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">stats</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">stlplus</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">LAGOSNE</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">trend</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">forecast</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">tseries</span><span class="p">)</span>
+
+<span class="n">LAGOSdata</span> <span class="o">&lt;-</span> <span class="nf">lagosne_load</span><span class="p">()</span>
+<span class="nf">theme_set</span><span class="p">(</span><span class="nf">theme_gray</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="Trend-analysis">
+<h2>Trend analysis<a class="headerlink" href="#Trend-analysis" title="Permalink to this headline">¶</a></h2>
+<p>Two types of trends may be present in our time series dataset: <strong>monotonic</strong> or <strong>step</strong>. Monotonic trends are a gradual shift over time that is consistent in direction, for example in response to land use change. Step trends are a distinct shift at a given time point, for example in response to a policy being enacted.</p>
+<div class="section" id="Step-trend-analysis">
+<h3>Step trend analysis<a class="headerlink" href="#Step-trend-analysis" title="Permalink to this headline">¶</a></h3>
+<p>Step trend analysis works well for upstream/downstream and before/after study design. We will not delve into these methods during class, but specific tests are listed below for future reference.</p>
+<p>Note: ALWAYS look into the assumptions of a given test to ensure it matches with your data and with your research question.</p>
+<ul class="simple">
+<li><p><strong>Change point detection</strong>, e.g., <code class="docutils literal notranslate"><span class="pre">pettitt.test</span></code> (package: trend) or <code class="docutils literal notranslate"><span class="pre">breakpoints</span></code> (package: strucchange)</p></li>
+<li><p><strong>t-test (paired or unpaired)</strong></p></li>
+<li><p><strong>Kruskal-Wallis test</strong>: non-parametric version of t-test</p></li>
+<li><p><strong>ANCOVA</strong>, analysis of covariance</p></li>
+</ul>
+</div>
+<div class="section" id="Monotonic-trend-analysis">
+<h3>Monotonic trend analysis<a class="headerlink" href="#Monotonic-trend-analysis" title="Permalink to this headline">¶</a></h3>
+<p>In general, detecting a monotonic trend requires a long sequence of data with few gaps. If we are working with monthly data, a time series of at least five years is recommended. Gaps can be accounted for, but a gap that makes up more than 1/3 of the sampling period is generally considered the threshold for considering a gap to be too long (a step trend analysis might be better in this situation).</p>
+<p>Adjusting the data may be necessary to fulfill the assumptions of a trend test. These adjustments include <strong>aggregation</strong>, <strong>subsampling</strong>, and <strong>interpolation</strong>. What do each of these mean, and why might we want to use them?</p>
+<blockquote>
+<div><p>aggregation:</p>
+</div></blockquote>
+<blockquote>
+<div><p>subsampling:</p>
+<p>interpolation:</p>
+</div></blockquote>
+<p>Specific tests for monotonic trend analysis are listed below, with assumptions and tips:</p>
+<ul class="simple">
+<li><p><strong>linear regression</strong>: no seasonality, fits the assumptions of a parametric test. Function: <code class="docutils literal notranslate"><span class="pre">lm</span></code></p></li>
+<li><p><strong>Mann-Kendall</strong>: no seasonality, non-parametric, no temporal autocorrelation, missing data allowed. Function: <code class="docutils literal notranslate"><span class="pre">mk.test</span></code> (package: trend)</p></li>
+<li><p><strong>modified Mann-Kendall</strong>: no seasonality, non-parametric, accounts for temporal autocorrelation, missing data allowed. Function: <code class="docutils literal notranslate"><span class="pre">mmky</span></code> and <code class="docutils literal notranslate"><span class="pre">mmkh</span></code> (package: modifiedmk)</p></li>
+<li><p><strong>Seasonal Mann-Kendall</strong>: seasonality, non-parametric, no temporal autocorelation, identical distribution. Function: <code class="docutils literal notranslate"><span class="pre">smk.test</span></code> (package: trend)</p></li>
+</ul>
+<p>The packages trend, Kendall, and modifiedmk also include other modifications to monotonic trend tests. Look into the documentation for these packages if you are applying a special case.</p>
+<p>If covariates (another predictor variable) are included in the dataset, additional tests are recommended. A great resource for trend testing for water quality monitoring, which includes guidance on these cases, has been prepared by the Environmental Protection Agency: <a class="reference external" href="https://www.epa.gov/sites/production/files/2016-05/documents/tech_notes_6_dec2013_trend.pdf">https://www.epa.gov/sites/production/files/2016-05/documents/tech_notes_6_dec2013_trend.pdf</a></p>
+</div>
+</div>
+<div class="section" id="Trend-test-example:-Total-Phosphorus-in-Lake-Mendota">
+<h2>Trend test example: Total Phosphorus in Lake Mendota<a class="headerlink" href="#Trend-test-example:-Total-Phosphorus-in-Lake-Mendota" title="Permalink to this headline">¶</a></h2>
+<p>Lake Mendota (Wisconsin, USA) is often considered the birthplace of limnology and the most well-studied lake in the world. It has been sampled for over 100 years, and several parts of this dataset are included in the LAGOSNE database.</p>
+<p>Today we will work with total phosphorus data from Lake Mendota to determine whether there has been a monotonic trend in these concentrations over time.</p>
+<div class="section" id="Create-a-data-frame-for-nutrients">
+<h3>Create a data frame for nutrients<a class="headerlink" href="#Create-a-data-frame-for-nutrients" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">LAGOSnutrient</span> <span class="o">&lt;-</span> <span class="n">LAGOSdata</span><span class="o">$</span><span class="n">epi_nutr</span>
+<span class="n">LAGOSnutrient</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<table>
+<caption>A data.frame: 816095 × 92</caption>
+<thead>
+    <tr><th scope=col>eventida10873</th><th scope=col>lagoslakeid</th><th scope=col>programid</th><th scope=col>sampledate</th><th scope=col>programname</th><th scope=col>programtype</th><th scope=col>chla</th><th scope=col>chla_qual</th><th scope=col>chla_censorcode</th><th scope=col>chla_detectionlimit</th><th scope=col>⋯</th><th scope=col>ton_labmethodname</th><th scope=col>tp</th><th scope=col>tp_qual</th><th scope=col>tp_censorcode</th><th scope=col>tp_detectionlimit</th><th scope=col>tp_labmethodname</th><th scope=col>secchi</th><th scope=col>secchi_qual</th><th scope=col>secchi_censorcode</th><th scope=col>secchi_methodinfo</th></tr>
+    <tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;date&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>⋯</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+    <tr><td>181212</td><td>126841</td><td>47</td><td>1985-11-05</td><td>NY_LCI_CHEM</td><td>State Agency</td><td>  8.40</td><td>NA</td><td>NC1</td><td>2</td><td>⋯</td><td>NA</td><td>100</td><td>NA</td><td>NC1</td><td>3.00</td><td>EPA_365.1</td><td>1.0000</td><td>NA</td><td>NC3</td><td>NA                 </td></tr>
+    <tr><td>102404</td><td>  6456</td><td>11</td><td>2006-06-15</td><td>IL_ALMP    </td><td>State Agency</td><td>  5.64</td><td>NA</td><td>NC2</td><td>1</td><td>⋯</td><td>NA</td><td> 14</td><td>NA</td><td>NC2</td><td>4.00</td><td>MULTIPLE </td><td>2.2098</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+    <tr><td>102487</td><td>  6469</td><td>11</td><td>2006-06-19</td><td>IL_ALMP    </td><td>State Agency</td><td> 41.90</td><td>Q </td><td>NC1</td><td>1</td><td>⋯</td><td>NA</td><td> 88</td><td>NA</td><td>NC2</td><td>4.00</td><td>MULTIPLE </td><td>0.4572</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+    <tr><td>164262</td><td> 81320</td><td>47</td><td>1985-11-07</td><td>NY_LCI_CHEM</td><td>State Agency</td><td>  1.40</td><td>NA</td><td>LE1</td><td>2</td><td>⋯</td><td>NA</td><td>100</td><td>NA</td><td>NC1</td><td>3.00</td><td>EPA_365.1</td><td>0.5000</td><td>NA</td><td>NC3</td><td>NA                 </td></tr>
+    <tr><td>179320</td><td>122514</td><td>47</td><td>1988-06-23</td><td>NY_LCI_CHEM</td><td>State Agency</td><td>133.20</td><td>NA</td><td>NC1</td><td>2</td><td>⋯</td><td>NA</td><td>700</td><td>NA</td><td>NC1</td><td>3.00</td><td>EPA_365.1</td><td>0.4000</td><td>NA</td><td>NC3</td><td>NA                 </td></tr>
+    <tr><td>102364</td><td>  6450</td><td>11</td><td>2006-08-23</td><td>IL_ALMP    </td><td>State Agency</td><td> 12.30</td><td>NA</td><td>NC2</td><td>1</td><td>⋯</td><td>NA</td><td> 14</td><td>NA</td><td>NC2</td><td>4.00</td><td>MULTIPLE </td><td>0.9144</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+    <tr><td>102405</td><td>  6456</td><td>11</td><td>2006-07-21</td><td>IL_ALMP    </td><td>State Agency</td><td>  8.69</td><td>NA</td><td>NC2</td><td>1</td><td>⋯</td><td>NA</td><td> 16</td><td>NA</td><td>NC2</td><td>4.00</td><td>MULTIPLE </td><td>1.9812</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+    <tr><td>102406</td><td>  6456</td><td>11</td><td>2006-08-07</td><td>IL_ALMP    </td><td>State Agency</td><td>  4.53</td><td>NA</td><td>NC2</td><td>1</td><td>⋯</td><td>NA</td><td> 16</td><td>NA</td><td>NC2</td><td>4.00</td><td>MULTIPLE </td><td>1.8288</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+    <tr><td>102407</td><td>  6456</td><td>11</td><td>2006-10-05</td><td>IL_ALMP    </td><td>State Agency</td><td> 19.70</td><td>NA</td><td>NC2</td><td>1</td><td>⋯</td><td>NA</td><td> 16</td><td>NA</td><td>NC2</td><td>4.00</td><td>MULTIPLE </td><td>2.2860</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+    <tr><td>111095</td><td>  6981</td><td>11</td><td>2007-08-15</td><td>IL_ALMP    </td><td>State Agency</td><td>167.00</td><td>Q </td><td>NC1</td><td>1</td><td>⋯</td><td>NA</td><td>544</td><td>NA</td><td>NC2</td><td>2.00</td><td>MULTIPLE </td><td>0.2794</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+    <tr><td>111457</td><td>  7020</td><td>11</td><td>2006-05-16</td><td>IL_ALMP    </td><td>State Agency</td><td> 41.50</td><td>NA</td><td>NC2</td><td>1</td><td>⋯</td><td>NA</td><td> 22</td><td>NA</td><td>NC2</td><td>4.00</td><td>MULTIPLE </td><td>1.2192</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+    <tr><td>111461</td><td>  7020</td><td>11</td><td>2006-10-30</td><td>IL_ALMP    </td><td>State Agency</td><td> 13.70</td><td>NA</td><td>NC2</td><td>1</td><td>⋯</td><td>NA</td><td> 27</td><td>NA</td><td>NC2</td><td>4.00</td><td>MULTIPLE </td><td>0.5334</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+    <tr><td>111540</td><td>  7029</td><td>11</td><td>2007-08-15</td><td>IL_ALMP    </td><td>State Agency</td><td> 55.60</td><td>Q </td><td>NC1</td><td>1</td><td>⋯</td><td>NA</td><td>147</td><td>NA</td><td>NC2</td><td>1.02</td><td>MULTIPLE </td><td>0.7112</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+    <tr><td>111767</td><td>  7042</td><td>11</td><td>2006-06-19</td><td>IL_ALMP    </td><td>State Agency</td><td> 40.30</td><td>Q </td><td>NC1</td><td>1</td><td>⋯</td><td>NA</td><td>105</td><td>NA</td><td>NC2</td><td>1.00</td><td>MULTIPLE </td><td>0.6096</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+    <tr><td>116163</td><td>  7386</td><td>11</td><td>2006-05-16</td><td>IL_ALMP    </td><td>State Agency</td><td> 49.70</td><td>NA</td><td>NC2</td><td>1</td><td>⋯</td><td>NA</td><td> 43</td><td>NA</td><td>NC2</td><td>4.00</td><td>MULTIPLE </td><td>0.4064</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+    <tr><td>181210</td><td>126841</td><td>47</td><td>1985-06-04</td><td>NY_LCI_CHEM</td><td>State Agency</td><td> 13.90</td><td>NA</td><td>NC1</td><td>2</td><td>⋯</td><td>NA</td><td>100</td><td>NA</td><td>NC1</td><td>3.00</td><td>EPA_365.1</td><td>2.0000</td><td>NA</td><td>NC3</td><td>NA                 </td></tr>
+    <tr><td>181214</td><td>126841</td><td>47</td><td>1987-09-15</td><td>NY_LCI_CHEM</td><td>State Agency</td><td>  5.80</td><td>NA</td><td>NC1</td><td>2</td><td>⋯</td><td>NA</td><td>100</td><td>NA</td><td>NC1</td><td>3.00</td><td>EPA_365.1</td><td>1.3300</td><td>NA</td><td>NC3</td><td>NA                 </td></tr>
+    <tr><td>102361</td><td>  6450</td><td>11</td><td>2006-05-22</td><td>IL_ALMP    </td><td>State Agency</td><td>  2.42</td><td>NA</td><td>NC2</td><td>1</td><td>⋯</td><td>NA</td><td> 11</td><td>NA</td><td>NC2</td><td>4.00</td><td>MULTIPLE </td><td>1.2192</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+    <tr><td>102403</td><td>  6456</td><td>11</td><td>2006-05-04</td><td>IL_ALMP    </td><td>State Agency</td><td> 33.00</td><td>NA</td><td>NC2</td><td>1</td><td>⋯</td><td>NA</td><td> 21</td><td>NA</td><td>NC2</td><td>4.00</td><td>MULTIPLE </td><td>1.7272</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+    <tr><td>102408</td><td>  6457</td><td>11</td><td>2006-05-22</td><td>IL_ALMP    </td><td>State Agency</td><td> 17.40</td><td>NA</td><td>NC2</td><td>1</td><td>⋯</td><td>NA</td><td> 46</td><td>NA</td><td>NC2</td><td>4.00</td><td>MULTIPLE </td><td>0.4572</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+    <tr><td>102521</td><td>  6472</td><td>11</td><td>2006-07-24</td><td>IL_ALMP    </td><td>State Agency</td><td> 55.60</td><td>NA</td><td>NC2</td><td>1</td><td>⋯</td><td>NA</td><td> 43</td><td>NA</td><td>NC2</td><td>4.00</td><td>MULTIPLE </td><td>0.3556</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+    <tr><td>102522</td><td>  6472</td><td>11</td><td>2006-08-21</td><td>IL_ALMP    </td><td>State Agency</td><td> 28.30</td><td>NA</td><td>NC2</td><td>1</td><td>⋯</td><td>NA</td><td> 28</td><td>NA</td><td>NC2</td><td>4.00</td><td>MULTIPLE </td><td>0.3556</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+    <tr><td>110629</td><td>  6965</td><td>11</td><td>2006-10-06</td><td>IL_ALMP    </td><td>State Agency</td><td>116.00</td><td>NA</td><td>NC2</td><td>1</td><td>⋯</td><td>NA</td><td> 93</td><td>NA</td><td>NC2</td><td>4.00</td><td>MULTIPLE </td><td>0.2540</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+    <tr><td>110648</td><td>  6967</td><td>11</td><td>2006-06-05</td><td>IL_ALMP    </td><td>State Agency</td><td> 50.40</td><td>NA</td><td>NC2</td><td>1</td><td>⋯</td><td>NA</td><td> 27</td><td>NA</td><td>NC2</td><td>4.00</td><td>MULTIPLE </td><td>0.6858</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+    <tr><td>111172</td><td>  6987</td><td>11</td><td>2006-10-02</td><td>IL_ALMP    </td><td>State Agency</td><td> 65.10</td><td>NA</td><td>NC2</td><td>1</td><td>⋯</td><td>NA</td><td> 71</td><td>NA</td><td>NC2</td><td>4.00</td><td>MULTIPLE </td><td>0.4064</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+    <tr><td>111180</td><td>  6988</td><td>11</td><td>2006-09-11</td><td>IL_ALMP    </td><td>State Agency</td><td> 18.00</td><td>NA</td><td>NC2</td><td>1</td><td>⋯</td><td>NA</td><td> 44</td><td>NA</td><td>NC2</td><td>4.00</td><td>MULTIPLE </td><td>0.7620</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+    <tr><td>111430</td><td>  7017</td><td>11</td><td>2006-06-19</td><td>IL_ALMP    </td><td>State Agency</td><td>111.00</td><td>Q </td><td>NC1</td><td>1</td><td>⋯</td><td>NA</td><td> 60</td><td>NA</td><td>NC2</td><td>4.00</td><td>MULTIPLE </td><td>0.6096</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+    <tr><td>111444</td><td>  7019</td><td>11</td><td>2006-06-19</td><td>IL_ALMP    </td><td>State Agency</td><td> 80.60</td><td>Q </td><td>NC1</td><td>1</td><td>⋯</td><td>NA</td><td> 46</td><td>NA</td><td>NC2</td><td>4.00</td><td>MULTIPLE </td><td>0.4318</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+    <tr><td>111459</td><td>  7020</td><td>11</td><td>2006-07-18</td><td>IL_ALMP    </td><td>State Agency</td><td> 88.70</td><td>NA</td><td>NC2</td><td>1</td><td>⋯</td><td>NA</td><td> 24</td><td>NA</td><td>NC2</td><td>4.00</td><td>MULTIPLE </td><td>1.7780</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+    <tr><td>116168</td><td>  7387</td><td>11</td><td>2006-05-16</td><td>IL_ALMP    </td><td>State Agency</td><td> 43.80</td><td>NA</td><td>NC2</td><td>1</td><td>⋯</td><td>NA</td><td> 38</td><td>NA</td><td>NC2</td><td>4.00</td><td>MULTIPLE </td><td>0.4572</td><td>NA</td><td>NC4</td><td>SECCHI_VIEW_UNKNOWN</td></tr>
+    <tr><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋱</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td></tr>
+    <tr><td>816066</td><td>141114</td><td>18</td><td>1982-05-16</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>3.9624</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816067</td><td>141114</td><td>18</td><td>1982-05-23</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>2.4384</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816068</td><td>141114</td><td>18</td><td>1982-06-06</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>3.9624</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816069</td><td>141114</td><td>18</td><td>1982-06-13</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>2.1336</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816070</td><td>141114</td><td>18</td><td>1982-06-20</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>2.1336</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816071</td><td>141114</td><td>18</td><td>1982-06-27</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>2.1336</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816072</td><td>141114</td><td>18</td><td>1982-07-04</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>2.2860</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816073</td><td>141114</td><td>18</td><td>1982-07-11</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>2.8956</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816074</td><td>141114</td><td>18</td><td>1982-07-18</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>2.2860</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816075</td><td>141114</td><td>18</td><td>1982-07-25</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>2.4384</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816076</td><td>141114</td><td>18</td><td>1982-08-01</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>2.7432</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816077</td><td>141114</td><td>18</td><td>1982-08-08</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>2.5908</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816078</td><td>141114</td><td>18</td><td>1982-08-15</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>2.7432</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816079</td><td>141114</td><td>18</td><td>1982-08-29</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>2.5908</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816080</td><td>141114</td><td>18</td><td>1982-09-05</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>2.7432</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816081</td><td>141114</td><td>18</td><td>1982-09-12</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>2.7432</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816082</td><td>141114</td><td>18</td><td>1983-06-12</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>3.3528</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816083</td><td>141114</td><td>18</td><td>1983-06-19</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>4.5720</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816084</td><td>141114</td><td>18</td><td>1983-07-02</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>3.3528</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816085</td><td>141114</td><td>18</td><td>1983-07-17</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>2.7432</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816086</td><td>141114</td><td>18</td><td>1984-05-05</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>2.7432</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816087</td><td>141114</td><td>18</td><td>1984-05-19</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>3.9624</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816088</td><td>141114</td><td>18</td><td>1984-05-26</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>3.0480</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816089</td><td>141114</td><td>18</td><td>1984-06-02</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>3.6576</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816090</td><td>141114</td><td>18</td><td>1984-06-09</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>4.5720</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816091</td><td>141114</td><td>18</td><td>1984-06-16</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>3.6576</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816092</td><td>141114</td><td>18</td><td>1984-06-23</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>2.7432</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816093</td><td>141114</td><td>18</td><td>1984-06-30</td><td>MI_CORPS</td><td>Citizen Monitoring</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>3.0480</td><td>NA</td><td>NC3</td><td>NA</td></tr>
+    <tr><td>816094</td><td>141326</td><td> 1</td><td>1983-06-14</td><td>CT_DEEP </td><td>State Agency      </td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>1.7700</td><td>NA</td><td>NC4</td><td>NA</td></tr>
+    <tr><td>816095</td><td>141326</td><td> 1</td><td>1983-08-16</td><td>CT_DEEP </td><td>State Agency      </td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>⋯</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>0.9400</td><td>NA</td><td>NC4</td><td>NA</td></tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="section" id="Use-the-lake_info-function-to-return-lake-attribute-information">
+<h3>Use the <code class="docutils literal notranslate"><span class="pre">lake_info</span></code> function to return lake attribute information<a class="headerlink" href="#Use-the-lake_info-function-to-return-lake-attribute-information" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="nf">lake_info</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">&quot;Lake Mendota&quot;</span><span class="p">,</span> <span class="n">state</span> <span class="o">=</span> <span class="s">&quot;Wisconsin&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<table>
+<caption>A data.frame: 1 × 33</caption>
+<thead>
+    <tr><th scope=col>lagoslakeid</th><th scope=col>nhdid</th><th scope=col>nhd_lat</th><th scope=col>nhd_long</th><th scope=col>lagosname1</th><th scope=col>meandepth</th><th scope=col>meandepthsource</th><th scope=col>maxdepth</th><th scope=col>maxdepthsource</th><th scope=col>legacyid</th><th scope=col>⋯</th><th scope=col>elevation_m</th><th scope=col>state</th><th scope=col>state_name</th><th scope=col>state_lat</th><th scope=col>state_long</th><th scope=col>state_pct_in_nwi</th><th scope=col>state_ha_in_nwi</th><th scope=col>state_ha</th><th scope=col>lakeconnection</th><th scope=col>iws_ha</th></tr>
+    <tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>⋯</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+    <tr><td>5371</td><td>143249470</td><td>43.10773</td><td>-89.42273</td><td>LAKE MENDOTA</td><td>12.8</td><td>WI_LTER_SECCHI</td><td>25.3</td><td>WI_LTER_SECCHI</td><td>805400;LAKE MENDOTA</td><td>⋯</td><td>257.987</td><td>WI</td><td>Wisconsin</td><td>44.63733</td><td>-90.01184</td><td>100</td><td>14529517</td><td>14529517</td><td>DR_LakeStream</td><td>24360.32</td></tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="section" id="Wrangle-a-dataset-with-just-the-Lake-Mendota-Total-Phosphorus-time-series">
+<h2>Wrangle a dataset with just the Lake Mendota Total Phosphorus time series<a class="headerlink" href="#Wrangle-a-dataset-with-just-the-Lake-Mendota-Total-Phosphorus-time-series" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">Mendotadata</span> <span class="o">&lt;-</span> <span class="n">LAGOSnutrient</span> <span class="o">%&gt;%</span>
+  <span class="nf">filter</span><span class="p">(</span><span class="n">lagoslakeid</span> <span class="o">==</span> <span class="m">5371</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">select</span><span class="p">(</span><span class="n">sampledate</span><span class="p">,</span> <span class="n">tp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Plot-Total-Phosphorus-concentrations-over-time">
+<h2>Plot Total Phosphorus concentrations over time<a class="headerlink" href="#Plot-Total-Phosphorus-concentrations-over-time" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">MendotaTP</span> <span class="o">&lt;-</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">Mendotadata</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">sampledate</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">tp</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">geom_point</span><span class="p">()</span><span class="o">+</span>
+<span class="nf">ggtitle</span><span class="p">(</span><span class="s">&quot;Total Phosphorus Concentrations over Time&quot;</span><span class="p">)</span><span class="o">+</span>
+ <span class="nf">theme</span><span class="p">(</span><span class="n">plot.title</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">margin</span> <span class="o">=</span> <span class="nf">margin</span><span class="p">(</span><span class="n">b</span> <span class="o">=</span> <span class="m">10</span><span class="p">),</span> <span class="n">size</span> <span class="o">=</span> <span class="m">18</span><span class="p">,</span> <span class="n">hjust</span><span class="o">=</span><span class="m">0.5</span><span class="p">,</span> <span class="n">vjust</span><span class="o">=</span><span class="m">0.5</span><span class="p">,</span> <span class="n">face</span><span class="o">=</span><span class="s">&#39;bold&#39;</span><span class="p">),</span> <span class="n">axis.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">),</span> <span class="n">axis.text.y</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">))</span><span class="o">+</span>
+<span class="nf">labs</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Sample Date&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="nf">expression</span><span class="p">(</span><span class="n">Total</span> <span class="o">~</span> <span class="n">P</span> <span class="o">~</span> <span class="p">(</span><span class="n">mu</span><span class="o">*</span><span class="n">g</span> <span class="o">/</span> <span class="n">L</span><span class="p">)),</span> <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;Year&quot;</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">MendotaTP</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../../_images/gallery_R_Instructional_Trend_Detection_and_Forecasting_notebooks_Trend_Detection_and_Forecasting_22_0.png" class="no-scaled-link" src="../../../../../_images/gallery_R_Instructional_Trend_Detection_and_Forecasting_notebooks_Trend_Detection_and_Forecasting_22_0.png" style="width: 420px; height: 420px;" />
+</div>
+</div>
+<p>It is crucially important to visualize your time series before moving forward with any test. In this case, we notice two major issues:</p>
+<ol class="arabic simple">
+<li><p>There is a large gap in monitoring in the 1980s</p></li>
+<li><p>There is an unusually large TP value in September 2000</p></li>
+</ol>
+<p>Detecting whether the outlier is a true measurement or a mistake in the dataset would be recommended at this point. Regardless, we know that a single large point that is more than 3x the value of the next largest value in the dataset will interfere with answering our question, particularly if we use this value for interpolation. Let’s choose to leave this value out of the dataset for our purposes today (a more thorough QA/QC check would be recommended though).</p>
+<div class="section" id="Remove-issues-1-and-2,-arrange-by-date">
+<h3>Remove issues 1 and 2, arrange by date<a class="headerlink" href="#Remove-issues-1-and-2,-arrange-by-date" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">Mendotadata</span> <span class="o">&lt;-</span> <span class="n">Mendotadata</span> <span class="o">%&gt;%</span>
+  <span class="nf">filter</span><span class="p">(</span><span class="n">tp</span> <span class="o">&lt;</span> <span class="m">300</span> <span class="o">&amp;</span> <span class="n">sampledate</span> <span class="o">&gt;</span> <span class="s">&quot;1988-01-01&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">arrange</span><span class="p">(</span><span class="n">sampledate</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="Replot-Total-Phosphorus-Concentrations-over-time">
+<h2>Replot Total Phosphorus Concentrations over time<a class="headerlink" href="#Replot-Total-Phosphorus-Concentrations-over-time" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">MendotaTP</span> <span class="o">&lt;-</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">Mendotadata</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">sampledate</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">tp</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">geom_point</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">geom_line</span><span class="p">()</span><span class="o">+</span>
+ <span class="nf">ggtitle</span><span class="p">(</span><span class="s">&quot;Total Phosphorus Concentrations over Time&quot;</span><span class="p">)</span><span class="o">+</span>
+ <span class="nf">theme</span><span class="p">(</span><span class="n">plot.title</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">margin</span> <span class="o">=</span> <span class="nf">margin</span><span class="p">(</span><span class="n">b</span> <span class="o">=</span> <span class="m">10</span><span class="p">),</span> <span class="n">size</span> <span class="o">=</span> <span class="m">18</span><span class="p">,</span> <span class="n">hjust</span><span class="o">=</span><span class="m">0.5</span><span class="p">,</span> <span class="n">vjust</span><span class="o">=</span><span class="m">0.5</span><span class="p">,</span> <span class="n">face</span><span class="o">=</span><span class="s">&#39;bold&#39;</span><span class="p">),</span> <span class="n">axis.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">),</span> <span class="n">axis.text.y</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">))</span><span class="o">+</span>
+<span class="nf">labs</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Sample Date&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="nf">expression</span><span class="p">(</span><span class="n">Total</span> <span class="o">~</span> <span class="n">P</span> <span class="o">~</span> <span class="p">(</span><span class="n">mu</span><span class="o">*</span><span class="n">g</span> <span class="o">/</span> <span class="n">L</span><span class="p">)),</span> <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;Year&quot;</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">MendotaTP</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../../_images/gallery_R_Instructional_Trend_Detection_and_Forecasting_notebooks_Trend_Detection_and_Forecasting_27_0.png" class="no-scaled-link" src="../../../../../_images/gallery_R_Instructional_Trend_Detection_and_Forecasting_notebooks_Trend_Detection_and_Forecasting_27_0.png" style="width: 420px; height: 420px;" />
+</div>
+</div>
+<p>We see distinct seasonality, with higher TP values occurring in the winter compared to summer. Therefore, we will proceed with a <strong>Seasonal Mann-Kendall</strong> test.</p>
+<p>We see that TP data were collected somewhere between biweekly and monthly across the sampling period. However, the SMK test requires identically distributed data. We will therefore interpolate the data to generate monthly values for TP.</p>
+</div>
+<div class="section" id="Linear-Interpolation">
+<h2>Linear Interpolation<a class="headerlink" href="#Linear-Interpolation" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Generate monthly values from July 1988 to August 2013</span>
+<span class="n">linearinterpolation</span> <span class="o">&lt;-</span> <span class="nf">as.data.frame</span><span class="p">(</span><span class="nf">approx</span><span class="p">(</span><span class="n">Mendotadata</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="m">303</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s">&quot;linear&quot;</span><span class="p">))</span>
+<span class="n">linearinterpolation</span><span class="o">$</span><span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">as.Date</span><span class="p">(</span><span class="n">linearinterpolation</span><span class="o">$</span><span class="n">x</span><span class="p">,</span> <span class="n">origin</span> <span class="o">=</span> <span class="s">&quot;1970-01-01&quot;</span><span class="p">)</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">linearinterpolation</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Date&quot;</span><span class="p">,</span> <span class="s">&quot;TP&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Inspect interpolated values</span>
+<span class="n">MendotaTPinterpolated</span> <span class="o">&lt;-</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">Mendotadata</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">sampledate</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">tp</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">geom_point</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">geom_line</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">geom_point</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">linearinterpolation</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">Date</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">TP</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;#c13d75ff&quot;</span><span class="p">)</span><span class="o">+</span>
+ <span class="nf">ggtitle</span><span class="p">(</span><span class="s">&quot;Interpolated Total Phosphorus Concentrations over Time&quot;</span><span class="p">)</span><span class="o">+</span>
+ <span class="nf">theme</span><span class="p">(</span><span class="n">plot.title</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">margin</span> <span class="o">=</span> <span class="nf">margin</span><span class="p">(</span><span class="n">b</span> <span class="o">=</span> <span class="m">10</span><span class="p">),</span> <span class="n">size</span> <span class="o">=</span> <span class="m">16</span><span class="p">,</span> <span class="n">hjust</span><span class="o">=</span><span class="m">0.5</span><span class="p">,</span> <span class="n">vjust</span><span class="o">=</span><span class="m">0.5</span><span class="p">,</span> <span class="n">face</span><span class="o">=</span><span class="s">&#39;bold&#39;</span><span class="p">),</span> <span class="n">axis.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">),</span> <span class="n">axis.text.y</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">))</span><span class="o">+</span>
+<span class="nf">labs</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Sample Date&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="nf">expression</span><span class="p">(</span><span class="n">Total</span> <span class="o">~</span> <span class="n">P</span> <span class="o">~</span> <span class="p">(</span><span class="n">mu</span><span class="o">*</span><span class="n">g</span> <span class="o">/</span> <span class="n">L</span><span class="p">)),</span> <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;Year&quot;</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">MendotaTPinterpolated</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../../_images/gallery_R_Instructional_Trend_Detection_and_Forecasting_notebooks_Trend_Detection_and_Forecasting_31_0.png" class="no-scaled-link" src="../../../../../_images/gallery_R_Instructional_Trend_Detection_and_Forecasting_notebooks_Trend_Detection_and_Forecasting_31_0.png" style="width: 420px; height: 420px;" />
+</div>
+</div>
+</div>
+<div class="section" id="Generate-Time-Series">
+<h2>Generate Time Series<a class="headerlink" href="#Generate-Time-Series" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">Mendotatimeseries</span> <span class="o">&lt;-</span> <span class="nf">ts</span><span class="p">(</span><span class="n">linearinterpolation</span><span class="o">$</span><span class="n">TP</span><span class="p">,</span> <span class="n">frequency</span> <span class="o">=</span> <span class="m">12</span><span class="p">,</span>
+                        <span class="n">start</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">1988</span><span class="p">,</span> <span class="m">7</span><span class="p">,</span> <span class="m">5</span><span class="p">),</span> <span class="n">end</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">2013</span><span class="p">,</span> <span class="m">8</span><span class="p">,</span> <span class="m">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="Run-Seasonal-Mann-Kendall-Test-and-inspect-results">
+<h3>Run Seasonal Mann Kendall Test and inspect results<a class="headerlink" href="#Run-Seasonal-Mann-Kendall-Test-and-inspect-results" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">Mendotatrend</span> <span class="o">&lt;-</span> <span class="nf">smk.test</span><span class="p">(</span><span class="n">Mendotatimeseries</span><span class="p">)</span>
+<span class="n">Mendotatrend</span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">Mendotatrend</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+        Seasonal Mann-Kendall trend test (Hirsch-Slack test)
+
+data:  Mendotatimeseries
+z = -1.4483, p-value = 0.1475
+alternative hypothesis: true S is not equal to 0
+sample estimates:
+    S  varS
+ -218 22450
+
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+        Seasonal Mann-Kendall trend test (Hirsch-Slack test)
+
+data: Mendotatimeseries
+alternative hypothesis: two.sided
+
+Statistics for individual seasons
+
+H0
+                      S   varS    tau      z   Pr(&gt;|z|)
+Season 1:   S = 0    56 1833.3  0.187  1.285 0.19895893
+Season 2:   S = 0    42 1833.3  0.140  0.958 0.33828785
+Season 3:   S = 0    28 1833.3  0.093  0.631 0.52831247
+Season 4:   S = 0    -6 1833.3 -0.020 -0.117 0.90703848
+Season 5:   S = 0   -30 1833.3 -0.100 -0.677 0.49821939
+Season 6:   S = 0   -40 1833.3 -0.133 -0.911 0.36237770
+Season 7:   S = 0    31 2058.3  0.095  0.661 0.50845423
+Season 8:   S = 0   -41 2058.3 -0.126 -0.882 0.37795960
+Season 9:   S = 0   -28 1833.3 -0.093 -0.631 0.52831247
+Season 10:   S = 0 -164 1833.3 -0.547 -3.807 0.00014074 ***
+Season 11:   S = 0 -114 1833.3 -0.380 -2.639 0.00831237  **
+Season 12:   S = 0   48 1833.3  0.160  1.098 0.27234271
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+</pre></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="Autoregressive-and-Moving-Average-Models-(ARMA)">
+<h2>Autoregressive and Moving Average Models (ARMA)<a class="headerlink" href="#Autoregressive-and-Moving-Average-Models-(ARMA)" title="Permalink to this headline">¶</a></h2>
+<p>We might be interested in characterizing a time series in order to understand what happened in the past and to effectively forecast into the future. Two common models that can approximate time series are <strong>autoregressive</strong> and <strong>moving average</strong> models. To classify these models, we use the <strong>ACF (autocorrelation function)</strong> and the <strong>PACF (partial autocorrelation function)</strong>, which correspond to the autocorrelation of a series and the correlation of the residuals, respectively.</p>
+<p><strong>Autoregressive</strong> models operate under the framework that a given measurements is correlated with previous measurements. For example, an AR1 formulation dictates that a measurement is dependent on the previous measurement, and the value can be predicted by quantifying the lag.</p>
+<p><strong>Moving average</strong> models operate under the framework that the covariance between a measurement and the previous measurement is zero. While AR models use past forecast <em>values</em> to predict future values, MA models use past forecast <em>errors</em> to predict future values.</p>
+<p>Let’s look at how ACF and PACF lags look under different formulations of AR and MA models. <a class="reference external" href="https://nwfsc-timeseries.github.io/atsa-labs/sec-tslab-autoregressive-ar-models.html">https://nwfsc-timeseries.github.io/atsa-labs/sec-tslab-autoregressive-ar-models.html</a> <a class="reference external" href="https://nwfsc-timeseries.github.io/atsa-labs/sec-tslab-moving-average-ma-models.html">https://nwfsc-timeseries.github.io/atsa-labs/sec-tslab-moving-average-ma-models.html</a></p>
+<p>Let’s upload the Clear Creek discharge dataset. We will <strong>aggregate</strong> the data by averaging monthly values. We will then turn this into a time series, which is the format needed for ARMA modeling.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">ClearCreekDischarge</span> <span class="o">&lt;-</span> <span class="nf">readNWISdv</span><span class="p">(</span><span class="n">siteNumbers</span> <span class="o">=</span> <span class="s">&quot;06719505&quot;</span><span class="p">,</span>
+                     <span class="n">parameterCd</span> <span class="o">=</span> <span class="s">&quot;00060&quot;</span><span class="p">,</span> <span class="c1"># discharge (ft3/s)</span>
+                     <span class="n">startDate</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span>
+                     <span class="n">endDate</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">ClearCreekDischarge</span><span class="p">)[</span><span class="m">4</span><span class="o">:</span><span class="m">5</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Discharge&quot;</span><span class="p">,</span> <span class="s">&quot;Approval.Code&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="Aggregate-Clear-Creek-Discharge-dataset">
+<h3>Aggregate Clear Creek Discharge dataset<a class="headerlink" href="#Aggregate-Clear-Creek-Discharge-dataset" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">ClearCreekDischarge.Monthly</span> <span class="o">&lt;-</span> <span class="n">ClearCreekDischarge</span> <span class="o">%&gt;%</span>
+  <span class="nf">mutate</span><span class="p">(</span><span class="n">Year</span> <span class="o">=</span> <span class="nf">year</span><span class="p">(</span><span class="n">Date</span><span class="p">),</span>
+         <span class="n">Month</span> <span class="o">=</span> <span class="nf">month</span><span class="p">(</span><span class="n">Date</span><span class="p">))</span> <span class="o">%&gt;%</span>
+  <span class="nf">group_by</span><span class="p">(</span><span class="n">Year</span><span class="p">,</span> <span class="n">Month</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">summarise</span><span class="p">(</span><span class="n">Discharge</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="n">Discharge</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+`summarise()` regrouping output by &#39;Year&#39; (override with `.groups` argument)
+
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Remove-NAs-from-Clear-Creek-Discharge-dataset">
+<h3>Remove NAs from Clear Creek Discharge dataset<a class="headerlink" href="#Remove-NAs-from-Clear-Creek-Discharge-dataset" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">ClearCreekDischarge.Monthly</span><span class="o">&lt;-</span><span class="nf">na.omit</span><span class="p">(</span><span class="n">ClearCreekDischarge.Monthly</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Create-Time-Series-Object-for-Clear-Creek-Discharge">
+<h3>Create Time Series Object for Clear Creek Discharge<a class="headerlink" href="#Create-Time-Series-Object-for-Clear-Creek-Discharge" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">ClearCreek_ts</span> <span class="o">&lt;-</span> <span class="nf">ts</span><span class="p">(</span><span class="n">ClearCreekDischarge.Monthly</span><span class="p">[[</span><span class="m">3</span><span class="p">]],</span> <span class="n">frequency</span> <span class="o">=</span> <span class="m">12</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>ARMA models require stationary data. This means that there is no monotonic trend over time and there is also equal variance and covariance across the time series. The function <code class="docutils literal notranslate"><span class="pre">adf.test</span></code> will determine whether our data are stationary. The null hypothesis is that the data are not stationary, so we infer that the data are stationary if the p-value is &lt; 0.05.</p>
+</div>
+</div>
+<div class="section" id="adf.test">
+<h2><code class="docutils literal notranslate"><span class="pre">adf.test</span></code><a class="headerlink" href="#adf.test" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="nf">adf.test</span><span class="p">(</span><span class="n">ClearCreek_ts</span><span class="p">,</span> <span class="n">alternative</span> <span class="o">=</span> <span class="s">&quot;stationary&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+        Augmented Dickey-Fuller Test
+
+data:  ClearCreek_ts
+Dickey-Fuller = -13.438, Lag order = 8, p-value = 0.01
+alternative hypothesis: stationary
+
+</pre></div></div>
+</div>
+<p>Let’s inspect the ACF and pacf plots. Notice these don’t match up perfectly with just one AR or MA formulation, so we likely have interactions of both processes at play.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="nf">acf</span><span class="p">(</span><span class="n">ClearCreek_ts</span><span class="p">)</span>
+<span class="nf">pacf</span><span class="p">(</span><span class="n">ClearCreek_ts</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../../_images/gallery_R_Instructional_Trend_Detection_and_Forecasting_notebooks_Trend_Detection_and_Forecasting_48_0.png" class="no-scaled-link" src="../../../../../_images/gallery_R_Instructional_Trend_Detection_and_Forecasting_notebooks_Trend_Detection_and_Forecasting_48_0.png" style="width: 420px; height: 420px;" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../../_images/gallery_R_Instructional_Trend_Detection_and_Forecasting_notebooks_Trend_Detection_and_Forecasting_48_1.png" class="no-scaled-link" src="../../../../../_images/gallery_R_Instructional_Trend_Detection_and_Forecasting_notebooks_Trend_Detection_and_Forecasting_48_1.png" style="width: 420px; height: 420px;" />
+</div>
+</div>
+<p>While some processes might be easy to identify, it is often complicated to predict the order of AR and MA processes when the operate in the same dataset. To get around this issue, we will run multiple potential formulations of the model and see which one results in the most parsimonious fit using AIC. The function <code class="docutils literal notranslate"><span class="pre">auto.arima</span></code> does this automatically.</p>
+</div>
+<div class="section" id="Run-the-arima-function-and-search-for-best-fit">
+<h2>Run the arima function and search for best fit<a class="headerlink" href="#Run-the-arima-function-and-search-for-best-fit" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="nf">auto.arima</span><span class="p">(</span><span class="n">ClearCreek_ts</span><span class="p">,</span> <span class="n">trace</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+ Fitting models using approximations to speed things up...
+
+ ARIMA(2,0,2)(1,1,1)[12] with drift         : Inf
+ ARIMA(0,0,0)(0,1,0)[12] with drift         : 6979.321
+ ARIMA(1,0,0)(1,1,0)[12] with drift         : 6661.876
+ ARIMA(0,0,1)(0,1,1)[12] with drift         : 6556.189
+ ARIMA(0,0,0)(0,1,0)[12]                    : 6977.339
+ ARIMA(0,0,1)(0,1,0)[12] with drift         : 6813.481
+ ARIMA(0,0,1)(1,1,1)[12] with drift         : Inf
+ ARIMA(0,0,1)(0,1,2)[12] with drift         : 6555.042
+ ARIMA(0,0,1)(1,1,2)[12] with drift         : Inf
+ ARIMA(0,0,0)(0,1,2)[12] with drift         : Inf
+ ARIMA(1,0,1)(0,1,2)[12] with drift         : 6548.761
+ ARIMA(1,0,1)(0,1,1)[12] with drift         : 6549.168
+ ARIMA(1,0,1)(1,1,2)[12] with drift         : Inf
+ ARIMA(1,0,1)(1,1,1)[12] with drift         : Inf
+ ARIMA(1,0,0)(0,1,2)[12] with drift         : 6562.871
+ ARIMA(2,0,1)(0,1,2)[12] with drift         : 6551.404
+ ARIMA(1,0,2)(0,1,2)[12] with drift         : 6550.373
+ ARIMA(0,0,2)(0,1,2)[12] with drift         : 6548.866
+ ARIMA(2,0,0)(0,1,2)[12] with drift         : 6553.132
+ ARIMA(2,0,2)(0,1,2)[12] with drift         : Inf
+ ARIMA(1,0,1)(0,1,2)[12]                    : 6546.719
+ ARIMA(1,0,1)(0,1,1)[12]                    : 6547.132
+ ARIMA(1,0,1)(1,1,2)[12]                    : Inf
+ ARIMA(1,0,1)(1,1,1)[12]                    : Inf
+ ARIMA(0,0,1)(0,1,2)[12]                    : 6553.01
+ ARIMA(1,0,0)(0,1,2)[12]                    : 6560.835
+ ARIMA(2,0,1)(0,1,2)[12]                    : 6549.353
+ ARIMA(1,0,2)(0,1,2)[12]                    : 6548.323
+ ARIMA(0,0,0)(0,1,2)[12]                    : Inf
+ ARIMA(0,0,2)(0,1,2)[12]                    : 6546.825
+ ARIMA(2,0,0)(0,1,2)[12]                    : 6551.088
+ ARIMA(2,0,2)(0,1,2)[12]                    : Inf
+
+ Now re-fitting the best model(s) without approximations...
+
+ ARIMA(1,0,1)(0,1,2)[12]                    : Inf
+ ARIMA(0,0,2)(0,1,2)[12]                    : Inf
+ ARIMA(1,0,1)(0,1,1)[12]                    : Inf
+ ARIMA(1,0,2)(0,1,2)[12]                    : Inf
+ ARIMA(1,0,1)(0,1,2)[12] with drift         : Inf
+ ARIMA(0,0,2)(0,1,2)[12] with drift         : Inf
+ ARIMA(1,0,1)(0,1,1)[12] with drift         : Inf
+ ARIMA(2,0,1)(0,1,2)[12]                    : Inf
+ ARIMA(1,0,2)(0,1,2)[12] with drift         : Inf
+ ARIMA(2,0,0)(0,1,2)[12]                    : Inf
+ ARIMA(2,0,1)(0,1,2)[12] with drift         : Inf
+ ARIMA(0,0,1)(0,1,2)[12]                    : Inf
+ ARIMA(2,0,0)(0,1,2)[12] with drift         : Inf
+ ARIMA(0,0,1)(0,1,2)[12] with drift         : Inf
+ ARIMA(0,0,1)(0,1,1)[12] with drift         : Inf
+ ARIMA(1,0,0)(0,1,2)[12]                    : Inf
+ ARIMA(1,0,0)(0,1,2)[12] with drift         : Inf
+ ARIMA(1,0,0)(1,1,0)[12] with drift         : 6785.349
+
+ Best model: ARIMA(1,0,0)(1,1,0)[12] with drift
+
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Series: ClearCreek_ts
+ARIMA(1,0,0)(1,1,0)[12] with drift
+
+Coefficients:
+         ar1     sar1    drift
+      0.5274  -0.5146  -0.0406
+s.e.  0.0364   0.0370   0.6293
+
+sigma^2 estimated as 15748:  log likelihood=-3388.64
+AIC=6785.27   AICc=6785.35   BIC=6802.46
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Create-an-object-that-defines-the-best-fit-model">
+<h2>Create an object that defines the best fit model<a class="headerlink" href="#Create-an-object-that-defines-the-best-fit-model" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">fit</span> <span class="o">&lt;-</span> <span class="nf">arima</span><span class="p">(</span><span class="n">ClearCreek_ts</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">),</span><span class="n">seasonal</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="n">order</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">),</span> <span class="n">period</span> <span class="o">=</span> <span class="m">12</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Make-a-prediction-into-the-future">
+<h2>Make a prediction into the future<a class="headerlink" href="#Make-a-prediction-into-the-future" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="n">ClearCreekprediction</span> <span class="o">&lt;-</span> <span class="nf">predict</span><span class="p">(</span><span class="n">fit</span><span class="p">,</span> <span class="n">n.ahead</span> <span class="o">=</span> <span class="m">10</span><span class="o">*</span><span class="m">12</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Plot-future-predictions">
+<h2>Plot future predictions<a class="headerlink" href="#Plot-future-predictions" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span><span class="nf">ts.plot</span><span class="p">(</span><span class="n">ClearCreek_ts</span><span class="p">,</span> <span class="n">ClearCreekprediction</span><span class="o">$</span><span class="n">pred</span><span class="p">,</span> <span class="n">lty</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../../_images/gallery_R_Instructional_Trend_Detection_and_Forecasting_notebooks_Trend_Detection_and_Forecasting_57_0.png" class="no-scaled-link" src="../../../../../_images/gallery_R_Instructional_Trend_Detection_and_Forecasting_notebooks_Trend_Detection_and_Forecasting_57_0.png" style="width: 420px; height: 420px;" />
+</div>
+</div>
+<p>How do future predictions compare to the past? What other covariates might you bring into the analysis to improve forecasting capabilities? &gt;</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-r notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <!-- 
+This file modifies the default sphinx_rtd_theme footer
+-->
+
+
+
+<footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+  <!-- your html code here -->
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
