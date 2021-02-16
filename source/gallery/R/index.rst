@@ -32,7 +32,7 @@ Instructional Examples
     ---
     :img-top: /_static/thumbnail-4efa9ed3578c437da6b29eacf9f4c0a5
     
-    **Physical Properties of Rivers: Calculating Recu...**
+    **Recurrence Intervals and Exceedance Probabilities**
 
     
         This exercise will introduce the concepts of Recurrence Intervals and Exceedance Probability for the prediction of streamflow discharge.
@@ -47,10 +47,10 @@ Instructional Examples
     ---
     :img-top: /_static/thumbnail-ee2a4c2151f24115a12e34d4d22d96fe
     
-    **Introduction to Time Series Analysis for Hydrol...**
+    **Introduction to Time Series Analysis**
 
     
-        Time series are a special class of dataset, where a response variable is tracked over time. The frequency of measurement and the timespan of the da...
+        This exercise will demonstrate how to create a time series object and decompose it into seasonal, trend and error components.
     
 
     .. link-button:: ee2a4c2151f24115a12e34d4d22d96fe
@@ -62,10 +62,10 @@ Instructional Examples
     ---
     :img-top: /_static/thumbnail-20dc4af8451e44b3950b182a8f506296
     
-    **Physical Properties of Rivers: Querying Metadat...**
+    **Querying Metadata and Discharge Data from NWIS and WQP**
 
     
-        This exercise will demonstrate how to approximate discharge by developing a rating curve for a stream at a given sampling point. You will also lear...
+        This exercise will demonstrate how to approximate discharge by developing a rating curve for a stream at a given sampling point.
     
 
     .. link-button:: 20dc4af8451e44b3950b182a8f506296
@@ -80,7 +80,7 @@ Instructional Examples
     **High Frequency Flow Data: Introduction to Dygraphs**
 
     
-        High frequency data is usually defined as frequencies significantly lower than daily (e.g. 5-minute, 15-minute, 1 hr etc). The large amount of data...
+        This exercise will demonstrate how to create a dygraph using high frequency flow data to determine quickflow and baseflow after a storm event.
     
 
     .. link-button:: f1a6d0346ba94337a247ac7c62f16a2a
@@ -92,10 +92,10 @@ Instructional Examples
     ---
     :img-top: /_static/thumbnail-106b934d0e4f40c98ba10b9fea773db5
     
-    **Chemical Properties of Rivers: Impacts of Minin...**
+    **Impacts of Mining on Specific Conductance and pH**
 
     
-        The hydrologic impacts on mining can cause cause damage to a landscape in an area much larger than the mining site itself. Water-pollution problems...
+        This exercise will execute queries to import NWIS and WQP data into R to analyze the effects of mining.
     
 
     .. link-button:: 106b934d0e4f40c98ba10b9fea773db5
@@ -107,7 +107,7 @@ Instructional Examples
     ---
     :img-top: /_static/missing-thumbnail.png
     
-    **Physical Properties of Lakes: Exploratory Data Analysis**
+    **Exploratory Data Analysis**
 
     
         This lesson introduces exploratory data analysis using R statistical software in the context of the physical properties of lakes.
@@ -122,10 +122,10 @@ Instructional Examples
     ---
     :img-top: /_static/thumbnail-e22442bc4e4940609003b43747b366e0
     
-    **Physical Properties of Lakes: Exploratory Data ...**
+    **Exploratory Data Visualization**
 
     
-        The field of limnology, the study of inland waters, uses a unique graph format to display relationships of variables by depth in a lake (the field ...
+        This exercise will introduce the proper visualization of lake stratification using data from the LTER station.
     
 
     .. link-button:: e22442bc4e4940609003b43747b366e0
@@ -137,10 +137,10 @@ Instructional Examples
     ---
     :img-top: /_static/thumbnail-179a844b41fe4a06807bef83667feccf
     
-    **Chemical Properties of Lakes: Introduction to t...**
+    **Introduction to LAGOSNE Database**
 
     
-        Trophic states are based on lake fertility. The root “trophy” means nutrients; therefore, lakes are classified based on the amount of available nut...
+        This exercise will demonstrate how to use the trophic state index to analyze lake water quality.
     
 
     .. link-button:: 179a844b41fe4a06807bef83667feccf
@@ -155,10 +155,25 @@ Instructional Examples
     **Trend Detection and Forecasting**
 
     
-        Time series analysis is a powerful technique that can be used to understand the various temporal patterns in our data by decomposing data into diff...
+        This exercise will demonstrate linear interpolation, Season Mann Kendall tests, and Autoregressive and Moving Average Models.
     
 
     .. link-button:: 1d8d52774c51462aac817d7dec209f14
+        :type: ref
+        :text: Open Example
+        :classes: btn-outline-primary btn-block stretched-link
+    
+     
+    ---
+    :img-top: /_static/thumbnail-4395d37cb2eb491f88d13bead2982855
+    
+    **Flashiness Index and Hysteresis Plots**
+
+    
+        This exercise will introduce the calculation of the Richards-Baker Flashiness Index and graphing hysteresis plots.
+    
+
+    .. link-button:: 4395d37cb2eb491f88d13bead2982855
         :type: ref
         :text: Open Example
         :classes: btn-outline-primary btn-block stretched-link

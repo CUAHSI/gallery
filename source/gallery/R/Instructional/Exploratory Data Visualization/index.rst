@@ -3,7 +3,7 @@
 .. raw:: html
 
     <div class=example-title>
-        <h1> Physical Properties of Lakes: Exploratory Data Visualization </h1>
+        <h1> Exploratory Data Visualization </h1>
     </div>
 
 
@@ -27,7 +27,7 @@
 
     <div class=example-description>
         <h2> Description </h2>
-        <p>The field of limnology, the study of inland waters, uses a unique graph format to display relationships of variables by depth in a lake (the field of oceanography uses the same convention). Depth is placed on the y-axis in reverse order and the other variable(s) are placed on the x-axis.</p>
+        <p>This exercise will introduce the proper visualization of lake stratification using data from the LTER station.</p>
     </div>
 
 

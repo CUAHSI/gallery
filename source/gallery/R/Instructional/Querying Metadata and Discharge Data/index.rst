@@ -3,7 +3,7 @@
 .. raw:: html
 
     <div class=example-title>
-        <h1> Physical Properties of Rivers: Querying Metadata and Discharge Data </h1>
+        <h1> Querying Metadata and Discharge Data from NWIS and WQP </h1>
     </div>
 
 
@@ -27,7 +27,7 @@
 
     <div class=example-description>
         <h2> Description </h2>
-        <p>This exercise will demonstrate how to approximate discharge by developing a rating curve for a stream at a given sampling point. You will also learn to query metadata from and compare discharge patterns in climatically different regions of the United States.</p>
+        <p>This exercise will demonstrate how to approximate discharge by developing a rating curve for a stream at a given sampling point.</p>
     </div>
 
 

@@ -27,7 +27,7 @@
 
     <div class=example-description>
         <h2> Description </h2>
-        <p>Time series analysis is a powerful technique that can be used to understand the various temporal patterns in our data by decomposing data into different cyclic trends. Time series analysis can also be used to predict how levels of a variable will change in the future, taking into account what has happened in the past.</p>
+        <p>This exercise will demonstrate linear interpolation, Season Mann Kendall tests, and Autoregressive and Moving Average Models.</p>
     </div>
 
 

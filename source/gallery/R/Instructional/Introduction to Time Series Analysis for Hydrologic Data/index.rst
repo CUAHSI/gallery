@@ -3,7 +3,7 @@
 .. raw:: html
 
     <div class=example-title>
-        <h1> Introduction to Time Series Analysis for Hydrologic Data </h1>
+        <h1> Introduction to Time Series Analysis </h1>
     </div>
 
 
@@ -27,7 +27,7 @@
 
     <div class=example-description>
         <h2> Description </h2>
-        <p>Time series are a special class of dataset, where a response variable is tracked over time. The frequency of measurement and the timespan of the dataset can vary widely.</p>
+        <p>This exercise will demonstrate how to create a time series object and decompose it into seasonal, trend and error components.</p>
     </div>
 
 

@@ -3,7 +3,7 @@
 .. raw:: html
 
     <div class=example-title>
-        <h1> Chemical Properties of Rivers: Impacts of Mining on Specific Conductance and pH </h1>
+        <h1> Impacts of Mining on Specific Conductance and pH </h1>
     </div>
 
 
@@ -27,7 +27,7 @@
 
     <div class=example-description>
         <h2> Description </h2>
-        <p>The hydrologic impacts on mining can cause cause damage to a landscape in an area much larger than the mining site itself. Water-pollution problems caused by mining include acid mine drainage, metal contamination, and increased sediment levels.</p>
+        <p>This exercise will execute queries to import NWIS and WQP data into R to analyze the effects of mining.</p>
     </div>
 
 

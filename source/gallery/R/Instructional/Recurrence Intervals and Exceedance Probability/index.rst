@@ -3,7 +3,7 @@
 .. raw:: html
 
     <div class=example-title>
-        <h1> Physical Properties of Rivers: Calculating Recurrence Interval and Exceedance Probability </h1>
+        <h1> Recurrence Intervals and Exceedance Probabilities </h1>
     </div>
 
 
