@@ -30,15 +30,15 @@ Instructional Examples
 
     
     ---
-    :img-top: /_static/thumbnail-ee2a4c2151f24115a12e34d4d22d96fe
+    :img-top: /_static/thumbnail-4efa9ed3578c437da6b29eacf9f4c0a5
     
-    **Introduction to Time Series Analysis for Hydrol...**
+    **Physical Properties of Rivers: Calculating Recu...**
 
     
         This exercise will introduce the concepts of Recurrence Intervals and Exceedance Probability for the prediction of streamflow discharge.
     
 
-    .. link-button:: ee2a4c2151f24115a12e34d4d22d96fe
+    .. link-button:: 4efa9ed3578c437da6b29eacf9f4c0a5
         :type: ref
         :text: Open Example
         :classes: btn-outline-primary btn-block stretched-link
@@ -105,7 +105,7 @@ Instructional Examples
     
      
     ---
-    :img-top: /_static/thumbnail-42052357655f4ad39f8ec7d0bef351c7
+    :img-top: /_static/missing-thumbnail.png
     
     **Physical Properties of Lakes: Exploratory Data Analysis**
 

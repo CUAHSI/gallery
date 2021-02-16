@@ -1,9 +1,9 @@
-.. _ee2a4c2151f24115a12e34d4d22d96fe:
+.. _4efa9ed3578c437da6b29eacf9f4c0a5:
 
 .. raw:: html
 
     <div class=example-title>
-        <h1> Introduction to Time Series Analysis for Hydrologic Data </h1>
+        <h1> Physical Properties of Rivers: Calculating Recurrence Interval and Exceedance Probability </h1>
     </div>
 
 
@@ -13,7 +13,7 @@
 .. container:: launch-container pb-1
     
          
-            :link-badge:`https://hydroshare.org/resource/ee2a4c2151f24115a12e34d4d22d96fe,"Open In HydroShare",cls=badge-primary text-white launch-badge`
+            :link-badge:`https://hydroshare.org/resource/4efa9ed3578c437da6b29eacf9f4c0a5,"Open In HydroShare",cls=badge-primary text-white launch-badge`
         
     
 

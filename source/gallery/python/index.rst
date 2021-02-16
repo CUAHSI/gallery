@@ -20,7 +20,7 @@ python Gallery
   For more details, see https://sphinx-panels.readthedocs.io/en/latest/
 
 
-research Examples
+Research Examples
 ******************************
 
 .. panels::
