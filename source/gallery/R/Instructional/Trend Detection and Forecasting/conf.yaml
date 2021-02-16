@@ -2,6 +2,7 @@ hydroshare:
   id: 1d8d52774c51462aac817d7dec209f14
 code_path: ./notebooks
 thumbnail: ./thumbnail.png
+description: Time series analysis is a powerful technique that can be used to understand the various temporal patterns in our data by decomposing data into different cyclic trends. Time series analysis can also be used to predict how levels of a variable will change in the future, taking into account what has happened in the past.
 launch_options:
   - name: Open In HydroShare
     url: https://hydroshare.org/resource/1d8d52774c51462aac817d7dec209f14

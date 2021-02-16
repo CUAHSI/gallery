@@ -2,6 +2,7 @@ hydroshare:
   id: e22442bc4e4940609003b43747b366e0
 code_path: ./notebooks
 thumbnail: ./thumbnail.png
+description: The field of limnology, the study of inland waters, uses a unique graph format to display relationships of variables by depth in a lake (the field of oceanography uses the same convention). Depth is placed on the y-axis in reverse order and the other variable(s) are placed on the x-axis.
 launch_options:
   - name: Open In HydroShare
     url: https://hydroshare.org/resource/e22442bc4e4940609003b43747b366e0

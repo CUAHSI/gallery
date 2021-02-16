@@ -2,6 +2,7 @@ hydroshare:
   id: 106b934d0e4f40c98ba10b9fea773db5
 code_path: ./notebooks
 thumbnail: ./thumbnail.png
+description: The hydrologic impacts on mining can cause cause damage to a landscape in an area much larger than the mining site itself. Water-pollution problems caused by mining include acid mine drainage, metal contamination, and increased sediment levels.
 launch_options:
   - name: Open In HydroShare
     url: https://hydroshare.org/resource/106b934d0e4f40c98ba10b9fea773db5

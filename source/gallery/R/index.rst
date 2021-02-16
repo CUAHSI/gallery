@@ -35,7 +35,7 @@ Instructional Examples
     **Introduction to Time Series Analysis for Hydrol...**
 
     
-        This lesson was adapted from educational material written by Dr. Kateri Salk for her Fall 2019 Hydrologic Data Analysis course at Duke University. ...
+        This exercise will introduce the concepts of Recurrence Intervals and Exceedance Probability for the prediction of streamflow discharge.
     
 
     .. link-button:: ee2a4c2151f24115a12e34d4d22d96fe
@@ -50,7 +50,7 @@ Instructional Examples
     **Introduction to Time Series Analysis for Hydrol...**
 
     
-        This lesson was adapted from educational material written by Dr. Kateri Salk for her Fall 2019 Hydrologic Data Analysis course at Duke University. ...
+        Time series are a special class of dataset, where a response variable is tracked over time. The frequency of measurement and the timespan of the da...
     
 
     .. link-button:: ee2a4c2151f24115a12e34d4d22d96fe
@@ -65,7 +65,7 @@ Instructional Examples
     **Physical Properties of Rivers: Querying Metadat...**
 
     
-        Physical Properties of Rivers: Querying Metadata and Discharge Data<br><br>This lesson was adapted from educational material written by Dr. Kateri ...
+        This exercise will demonstrate how to approximate discharge by developing a rating curve for a stream at a given sampling point. You will also lear...
     
 
     .. link-button:: 20dc4af8451e44b3950b182a8f506296
@@ -80,7 +80,7 @@ Instructional Examples
     **High Frequency Flow Data: Introduction to Dygraphs**
 
     
-        High Frequency Flow Data: Introduction to Dygraphs<br><br>This lesson was adapted from educational material written by Dr. Kateri Salk and teaching...
+        High frequency data is usually defined as frequencies significantly lower than daily (e.g. 5-minute, 15-minute, 1 hr etc). The large amount of data...
     
 
     .. link-button:: f1a6d0346ba94337a247ac7c62f16a2a
@@ -95,7 +95,7 @@ Instructional Examples
     **Chemical Properties of Rivers: Impacts of Minin...**
 
     
-        Chemical Properties of Rivers: Impacts of Mining on Specific Conductance and pH<br><br>This lesson was adapted from educational material written by...
+        The hydrologic impacts on mining can cause cause damage to a landscape in an area much larger than the mining site itself. Water-pollution problems...
     
 
     .. link-button:: 106b934d0e4f40c98ba10b9fea773db5
@@ -110,7 +110,7 @@ Instructional Examples
     **Physical Properties of Lakes: Exploratory Data Analysis**
 
     
-        Exploratory Data Analysis for the Physical Properties of Lakes<br><br>This lesson was adapted from educational material written by Dr. Kateri Salk ...
+        This lesson introduces exploratory data analysis using R statistical software in the context of the physical properties of lakes.
     
 
     .. link-button:: 42052357655f4ad39f8ec7d0bef351c7
@@ -125,7 +125,7 @@ Instructional Examples
     **Physical Properties of Lakes: Exploratory Data ...**
 
     
-        Exploratory Data Visualization for the Physical Properties of Lakes<br><br>This lesson was adapted from educational material written by Dr. Kateri ...
+        The field of limnology, the study of inland waters, uses a unique graph format to display relationships of variables by depth in a lake (the field ...
     
 
     .. link-button:: e22442bc4e4940609003b43747b366e0
@@ -140,7 +140,7 @@ Instructional Examples
     **Chemical Properties of Lakes: Introduction to t...**
 
     
-        Chemical Properties of Lakes: Introduction to the Lake Multi-Scaled Geospatial and Temporal Database (LAGOSNE)<br><br>This lesson was adapted from ...
+        Trophic states are based on lake fertility. The root “trophy” means nutrients; therefore, lakes are classified based on the amount of available nut...
     
 
     .. link-button:: 179a844b41fe4a06807bef83667feccf
@@ -155,7 +155,7 @@ Instructional Examples
     **Trend Detection and Forecasting**
 
     
-        Trend Detection and Forecasting<br><br>This lesson was adapted from educational material written by Dr. Kateri Salk for her Fall 2019 Hydrologic Da...
+        Time series analysis is a powerful technique that can be used to understand the various temporal patterns in our data by decomposing data into diff...
     
 
     .. link-button:: 1d8d52774c51462aac817d7dec209f14

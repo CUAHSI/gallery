@@ -2,6 +2,7 @@ hydroshare:
   id: ee2a4c2151f24115a12e34d4d22d96fe
 code_path: ./notebooks
 thumbnail: ./thumbnail.png
+description:  This exercise will introduce the concepts of Recurrence Intervals and Exceedance Probability for the prediction of streamflow discharge.
 launch_options:
   - name: Open In HydroShare
     url: https://hydroshare.org/resource/ee2a4c2151f24115a12e34d4d22d96fe

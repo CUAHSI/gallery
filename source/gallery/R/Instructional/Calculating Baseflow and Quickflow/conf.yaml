@@ -1,6 +1,7 @@
 hydroshare:
   id: f1a6d0346ba94337a247ac7c62f16a2a
 code_path: ./notebooks
+description: High frequency data is usually defined as frequencies significantly lower than daily (e.g. 5-minute, 15-minute, 1 hr etc). The large amount of data allows us to distinguish between different models (model validation) with a higher statistical precision.
 thumbnail: ./thumbnail.png
 launch_options:
   - name: Open In HydroShare
