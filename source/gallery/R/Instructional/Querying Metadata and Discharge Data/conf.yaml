@@ -2,7 +2,8 @@ hydroshare:
   id: 20dc4af8451e44b3950b182a8f506296
 code_path: ./notebooks
 thumbnail: ./thumbnail.png
-description: This exercise will demonstrate how to approximate discharge by developing a rating curve for a stream at a given sampling point. You will also learn to query metadata from and compare discharge patterns in climatically different regions of the United States.
+title: Querying Metadata and Discharge Data from NWIS and WQP
+description: This exercise will demonstrate how to approximate discharge by developing a rating curve for a stream at a given sampling point. 
 launch_options:
   - name: Open In HydroShare
     url: https://hydroshare.org/resource/20dc4af8451e44b3950b182a8f506296

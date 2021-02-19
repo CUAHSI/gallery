@@ -3,7 +3,7 @@
 .. raw:: html
 
     <div class=example-title>
-        <h1> Physical Properties of Lakes: Exploratory Data Analysis </h1>
+        <h1> Exploratory Data Analysis </h1>
     </div>
 
 

@@ -20,7 +20,7 @@ Python
   For more details, see https://sphinx-panels.readthedocs.io/en/latest/
 
 
-Research Examples
+research Examples
 ******************************
 
 .. panels::

@@ -2,6 +2,7 @@ hydroshare:
   id: 42052357655f4ad39f8ec7d0bef351c7
 code_path: ./notebooks
 thumbnail: ./thumbnail.png
+title: Exploratory Data Analysis
 description: This lesson introduces exploratory data analysis using R statistical software in the context of the physical properties of lakes.
 launch_options:
   - name: Open In HydroShare

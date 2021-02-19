@@ -2,7 +2,8 @@ hydroshare:
   id: ee2a4c2151f24115a12e34d4d22d96fe
 code_path: ./notebooks
 thumbnail: ./thumbnail.png
-description: Time series are a special class of dataset, where a response variable is tracked over time. The frequency of measurement and the timespan of the dataset can vary widely.
+title: Introduction to Time Series Analysis
+description: This exercise will demonstrate how to create a time series object and decompose it into seasonal, trend and error components. 
 launch_options:
   - name: Open In HydroShare
     url: https://hydroshare.org/resource/ee2a4c2151f24115a12e34d4d22d96fe

@@ -3,7 +3,7 @@
 .. raw:: html
 
     <div class=example-title>
-        <h1> Chemical Properties of Lakes: Introduction to the Lake Multi-Scaled Geospatial and Temporal Database (LAGOSNE) </h1>
+        <h1> Introduction to LAGOSNE Database </h1>
     </div>
 
 
@@ -27,7 +27,7 @@
 
     <div class=example-description>
         <h2> Description </h2>
-        <p>Trophic states are based on lake fertility. The root “trophy” means nutrients; therefore, lakes are classified based on the amount of available nutrients for organisms. More fertile lakes have more nutrients and therefore more plants and algae.</p>
+        <p>This exercise will demonstrate how to use the trophic state index to analyze lake water quality.</p>
     </div>
 
 

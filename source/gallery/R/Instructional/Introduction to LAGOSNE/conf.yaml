@@ -2,7 +2,8 @@ hydroshare:
   id: 179a844b41fe4a06807bef83667feccf
 code_path: ./notebooks
 thumbnail: ./thumbnail.png
-description: Trophic states are based on lake fertility. The root “trophy” means nutrients; therefore, lakes are classified based on the amount of available nutrients for organisms. More fertile lakes have more nutrients and therefore more plants and algae.
+title: Introduction to LAGOSNE Database
+description: This exercise will demonstrate how to use the trophic state index to analyze lake water quality. 
 launch_options:
   - name: Open In HydroShare
     url: https://hydroshare.org/resource/179a844b41fe4a06807bef83667feccf
