@@ -1,0 +1,10 @@
+hydroshare:
+  id: 18a8a07f3f414563bca9def7a551a535
+code_path: ./notebooks
+description: This resource includes hourly precipitation data collected by NOAA and downloaded from the NCDC to obtain hydrologic analysis. 
+title: Hourly Precipitation Data for Beltsville, MD, USA 
+thumbnail: ./thumbnail.png
+launch_options:
+  - name: Open In HydroShare
+    url: https://hydroshare.org/resource/18a8a07f3f414563bca9def7a551a535
+

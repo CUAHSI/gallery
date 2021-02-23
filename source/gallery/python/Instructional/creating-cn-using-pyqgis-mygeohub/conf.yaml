@@ -3,6 +3,7 @@ hydroshare:
 notebooks: 
   - name: ./notebooks/CN_Grid_Markdown_Exercise.ipynb
     label: CN Grid Exercise
+title: Creating Curve Number Grid using PyQGIS
 card_description: A template for creating a curve number grid raster file using PyQGIS and Pandas.
 launch_options:
   - name: Open In HydroShare

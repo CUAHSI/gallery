@@ -1,0 +1,10 @@
+hydroshare:
+  id: 5148675c6a5841e686a3b6aec67a38ee
+code_path: ./notebooks
+description: This resource contains data and models for a neighborhood in Norfolk, Virginia USA that suffers from frequent coastal flooding.
+title:  Data and models for control of stormwater systems
+thumbnail: ./thumbnail.png
+launch_options:
+  - name: Open In HydroShare
+    url: https://hydroshare.org/resource/5148675c6a5841e686a3b6aec67a38ee
+

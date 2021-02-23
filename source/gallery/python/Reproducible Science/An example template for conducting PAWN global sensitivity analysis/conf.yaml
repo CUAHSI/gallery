@@ -1,0 +1,10 @@
+hydroshare:
+  id: bae3f93a5dc54dd886729265eecc784f
+code_path: ./notebooks
+description: This resource applies a GSA method for parameters of the well-known Preceipitation-Runoff Modeling System (PRMS) hydrologic model.
+title: Conducting PAWN global sensitivity analysis
+thumbnail: ./thumbnail.png
+launch_options:
+  - name: Open In HydroShare
+    url: https://hydroshare.org/resource/bae3f93a5dc54dd886729265eecc784f
+

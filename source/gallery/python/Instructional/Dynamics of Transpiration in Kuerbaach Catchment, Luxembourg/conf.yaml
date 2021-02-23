@@ -1,0 +1,10 @@
+hydroshare:
+  id: 39c1144304a74e8ca5616d12cb6ce3f9
+code_path: ./notebooks
+description: This resource contains dynamics of transpiration of different trees in Luxembourg.
+title:  Dynamics of tree transpiration in Luxembourg
+thumbnail: ./thumbnail.png
+launch_options:
+  - name: Open In HydroShare
+    url: https://hydroshare.org/resource/39c1144304a74e8ca5616d12cb6ce3f9
+

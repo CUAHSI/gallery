@@ -1,0 +1,10 @@
+hydroshare:
+  id: 38a4ce62960942b4ad8398ee58a777cf
+code_path: ./notebooks
+description: Script and accompanying notebook written in Python 2.7 for processing street flood reports made by City of Norfolk staff. 
+title: Script for processing street flood reports
+thumbnail: ./thumbnail.png
+launch_options:
+  - name: Open In HydroShare
+    url: https://hydroshare.org/resource/38a4ce62960942b4ad8398ee58a777cf
+

@@ -1,0 +1,10 @@
+hydroshare:
+  id: 7704a2fc3d5e4da89c042164c623ba4f
+code_path: ./notebooks
+description: This resource demonstrates how to use the Python package "hydrofunctions" to download stream discharge data from the NWIS and plot visualizations.
+title:  Comparing Urban and Rural Streams
+thumbnail: ./thumbnail.png
+launch_options:
+  - name: Open In HydroShare
+    url: https://hydroshare.org/resource/7704a2fc3d5e4da89c042164c623ba4f
+

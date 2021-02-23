@@ -1,0 +1,10 @@
+hydroshare:
+  id: cad5dd0c4106489e87db2e8366dd66b1
+code_path: ./notebooks
+description: This resource executes HydroDS tasks required to get complete UEB model inputs for an example watershed. 
+title: HydroDS UEB model input setup Python scripts
+thumbnail: ./thumbnail.png
+launch_options:
+  - name: Open In HydroShare
+    url: https://hydroshare.org/resource/cad5dd0c4106489e87db2e8366dd66b1
+

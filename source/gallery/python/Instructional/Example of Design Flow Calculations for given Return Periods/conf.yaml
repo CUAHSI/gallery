@@ -1,0 +1,10 @@
+hydroshare:
+  id: 04bfa3d95bd74ed9a5ac24e976b7701f
+code_path: ./notebooks
+description: This resource creates automatic design flow calculations for a given USGS gaging station.
+title: Design Flow calculations for given Return Periods
+thumbnail: ./thumbnail.png
+launch_options:
+  - name: Open In HydroShare
+    url: https://hydroshare.org/resource/04bfa3d95bd74ed9a5ac24e976b7701f
+
