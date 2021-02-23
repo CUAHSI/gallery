@@ -25,6 +25,21 @@ CUAHSI Compute and Modeling Gallery
 
     
     ---
+    :img-top: /_static/python-logo.jpeg
+
+    Community examples using the Python programming language. This includes both Python scripts as well as Python Jupyter notebooks.
+
+    .. link-button:: cHl0aG9u
+        :type: ref
+        :text: Python Gallery
+        :classes: btn-outline-primary btn-block stretched-link
+
+     
+
+
+
+    
+    ---
     :img-top: /_static/r-logo.jpeg
 
     Community examples using the R programming language. This includes R Jupyter notebooks, R scripts, as well as R Shiny web applications.

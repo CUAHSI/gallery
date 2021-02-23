@@ -175,31 +175,46 @@ if __name__ == "__main__":
                 subgalleries[subgallery_path][category].append(data)
 
     # build the sub-gallery pages
-    gallery_labels = {}
-    for sub, sub_data in subgalleries.items():
-        # create a label for the subgallery page
-        # set to a base64 encoding of the title
-        subname = os.path.basename(sub)
-        id = base64.b64encode(subname.encode()).decode()
-        gallery_labels[sub] = id
-
-        # generate page title. This is necessary for the TOC
-        title = f"{os.path.basename(sub)} Gallery"
-        render_page(
-            os.path.join(template_dir, "gallery.rst"),
-            {"label": id, "gallery_title": title, "categories": sub_data},
-            outpath=os.path.join(sub, "index.rst"),
-        )
-
-    # build the homepage
     with open(os.path.join(source_dir, "conf.yaml"), "r") as f:
         yaml_data = yaml.load(f, Loader=yaml.FullLoader)
-        
-        # add gallery labels
+
+        # build the sub-gallery pages
+        gallery_labels = {}
+        for sub, sub_data in subgalleries.items():
+            # create a label for the subgallery page
+            # set to a base64 encoding of the title
+            subname = os.path.basename(sub)
+            id = base64.b64encode(subname.encode()).decode()
+            gallery_labels[sub] = id
+
+            # generate page title. This is necessary for the TOC
+            # get the title from the top-level conf if it exists,
+            # otherwise get it from the directory name
+            title = None
+            for v in yaml_data["galleries"]:
+                if sub == v['gallery_path']:
+                    title = v['display_name']
+                    break
+            if title is None:
+                title = f"{os.path.basename(sub)} Gallery"
+
+            render_page(
+                os.path.join(template_dir, "gallery.rst"),
+                {"label": id, "gallery_title": title, "categories": sub_data},
+                outpath=os.path.join(sub, "index.rst"),
+            )
+
+        # build the homepage
+
+        # add panels for sub-galleries
         homepage_panels = []
         for v in yaml_data["galleries"]:
             if v["gallery_path"] in gallery_labels:
                 v["label"] = gallery_labels[v["gallery_path"]]
+
+#                # overwrite display_name if it's provided in the conf
+#                if 'display_name' in v.keys():
+
 
                 # only render galleries on the homepage that have labels. 
                 # this will ignore any galleries defined in conf.yaml that

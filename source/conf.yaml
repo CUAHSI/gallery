@@ -5,7 +5,7 @@
 galleries:
   - display_name: Python
     thumbnail: /_static/python-logo.jpeg
-    gallery_path: ./source/gallery/Python
+    gallery_path: ./source/gallery/python
     description: Community examples using the Python programming language. This includes both Python scripts as well as Python Jupyter notebooks.
 
   - display_name: R
