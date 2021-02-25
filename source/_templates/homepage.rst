@@ -4,7 +4,7 @@
    :glob:
    :caption: Galleries
 
-   gallery/python/index
+   gallery/Python/index
    gallery/R/index
 
 
