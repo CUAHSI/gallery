@@ -20,7 +20,7 @@ Python
   For more details, see https://sphinx-panels.readthedocs.io/en/latest/
 
 
-research Examples
+Research Examples
 ******************************
 
 .. panels::
@@ -39,21 +39,6 @@ research Examples
     
 
     .. link-button:: bcae759c38b844c7aae3bf62fb35211f
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
-    
-     
-    ---
-    :img-top: /_static/missing-thumbnail.png
-    
-    **swmm_mpc demonstration model**
-
-    
-        This is a SWMM5 model that used for demonstrating swmm_mpc, a Python package for simulating model predictive control using SWMM5 as the process model.
-    
-
-    .. link-button:: 73b38d6417ac4352b9dae38a78a47d81
         :type: ref
         :text: Open Example
         :classes: btn-outline-primary btn-block stretched-link
@@ -170,7 +155,7 @@ research Examples
     **LCZO-Stream Water Chemistry, Streamflow / Discharge**
 
     
-        Here we examine high-frequency sensor-based specific conductance and turbidity data from multiple storm events across two watersheds with different...
+        Here we examine high-frequency sensor-based specific conductance and turbidity data from multiple storm events across two watersheds in Puerto Rico.
     
 
     .. link-button:: f8420c1447fe440eb93e656b2db0b64d

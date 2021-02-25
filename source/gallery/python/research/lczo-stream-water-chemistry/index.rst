@@ -27,7 +27,7 @@
 
     <div class=example-description>
         <h2> Description </h2>
-        <p>Here we examine high-frequency sensor-based specific conductance and turbidity data from multiple storm events across two watersheds with different lithology in Puerto Rico.</p>
+        <p>Here we examine high-frequency sensor-based specific conductance and turbidity data from multiple storm events across two watersheds in Puerto Rico.</p>
     </div>
 
 

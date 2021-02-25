@@ -27,7 +27,7 @@
 
     <div class=example-description>
         <h2> Description </h2>
-        <p>High frequency data is usually defined as frequencies significantly lower than daily (e.g. 5-minute, 15-minute, 1 hr etc). The large amount of data allows us to distinguish between different models (model validation) with a higher statistical precision.</p>
+        <p>This exercise will demonstrate how to create a dygraph using high frequency flow data to determine quickflow and baseflow after a storm event.</p>
     </div>
 
 
