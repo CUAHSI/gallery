@@ -1,4 +1,4 @@
-.. _cHl0aG9u:
+.. _UHl0aG9u:
 
 .. toctree::
    :caption: Table of Contents
@@ -10,7 +10,7 @@
 
 
 ========================
-Python
+Python Gallery
 ========================
 
 
