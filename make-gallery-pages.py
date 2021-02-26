@@ -108,6 +108,74 @@ def copy_static(data):
     return data
 
 
+def write_yaml_cache(outdir, data, filename='.cache.yaml'):
+    """
+    saves data to yaml file
+    outdir: directory to save file
+    filename: name of file, default .cache.yaml
+    data: dictionary of data to save
+    """
+
+    with open(os.path.join(outdir, filename), 'w') as f:
+        yaml.dump(data, f)
+
+
+def build_example_page(conf):
+    """
+    creates example landing page from a conf.yaml file
+    conf: full path to conf.yaml file
+    returns: dictionary of data for the example or None
+    """
+    with open(conf, "r") as f:
+        # load yaml data
+        yaml_data = yaml.load(f, Loader=yaml.FullLoader)
+
+        hsdata = None
+        hsid = yaml_data.get("hydroshare", {}).get("id")
+        # collect hydroshare data if a resource id is provided
+        # in the yaml file
+        if hsid is not None:
+            # load data from hydroshare
+            hsdata = get_metadata_from_hs(hsid)
+            if hsdata is None:
+                print('something happened when collecting hs metadata')
+
+                # exit early
+                return None
+
+        # combine hsdata and yaml data.
+        # note, yaml data will overwite hs data
+        data = hsdata or {}
+        data.update(yaml_data)
+
+        # make sure a page label exists in data. If not, create one.
+        if "label" not in data.keys():
+            try:
+                # set the label as the HS id if it exists
+                data['label'] = data['hydroshare']['id']
+            except Exception:
+                # set to a base64 encoding of the title
+                data['label'] = base64.b64encode(data['title'].encode()).decode()
+
+        # clean newlines from description
+        data['description'] = data['description'].replace('\n', '')
+        data['description'] = data['description'].replace('\r', '<br>')
+
+        # save the configuration data to a .cache.yaml file
+        # so the site can be re-build without querying metadata
+        # from HydroShare every time.
+        write_yaml_cache(subdir, data, filename='.cache.yaml')
+
+        # write the rST page for this example
+        render_page(
+            os.path.join(template_dir, "landingpage.rst"),
+            data,
+            outpath=os.path.join(subdir, "index.rst"),
+        )
+
+        return data
+
+
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument(
@@ -119,60 +187,86 @@ if __name__ == "__main__":
 
     args = p.parse_args()
     subgalleries = {}
+
+    # loop through each directory in the gallery
+    # only process directories that contain conf.yaml files,
+    # ignore all other directories
     for subdir, dirs, files in os.walk(args.gallery):
         if "conf.yaml" in files:
-            conf = os.path.join(subdir, "conf.yaml")
             print(f"processing: {subdir}")
-            with open(conf, "r") as f:
-                # load yaml data
-                yaml_data = yaml.load(f, Loader=yaml.FullLoader)
 
-                hsdata = None
-                hsid = yaml_data.get("hydroshare", {}).get("id")
-                if hsid is not None:
-                    # load data from hydroshare
-                    hsdata = get_metadata_from_hs(hsid)
-                    if hsdata is None:
-                        # something happened when collecting hs metadata
-                        continue
+            # build the example landing rST page
+            conf = os.path.join(subdir, "conf.yaml")
+            data = build_example_page(conf)
 
-                # combine hsdata and yaml data.
-                # note, yaml data will overwite hs data
-                data = hsdata or {}
-                data.update(yaml_data)
+            # save the sub-gallery and category if the example was
+            # build successfully
+            if data is not None:
 
-                # make sure a page label exists in data. If not, create one.
-                if "label" not in data.keys():
-                    try:
-                        # set the label as the HS id if it exists
-                        data['label'] = data['hydroshare']['id']
-                    except Exception:
-                        # set to a base64 encoding of the title
-                        data['label'] = base64.b64encode(data['title'].encode()).decode()
-
-                # clean newlines from description
-                data['description'] = data['description'].replace('\n', '')
-                data['description'] = data['description'].replace('\r', '<br>')
-
-                render_page(
-                    os.path.join(template_dir, "landingpage.rst"),
-                    data,
-                    outpath=os.path.join(subdir, "index.rst"),
-                )
+                # move static data
+                data = copy_static(data)
 
                 # save this metadata for the sub-gallery page too
                 subgallery_path = os.path.dirname(os.path.dirname(subdir))
                 category = os.path.basename(os.path.dirname(subdir))
 
-                # move static data
-                data = copy_static(data)
-
+                # add the sub-gallery to a dictionary if it doesn't already
+                # exist. This dictionary will be used to build the sub-gallery
+                # pages. Do the same for the categories which will be rendered
+                # on the gallery homepage.
                 if subgallery_path not in subgalleries.keys():
                     subgalleries[subgallery_path] = {}
-                #    {category: [data]}
                 if category not in subgalleries[subgallery_path].keys():
                     subgalleries[subgallery_path][category] = []
                 subgalleries[subgallery_path][category].append(data)
+
+#            conf = os.path.join(subdir, "conf.yaml")
+#            print(f"processing: {subdir}")
+#            with open(conf, "r") as f:
+#                # load yaml data
+#                yaml_data = yaml.load(f, Loader=yaml.FullLoader)
+#
+#                hsdata = None
+#                hsid = yaml_data.get("hydroshare", {}).get("id")
+#                # collect hydroshare data if a resource id is provided
+#                # in the yaml file
+#                if hsid is not None:
+#                    # load data from hydroshare
+#                    hsdata = get_metadata_from_hs(hsid)
+#                    if hsdata is None:
+#                        # something happened when collecting hs metadata
+#                        continue
+#
+#                # combine hsdata and yaml data.
+#                # note, yaml data will overwite hs data
+#                data = hsdata or {}
+#                data.update(yaml_data)
+#
+#                # make sure a page label exists in data. If not, create one.
+#                if "label" not in data.keys():
+#                    try:
+#                        # set the label as the HS id if it exists
+#                        data['label'] = data['hydroshare']['id']
+#                    except Exception:
+#                        # set to a base64 encoding of the title
+#                        data['label'] = base64.b64encode(data['title'].encode()).decode()
+#
+#                # clean newlines from description
+#                data['description'] = data['description'].replace('\n', '')
+#                data['description'] = data['description'].replace('\r', '<br>')
+#
+#                # save the configuration data to a .cache.yaml file
+#                # so the site can be re-build without querying metadata
+#                # from HydroShare every time.
+#                write_yaml_cache(subdir, data, filename='.cache.yaml')
+#
+#                # write the rST page for this example
+#                render_page(
+#                    os.path.join(template_dir, "landingpage.rst"),
+#                    data,
+#                    outpath=os.path.join(subdir, "index.rst"),
+#                )
+
 
     # build the sub-gallery pages
     with open(os.path.join(source_dir, "conf.yaml"), "r") as f:
