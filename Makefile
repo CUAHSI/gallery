@@ -17,6 +17,7 @@ ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) ./s
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo "  html       builds standalone HTML files"
+	@echo "  cache      builds standalone HTML files from cache whenever possible"
 	@echo "  github     builds website ready to be pushed to GitHub"
 	@echo "  rebuild    rebuilds the website in-place, without querying data from HydroShare"
 	@echo "  clean      cleans all local build files"
@@ -32,6 +33,10 @@ html:
 
 rebuild: 
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
+
+cache:
+	python make-gallery-pages.py -g ./source/gallery --cache
+	@make rebuild
 
 github:
 	@make html

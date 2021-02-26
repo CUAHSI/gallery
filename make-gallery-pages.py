@@ -120,12 +120,14 @@ def write_yaml_cache(outdir, data, filename='.cache.yaml'):
         yaml.dump(data, f)
 
 
-def build_example_page(conf):
+def build_example_page(example_path):
     """
     creates example landing page from a conf.yaml file
-    conf: full path to conf.yaml file
+    example_path: full path to conf.yaml file
     returns: dictionary of data for the example or None
     """
+    print('\n.. building example')
+    conf = os.path.join(example_path, "conf.yaml")
     with open(conf, "r") as f:
         # load yaml data
         yaml_data = yaml.load(f, Loader=yaml.FullLoader)
@@ -136,15 +138,18 @@ def build_example_page(conf):
         # in the yaml file
         if hsid is not None:
             # load data from hydroshare
+            print('   collecting data from HydroShare')
             hsdata = get_metadata_from_hs(hsid)
             if hsdata is None:
-                print('something happened when collecting hs metadata')
+                print('   ERROR: something bad happened, skipping')
 
                 # exit early
                 return None
 
+        print('   creating rST file')
+
         # combine hsdata and yaml data.
-        # note, yaml data will overwite hs data
+        # note, yaml data will overwrite hs data
         data = hsdata or {}
         data.update(yaml_data)
 
@@ -164,6 +169,7 @@ def build_example_page(conf):
         # save the configuration data to a .cache.yaml file
         # so the site can be re-build without querying metadata
         # from HydroShare every time.
+        print('   writing cache')
         write_yaml_cache(subdir, data, filename='.cache.yaml')
 
         # write the rST page for this example
@@ -172,8 +178,34 @@ def build_example_page(conf):
             data,
             outpath=os.path.join(subdir, "index.rst"),
         )
-
+        print('   SUCCESS')
         return data
+
+
+def build_example_page_cache(example_path):
+    """
+    creates example landing page from a .cache.yaml file
+    example_path: full path to example that will be rendered
+    returns: dictionary of data for the example or None
+    """
+    try:
+        print('\n.. building from cache')
+        cache_conf = os.path.join(example_path, '.cache.yaml')
+        with open(cache_conf, "r") as f:
+            # load yaml data
+            data = yaml.load(f, Loader=yaml.FullLoader)
+
+            # write the rST page for this example
+            render_page(
+                os.path.join(template_dir, "landingpage.rst"),
+                data,
+                outpath=os.path.join(subdir, "index.rst"),
+            )
+            print('   SUCCESS')
+            return data
+    except Exception:
+        print('   ERROR reading cache. I will try building without cache')
+        return None
 
 
 def build_subgallery_pages(conf):
@@ -182,11 +214,14 @@ def build_subgallery_pages(conf):
     with open(conf, "r") as f:
         yaml_data = yaml.load(f, Loader=yaml.FullLoader)
 
+        print('\n.. building sub-gallery pages')
+
         # build the sub-gallery pages
         gallery_labels = {}
         for sub, sub_data in subgalleries.items():
             # create a label for the subgallery page
             # set to a base64 encoding of the title
+            print(f'   processing {sub}...', end='')
             subname = os.path.basename(sub)
             id = base64.b64encode(subname.encode()).decode()
             gallery_labels[sub] = id
@@ -207,6 +242,7 @@ def build_subgallery_pages(conf):
                 {"label": id, "gallery_title": title, "categories": sub_data},
                 outpath=os.path.join(sub, "index.rst"),
             )
+            print('done')
 
     return yaml_data, gallery_labels
 
@@ -214,20 +250,24 @@ def build_subgallery_pages(conf):
 def build_homepage_panels(yaml_data, gallery_labels):
 
     homepage_panels = []
+    print('\n.. building homepage panels')
     for v in yaml_data["galleries"]:
         if v["gallery_path"] in gallery_labels:
+            print(f'   processing {v["display_name"]}...', end='')
             v["label"] = gallery_labels[v["gallery_path"]]
 
             # only render galleries on the homepage that have labels. 
             # this will ignore any galleries defined in conf.yaml that
             # do not have rendered example pages.
             homepage_panels.append(v)
-
+            print('done')
+            
     render_page(
         os.path.join(template_dir, "homepage.rst"),
         {'galleries': homepage_panels},
         outpath=os.path.join(source_dir, "index.rst"),
     )
+    print('   SUCCESS')
 
 
 if __name__ == "__main__":
@@ -238,20 +278,25 @@ if __name__ == "__main__":
         default=gallery_dir,
         help=f"path of the gallery to build, if nothing is provided all galleries in {gallery_dir} will be built.",
     )
-
+    p.add_argument('--cache', action='store_true', default=False,
+                   help='indicates that cache files should be used if they exist, useful for rebuilding the pages without recollecting metadata from external sources, e.g. HydroShare')
     args = p.parse_args()
-    subgalleries = {}
+
 
     # loop through each directory in the gallery
     # only process directories that contain conf.yaml files,
     # ignore all other directories
+    subgalleries = {}
     for subdir, dirs, files in os.walk(args.gallery):
         if "conf.yaml" in files:
-            print(f"processing: {subdir}")
-
-            # build the example landing rST page
-            conf = os.path.join(subdir, "conf.yaml")
-            data = build_example_page(conf)
+            print(f"{os.path.relpath(subdir, args.gallery)}")
+            
+            # build from cache if --cache flag is provided. If a cache file
+            # isn't found, proceed to build without cache.
+            if args.cache:
+                data = build_example_page_cache(subdir)
+            if data is None:
+                data = build_example_page(subdir)
 
             # save the sub-gallery and category if the example was
             # build successfully
@@ -277,56 +322,6 @@ if __name__ == "__main__":
     # build the sub-gallery pages
     subgallery_conf = os.path.join(source_dir, "conf.yaml")
     yaml_data, gallery_labels = build_subgallery_pages(subgallery_conf)
-    
-#    with open(os.path.join(source_dir, "conf.yaml"), "r") as f:
-#        yaml_data = yaml.load(f, Loader=yaml.FullLoader)
-#
-#        # build the sub-gallery pages
-#        gallery_labels = {}
-#        for sub, sub_data in subgalleries.items():
-#            # create a label for the subgallery page
-#            # set to a base64 encoding of the title
-#            subname = os.path.basename(sub)
-#            id = base64.b64encode(subname.encode()).decode()
-#            gallery_labels[sub] = id
-#
-#            # generate page title. This is necessary for the TOC
-#            # get the title from the top-level conf if it exists,
-#            # otherwise get it from the directory name
-#            title = None
-#            for v in yaml_data["galleries"]:
-#                if sub == v['gallery_path']:
-#                    title = v['display_name']
-#                    break
-#            if title is None:
-#                title = f"{os.path.basename(sub)} Gallery"
-#
-#            render_page(
-#                os.path.join(template_dir, "gallery.rst"),
-#                {"label": id, "gallery_title": title, "categories": sub_data},
-#                outpath=os.path.join(sub, "index.rst"),
-#            )
 
     # build the homepage panels
     build_homepage_panels(yaml_data, gallery_labels)
-
-#        # add panels for sub-galleries
-#        homepage_panels = []
-#        for v in yaml_data["galleries"]:
-#            if v["gallery_path"] in gallery_labels:
-#                v["label"] = gallery_labels[v["gallery_path"]]
-#
-##                # overwrite display_name if it's provided in the conf
-##                if 'display_name' in v.keys():
-#
-#
-#                # only render galleries on the homepage that have labels. 
-#                # this will ignore any galleries defined in conf.yaml that
-#                # do not have rendered example pages.
-#                homepage_panels.append(v)
-#
-#        render_page(
-#            os.path.join(template_dir, "homepage.rst"),
-#            {'galleries': homepage_panels},
-#            outpath=os.path.join(source_dir, "index.rst"),
-#        )
