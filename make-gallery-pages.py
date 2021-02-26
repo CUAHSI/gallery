@@ -176,6 +176,60 @@ def build_example_page(conf):
         return data
 
 
+def build_subgallery_pages(conf):
+
+    # build the sub-gallery pages
+    with open(conf, "r") as f:
+        yaml_data = yaml.load(f, Loader=yaml.FullLoader)
+
+        # build the sub-gallery pages
+        gallery_labels = {}
+        for sub, sub_data in subgalleries.items():
+            # create a label for the subgallery page
+            # set to a base64 encoding of the title
+            subname = os.path.basename(sub)
+            id = base64.b64encode(subname.encode()).decode()
+            gallery_labels[sub] = id
+
+            # generate page title. This is necessary for the TOC
+            # get the title from the top-level conf if it exists,
+            # otherwise get it from the directory name
+            title = None
+            for v in yaml_data["galleries"]:
+                if sub == v['gallery_path']:
+                    title = v['display_name']
+                    break
+            if title is None:
+                title = f"{os.path.basename(sub)} Gallery"
+
+            render_page(
+                os.path.join(template_dir, "gallery.rst"),
+                {"label": id, "gallery_title": title, "categories": sub_data},
+                outpath=os.path.join(sub, "index.rst"),
+            )
+
+    return yaml_data, gallery_labels
+
+
+def build_homepage_panels(yaml_data, gallery_labels):
+
+    homepage_panels = []
+    for v in yaml_data["galleries"]:
+        if v["gallery_path"] in gallery_labels:
+            v["label"] = gallery_labels[v["gallery_path"]]
+
+            # only render galleries on the homepage that have labels. 
+            # this will ignore any galleries defined in conf.yaml that
+            # do not have rendered example pages.
+            homepage_panels.append(v)
+
+    render_page(
+        os.path.join(template_dir, "homepage.rst"),
+        {'galleries': homepage_panels},
+        outpath=os.path.join(source_dir, "index.rst"),
+    )
+
+
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument(
@@ -220,103 +274,59 @@ if __name__ == "__main__":
                     subgalleries[subgallery_path][category] = []
                 subgalleries[subgallery_path][category].append(data)
 
-#            conf = os.path.join(subdir, "conf.yaml")
-#            print(f"processing: {subdir}")
-#            with open(conf, "r") as f:
-#                # load yaml data
-#                yaml_data = yaml.load(f, Loader=yaml.FullLoader)
-#
-#                hsdata = None
-#                hsid = yaml_data.get("hydroshare", {}).get("id")
-#                # collect hydroshare data if a resource id is provided
-#                # in the yaml file
-#                if hsid is not None:
-#                    # load data from hydroshare
-#                    hsdata = get_metadata_from_hs(hsid)
-#                    if hsdata is None:
-#                        # something happened when collecting hs metadata
-#                        continue
-#
-#                # combine hsdata and yaml data.
-#                # note, yaml data will overwite hs data
-#                data = hsdata or {}
-#                data.update(yaml_data)
-#
-#                # make sure a page label exists in data. If not, create one.
-#                if "label" not in data.keys():
-#                    try:
-#                        # set the label as the HS id if it exists
-#                        data['label'] = data['hydroshare']['id']
-#                    except Exception:
-#                        # set to a base64 encoding of the title
-#                        data['label'] = base64.b64encode(data['title'].encode()).decode()
-#
-#                # clean newlines from description
-#                data['description'] = data['description'].replace('\n', '')
-#                data['description'] = data['description'].replace('\r', '<br>')
-#
-#                # save the configuration data to a .cache.yaml file
-#                # so the site can be re-build without querying metadata
-#                # from HydroShare every time.
-#                write_yaml_cache(subdir, data, filename='.cache.yaml')
-#
-#                # write the rST page for this example
-#                render_page(
-#                    os.path.join(template_dir, "landingpage.rst"),
-#                    data,
-#                    outpath=os.path.join(subdir, "index.rst"),
-#                )
-
-
     # build the sub-gallery pages
-    with open(os.path.join(source_dir, "conf.yaml"), "r") as f:
-        yaml_data = yaml.load(f, Loader=yaml.FullLoader)
+    subgallery_conf = os.path.join(source_dir, "conf.yaml")
+    yaml_data, gallery_labels = build_subgallery_pages(subgallery_conf)
+    
+#    with open(os.path.join(source_dir, "conf.yaml"), "r") as f:
+#        yaml_data = yaml.load(f, Loader=yaml.FullLoader)
+#
+#        # build the sub-gallery pages
+#        gallery_labels = {}
+#        for sub, sub_data in subgalleries.items():
+#            # create a label for the subgallery page
+#            # set to a base64 encoding of the title
+#            subname = os.path.basename(sub)
+#            id = base64.b64encode(subname.encode()).decode()
+#            gallery_labels[sub] = id
+#
+#            # generate page title. This is necessary for the TOC
+#            # get the title from the top-level conf if it exists,
+#            # otherwise get it from the directory name
+#            title = None
+#            for v in yaml_data["galleries"]:
+#                if sub == v['gallery_path']:
+#                    title = v['display_name']
+#                    break
+#            if title is None:
+#                title = f"{os.path.basename(sub)} Gallery"
+#
+#            render_page(
+#                os.path.join(template_dir, "gallery.rst"),
+#                {"label": id, "gallery_title": title, "categories": sub_data},
+#                outpath=os.path.join(sub, "index.rst"),
+#            )
 
-        # build the sub-gallery pages
-        gallery_labels = {}
-        for sub, sub_data in subgalleries.items():
-            # create a label for the subgallery page
-            # set to a base64 encoding of the title
-            subname = os.path.basename(sub)
-            id = base64.b64encode(subname.encode()).decode()
-            gallery_labels[sub] = id
+    # build the homepage panels
+    build_homepage_panels(yaml_data, gallery_labels)
 
-            # generate page title. This is necessary for the TOC
-            # get the title from the top-level conf if it exists,
-            # otherwise get it from the directory name
-            title = None
-            for v in yaml_data["galleries"]:
-                if sub == v['gallery_path']:
-                    title = v['display_name']
-                    break
-            if title is None:
-                title = f"{os.path.basename(sub)} Gallery"
-
-            render_page(
-                os.path.join(template_dir, "gallery.rst"),
-                {"label": id, "gallery_title": title, "categories": sub_data},
-                outpath=os.path.join(sub, "index.rst"),
-            )
-
-        # build the homepage
-
-        # add panels for sub-galleries
-        homepage_panels = []
-        for v in yaml_data["galleries"]:
-            if v["gallery_path"] in gallery_labels:
-                v["label"] = gallery_labels[v["gallery_path"]]
-
-#                # overwrite display_name if it's provided in the conf
-#                if 'display_name' in v.keys():
-
-
-                # only render galleries on the homepage that have labels. 
-                # this will ignore any galleries defined in conf.yaml that
-                # do not have rendered example pages.
-                homepage_panels.append(v)
-
-        render_page(
-            os.path.join(template_dir, "homepage.rst"),
-            {'galleries': homepage_panels},
-            outpath=os.path.join(source_dir, "index.rst"),
-        )
+#        # add panels for sub-galleries
+#        homepage_panels = []
+#        for v in yaml_data["galleries"]:
+#            if v["gallery_path"] in gallery_labels:
+#                v["label"] = gallery_labels[v["gallery_path"]]
+#
+##                # overwrite display_name if it's provided in the conf
+##                if 'display_name' in v.keys():
+#
+#
+#                # only render galleries on the homepage that have labels. 
+#                # this will ignore any galleries defined in conf.yaml that
+#                # do not have rendered example pages.
+#                homepage_panels.append(v)
+#
+#        render_page(
+#            os.path.join(template_dir, "homepage.rst"),
+#            {'galleries': homepage_panels},
+#            outpath=os.path.join(source_dir, "index.rst"),
+#        )
