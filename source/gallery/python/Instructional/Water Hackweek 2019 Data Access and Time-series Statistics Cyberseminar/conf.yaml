@@ -1,8 +1,8 @@
 hydroshare:
   id: 9985b3cb38c94cee872b28f6dcdef739
 code_path: ./notebooks
-description: This seminar focuses on time series data from sites commonly represented as fixed geographical points. 
-title: Waterhackweek 2019 Data Cyberseminar
+short_description: This seminar focuses on time series data from sites commonly represented as fixed geographical points. 
+short_title: Waterhackweek 2019 Data Cyberseminar
 thumbnail: ./thumbnail.png
 launch_options:
   - name: Open In HydroShare

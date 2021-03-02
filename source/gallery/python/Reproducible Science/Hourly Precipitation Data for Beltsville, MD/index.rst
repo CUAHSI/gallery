@@ -3,7 +3,7 @@
 .. raw:: html
 
     <div class=example-title>
-        <h1> Hourly Precipitation Data for Beltsville, MD, USA </h1>
+        <h1> Hourly Precipitation Data for Beltsville, MD, USA (2012/05/01-2012/05/31) </h1>
     </div>
 
 
@@ -27,7 +27,7 @@
 
     <div class=example-description>
         <h2> Description </h2>
-        <p>This resource includes hourly precipitation data collected by NOAA and downloaded from the NCDC to obtain hydrologic analysis.</p>
+        <p>This resource includes hourly precipitation data collected by National Oceanic and Atmospheric Administration's (NOAA's) and downloaded from the National Climate Data Center (NCDC) from station located in Beltsville, MD. These data were collected to with the purpose of obtain important inputs for some further research about hydrologic modeling. Samples were collected automatically through code in Python. Methods implemented for sample collection and analysis are described within the resource.</p>
     </div>
 
 

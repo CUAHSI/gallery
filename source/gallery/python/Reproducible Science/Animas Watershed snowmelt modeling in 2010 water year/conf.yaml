@@ -1,8 +1,8 @@
 hydroshare:
   id: a2b87a2f25d046958ac604e522f449c0
 code_path: ./notebooks
-description: This resource contains the use case results of web-based simulation for snowmelt modeling research coded in Python.
-title:  Animas watershed snowmelt modeling in 2010 water year
+short_description: This resource contains the use case results of web-based simulation for snowmelt modeling research coded in Python.
+short_title:  Animas watershed snowmelt modeling in 2010 water year
 thumbnail: ./thumbnail.png
 launch_options:
   - name: Open In HydroShare

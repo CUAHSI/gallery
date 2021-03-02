@@ -1,8 +1,8 @@
 hydroshare:
   id: 5db7884111fb4662a13f64707c0c6890
 code_path: ./notebooks
-description: Script and accompanying notebook written in Python 2.7 for combining flood report data and environmental data into a format for a data-driven model.
-title:  Combining street flood severity model input, output
+short_description: Script and accompanying notebook written in Python 2.7 for combining flood report data and environmental data into a format for a data-driven model.
+short_title:  Combining street flood severity model input, output
 thumbnail: ./thumbnail.png
 launch_options:
   - name: Open In HydroShare

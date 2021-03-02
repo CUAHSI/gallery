@@ -1,8 +1,8 @@
 hydroshare:
   id: 0886014659d443d4a2b9b189c96bab68
 code_path: ./notebooks
-description: Continuous streamflow data collected by the Stroud Water Research Center within the 3rd-order research watershed, White Clay Creek above McCue Road.
-title: White Clay Creek - Stage, Streamflow / Discharge
+short_description: Continuous streamflow data collected by the Stroud Water Research Center within the 3rd-order research watershed, White Clay Creek above McCue Road.
+short_title: White Clay Creek - Stage, Streamflow / Discharge
 thumbnail: ./thumbnail.png
 launch_options:
   - name: Open In HydroShare

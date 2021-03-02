@@ -1,8 +1,8 @@
 hydroshare:
   id: bcae759c38b844c7aae3bf62fb35211f
 code_path: ./notebooks
-description: This resource contains a script that executes the HydroDS tasks required to prepare TOPNET inputs for the use case. 
-title:  HydroDS TOPNET model input setup Python scripts
+short_description: This resource contains a script that executes the HydroDS tasks required to prepare TOPNET inputs for the use case. 
+short_title:  HydroDS TOPNET model input setup Python scripts
 thumbnail: ./thumbnail.png
 launch_options:
   - name: Open In HydroShare

@@ -27,7 +27,7 @@
 
     <div class=example-description>
         <h2> Description </h2>
-        <p>This exercise will download the discharge and stage data from a specified USGS site for the specified time.</p>
+        <p>This script was created in python that can access a specified USGS site and download discharge and stage data for a specified period. The python script can create a time series after downloading the data. The script is then transferred to jupyter notebook.<br>This script will download and create discharge and stage time series for USGS site  Missouri River at Sioux City, IA (USGS 06486000). User can change the site and date as he or she pleases.</p>
     </div>
 
 

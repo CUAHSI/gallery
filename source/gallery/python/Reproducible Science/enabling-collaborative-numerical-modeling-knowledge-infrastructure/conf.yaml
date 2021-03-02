@@ -5,8 +5,8 @@ notebooks:
     label: Explore Routing Tutorial
   - name: ./notebooks/replicate_landslide_model_for_fire.ipynb
     label: Replicate Landslide Model for Fire
-title: Enabling Collaborative Numerical Modeling using LandLab
-description: This exercise will apply a Landlab landslide model to explore changes in forest cover. 
+short_title: Enabling Collaborative Numerical Modeling using LandLab
+short_description: This exercise will apply a Landlab landslide model to explore changes in forest cover. 
 thumbnail: ./thumbnail.png
 launch_options:
   - name: Open In HydroShare

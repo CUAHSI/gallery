@@ -3,7 +3,7 @@
 .. raw:: html
 
     <div class=example-title>
-        <h1> Discrete wavelet transformation </h1>
+        <h1> Discrete wavelet transform coupled with the active subspace method </h1>
     </div>
 
 
@@ -27,7 +27,7 @@
 
     <div class=example-description>
         <h2> Description </h2>
-        <p>This resource provides Python code which represents the coupled framework between the discrete wavelet transform and the active subspace method.</p>
+        <p>The provided Python code represents the coupled framework between the discrete wavelet transform and the active subspace method. It has the goal to perform temporal scale dependent model parameter sensitivity analysis. In the provided case, the methodology is coupled to an R code containing the LuKARS model.</p>
     </div>
 
 

@@ -27,7 +27,7 @@
 
     <div class=example-description>
         <h2> Description </h2>
-        <p>This resource demonstrates how to use the Python package "hydrofunctions" to download stream discharge data from the NWIS and plot visualizations.</p>
+        <p>This notebook demonstrates how to use the Python package "hydrofunctions" to download stream discharge data from the NWIS and plot a stream hydrograph and a flow duration chart.</p>
     </div>
 
 

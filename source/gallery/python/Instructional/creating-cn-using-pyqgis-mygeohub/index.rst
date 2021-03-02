@@ -3,7 +3,7 @@
 .. raw:: html
 
     <div class=example-title>
-        <h1> Creating Curve Number Grid using PyQGIS </h1>
+        <h1> Creating Curve Number Grid using PyQGIS through Jupyter Notebook in mygeohub </h1>
     </div>
 
 

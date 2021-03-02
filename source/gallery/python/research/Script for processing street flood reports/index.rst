@@ -27,7 +27,7 @@
 
     <div class=example-description>
         <h2> Description </h2>
-        <p>Script and accompanying notebook written in Python 2.7 for processing street flood reports made by City of Norfolk staff.</p>
+        <p>Script and accompanying notebook written in Python 2.7 for processing street flood reports made by City of Norfolk staff. The output data from this script were used as target values for street data-driven flood prediction severity modeling. This modeling is described in this Journal of Hydrology paper: https://doi.org/10.1016/j.jhydrol.2018.01.044.</p>
     </div>
 
 

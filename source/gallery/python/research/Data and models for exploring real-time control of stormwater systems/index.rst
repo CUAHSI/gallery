@@ -3,7 +3,7 @@
 .. raw:: html
 
     <div class=example-title>
-        <h1> Data and models for control of stormwater systems </h1>
+        <h1> Data and models for exploring real-time control of stormwater systems for mitigating flood risk due to sea level rise </h1>
     </div>
 
 
@@ -27,7 +27,7 @@
 
     <div class=example-description>
         <h2> Description </h2>
-        <p>This resource contains data and models for a neighborhood in Norfolk, Virginia USA that suffers from frequent coastal flooding.</p>
+        <p>This resource contains data and models that were used to produce results for a paper published in the Journal of Hydrology. The models are for a neighborhood in Norfolk, Virginia USA that suffers from frequent coastal flooding. The paper describes the use of active stormwater controls to mitigate this problem which will worsen with sea level rise. The particular type of control approach explored was model predictive control (MPC) and the Stormwater Management Model (SWMM) was used to simulate the stormwater system. The swmm_mpc Python package (https://github.com/UVAdMIST/swmm_mpc) was used to simulate MPC in the SWMM model. MPC was simulated for a number of sea level rise scenarios and the amount of flooding was compared to the system with no controls. The Python script that ran swmm_mpc for the sea level rise scenarios is "models/runs/hgv11.py." The results were compiled and plotted with scripts in the "models/results/" directory. <br><br>The citation to the Journal of Hydrology paper is<br>Jeffrey M. Sadler, Jonathan L. Goodall, Madhur Behl, Benjamin D. Bowes, Mohamed M. Morsy, Exploring real-time control of stormwater systems for mitigating flood risk due to sea level rise, Journal of Hydrology, Volume 583, 2020, 124571, ISSN 0022-1694, https://doi.org/10.1016/j.jhydrol.2020.124571.</p>
     </div>
 
 

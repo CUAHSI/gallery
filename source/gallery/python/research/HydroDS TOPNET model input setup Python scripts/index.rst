@@ -27,7 +27,7 @@
 
     <div class=example-description>
         <h2> Description </h2>
-        <p>This resource contains a script that executes the HydroDS tasks required to prepare TOPNET inputs for the use case.</p>
+        <p>This script executes the HydroDS tasks required to prepare TOPNET inputs for the use case reported in <br><br>Gichamo, T. Z., N. S. Sazib, D. G. Tarboton and P. Dash, (2020), "HydroDS: Data Services in Support of Physically Based, Distributed Hydrological Models," Environmental Modelling & Software: 104623, https://doi.org/10.1016/j.envsoft.2020.104623.</p>
     </div>
 
 

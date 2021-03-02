@@ -3,7 +3,7 @@
 .. raw:: html
 
     <div class=example-title>
-        <h1> Dynamics of tree transpiration in Luxembourg </h1>
+        <h1> Data from B.P.G. Huver. Dynamics of transpiration of different trees in the Kuerbaach Catchment, Luxembourg. </h1>
     </div>
 
 
@@ -27,7 +27,7 @@
 
     <div class=example-description>
         <h2> Description </h2>
-        <p>This resource contains dynamics of transpiration of different trees in Luxembourg.</p>
+        <p>For the course "Field course Hydrology" of the Vrije Universiteit (Amsterdam), data was gathered of the Kuerbaach stream in Luxembourg. This study focusses on the transpiration of trees. These files contain data as gathered during the study. I strived for self-explanatory column headers and a well-explained Python script as much as possible. Additonal info can be found in the report.</p>
     </div>
 
 

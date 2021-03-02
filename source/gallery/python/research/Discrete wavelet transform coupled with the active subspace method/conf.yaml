@@ -1,8 +1,8 @@
 hydroshare:
   id: 4901a0d654334c259f4ff9b49dc0a74e
 code_path: ./notebooks
-description: This resource provides Python code which represents the coupled framework between the discrete wavelet transform and the active subspace method. 
-title:  Discrete wavelet transformation
+short_description: This resource provides Python code which represents the coupled framework between the discrete wavelet transform and the active subspace method. 
+short_title:  Discrete wavelet transformation
 thumbnail: ./thumbnail.png
 launch_options:
   - name: Open In HydroShare

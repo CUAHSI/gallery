@@ -2,8 +2,8 @@ hydroshare:
   id: 4395d37cb2eb491f88d13bead2982855
 code_path: ./notebooks
 thumbnail: ./thumbnail.png
-title: Flashiness Index and Hysteresis Plots
-description: This exercise will introduce the calculation of the Richards-Baker Flashiness Index and graphing hysteresis plots. 
+short_title: Flashiness Index and Hysteresis Plots
+short_description: This exercise will introduce the calculation of the Richards-Baker Flashiness Index and graphing hysteresis plots. 
 launch_options:
   - name: Open In HydroShare
     url: https://hydroshare.org/resource/4395d37cb2eb491f88d13bead2982855

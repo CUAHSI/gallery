@@ -3,7 +3,7 @@
 .. raw:: html
 
     <div class=example-title>
-        <h1> Impacts of Mining on Specific Conductance and pH </h1>
+        <h1> Chemical Properties of Rivers: Impacts of Mining on Specific Conductance and pH </h1>
     </div>
 
 
@@ -27,7 +27,7 @@
 
     <div class=example-description>
         <h2> Description </h2>
-        <p>This exercise will execute queries to import NWIS and WQP data into R to analyze the effects of mining.</p>
+        <p>Chemical Properties of Rivers: Impacts of Mining on Specific Conductance and pH<br><br>This lesson was adapted from educational material written by Dr. Kateri Salk and Cathy Chamberlin for the Fall 2019 Hydrologic Data Analysis course at Duke University. <br><br>Introduction<br><br>The hydrologic impacts on mining can cause cause damage to a landscape in an area much larger than the mining site itself. Water-pollution problems caused by mining include acid mine drainage, metal contamination, and increased sediment levels. The devastating effects of mining impact fisheries, swimming, domestic water supply, irrigation, and other uses of streams. For more information on the environmental impacts of mining, please visit http://www.pollutionissues.com/Li-Na/Mining.html#ixzz6jGlfrX9m<br><br>Learning Objectives <br><br>After successfully completing this exercise, you will be able to:<br><br>1. Execute queries to pull a variety of National Water Information System (NWIS) and Water Quality Portal (WQP) data into R.<br>2. Analyze inorganic aspects of water quality following a watershed disturbance such as mining.</p>
     </div>
 
 
