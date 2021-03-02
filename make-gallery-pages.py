@@ -2,13 +2,13 @@
 
 import os
 import yaml
-import uuid
 import shutil
 import base64
 import jinja2
 import requests
 import argparse
 from lxml import etree
+from termcolor import colored
 
 
 # global vars
@@ -89,7 +89,7 @@ def copy_static(data):
     """
     copy static files to _static directory
     """
-
+    print('   copying static files ', end='')
     if 'thumbnail' in data.keys():
         # move thumbnail to _static and rename it
         thumbnail_path = os.path.abspath(
@@ -99,10 +99,13 @@ def copy_static(data):
             thumbnail_new_name = f'thumbnail-{data["label"]}'
             shutil.copyfile(thumbnail_path, f"{static_dir}/{thumbnail_new_name}")
             data["thumbnail"] = thumbnail_new_name
+            print(colored('\u2713', 'green'))
             return data
 
     # set thumbnail using the default "unknown" image
-    print('WARNING: Missing thumbnail, setting to default image')
+    print(colored('\ufffd', 'yellow'))
+    print('   '+colored('WARNING: Missing thumbnail, using default image',
+                        'yellow'))
     data['thumbnail'] = 'missing-thumbnail.png'
 
     return data
@@ -126,7 +129,7 @@ def build_example_page(example_path):
     example_path: full path to conf.yaml file
     returns: dictionary of data for the example or None
     """
-    print('\n.. building example')
+    print(f'\n-- building example {os.path.basename(example_path)[0:50]}...')
     conf = os.path.join(example_path, "conf.yaml")
     with open(conf, "r") as f:
         # load yaml data
@@ -138,15 +141,17 @@ def build_example_page(example_path):
         # in the yaml file
         if hsid is not None:
             # load data from hydroshare
-            print('   collecting data from HydroShare')
+            print('   collecting data from HydroShare ', end='')
             hsdata = get_metadata_from_hs(hsid)
             if hsdata is None:
-                print('   ERROR: something bad happened, skipping')
-
+                print(colored('\u2717', 'red'))
+                print('   '+colored('ERROR: something bad happened, skipping',
+                      'red'))
                 # exit early
                 return None
+            print(colored('\u2713', 'green'))
+            
 
-        print('   creating rST file')
 
         # combine hsdata and yaml data.
         # note, yaml data will overwrite hs data
@@ -166,19 +171,33 @@ def build_example_page(example_path):
         data['description'] = data['description'].replace('\n', '')
         data['description'] = data['description'].replace('\r', '<br>')
 
+        # set the short-title and short-description if they're provided
+        # otherwise use regular title and description. These are displayed
+        # on the example html cards.
+        if data.get('short_description', None) is None:
+            data['short_description'] = (data['description'][0:150] + '...'
+                                         if len(data['description']) > 150
+                                         else data['description'][0:150])
+        if data.get('short_title', None) is None:
+            data['short_title'] = (data['title'][0:50] + '...'
+                                   if len(data['title']) > 150
+                                   else data['title'])
+
         # save the configuration data to a .cache.yaml file
         # so the site can be re-build without querying metadata
         # from HydroShare every time.
-        print('   writing cache')
+        print('   writing cache ', end='')
         write_yaml_cache(subdir, data, filename='.cache.yaml')
+        print(colored('\u2713', 'green'))
 
+        print('   creating rST file ', end='')
         # write the rST page for this example
         render_page(
             os.path.join(template_dir, "landingpage.rst"),
             data,
             outpath=os.path.join(subdir, "index.rst"),
         )
-        print('   SUCCESS')
+        print(colored('\u2713', 'green'))
         return data
 
 
@@ -201,14 +220,18 @@ def build_example_page_cache(example_path):
                 data,
                 outpath=os.path.join(subdir, "index.rst"),
             )
-            print('   SUCCESS')
             return data
     except Exception:
-        print('   ERROR reading cache. I will try building without cache')
+        print('   ' + colored('ERROR reading cache. I will try building '
+                              'without cache', 'red'))
         return None
 
 
 def build_subgallery_pages(conf):
+    """
+    Builds each sub-gallery page, consisting of categories and html
+    cards for each example.
+    """
 
     # build the sub-gallery pages
     with open(conf, "r") as f:
@@ -221,7 +244,7 @@ def build_subgallery_pages(conf):
         for sub, sub_data in subgalleries.items():
             # create a label for the subgallery page
             # set to a base64 encoding of the title
-            print(f'   processing {sub}...', end='')
+            print(f'   processing {sub} ', end='')
             subname = os.path.basename(sub)
             id = base64.b64encode(subname.encode()).decode()
             gallery_labels[sub] = id
@@ -242,7 +265,7 @@ def build_subgallery_pages(conf):
                 {"label": id, "gallery_title": title, "categories": sub_data},
                 outpath=os.path.join(sub, "index.rst"),
             )
-            print('done')
+            print(colored('\u2713', 'green'))
 
     return yaml_data, gallery_labels
 
@@ -253,21 +276,20 @@ def build_homepage_panels(yaml_data, gallery_labels):
     print('\n.. building homepage panels')
     for v in yaml_data["galleries"]:
         if v["gallery_path"] in gallery_labels:
-            print(f'   processing {v["display_name"]}...', end='')
+            print(f'   processing {v["display_name"]} ', end='')
             v["label"] = gallery_labels[v["gallery_path"]]
 
             # only render galleries on the homepage that have labels. 
             # this will ignore any galleries defined in conf.yaml that
             # do not have rendered example pages.
             homepage_panels.append(v)
-            print('done')
+            print(colored('\u2713', 'green'))
             
     render_page(
         os.path.join(template_dir, "homepage.rst"),
         {'galleries': homepage_panels},
         outpath=os.path.join(source_dir, "index.rst"),
     )
-    print('   SUCCESS')
 
 
 if __name__ == "__main__":
@@ -282,17 +304,16 @@ if __name__ == "__main__":
                    help='indicates that cache files should be used if they exist, useful for rebuilding the pages without recollecting metadata from external sources, e.g. HydroShare')
     args = p.parse_args()
 
-
     # loop through each directory in the gallery
     # only process directories that contain conf.yaml files,
     # ignore all other directories
     subgalleries = {}
     for subdir, dirs, files in os.walk(args.gallery):
         if "conf.yaml" in files:
-            print(f"{os.path.relpath(subdir, args.gallery)}")
-            
+
             # build from cache if --cache flag is provided. If a cache file
             # isn't found, proceed to build without cache.
+            data = None
             if args.cache:
                 data = build_example_page_cache(subdir)
             if data is None:

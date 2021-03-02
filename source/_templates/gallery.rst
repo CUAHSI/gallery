@@ -32,13 +32,9 @@
     ---
     :img-top: /_static/{{ example['thumbnail'] }}
     
-    **{{ example['title']|truncate(50, True) }}**
+    **{{ example['short_title'] }}**
 
-    {% if 'card_description' in example %}
-        {{ example['card_description']|truncate(150, True) }}
-    {% else %}
-        {{ example['description']|truncate(150, True) }}
-    {% endif %}
+    {{ example['short_description'] }}
 
     .. link-button:: {{ example['label'] }}
         :type: ref
