@@ -1,6 +1,6 @@
 # Example Configuration
 
-Every example in the CUAHSI Gallery contains a customized configuration YAML file that's used to specify the content. To learn more about the YAML format, see the [https://yaml.org}(https://yaml.org/). The required and optional arguments contained in this file are listed below.
+Every example in the CUAHSI Gallery contains a customized configuration YAML file that's used to specify the content. To learn more about the YAML format, see the [https://yaml.org](https://yaml.org/). The required and optional arguments contained in this file are listed below.
 
 ## Configuration Elements
 
