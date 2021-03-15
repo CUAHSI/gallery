@@ -1,5 +1,7 @@
 .. _Ug==:
 
+.. title:: R
+
 .. toctree::
    :caption: Table of Contents
    :name: mastertoc

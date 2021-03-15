@@ -1,5 +1,7 @@
 .. _ee2a4c2151f24115a12e34d4d22d96fe:
 
+.. title:: Introduction to Time Series Analysis for Hydrologic Data
+
 .. raw:: html
 
     <div class=example-title>

@@ -1,5 +1,7 @@
 .. _f1a6d0346ba94337a247ac7c62f16a2a:
 
+.. title:: High Frequency Flow Data: Introduction to Dygraphs
+
 .. raw:: html
 
     <div class=example-title>

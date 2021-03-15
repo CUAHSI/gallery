@@ -6,6 +6,7 @@
 
    gallery/Python/index
    gallery/R/index
+   gallery/RShiny/index
 
 
 CUAHSI Compute and Modeling Gallery
@@ -47,6 +48,21 @@ CUAHSI Compute and Modeling Gallery
     .. link-button:: Ug==
         :type: ref
         :text: R Gallery
+        :classes: btn-outline-primary btn-block stretched-link
+
+     
+
+
+
+    
+    ---
+    :img-top: /_static/rshiny-logo.png
+
+    Community contributed, interactive, web applications developed with the R Shiny package.
+
+    .. link-button:: UlNoaW55
+        :type: ref
+        :text: RShiny Gallery
         :classes: btn-outline-primary btn-block stretched-link
 
      

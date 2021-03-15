@@ -1,5 +1,7 @@
 .. _abf67aad0eb64a53bf787d369afdcc84:
 
+.. title:: Creating Curve Number Grid using PyQGIS through Jupyter Notebook in mygeohub
+
 .. raw:: html
 
     <div class=example-title>

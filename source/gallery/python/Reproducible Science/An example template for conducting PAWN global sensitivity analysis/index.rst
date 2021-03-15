@@ -1,5 +1,7 @@
 .. _bae3f93a5dc54dd886729265eecc784f:
 
+.. title:: An example template for conducting PAWN global sensitivity analysis on parameters of the PRMS model using the PRMS-Python framework
+
 .. raw:: html
 
     <div class=example-title>

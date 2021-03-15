@@ -1,5 +1,7 @@
 .. _5db7884111fb4662a13f64707c0c6890:
 
+.. title:: Script for combining street flood severity model input, output
+
 .. raw:: html
 
     <div class=example-title>

@@ -1,5 +1,7 @@
 .. _1d8d52774c51462aac817d7dec209f14:
 
+.. title:: Trend Detection and Forecasting
+
 .. raw:: html
 
     <div class=example-title>

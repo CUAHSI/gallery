@@ -1,5 +1,7 @@
 .. _0886014659d443d4a2b9b189c96bab68:
 
+.. title:: White Clay Creek - Stage, Streamflow / Discharge (1968-2014)
+
 .. raw:: html
 
     <div class=example-title>

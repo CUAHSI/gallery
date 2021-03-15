@@ -1,5 +1,7 @@
 .. _4901a0d654334c259f4ff9b49dc0a74e:
 
+.. title:: Discrete wavelet transform coupled with the active subspace method
+
 .. raw:: html
 
     <div class=example-title>

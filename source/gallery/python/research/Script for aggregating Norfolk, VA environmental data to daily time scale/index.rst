@@ -1,5 +1,7 @@
 .. _41c8d8f8788c4ba0b0bfbb924fe1d403:
 
+.. title:: Script for aggregating Norfolk, VA environmental data to daily time scale
+
 .. raw:: html
 
     <div class=example-title>

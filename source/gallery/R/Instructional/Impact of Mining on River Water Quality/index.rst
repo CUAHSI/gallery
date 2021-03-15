@@ -1,5 +1,7 @@
 .. _106b934d0e4f40c98ba10b9fea773db5:
 
+.. title:: Chemical Properties of Rivers: Impacts of Mining on Specific Conductance and pH
+
 .. raw:: html
 
     <div class=example-title>

@@ -13,6 +13,12 @@ galleries:
     gallery_path: ./source/gallery/R
     description: Community examples using the R programming language. This includes R Jupyter notebooks, R scripts, as well as R Shiny web applications.
   
+  - display_name: RShiny
+    thumbnail: /_static/rshiny-logo.png
+    gallery_path: ./source/gallery/RShiny
+    description: Community contributed, interactive, web applications developed with the R Shiny package. 
+  
+  
   - display_name: MATLAB
     thumbnail: /_static/matlab-logo.jpeg
     gallery_path: ./source/gallery/matlab

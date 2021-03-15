@@ -1,5 +1,7 @@
 .. _e22442bc4e4940609003b43747b366e0:
 
+.. title:: Physical Properties of Lakes: Exploratory Data Visualization
+
 .. raw:: html
 
     <div class=example-title>

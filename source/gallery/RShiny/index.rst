@@ -1,6 +1,6 @@
-.. _{{ label }}:
+.. _UlNoaW55:
 
-.. title:: {{ gallery_title }}
+.. title:: RShiny
 
 .. toctree::
    :caption: Table of Contents
@@ -12,7 +12,7 @@
 
 
 ========================
-{{ gallery_title }}
+RShiny
 ========================
 
 
@@ -20,9 +20,9 @@
 ..
   This is where we construct the homepage thumbnail panels.
   For more details, see https://sphinx-panels.readthedocs.io/en/latest/
-{% for category, cat_data in categories.items() %}
 
-{{ category }} Examples
+
+Instructional Examples
 ******************************
 
 .. panels::
@@ -30,22 +30,22 @@
     :img-top-cls: pl-5 pr-5
     :column: col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2
 
-    {% for example in cat_data %}
-    ---
-    :img-top: /_static/{{ example['thumbnail'] }}
     
-    **{{ example['short_title'] }}**
+    ---
+    :img-top: /_static/missing-thumbnail.png
+    
+    **Mountaintop Mining in Central Appalachia**
 
-    {{ example['short_description'] }}
+    This application shows how mountaintop mining in Central Appalachia has changed the hydrology and water chemistry of two catchments.
 
-    .. link-button:: {{ example['label'] }}
+    .. link-button:: TW91bnRhaW50b3AgTWluaW5nIGluIENlbnRyYWwgQXBwYWxhY2hpYQ==
         :type: ref
         :text: Open Example
         :classes: btn-outline-primary btn-block stretched-link
     
-     {% endfor %}
+     
 
-{% endfor %}
+
 
 
 
@@ -62,5 +62,4 @@
         :type: ref
         :text: Spatial Plotting with RGdal
         :classes: btn-block stretched-link
-
 

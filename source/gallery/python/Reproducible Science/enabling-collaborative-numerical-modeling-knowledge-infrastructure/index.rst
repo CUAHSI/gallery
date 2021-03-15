@@ -1,5 +1,7 @@
 .. _fdc3a06e6ad842abacfa5b896df73a76:
 
+.. title:: Enabling Collaborative Numerical Modeling in Earth Sciences using Knowledge Infrastructure: Landlab Notebooks
+
 .. raw:: html
 
     <div class=example-title>

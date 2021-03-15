@@ -1,5 +1,7 @@
 .. _1ed2c313862544eb961f105407df7f00:
 
+.. title:: Hydroinformatics Assignment 8
+
 .. raw:: html
 
     <div class=example-title>

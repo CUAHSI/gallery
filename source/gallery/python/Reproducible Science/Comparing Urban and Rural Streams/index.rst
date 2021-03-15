@@ -1,5 +1,7 @@
 .. _7704a2fc3d5e4da89c042164c623ba4f:
 
+.. title:: Comparing Urban and Rural Streams
+
 .. raw:: html
 
     <div class=example-title>

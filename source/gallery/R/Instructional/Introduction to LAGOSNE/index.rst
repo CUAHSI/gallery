@@ -1,5 +1,7 @@
 .. _179a844b41fe4a06807bef83667feccf:
 
+.. title:: Chemical Properties of Lakes: Introduction to the Lake Multi-Scaled Geospatial and Temporal Database (LAGOSNE)
+
 .. raw:: html
 
     <div class=example-title>

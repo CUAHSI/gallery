@@ -1,5 +1,7 @@
 .. _4efa9ed3578c437da6b29eacf9f4c0a5:
 
+.. title:: Physical Properties of Rivers: Calculating Recurrence Interval and Exceedance Probability
+
 .. raw:: html
 
     <div class=example-title>

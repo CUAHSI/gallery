@@ -1,5 +1,7 @@
 .. _a2b87a2f25d046958ac604e522f449c0:
 
+.. title:: Animas watershed snowmelt modeling in the 2010 water year (use case 2)
+
 .. raw:: html
 
     <div class=example-title>

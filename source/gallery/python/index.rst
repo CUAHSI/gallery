@@ -1,5 +1,7 @@
 .. _UHl0aG9u:
 
+.. title:: Python
+
 .. toctree::
    :caption: Table of Contents
    :name: mastertoc

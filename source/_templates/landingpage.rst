@@ -1,5 +1,7 @@
 .. _{{ label }}:
 
+.. title:: {{ title }}
+
 .. raw:: html
 
     <div class=example-title>

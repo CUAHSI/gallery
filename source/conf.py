@@ -138,10 +138,8 @@ htmlhelp_basename= 'testdoc'
 html_static_path = ['_static']
 html_css_files = ['css/custom.css']
 
-
-
-
-
+# this is text that will be appended to ..title directives
+html_title = 'CUAHSI Gallery'
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'

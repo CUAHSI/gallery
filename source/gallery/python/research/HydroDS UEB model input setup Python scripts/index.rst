@@ -1,5 +1,7 @@
 .. _cad5dd0c4106489e87db2e8366dd66b1:
 
+.. title:: HydroDS UEB model input setup Python scripts
+
 .. raw:: html
 
     <div class=example-title>

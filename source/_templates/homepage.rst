@@ -6,6 +6,7 @@
 
    gallery/Python/index
    gallery/R/index
+   gallery/RShiny/index
 
 
 CUAHSI Compute and Modeling Gallery

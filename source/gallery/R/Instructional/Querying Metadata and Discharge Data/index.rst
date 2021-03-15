@@ -1,5 +1,7 @@
 .. _20dc4af8451e44b3950b182a8f506296:
 
+.. title:: Physical Properties of Rivers: Querying Metadata and Discharge Data
+
 .. raw:: html
 
     <div class=example-title>

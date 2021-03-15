@@ -1,5 +1,7 @@
 .. _38a4ce62960942b4ad8398ee58a777cf:
 
+.. title:: Script for processing street flood reports
+
 .. raw:: html
 
     <div class=example-title>
