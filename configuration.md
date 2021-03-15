@@ -18,20 +18,12 @@ description: |
 ```
 
 
-### thumbnail (required)
+### thumbnail
 
 Relative path to the image that will be displayed on the example card. It's recommended that the image represents the work or outcome of the example.
 
 ```
 thumbnail: ./thumbnail-image.png
-```
-
-### code\_path
-
-Relativate path to the code, data, and/or notebooks associated with the example.
-
-```
-code_path: ./example-code
 ```
 
 ### title
@@ -58,7 +50,15 @@ An abbreviated title (<50 characters) to display above the thumbnail image.
 short_title: Subsetting NWM Forcasts
 ```
 
-### launch\_options
+### code\_path (optional)
+
+Relativate path to the code, data, and/or notebooks associated with the example.
+
+```
+code_path: ./example-code
+```
+
+### launch\_options (optional)
 
 Launch options appear as badges at the top of the example landing page. These can be any related link such as a HydroShare resource landing page, a compute service such as JupyterHub, or a separate website such as R Shiny. An example may have mltiple launch options.
 
@@ -70,7 +70,7 @@ launch_options:
     url: https://url-where-example-runs.html
 ```
 
-### hydroshare Id
+### hydroshare Id (optional)
 
 A HydroShare resource identifer to use for gathering example metadata. If a HydroShare resource identifier is provided, it will be used to collect, format, and display metadata on the example landing page. Note, YAML elements `title`, `description`, `author`, etc. will override any data obtained from HydroShare.
 
@@ -79,7 +79,26 @@ hydroshare:
   id: 3db192783bcb4599bab36d43fc3413db
 ```
 
-## Full Example
+### Authors (optional)
+
+Authorship is typically obtained from the `hydroshare id` parameter above. However, these data can be manually specified within the configuration file following the pattern:
+
+```
+authors:
+  - name: Tony Castronova
+    url: https://hydroshare.org/user/11
+    organization: CUAHSI
+    email: my-email@cuahsi.org
+  - name: Author 2
+    url: https://personal-webpage/author2
+    organization: some organization
+    email: author2@some-organization.com
+    
+```
+
+
+
+## Example using HydroShare Metadata
 
 ```
 hydroshare:
