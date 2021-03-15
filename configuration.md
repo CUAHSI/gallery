@@ -2,9 +2,11 @@
 
 Every example in the CUAHSI Gallery contains a customized configuration YAML file that's used to specify the content. To learn more about the YAML format, see the [https://yaml.org](https://yaml.org/). The required and optional arguments contained in this file are listed below.
 
-## Configuration Elements
+## Reqired Fields
 
-### description (required)
+The following fields are required in the `conf.yaml` file. In some cases, if a field is not provided a placeholder will be added.
+
+### description
 
 A long-form description of the example. If, `hs` element is provided, this will be overridden with the HydroShare resource abstract.
 
@@ -33,6 +35,11 @@ The title that will be displayed on the example landing page.
 ```
 title: Hurricane Harvey NWM Subsetting Exercise - Given at the 2018 CUAHSI Summer Innovators Program.
 ```
+
+## Optional Fields
+
+The following fields are optional but highly recommended.
+
 
 ### short_description (optional)
 
@@ -98,8 +105,11 @@ authors:
 
 
 
-## Example using HydroShare Metadata
+## Examples 
 
+### Referencing a HydroShare Resource
+
+In the following example, most of the page metadata is obtained from HydroShare using `hydroshare id`. Short titles and descriptions are provided to improve the appearence of this example on the gallery page. Authorship is obtained directly from HydroShare so there's no need to explicitly provide it here.
 ```
 hydroshare:
   id: 3db192783bcb4599bab36d43fc3413db
