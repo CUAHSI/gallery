@@ -60,6 +60,16 @@ short_title: Subsetting NWM Forcasts
 
 ### launch\_options
 
+Launch options appear as badges at the top of the example landing page. These can be any related link such as a HydroShare resource landing page, a compute service such as JupyterHub, or a separate website such as R Shiny. An example may have mltiple launch options.
+
+```
+launch_options:
+  - name: Open In HydroShare
+    url: https://hydroshare.org/resource/[my-resource-id]
+  - name: Run Application
+    url: https://url-where-example-runs.html
+```
+
 ### hydroshare Id
 
 A HydroShare resource identifer to use for gathering example metadata. If a HydroShare resource identifier is provided, it will be used to collect, format, and display metadata on the example landing page. Note, YAML elements `title`, `description`, `author`, etc. will override any data obtained from HydroShare.
