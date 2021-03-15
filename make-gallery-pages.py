@@ -208,7 +208,8 @@ def build_example_page_cache(example_path):
     returns: dictionary of data for the example or None
     """
     try:
-        print('\n.. building from cache')
+        print('\n' + os.path.basename(example_path))
+        print('.. building from cache')
         cache_conf = os.path.join(example_path, '.cache.yaml')
         with open(cache_conf, "r") as f:
             # load yaml data

@@ -32,7 +32,7 @@ Instructional Examples
 
     
     ---
-    :img-top: /_static/missing-thumbnail.png
+    :img-top: /_static/thumbnail-TW91bnRhaW50b3AgTWluaW5nIGluIENlbnRyYWwgQXBwYWxhY2hpYQ==
     
     **Mountaintop Mining in Central Appalachia**
 
