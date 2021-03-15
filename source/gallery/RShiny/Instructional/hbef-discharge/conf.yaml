@@ -1,0 +1,11 @@
+title: HBEF Discharge
+description: |
+  In this app you can explore Precipitation and Streamflow in Several HBEF watersheds.
+thumbnail: ./thumbnail.png
+authors:
+  - name: JP Gannon
+    url: www.jpgannon.com
+    organization: Virgina Polytechnic Institute and State University
+launch_options:
+  - name: Run Application
+    url: https://cuahsi.shinyapps.io/HBEF_Discharge

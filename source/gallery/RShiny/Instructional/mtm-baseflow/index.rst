@@ -38,6 +38,26 @@
 
 
 
+.. panels::
+    :container: container pb-2 example-panels
+    :card: shadow
+    :column: col-lg-6 col-md-6 col-sm-12 col-xs-12 p-2
+    :body: text-left
+
+
+    ---
+      **Authors**
+      ^^^^^
+    
+        :link-badge:`www.google.com,"Tony Castronova",cls=badge-primary text-white`
+        - CUAHSI 
+        (`contact <acastronova@cuahsi.org>`_)
+        
+        :link-badge:`test.com,"Test",cls=badge-primary text-white`
+        - USU 
+        (`contact <test@aol.com>`_)
+        
+
 
     ---
     

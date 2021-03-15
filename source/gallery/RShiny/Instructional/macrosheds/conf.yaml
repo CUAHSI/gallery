@@ -1,0 +1,32 @@
+title: Macrosheds
+description: |
+  This project will enable anyone with internet access to compare the flow and the chemistry of hundreds of streams throughout the United States and to explore their watersheds.
+
+  This will make it easy for scientists, resource managers, and students to generate questions about water quality and river flow patterns across the continent.
+
+  Researchers will use these data to study what types of watersheds are best at retaining nutrients, are recovering most rapidly from decades of acid rain, have the highest erosion rates, and have flow patterns that are least sensitive to floods and droughts.
+
+  The lessons we learn from studying many watersheds and streams will contribute to more effective management of our nation’s water and forest resources.
+
+short_description: Compare the flow and the chemistry of hundreds of streams throughout the United States and explore their watersheds.
+thumbnail: ./thumbnail.png
+authors:
+  - name: Matt Ross
+    organization: Colorado State University
+  - name: Emily Bernhardt
+    organization: Duke University
+  - name: Jill Baron
+    organization: Colorado State University, USGS
+  - name: Elizabeth W. Boyer
+    organization: Pennsylvania State University
+  - name: Emma J. Rosi
+    organization: Cary Institute
+  - name: Nandita Basu
+    organization: University of Waterloo
+  - name: Kaelin Cawley
+    organization: NEON
+  - name: Megan Joins
+    organization: NEON
+launch_options:
+  - name: Run Application
+    url: https://cuahsi.shinyapps.io/WaterBalanceVT
