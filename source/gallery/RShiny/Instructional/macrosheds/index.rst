@@ -25,7 +25,6 @@
     <hr>
     <br />&nbsp;
 
-.. raw:: html
 
     <div class=example-description>
         <h2> Description </h2>

@@ -27,13 +27,17 @@
     <hr>
     <br />&nbsp;
 
-.. raw:: html
-
+{% if markdown %}
+    <div class=example-description>
+        <h2> Description </h2>
+        .. mdinclude:: {{ markdown }}
+    </div>
+{% else %}
     <div class=example-description>
         <h2> Description </h2>
         <p>{{ description }}</p>
     </div>
-
+{% endif %}
 
 {# ############ #}
 {# AUTHOR BLOCK #}

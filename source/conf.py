@@ -14,6 +14,9 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+# import m2r to include markdown documents in rst
+from m2r import MdInclude
+
 # -- Project information -----------------------------------------------------
 
 project = 'BuildDocs'
@@ -31,25 +34,25 @@ release = 'version'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['sphinx.ext.todo',
-    'sphinx.ext.coverage',
-    'sphinx.ext.ifconfig',
-    'sphinx.ext.viewcode', 
-    'sphinx.ext.extlinks',
-#    'sphinx.ext.githubpages',
-    'sphinx.ext.napoleon',
-    'sphinx.ext.graphviz',
-    'sphinx.ext.intersphinx',
-#    'sphinxcontrib.matlab',
-    'sphinx.ext.autodoc',
-    'sphinx.ext.autosummary',
-    'numpydoc',
-    'sphinxcontrib.images',
-    'nbsphinx',
-    'sphinx.ext.mathjax',
-    'sphinx_copybutton',
-    'sphinxcontrib.bibtex',
-    'sphinx_panels',
-              
+              'sphinx.ext.coverage',
+              'sphinx.ext.ifconfig',
+              'sphinx.ext.viewcode',
+              'sphinx.ext.extlinks',
+#              'sphinx.ext.githubpages',
+              'sphinx.ext.napoleon',
+              'sphinx.ext.graphviz',
+              'sphinx.ext.intersphinx',
+#              'sphinxcontrib.matlab',
+              'sphinx.ext.autodoc',
+              'sphinx.ext.autosummary',
+              'numpydoc',
+              'sphinxcontrib.images',
+              'nbsphinx',
+              'sphinx.ext.mathjax',
+              'sphinx_copybutton',
+              'sphinxcontrib.bibtex',
+              'sphinx_panels',
+              'recommonmark', # markdown support
 ]
 
 
@@ -166,6 +169,13 @@ nbsphinx_execute= 'never'
 ## Default Pygments lexer for syntax highlighting in code cells
 nbsphinx_codecell_lexer = 'ipython3'
 
+def setup(app):
+    # from m2r to make `mdinclude` work
+    app.add_config_value('no_underscore_emphasis', False, 'env')
+    app.add_config_value('m2r_parse_relative_links', False, 'env')
+    app.add_config_value('m2r_anonymous_references', False, 'env')
+    app.add_config_value('m2r_disable_inline_math', False, 'env')
+    app.add_directive('mdinclude', MdInclude)
 
 
 bibtex_bibfiles = ['refs.bib']
