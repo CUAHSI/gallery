@@ -38,3 +38,13 @@ div.example-panels > div > div > div > div > blockquote {
     margin-bottom: 0px;
 
 }
+.btn-author {
+    /* set float so the button width
+     * shrinks to fit its contents
+     */
+    float: left;
+    margin: 5px;
+}
+.example-description {
+    float: left; /* so the author btns don't mess with it /*
+}

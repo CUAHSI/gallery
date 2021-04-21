@@ -12,6 +12,7 @@
 {# COMPUTE OPTIONS #}
 {# ############### #}
 
+
 .. container:: launch-container pb-1
     {% for option in launch_options %}
         {% if 'tooltip' in option %}
@@ -21,51 +22,61 @@
         {% endif %}
     {% endfor %}
 
+
 .. raw:: html
 
     <br />&nbsp;
     <hr>
     <br />&nbsp;
 
-{% if markdown %}
-    <div class=example-description>
-        <h2> Description </h2>
-        .. mdinclude:: {{ markdown }}
-    </div>
-{% else %}
-    <div class=example-description>
-        <h2> Description </h2>
-        <p>{{ description }}</p>
-    </div>
-{% endif %}
 
-{# ############ #}
-{# AUTHOR BLOCK #}
-{# ############ #}
 
-{% if authors %}
+{% for author in authors %}
+
+.. dropdown:: {{ author['name'] }}
+    :container: + shadow btn-author
+    :animate: fade-in-slide-down
+    :body: bg-light text-left
+    
+    {{ author['organization'] }} 
+
+    {% if 'email' in author %}
+    :link-badge:`{{ author['email'] }},"Email",cls=badge-primary text-white`
+    {% endif %}
+
+    {% if 'url' in author %}
+    :link-badge:`{{ author['url'] }},"Webpage",cls=badge-primary text-white`
+    {% endif %}
+
+{% endfor %}
+
+
+.. raw:: html
+
+    <br />&nbsp;
+    <br />&nbsp;
+
+    <div class=example-description>
+    
+    <h2> Description </h2>
+
+    {% if markdown %}
+    
+    .. mdinclude:: {{ markdown }}
+    
+    {% else %}
+    
+    <p>{{ description }}</p>
+    
+    {% endif %}
+    
+    </div>
+
 .. panels::
-    :container: container pb-2 example-panels
+    :container: container pb-1 example-panels
     :card: shadow
     :column: col-lg-6 col-md-6 col-sm-12 col-xs-12 p-2
     :body: text-left
-
-
-    ---
-      **Authors**
-      ^^^^^
-    {% for author in authors %}
-        {% if 'url' in author -%}
-            :link-badge:`{{ author['url'] }},"{{ author['name'] }}",cls=badge-primary text-white`
-        {% else -%}
-            :badge:`"{{ author['name'] }}", badge-secondary`
-        {% endif -%}
-            - {{ author['organization'] }} 
-        {% if 'email' in author -%}
-            (`contact <{{ author['email'] }}>`_)
-        {% endif -%}
-     {% endfor %}
-{% endif %}
 
     ---
     {% if code_path %}

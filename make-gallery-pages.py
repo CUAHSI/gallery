@@ -221,6 +221,7 @@ def build_example_page_cache(example_path):
                 data,
                 outpath=os.path.join(subdir, "index.rst"),
             )
+            
             return data
     except Exception:
         print('   ' + colored('ERROR reading cache. I will try building '
