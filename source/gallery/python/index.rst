@@ -34,19 +34,6 @@ Research Examples
     ---
     :img-top: /_static/missing-thumbnail.png
     
-    **HydroDS TOPNET model input setup Python scripts**
-
-    This resource contains a script that executes the HydroDS tasks required to prepare TOPNET inputs for the use case.
-
-    .. link-button:: bcae759c38b844c7aae3bf62fb35211f
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
-    
-     
-    ---
-    :img-top: /_static/missing-thumbnail.png
-    
     **Script for aggregating VA environmental data**
 
     Script and accompanying ipython notebook written in Python 2.7 for aggregating sub-daily environmental data to a daily timescale.
@@ -99,45 +86,6 @@ Research Examples
     ---
     :img-top: /_static/missing-thumbnail.png
     
-    **Discrete wavelet transformation**
-
-    This resource provides Python code which represents the coupled framework between the discrete wavelet transform and the active subspace method.
-
-    .. link-button:: 4901a0d654334c259f4ff9b49dc0a74e
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
-    
-     
-    ---
-    :img-top: /_static/missing-thumbnail.png
-    
-    **Data and models for control of stormwater systems**
-
-    This resource contains data and models for a neighborhood in Norfolk, Virginia USA that suffers from frequent coastal flooding.
-
-    .. link-button:: 5148675c6a5841e686a3b6aec67a38ee
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
-    
-     
-    ---
-    :img-top: /_static/missing-thumbnail.png
-    
-    **HydroDS UEB model input setup Python scripts**
-
-    This resource executes HydroDS tasks required to get complete UEB model inputs for an example watershed.
-
-    .. link-button:: cad5dd0c4106489e87db2e8366dd66b1
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
-    
-     
-    ---
-    :img-top: /_static/missing-thumbnail.png
-    
     **LCZO-Stream Water Chemistry, Streamflow / Discharge**
 
     Here we examine high-frequency sensor-based specific conductance and turbidity data from multiple storm events across two watersheds in Puerto Rico.
@@ -168,19 +116,6 @@ Reproducible Science Examples
     This resource applies a GSA method for parameters of the well-known Preceipitation-Runoff Modeling System (PRMS) hydrologic model.
 
     .. link-button:: bae3f93a5dc54dd886729265eecc784f
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
-    
-     
-    ---
-    :img-top: /_static/missing-thumbnail.png
-    
-    **Dynamics of tree transpiration in Luxembourg**
-
-    This resource contains dynamics of transpiration of different trees in Luxembourg.
-
-    .. link-button:: 39c1144304a74e8ca5616d12cb6ce3f9
         :type: ref
         :text: Open Example
         :classes: btn-outline-primary btn-block stretched-link
@@ -266,19 +201,6 @@ Instructional Examples
     ---
     :img-top: /_static/missing-thumbnail.png
     
-    **Hydroinformatics Assignment 8**
-
-    This exercise will download the discharge and stage data from a specified USGS site for the specified time.
-
-    .. link-button:: 1ed2c313862544eb961f105407df7f00
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
-    
-     
-    ---
-    :img-top: /_static/missing-thumbnail.png
-    
     **Waterhackweek 2019 Data Cyberseminar**
 
     This seminar focuses on time series data from sites commonly represented as fixed geographical points.
@@ -297,32 +219,6 @@ Instructional Examples
     An introduction to collecting and processing National Water Model operational forecast data using THREDDs and OpenDAP.
 
     .. link-button:: 3db192783bcb4599bab36d43fc3413db
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
-    
-     
-    ---
-    :img-top: /_static/missing-thumbnail.png
-    
-    **Dynamics of tree transpiration in Luxembourg**
-
-    This resource contains dynamics of transpiration of different trees in Luxembourg.
-
-    .. link-button:: 39c1144304a74e8ca5616d12cb6ce3f9
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
-    
-     
-    ---
-    :img-top: /_static/missing-thumbnail.png
-    
-    **Design Flow calculations for given Return Periods**
-
-    This resource creates automatic design flow calculations for a given USGS gaging station.
-
-    .. link-button:: 04bfa3d95bd74ed9a5ac24e976b7701f
         :type: ref
         :text: Open Example
         :classes: btn-outline-primary btn-block stretched-link

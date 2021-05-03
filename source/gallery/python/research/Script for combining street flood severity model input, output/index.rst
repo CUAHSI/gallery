@@ -83,7 +83,7 @@
         :glob:
         
         
-        ./notebooks/**
+        ./data/**
         
      
      

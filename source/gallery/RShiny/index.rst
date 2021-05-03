@@ -49,7 +49,7 @@ Research Examples
     
     **Visualizing the color of rivers across the USA**
 
-    interactive visualization of the color of rivers over space and time
+    Interactive visualization of the color of rivers over space and time
 
     .. link-button:: VmlzdWFsaXppbmcgdGhlIGNvbG9yIG9mIHJpdmVycyBhY3Jvc3MgdGhlIFVTQQ==
         :type: ref
