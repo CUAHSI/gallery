@@ -1,0 +1,10 @@
+.. _catherine.chamberlin@duke.edu:
+
+
+    email: catherine.chamberlin@duke.edu
+
+    name: Cathy Chamberlin
+
+    organization: Duke University
+
+    

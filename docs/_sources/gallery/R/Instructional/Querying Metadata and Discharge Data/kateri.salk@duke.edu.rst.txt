@@ -1,0 +1,12 @@
+.. _kateri.salk@duke.edu:
+
+
+    email: kateri.salk@duke.edu
+
+    name: Salk, Kateri
+
+    organization: Duke University
+
+    url: https://hydroshare.org/user/4912/
+
+    

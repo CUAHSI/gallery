@@ -1,0 +1,12 @@
+.. _jachense@oregonstate.edu:
+
+
+    email: jachense@oregonstate.edu
+
+    name: Elizabeth Jachens
+
+    organization: Oregon State University;CUAHSI Summer Institute
+
+    url: https://hydroshare.org/user/2927/
+
+    

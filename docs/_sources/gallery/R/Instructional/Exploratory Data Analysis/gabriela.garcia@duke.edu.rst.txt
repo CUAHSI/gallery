@@ -1,0 +1,12 @@
+.. _gabriela.garcia@duke.edu:
+
+
+    email: gabriela.garcia@duke.edu
+
+    name: Garcia, Gabriela
+
+    organization: Duke University
+
+    url: https://hydroshare.org/user/7399/
+
+    

@@ -1,0 +1,10 @@
+.. _johngardner87@gmail.com:
+
+
+    email: johngardner87@gmail.com
+
+    name: John Gardner
+
+    organization: University of North Carolina at Chapel Hill
+
+    

@@ -1,0 +1,1677 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Use Case 2 - Part 2: Sites from NEON Web Services REST API (and LTER &amp; GLEON) &mdash; CUAHSI Gallery</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/tooltipster.custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/tooltipster.bundle.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/micromodal.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/sphinx_rtd_theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/contentui.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/language_data.js"></script>
+        <script src="../../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../../_static/copybutton.js"></script>
+        <script src="../../../../../_static/js/hoverxref.js"></script>
+        <script src="../../../../../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../../../../../_static/js/micromodal.min.js"></script>
+        <script src="../../../../../_static/js/custom.js"></script>
+        <script src="../../../../../_static/contentui.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html">
+          
+
+          
+            
+            <img src="../../../../../_static/cuahsi-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Galleries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#research-examples">Research Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#reproducible-science-examples">Reproducible Science Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../R/index.html">R</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../R/index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../RShiny/index.html">RShiny</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../RShiny/index.html#research-examples">Research Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../RShiny/index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">BuildDocs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          <!--
+The purpose of this template is to override (i.e. supress) the breadcrumbs that appear at the top of each page.
+-->
+
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Use-Case-2---Part-2:-Sites-from-NEON-Web-Services-REST-API-(and-LTER-&amp;-GLEON)">
+<h1>Use Case 2 - Part 2: Sites from NEON Web Services REST API (and LTER &amp; GLEON)<a class="headerlink" href="#Use-Case-2---Part-2:-Sites-from-NEON-Web-Services-REST-API-(and-LTER-&-GLEON)" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/emiliom">Emilio Mayorga</a>, University of Washington</p></li>
+<li><p><a class="reference external" href="https://waterhackweek.github.io/">WaterHackWeek</a> Cyberseminar</p></li>
+<li><p>2019-2-7</p></li>
+</ul>
+<p>Use the NEON REST API for illustrating a <code class="docutils literal notranslate"><span class="pre">requests</span></code>-based REST API access and parsing into Pandas DataFrames and GeoPandas GeoDataFrames, followed by visualization on an interactive Folium map together with nearby sites from the LTER and GLEON networks.</p>
+<p><strong>NEON documentation:</strong> - NEON REST API: <a class="reference external" href="http://data.neonscience.org/data-api">http://data.neonscience.org/data-api</a> - <a class="reference external" href="https://www.neonscience.org/neon-api-usage">Useful REST API documentation, based on the R client</a> - <a class="reference external" href="https://nbviewer.jupyter.org/gist/jzollerneon/3d0519e1f26db80b755cc865ef218d58">REST API Jupyter Notebook Python example</a> - <a class="reference external" href="https://www.neonscience.org/field-sites">NEON field sites</a> also available for download as csv at <a class="reference external" href="https://www.neonscience.org/field-sites/field-sites-map/list">https://www.neonscience.org/field-sites/field-sites-map/list</a>. This page shows <a class="reference external" href="https://www.neonscience.org/field-sites/types-neon-field-sites">maps of
+the domains and sites.</a></p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">StringIO</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">shapely.geometry</span> <span class="k">as</span> <span class="nn">shpgeom</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">folium</span>
+</pre></div>
+</div>
+</div>
+<p>NEON REST API base url</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">neon_api_baseurl</span> <span class="o">=</span> <span class="s2">&quot;http://data.neonscience.org/api/v0/&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Get-NEON-site-data-using-REST-API">
+<h1>Get NEON site data using REST API<a class="headerlink" href="#Get-NEON-site-data-using-REST-API" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">sites</span></code> is the REST API “end point”. The API returns a JSON string.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">sites_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">neon_api_baseurl</span> <span class="o">+</span> <span class="s1">&#39;sites/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">sites_json</span> <span class="o">=</span> <span class="n">sites_response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">sites_json</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+dict_keys([&#39;data&#39;])
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">type</span><span class="p">(</span><span class="n">sites_json</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]),</span> <span class="nb">len</span><span class="p">(</span><span class="n">sites_json</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(list, 81)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">type</span><span class="p">(</span><span class="n">sites_json</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]),</span> <span class="n">sites_json</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(dict,
+ dict_keys([&#39;siteDescription&#39;, &#39;siteLongitude&#39;, &#39;siteType&#39;, &#39;stateName&#39;, &#39;stateCode&#39;, &#39;siteLatitude&#39;, &#39;domainName&#39;, &#39;domainCode&#39;, &#39;siteCode&#39;, &#39;dataProducts&#39;, &#39;siteName&#39;]))
+</pre></div></div>
+</div>
+<p>List all the individual ecological “domains” (names and codes), followed by a listing of sites found in the two domains of interest: ‘Appalachians and Cumberland Plateau’ and ‘Ozarks Complex’.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">set</span><span class="p">([(</span><span class="n">s</span><span class="p">[</span><span class="s1">&#39;domainName&#39;</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="s1">&#39;domainCode&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sites_json</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{(&#39;Appalachians and Cumberland Plateau&#39;, &#39;D07&#39;),
+ (&#39;Atlantic Neotropical&#39;, &#39;D04&#39;),
+ (&#39;Central Plains&#39;, &#39;D10&#39;),
+ (&#39;Desert Southwest&#39;, &#39;D14&#39;),
+ (&#39;Great Basin&#39;, &#39;D15&#39;),
+ (&#39;Great Lakes&#39;, &#39;D05&#39;),
+ (&#39;Mid-Atlantic&#39;, &#39;D02&#39;),
+ (&#39;Northeast&#39;, &#39;D01&#39;),
+ (&#39;Northern Plains&#39;, &#39;D09&#39;),
+ (&#39;Northern Rockies&#39;, &#39;D12&#39;),
+ (&#39;Ozarks Complex&#39;, &#39;D08&#39;),
+ (&#39;Pacific Northwest&#39;, &#39;D16&#39;),
+ (&#39;Pacific Southwest&#39;, &#39;D17&#39;),
+ (&#39;Pacific Tropical&#39;, &#39;D20&#39;),
+ (&#39;Prairie Peninsula&#39;, &#39;D06&#39;),
+ (&#39;Southeast&#39;, &#39;D03&#39;),
+ (&#39;Southern Plains&#39;, &#39;D11&#39;),
+ (&#39;Southern Rockies and Colorado Plateau&#39;, &#39;D13&#39;),
+ (&#39;Taiga&#39;, &#39;D19&#39;),
+ (&#39;Tundra&#39;, &#39;D18&#39;)}
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sites_json</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="s1">&#39;domainName&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;Appalachians and Cumberland Plateau&#39;</span><span class="p">,</span> <span class="s1">&#39;Ozarks Complex&#39;</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">: </span><span class="si">{}</span><span class="s2">, </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="s1">&#39;domainCode&#39;</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="s1">&#39;siteName&#39;</span><span class="p">],</span>
+                                     <span class="n">s</span><span class="p">[</span><span class="s1">&#39;siteLongitude&#39;</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="s1">&#39;siteLatitude&#39;</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+D08 Black Warrior River Site, RELOCATABLE: -87.798151, 32.541529
+D08 Dead Lake Site, RELOCATABLE: -87.803877, 32.541727
+D07 Great Smoky Mountains National Park Site, RELOCATABLE: -83.50195, 35.68896
+D07 LeConte Creek Site, RELOCATABLE: -83.50379, 35.690428
+D08 Lenoir Landing Site, RELOCATABLE: -88.161181, 31.853861
+D08 Mayfield Creek Site, CORE: -87.407688, 32.960365
+D07 Mountain Lake Biological Station Site, RELOCATABLE: -80.524847, 37.378314
+D07 Oak Ridge Site, CORE: -84.282588, 35.964128
+D08 Talladega National Forest Site, CORE: -87.393259, 32.95047
+D08 Tombigbee River Site, RELOCATABLE: -88.158872, 31.853431
+D07 Walker Branch Site, CORE: -84.279251, 35.957378
+</pre></div></div>
+</div>
+<p>A sample of what the <code class="docutils literal notranslate"><span class="pre">dataProducts</span></code> dictionary chunk looks like:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>&#39;dataProducts&#39;: [{&#39;dataProductCode&#39;: &#39;DP1.10066.001&#39;,
+   &#39;dataProductTitle&#39;: &#39;Root sampling (Megapit)&#39;,
+   &#39;availableMonths&#39;: [&#39;2015-06&#39;],
+   &#39;availableDataUrls&#39;: [&#39;http://data.neonscience.org:80/api/v0/data/DP1.10066.001/ABBY/2015-06&#39;]},
+  {&#39;dataProductCode&#39;: &#39;DP1.10023.001&#39;,
+   &#39;dataProductTitle&#39;: &#39;Herbaceous clip harvest&#39;,
+   &#39;availableMonths&#39;: [&#39;2016-08&#39;, &#39;2017-07&#39;, &#39;2017-08&#39;, &#39;2018-07&#39;, &#39;2018-08&#39;],
+   &#39;availableDataUrls&#39;: [&#39;http://data.neonscience.org:80/api/v0/data/DP1.10023.001/ABBY/2016-08&#39;,
+    &#39;http://data.neonscience.org:80/api/v0/data/DP1.10023.001/ABBY/2017-07&#39;,
+    &#39;http://data.neonscience.org:80/api/v0/data/DP1.10023.001/ABBY/2017-08&#39;,
+    &#39;http://data.neonscience.org:80/api/v0/data/DP1.10023.001/ABBY/2018-07&#39;,
+    &#39;http://data.neonscience.org:80/api/v0/data/DP1.10023.001/ABBY/2018-08&#39;]},
+</pre></div>
+</div>
+</div>
+<div class="section" id="Ingest-and-examine-selected-NEON-sites-into-a-GeoDataFrame">
+<h1>Ingest and examine selected NEON sites into a GeoDataFrame<a class="headerlink" href="#Ingest-and-examine-selected-NEON-sites-into-a-GeoDataFrame" title="Permalink to this headline">¶</a></h1>
+<p>Then filter based on availability of desired aquatic <a class="reference external" href="http://data.neonscience.org/data-product-catalog">NEON Data Products</a>: dissolved oxygen (water quality), stream stage (water height) and stream discharge. The “base” data product codes are <code class="docutils literal notranslate"><span class="pre">DP1.20288</span></code>, <code class="docutils literal notranslate"><span class="pre">DP1.20016</span></code> and <code class="docutils literal notranslate"><span class="pre">DP4.00130</span></code>. Here’s the documentation for one of them: <a class="reference external" href="http://data.neonscience.org/data-product-view?dpCode=DP1.20016.001">http://data.neonscience.org/data-product-view?dpCode=DP1.20016.001</a></p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">neon_sites_tn_allprods</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">s</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sites_json</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="s1">&#39;domainName&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;Appalachians and Cumberland Plateau&#39;</span><span class="p">,</span> <span class="s1">&#39;Ozarks Complex&#39;</span><span class="p">)</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">len</span><span class="p">(</span><span class="n">neon_sites_tn_allprods</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">neon_sites_tn_allprods</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(11, list)
+</pre></div></div>
+</div>
+<p>Create Pandas DataFrame from sites data in Python dictionary, then create a GeoPandas GeoDataFrame from DataFrame</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">sites_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_records</span><span class="p">([</span><span class="n">site</span> <span class="k">for</span> <span class="n">site</span> <span class="ow">in</span> <span class="n">neon_sites_tn_allprods</span><span class="p">])</span>
+<span class="n">sites_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;siteCode&#39;</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">neon_sites_tn_allprods_gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">sites_df</span><span class="p">,</span>
+                                          <span class="n">geometry</span><span class="o">=</span><span class="n">sites_df</span><span class="p">[[</span><span class="s1">&#39;siteLongitude&#39;</span><span class="p">,</span> <span class="s1">&#39;siteLatitude&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+                                              <span class="n">shpgeom</span><span class="o">.</span><span class="n">Point</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+                                          <span class="n">crs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;init&#39;</span><span class="p">:</span> <span class="s1">&#39;epsg:4326&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">neon_sites_tn_allprods_gdf</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dataProducts</th>
+      <th>domainCode</th>
+      <th>domainName</th>
+      <th>siteCode</th>
+      <th>siteDescription</th>
+      <th>siteLatitude</th>
+      <th>siteLongitude</th>
+      <th>siteName</th>
+      <th>siteType</th>
+      <th>stateCode</th>
+      <th>stateName</th>
+      <th>geometry</th>
+    </tr>
+    <tr>
+      <th>siteCode</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>BLWA</th>
+      <td>[{'dataProductCode': 'DP1.20271.001', 'dataPro...</td>
+      <td>D08</td>
+      <td>Ozarks Complex</td>
+      <td>BLWA</td>
+      <td>Black Warrior River</td>
+      <td>32.541529</td>
+      <td>-87.798151</td>
+      <td>Black Warrior River Site, RELOCATABLE</td>
+      <td>RELOCATABLE</td>
+      <td>AL</td>
+      <td>Alabama</td>
+      <td>POINT (-87.798151 32.541529)</td>
+    </tr>
+    <tr>
+      <th>DELA</th>
+      <td>[{'dataProductCode': 'DP1.10066.001', 'dataPro...</td>
+      <td>D08</td>
+      <td>Ozarks Complex</td>
+      <td>DELA</td>
+      <td>Dead Lake</td>
+      <td>32.541727</td>
+      <td>-87.803877</td>
+      <td>Dead Lake Site, RELOCATABLE</td>
+      <td>RELOCATABLE</td>
+      <td>AL</td>
+      <td>Alabama</td>
+      <td>POINT (-87.803877 32.541727)</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p>Let’s examine some of the information for dataProducts (variables). Then we’ll retain only the sites that have any of the three desired data products, and add some flags indicating whether each of the desired data products are found in the site.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">neon_sites_tn_allprods_gdf</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;dataProducts&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;dataProductCode&#39;: &#39;DP1.20271.001&#39;,
+ &#39;dataProductTitle&#39;: &#39;Relative humidity above water on-buoy&#39;,
+ &#39;availableMonths&#39;: [&#39;2018-09&#39;, &#39;2018-10&#39;, &#39;2018-11&#39;, &#39;2018-12&#39;],
+ &#39;availableDataUrls&#39;: [&#39;http://data.neonscience.org:80/api/v0/data/DP1.20271.001/BLWA/2018-09&#39;,
+  &#39;http://data.neonscience.org:80/api/v0/data/DP1.20271.001/BLWA/2018-10&#39;,
+  &#39;http://data.neonscience.org:80/api/v0/data/DP1.20271.001/BLWA/2018-11&#39;,
+  &#39;http://data.neonscience.org:80/api/v0/data/DP1.20271.001/BLWA/2018-12&#39;]}
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># What I&#39;m flagging as &quot;oxygen&quot; is actually a broader &quot;water quality&quot; data product</span>
+<span class="n">neon_sites_tn</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">neon_sites_tn_allprods</span><span class="p">[:]:</span>
+    <span class="n">dataproductcodes</span> <span class="o">=</span> <span class="p">[</span><span class="n">dp</span><span class="p">[</span><span class="s1">&#39;dataProductCode&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">dp</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="s1">&#39;dataProducts&#39;</span><span class="p">]]</span>
+    <span class="n">s</span><span class="p">[</span><span class="s1">&#39;oxygen&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span> <span class="k">if</span> <span class="s1">&#39;DP1.20288.001&#39;</span> <span class="ow">in</span> <span class="n">dataproductcodes</span> <span class="k">else</span> <span class="kc">False</span>
+    <span class="n">s</span><span class="p">[</span><span class="s1">&#39;discharge&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span> <span class="k">if</span> <span class="s1">&#39;DP4.00130.001&#39;</span> <span class="ow">in</span> <span class="n">dataproductcodes</span> <span class="k">else</span> <span class="kc">False</span>
+    <span class="n">s</span><span class="p">[</span><span class="s1">&#39;stage&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span> <span class="k">if</span> <span class="s1">&#39;DP1.20016.001&#39;</span> <span class="ow">in</span> <span class="n">dataproductcodes</span> <span class="k">else</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="s1">&#39;oxygen&#39;</span><span class="p">]</span> <span class="ow">or</span> <span class="n">s</span><span class="p">[</span><span class="s1">&#39;discharge&#39;</span><span class="p">]</span> <span class="ow">or</span> <span class="n">s</span><span class="p">[</span><span class="s1">&#39;stage&#39;</span><span class="p">]:</span>
+        <span class="n">neon_sites_tn</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">len</span><span class="p">(</span><span class="n">neon_sites_tn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+3
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">sites_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_records</span><span class="p">([</span><span class="n">site</span> <span class="k">for</span> <span class="n">site</span> <span class="ow">in</span> <span class="n">neon_sites_tn</span><span class="p">])</span>
+<span class="n">sites_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;siteCode&#39;</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">neon_sites_tn_gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">sites_df</span><span class="p">,</span>
+                                   <span class="n">geometry</span><span class="o">=</span><span class="n">sites_df</span><span class="p">[[</span><span class="s1">&#39;siteLongitude&#39;</span><span class="p">,</span> <span class="s1">&#39;siteLatitude&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+                                       <span class="n">shpgeom</span><span class="o">.</span><span class="n">Point</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+                                    <span class="n">crs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;init&#39;</span><span class="p">:</span> <span class="s1">&#39;epsg:4326&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># A quick geopandas plot, just as a check</span>
+<span class="n">neon_sites_tn_gdf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../../_images/gallery_Python_Instructional_Water_Hackweek_2019_Data_Access_and_Time-series_Statistics_Cyberseminar_notebooks_Part2-NEON_and_Observatories_RESTAPI_28_0.png" src="../../../../../_images/gallery_Python_Instructional_Water_Hackweek_2019_Data_Access_and_Time-series_Statistics_Cyberseminar_notebooks_Part2-NEON_and_Observatories_RESTAPI_28_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Get-LTER-sites-and-single-GLEON-site">
+<h1>Get LTER sites and single GLEON site<a class="headerlink" href="#Get-LTER-sites-and-single-GLEON-site" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://lternet.edu">LTER</a> Sites dataset: <a class="reference external" href="https://portal.edirepository.org/nis/mapbrowse?packageid=edi.138.3">https://portal.edirepository.org/nis/mapbrowse?packageid=edi.138.3</a></p></li>
+<li><p><a class="reference external" href="http://gleon.org">GLEON</a> site information for Kentucky Lake: <a class="reference external" href="http://gleon.org/lakes/kentucky-lake">http://gleon.org/lakes/kentucky-lake</a>. GLEON doesn’t offer a sites dataset or a convenient presentation of latitude and longitude coordinates, so I had to search around. The best resource was <a class="reference external" href="http://gleon.org/members/lakes/map">this interactive map</a>. The coordinates for Kentucky Lake are latitude 36.733533, longitude -88.11666</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">lter_sites_url</span> <span class="o">=</span> <span class="s2">&quot;https://portal.edirepository.org/nis/dataviewer?packageid=edi.138.3&amp;entityid=5e88b1508627d2618eadb56852a188f9&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">lter_sites_url</span><span class="p">)</span>
+
+<span class="n">lter_sites_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">StringIO</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
+<span class="n">lter_sites_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>site_id_text</th>
+      <th>site_name</th>
+      <th>address1</th>
+      <th>address2</th>
+      <th>address3</th>
+      <th>address4</th>
+      <th>address5</th>
+      <th>city</th>
+      <th>state</th>
+      <th>zip</th>
+      <th>country</th>
+      <th>latitude</th>
+      <th>longitude</th>
+      <th>network_name</th>
+      <th>elevation</th>
+      <th>ecosystem</th>
+      <th>latitude_comment</th>
+      <th>longitude_comment</th>
+      <th>elevation_comment</th>
+      <th>ecosystem_comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AND</td>
+      <td>Andrews Forest LTER</td>
+      <td>Andrews Experimental Forest</td>
+      <td>P.O. Box 300</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Blue River</td>
+      <td>OR</td>
+      <td>97413</td>
+      <td>USA</td>
+      <td>44.212</td>
+      <td>-122.256</td>
+      <td>us</td>
+      <td>1020.0</td>
+      <td>Coniferous Forest</td>
+      <td>Data Source: LTER Site Characteristics Databas...</td>
+      <td>Data Source: LTER Site Characteristics Databas...</td>
+      <td>Data Source: Collins/Waide. class data.  2008....</td>
+      <td>Data Source: GreenLand, D., G. G. Goodin., R. ...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div class="section" id="Map-all-sites-with-Folium">
+<h1>Map all sites with Folium<a class="headerlink" href="#Map-all-sites-with-Folium" title="Permalink to this headline">¶</a></h1>
+<p>From the three observation networks</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">m</span> <span class="o">=</span> <span class="n">folium</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">tiles</span><span class="o">=</span><span class="s1">&#39;Stamen terrain&#39;</span><span class="p">)</span>  <span class="c1"># Or &#39;CartoDB positron&#39;</span>
+
+<span class="c1"># Selected NEON Sites</span>
+<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">neon_sites_tn_allprods_gdf</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">folium</span><span class="o">.</span><span class="n">Marker</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="n">feature</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">feature</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">x</span><span class="p">],</span>
+                  <span class="n">icon</span><span class="o">=</span><span class="n">folium</span><span class="o">.</span><span class="n">Icon</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">),</span>
+                  <span class="n">popup</span><span class="o">=</span><span class="s2">&quot;&lt;b&gt;NEON&lt;/b&gt; </span><span class="si">{0}</span><span class="s2"> - </span><span class="si">{1}</span><span class="s2"> (</span><span class="si">{2}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                      <span class="n">feature</span><span class="p">[</span><span class="s1">&#39;siteCode&#39;</span><span class="p">],</span> <span class="n">feature</span><span class="p">[</span><span class="s1">&#39;siteName&#39;</span><span class="p">],</span> <span class="n">feature</span><span class="p">[</span><span class="s1">&#39;domainName&#39;</span><span class="p">])</span>
+                 <span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+<span class="c1"># Highlight the sites that have the desired stream data</span>
+<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">neon_sites_tn_gdf</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">folium</span><span class="o">.</span><span class="n">CircleMarker</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="n">feature</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">feature</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">x</span><span class="p">],</span>
+                        <span class="n">radius</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                        <span class="n">popup</span><span class="o">=</span><span class="s2">&quot;&lt;b&gt;NEON SELECTED.&lt;/b&gt; </span><span class="si">{0}</span><span class="s2"> - </span><span class="si">{1}</span><span class="s2"> (</span><span class="si">{2}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                            <span class="n">feature</span><span class="p">[</span><span class="s1">&#39;siteCode&#39;</span><span class="p">],</span> <span class="n">feature</span><span class="p">[</span><span class="s1">&#39;siteName&#39;</span><span class="p">],</span> <span class="n">feature</span><span class="p">[</span><span class="s1">&#39;domainName&#39;</span><span class="p">])</span>
+                       <span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+<span class="c1"># Set the map extent (bounds) to the extent of the selected NEON sites</span>
+<span class="n">m</span><span class="o">.</span><span class="n">fit_bounds</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">get_bounds</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># LTER sites</span>
+<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">lter_sites_df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">folium</span><span class="o">.</span><span class="n">Marker</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="n">row</span><span class="o">.</span><span class="n">latitude</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">longitude</span><span class="p">],</span>
+                  <span class="n">icon</span><span class="o">=</span><span class="n">folium</span><span class="o">.</span><span class="n">Icon</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">),</span>
+                  <span class="n">popup</span><span class="o">=</span><span class="s2">&quot;&lt;b&gt;LTER&lt;/b&gt; site </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;site_name&#39;</span><span class="p">])</span>
+                 <span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+<span class="c1"># Single GLEON site</span>
+<span class="n">folium</span><span class="o">.</span><span class="n">Marker</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="mf">36.733533</span><span class="p">,</span> <span class="o">-</span><span class="mf">88.11666</span><span class="p">],</span>
+          <span class="n">icon</span><span class="o">=</span><span class="n">folium</span><span class="o">.</span><span class="n">Icon</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">),</span>
+          <span class="n">popup</span><span class="o">=</span><span class="s2">&quot;&lt;b&gt;GLEON&lt;/b&gt; Kentucky Lake site&quot;</span>
+         <span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;folium.map.Marker at 0x7f7bff9354a8&gt;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Now render the map</span>
+<span class="n">m</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,PCFET0NUWVBFIGh0bWw+CjxoZWFkPiAgICAKICAgIDxtZXRhIGh0dHAtZXF1aXY9ImNvbnRlbnQtdHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PVVURi04IiAvPgogICAgPHNjcmlwdD5MX1BSRUZFUl9DQU5WQVM9ZmFsc2U7IExfTk9fVE9VQ0g9ZmFsc2U7IExfRElTQUJMRV8zRD1mYWxzZTs8L3NjcmlwdD4KICAgIDxzY3JpcHQgc3JjPSJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL2xlYWZsZXRAMS4zLjQvZGlzdC9sZWFmbGV0LmpzIj48L3NjcmlwdD4KICAgIDxzY3JpcHQgc3JjPSJodHRwczovL2FqYXguZ29vZ2xlYXBpcy5jb20vYWpheC9saWJzL2pxdWVyeS8xLjExLjEvanF1ZXJ5Lm1pbi5qcyI+PC9zY3JpcHQ+CiAgICA8c2NyaXB0IHNyYz0iaHR0cHM6Ly9tYXhjZG4uYm9vdHN0cmFwY2RuLmNvbS9ib290c3RyYXAvMy4yLjAvanMvYm9vdHN0cmFwLm1pbi5qcyI+PC9zY3JpcHQ+CiAgICA8c2NyaXB0IHNyYz0iaHR0cHM6Ly9jZG5qcy5jbG91ZGZsYXJlLmNvbS9hamF4L2xpYnMvTGVhZmxldC5hd2Vzb21lLW1hcmtlcnMvMi4wLjIvbGVhZmxldC5hd2Vzb21lLW1hcmtlcnMuanMiPjwvc2NyaXB0PgogICAgPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL2xlYWZsZXRAMS4zLjQvZGlzdC9sZWFmbGV0LmNzcyIvPgogICAgPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJodHRwczovL21heGNkbi5ib290c3RyYXBjZG4uY29tL2Jvb3RzdHJhcC8zLjIuMC9jc3MvYm9vdHN0cmFwLm1pbi5jc3MiLz4KICAgIDxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iaHR0cHM6Ly9tYXhjZG4uYm9vdHN0cmFwY2RuLmNvbS9ib290c3RyYXAvMy4yLjAvY3NzL2Jvb3RzdHJhcC10aGVtZS5taW4uY3NzIi8+CiAgICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Imh0dHBzOi8vbWF4Y2RuLmJvb3RzdHJhcGNkbi5jb20vZm9udC1hd2Vzb21lLzQuNi4zL2Nzcy9mb250LWF3ZXNvbWUubWluLmNzcyIvPgogICAgPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJodHRwczovL2NkbmpzLmNsb3VkZmxhcmUuY29tL2FqYXgvbGlicy9MZWFmbGV0LmF3ZXNvbWUtbWFya2Vycy8yLjAuMi9sZWFmbGV0LmF3ZXNvbWUtbWFya2Vycy5jc3MiLz4KICAgIDxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iaHR0cHM6Ly9yYXdjZG4uZ2l0aGFjay5jb20vcHl0aG9uLXZpc3VhbGl6YXRpb24vZm9saXVtL21hc3Rlci9mb2xpdW0vdGVtcGxhdGVzL2xlYWZsZXQuYXdlc29tZS5yb3RhdGUuY3NzIi8+CiAgICA8c3R5bGU+aHRtbCwgYm9keSB7d2lkdGg6IDEwMCU7aGVpZ2h0OiAxMDAlO21hcmdpbjogMDtwYWRkaW5nOiAwO308L3N0eWxlPgogICAgPHN0eWxlPiNtYXAge3Bvc2l0aW9uOmFic29sdXRlO3RvcDowO2JvdHRvbTowO3JpZ2h0OjA7bGVmdDowO308L3N0eWxlPgogICAgCiAgICA8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLAogICAgICAgIGluaXRpYWwtc2NhbGU9MS4wLCBtYXhpbXVtLXNjYWxlPTEuMCwgdXNlci1zY2FsYWJsZT1ubyIgLz4KICAgIDxzdHlsZT4jbWFwXzRhZDBlMjBjM2UwYjRhNmFiOTJiZGY0MDZiZTNhMDYxIHsKICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7CiAgICAgICAgd2lkdGg6IDEwMC4wJTsKICAgICAgICBoZWlnaHQ6IDEwMC4wJTsKICAgICAgICBsZWZ0OiAwLjAlOwogICAgICAgIHRvcDogMC4wJTsKICAgICAgICB9CiAgICA8L3N0eWxlPgo8L2hlYWQ+Cjxib2R5PiAgICAKICAgIAogICAgPGRpdiBjbGFzcz0iZm9saXVtLW1hcCIgaWQ9Im1hcF80YWQwZTIwYzNlMGI0YTZhYjkyYmRmNDA2YmUzYTA2MSIgPjwvZGl2Pgo8L2JvZHk+CjxzY3JpcHQ+ICAgIAogICAgCiAgICAKICAgICAgICB2YXIgYm91bmRzID0gbnVsbDsKICAgIAoKICAgIHZhciBtYXBfNGFkMGUyMGMzZTBiNGE2YWI5MmJkZjQwNmJlM2EwNjEgPSBMLm1hcCgKICAgICAgICAnbWFwXzRhZDBlMjBjM2UwYjRhNmFiOTJiZGY0MDZiZTNhMDYxJywgewogICAgICAgIGNlbnRlcjogWzAsIDBdLAogICAgICAgIHpvb206IDEsCiAgICAgICAgbWF4Qm91bmRzOiBib3VuZHMsCiAgICAgICAgbGF5ZXJzOiBbXSwKICAgICAgICB3b3JsZENvcHlKdW1wOiBmYWxzZSwKICAgICAgICBjcnM6IEwuQ1JTLkVQU0czODU3LAogICAgICAgIHpvb21Db250cm9sOiB0cnVlLAogICAgICAgIH0pOwoKICAgIAogICAgCiAgICB2YXIgdGlsZV9sYXllcl9mNTc0NTgwNDNhYWE0ODUxOGM1MmI1NDVkMThlNjkyMCA9IEwudGlsZUxheWVyKAogICAgICAgICdodHRwczovL3N0YW1lbi10aWxlcy17c30uYS5zc2wuZmFzdGx5Lm5ldC90ZXJyYWluL3t6fS97eH0ve3l9LmpwZycsCiAgICAgICAgewogICAgICAgICJhdHRyaWJ1dGlvbiI6IG51bGwsCiAgICAgICAgImRldGVjdFJldGluYSI6IGZhbHNlLAogICAgICAgICJtYXhOYXRpdmVab29tIjogMTgsCiAgICAgICAgIm1heFpvb20iOiAxOCwKICAgICAgICAibWluWm9vbSI6IDAsCiAgICAgICAgIm5vV3JhcCI6IGZhbHNlLAogICAgICAgICJvcGFjaXR5IjogMSwKICAgICAgICAic3ViZG9tYWlucyI6ICJhYmMiLAogICAgICAgICJ0bXMiOiBmYWxzZQp9KS5hZGRUbyhtYXBfNGFkMGUyMGMzZTBiNGE2YWI5MmJkZjQwNmJlM2EwNjEpOwogICAgCiAgICAgICAgdmFyIG1hcmtlcl8zZGNlZTIwZjA0ZjY0MmZiYWFhOWZhYzI1ZjY3MTgyMCA9IEwubWFya2VyKAogICAgICAgICAgICBbMzIuNTQxNTI5LCAtODcuNzk4MTUxXSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgaWNvbjogbmV3IEwuSWNvbi5EZWZhdWx0KCkKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKS5hZGRUbyhtYXBfNGFkMGUyMGMzZTBiNGE2YWI5MmJkZjQwNmJlM2EwNjEpOwogICAgICAgIAogICAgCgogICAgICAgICAgICAgICAgdmFyIGljb25fYWEyMzAzMWI1OTdmNDU5M2FhNTNiYmE5YjZjY2RjOTEgPSBMLkF3ZXNvbWVNYXJrZXJzLmljb24oewogICAgICAgICAgICAgICAgICAgIGljb246ICdpbmZvLXNpZ24nLAogICAgICAgICAgICAgICAgICAgIGljb25Db2xvcjogJ3doaXRlJywKICAgICAgICAgICAgICAgICAgICBtYXJrZXJDb2xvcjogJ2dyZWVuJywKICAgICAgICAgICAgICAgICAgICBwcmVmaXg6ICdnbHlwaGljb24nLAogICAgICAgICAgICAgICAgICAgIGV4dHJhQ2xhc3NlczogJ2ZhLXJvdGF0ZS0wJwogICAgICAgICAgICAgICAgICAgIH0pOwogICAgICAgICAgICAgICAgbWFya2VyXzNkY2VlMjBmMDRmNjQyZmJhYWE5ZmFjMjVmNjcxODIwLnNldEljb24oaWNvbl9hYTIzMDMxYjU5N2Y0NTkzYWE1M2JiYTliNmNjZGM5MSk7CiAgICAgICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciBwb3B1cF82NTk1ZmRlZTNmMDI0MTFlYjRlNjZjN2VlZjEyNjk4OSA9IEwucG9wdXAoe21heFdpZHRoOiAnMzAwJwogICAgICAgICAgICAKICAgICAgICAgICAgfSk7CgogICAgICAgICAgICAKICAgICAgICAgICAgICAgIHZhciBodG1sXzdlMjI1Y2M4YzZjNDRlMWNhM2I1M2U5M2QxMDJhNTgxID0gJChgPGRpdiBpZD0iaHRtbF83ZTIyNWNjOGM2YzQ0ZTFjYTNiNTNlOTNkMTAyYTU4MSIgc3R5bGU9IndpZHRoOiAxMDAuMCU7IGhlaWdodDogMTAwLjAlOyI+PGI+TkVPTjwvYj4gQkxXQSAtIEJsYWNrIFdhcnJpb3IgUml2ZXIgU2l0ZSwgUkVMT0NBVEFCTEUgKE96YXJrcyBDb21wbGV4KTwvZGl2PmApWzBdOwogICAgICAgICAgICAgICAgcG9wdXBfNjU5NWZkZWUzZjAyNDExZWI0ZTY2YzdlZWYxMjY5ODkuc2V0Q29udGVudChodG1sXzdlMjI1Y2M4YzZjNDRlMWNhM2I1M2U5M2QxMDJhNTgxKTsKICAgICAgICAgICAgCgogICAgICAgICAgICBtYXJrZXJfM2RjZWUyMGYwNGY2NDJmYmFhYTlmYWMyNWY2NzE4MjAuYmluZFBvcHVwKHBvcHVwXzY1OTVmZGVlM2YwMjQxMWViNGU2NmM3ZWVmMTI2OTg5KQogICAgICAgICAgICA7CgogICAgICAgICAgICAKICAgICAgICAKICAgIAogICAgICAgIHZhciBtYXJrZXJfNzQ5ZDJlOTU2YmI2NDQxZmE4NTg3ZDk5ODU3ZWQwODIgPSBMLm1hcmtlcigKICAgICAgICAgICAgWzMyLjU0MTcyNywgLTg3LjgwMzg3N10sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGljb246IG5ldyBMLkljb24uRGVmYXVsdCgpCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICkuYWRkVG8obWFwXzRhZDBlMjBjM2UwYjRhNmFiOTJiZGY0MDZiZTNhMDYxKTsKICAgICAgICAKICAgIAoKICAgICAgICAgICAgICAgIHZhciBpY29uXzJkOWNhMDllZDg2ODRjYTg4ODY0MTgwNDkxOTVlMzhhID0gTC5Bd2Vzb21lTWFya2Vycy5pY29uKHsKICAgICAgICAgICAgICAgICAgICBpY29uOiAnaW5mby1zaWduJywKICAgICAgICAgICAgICAgICAgICBpY29uQ29sb3I6ICd3aGl0ZScsCiAgICAgICAgICAgICAgICAgICAgbWFya2VyQ29sb3I6ICdncmVlbicsCiAgICAgICAgICAgICAgICAgICAgcHJlZml4OiAnZ2x5cGhpY29uJywKICAgICAgICAgICAgICAgICAgICBleHRyYUNsYXNzZXM6ICdmYS1yb3RhdGUtMCcKICAgICAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIG1hcmtlcl83NDlkMmU5NTZiYjY0NDFmYTg1ODdkOTk4NTdlZDA4Mi5zZXRJY29uKGljb25fMmQ5Y2EwOWVkODY4NGNhODg4NjQxODA0OTE5NWUzOGEpOwogICAgICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgcG9wdXBfYmVjMTQ5OGI5NmU4NDZmZDkyNTk5NTBhZmNkMzM1YzQgPSBMLnBvcHVwKHttYXhXaWR0aDogJzMwMCcKICAgICAgICAgICAgCiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgCiAgICAgICAgICAgICAgICB2YXIgaHRtbF9iZTY3N2ZkMTcxYzk0M2E2YjBmYjhhNGZkZjMxODU3ZCA9ICQoYDxkaXYgaWQ9Imh0bWxfYmU2NzdmZDE3MWM5NDNhNmIwZmI4YTRmZGYzMTg1N2QiIHN0eWxlPSJ3aWR0aDogMTAwLjAlOyBoZWlnaHQ6IDEwMC4wJTsiPjxiPk5FT048L2I+IERFTEEgLSBEZWFkIExha2UgU2l0ZSwgUkVMT0NBVEFCTEUgKE96YXJrcyBDb21wbGV4KTwvZGl2PmApWzBdOwogICAgICAgICAgICAgICAgcG9wdXBfYmVjMTQ5OGI5NmU4NDZmZDkyNTk5NTBhZmNkMzM1YzQuc2V0Q29udGVudChodG1sX2JlNjc3ZmQxNzFjOTQzYTZiMGZiOGE0ZmRmMzE4NTdkKTsKICAgICAgICAgICAgCgogICAgICAgICAgICBtYXJrZXJfNzQ5ZDJlOTU2YmI2NDQxZmE4NTg3ZDk5ODU3ZWQwODIuYmluZFBvcHVwKHBvcHVwX2JlYzE0OThiOTZlODQ2ZmQ5MjU5OTUwYWZjZDMzNWM0KQogICAgICAgICAgICA7CgogICAgICAgICAgICAKICAgICAgICAKICAgIAogICAgICAgIHZhciBtYXJrZXJfZTUzNzBhYWI2OGZkNDhjOWJlNjk4YmZjYWNmNmUwMzcgPSBMLm1hcmtlcigKICAgICAgICAgICAgWzM1LjY4ODk2LCAtODMuNTAxOTVdLAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBpY29uOiBuZXcgTC5JY29uLkRlZmF1bHQoKQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICApLmFkZFRvKG1hcF80YWQwZTIwYzNlMGI0YTZhYjkyYmRmNDA2YmUzYTA2MSk7CiAgICAgICAgCiAgICAKCiAgICAgICAgICAgICAgICB2YXIgaWNvbl8zN2I3MzA1MjVmNjY0Nzc2YjU3YTRlNzdjMTE2YjQ5OSA9IEwuQXdlc29tZU1hcmtlcnMuaWNvbih7CiAgICAgICAgICAgICAgICAgICAgaWNvbjogJ2luZm8tc2lnbicsCiAgICAgICAgICAgICAgICAgICAgaWNvbkNvbG9yOiAnd2hpdGUnLAogICAgICAgICAgICAgICAgICAgIG1hcmtlckNvbG9yOiAnZ3JlZW4nLAogICAgICAgICAgICAgICAgICAgIHByZWZpeDogJ2dseXBoaWNvbicsCiAgICAgICAgICAgICAgICAgICAgZXh0cmFDbGFzc2VzOiAnZmEtcm90YXRlLTAnCiAgICAgICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgICAgICBtYXJrZXJfZTUzNzBhYWI2OGZkNDhjOWJlNjk4YmZjYWNmNmUwMzcuc2V0SWNvbihpY29uXzM3YjczMDUyNWY2NjQ3NzZiNTdhNGU3N2MxMTZiNDk5KTsKICAgICAgICAgICAgCiAgICAKICAgICAgICAgICAgdmFyIHBvcHVwX2Y2YmUyMGU1NmFlNDQwZGY5OWQzMzY3NTlkMjNjNGYzID0gTC5wb3B1cCh7bWF4V2lkdGg6ICczMDAnCiAgICAgICAgICAgIAogICAgICAgICAgICB9KTsKCiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgdmFyIGh0bWxfM2M5NTkyYjdmOGE2NDU0OTllNmIxNjY1YjAwMTI0NGYgPSAkKGA8ZGl2IGlkPSJodG1sXzNjOTU5MmI3ZjhhNjQ1NDk5ZTZiMTY2NWIwMDEyNDRmIiBzdHlsZT0id2lkdGg6IDEwMC4wJTsgaGVpZ2h0OiAxMDAuMCU7Ij48Yj5ORU9OPC9iPiBHUlNNIC0gR3JlYXQgU21va3kgTW91bnRhaW5zIE5hdGlvbmFsIFBhcmsgU2l0ZSwgUkVMT0NBVEFCTEUgKEFwcGFsYWNoaWFucyBhbmQgQ3VtYmVybGFuZCBQbGF0ZWF1KTwvZGl2PmApWzBdOwogICAgICAgICAgICAgICAgcG9wdXBfZjZiZTIwZTU2YWU0NDBkZjk5ZDMzNjc1OWQyM2M0ZjMuc2V0Q29udGVudChodG1sXzNjOTU5MmI3ZjhhNjQ1NDk5ZTZiMTY2NWIwMDEyNDRmKTsKICAgICAgICAgICAgCgogICAgICAgICAgICBtYXJrZXJfZTUzNzBhYWI2OGZkNDhjOWJlNjk4YmZjYWNmNmUwMzcuYmluZFBvcHVwKHBvcHVwX2Y2YmUyMGU1NmFlNDQwZGY5OWQzMzY3NTlkMjNjNGYzKQogICAgICAgICAgICA7CgogICAgICAgICAgICAKICAgICAgICAKICAgIAogICAgICAgIHZhciBtYXJrZXJfYWE1ZjFkNTdkYTcyNGEyOTgwMmY3Y2U3NGE4MzFmYTIgPSBMLm1hcmtlcigKICAgICAgICAgICAgWzM1LjY5MDQyOCwgLTgzLjUwMzc5XSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgaWNvbjogbmV3IEwuSWNvbi5EZWZhdWx0KCkKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKS5hZGRUbyhtYXBfNGFkMGUyMGMzZTBiNGE2YWI5MmJkZjQwNmJlM2EwNjEpOwogICAgICAgIAogICAgCgogICAgICAgICAgICAgICAgdmFyIGljb25fMDA2MDRmYTcyMmE4NDE4ZWEzZThhMjA4ZmZiMmMwNTQgPSBMLkF3ZXNvbWVNYXJrZXJzLmljb24oewogICAgICAgICAgICAgICAgICAgIGljb246ICdpbmZvLXNpZ24nLAogICAgICAgICAgICAgICAgICAgIGljb25Db2xvcjogJ3doaXRlJywKICAgICAgICAgICAgICAgICAgICBtYXJrZXJDb2xvcjogJ2dyZWVuJywKICAgICAgICAgICAgICAgICAgICBwcmVmaXg6ICdnbHlwaGljb24nLAogICAgICAgICAgICAgICAgICAgIGV4dHJhQ2xhc3NlczogJ2ZhLXJvdGF0ZS0wJwogICAgICAgICAgICAgICAgICAgIH0pOwogICAgICAgICAgICAgICAgbWFya2VyX2FhNWYxZDU3ZGE3MjRhMjk4MDJmN2NlNzRhODMxZmEyLnNldEljb24oaWNvbl8wMDYwNGZhNzIyYTg0MThlYTNlOGEyMDhmZmIyYzA1NCk7CiAgICAgICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciBwb3B1cF9kODcwYmYzNmFiMjQ0MmU2OGM4Y2VlODE1MjA1NTUwYiA9IEwucG9wdXAoe21heFdpZHRoOiAnMzAwJwogICAgICAgICAgICAKICAgICAgICAgICAgfSk7CgogICAgICAgICAgICAKICAgICAgICAgICAgICAgIHZhciBodG1sX2M2NDZmNGIzNmY2MzQ5MzNhNmQ5NDU2MWFjY2FiMjA5ID0gJChgPGRpdiBpZD0iaHRtbF9jNjQ2ZjRiMzZmNjM0OTMzYTZkOTQ1NjFhY2NhYjIwOSIgc3R5bGU9IndpZHRoOiAxMDAuMCU7IGhlaWdodDogMTAwLjAlOyI+PGI+TkVPTjwvYj4gTEVDTyAtIExlQ29udGUgQ3JlZWsgU2l0ZSwgUkVMT0NBVEFCTEUgKEFwcGFsYWNoaWFucyBhbmQgQ3VtYmVybGFuZCBQbGF0ZWF1KTwvZGl2PmApWzBdOwogICAgICAgICAgICAgICAgcG9wdXBfZDg3MGJmMzZhYjI0NDJlNjhjOGNlZTgxNTIwNTU1MGIuc2V0Q29udGVudChodG1sX2M2NDZmNGIzNmY2MzQ5MzNhNmQ5NDU2MWFjY2FiMjA5KTsKICAgICAgICAgICAgCgogICAgICAgICAgICBtYXJrZXJfYWE1ZjFkNTdkYTcyNGEyOTgwMmY3Y2U3NGE4MzFmYTIuYmluZFBvcHVwKHBvcHVwX2Q4NzBiZjM2YWIyNDQyZTY4YzhjZWU4MTUyMDU1NTBiKQogICAgICAgICAgICA7CgogICAgICAgICAgICAKICAgICAgICAKICAgIAogICAgICAgIHZhciBtYXJrZXJfY2JhZGUzOGE3ODY0NDZiOWE5OWRkNjA0MTIzYTY0MDYgPSBMLm1hcmtlcigKICAgICAgICAgICAgWzMxLjg1Mzg2MSwgLTg4LjE2MTE4MV0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGljb246IG5ldyBMLkljb24uRGVmYXVsdCgpCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICkuYWRkVG8obWFwXzRhZDBlMjBjM2UwYjRhNmFiOTJiZGY0MDZiZTNhMDYxKTsKICAgICAgICAKICAgIAoKICAgICAgICAgICAgICAgIHZhciBpY29uXzQxNDAzNmM0MWEzYjRkYTU5MzIzYmUwOWRiNjA4YjE5ID0gTC5Bd2Vzb21lTWFya2Vycy5pY29uKHsKICAgICAgICAgICAgICAgICAgICBpY29uOiAnaW5mby1zaWduJywKICAgICAgICAgICAgICAgICAgICBpY29uQ29sb3I6ICd3aGl0ZScsCiAgICAgICAgICAgICAgICAgICAgbWFya2VyQ29sb3I6ICdncmVlbicsCiAgICAgICAgICAgICAgICAgICAgcHJlZml4OiAnZ2x5cGhpY29uJywKICAgICAgICAgICAgICAgICAgICBleHRyYUNsYXNzZXM6ICdmYS1yb3RhdGUtMCcKICAgICAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIG1hcmtlcl9jYmFkZTM4YTc4NjQ0NmI5YTk5ZGQ2MDQxMjNhNjQwNi5zZXRJY29uKGljb25fNDE0MDM2YzQxYTNiNGRhNTkzMjNiZTA5ZGI2MDhiMTkpOwogICAgICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgcG9wdXBfOGI1YjQ1NmJhZmFkNGM1OGJkNTA1ZDk3ZWNiNjMwM2EgPSBMLnBvcHVwKHttYXhXaWR0aDogJzMwMCcKICAgICAgICAgICAgCiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgCiAgICAgICAgICAgICAgICB2YXIgaHRtbF85YjZiMWY2OTdmOTE0MmIxYjM0ZjM0NWIwM2MzMWE5ZCA9ICQoYDxkaXYgaWQ9Imh0bWxfOWI2YjFmNjk3ZjkxNDJiMWIzNGYzNDViMDNjMzFhOWQiIHN0eWxlPSJ3aWR0aDogMTAwLjAlOyBoZWlnaHQ6IDEwMC4wJTsiPjxiPk5FT048L2I+IExFTk8gLSBMZW5vaXIgTGFuZGluZyBTaXRlLCBSRUxPQ0FUQUJMRSAoT3phcmtzIENvbXBsZXgpPC9kaXY+YClbMF07CiAgICAgICAgICAgICAgICBwb3B1cF84YjViNDU2YmFmYWQ0YzU4YmQ1MDVkOTdlY2I2MzAzYS5zZXRDb250ZW50KGh0bWxfOWI2YjFmNjk3ZjkxNDJiMWIzNGYzNDViMDNjMzFhOWQpOwogICAgICAgICAgICAKCiAgICAgICAgICAgIG1hcmtlcl9jYmFkZTM4YTc4NjQ0NmI5YTk5ZGQ2MDQxMjNhNjQwNi5iaW5kUG9wdXAocG9wdXBfOGI1YjQ1NmJhZmFkNGM1OGJkNTA1ZDk3ZWNiNjMwM2EpCiAgICAgICAgICAgIDsKCiAgICAgICAgICAgIAogICAgICAgIAogICAgCiAgICAgICAgdmFyIG1hcmtlcl84NDIyNDVkN2NlNTc0MGVmYmQ2NDMxZTJiMWU2MWVmNCA9IEwubWFya2VyKAogICAgICAgICAgICBbMzIuOTYwMzY1LCAtODcuNDA3Njg4XSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgaWNvbjogbmV3IEwuSWNvbi5EZWZhdWx0KCkKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKS5hZGRUbyhtYXBfNGFkMGUyMGMzZTBiNGE2YWI5MmJkZjQwNmJlM2EwNjEpOwogICAgICAgIAogICAgCgogICAgICAgICAgICAgICAgdmFyIGljb25fOTNkMWU5MzlhMTlhNDg3MGE5MTk0OWM4MTIzMzBhZTYgPSBMLkF3ZXNvbWVNYXJrZXJzLmljb24oewogICAgICAgICAgICAgICAgICAgIGljb246ICdpbmZvLXNpZ24nLAogICAgICAgICAgICAgICAgICAgIGljb25Db2xvcjogJ3doaXRlJywKICAgICAgICAgICAgICAgICAgICBtYXJrZXJDb2xvcjogJ2dyZWVuJywKICAgICAgICAgICAgICAgICAgICBwcmVmaXg6ICdnbHlwaGljb24nLAogICAgICAgICAgICAgICAgICAgIGV4dHJhQ2xhc3NlczogJ2ZhLXJvdGF0ZS0wJwogICAgICAgICAgICAgICAgICAgIH0pOwogICAgICAgICAgICAgICAgbWFya2VyXzg0MjI0NWQ3Y2U1NzQwZWZiZDY0MzFlMmIxZTYxZWY0LnNldEljb24oaWNvbl85M2QxZTkzOWExOWE0ODcwYTkxOTQ5YzgxMjMzMGFlNik7CiAgICAgICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciBwb3B1cF84ZjRkMmFjZjQwMjQ0ZWE1YTBlM2U3OGVmMjdlNDUxNSA9IEwucG9wdXAoe21heFdpZHRoOiAnMzAwJwogICAgICAgICAgICAKICAgICAgICAgICAgfSk7CgogICAgICAgICAgICAKICAgICAgICAgICAgICAgIHZhciBodG1sXzU0ODEwYzllNzU5MjQ4N2E5NWY1ZTRjMDRlZGQyM2M4ID0gJChgPGRpdiBpZD0iaHRtbF81NDgxMGM5ZTc1OTI0ODdhOTVmNWU0YzA0ZWRkMjNjOCIgc3R5bGU9IndpZHRoOiAxMDAuMCU7IGhlaWdodDogMTAwLjAlOyI+PGI+TkVPTjwvYj4gTUFZRiAtIE1heWZpZWxkIENyZWVrIFNpdGUsIENPUkUgKE96YXJrcyBDb21wbGV4KTwvZGl2PmApWzBdOwogICAgICAgICAgICAgICAgcG9wdXBfOGY0ZDJhY2Y0MDI0NGVhNWEwZTNlNzhlZjI3ZTQ1MTUuc2V0Q29udGVudChodG1sXzU0ODEwYzllNzU5MjQ4N2E5NWY1ZTRjMDRlZGQyM2M4KTsKICAgICAgICAgICAgCgogICAgICAgICAgICBtYXJrZXJfODQyMjQ1ZDdjZTU3NDBlZmJkNjQzMWUyYjFlNjFlZjQuYmluZFBvcHVwKHBvcHVwXzhmNGQyYWNmNDAyNDRlYTVhMGUzZTc4ZWYyN2U0NTE1KQogICAgICAgICAgICA7CgogICAgICAgICAgICAKICAgICAgICAKICAgIAogICAgICAgIHZhciBtYXJrZXJfZWIyZDk2NzlkYzUyNDQ2NDhmMmQxYzUxYWRhZjJmYTAgPSBMLm1hcmtlcigKICAgICAgICAgICAgWzM3LjM3ODMxNCwgLTgwLjUyNDg0N10sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGljb246IG5ldyBMLkljb24uRGVmYXVsdCgpCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICkuYWRkVG8obWFwXzRhZDBlMjBjM2UwYjRhNmFiOTJiZGY0MDZiZTNhMDYxKTsKICAgICAgICAKICAgIAoKICAgICAgICAgICAgICAgIHZhciBpY29uXzNlYjM4Y2VjYTc2MzQ2MThhOWY2MGE1OWZmNzJjODViID0gTC5Bd2Vzb21lTWFya2Vycy5pY29uKHsKICAgICAgICAgICAgICAgICAgICBpY29uOiAnaW5mby1zaWduJywKICAgICAgICAgICAgICAgICAgICBpY29uQ29sb3I6ICd3aGl0ZScsCiAgICAgICAgICAgICAgICAgICAgbWFya2VyQ29sb3I6ICdncmVlbicsCiAgICAgICAgICAgICAgICAgICAgcHJlZml4OiAnZ2x5cGhpY29uJywKICAgICAgICAgICAgICAgICAgICBleHRyYUNsYXNzZXM6ICdmYS1yb3RhdGUtMCcKICAgICAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIG1hcmtlcl9lYjJkOTY3OWRjNTI0NDY0OGYyZDFjNTFhZGFmMmZhMC5zZXRJY29uKGljb25fM2ViMzhjZWNhNzYzNDYxOGE5ZjYwYTU5ZmY3MmM4NWIpOwogICAgICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgcG9wdXBfNWFmZjMxYzE0ZmNhNGM4NDhhNjZjZGZhMDUzNWQ0NTcgPSBMLnBvcHVwKHttYXhXaWR0aDogJzMwMCcKICAgICAgICAgICAgCiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgCiAgICAgICAgICAgICAgICB2YXIgaHRtbF9kMTI0YmQ5YmYwZDE0YjQyOWFmNWYyYzMxMGMyNDgyMyA9ICQoYDxkaXYgaWQ9Imh0bWxfZDEyNGJkOWJmMGQxNGI0MjlhZjVmMmMzMTBjMjQ4MjMiIHN0eWxlPSJ3aWR0aDogMTAwLjAlOyBoZWlnaHQ6IDEwMC4wJTsiPjxiPk5FT048L2I+IE1MQlMgLSBNb3VudGFpbiBMYWtlIEJpb2xvZ2ljYWwgU3RhdGlvbiBTaXRlLCBSRUxPQ0FUQUJMRSAoQXBwYWxhY2hpYW5zIGFuZCBDdW1iZXJsYW5kIFBsYXRlYXUpPC9kaXY+YClbMF07CiAgICAgICAgICAgICAgICBwb3B1cF81YWZmMzFjMTRmY2E0Yzg0OGE2NmNkZmEwNTM1ZDQ1Ny5zZXRDb250ZW50KGh0bWxfZDEyNGJkOWJmMGQxNGI0MjlhZjVmMmMzMTBjMjQ4MjMpOwogICAgICAgICAgICAKCiAgICAgICAgICAgIG1hcmtlcl9lYjJkOTY3OWRjNTI0NDY0OGYyZDFjNTFhZGFmMmZhMC5iaW5kUG9wdXAocG9wdXBfNWFmZjMxYzE0ZmNhNGM4NDhhNjZjZGZhMDUzNWQ0NTcpCiAgICAgICAgICAgIDsKCiAgICAgICAgICAgIAogICAgICAgIAogICAgCiAgICAgICAgdmFyIG1hcmtlcl84MzAxZmU2NmM3MGU0YmExOGQyZTY3MjUxNTQ2ZjUzYyA9IEwubWFya2VyKAogICAgICAgICAgICBbMzUuOTY0MTI4LCAtODQuMjgyNTg4XSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgaWNvbjogbmV3IEwuSWNvbi5EZWZhdWx0KCkKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKS5hZGRUbyhtYXBfNGFkMGUyMGMzZTBiNGE2YWI5MmJkZjQwNmJlM2EwNjEpOwogICAgICAgIAogICAgCgogICAgICAgICAgICAgICAgdmFyIGljb25fOWI2OGNlNTIwY2E2NDc5MGEyMmUzYmQ4N2NkZWU0ZTkgPSBMLkF3ZXNvbWVNYXJrZXJzLmljb24oewogICAgICAgICAgICAgICAgICAgIGljb246ICdpbmZvLXNpZ24nLAogICAgICAgICAgICAgICAgICAgIGljb25Db2xvcjogJ3doaXRlJywKICAgICAgICAgICAgICAgICAgICBtYXJrZXJDb2xvcjogJ2dyZWVuJywKICAgICAgICAgICAgICAgICAgICBwcmVmaXg6ICdnbHlwaGljb24nLAogICAgICAgICAgICAgICAgICAgIGV4dHJhQ2xhc3NlczogJ2ZhLXJvdGF0ZS0wJwogICAgICAgICAgICAgICAgICAgIH0pOwogICAgICAgICAgICAgICAgbWFya2VyXzgzMDFmZTY2YzcwZTRiYTE4ZDJlNjcyNTE1NDZmNTNjLnNldEljb24oaWNvbl85YjY4Y2U1MjBjYTY0NzkwYTIyZTNiZDg3Y2RlZTRlOSk7CiAgICAgICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciBwb3B1cF9hMWIwMzlkYTQ4NDU0MGEyYWU1ZDMxNmY3YzlkOTI2NyA9IEwucG9wdXAoe21heFdpZHRoOiAnMzAwJwogICAgICAgICAgICAKICAgICAgICAgICAgfSk7CgogICAgICAgICAgICAKICAgICAgICAgICAgICAgIHZhciBodG1sXzY2YmJhMGNmODQ4NzQzMzJhMzU3ZDVhZGYyMjU2YjkyID0gJChgPGRpdiBpZD0iaHRtbF82NmJiYTBjZjg0ODc0MzMyYTM1N2Q1YWRmMjI1NmI5MiIgc3R5bGU9IndpZHRoOiAxMDAuMCU7IGhlaWdodDogMTAwLjAlOyI+PGI+TkVPTjwvYj4gT1JOTCAtIE9hayBSaWRnZSBTaXRlLCBDT1JFIChBcHBhbGFjaGlhbnMgYW5kIEN1bWJlcmxhbmQgUGxhdGVhdSk8L2Rpdj5gKVswXTsKICAgICAgICAgICAgICAgIHBvcHVwX2ExYjAzOWRhNDg0NTQwYTJhZTVkMzE2ZjdjOWQ5MjY3LnNldENvbnRlbnQoaHRtbF82NmJiYTBjZjg0ODc0MzMyYTM1N2Q1YWRmMjI1NmI5Mik7CiAgICAgICAgICAgIAoKICAgICAgICAgICAgbWFya2VyXzgzMDFmZTY2YzcwZTRiYTE4ZDJlNjcyNTE1NDZmNTNjLmJpbmRQb3B1cChwb3B1cF9hMWIwMzlkYTQ4NDU0MGEyYWU1ZDMxNmY3YzlkOTI2NykKICAgICAgICAgICAgOwoKICAgICAgICAgICAgCiAgICAgICAgCiAgICAKICAgICAgICB2YXIgbWFya2VyXzFmNzE1ZjYyMDNmNDQ3OTNiOGM4NGFhNjI4YmJmYjdhID0gTC5tYXJrZXIoCiAgICAgICAgICAgIFszMi45NTA0NywgLTg3LjM5MzI1OV0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGljb246IG5ldyBMLkljb24uRGVmYXVsdCgpCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICkuYWRkVG8obWFwXzRhZDBlMjBjM2UwYjRhNmFiOTJiZGY0MDZiZTNhMDYxKTsKICAgICAgICAKICAgIAoKICAgICAgICAgICAgICAgIHZhciBpY29uXzU3OWYyMDJjOTMxNjQ2YzM4ODcxYTEzOTJkYmU1NGEyID0gTC5Bd2Vzb21lTWFya2Vycy5pY29uKHsKICAgICAgICAgICAgICAgICAgICBpY29uOiAnaW5mby1zaWduJywKICAgICAgICAgICAgICAgICAgICBpY29uQ29sb3I6ICd3aGl0ZScsCiAgICAgICAgICAgICAgICAgICAgbWFya2VyQ29sb3I6ICdncmVlbicsCiAgICAgICAgICAgICAgICAgICAgcHJlZml4OiAnZ2x5cGhpY29uJywKICAgICAgICAgICAgICAgICAgICBleHRyYUNsYXNzZXM6ICdmYS1yb3RhdGUtMCcKICAgICAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIG1hcmtlcl8xZjcxNWY2MjAzZjQ0NzkzYjhjODRhYTYyOGJiZmI3YS5zZXRJY29uKGljb25fNTc5ZjIwMmM5MzE2NDZjMzg4NzFhMTM5MmRiZTU0YTIpOwogICAgICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgcG9wdXBfYzI4YzViZjhkYzkyNGRjOGEyOTA1YjIxMzBiNDUwZTAgPSBMLnBvcHVwKHttYXhXaWR0aDogJzMwMCcKICAgICAgICAgICAgCiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgCiAgICAgICAgICAgICAgICB2YXIgaHRtbF9iYWU2NjBhYmQxY2Q0MjU0YjgzYjdjOWFkNGU1ZjU3NCA9ICQoYDxkaXYgaWQ9Imh0bWxfYmFlNjYwYWJkMWNkNDI1NGI4M2I3YzlhZDRlNWY1NzQiIHN0eWxlPSJ3aWR0aDogMTAwLjAlOyBoZWlnaHQ6IDEwMC4wJTsiPjxiPk5FT048L2I+IFRBTEwgLSBUYWxsYWRlZ2EgTmF0aW9uYWwgRm9yZXN0IFNpdGUsIENPUkUgKE96YXJrcyBDb21wbGV4KTwvZGl2PmApWzBdOwogICAgICAgICAgICAgICAgcG9wdXBfYzI4YzViZjhkYzkyNGRjOGEyOTA1YjIxMzBiNDUwZTAuc2V0Q29udGVudChodG1sX2JhZTY2MGFiZDFjZDQyNTRiODNiN2M5YWQ0ZTVmNTc0KTsKICAgICAgICAgICAgCgogICAgICAgICAgICBtYXJrZXJfMWY3MTVmNjIwM2Y0NDc5M2I4Yzg0YWE2MjhiYmZiN2EuYmluZFBvcHVwKHBvcHVwX2MyOGM1YmY4ZGM5MjRkYzhhMjkwNWIyMTMwYjQ1MGUwKQogICAgICAgICAgICA7CgogICAgICAgICAgICAKICAgICAgICAKICAgIAogICAgICAgIHZhciBtYXJrZXJfMGViMzRkODJmYmRlNDA4YjlhNmU1MWUxNDIzOGY1M2EgPSBMLm1hcmtlcigKICAgICAgICAgICAgWzMxLjg1MzQzMSwgLTg4LjE1ODg3Ml0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGljb246IG5ldyBMLkljb24uRGVmYXVsdCgpCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICkuYWRkVG8obWFwXzRhZDBlMjBjM2UwYjRhNmFiOTJiZGY0MDZiZTNhMDYxKTsKICAgICAgICAKICAgIAoKICAgICAgICAgICAgICAgIHZhciBpY29uXzJjYTQyNWVmN2NmYTRlYmI4NTE5ZDk4NDYwNDdhYjZiID0gTC5Bd2Vzb21lTWFya2Vycy5pY29uKHsKICAgICAgICAgICAgICAgICAgICBpY29uOiAnaW5mby1zaWduJywKICAgICAgICAgICAgICAgICAgICBpY29uQ29sb3I6ICd3aGl0ZScsCiAgICAgICAgICAgICAgICAgICAgbWFya2VyQ29sb3I6ICdncmVlbicsCiAgICAgICAgICAgICAgICAgICAgcHJlZml4OiAnZ2x5cGhpY29uJywKICAgICAgICAgICAgICAgICAgICBleHRyYUNsYXNzZXM6ICdmYS1yb3RhdGUtMCcKICAgICAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIG1hcmtlcl8wZWIzNGQ4MmZiZGU0MDhiOWE2ZTUxZTE0MjM4ZjUzYS5zZXRJY29uKGljb25fMmNhNDI1ZWY3Y2ZhNGViYjg1MTlkOTg0NjA0N2FiNmIpOwogICAgICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgcG9wdXBfOThkMzY1NzU4MThlNGRmYThkMWZjYmFjNDgyNTk0ZjUgPSBMLnBvcHVwKHttYXhXaWR0aDogJzMwMCcKICAgICAgICAgICAgCiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgCiAgICAgICAgICAgICAgICB2YXIgaHRtbF8zYTcxNzQyNzFmM2M0Mjc1YmMwNjNkNzc3MTlkY2U2OSA9ICQoYDxkaXYgaWQ9Imh0bWxfM2E3MTc0MjcxZjNjNDI3NWJjMDYzZDc3NzE5ZGNlNjkiIHN0eWxlPSJ3aWR0aDogMTAwLjAlOyBoZWlnaHQ6IDEwMC4wJTsiPjxiPk5FT048L2I+IFRPTUIgLSBUb21iaWdiZWUgUml2ZXIgU2l0ZSwgUkVMT0NBVEFCTEUgKE96YXJrcyBDb21wbGV4KTwvZGl2PmApWzBdOwogICAgICAgICAgICAgICAgcG9wdXBfOThkMzY1NzU4MThlNGRmYThkMWZjYmFjNDgyNTk0ZjUuc2V0Q29udGVudChodG1sXzNhNzE3NDI3MWYzYzQyNzViYzA2M2Q3NzcxOWRjZTY5KTsKICAgICAgICAgICAgCgogICAgICAgICAgICBtYXJrZXJfMGViMzRkODJmYmRlNDA4YjlhNmU1MWUxNDIzOGY1M2EuYmluZFBvcHVwKHBvcHVwXzk4ZDM2NTc1ODE4ZTRkZmE4ZDFmY2JhYzQ4MjU5NGY1KQogICAgICAgICAgICA7CgogICAgICAgICAgICAKICAgICAgICAKICAgIAogICAgICAgIHZhciBtYXJrZXJfODBmYWQwMTNhNTJmNGQwNjk4OWU3NjExODAxNjRhNTIgPSBMLm1hcmtlcigKICAgICAgICAgICAgWzM1Ljk1NzM3OCwgLTg0LjI3OTI1MV0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGljb246IG5ldyBMLkljb24uRGVmYXVsdCgpCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICkuYWRkVG8obWFwXzRhZDBlMjBjM2UwYjRhNmFiOTJiZGY0MDZiZTNhMDYxKTsKICAgICAgICAKICAgIAoKICAgICAgICAgICAgICAgIHZhciBpY29uXzI5YTY2MmE1NGJjZDRiNmE4ZGMxNzMxYmE0MDg4NWU3ID0gTC5Bd2Vzb21lTWFya2Vycy5pY29uKHsKICAgICAgICAgICAgICAgICAgICBpY29uOiAnaW5mby1zaWduJywKICAgICAgICAgICAgICAgICAgICBpY29uQ29sb3I6ICd3aGl0ZScsCiAgICAgICAgICAgICAgICAgICAgbWFya2VyQ29sb3I6ICdncmVlbicsCiAgICAgICAgICAgICAgICAgICAgcHJlZml4OiAnZ2x5cGhpY29uJywKICAgICAgICAgICAgICAgICAgICBleHRyYUNsYXNzZXM6ICdmYS1yb3RhdGUtMCcKICAgICAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIG1hcmtlcl84MGZhZDAxM2E1MmY0ZDA2OTg5ZTc2MTE4MDE2NGE1Mi5zZXRJY29uKGljb25fMjlhNjYyYTU0YmNkNGI2YThkYzE3MzFiYTQwODg1ZTcpOwogICAgICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgcG9wdXBfYjdkZmVmNmY0Mjc3NGZkM2I4MTNiNWRlODJkOTUwMzcgPSBMLnBvcHVwKHttYXhXaWR0aDogJzMwMCcKICAgICAgICAgICAgCiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgCiAgICAgICAgICAgICAgICB2YXIgaHRtbF9lMDhjNjRjNGMyZTg0MThkYjY5NTYyNjdjZGExZTYxMyA9ICQoYDxkaXYgaWQ9Imh0bWxfZTA4YzY0YzRjMmU4NDE4ZGI2OTU2MjY3Y2RhMWU2MTMiIHN0eWxlPSJ3aWR0aDogMTAwLjAlOyBoZWlnaHQ6IDEwMC4wJTsiPjxiPk5FT048L2I+IFdBTEsgLSBXYWxrZXIgQnJhbmNoIFNpdGUsIENPUkUgKEFwcGFsYWNoaWFucyBhbmQgQ3VtYmVybGFuZCBQbGF0ZWF1KTwvZGl2PmApWzBdOwogICAgICAgICAgICAgICAgcG9wdXBfYjdkZmVmNmY0Mjc3NGZkM2I4MTNiNWRlODJkOTUwMzcuc2V0Q29udGVudChodG1sX2UwOGM2NGM0YzJlODQxOGRiNjk1NjI2N2NkYTFlNjEzKTsKICAgICAgICAgICAgCgogICAgICAgICAgICBtYXJrZXJfODBmYWQwMTNhNTJmNGQwNjk4OWU3NjExODAxNjRhNTIuYmluZFBvcHVwKHBvcHVwX2I3ZGZlZjZmNDI3NzRmZDNiODEzYjVkZTgyZDk1MDM3KQogICAgICAgICAgICA7CgogICAgICAgICAgICAKICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgY2lyY2xlX21hcmtlcl8xNmM5NzU0Zjk1NjY0ZWM1OTIyYzY2MmJhMDJlYWQxOCA9IEwuY2lyY2xlTWFya2VyKAogICAgICAgICAgICAgICAgWzM1LjY5MDQyOCwgLTgzLjUwMzc5XSwKICAgICAgICAgICAgICAgIHsKICAiYnViYmxpbmdNb3VzZUV2ZW50cyI6IHRydWUsCiAgImNvbG9yIjogInJlZCIsCiAgImRhc2hBcnJheSI6IG51bGwsCiAgImRhc2hPZmZzZXQiOiBudWxsLAogICJmaWxsIjogZmFsc2UsCiAgImZpbGxDb2xvciI6ICJyZWQiLAogICJmaWxsT3BhY2l0eSI6IDAuMiwKICAiZmlsbFJ1bGUiOiAiZXZlbm9kZCIsCiAgImxpbmVDYXAiOiAicm91bmQiLAogICJsaW5lSm9pbiI6ICJyb3VuZCIsCiAgIm9wYWNpdHkiOiAxLjAsCiAgInJhZGl1cyI6IDEwLAogICJzdHJva2UiOiB0cnVlLAogICJ3ZWlnaHQiOiAzCn0KICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgICAgIC5hZGRUbyhtYXBfNGFkMGUyMGMzZTBiNGE2YWI5MmJkZjQwNmJlM2EwNjEpOwogICAgICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgcG9wdXBfMTYxMzliODM0YjY5NGY1OGIyNmJlZjkzZDRiYzRiZmEgPSBMLnBvcHVwKHttYXhXaWR0aDogJzMwMCcKICAgICAgICAgICAgCiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgCiAgICAgICAgICAgICAgICB2YXIgaHRtbF85NmFhOGYyYjc0M2Y0ZDZmYmJkMjBjZWNlZjc2NDA5OCA9ICQoYDxkaXYgaWQ9Imh0bWxfOTZhYThmMmI3NDNmNGQ2ZmJiZDIwY2VjZWY3NjQwOTgiIHN0eWxlPSJ3aWR0aDogMTAwLjAlOyBoZWlnaHQ6IDEwMC4wJTsiPjxiPk5FT04gU0VMRUNURUQuPC9iPiBMRUNPIC0gTGVDb250ZSBDcmVlayBTaXRlLCBSRUxPQ0FUQUJMRSAoQXBwYWxhY2hpYW5zIGFuZCBDdW1iZXJsYW5kIFBsYXRlYXUpPC9kaXY+YClbMF07CiAgICAgICAgICAgICAgICBwb3B1cF8xNjEzOWI4MzRiNjk0ZjU4YjI2YmVmOTNkNGJjNGJmYS5zZXRDb250ZW50KGh0bWxfOTZhYThmMmI3NDNmNGQ2ZmJiZDIwY2VjZWY3NjQwOTgpOwogICAgICAgICAgICAKCiAgICAgICAgICAgIGNpcmNsZV9tYXJrZXJfMTZjOTc1NGY5NTY2NGVjNTkyMmM2NjJiYTAyZWFkMTguYmluZFBvcHVwKHBvcHVwXzE2MTM5YjgzNGI2OTRmNThiMjZiZWY5M2Q0YmM0YmZhKQogICAgICAgICAgICA7CgogICAgICAgICAgICAKICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgY2lyY2xlX21hcmtlcl9hNDQxN2ZjZjE5YTA0YTA0YmExYjI1NDhkZDg3YmZiZSA9IEwuY2lyY2xlTWFya2VyKAogICAgICAgICAgICAgICAgWzMyLjk2MDM2NSwgLTg3LjQwNzY4OF0sCiAgICAgICAgICAgICAgICB7CiAgImJ1YmJsaW5nTW91c2VFdmVudHMiOiB0cnVlLAogICJjb2xvciI6ICJyZWQiLAogICJkYXNoQXJyYXkiOiBudWxsLAogICJkYXNoT2Zmc2V0IjogbnVsbCwKICAiZmlsbCI6IGZhbHNlLAogICJmaWxsQ29sb3IiOiAicmVkIiwKICAiZmlsbE9wYWNpdHkiOiAwLjIsCiAgImZpbGxSdWxlIjogImV2ZW5vZGQiLAogICJsaW5lQ2FwIjogInJvdW5kIiwKICAibGluZUpvaW4iOiAicm91bmQiLAogICJvcGFjaXR5IjogMS4wLAogICJyYWRpdXMiOiAxMCwKICAic3Ryb2tlIjogdHJ1ZSwKICAid2VpZ2h0IjogMwp9CiAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICAuYWRkVG8obWFwXzRhZDBlMjBjM2UwYjRhNmFiOTJiZGY0MDZiZTNhMDYxKTsKICAgICAgICAgICAgCiAgICAKICAgICAgICAgICAgdmFyIHBvcHVwX2FlZDY5Nzk2MmRmMjRjMWE5MDhkOGI0YThhMmRiYTk0ID0gTC5wb3B1cCh7bWF4V2lkdGg6ICczMDAnCiAgICAgICAgICAgIAogICAgICAgICAgICB9KTsKCiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgdmFyIGh0bWxfOGNmNzg0MWJhMWFjNGM2NGJlOTliODE5YzUwNDg0NmQgPSAkKGA8ZGl2IGlkPSJodG1sXzhjZjc4NDFiYTFhYzRjNjRiZTk5YjgxOWM1MDQ4NDZkIiBzdHlsZT0id2lkdGg6IDEwMC4wJTsgaGVpZ2h0OiAxMDAuMCU7Ij48Yj5ORU9OIFNFTEVDVEVELjwvYj4gTUFZRiAtIE1heWZpZWxkIENyZWVrIFNpdGUsIENPUkUgKE96YXJrcyBDb21wbGV4KTwvZGl2PmApWzBdOwogICAgICAgICAgICAgICAgcG9wdXBfYWVkNjk3OTYyZGYyNGMxYTkwOGQ4YjRhOGEyZGJhOTQuc2V0Q29udGVudChodG1sXzhjZjc4NDFiYTFhYzRjNjRiZTk5YjgxOWM1MDQ4NDZkKTsKICAgICAgICAgICAgCgogICAgICAgICAgICBjaXJjbGVfbWFya2VyX2E0NDE3ZmNmMTlhMDRhMDRiYTFiMjU0OGRkODdiZmJlLmJpbmRQb3B1cChwb3B1cF9hZWQ2OTc5NjJkZjI0YzFhOTA4ZDhiNGE4YTJkYmE5NCkKICAgICAgICAgICAgOwoKICAgICAgICAgICAgCiAgICAgICAgCiAgICAKICAgICAgICAgICAgdmFyIGNpcmNsZV9tYXJrZXJfOWRlZWRjMGMxZjA1NDY5NjllNTdmNDRhMzhjYTllM2UgPSBMLmNpcmNsZU1hcmtlcigKICAgICAgICAgICAgICAgIFszNS45NTczNzgsIC04NC4yNzkyNTFdLAogICAgICAgICAgICAgICAgewogICJidWJibGluZ01vdXNlRXZlbnRzIjogdHJ1ZSwKICAiY29sb3IiOiAicmVkIiwKICAiZGFzaEFycmF5IjogbnVsbCwKICAiZGFzaE9mZnNldCI6IG51bGwsCiAgImZpbGwiOiBmYWxzZSwKICAiZmlsbENvbG9yIjogInJlZCIsCiAgImZpbGxPcGFjaXR5IjogMC4yLAogICJmaWxsUnVsZSI6ICJldmVub2RkIiwKICAibGluZUNhcCI6ICJyb3VuZCIsCiAgImxpbmVKb2luIjogInJvdW5kIiwKICAib3BhY2l0eSI6IDEuMCwKICAicmFkaXVzIjogMTAsCiAgInN0cm9rZSI6IHRydWUsCiAgIndlaWdodCI6IDMKfQogICAgICAgICAgICAgICAgKQogICAgICAgICAgICAgICAgLmFkZFRvKG1hcF80YWQwZTIwYzNlMGI0YTZhYjkyYmRmNDA2YmUzYTA2MSk7CiAgICAgICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciBwb3B1cF8xNzk3NDEyMDNmZTQ0OGU4YjA3NTlmNWVhMDQwNTQxYiA9IEwucG9wdXAoe21heFdpZHRoOiAnMzAwJwogICAgICAgICAgICAKICAgICAgICAgICAgfSk7CgogICAgICAgICAgICAKICAgICAgICAgICAgICAgIHZhciBodG1sXzIyZWJlOWJmMmE3ZTRjZWNiNjFhMTc4ZjVjMmJkYTI4ID0gJChgPGRpdiBpZD0iaHRtbF8yMmViZTliZjJhN2U0Y2VjYjYxYTE3OGY1YzJiZGEyOCIgc3R5bGU9IndpZHRoOiAxMDAuMCU7IGhlaWdodDogMTAwLjAlOyI+PGI+TkVPTiBTRUxFQ1RFRC48L2I+IFdBTEsgLSBXYWxrZXIgQnJhbmNoIFNpdGUsIENPUkUgKEFwcGFsYWNoaWFucyBhbmQgQ3VtYmVybGFuZCBQbGF0ZWF1KTwvZGl2PmApWzBdOwogICAgICAgICAgICAgICAgcG9wdXBfMTc5NzQxMjAzZmU0NDhlOGIwNzU5ZjVlYTA0MDU0MWIuc2V0Q29udGVudChodG1sXzIyZWJlOWJmMmE3ZTRjZWNiNjFhMTc4ZjVjMmJkYTI4KTsKICAgICAgICAgICAgCgogICAgICAgICAgICBjaXJjbGVfbWFya2VyXzlkZWVkYzBjMWYwNTQ2OTY5ZTU3ZjQ0YTM4Y2E5ZTNlLmJpbmRQb3B1cChwb3B1cF8xNzk3NDEyMDNmZTQ0OGU4YjA3NTlmNWVhMDQwNTQxYikKICAgICAgICAgICAgOwoKICAgICAgICAgICAgCiAgICAgICAgCiAgICAKICAgICAgICAgICAgICAgIAoKICAgICAgICAgICAgICAgIG1hcF80YWQwZTIwYzNlMGI0YTZhYjkyYmRmNDA2YmUzYTA2MS5maXRCb3VuZHMoCiAgICAgICAgICAgICAgICAgICAgW1szMS44NTM0MzEsIC04OC4xNjExODFdLCBbMzcuMzc4MzE0LCAtODAuNTI0ODQ3XV0sCiAgICAgICAgICAgICAgICAgICAge30KICAgICAgICAgICAgICAgICAgICApOwogICAgICAgICAgICAKICAgIAogICAgICAgIHZhciBtYXJrZXJfOTc0ZWUzOTVmYzc5NDZiMDkwOTFlNWZlYmQwNmNhZjggPSBMLm1hcmtlcigKICAgICAgICAgICAgWzQ0LjIxMTk5OTk5OTk5OTk5NiwgLTEyMi4yNTZdLAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBpY29uOiBuZXcgTC5JY29uLkRlZmF1bHQoKQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICApLmFkZFRvKG1hcF80YWQwZTIwYzNlMGI0YTZhYjkyYmRmNDA2YmUzYTA2MSk7CiAgICAgICAgCiAgICAKCiAgICAgICAgICAgICAgICB2YXIgaWNvbl81YzViZmVjYjNmMjU0NjIxODE3Mjg3MGZlODBhNjM2MCA9IEwuQXdlc29tZU1hcmtlcnMuaWNvbih7CiAgICAgICAgICAgICAgICAgICAgaWNvbjogJ2luZm8tc2lnbicsCiAgICAgICAgICAgICAgICAgICAgaWNvbkNvbG9yOiAnd2hpdGUnLAogICAgICAgICAgICAgICAgICAgIG1hcmtlckNvbG9yOiAnZ3JheScsCiAgICAgICAgICAgICAgICAgICAgcHJlZml4OiAnZ2x5cGhpY29uJywKICAgICAgICAgICAgICAgICAgICBleHRyYUNsYXNzZXM6ICdmYS1yb3RhdGUtMCcKICAgICAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIG1hcmtlcl85NzRlZTM5NWZjNzk0NmIwOTA5MWU1ZmViZDA2Y2FmOC5zZXRJY29uKGljb25fNWM1YmZlY2IzZjI1NDYyMTgxNzI4NzBmZTgwYTYzNjApOwogICAgICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgcG9wdXBfMTI2MTUwNjYxMDYzNDhmNGIzOTZkZGZlMjJiMmJiOTEgPSBMLnBvcHVwKHttYXhXaWR0aDogJzMwMCcKICAgICAgICAgICAgCiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgCiAgICAgICAgICAgICAgICB2YXIgaHRtbF9hYTg0MWU4NjRmZmU0OTFkODExYTFkNzcyNTFhZWY1OSA9ICQoYDxkaXYgaWQ9Imh0bWxfYWE4NDFlODY0ZmZlNDkxZDgxMWExZDc3MjUxYWVmNTkiIHN0eWxlPSJ3aWR0aDogMTAwLjAlOyBoZWlnaHQ6IDEwMC4wJTsiPjxiPkxURVI8L2I+IHNpdGUgQW5kcmV3cyBGb3Jlc3QgTFRFUjwvZGl2PmApWzBdOwogICAgICAgICAgICAgICAgcG9wdXBfMTI2MTUwNjYxMDYzNDhmNGIzOTZkZGZlMjJiMmJiOTEuc2V0Q29udGVudChodG1sX2FhODQxZTg2NGZmZTQ5MWQ4MTFhMWQ3NzI1MWFlZjU5KTsKICAgICAgICAgICAgCgogICAgICAgICAgICBtYXJrZXJfOTc0ZWUzOTVmYzc5NDZiMDkwOTFlNWZlYmQwNmNhZjguYmluZFBvcHVwKHBvcHVwXzEyNjE1MDY2MTA2MzQ4ZjRiMzk2ZGRmZTIyYjJiYjkxKQogICAgICAgICAgICA7CgogICAgICAgICAgICAKICAgICAgICAKICAgIAogICAgICAgIHZhciBtYXJrZXJfMDlmNjdkNTA0YmFlNGZjNjkwNTMxOWMzN2UxZTA5OGIgPSBMLm1hcmtlcigKICAgICAgICAgICAgWzY4LjYyODI2LCAtMTQ5LjU5NTk4XSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgaWNvbjogbmV3IEwuSWNvbi5EZWZhdWx0KCkKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKS5hZGRUbyhtYXBfNGFkMGUyMGMzZTBiNGE2YWI5MmJkZjQwNmJlM2EwNjEpOwogICAgICAgIAogICAgCgogICAgICAgICAgICAgICAgdmFyIGljb25fODU0ZjA2NjY2OGU0NDFkYjljNTgxZDY1NjkzMWRjYWMgPSBMLkF3ZXNvbWVNYXJrZXJzLmljb24oewogICAgICAgICAgICAgICAgICAgIGljb246ICdpbmZvLXNpZ24nLAogICAgICAgICAgICAgICAgICAgIGljb25Db2xvcjogJ3doaXRlJywKICAgICAgICAgICAgICAgICAgICBtYXJrZXJDb2xvcjogJ2dyYXknLAogICAgICAgICAgICAgICAgICAgIHByZWZpeDogJ2dseXBoaWNvbicsCiAgICAgICAgICAgICAgICAgICAgZXh0cmFDbGFzc2VzOiAnZmEtcm90YXRlLTAnCiAgICAgICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgICAgICBtYXJrZXJfMDlmNjdkNTA0YmFlNGZjNjkwNTMxOWMzN2UxZTA5OGIuc2V0SWNvbihpY29uXzg1NGYwNjY2NjhlNDQxZGI5YzU4MWQ2NTY5MzFkY2FjKTsKICAgICAgICAgICAgCiAgICAKICAgICAgICAgICAgdmFyIHBvcHVwX2FkYjRiMWE2MGY0YzQ0NDBiZmJmMjhhNjEzYjhhNzM3ID0gTC5wb3B1cCh7bWF4V2lkdGg6ICczMDAnCiAgICAgICAgICAgIAogICAgICAgICAgICB9KTsKCiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgdmFyIGh0bWxfZTk3Y2M4NWUwOWU2NDMzYmFiODhkZGRlOTY1NzJjMGUgPSAkKGA8ZGl2IGlkPSJodG1sX2U5N2NjODVlMDllNjQzM2JhYjg4ZGRkZTk2NTcyYzBlIiBzdHlsZT0id2lkdGg6IDEwMC4wJTsgaGVpZ2h0OiAxMDAuMCU7Ij48Yj5MVEVSPC9iPiBzaXRlIEFyY3RpYyBMVEVSPC9kaXY+YClbMF07CiAgICAgICAgICAgICAgICBwb3B1cF9hZGI0YjFhNjBmNGM0NDQwYmZiZjI4YTYxM2I4YTczNy5zZXRDb250ZW50KGh0bWxfZTk3Y2M4NWUwOWU2NDMzYmFiODhkZGRlOTY1NzJjMGUpOwogICAgICAgICAgICAKCiAgICAgICAgICAgIG1hcmtlcl8wOWY2N2Q1MDRiYWU0ZmM2OTA1MzE5YzM3ZTFlMDk4Yi5iaW5kUG9wdXAocG9wdXBfYWRiNGIxYTYwZjRjNDQ0MGJmYmYyOGE2MTNiOGE3MzcpCiAgICAgICAgICAgIDsKCiAgICAgICAgICAgIAogICAgICAgIAogICAgCiAgICAgICAgdmFyIG1hcmtlcl9iYTBhYTU0ZTYxZDQ0NTQxYjM5OGUwZjQyZWE4YWRhZiA9IEwubWFya2VyKAogICAgICAgICAgICBbMzkuMSwgLTc2LjNdLAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBpY29uOiBuZXcgTC5JY29uLkRlZmF1bHQoKQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICApLmFkZFRvKG1hcF80YWQwZTIwYzNlMGI0YTZhYjkyYmRmNDA2YmUzYTA2MSk7CiAgICAgICAgCiAgICAKCiAgICAgICAgICAgICAgICB2YXIgaWNvbl8wNzYwYTUyZjdmOWU0MjUyYWZlMzdlMGE0M2E1MzNiNSA9IEwuQXdlc29tZU1hcmtlcnMuaWNvbih7CiAgICAgICAgICAgICAgICAgICAgaWNvbjogJ2luZm8tc2lnbicsCiAgICAgICAgICAgICAgICAgICAgaWNvbkNvbG9yOiAnd2hpdGUnLAogICAgICAgICAgICAgICAgICAgIG1hcmtlckNvbG9yOiAnZ3JheScsCiAgICAgICAgICAgICAgICAgICAgcHJlZml4OiAnZ2x5cGhpY29uJywKICAgICAgICAgICAgICAgICAgICBleHRyYUNsYXNzZXM6ICdmYS1yb3RhdGUtMCcKICAgICAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIG1hcmtlcl9iYTBhYTU0ZTYxZDQ0NTQxYjM5OGUwZjQyZWE4YWRhZi5zZXRJY29uKGljb25fMDc2MGE1MmY3ZjllNDI1MmFmZTM3ZTBhNDNhNTMzYjUpOwogICAgICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgcG9wdXBfYjFjODI3ZGU3M2ZlNDFjYjk2NGJhMDZhMmMyNTBmYWUgPSBMLnBvcHVwKHttYXhXaWR0aDogJzMwMCcKICAgICAgICAgICAgCiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgCiAgICAgICAgICAgICAgICB2YXIgaHRtbF8zMmVhYWFmMmI0NTg0YjM0OTYzMTFjMmZiYTdjMmVkMSA9ICQoYDxkaXYgaWQ9Imh0bWxfMzJlYWFhZjJiNDU4NGIzNDk2MzExYzJmYmE3YzJlZDEiIHN0eWxlPSJ3aWR0aDogMTAwLjAlOyBoZWlnaHQ6IDEwMC4wJTsiPjxiPkxURVI8L2I+IHNpdGUgQmFsdGltb3JlIEVjb3N5c3RlbSBTdHVkeTwvZGl2PmApWzBdOwogICAgICAgICAgICAgICAgcG9wdXBfYjFjODI3ZGU3M2ZlNDFjYjk2NGJhMDZhMmMyNTBmYWUuc2V0Q29udGVudChodG1sXzMyZWFhYWYyYjQ1ODRiMzQ5NjMxMWMyZmJhN2MyZWQxKTsKICAgICAgICAgICAgCgogICAgICAgICAgICBtYXJrZXJfYmEwYWE1NGU2MWQ0NDU0MWIzOThlMGY0MmVhOGFkYWYuYmluZFBvcHVwKHBvcHVwX2IxYzgyN2RlNzNmZTQxY2I5NjRiYTA2YTJjMjUwZmFlKQogICAgICAgICAgICA7CgogICAgICAgICAgICAKICAgICAgICAKICAgIAogICAgICAgIHZhciBtYXJrZXJfY2MyMmY0M2YwNmQzNDkxOWJhMTkzM2VkZmZlZTE5MDAgPSBMLm1hcmtlcigKICAgICAgICAgICAgWzY0Ljg1ODQ4LCAtMTQ3Ljg0NjY4XSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgaWNvbjogbmV3IEwuSWNvbi5EZWZhdWx0KCkKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKS5hZGRUbyhtYXBfNGFkMGUyMGMzZTBiNGE2YWI5MmJkZjQwNmJlM2EwNjEpOwogICAgICAgIAogICAgCgogICAgICAgICAgICAgICAgdmFyIGljb25fMDFlNzRmZTc3NjkxNDk2YzgzYmNhN2ZlMWY5ZjY0MTUgPSBMLkF3ZXNvbWVNYXJrZXJzLmljb24oewogICAgICAgICAgICAgICAgICAgIGljb246ICdpbmZvLXNpZ24nLAogICAgICAgICAgICAgICAgICAgIGljb25Db2xvcjogJ3doaXRlJywKICAgICAgICAgICAgICAgICAgICBtYXJrZXJDb2xvcjogJ2dyYXknLAogICAgICAgICAgICAgICAgICAgIHByZWZpeDogJ2dseXBoaWNvbicsCiAgICAgICAgICAgICAgICAgICAgZXh0cmFDbGFzc2VzOiAnZmEtcm90YXRlLTAnCiAgICAgICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgICAgICBtYXJrZXJfY2MyMmY0M2YwNmQzNDkxOWJhMTkzM2VkZmZlZTE5MDAuc2V0SWNvbihpY29uXzAxZTc0ZmU3NzY5MTQ5NmM4M2JjYTdmZTFmOWY2NDE1KTsKICAgICAgICAgICAgCiAgICAKICAgICAgICAgICAgdmFyIHBvcHVwXzFlMDRjNGNkNzExYTRmNzNiMGU0ODI4MTFkM2E0YzRmID0gTC5wb3B1cCh7bWF4V2lkdGg6ICczMDAnCiAgICAgICAgICAgIAogICAgICAgICAgICB9KTsKCiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgdmFyIGh0bWxfMzZjNjc1NDg4ZTYzNDVhN2IzNTdhMzk5YzRlMjk5ZjYgPSAkKGA8ZGl2IGlkPSJodG1sXzM2YzY3NTQ4OGU2MzQ1YTdiMzU3YTM5OWM0ZTI5OWY2IiBzdHlsZT0id2lkdGg6IDEwMC4wJTsgaGVpZ2h0OiAxMDAuMCU7Ij48Yj5MVEVSPC9iPiBzaXRlIEJvbmFuemEgQ3JlZWsgTFRFUjwvZGl2PmApWzBdOwogICAgICAgICAgICAgICAgcG9wdXBfMWUwNGM0Y2Q3MTFhNGY3M2IwZTQ4MjgxMWQzYTRjNGYuc2V0Q29udGVudChodG1sXzM2YzY3NTQ4OGU2MzQ1YTdiMzU3YTM5OWM0ZTI5OWY2KTsKICAgICAgICAgICAgCgogICAgICAgICAgICBtYXJrZXJfY2MyMmY0M2YwNmQzNDkxOWJhMTkzM2VkZmZlZTE5MDAuYmluZFBvcHVwKHBvcHVwXzFlMDRjNGNkNzExYTRmNzNiMGU0ODI4MTFkM2E0YzRmKQogICAgICAgICAgICA7CgogICAgICAgICAgICAKICAgICAgICAKICAgIAogICAgICAgIHZhciBtYXJrZXJfYTM4MmYyYjBlNDFlNDY3N2IyOTQyNTZiZGM4MjdmNjYgPSBMLm1hcmtlcigKICAgICAgICAgICAgWzMzLjQyNywgLTExMS45MzI5OTk5OTk5OTk5OV0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGljb246IG5ldyBMLkljb24uRGVmYXVsdCgpCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICkuYWRkVG8obWFwXzRhZDBlMjBjM2UwYjRhNmFiOTJiZGY0MDZiZTNhMDYxKTsKICAgICAgICAKICAgIAoKICAgICAgICAgICAgICAgIHZhciBpY29uXzdlMTE4NzQ3Zjk5OTQ1MGVhNWYzNjY0Yjg5ZjM3ZTVjID0gTC5Bd2Vzb21lTWFya2Vycy5pY29uKHsKICAgICAgICAgICAgICAgICAgICBpY29uOiAnaW5mby1zaWduJywKICAgICAgICAgICAgICAgICAgICBpY29uQ29sb3I6ICd3aGl0ZScsCiAgICAgICAgICAgICAgICAgICAgbWFya2VyQ29sb3I6ICdncmF5JywKICAgICAgICAgICAgICAgICAgICBwcmVmaXg6ICdnbHlwaGljb24nLAogICAgICAgICAgICAgICAgICAgIGV4dHJhQ2xhc3NlczogJ2ZhLXJvdGF0ZS0wJwogICAgICAgICAgICAgICAgICAgIH0pOwogICAgICAgICAgICAgICAgbWFya2VyX2EzODJmMmIwZTQxZTQ2NzdiMjk0MjU2YmRjODI3ZjY2LnNldEljb24oaWNvbl83ZTExODc0N2Y5OTk0NTBlYTVmMzY2NGI4OWYzN2U1Yyk7CiAgICAgICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciBwb3B1cF9lMTlmZTg2Y2U5ZDA0ODVhYTgwYTgyNDE1YTk2ODBjNSA9IEwucG9wdXAoe21heFdpZHRoOiAnMzAwJwogICAgICAgICAgICAKICAgICAgICAgICAgfSk7CgogICAgICAgICAgICAKICAgICAgICAgICAgICAgIHZhciBodG1sX2JhYTY0MzBlZDM5ZDQyYjE4ZjlmZWI5NzFhY2MwMDE0ID0gJChgPGRpdiBpZD0iaHRtbF9iYWE2NDMwZWQzOWQ0MmIxOGY5ZmViOTcxYWNjMDAxNCIgc3R5bGU9IndpZHRoOiAxMDAuMCU7IGhlaWdodDogMTAwLjAlOyI+PGI+TFRFUjwvYj4gc2l0ZSBDZW50cmFsIEFyaXpvbmEgLSBQaG9lbml4IExURVI8L2Rpdj5gKVswXTsKICAgICAgICAgICAgICAgIHBvcHVwX2UxOWZlODZjZTlkMDQ4NWFhODBhODI0MTVhOTY4MGM1LnNldENvbnRlbnQoaHRtbF9iYWE2NDMwZWQzOWQ0MmIxOGY5ZmViOTcxYWNjMDAxNCk7CiAgICAgICAgICAgIAoKICAgICAgICAgICAgbWFya2VyX2EzODJmMmIwZTQxZTQ2NzdiMjk0MjU2YmRjODI3ZjY2LmJpbmRQb3B1cChwb3B1cF9lMTlmZTg2Y2U5ZDA0ODVhYTgwYTgyNDE1YTk2ODBjNSkKICAgICAgICAgICAgOwoKICAgICAgICAgICAgCiAgICAgICAgCiAgICAKICAgICAgICB2YXIgbWFya2VyXzFjMTJjMzAyOGI0ODQyYTBhYTcyNTJkNGRjN2Q4NzI0ID0gTC5tYXJrZXIoCiAgICAgICAgICAgIFs0NS40MDEsIC05My4yMDEwMDAwMDAwMDAwMV0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGljb246IG5ldyBMLkljb24uRGVmYXVsdCgpCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICkuYWRkVG8obWFwXzRhZDBlMjBjM2UwYjRhNmFiOTJiZGY0MDZiZTNhMDYxKTsKICAgICAgICAKICAgIAoKICAgICAgICAgICAgICAgIHZhciBpY29uX2M2M2IyZTc2MDA1NzQ5Y2RiOWY2YWI5ODAwMjEwZGQxID0gTC5Bd2Vzb21lTWFya2Vycy5pY29uKHsKICAgICAgICAgICAgICAgICAgICBpY29uOiAnaW5mby1zaWduJywKICAgICAgICAgICAgICAgICAgICBpY29uQ29sb3I6ICd3aGl0ZScsCiAgICAgICAgICAgICAgICAgICAgbWFya2VyQ29sb3I6ICdncmF5JywKICAgICAgICAgICAgICAgICAgICBwcmVmaXg6ICdnbHlwaGljb24nLAogICAgICAgICAgICAgICAgICAgIGV4dHJhQ2xhc3NlczogJ2ZhLXJvdGF0ZS0wJwogICAgICAgICAgICAgICAgICAgIH0pOwogICAgICAgICAgICAgICAgbWFya2VyXzFjMTJjMzAyOGI0ODQyYTBhYTcyNTJkNGRjN2Q4NzI0LnNldEljb24oaWNvbl9jNjNiMmU3NjAwNTc0OWNkYjlmNmFiOTgwMDIxMGRkMSk7CiAgICAgICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciBwb3B1cF81OTBlOTM2M2ZkZWI0OTlmODFhNmNmZDQzMmZiYzJhNCA9IEwucG9wdXAoe21heFdpZHRoOiAnMzAwJwogICAgICAgICAgICAKICAgICAgICAgICAgfSk7CgogICAgICAgICAgICAKICAgICAgICAgICAgICAgIHZhciBodG1sX2VhNWJiZjQwNjg4YTQzMTc5ZjkxMTA1ZmNhNDc3YTI0ID0gJChgPGRpdiBpZD0iaHRtbF9lYTViYmY0MDY4OGE0MzE3OWY5MTEwNWZjYTQ3N2EyNCIgc3R5bGU9IndpZHRoOiAxMDAuMCU7IGhlaWdodDogMTAwLjAlOyI+PGI+TFRFUjwvYj4gc2l0ZSBDZWRhciBDcmVlayBMVEVSPC9kaXY+YClbMF07CiAgICAgICAgICAgICAgICBwb3B1cF81OTBlOTM2M2ZkZWI0OTlmODFhNmNmZDQzMmZiYzJhNC5zZXRDb250ZW50KGh0bWxfZWE1YmJmNDA2ODhhNDMxNzlmOTExMDVmY2E0NzdhMjQpOwogICAgICAgICAgICAKCiAgICAgICAgICAgIG1hcmtlcl8xYzEyYzMwMjhiNDg0MmEwYWE3MjUyZDRkYzdkODcyNC5iaW5kUG9wdXAocG9wdXBfNTkwZTkzNjNmZGViNDk5ZjgxYTZjZmQ0MzJmYmMyYTQpCiAgICAgICAgICAgIDsKCiAgICAgICAgICAgIAogICAgICAgIAogICAgCiAgICAgICAgdmFyIG1hcmtlcl8yMzk3ZTc4YTJjMjE0MjI3ODE0MjNlYzI1YzkwNGJmMSA9IEwubWFya2VyKAogICAgICAgICAgICBbMzUuMCwgLTgzLjVdLAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBpY29uOiBuZXcgTC5JY29uLkRlZmF1bHQoKQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICApLmFkZFRvKG1hcF80YWQwZTIwYzNlMGI0YTZhYjkyYmRmNDA2YmUzYTA2MSk7CiAgICAgICAgCiAgICAKCiAgICAgICAgICAgICAgICB2YXIgaWNvbl80Mjg1NjBlZTdhYjE0MDg1YmQ5ZjQ3MzAxMmIwZDI3NSA9IEwuQXdlc29tZU1hcmtlcnMuaWNvbih7CiAgICAgICAgICAgICAgICAgICAgaWNvbjogJ2luZm8tc2lnbicsCiAgICAgICAgICAgICAgICAgICAgaWNvbkNvbG9yOiAnd2hpdGUnLAogICAgICAgICAgICAgICAgICAgIG1hcmtlckNvbG9yOiAnZ3JheScsCiAgICAgICAgICAgICAgICAgICAgcHJlZml4OiAnZ2x5cGhpY29uJywKICAgICAgICAgICAgICAgICAgICBleHRyYUNsYXNzZXM6ICdmYS1yb3RhdGUtMCcKICAgICAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIG1hcmtlcl8yMzk3ZTc4YTJjMjE0MjI3ODE0MjNlYzI1YzkwNGJmMS5zZXRJY29uKGljb25fNDI4NTYwZWU3YWIxNDA4NWJkOWY0NzMwMTJiMGQyNzUpOwogICAgICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgcG9wdXBfMjkwOWUyOWY1NmY5NDU2NDg0YzFhNzhmMTJiNWY3MTEgPSBMLnBvcHVwKHttYXhXaWR0aDogJzMwMCcKICAgICAgICAgICAgCiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgCiAgICAgICAgICAgICAgICB2YXIgaHRtbF9hNTUzYjk4MDM0NTM0YzljODU0M2QyMTBjMDQzNjA5ZCA9ICQoYDxkaXYgaWQ9Imh0bWxfYTU1M2I5ODAzNDUzNGM5Yzg1NDNkMjEwYzA0MzYwOWQiIHN0eWxlPSJ3aWR0aDogMTAwLjAlOyBoZWlnaHQ6IDEwMC4wJTsiPjxiPkxURVI8L2I+IHNpdGUgQ293ZWV0YSBMVEVSPC9kaXY+YClbMF07CiAgICAgICAgICAgICAgICBwb3B1cF8yOTA5ZTI5ZjU2Zjk0NTY0ODRjMWE3OGYxMmI1ZjcxMS5zZXRDb250ZW50KGh0bWxfYTU1M2I5ODAzNDUzNGM5Yzg1NDNkMjEwYzA0MzYwOWQpOwogICAgICAgICAgICAKCiAgICAgICAgICAgIG1hcmtlcl8yMzk3ZTc4YTJjMjE0MjI3ODE0MjNlYzI1YzkwNGJmMS5iaW5kUG9wdXAocG9wdXBfMjkwOWUyOWY1NmY5NDU2NDg0YzFhNzhmMTJiNWY3MTEpCiAgICAgICAgICAgIDsKCiAgICAgICAgICAgIAogICAgICAgIAogICAgCiAgICAgICAgdmFyIG1hcmtlcl80YjBkYjI5MGU3Zjg0YTZkYmI1YTk1ZmI2ZGI5NjcxZSA9IEwubWFya2VyKAogICAgICAgICAgICBbMjUuNDY4MjEsIC04MC44NTMyOF0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGljb246IG5ldyBMLkljb24uRGVmYXVsdCgpCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICkuYWRkVG8obWFwXzRhZDBlMjBjM2UwYjRhNmFiOTJiZGY0MDZiZTNhMDYxKTsKICAgICAgICAKICAgIAoKICAgICAgICAgICAgICAgIHZhciBpY29uX2MwNmMyMzg1OWMyMTQwMDJhMTIzYzQzMDFmNmViYzFlID0gTC5Bd2Vzb21lTWFya2Vycy5pY29uKHsKICAgICAgICAgICAgICAgICAgICBpY29uOiAnaW5mby1zaWduJywKICAgICAgICAgICAgICAgICAgICBpY29uQ29sb3I6ICd3aGl0ZScsCiAgICAgICAgICAgICAgICAgICAgbWFya2VyQ29sb3I6ICdncmF5JywKICAgICAgICAgICAgICAgICAgICBwcmVmaXg6ICdnbHlwaGljb24nLAogICAgICAgICAgICAgICAgICAgIGV4dHJhQ2xhc3NlczogJ2ZhLXJvdGF0ZS0wJwogICAgICAgICAgICAgICAgICAgIH0pOwogICAgICAgICAgICAgICAgbWFya2VyXzRiMGRiMjkwZTdmODRhNmRiYjVhOTVmYjZkYjk2NzFlLnNldEljb24oaWNvbl9jMDZjMjM4NTljMjE0MDAyYTEyM2M0MzAxZjZlYmMxZSk7CiAgICAgICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciBwb3B1cF84ZDlhNzg2Mzc1Njg0NjM4YjE1NDM1YjViMmFkYTM0NyA9IEwucG9wdXAoe21heFdpZHRoOiAnMzAwJwogICAgICAgICAgICAKICAgICAgICAgICAgfSk7CgogICAgICAgICAgICAKICAgICAgICAgICAgICAgIHZhciBodG1sX2E1NTZjOWRjNzQ3MTQ0Nzc5MmY5NGEyMTdjODZmZGRhID0gJChgPGRpdiBpZD0iaHRtbF9hNTU2YzlkYzc0NzE0NDc3OTJmOTRhMjE3Yzg2ZmRkYSIgc3R5bGU9IndpZHRoOiAxMDAuMCU7IGhlaWdodDogMTAwLjAlOyI+PGI+TFRFUjwvYj4gc2l0ZSBGbG9yaWRhIENvYXN0YWwgRXZlcmdsYWRlcyBMVEVSPC9kaXY+YClbMF07CiAgICAgICAgICAgICAgICBwb3B1cF84ZDlhNzg2Mzc1Njg0NjM4YjE1NDM1YjViMmFkYTM0Ny5zZXRDb250ZW50KGh0bWxfYTU1NmM5ZGM3NDcxNDQ3NzkyZjk0YTIxN2M4NmZkZGEpOwogICAgICAgICAgICAKCiAgICAgICAgICAgIG1hcmtlcl80YjBkYjI5MGU3Zjg0YTZkYmI1YTk1ZmI2ZGI5NjcxZS5iaW5kUG9wdXAocG9wdXBfOGQ5YTc4NjM3NTY4NDYzOGIxNTQzNWI1YjJhZGEzNDcpCiAgICAgICAgICAgIDsKCiAgICAgICAgICAgIAogICAgICAgIAogICAgCiAgICAgICAgdmFyIG1hcmtlcl8zYWU4ZmU1MGU1ZDA0MDhlYTNjZDNmZWQ2M2NiN2RiZiA9IEwubWFya2VyKAogICAgICAgICAgICBbMzEuNDI3LCAtODEuMzcxMDAwMDAwMDAwMDFdLAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBpY29uOiBuZXcgTC5JY29uLkRlZmF1bHQoKQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICApLmFkZFRvKG1hcF80YWQwZTIwYzNlMGI0YTZhYjkyYmRmNDA2YmUzYTA2MSk7CiAgICAgICAgCiAgICAKCiAgICAgICAgICAgICAgICB2YXIgaWNvbl9mMGJmNjc0MzE5YzY0ZmFkODY1NTVjYjY0YWY1MWEwNCA9IEwuQXdlc29tZU1hcmtlcnMuaWNvbih7CiAgICAgICAgICAgICAgICAgICAgaWNvbjogJ2luZm8tc2lnbicsCiAgICAgICAgICAgICAgICAgICAgaWNvbkNvbG9yOiAnd2hpdGUnLAogICAgICAgICAgICAgICAgICAgIG1hcmtlckNvbG9yOiAnZ3JheScsCiAgICAgICAgICAgICAgICAgICAgcHJlZml4OiAnZ2x5cGhpY29uJywKICAgICAgICAgICAgICAgICAgICBleHRyYUNsYXNzZXM6ICdmYS1yb3RhdGUtMCcKICAgICAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIG1hcmtlcl8zYWU4ZmU1MGU1ZDA0MDhlYTNjZDNmZWQ2M2NiN2RiZi5zZXRJY29uKGljb25fZjBiZjY3NDMxOWM2NGZhZDg2NTU1Y2I2NGFmNTFhMDQpOwogICAgICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgcG9wdXBfYzI4OTBmY2UzMjg3NDJhNWEyZjZjNzE4YmNmZDE3MjcgPSBMLnBvcHVwKHttYXhXaWR0aDogJzMwMCcKICAgICAgICAgICAgCiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgCiAgICAgICAgICAgICAgICB2YXIgaHRtbF8xZmMyOWU1ZGRkOWI0Y2NlOWU3OWRlYzgyZWM3YzJjZCA9ICQoYDxkaXYgaWQ9Imh0bWxfMWZjMjllNWRkZDliNGNjZTllNzlkZWM4MmVjN2MyY2QiIHN0eWxlPSJ3aWR0aDogMTAwLjAlOyBoZWlnaHQ6IDEwMC4wJTsiPjxiPkxURVI8L2I+IHNpdGUgR2VvcmdpYSBDb2FzdGFsIEVjb3N5c3RlbXMgTFRFUjwvZGl2PmApWzBdOwogICAgICAgICAgICAgICAgcG9wdXBfYzI4OTBmY2UzMjg3NDJhNWEyZjZjNzE4YmNmZDE3Mjcuc2V0Q29udGVudChodG1sXzFmYzI5ZTVkZGQ5YjRjY2U5ZTc5ZGVjODJlYzdjMmNkKTsKICAgICAgICAgICAgCgogICAgICAgICAgICBtYXJrZXJfM2FlOGZlNTBlNWQwNDA4ZWEzY2QzZmVkNjNjYjdkYmYuYmluZFBvcHVwKHBvcHVwX2MyODkwZmNlMzI4NzQyYTVhMmY2YzcxOGJjZmQxNzI3KQogICAgICAgICAgICA7CgogICAgICAgICAgICAKICAgICAgICAKICAgIAogICAgICAgIHZhciBtYXJrZXJfZDI5OTkyMThjNWU3NDc0MTgyMjI5Y2M0NDE1ZmQ2NjAgPSBMLm1hcmtlcigKICAgICAgICAgICAgWzQzLjk0LCAtNzEuNzUxXSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgaWNvbjogbmV3IEwuSWNvbi5EZWZhdWx0KCkKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKS5hZGRUbyhtYXBfNGFkMGUyMGMzZTBiNGE2YWI5MmJkZjQwNmJlM2EwNjEpOwogICAgICAgIAogICAgCgogICAgICAgICAgICAgICAgdmFyIGljb25fMTNlNTM3ZmY1NzRkNDlkZjk3ZDQwMDhhZjg5ZDk2ZmIgPSBMLkF3ZXNvbWVNYXJrZXJzLmljb24oewogICAgICAgICAgICAgICAgICAgIGljb246ICdpbmZvLXNpZ24nLAogICAgICAgICAgICAgICAgICAgIGljb25Db2xvcjogJ3doaXRlJywKICAgICAgICAgICAgICAgICAgICBtYXJrZXJDb2xvcjogJ2dyYXknLAogICAgICAgICAgICAgICAgICAgIHByZWZpeDogJ2dseXBoaWNvbicsCiAgICAgICAgICAgICAgICAgICAgZXh0cmFDbGFzc2VzOiAnZmEtcm90YXRlLTAnCiAgICAgICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgICAgICBtYXJrZXJfZDI5OTkyMThjNWU3NDc0MTgyMjI5Y2M0NDE1ZmQ2NjAuc2V0SWNvbihpY29uXzEzZTUzN2ZmNTc0ZDQ5ZGY5N2Q0MDA4YWY4OWQ5NmZiKTsKICAgICAgICAgICAgCiAgICAKICAgICAgICAgICAgdmFyIHBvcHVwX2Q2ZjU2MjZiODNjMzRmNWRhZDIxNjlkNjIxNDM2M2IzID0gTC5wb3B1cCh7bWF4V2lkdGg6ICczMDAnCiAgICAgICAgICAgIAogICAgICAgICAgICB9KTsKCiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgdmFyIGh0bWxfNWI4MTM1YTYyODIxNGJiZmFiYWM4NTFjMDE5Y2FmYmQgPSAkKGA8ZGl2IGlkPSJodG1sXzViODEzNWE2MjgyMTRiYmZhYmFjODUxYzAxOWNhZmJkIiBzdHlsZT0id2lkdGg6IDEwMC4wJTsgaGVpZ2h0OiAxMDAuMCU7Ij48Yj5MVEVSPC9iPiBzaXRlIEh1YmJhcmQgQnJvb2sgTFRFUjwvZGl2PmApWzBdOwogICAgICAgICAgICAgICAgcG9wdXBfZDZmNTYyNmI4M2MzNGY1ZGFkMjE2OWQ2MjE0MzYzYjMuc2V0Q29udGVudChodG1sXzViODEzNWE2MjgyMTRiYmZhYmFjODUxYzAxOWNhZmJkKTsKICAgICAgICAgICAgCgogICAgICAgICAgICBtYXJrZXJfZDI5OTkyMThjNWU3NDc0MTgyMjI5Y2M0NDE1ZmQ2NjAuYmluZFBvcHVwKHBvcHVwX2Q2ZjU2MjZiODNjMzRmNWRhZDIxNjlkNjIxNDM2M2IzKQogICAgICAgICAgICA7CgogICAgICAgICAgICAKICAgICAgICAKICAgIAogICAgICAgIHZhciBtYXJrZXJfYzJjYjE0NzFjYjRhNGUwMThlYWM3YjI5MWQzMjE4YmMgPSBMLm1hcmtlcigKICAgICAgICAgICAgWzQyLjUzLCAtNzIuMTldLAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBpY29uOiBuZXcgTC5JY29uLkRlZmF1bHQoKQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICApLmFkZFRvKG1hcF80YWQwZTIwYzNlMGI0YTZhYjkyYmRmNDA2YmUzYTA2MSk7CiAgICAgICAgCiAgICAKCiAgICAgICAgICAgICAgICB2YXIgaWNvbl84ZTU3N2Q5YTliYzQ0MzY5OTRlMjcwYzgyMTNiOWI4OCA9IEwuQXdlc29tZU1hcmtlcnMuaWNvbih7CiAgICAgICAgICAgICAgICAgICAgaWNvbjogJ2luZm8tc2lnbicsCiAgICAgICAgICAgICAgICAgICAgaWNvbkNvbG9yOiAnd2hpdGUnLAogICAgICAgICAgICAgICAgICAgIG1hcmtlckNvbG9yOiAnZ3JheScsCiAgICAgICAgICAgICAgICAgICAgcHJlZml4OiAnZ2x5cGhpY29uJywKICAgICAgICAgICAgICAgICAgICBleHRyYUNsYXNzZXM6ICdmYS1yb3RhdGUtMCcKICAgICAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIG1hcmtlcl9jMmNiMTQ3MWNiNGE0ZTAxOGVhYzdiMjkxZDMyMThiYy5zZXRJY29uKGljb25fOGU1NzdkOWE5YmM0NDM2OTk0ZTI3MGM4MjEzYjliODgpOwogICAgICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgcG9wdXBfMzUxOTdlMDM4ZDQ0NGE4MWExNDMyZTVmNTZlYTVhN2EgPSBMLnBvcHVwKHttYXhXaWR0aDogJzMwMCcKICAgICAgICAgICAgCiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgCiAgICAgICAgICAgICAgICB2YXIgaHRtbF8yNzFkMjQxYWUwZGE0MzQ3YTNhYzFiZDc4ZDI4MWJkMCA9ICQoYDxkaXYgaWQ9Imh0bWxfMjcxZDI0MWFlMGRhNDM0N2EzYWMxYmQ3OGQyODFiZDAiIHN0eWxlPSJ3aWR0aDogMTAwLjAlOyBoZWlnaHQ6IDEwMC4wJTsiPjxiPkxURVI8L2I+IHNpdGUgSGFydmFyZCBGb3Jlc3QgTFRFUjwvZGl2PmApWzBdOwogICAgICAgICAgICAgICAgcG9wdXBfMzUxOTdlMDM4ZDQ0NGE4MWExNDMyZTVmNTZlYTVhN2Euc2V0Q29udGVudChodG1sXzI3MWQyNDFhZTBkYTQzNDdhM2FjMWJkNzhkMjgxYmQwKTsKICAgICAgICAgICAgCgogICAgICAgICAgICBtYXJrZXJfYzJjYjE0NzFjYjRhNGUwMThlYWM3YjI5MWQzMjE4YmMuYmluZFBvcHVwKHBvcHVwXzM1MTk3ZTAzOGQ0NDRhODFhMTQzMmU1ZjU2ZWE1YTdhKQogICAgICAgICAgICA7CgogICAgICAgICAgICAKICAgICAgICAKICAgIAogICAgICAgIHZhciBtYXJrZXJfNjAyNmI4MTUyOWZiNGRhMzhlZmZjY2QwMWJkZWJkMDMgPSBMLm1hcmtlcigKICAgICAgICAgICAgWzMyLjYxNzg1LCAtMTA2LjczOTg1XSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgaWNvbjogbmV3IEwuSWNvbi5EZWZhdWx0KCkKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKS5hZGRUbyhtYXBfNGFkMGUyMGMzZTBiNGE2YWI5MmJkZjQwNmJlM2EwNjEpOwogICAgICAgIAogICAgCgogICAgICAgICAgICAgICAgdmFyIGljb25fNTViYzBjY2E1ZjY1NDRiM2E1NDlkNzM5ZDNhZmZkOGUgPSBMLkF3ZXNvbWVNYXJrZXJzLmljb24oewogICAgICAgICAgICAgICAgICAgIGljb246ICdpbmZvLXNpZ24nLAogICAgICAgICAgICAgICAgICAgIGljb25Db2xvcjogJ3doaXRlJywKICAgICAgICAgICAgICAgICAgICBtYXJrZXJDb2xvcjogJ2dyYXknLAogICAgICAgICAgICAgICAgICAgIHByZWZpeDogJ2dseXBoaWNvbicsCiAgICAgICAgICAgICAgICAgICAgZXh0cmFDbGFzc2VzOiAnZmEtcm90YXRlLTAnCiAgICAgICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgICAgICBtYXJrZXJfNjAyNmI4MTUyOWZiNGRhMzhlZmZjY2QwMWJkZWJkMDMuc2V0SWNvbihpY29uXzU1YmMwY2NhNWY2NTQ0YjNhNTQ5ZDczOWQzYWZmZDhlKTsKICAgICAgICAgICAgCiAgICAKICAgICAgICAgICAgdmFyIHBvcHVwXzYwYWE5ZjMyMmY3YTQ1ZjU5OGI0ZGMzNTUzMjJkMDcyID0gTC5wb3B1cCh7bWF4V2lkdGg6ICczMDAnCiAgICAgICAgICAgIAogICAgICAgICAgICB9KTsKCiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgdmFyIGh0bWxfMTM0ZWM4MzM4NzZkNDA1ZDhmMmMyNmQ1ZWJiZDhmMTMgPSAkKGA8ZGl2IGlkPSJodG1sXzEzNGVjODMzODc2ZDQwNWQ4ZjJjMjZkNWViYmQ4ZjEzIiBzdHlsZT0id2lkdGg6IDEwMC4wJTsgaGVpZ2h0OiAxMDAuMCU7Ij48Yj5MVEVSPC9iPiBzaXRlIEpvcm5hZGEgQmFzaW4gTFRFUjwvZGl2PmApWzBdOwogICAgICAgICAgICAgICAgcG9wdXBfNjBhYTlmMzIyZjdhNDVmNTk4YjRkYzM1NTMyMmQwNzIuc2V0Q29udGVudChodG1sXzEzNGVjODMzODc2ZDQwNWQ4ZjJjMjZkNWViYmQ4ZjEzKTsKICAgICAgICAgICAgCgogICAgICAgICAgICBtYXJrZXJfNjAyNmI4MTUyOWZiNGRhMzhlZmZjY2QwMWJkZWJkMDMuYmluZFBvcHVwKHBvcHVwXzYwYWE5ZjMyMmY3YTQ1ZjU5OGI0ZGMzNTUzMjJkMDcyKQogICAgICAgICAgICA7CgogICAgICAgICAgICAKICAgICAgICAKICAgIAogICAgICAgIHZhciBtYXJrZXJfNjVjZWU1ZTUyZmQ3NGExZWJkNmZiOTYzYjQzZjUyY2YgPSBMLm1hcmtlcigKICAgICAgICAgICAgWzQyLjQsIC04NS40XSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgaWNvbjogbmV3IEwuSWNvbi5EZWZhdWx0KCkKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKS5hZGRUbyhtYXBfNGFkMGUyMGMzZTBiNGE2YWI5MmJkZjQwNmJlM2EwNjEpOwogICAgICAgIAogICAgCgogICAgICAgICAgICAgICAgdmFyIGljb25fNDljOTdiNDZmODIxNDg3Njg3NGU4YTg3OGM0YzMwYTUgPSBMLkF3ZXNvbWVNYXJrZXJzLmljb24oewogICAgICAgICAgICAgICAgICAgIGljb246ICdpbmZvLXNpZ24nLAogICAgICAgICAgICAgICAgICAgIGljb25Db2xvcjogJ3doaXRlJywKICAgICAgICAgICAgICAgICAgICBtYXJrZXJDb2xvcjogJ2dyYXknLAogICAgICAgICAgICAgICAgICAgIHByZWZpeDogJ2dseXBoaWNvbicsCiAgICAgICAgICAgICAgICAgICAgZXh0cmFDbGFzc2VzOiAnZmEtcm90YXRlLTAnCiAgICAgICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgICAgICBtYXJrZXJfNjVjZWU1ZTUyZmQ3NGExZWJkNmZiOTYzYjQzZjUyY2Yuc2V0SWNvbihpY29uXzQ5Yzk3YjQ2ZjgyMTQ4NzY4NzRlOGE4NzhjNGMzMGE1KTsKICAgICAgICAgICAgCiAgICAKICAgICAgICAgICAgdmFyIHBvcHVwXzUzZDlmNzBiMGZjNjQzOWI4NjVhNTljMTU3YzU3MTExID0gTC5wb3B1cCh7bWF4V2lkdGg6ICczMDAnCiAgICAgICAgICAgIAogICAgICAgICAgICB9KTsKCiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgdmFyIGh0bWxfOGVjMTcyNmRmOTkwNDk2ODkxMjk2NGMzY2JjNmU0NGEgPSAkKGA8ZGl2IGlkPSJodG1sXzhlYzE3MjZkZjk5MDQ5Njg5MTI5NjRjM2NiYzZlNDRhIiBzdHlsZT0id2lkdGg6IDEwMC4wJTsgaGVpZ2h0OiAxMDAuMCU7Ij48Yj5MVEVSPC9iPiBzaXRlIEtlbGxvZ2cgQmlvbG9naWNhbCBTdGF0aW9uIExURVI8L2Rpdj5gKVswXTsKICAgICAgICAgICAgICAgIHBvcHVwXzUzZDlmNzBiMGZjNjQzOWI4NjVhNTljMTU3YzU3MTExLnNldENvbnRlbnQoaHRtbF84ZWMxNzI2ZGY5OTA0OTY4OTEyOTY0YzNjYmM2ZTQ0YSk7CiAgICAgICAgICAgIAoKICAgICAgICAgICAgbWFya2VyXzY1Y2VlNWU1MmZkNzRhMWViZDZmYjk2M2I0M2Y1MmNmLmJpbmRQb3B1cChwb3B1cF81M2Q5ZjcwYjBmYzY0MzliODY1YTU5YzE1N2M1NzExMSkKICAgICAgICAgICAgOwoKICAgICAgICAgICAgCiAgICAgICAgCiAgICAKICAgICAgICB2YXIgbWFya2VyX2Q5YmJhMTM1NjNhMjRhZDU5MmYyMzhjODNiM2U2NDY0ID0gTC5tYXJrZXIoCiAgICAgICAgICAgIFszOS4wOTMsIC05Ni41NzVdLAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBpY29uOiBuZXcgTC5JY29uLkRlZmF1bHQoKQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICApLmFkZFRvKG1hcF80YWQwZTIwYzNlMGI0YTZhYjkyYmRmNDA2YmUzYTA2MSk7CiAgICAgICAgCiAgICAKCiAgICAgICAgICAgICAgICB2YXIgaWNvbl82NmVhMzI0NDU3Nzg0NGIzOTA3ZjNkNGZlZGJmZmNmMCA9IEwuQXdlc29tZU1hcmtlcnMuaWNvbih7CiAgICAgICAgICAgICAgICAgICAgaWNvbjogJ2luZm8tc2lnbicsCiAgICAgICAgICAgICAgICAgICAgaWNvbkNvbG9yOiAnd2hpdGUnLAogICAgICAgICAgICAgICAgICAgIG1hcmtlckNvbG9yOiAnZ3JheScsCiAgICAgICAgICAgICAgICAgICAgcHJlZml4OiAnZ2x5cGhpY29uJywKICAgICAgICAgICAgICAgICAgICBleHRyYUNsYXNzZXM6ICdmYS1yb3RhdGUtMCcKICAgICAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIG1hcmtlcl9kOWJiYTEzNTYzYTI0YWQ1OTJmMjM4YzgzYjNlNjQ2NC5zZXRJY29uKGljb25fNjZlYTMyNDQ1Nzc4NDRiMzkwN2YzZDRmZWRiZmZjZjApOwogICAgICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgcG9wdXBfYzM5OTA2MjE0YjJiNGQxZWJmY2U0MjZhZWFjNDdjY2UgPSBMLnBvcHVwKHttYXhXaWR0aDogJzMwMCcKICAgICAgICAgICAgCiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgCiAgICAgICAgICAgICAgICB2YXIgaHRtbF9iNTI4YWNjMjlhMTQ0OWY3OWMyMTFiNDA3YTkyYzMxYSA9ICQoYDxkaXYgaWQ9Imh0bWxfYjUyOGFjYzI5YTE0NDlmNzljMjExYjQwN2E5MmMzMWEiIHN0eWxlPSJ3aWR0aDogMTAwLjAlOyBoZWlnaHQ6IDEwMC4wJTsiPjxiPkxURVI8L2I+IHNpdGUgS29uemEgUHJhaXJpZSBMVEVSPC9kaXY+YClbMF07CiAgICAgICAgICAgICAgICBwb3B1cF9jMzk5MDYyMTRiMmI0ZDFlYmZjZTQyNmFlYWM0N2NjZS5zZXRDb250ZW50KGh0bWxfYjUyOGFjYzI5YTE0NDlmNzljMjExYjQwN2E5MmMzMWEpOwogICAgICAgICAgICAKCiAgICAgICAgICAgIG1hcmtlcl9kOWJiYTEzNTYzYTI0YWQ1OTJmMjM4YzgzYjNlNjQ2NC5iaW5kUG9wdXAocG9wdXBfYzM5OTA2MjE0YjJiNGQxZWJmY2U0MjZhZWFjNDdjY2UpCiAgICAgICAgICAgIDsKCiAgICAgICAgICAgIAogICAgICAgIAogICAgCiAgICAgICAgdmFyIG1hcmtlcl82MDViODA5YjFmZDk0MDBiOWQ2OWEyZmYyMzY0NWYyNyA9IEwubWFya2VyKAogICAgICAgICAgICBbMTguMywgLTY1LjhdLAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBpY29uOiBuZXcgTC5JY29uLkRlZmF1bHQoKQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICApLmFkZFRvKG1hcF80YWQwZTIwYzNlMGI0YTZhYjkyYmRmNDA2YmUzYTA2MSk7CiAgICAgICAgCiAgICAKCiAgICAgICAgICAgICAgICB2YXIgaWNvbl8zYTMzN2M5ZjI0ZDQ0NjIzYjEzY2VkOTVjNTc3ZDAzMSA9IEwuQXdlc29tZU1hcmtlcnMuaWNvbih7CiAgICAgICAgICAgICAgICAgICAgaWNvbjogJ2luZm8tc2lnbicsCiAgICAgICAgICAgICAgICAgICAgaWNvbkNvbG9yOiAnd2hpdGUnLAogICAgICAgICAgICAgICAgICAgIG1hcmtlckNvbG9yOiAnZ3JheScsCiAgICAgICAgICAgICAgICAgICAgcHJlZml4OiAnZ2x5cGhpY29uJywKICAgICAgICAgICAgICAgICAgICBleHRyYUNsYXNzZXM6ICdmYS1yb3RhdGUtMCcKICAgICAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIG1hcmtlcl82MDViODA5YjFmZDk0MDBiOWQ2OWEyZmYyMzY0NWYyNy5zZXRJY29uKGljb25fM2EzMzdjOWYyNGQ0NDYyM2IxM2NlZDk1YzU3N2QwMzEpOwogICAgICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgcG9wdXBfMWI4NThiNDIzYWVhNGJiNWJmYjU3OTQ1NjdiYzQwMDEgPSBMLnBvcHVwKHttYXhXaWR0aDogJzMwMCcKICAgICAgICAgICAgCiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgCiAgICAgICAgICAgICAgICB2YXIgaHRtbF8xMjViYTc2MGJmNWU0ODg3YTUzNWJlZTM1OTg0MzZhNiA9ICQoYDxkaXYgaWQ9Imh0bWxfMTI1YmE3NjBiZjVlNDg4N2E1MzViZWUzNTk4NDM2YTYiIHN0eWxlPSJ3aWR0aDogMTAwLjAlOyBoZWlnaHQ6IDEwMC4wJTsiPjxiPkxURVI8L2I+IHNpdGUgTHVxdWlsbG8gTFRFUjwvZGl2PmApWzBdOwogICAgICAgICAgICAgICAgcG9wdXBfMWI4NThiNDIzYWVhNGJiNWJmYjU3OTQ1NjdiYzQwMDEuc2V0Q29udGVudChodG1sXzEyNWJhNzYwYmY1ZTQ4ODdhNTM1YmVlMzU5ODQzNmE2KTsKICAgICAgICAgICAgCgogICAgICAgICAgICBtYXJrZXJfNjA1YjgwOWIxZmQ5NDAwYjlkNjlhMmZmMjM2NDVmMjcuYmluZFBvcHVwKHBvcHVwXzFiODU4YjQyM2FlYTRiYjViZmI1Nzk0NTY3YmM0MDAxKQogICAgICAgICAgICA7CgogICAgICAgICAgICAKICAgICAgICAKICAgIAogICAgICAgIHZhciBtYXJrZXJfZTViMDgwNTU3MmZkNDU2ZWEzNTllNzZlNDE2N2U5MDkgPSBMLm1hcmtlcigKICAgICAgICAgICAgWy03Ny4wLCAxNjMuNzgzXSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgaWNvbjogbmV3IEwuSWNvbi5EZWZhdWx0KCkKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKS5hZGRUbyhtYXBfNGFkMGUyMGMzZTBiNGE2YWI5MmJkZjQwNmJlM2EwNjEpOwogICAgICAgIAogICAgCgogICAgICAgICAgICAgICAgdmFyIGljb25fN2NmZGU2ZDY5NzQ4NGNmOWIwNDZjODVjNzgyOWFlZmIgPSBMLkF3ZXNvbWVNYXJrZXJzLmljb24oewogICAgICAgICAgICAgICAgICAgIGljb246ICdpbmZvLXNpZ24nLAogICAgICAgICAgICAgICAgICAgIGljb25Db2xvcjogJ3doaXRlJywKICAgICAgICAgICAgICAgICAgICBtYXJrZXJDb2xvcjogJ2dyYXknLAogICAgICAgICAgICAgICAgICAgIHByZWZpeDogJ2dseXBoaWNvbicsCiAgICAgICAgICAgICAgICAgICAgZXh0cmFDbGFzc2VzOiAnZmEtcm90YXRlLTAnCiAgICAgICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgICAgICBtYXJrZXJfZTViMDgwNTU3MmZkNDU2ZWEzNTllNzZlNDE2N2U5MDkuc2V0SWNvbihpY29uXzdjZmRlNmQ2OTc0ODRjZjliMDQ2Yzg1Yzc4MjlhZWZiKTsKICAgICAgICAgICAgCiAgICAKICAgICAgICAgICAgdmFyIHBvcHVwX2RmOGM0ZDdiY2JmNTQ0MmI5ZmJkMGM5ZjFjM2YxZTQ4ID0gTC5wb3B1cCh7bWF4V2lkdGg6ICczMDAnCiAgICAgICAgICAgIAogICAgICAgICAgICB9KTsKCiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgdmFyIGh0bWxfZGNlMzMzMjhhOWI1NGIzZjgwMmQxOTRhNWI0YTBmMmMgPSAkKGA8ZGl2IGlkPSJodG1sX2RjZTMzMzI4YTliNTRiM2Y4MDJkMTk0YTViNGEwZjJjIiBzdHlsZT0id2lkdGg6IDEwMC4wJTsgaGVpZ2h0OiAxMDAuMCU7Ij48Yj5MVEVSPC9iPiBzaXRlIE1jTXVyZG8gRHJ5IFZhbGxleXMgTFRFUjwvZGl2PmApWzBdOwogICAgICAgICAgICAgICAgcG9wdXBfZGY4YzRkN2JjYmY1NDQyYjlmYmQwYzlmMWMzZjFlNDguc2V0Q29udGVudChodG1sX2RjZTMzMzI4YTliNTRiM2Y4MDJkMTk0YTViNGEwZjJjKTsKICAgICAgICAgICAgCgogICAgICAgICAgICBtYXJrZXJfZTViMDgwNTU3MmZkNDU2ZWEzNTllNzZlNDE2N2U5MDkuYmluZFBvcHVwKHBvcHVwX2RmOGM0ZDdiY2JmNTQ0MmI5ZmJkMGM5ZjFjM2YxZTQ4KQogICAgICAgICAgICA7CgogICAgICAgICAgICAKICAgICAgICAKICAgIAogICAgICAgIHZhciBtYXJrZXJfYjJlMmFiZWFmMWUzNDExYjg5Zjg3OTZjZTFiMmM4NjMgPSBMLm1hcmtlcigKICAgICAgICAgICAgWzM1LjA4NCwgLTEwNi42Ml0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGljb246IG5ldyBMLkljb24uRGVmYXVsdCgpCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICkuYWRkVG8obWFwXzRhZDBlMjBjM2UwYjRhNmFiOTJiZGY0MDZiZTNhMDYxKTsKICAgICAgICAKICAgIAoKICAgICAgICAgICAgICAgIHZhciBpY29uXzkxZWU0NmNmMjEwYzRiZTFiNDhiNTAxNWU2ODZiZjRmID0gTC5Bd2Vzb21lTWFya2Vycy5pY29uKHsKICAgICAgICAgICAgICAgICAgICBpY29uOiAnaW5mby1zaWduJywKICAgICAgICAgICAgICAgICAgICBpY29uQ29sb3I6ICd3aGl0ZScsCiAgICAgICAgICAgICAgICAgICAgbWFya2VyQ29sb3I6ICdncmF5JywKICAgICAgICAgICAgICAgICAgICBwcmVmaXg6ICdnbHlwaGljb24nLAogICAgICAgICAgICAgICAgICAgIGV4dHJhQ2xhc3NlczogJ2ZhLXJvdGF0ZS0wJwogICAgICAgICAgICAgICAgICAgIH0pOwogICAgICAgICAgICAgICAgbWFya2VyX2IyZTJhYmVhZjFlMzQxMWI4OWY4Nzk2Y2UxYjJjODYzLnNldEljb24oaWNvbl85MWVlNDZjZjIxMGM0YmUxYjQ4YjUwMTVlNjg2YmY0Zik7CiAgICAgICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciBwb3B1cF84OTU3MzQzZGQ0ZmY0ZGI4YWYxMzliODc2OTg0NzZiNyA9IEwucG9wdXAoe21heFdpZHRoOiAnMzAwJwogICAgICAgICAgICAKICAgICAgICAgICAgfSk7CgogICAgICAgICAgICAKICAgICAgICAgICAgICAgIHZhciBodG1sXzU1NTg2ZTM0NjQxMDRhMTRiMmRlZjhhNmI1ODEwYjk2ID0gJChgPGRpdiBpZD0iaHRtbF81NTU4NmUzNDY0MTA0YTE0YjJkZWY4YTZiNTgxMGI5NiIgc3R5bGU9IndpZHRoOiAxMDAuMCU7IGhlaWdodDogMTAwLjAlOyI+PGI+TFRFUjwvYj4gc2l0ZSAgVGhlIExURVIgTmV0d29yayBPZmZpY2U8L2Rpdj5gKVswXTsKICAgICAgICAgICAgICAgIHBvcHVwXzg5NTczNDNkZDRmZjRkYjhhZjEzOWI4NzY5ODQ3NmI3LnNldENvbnRlbnQoaHRtbF81NTU4NmUzNDY0MTA0YTE0YjJkZWY4YTZiNTgxMGI5Nik7CiAgICAgICAgICAgIAoKICAgICAgICAgICAgbWFya2VyX2IyZTJhYmVhZjFlMzQxMWI4OWY4Nzk2Y2UxYjJjODYzLmJpbmRQb3B1cChwb3B1cF84OTU3MzQzZGQ0ZmY0ZGI4YWYxMzliODc2OTg0NzZiNykKICAgICAgICAgICAgOwoKICAgICAgICAgICAgCiAgICAgICAgCiAgICAKICAgICAgICB2YXIgbWFya2VyXzQxNzhjOTgwM2UzMTQ2MmJhODYyNTA4ZjljMWI3OWZhID0gTC5tYXJrZXIoCiAgICAgICAgICAgIFs0Ni4wMTI0LCAtODkuNjcyMDAwMDAwMDAwMDFdLAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBpY29uOiBuZXcgTC5JY29uLkRlZmF1bHQoKQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICApLmFkZFRvKG1hcF80YWQwZTIwYzNlMGI0YTZhYjkyYmRmNDA2YmUzYTA2MSk7CiAgICAgICAgCiAgICAKCiAgICAgICAgICAgICAgICB2YXIgaWNvbl83NDZiNWNlOWRlMTU0MDlmYThkZmEwYjg0NzJhZTEyZiA9IEwuQXdlc29tZU1hcmtlcnMuaWNvbih7CiAgICAgICAgICAgICAgICAgICAgaWNvbjogJ2luZm8tc2lnbicsCiAgICAgICAgICAgICAgICAgICAgaWNvbkNvbG9yOiAnd2hpdGUnLAogICAgICAgICAgICAgICAgICAgIG1hcmtlckNvbG9yOiAnZ3JheScsCiAgICAgICAgICAgICAgICAgICAgcHJlZml4OiAnZ2x5cGhpY29uJywKICAgICAgICAgICAgICAgICAgICBleHRyYUNsYXNzZXM6ICdmYS1yb3RhdGUtMCcKICAgICAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIG1hcmtlcl80MTc4Yzk4MDNlMzE0NjJiYTg2MjUwOGY5YzFiNzlmYS5zZXRJY29uKGljb25fNzQ2YjVjZTlkZTE1NDA5ZmE4ZGZhMGI4NDcyYWUxMmYpOwogICAgICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgcG9wdXBfZGMyMjgzNzY4NDhiNDJjZGE0Y2YyZTE3NjBkMzBlNmQgPSBMLnBvcHVwKHttYXhXaWR0aDogJzMwMCcKICAgICAgICAgICAgCiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgCiAgICAgICAgICAgICAgICB2YXIgaHRtbF81MTc5MTFlOGE2M2E0MjllYjdmN2ZmMWZmZmRmYjlhMSA9ICQoYDxkaXYgaWQ9Imh0bWxfNTE3OTExZThhNjNhNDI5ZWI3ZjdmZjFmZmZkZmI5YTEiIHN0eWxlPSJ3aWR0aDogMTAwLjAlOyBoZWlnaHQ6IDEwMC4wJTsiPjxiPkxURVI8L2I+IHNpdGUgTm9ydGggVGVtcGVyYXRlIExha2VzIExURVI8L2Rpdj5gKVswXTsKICAgICAgICAgICAgICAgIHBvcHVwX2RjMjI4Mzc2ODQ4YjQyY2RhNGNmMmUxNzYwZDMwZTZkLnNldENvbnRlbnQoaHRtbF81MTc5MTFlOGE2M2E0MjllYjdmN2ZmMWZmZmRmYjlhMSk7CiAgICAgICAgICAgIAoKICAgICAgICAgICAgbWFya2VyXzQxNzhjOTgwM2UzMTQ2MmJhODYyNTA4ZjljMWI3OWZhLmJpbmRQb3B1cChwb3B1cF9kYzIyODM3Njg0OGI0MmNkYTRjZjJlMTc2MGQzMGU2ZCkKICAgICAgICAgICAgOwoKICAgICAgICAgICAgCiAgICAgICAgCiAgICAKICAgICAgICB2YXIgbWFya2VyXzY4NmVmOTllYTg3MDRjMTU5NjAxZTliMGM1ODY4YzI0ID0gTC5tYXJrZXIoCiAgICAgICAgICAgIFszOS45OTMsIC0xMDUuMzc1XSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgaWNvbjogbmV3IEwuSWNvbi5EZWZhdWx0KCkKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKS5hZGRUbyhtYXBfNGFkMGUyMGMzZTBiNGE2YWI5MmJkZjQwNmJlM2EwNjEpOwogICAgICAgIAogICAgCgogICAgICAgICAgICAgICAgdmFyIGljb25fYmI2ZWJjYTljNzdlNGRlY2EwNDRlNmI0NTgyNDEyNmYgPSBMLkF3ZXNvbWVNYXJrZXJzLmljb24oewogICAgICAgICAgICAgICAgICAgIGljb246ICdpbmZvLXNpZ24nLAogICAgICAgICAgICAgICAgICAgIGljb25Db2xvcjogJ3doaXRlJywKICAgICAgICAgICAgICAgICAgICBtYXJrZXJDb2xvcjogJ2dyYXknLAogICAgICAgICAgICAgICAgICAgIHByZWZpeDogJ2dseXBoaWNvbicsCiAgICAgICAgICAgICAgICAgICAgZXh0cmFDbGFzc2VzOiAnZmEtcm90YXRlLTAnCiAgICAgICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgICAgICBtYXJrZXJfNjg2ZWY5OWVhODcwNGMxNTk2MDFlOWIwYzU4NjhjMjQuc2V0SWNvbihpY29uX2JiNmViY2E5Yzc3ZTRkZWNhMDQ0ZTZiNDU4MjQxMjZmKTsKICAgICAgICAgICAgCiAgICAKICAgICAgICAgICAgdmFyIHBvcHVwX2M5ZDIzMjQ5YzBiYjQ2YmY5Mzc0YTdmMGVmODNmMjI2ID0gTC5wb3B1cCh7bWF4V2lkdGg6ICczMDAnCiAgICAgICAgICAgIAogICAgICAgICAgICB9KTsKCiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgdmFyIGh0bWxfZGI2YTQxZTlmNWU0NDA5MzllMTA4OTQ0YTU5NTdlMDcgPSAkKGA8ZGl2IGlkPSJodG1sX2RiNmE0MWU5ZjVlNDQwOTM5ZTEwODk0NGE1OTU3ZTA3IiBzdHlsZT0id2lkdGg6IDEwMC4wJTsgaGVpZ2h0OiAxMDAuMCU7Ij48Yj5MVEVSPC9iPiBzaXRlIE5pd290IFJpZGdlIExURVI8L2Rpdj5gKVswXTsKICAgICAgICAgICAgICAgIHBvcHVwX2M5ZDIzMjQ5YzBiYjQ2YmY5Mzc0YTdmMGVmODNmMjI2LnNldENvbnRlbnQoaHRtbF9kYjZhNDFlOWY1ZTQ0MDkzOWUxMDg5NDRhNTk1N2UwNyk7CiAgICAgICAgICAgIAoKICAgICAgICAgICAgbWFya2VyXzY4NmVmOTllYTg3MDRjMTU5NjAxZTliMGM1ODY4YzI0LmJpbmRQb3B1cChwb3B1cF9jOWQyMzI0OWMwYmI0NmJmOTM3NGE3ZjBlZjgzZjIyNikKICAgICAgICAgICAgOwoKICAgICAgICAgICAgCiAgICAgICAgCiAgICAKICAgICAgICB2YXIgbWFya2VyXzc0YjYxZTJhODc3NDQ5ZDE5NTQ3MDkwNjUyZTU4MTNmID0gTC5tYXJrZXIoCiAgICAgICAgICAgIFstNjQuNzc0MTcsIC02NC4wNTQ1XSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgaWNvbjogbmV3IEwuSWNvbi5EZWZhdWx0KCkKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKS5hZGRUbyhtYXBfNGFkMGUyMGMzZTBiNGE2YWI5MmJkZjQwNmJlM2EwNjEpOwogICAgICAgIAogICAgCgogICAgICAgICAgICAgICAgdmFyIGljb25fZDU2NDViYjE1YTUxNDdkNjk4YjFjMmVhMjRjNGE5YmUgPSBMLkF3ZXNvbWVNYXJrZXJzLmljb24oewogICAgICAgICAgICAgICAgICAgIGljb246ICdpbmZvLXNpZ24nLAogICAgICAgICAgICAgICAgICAgIGljb25Db2xvcjogJ3doaXRlJywKICAgICAgICAgICAgICAgICAgICBtYXJrZXJDb2xvcjogJ2dyYXknLAogICAgICAgICAgICAgICAgICAgIHByZWZpeDogJ2dseXBoaWNvbicsCiAgICAgICAgICAgICAgICAgICAgZXh0cmFDbGFzc2VzOiAnZmEtcm90YXRlLTAnCiAgICAgICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgICAgICBtYXJrZXJfNzRiNjFlMmE4Nzc0NDlkMTk1NDcwOTA2NTJlNTgxM2Yuc2V0SWNvbihpY29uX2Q1NjQ1YmIxNWE1MTQ3ZDY5OGIxYzJlYTI0YzRhOWJlKTsKICAgICAgICAgICAgCiAgICAKICAgICAgICAgICAgdmFyIHBvcHVwX2Q0MWNjOTgxMzg2YTQyNjA5MjhjMGNiMjY2NmFjYWYyID0gTC5wb3B1cCh7bWF4V2lkdGg6ICczMDAnCiAgICAgICAgICAgIAogICAgICAgICAgICB9KTsKCiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgdmFyIGh0bWxfMGZlYWQ2MThkYjI0NDJkZmI3ZWMwNzUzYWYxNzc0OTIgPSAkKGA8ZGl2IGlkPSJodG1sXzBmZWFkNjE4ZGIyNDQyZGZiN2VjMDc1M2FmMTc3NDkyIiBzdHlsZT0id2lkdGg6IDEwMC4wJTsgaGVpZ2h0OiAxMDAuMCU7Ij48Yj5MVEVSPC9iPiBzaXRlIFBhbG1lciBBbnRhcmN0aWNhIExURVI8L2Rpdj5gKVswXTsKICAgICAgICAgICAgICAgIHBvcHVwX2Q0MWNjOTgxMzg2YTQyNjA5MjhjMGNiMjY2NmFjYWYyLnNldENvbnRlbnQoaHRtbF8wZmVhZDYxOGRiMjQ0MmRmYjdlYzA3NTNhZjE3NzQ5Mik7CiAgICAgICAgICAgIAoKICAgICAgICAgICAgbWFya2VyXzc0YjYxZTJhODc3NDQ5ZDE5NTQ3MDkwNjUyZTU4MTNmLmJpbmRQb3B1cChwb3B1cF9kNDFjYzk4MTM4NmE0MjYwOTI4YzBjYjI2NjZhY2FmMikKICAgICAgICAgICAgOwoKICAgICAgICAgICAgCiAgICAgICAgCiAgICAKICAgICAgICB2YXIgbWFya2VyX2E5YTUwYjBkYmFhNzRhZWRiNjIyOWMxMTM2MDY5MjJmID0gTC5tYXJrZXIoCiAgICAgICAgICAgIFs0Mi43NTg5OTk5OTk5OTk5OSwgLTcwLjg5MV0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGljb246IG5ldyBMLkljb24uRGVmYXVsdCgpCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICkuYWRkVG8obWFwXzRhZDBlMjBjM2UwYjRhNmFiOTJiZGY0MDZiZTNhMDYxKTsKICAgICAgICAKICAgIAoKICAgICAgICAgICAgICAgIHZhciBpY29uXzFiZGM0Y2I0ZTg3MjQ4ZWViOTA0Y2QxNTE1NTY4YjI1ID0gTC5Bd2Vzb21lTWFya2Vycy5pY29uKHsKICAgICAgICAgICAgICAgICAgICBpY29uOiAnaW5mby1zaWduJywKICAgICAgICAgICAgICAgICAgICBpY29uQ29sb3I6ICd3aGl0ZScsCiAgICAgICAgICAgICAgICAgICAgbWFya2VyQ29sb3I6ICdncmF5JywKICAgICAgICAgICAgICAgICAgICBwcmVmaXg6ICdnbHlwaGljb24nLAogICAgICAgICAgICAgICAgICAgIGV4dHJhQ2xhc3NlczogJ2ZhLXJvdGF0ZS0wJwogICAgICAgICAgICAgICAgICAgIH0pOwogICAgICAgICAgICAgICAgbWFya2VyX2E5YTUwYjBkYmFhNzRhZWRiNjIyOWMxMTM2MDY5MjJmLnNldEljb24oaWNvbl8xYmRjNGNiNGU4NzI0OGVlYjkwNGNkMTUxNTU2OGIyNSk7CiAgICAgICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciBwb3B1cF81MjQ0ZTg1MjI1NDY0ZGNjYjdjOGQyMmE0MzQ3NDk1OSA9IEwucG9wdXAoe21heFdpZHRoOiAnMzAwJwogICAgICAgICAgICAKICAgICAgICAgICAgfSk7CgogICAgICAgICAgICAKICAgICAgICAgICAgICAgIHZhciBodG1sXzgzZGMzOTY2ZjQyZjQ1NTQ4YWFjYTA4NzdlMTFiZGI4ID0gJChgPGRpdiBpZD0iaHRtbF84M2RjMzk2NmY0MmY0NTU0OGFhY2EwODc3ZTExYmRiOCIgc3R5bGU9IndpZHRoOiAxMDAuMCU7IGhlaWdodDogMTAwLjAlOyI+PGI+TFRFUjwvYj4gc2l0ZSBQbHVtIElzbGFuZCBFY29zeXN0ZW1zIExURVI8L2Rpdj5gKVswXTsKICAgICAgICAgICAgICAgIHBvcHVwXzUyNDRlODUyMjU0NjRkY2NiN2M4ZDIyYTQzNDc0OTU5LnNldENvbnRlbnQoaHRtbF84M2RjMzk2NmY0MmY0NTU0OGFhY2EwODc3ZTExYmRiOCk7CiAgICAgICAgICAgIAoKICAgICAgICAgICAgbWFya2VyX2E5YTUwYjBkYmFhNzRhZWRiNjIyOWMxMTM2MDY5MjJmLmJpbmRQb3B1cChwb3B1cF81MjQ0ZTg1MjI1NDY0ZGNjYjdjOGQyMmE0MzQ3NDk1OSkKICAgICAgICAgICAgOwoKICAgICAgICAgICAgCiAgICAgICAgCiAgICAKICAgICAgICB2YXIgbWFya2VyXzYyYWNjMjMwZjkwNTRlMDY4YzAyMGUxN2RmZDNmMzEzID0gTC5tYXJrZXIoCiAgICAgICAgICAgIFszNC40MTI1LCAtMTE5Ljg0MjJdLAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBpY29uOiBuZXcgTC5JY29uLkRlZmF1bHQoKQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICApLmFkZFRvKG1hcF80YWQwZTIwYzNlMGI0YTZhYjkyYmRmNDA2YmUzYTA2MSk7CiAgICAgICAgCiAgICAKCiAgICAgICAgICAgICAgICB2YXIgaWNvbl8wMTlhNDY4ZjEyYjc0ZjE3YmI4ZDZiMzUyNDE5ZDU1ZCA9IEwuQXdlc29tZU1hcmtlcnMuaWNvbih7CiAgICAgICAgICAgICAgICAgICAgaWNvbjogJ2luZm8tc2lnbicsCiAgICAgICAgICAgICAgICAgICAgaWNvbkNvbG9yOiAnd2hpdGUnLAogICAgICAgICAgICAgICAgICAgIG1hcmtlckNvbG9yOiAnZ3JheScsCiAgICAgICAgICAgICAgICAgICAgcHJlZml4OiAnZ2x5cGhpY29uJywKICAgICAgICAgICAgICAgICAgICBleHRyYUNsYXNzZXM6ICdmYS1yb3RhdGUtMCcKICAgICAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIG1hcmtlcl82MmFjYzIzMGY5MDU0ZTA2OGMwMjBlMTdkZmQzZjMxMy5zZXRJY29uKGljb25fMDE5YTQ2OGYxMmI3NGYxN2JiOGQ2YjM1MjQxOWQ1NWQpOwogICAgICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgcG9wdXBfMWUxNmRiM2ZhNTM0NGI4NmEyNmM0M2NmYTU3ZmNmZTAgPSBMLnBvcHVwKHttYXhXaWR0aDogJzMwMCcKICAgICAgICAgICAgCiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgCiAgICAgICAgICAgICAgICB2YXIgaHRtbF9lMzhlYWNhYWI3NzY0ZmVjODk1YWRmZGU3Mzk1ZmMxMiA9ICQoYDxkaXYgaWQ9Imh0bWxfZTM4ZWFjYWFiNzc2NGZlYzg5NWFkZmRlNzM5NWZjMTIiIHN0eWxlPSJ3aWR0aDogMTAwLjAlOyBoZWlnaHQ6IDEwMC4wJTsiPjxiPkxURVI8L2I+IHNpdGUgU2FudGEgQmFyYmFyYSBDb2FzdGFsIExURVI8L2Rpdj5gKVswXTsKICAgICAgICAgICAgICAgIHBvcHVwXzFlMTZkYjNmYTUzNDRiODZhMjZjNDNjZmE1N2ZjZmUwLnNldENvbnRlbnQoaHRtbF9lMzhlYWNhYWI3NzY0ZmVjODk1YWRmZGU3Mzk1ZmMxMik7CiAgICAgICAgICAgIAoKICAgICAgICAgICAgbWFya2VyXzYyYWNjMjMwZjkwNTRlMDY4YzAyMGUxN2RmZDNmMzEzLmJpbmRQb3B1cChwb3B1cF8xZTE2ZGIzZmE1MzQ0Yjg2YTI2YzQzY2ZhNTdmY2ZlMCkKICAgICAgICAgICAgOwoKICAgICAgICAgICAgCiAgICAgICAgCiAgICAKICAgICAgICB2YXIgbWFya2VyXzkzMTAzMmI0Yzg0ZDRkMDBiNjFlYWQxM2Q3ZmE2MDViID0gTC5tYXJrZXIoCiAgICAgICAgICAgIFszNC4zNTMsIC0xMDYuODgyXSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgaWNvbjogbmV3IEwuSWNvbi5EZWZhdWx0KCkKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKS5hZGRUbyhtYXBfNGFkMGUyMGMzZTBiNGE2YWI5MmJkZjQwNmJlM2EwNjEpOwogICAgICAgIAogICAgCgogICAgICAgICAgICAgICAgdmFyIGljb25fMTZhMTMwMWJiOTA1NDM1OGEyZGRhZjg0NDk1NGZiNDkgPSBMLkF3ZXNvbWVNYXJrZXJzLmljb24oewogICAgICAgICAgICAgICAgICAgIGljb246ICdpbmZvLXNpZ24nLAogICAgICAgICAgICAgICAgICAgIGljb25Db2xvcjogJ3doaXRlJywKICAgICAgICAgICAgICAgICAgICBtYXJrZXJDb2xvcjogJ2dyYXknLAogICAgICAgICAgICAgICAgICAgIHByZWZpeDogJ2dseXBoaWNvbicsCiAgICAgICAgICAgICAgICAgICAgZXh0cmFDbGFzc2VzOiAnZmEtcm90YXRlLTAnCiAgICAgICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgICAgICBtYXJrZXJfOTMxMDMyYjRjODRkNGQwMGI2MWVhZDEzZDdmYTYwNWIuc2V0SWNvbihpY29uXzE2YTEzMDFiYjkwNTQzNThhMmRkYWY4NDQ5NTRmYjQ5KTsKICAgICAgICAgICAgCiAgICAKICAgICAgICAgICAgdmFyIHBvcHVwX2M0ODNjNDY1YjU2YTQyNDBiNGJmZTVlOGQ1MTA0OGEwID0gTC5wb3B1cCh7bWF4V2lkdGg6ICczMDAnCiAgICAgICAgICAgIAogICAgICAgICAgICB9KTsKCiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgdmFyIGh0bWxfZTQyZTQ5ZWI1Yzk2NGZmY2IyZTQxMDUwOGM5OGM1OWEgPSAkKGA8ZGl2IGlkPSJodG1sX2U0MmU0OWViNWM5NjRmZmNiMmU0MTA1MDhjOThjNTlhIiBzdHlsZT0id2lkdGg6IDEwMC4wJTsgaGVpZ2h0OiAxMDAuMCU7Ij48Yj5MVEVSPC9iPiBzaXRlIFNldmlsbGV0YSBMVEVSPC9kaXY+YClbMF07CiAgICAgICAgICAgICAgICBwb3B1cF9jNDgzYzQ2NWI1NmE0MjQwYjRiZmU1ZThkNTEwNDhhMC5zZXRDb250ZW50KGh0bWxfZTQyZTQ5ZWI1Yzk2NGZmY2IyZTQxMDUwOGM5OGM1OWEpOwogICAgICAgICAgICAKCiAgICAgICAgICAgIG1hcmtlcl85MzEwMzJiNGM4NGQ0ZDAwYjYxZWFkMTNkN2ZhNjA1Yi5iaW5kUG9wdXAocG9wdXBfYzQ4M2M0NjViNTZhNDI0MGI0YmZlNWU4ZDUxMDQ4YTApCiAgICAgICAgICAgIDsKCiAgICAgICAgICAgIAogICAgICAgIAogICAgCiAgICAgICAgdmFyIG1hcmtlcl82MzgyMjJlNTQ0ZjY0YmYyOWE0MGM3NGJiOGQ5N2Y1NiA9IEwubWFya2VyKAogICAgICAgICAgICBbNDAuODI3LCAtMTA0LjcyMzk5OTk5OTk5OTk5XSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgaWNvbjogbmV3IEwuSWNvbi5EZWZhdWx0KCkKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKS5hZGRUbyhtYXBfNGFkMGUyMGMzZTBiNGE2YWI5MmJkZjQwNmJlM2EwNjEpOwogICAgICAgIAogICAgCgogICAgICAgICAgICAgICAgdmFyIGljb25fOTBkZWI2ZmM0ODhiNGJjNjhjZTgyZjMwN2YwZTBjODcgPSBMLkF3ZXNvbWVNYXJrZXJzLmljb24oewogICAgICAgICAgICAgICAgICAgIGljb246ICdpbmZvLXNpZ24nLAogICAgICAgICAgICAgICAgICAgIGljb25Db2xvcjogJ3doaXRlJywKICAgICAgICAgICAgICAgICAgICBtYXJrZXJDb2xvcjogJ2dyYXknLAogICAgICAgICAgICAgICAgICAgIHByZWZpeDogJ2dseXBoaWNvbicsCiAgICAgICAgICAgICAgICAgICAgZXh0cmFDbGFzc2VzOiAnZmEtcm90YXRlLTAnCiAgICAgICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgICAgICBtYXJrZXJfNjM4MjIyZTU0NGY2NGJmMjlhNDBjNzRiYjhkOTdmNTYuc2V0SWNvbihpY29uXzkwZGViNmZjNDg4YjRiYzY4Y2U4MmYzMDdmMGUwYzg3KTsKICAgICAgICAgICAgCiAgICAKICAgICAgICAgICAgdmFyIHBvcHVwXzZhZmE5NDhkYjkyNDQzYjM5NWQyZjJiYTEwYTg5MTEzID0gTC5wb3B1cCh7bWF4V2lkdGg6ICczMDAnCiAgICAgICAgICAgIAogICAgICAgICAgICB9KTsKCiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgdmFyIGh0bWxfYjJmYThjZmIyZTI3NDA2ZmI0NmNmMWVmMzMwMDg2YTYgPSAkKGA8ZGl2IGlkPSJodG1sX2IyZmE4Y2ZiMmUyNzQwNmZiNDZjZjFlZjMzMDA4NmE2IiBzdHlsZT0id2lkdGg6IDEwMC4wJTsgaGVpZ2h0OiAxMDAuMCU7Ij48Yj5MVEVSPC9iPiBzaXRlIFNob3J0Z3Jhc3MgU3RlcHBlPC9kaXY+YClbMF07CiAgICAgICAgICAgICAgICBwb3B1cF82YWZhOTQ4ZGI5MjQ0M2IzOTVkMmYyYmExMGE4OTExMy5zZXRDb250ZW50KGh0bWxfYjJmYThjZmIyZTI3NDA2ZmI0NmNmMWVmMzMwMDg2YTYpOwogICAgICAgICAgICAKCiAgICAgICAgICAgIG1hcmtlcl82MzgyMjJlNTQ0ZjY0YmYyOWE0MGM3NGJiOGQ5N2Y1Ni5iaW5kUG9wdXAocG9wdXBfNmFmYTk0OGRiOTI0NDNiMzk1ZDJmMmJhMTBhODkxMTMpCiAgICAgICAgICAgIDsKCiAgICAgICAgICAgIAogICAgICAgIAogICAgCiAgICAgICAgdmFyIG1hcmtlcl8xZDI2NjA1NDJhNmQ0YTA3ODE5NzRjMjJhMTM4YzUzYyA9IEwubWFya2VyKAogICAgICAgICAgICBbMzcuMjgzLCAtNzUuOTEzXSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgaWNvbjogbmV3IEwuSWNvbi5EZWZhdWx0KCkKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKS5hZGRUbyhtYXBfNGFkMGUyMGMzZTBiNGE2YWI5MmJkZjQwNmJlM2EwNjEpOwogICAgICAgIAogICAgCgogICAgICAgICAgICAgICAgdmFyIGljb25fM2VlMGE1MmMyMzZmNDQ3N2FhNzU1NTVmMmI0OTY3NzMgPSBMLkF3ZXNvbWVNYXJrZXJzLmljb24oewogICAgICAgICAgICAgICAgICAgIGljb246ICdpbmZvLXNpZ24nLAogICAgICAgICAgICAgICAgICAgIGljb25Db2xvcjogJ3doaXRlJywKICAgICAgICAgICAgICAgICAgICBtYXJrZXJDb2xvcjogJ2dyYXknLAogICAgICAgICAgICAgICAgICAgIHByZWZpeDogJ2dseXBoaWNvbicsCiAgICAgICAgICAgICAgICAgICAgZXh0cmFDbGFzc2VzOiAnZmEtcm90YXRlLTAnCiAgICAgICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgICAgICBtYXJrZXJfMWQyNjYwNTQyYTZkNGEwNzgxOTc0YzIyYTEzOGM1M2Muc2V0SWNvbihpY29uXzNlZTBhNTJjMjM2ZjQ0NzdhYTc1NTU1ZjJiNDk2NzczKTsKICAgICAgICAgICAgCiAgICAKICAgICAgICAgICAgdmFyIHBvcHVwXzA2YzNkMDAwMzNmMjQxYjhiYjA4NTQ2MDJiY2FhZjc3ID0gTC5wb3B1cCh7bWF4V2lkdGg6ICczMDAnCiAgICAgICAgICAgIAogICAgICAgICAgICB9KTsKCiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgdmFyIGh0bWxfZTA2MTdmOTY0OTVkNGY0MmI1Yzc3ZDY2ZTg2YTZiMzggPSAkKGA8ZGl2IGlkPSJodG1sX2UwNjE3Zjk2NDk1ZDRmNDJiNWM3N2Q2NmU4NmE2YjM4IiBzdHlsZT0id2lkdGg6IDEwMC4wJTsgaGVpZ2h0OiAxMDAuMCU7Ij48Yj5MVEVSPC9iPiBzaXRlIFZpcmdpbmlhIENvYXN0IFJlc2VydmUgTFRFUjwvZGl2PmApWzBdOwogICAgICAgICAgICAgICAgcG9wdXBfMDZjM2QwMDAzM2YyNDFiOGJiMDg1NDYwMmJjYWFmNzcuc2V0Q29udGVudChodG1sX2UwNjE3Zjk2NDk1ZDRmNDJiNWM3N2Q2NmU4NmE2YjM4KTsKICAgICAgICAgICAgCgogICAgICAgICAgICBtYXJrZXJfMWQyNjYwNTQyYTZkNGEwNzgxOTc0YzIyYTEzOGM1M2MuYmluZFBvcHVwKHBvcHVwXzA2YzNkMDAwMzNmMjQxYjhiYjA4NTQ2MDJiY2FhZjc3KQogICAgICAgICAgICA7CgogICAgICAgICAgICAKICAgICAgICAKICAgIAogICAgICAgIHZhciBtYXJrZXJfMTU0YzlhNGNmN2M4NDgzM2IwYzUzY2ZjYTgzYzIzMjkgPSBMLm1hcmtlcigKICAgICAgICAgICAgWzMyLjg3MzYsIC0xMjAuMjc5OF0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGljb246IG5ldyBMLkljb24uRGVmYXVsdCgpCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICkuYWRkVG8obWFwXzRhZDBlMjBjM2UwYjRhNmFiOTJiZGY0MDZiZTNhMDYxKTsKICAgICAgICAKICAgIAoKICAgICAgICAgICAgICAgIHZhciBpY29uXzE2MjIzODEwNTAwMDQ2YTZiMGJiNTk3YTgxOTRkZDY2ID0gTC5Bd2Vzb21lTWFya2Vycy5pY29uKHsKICAgICAgICAgICAgICAgICAgICBpY29uOiAnaW5mby1zaWduJywKICAgICAgICAgICAgICAgICAgICBpY29uQ29sb3I6ICd3aGl0ZScsCiAgICAgICAgICAgICAgICAgICAgbWFya2VyQ29sb3I6ICdncmF5JywKICAgICAgICAgICAgICAgICAgICBwcmVmaXg6ICdnbHlwaGljb24nLAogICAgICAgICAgICAgICAgICAgIGV4dHJhQ2xhc3NlczogJ2ZhLXJvdGF0ZS0wJwogICAgICAgICAgICAgICAgICAgIH0pOwogICAgICAgICAgICAgICAgbWFya2VyXzE1NGM5YTRjZjdjODQ4MzNiMGM1M2NmY2E4M2MyMzI5LnNldEljb24oaWNvbl8xNjIyMzgxMDUwMDA0NmE2YjBiYjU5N2E4MTk0ZGQ2Nik7CiAgICAgICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciBwb3B1cF9jNjg4ZGRjNDQ5MTI0NjljOTNhNzg4YjU2Mzg3N2MxNiA9IEwucG9wdXAoe21heFdpZHRoOiAnMzAwJwogICAgICAgICAgICAKICAgICAgICAgICAgfSk7CgogICAgICAgICAgICAKICAgICAgICAgICAgICAgIHZhciBodG1sX2I3NzIyNzVlN2EyZDQ3YjBiNjhjMThmMjJjZmFlOTFiID0gJChgPGRpdiBpZD0iaHRtbF9iNzcyMjc1ZTdhMmQ0N2IwYjY4YzE4ZjIyY2ZhZTkxYiIgc3R5bGU9IndpZHRoOiAxMDAuMCU7IGhlaWdodDogMTAwLjAlOyI+PGI+TFRFUjwvYj4gc2l0ZSBDYWxpZm9ybmlhIEN1cnJlbnQgRWNvc3lzdGVtIExURVI8L2Rpdj5gKVswXTsKICAgICAgICAgICAgICAgIHBvcHVwX2M2ODhkZGM0NDkxMjQ2OWM5M2E3ODhiNTYzODc3YzE2LnNldENvbnRlbnQoaHRtbF9iNzcyMjc1ZTdhMmQ0N2IwYjY4YzE4ZjIyY2ZhZTkxYik7CiAgICAgICAgICAgIAoKICAgICAgICAgICAgbWFya2VyXzE1NGM5YTRjZjdjODQ4MzNiMGM1M2NmY2E4M2MyMzI5LmJpbmRQb3B1cChwb3B1cF9jNjg4ZGRjNDQ5MTI0NjljOTNhNzg4YjU2Mzg3N2MxNikKICAgICAgICAgICAgOwoKICAgICAgICAgICAgCiAgICAgICAgCiAgICAKICAgICAgICB2YXIgbWFya2VyXzFiZGM5MDA3NjkwMjQwY2E4MDI4YzY4YzQwZjU5YjkwID0gTC5tYXJrZXIoCiAgICAgICAgICAgIFstMTcuNDkwODUsIC0xNDkuODI2MTJdLAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBpY29uOiBuZXcgTC5JY29uLkRlZmF1bHQoKQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICApLmFkZFRvKG1hcF80YWQwZTIwYzNlMGI0YTZhYjkyYmRmNDA2YmUzYTA2MSk7CiAgICAgICAgCiAgICAKCiAgICAgICAgICAgICAgICB2YXIgaWNvbl8zOTMzNjdmY2EyYzc0OTgxOTlkZDI2MGEyY2FhY2MwMSA9IEwuQXdlc29tZU1hcmtlcnMuaWNvbih7CiAgICAgICAgICAgICAgICAgICAgaWNvbjogJ2luZm8tc2lnbicsCiAgICAgICAgICAgICAgICAgICAgaWNvbkNvbG9yOiAnd2hpdGUnLAogICAgICAgICAgICAgICAgICAgIG1hcmtlckNvbG9yOiAnZ3JheScsCiAgICAgICAgICAgICAgICAgICAgcHJlZml4OiAnZ2x5cGhpY29uJywKICAgICAgICAgICAgICAgICAgICBleHRyYUNsYXNzZXM6ICdmYS1yb3RhdGUtMCcKICAgICAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIG1hcmtlcl8xYmRjOTAwNzY5MDI0MGNhODAyOGM2OGM0MGY1OWI5MC5zZXRJY29uKGljb25fMzkzMzY3ZmNhMmM3NDk4MTk5ZGQyNjBhMmNhYWNjMDEpOwogICAgICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgcG9wdXBfYjZiMTJhNGFkZTg5NDRkMTk3MzFiMWVjZjBkMjBjZjUgPSBMLnBvcHVwKHttYXhXaWR0aDogJzMwMCcKICAgICAgICAgICAgCiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgCiAgICAgICAgICAgICAgICB2YXIgaHRtbF9iNmIwODBiYzk3MWI0ZGM0YmE5ZDk3NDU3OTQ4ZDcyNyA9ICQoYDxkaXYgaWQ9Imh0bWxfYjZiMDgwYmM5NzFiNGRjNGJhOWQ5NzQ1Nzk0OGQ3MjciIHN0eWxlPSJ3aWR0aDogMTAwLjAlOyBoZWlnaHQ6IDEwMC4wJTsiPjxiPkxURVI8L2I+IHNpdGUgTW9vcmVhIENvcmFsIFJlZWYgTFRFUjwvZGl2PmApWzBdOwogICAgICAgICAgICAgICAgcG9wdXBfYjZiMTJhNGFkZTg5NDRkMTk3MzFiMWVjZjBkMjBjZjUuc2V0Q29udGVudChodG1sX2I2YjA4MGJjOTcxYjRkYzRiYTlkOTc0NTc5NDhkNzI3KTsKICAgICAgICAgICAgCgogICAgICAgICAgICBtYXJrZXJfMWJkYzkwMDc2OTAyNDBjYTgwMjhjNjhjNDBmNTliOTAuYmluZFBvcHVwKHBvcHVwX2I2YjEyYTRhZGU4OTQ0ZDE5NzMxYjFlY2YwZDIwY2Y1KQogICAgICAgICAgICA7CgogICAgICAgICAgICAKICAgICAgICAKICAgIAogICAgICAgIHZhciBtYXJrZXJfOWJmODczYzMxZDFhNDE5NmFlZmEwMDdkMWQxNDg1MWUgPSBMLm1hcmtlcigKICAgICAgICAgICAgWzM2LjczMzUzMywgLTg4LjExNjY2XSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgaWNvbjogbmV3IEwuSWNvbi5EZWZhdWx0KCkKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKS5hZGRUbyhtYXBfNGFkMGUyMGMzZTBiNGE2YWI5MmJkZjQwNmJlM2EwNjEpOwogICAgICAgIAogICAgCgogICAgICAgICAgICAgICAgdmFyIGljb25fMGU5ZDQ2NTY1MGFkNDZiNjllODA0ZmMyNTM0MWQwMTYgPSBMLkF3ZXNvbWVNYXJrZXJzLmljb24oewogICAgICAgICAgICAgICAgICAgIGljb246ICdpbmZvLXNpZ24nLAogICAgICAgICAgICAgICAgICAgIGljb25Db2xvcjogJ3doaXRlJywKICAgICAgICAgICAgICAgICAgICBtYXJrZXJDb2xvcjogJ2JsdWUnLAogICAgICAgICAgICAgICAgICAgIHByZWZpeDogJ2dseXBoaWNvbicsCiAgICAgICAgICAgICAgICAgICAgZXh0cmFDbGFzc2VzOiAnZmEtcm90YXRlLTAnCiAgICAgICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgICAgICBtYXJrZXJfOWJmODczYzMxZDFhNDE5NmFlZmEwMDdkMWQxNDg1MWUuc2V0SWNvbihpY29uXzBlOWQ0NjU2NTBhZDQ2YjY5ZTgwNGZjMjUzNDFkMDE2KTsKICAgICAgICAgICAgCiAgICAKICAgICAgICAgICAgdmFyIHBvcHVwX2UzZTY2NGI1ODI0MTQwMjRhMzhmMDVkZDdkYjA1NjJkID0gTC5wb3B1cCh7bWF4V2lkdGg6ICczMDAnCiAgICAgICAgICAgIAogICAgICAgICAgICB9KTsKCiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgdmFyIGh0bWxfNjk0MmQwMzhlMjUyNDBiN2IwOWQxMTY4NmM2ODdlMmEgPSAkKGA8ZGl2IGlkPSJodG1sXzY5NDJkMDM4ZTI1MjQwYjdiMDlkMTE2ODZjNjg3ZTJhIiBzdHlsZT0id2lkdGg6IDEwMC4wJTsgaGVpZ2h0OiAxMDAuMCU7Ij48Yj5HTEVPTjwvYj4gS2VudHVja3kgTGFrZSBzaXRlPC9kaXY+YClbMF07CiAgICAgICAgICAgICAgICBwb3B1cF9lM2U2NjRiNTgyNDE0MDI0YTM4ZjA1ZGQ3ZGIwNTYyZC5zZXRDb250ZW50KGh0bWxfNjk0MmQwMzhlMjUyNDBiN2IwOWQxMTY4NmM2ODdlMmEpOwogICAgICAgICAgICAKCiAgICAgICAgICAgIG1hcmtlcl85YmY4NzNjMzFkMWE0MTk2YWVmYTAwN2QxZDE0ODUxZS5iaW5kUG9wdXAocG9wdXBfZTNlNjY0YjU4MjQxNDAyNGEzOGYwNWRkN2RiMDU2MmQpCiAgICAgICAgICAgIDsKCiAgICAgICAgICAgIAogICAgICAgIAo8L3NjcmlwdD4=" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
+</div>
+</div>
+<div class="section" id="EXTRA-CREDIT:-Read-in-time-series-data-for-a-NEON-site">
+<h1>EXTRA CREDIT: Read in time series data for a NEON site<a class="headerlink" href="#EXTRA-CREDIT:-Read-in-time-series-data-for-a-NEON-site" title="Permalink to this headline">¶</a></h1>
+<p><strong>This is pretty involved, so I won’t go into it. You can look at it on your own if you’re interested in NEON data or in probing further at an interaction with a REST API.</strong></p>
+<p>Extract and list all the “Data Products” for one of the 3 selected NEON stream sites. Borrowed heavily from <a class="reference external" href="https://nbviewer.jupyter.org/gist/jzollerneon/3d0519e1f26db80b755cc865ef218d58">https://nbviewer.jupyter.org/gist/jzollerneon/3d0519e1f26db80b755cc865ef218d58</a></p>
+<div class="section" id="Select-the-site,-data-product-and-time-period">
+<h2>Select the site, data product and time period<a class="headerlink" href="#Select-the-site,-data-product-and-time-period" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">SITECODE</span> <span class="o">=</span> <span class="s1">&#39;LECO&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">neon_leco_site_gdf</span> <span class="o">=</span> <span class="n">neon_sites_tn_gdf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">neon_sites_tn_gdf</span><span class="p">[</span><span class="s1">&#39;siteCode&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">SITECODE</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">neon_leco_site_dataproducts</span> <span class="o">=</span> <span class="n">neon_leco_site_gdf</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;dataProducts&#39;</span><span class="p">]</span>
+<span class="nb">sorted</span><span class="p">([(</span><span class="n">dp</span><span class="p">[</span><span class="s1">&#39;dataProductCode&#39;</span><span class="p">],</span> <span class="n">dp</span><span class="p">[</span><span class="s1">&#39;dataProductTitle&#39;</span><span class="p">])</span>
+        <span class="k">for</span> <span class="n">dp</span> <span class="ow">in</span> <span class="n">neon_leco_site_dataproducts</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[(&#39;DP1.00001.001&#39;, &#39;2D wind speed and direction&#39;),
+ (&#39;DP1.00002.001&#39;, &#39;Single aspirated air temperature&#39;),
+ (&#39;DP1.00004.001&#39;, &#39;Barometric pressure&#39;),
+ (&#39;DP1.00023.001&#39;, &#39;Shortwave and longwave radiation (net radiometer)&#39;),
+ (&#39;DP1.00098.001&#39;, &#39;Relative humidity&#39;),
+ (&#39;DP1.20002.001&#39;, &#39;Land-water interface images&#39;),
+ (&#39;DP1.20016.001&#39;, &#39;Elevation of surface water&#39;),
+ (&#39;DP1.20033.001&#39;, &#39;Nitrate in surface water&#39;),
+ (&#39;DP1.20042.001&#39;, &#39;Photosynthetically active radiation at water surface&#39;),
+ (&#39;DP1.20048.001&#39;, &#39;Stream discharge field collection&#39;),
+ (&#39;DP1.20053.001&#39;, &#39;Temperature (PRT) in surface water&#39;),
+ (&#39;DP1.20066.001&#39;, &#39;Aquatic plant bryophyte macroalgae clip harvest&#39;),
+ (&#39;DP1.20072.001&#39;,
+  &#39;Aquatic plant, bryophyte, lichen, and macroalgae point counts in wadeable streams&#39;),
+ (&#39;DP1.20093.001&#39;, &#39;Chemical properties of surface water&#39;),
+ (&#39;DP1.20097.001&#39;, &#39;Dissolved gases in surface water&#39;),
+ (&#39;DP1.20107.001&#39;,
+  &#39;Fish electrofishing, gill netting, and fyke netting counts&#39;),
+ (&#39;DP1.20120.001&#39;, &#39;Macroinvertebrate collection&#39;),
+ (&#39;DP1.20126.001&#39;, &#39;Macroinvertebrate DNA barcode&#39;),
+ (&#39;DP1.20138.001&#39;, &#39;Surface water microbe cell count&#39;),
+ (&#39;DP1.20163.001&#39;,
+  &#39;Periphyton, seston, and phytoplankton chemical properties&#39;),
+ (&#39;DP1.20166.001&#39;, &#39;Periphyton, seston, and phytoplankton collection&#39;),
+ (&#39;DP1.20190.001&#39;, &#39;Reaeration field and lab collection&#39;),
+ (&#39;DP1.20191.001&#39;, &#39;Riparian vegetation % cover&#39;),
+ (&#39;DP1.20193.001&#39;, &#39;Salt-based stream discharge&#39;),
+ (&#39;DP1.20194.001&#39;, &#39;Sediment chemical properties&#39;),
+ (&#39;DP1.20197.001&#39;, &#39;Sediment physical properties&#39;),
+ (&#39;DP1.20206.001&#39;, &#39;Stable isotope concentrations in surface waters&#39;),
+ (&#39;DP1.20267.001&#39;, &#39;Gauge height&#39;),
+ (&#39;DP1.20275.001&#39;, &#39;Riparian composition and structure&#39;),
+ (&#39;DP1.20279.001&#39;, &#39;Benthic microbe metagenome sequences&#39;),
+ (&#39;DP1.20280.001&#39;, &#39;Benthic microbe marker gene sequences&#39;),
+ (&#39;DP1.20281.001&#39;, &#39;Surface water microbe metagenome sequences&#39;),
+ (&#39;DP1.20282.001&#39;, &#39;Surface water microbe marker gene sequences&#39;),
+ (&#39;DP1.20288.001&#39;, &#39;Water quality&#39;)]
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">BASEPRODUCTCODE</span> <span class="o">=</span> <span class="s1">&#39;DP1.20288&#39;</span>
+<span class="k">for</span> <span class="n">data_product</span> <span class="ow">in</span> <span class="n">neon_leco_site_dataproducts</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">BASEPRODUCTCODE</span> <span class="ow">in</span> <span class="n">data_product</span><span class="p">[</span><span class="s1">&#39;dataProductCode&#39;</span><span class="p">]:</span>
+        <span class="n">dataProductCode</span> <span class="o">=</span> <span class="n">data_product</span><span class="p">[</span><span class="s1">&#39;dataProductCode&#39;</span><span class="p">]</span>
+        <span class="n">availableMonths</span> <span class="o">=</span> <span class="n">data_product</span><span class="p">[</span><span class="s1">&#39;availableMonths&#39;</span><span class="p">]</span>
+
+<span class="n">dataProductCode</span><span class="p">,</span> <span class="n">availableMonths</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(&#39;DP1.20288.001&#39;, [&#39;2017-05&#39;, &#39;2018-01&#39;])
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Issue-the-“data”-REST-API-request-and-examine-the-response">
+<h2>Issue the “data” REST API request and examine the response<a class="headerlink" href="#Issue-the-“data”-REST-API-request-and-examine-the-response" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">data_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">neon_api_baseurl</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="n">dataProductCode</span><span class="p">,</span> <span class="n">SITECODE</span><span class="p">,</span> <span class="n">availableMonths</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+<span class="n">data_response_json</span> <span class="o">=</span> <span class="n">data_response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">data_response</span><span class="o">.</span><span class="n">url</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;http://data.neonscience.org/api/v0/data/DP1.20288.001/LECO/2018-01&#39;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">data_response_json</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+dict_keys([&#39;data&#39;])
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">type</span><span class="p">(</span><span class="n">data_response_json</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]),</span> <span class="nb">len</span><span class="p">(</span><span class="n">data_response_json</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(dict, 4)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">data_response_json</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+dict_keys([&#39;files&#39;, &#39;productCode&#39;, &#39;siteCode&#39;, &#39;month&#39;])
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">type</span><span class="p">(</span><span class="n">data_response_json</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="s1">&#39;files&#39;</span><span class="p">]),</span> <span class="n">data_response_json</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="s1">&#39;files&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(list,
+ [{&#39;crc32&#39;: &#39;ef3cb35a55773c2a59064e5c0e31f0db&#39;,
+   &#39;name&#39;: &#39;NEON.D07.LECO.DP1.20288.001.101.100.100.waq_instantaneous_pub.2018-01.basic.20180807T212436Z.csv&#39;,
+   &#39;size&#39;: &#39;5139178&#39;,
+   &#39;url&#39;: &#39;https://neon-prod-pub-1.s3.data.neonscience.org/NEON.DOM.SITE.DP1.20288.001/PROV/LECO/20180101T000000--20180201T000000/basic/NEON.D07.LECO.DP1.20288.001.101.100.100.waq_instantaneous_pub.2018-01.basic.20180807T212436Z.csv?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20190207T102942Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Credential=pub-internal-read%2F20190207%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Signature=6828aff9a9b6899ebaf970e636d3bf913250d61c773585f68d400784d068dc3f&#39;},
+  {&#39;crc32&#39;: &#39;9baaade47f9f8241734194f2c3ff33d9&#39;,
+   &#39;name&#39;: &#39;NEON.D07.LECO.DP1.20288.001.102.100.100.waq_instantaneous_pub.2018-01.basic.20180807T212436Z.csv&#39;,
+   &#39;size&#39;: &#39;4871643&#39;,
+   &#39;url&#39;: &#39;https://neon-prod-pub-1.s3.data.neonscience.org/NEON.DOM.SITE.DP1.20288.001/PROV/LECO/20180101T000000--20180201T000000/basic/NEON.D07.LECO.DP1.20288.001.102.100.100.waq_instantaneous_pub.2018-01.basic.20180807T212436Z.csv?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20190207T102942Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Credential=pub-internal-read%2F20190207%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Signature=87d1cead0d60dd6223b444f69f614b55a42f5154e2cb4839994b3b868b273bb5&#39;}])
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Read,-parse-and-plot-the-data.">
+<h2>Read, parse and plot the data.<a class="headerlink" href="#Read,-parse-and-plot-the-data." title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">datafile_url</span> <span class="o">=</span> <span class="n">data_response_json</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="s1">&#39;files&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;url&#39;</span><span class="p">]</span>
+<span class="n">csv_data_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">datafile_url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">datafile_url</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;https://neon-prod-pub-1.s3.data.neonscience.org/NEON.DOM.SITE.DP1.20288.001/PROV/LECO/20180101T000000--20180201T000000/basic/NEON.D07.LECO.DP1.20288.001.101.100.100.waq_instantaneous_pub.2018-01.basic.20180807T212436Z.csv?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20190207T102942Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Credential=pub-internal-read%2F20190207%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Signature=6828aff9a9b6899ebaf970e636d3bf913250d61c773585f68d400784d068dc3f&#39;
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1">#Since the data is in memory and not a file, we need to convert it before loading it into a pandas DataFrame</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">StringIO</span><span class="p">(</span><span class="n">csv_data_response</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 39361 entries, 0 to 39360
+Data columns (total 27 columns):
+startDateTime                   39361 non-null object
+endDateTime                     39361 non-null object
+sensorDepth                     0 non-null float64
+sensorDepthExpUncert            0 non-null float64
+specificConductance             39185 non-null float64
+specificConductanceExpUncert    39185 non-null float64
+specificConductanceFinalQF      39361 non-null int64
+dissolvedOxygen                 39185 non-null float64
+dissolvedOxygenExpUncert        39185 non-null float64
+dissolvedOxygenFinalQF          39361 non-null int64
+dissolvedOxygenSaturation       39185 non-null float64
+dissolvedOxygenSatExpUncert     39185 non-null float64
+dissolvedOxygenSatFinalQF       39361 non-null int64
+pH                              39185 non-null float64
+pHExpUncert                     39185 non-null float64
+pHFinalQF                       39361 non-null int64
+chlorophyll                     39185 non-null float64
+chlorophyllExpUncert            39185 non-null float64
+chlorophyllFinalQF              39361 non-null int64
+turbidity                       39185 non-null float64
+turbidityExpUncert              39185 non-null float64
+turbidityFinalQF                39361 non-null int64
+fDOM                            0 non-null float64
+rawCalibratedfDOM               0 non-null float64
+fDOMExpUncert                   0 non-null float64
+fDOMFinalQF                     0 non-null float64
+buoyNAFlag                      0 non-null float64
+dtypes: float64(19), int64(6), object(2)
+memory usage: 8.1+ MB
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>startDateTime</th>
+      <th>endDateTime</th>
+      <th>sensorDepth</th>
+      <th>sensorDepthExpUncert</th>
+      <th>specificConductance</th>
+      <th>specificConductanceExpUncert</th>
+      <th>specificConductanceFinalQF</th>
+      <th>dissolvedOxygen</th>
+      <th>dissolvedOxygenExpUncert</th>
+      <th>dissolvedOxygenFinalQF</th>
+      <th>...</th>
+      <th>chlorophyllExpUncert</th>
+      <th>chlorophyllFinalQF</th>
+      <th>turbidity</th>
+      <th>turbidityExpUncert</th>
+      <th>turbidityFinalQF</th>
+      <th>fDOM</th>
+      <th>rawCalibratedfDOM</th>
+      <th>fDOMExpUncert</th>
+      <th>fDOMFinalQF</th>
+      <th>buoyNAFlag</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2018-01-01T00:00:00Z</td>
+      <td>2018-01-01T00:00:00Z</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>20.44</td>
+      <td>0.24</td>
+      <td>0</td>
+      <td>13.64</td>
+      <td>0.27</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0.01</td>
+      <td>0</td>
+      <td>-3.01</td>
+      <td>0.05</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2018-01-01T00:01:00Z</td>
+      <td>2018-01-01T00:01:00Z</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>20.47</td>
+      <td>0.24</td>
+      <td>0</td>
+      <td>13.63</td>
+      <td>0.27</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0.01</td>
+      <td>0</td>
+      <td>-3.20</td>
+      <td>0.05</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>2 rows × 27 columns</p>
+</div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>startDateTime</th>
+      <th>endDateTime</th>
+      <th>sensorDepth</th>
+      <th>sensorDepthExpUncert</th>
+      <th>specificConductance</th>
+      <th>specificConductanceExpUncert</th>
+      <th>specificConductanceFinalQF</th>
+      <th>dissolvedOxygen</th>
+      <th>dissolvedOxygenExpUncert</th>
+      <th>dissolvedOxygenFinalQF</th>
+      <th>...</th>
+      <th>chlorophyllExpUncert</th>
+      <th>chlorophyllFinalQF</th>
+      <th>turbidity</th>
+      <th>turbidityExpUncert</th>
+      <th>turbidityFinalQF</th>
+      <th>fDOM</th>
+      <th>rawCalibratedfDOM</th>
+      <th>fDOMExpUncert</th>
+      <th>fDOMFinalQF</th>
+      <th>buoyNAFlag</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>39359</th>
+      <td>2018-01-30T11:58:00Z</td>
+      <td>2018-01-30T11:58:00Z</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>29.48</td>
+      <td>0.34</td>
+      <td>0</td>
+      <td>13.45</td>
+      <td>0.27</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0.01</td>
+      <td>1</td>
+      <td>-3.78</td>
+      <td>0.06</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>39360</th>
+      <td>2018-01-30T11:59:00Z</td>
+      <td>2018-01-30T11:59:00Z</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>29.47</td>
+      <td>0.34</td>
+      <td>0</td>
+      <td>13.46</td>
+      <td>0.27</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0.01</td>
+      <td>1</td>
+      <td>-3.80</td>
+      <td>0.06</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>2 rows × 27 columns</p>
+</div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;endDateTime&#39;</span><span class="p">],</span> <span class="nb">type</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;endDateTime&#39;</span><span class="p">])</span> <span class="c1"># It&#39;s a string type</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(&#39;2018-01-01T00:00:00Z&#39;, str)
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;end_dt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;endDateTime&#39;</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;end_dt&#39;</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">df</span><span class="o">.</span><span class="n">dissolvedOxygen</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;dissolvedOxygen&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../../_images/gallery_Python_Instructional_Water_Hackweek_2019_Data_Access_and_Time-series_Statistics_Cyberseminar_notebooks_Part2-NEON_and_Observatories_RESTAPI_59_0.png" src="../../../../../_images/gallery_Python_Instructional_Water_Hackweek_2019_Data_Access_and_Time-series_Statistics_Cyberseminar_notebooks_Part2-NEON_and_Observatories_RESTAPI_59_0.png" />
+</div>
+</div>
+<p>Scatter plots of pH and Chlorophyll vs Dissolved Oxygen</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;dissolvedOxygen&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;pH&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;Blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;pH&#39;</span><span class="p">,</span>
+             <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;dissolvedOxygen&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;chlorophyll&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;Green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;chlorophyll&#39;</span><span class="p">,</span>
+        <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../../_images/gallery_Python_Instructional_Water_Hackweek_2019_Data_Access_and_Time-series_Statistics_Cyberseminar_notebooks_Part2-NEON_and_Observatories_RESTAPI_61_0.png" src="../../../../../_images/gallery_Python_Instructional_Water_Hackweek_2019_Data_Access_and_Time-series_Statistics_Cyberseminar_notebooks_Part2-NEON_and_Observatories_RESTAPI_61_0.png" />
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <!-- 
+This file modifies the default sphinx_rtd_theme footer
+-->
+
+
+
+<footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+  <!-- your html code here -->
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

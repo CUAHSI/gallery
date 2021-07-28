@@ -1,0 +1,1835 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Use Case 2 - Part 1: Using ulmo to explore USGS NWIS and CUAHSI HIS Data &mdash; CUAHSI Gallery</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/tooltipster.custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/tooltipster.bundle.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/micromodal.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/sphinx_rtd_theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/contentui.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/language_data.js"></script>
+        <script src="../../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../../_static/copybutton.js"></script>
+        <script src="../../../../../_static/js/hoverxref.js"></script>
+        <script src="../../../../../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../../../../../_static/js/micromodal.min.js"></script>
+        <script src="../../../../../_static/js/custom.js"></script>
+        <script src="../../../../../_static/contentui.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html">
+          
+
+          
+            
+            <img src="../../../../../_static/cuahsi-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Galleries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#research-examples">Research Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#reproducible-science-examples">Reproducible Science Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../R/index.html">R</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../R/index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../RShiny/index.html">RShiny</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../RShiny/index.html#research-examples">Research Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../RShiny/index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">BuildDocs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          <!--
+The purpose of this template is to override (i.e. supress) the breadcrumbs that appear at the top of each page.
+-->
+
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Use-Case-2---Part-1:-Using-ulmo-to-explore-USGS-NWIS-and-CUAHSI-HIS-Data">
+<h1>Use Case 2 - Part 1: Using ulmo to explore USGS NWIS and CUAHSI HIS Data<a class="headerlink" href="#Use-Case-2---Part-1:-Using-ulmo-to-explore-USGS-NWIS-and-CUAHSI-HIS-Data" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/emiliom">Emilio Mayorga</a>, University of Washington</p></li>
+<li><p><a class="reference external" href="https://waterhackweek.github.io/">WaterHackWeek</a> Cyberseminar</p></li>
+<li><p>2019-2-7</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="kn">import</span> <span class="nn">pytz</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">folium</span>
+
+<span class="kn">import</span> <span class="nn">ulmo</span>
+<span class="kn">from</span> <span class="nn">ulmo.util</span> <span class="kn">import</span> <span class="n">convert_datetime</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Request-and-explore-NWIS-sites-in-a-HUC8-subbasin">
+<h1>Request and explore NWIS sites in a HUC8 subbasin<a class="headerlink" href="#Request-and-explore-NWIS-sites-in-a-HUC8-subbasin" title="Permalink to this headline">¶</a></h1>
+<p>Upper Little Tennessee HUC8 Subbasin 06010202. See <a class="reference external" href="https://github.com/waterhackweek/tsdata_access/blob/master/UpperLittleTennessee_HUC-8Subbasin_ID06010202.geojson">an interactive map on our GitHub repository.</a></p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">HUC8code</span> <span class="o">=</span> <span class="s1">&#39;06010202&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="Issue-the-ulmo-nwis.get_sites-request,-then-cleanup-and-examine-the-results">
+<h2>Issue the <code class="docutils literal notranslate"><span class="pre">ulmo</span> <span class="pre">nwis.get_sites</span></code> request, then cleanup and examine the results<a class="headerlink" href="#Issue-the-ulmo-nwis.get_sites-request,-then-cleanup-and-examine-the-results" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">nwis_sites</span> <span class="o">=</span> <span class="n">ulmo</span><span class="o">.</span><span class="n">usgs</span><span class="o">.</span><span class="n">nwis</span><span class="o">.</span><span class="n">get_sites</span><span class="p">(</span><span class="n">huc</span><span class="o">=</span><span class="n">HUC8code</span><span class="p">,</span> <span class="n">service</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+making request for sites: http://waterservices.usgs.gov/nwis/dv/
+processing data from request: https://waterservices.usgs.gov/nwis/dv/?format=waterml&amp;hucs=06010202
+making request for sites: http://waterservices.usgs.gov/nwis/iv/
+processing data from request: https://waterservices.usgs.gov/nwis/iv/?format=waterml&amp;hucs=06010202
+</pre></div></div>
+</div>
+<p>What does the response look like?</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">type</span><span class="p">(</span><span class="n">nwis_sites</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">nwis_sites</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(dict, 20)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">nwis_sites</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+dict_keys([&#39;03500000&#39;, &#39;03500240&#39;, &#39;03500500&#39;, &#39;0350056050&#39;, &#39;03501000&#39;, &#39;03501500&#39;, &#39;03501975&#39;, &#39;03502500&#39;, &#39;03503000&#39;, &#39;03503500&#39;, &#39;03504000&#39;, &#39;03505500&#39;, &#39;03505550&#39;, &#39;03506500&#39;, &#39;03507000&#39;, &#39;03513500&#39;, &#39;03514000&#39;, &#39;350413083130045&#39;, &#39;350557083325845&#39;, &#39;351205083213545&#39;])
+</pre></div></div>
+</div>
+<p>It’s a Python dictionary of sites. Let’s examine one of the sites.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">site_code</span> <span class="o">=</span> <span class="s1">&#39;03501500&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">nwis_sites</span><span class="p">[</span><span class="n">site_code</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;code&#39;: &#39;03501500&#39;,
+ &#39;name&#39;: &#39;LITTLE TENNESSEE R AT FRANKLIN, NC&#39;,
+ &#39;network&#39;: &#39;NWIS&#39;,
+ &#39;agency&#39;: &#39;USGS&#39;,
+ &#39;location&#39;: {&#39;latitude&#39;: &#39;35.18592846&#39;,
+  &#39;longitude&#39;: &#39;-83.3712647&#39;,
+  &#39;srs&#39;: &#39;EPSG:4326&#39;},
+ &#39;timezone_info&#39;: {&#39;uses_dst&#39;: True,
+  &#39;dst_tz&#39;: {&#39;abbreviation&#39;: &#39;EDT&#39;, &#39;offset&#39;: &#39;-04:00&#39;},
+  &#39;default_tz&#39;: {&#39;abbreviation&#39;: &#39;EST&#39;, &#39;offset&#39;: &#39;-05:00&#39;}},
+ &#39;county&#39;: &#39;37113&#39;,
+ &#39;huc&#39;: &#39;06010202&#39;,
+ &#39;site_type&#39;: &#39;ST&#39;,
+ &#39;state_code&#39;: &#39;37&#39;}
+</pre></div></div>
+</div>
+<p>One thing it doesn’t tell us is what parameters are measured at the site. Too bad.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># pull out lat &amp; lon from the nested dictionary</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">nwis_sites</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">v</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span><span class="p">[</span><span class="s1">&#39;location&#39;</span><span class="p">][</span><span class="s1">&#39;longitude&#39;</span><span class="p">]</span>
+    <span class="n">v</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span><span class="p">[</span><span class="s1">&#39;location&#39;</span><span class="p">][</span><span class="s1">&#39;latitude&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">nwis_sites_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">nwis_sites</span><span class="p">)</span>
+<span class="n">nwis_sites_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>03500000</th>
+      <th>03500240</th>
+      <th>03500500</th>
+      <th>0350056050</th>
+      <th>03501000</th>
+      <th>03501500</th>
+      <th>03501975</th>
+      <th>03502500</th>
+      <th>03503000</th>
+      <th>03503500</th>
+      <th>03504000</th>
+      <th>03505500</th>
+      <th>03505550</th>
+      <th>03506500</th>
+      <th>03507000</th>
+      <th>03513500</th>
+      <th>03514000</th>
+      <th>350413083130045</th>
+      <th>350557083325845</th>
+      <th>351205083213545</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>agency</th>
+      <td>USGS</td>
+      <td>USGS</td>
+      <td>USGS</td>
+      <td>USGS</td>
+      <td>USGS</td>
+      <td>USGS</td>
+      <td>USGS</td>
+      <td>USGS</td>
+      <td>USGS</td>
+      <td>USGS</td>
+      <td>USGS</td>
+      <td>USGS</td>
+      <td>USGS</td>
+      <td>USGS</td>
+      <td>USGS</td>
+      <td>USGS</td>
+      <td>USGS</td>
+      <td>USGS</td>
+      <td>USGS</td>
+      <td>USGS</td>
+    </tr>
+    <tr>
+      <th>code</th>
+      <td>03500000</td>
+      <td>03500240</td>
+      <td>03500500</td>
+      <td>0350056050</td>
+      <td>03501000</td>
+      <td>03501500</td>
+      <td>03501975</td>
+      <td>03502500</td>
+      <td>03503000</td>
+      <td>03503500</td>
+      <td>03504000</td>
+      <td>03505500</td>
+      <td>03505550</td>
+      <td>03506500</td>
+      <td>03507000</td>
+      <td>03513500</td>
+      <td>03514000</td>
+      <td>350413083130045</td>
+      <td>350557083325845</td>
+      <td>351205083213545</td>
+    </tr>
+    <tr>
+      <th>county</th>
+      <td>37113</td>
+      <td>37113</td>
+      <td>37113</td>
+      <td>37113</td>
+      <td>37113</td>
+      <td>37113</td>
+      <td>37113</td>
+      <td>37113</td>
+      <td>37173</td>
+      <td>37173</td>
+      <td>37113</td>
+      <td>37173</td>
+      <td>37173</td>
+      <td>37173</td>
+      <td>37173</td>
+      <td>37173</td>
+      <td>37173</td>
+      <td>37113</td>
+      <td>37113</td>
+      <td>37113</td>
+    </tr>
+    <tr>
+      <th>huc</th>
+      <td>06010202</td>
+      <td>06010202</td>
+      <td>06010202</td>
+      <td>06010202</td>
+      <td>06010202</td>
+      <td>06010202</td>
+      <td>06010202</td>
+      <td>06010202</td>
+      <td>06010202</td>
+      <td>06010202</td>
+      <td>06010202</td>
+      <td>06010202</td>
+      <td>06010202</td>
+      <td>06010202</td>
+      <td>06010202</td>
+      <td>06010202</td>
+      <td>06010202</td>
+      <td>06010202</td>
+      <td>06010202</td>
+      <td>06010202</td>
+    </tr>
+    <tr>
+      <th>latitude</th>
+      <td>35.15</td>
+      <td>35.15888889</td>
+      <td>35.07064737</td>
+      <td>35.0761111</td>
+      <td>35.166484</td>
+      <td>35.18592846</td>
+      <td>35.2328611</td>
+      <td>35.2784285</td>
+      <td>35.33638889</td>
+      <td>35.38148229</td>
+      <td>35.1275</td>
+      <td>35.29870237</td>
+      <td>35.305</td>
+      <td>35.37564868</td>
+      <td>35.4084267</td>
+      <td>35.48481705</td>
+      <td>35.4773122</td>
+      <td>35.07027778</td>
+      <td>35.09916667</td>
+      <td>35.2</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Let&#39;s flip (transpose) the dataframe, so each row is a site</span>
+<span class="n">nwis_sites_df</span> <span class="o">=</span> <span class="n">nwis_sites_df</span><span class="o">.</span><span class="n">T</span>
+<span class="n">nwis_sites_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>agency</th>
+      <th>code</th>
+      <th>county</th>
+      <th>huc</th>
+      <th>latitude</th>
+      <th>location</th>
+      <th>longitude</th>
+      <th>name</th>
+      <th>network</th>
+      <th>site_type</th>
+      <th>state_code</th>
+      <th>timezone_info</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>03500000</th>
+      <td>USGS</td>
+      <td>03500000</td>
+      <td>37113</td>
+      <td>06010202</td>
+      <td>35.15</td>
+      <td>{'latitude': '35.15', 'longitude': '-83.379722...</td>
+      <td>-83.3797222</td>
+      <td>LITTLE TENNESSEE RIVER NEAR PRENTISS, NC</td>
+      <td>NWIS</td>
+      <td>ST</td>
+      <td>37</td>
+      <td>{'uses_dst': True, 'dst_tz': {'abbreviation': ...</td>
+    </tr>
+    <tr>
+      <th>03500240</th>
+      <td>USGS</td>
+      <td>03500240</td>
+      <td>37113</td>
+      <td>06010202</td>
+      <td>35.15888889</td>
+      <td>{'latitude': '35.15888889', 'longitude': '-83....</td>
+      <td>-83.3941667</td>
+      <td>CARTOOGECHAYE CREEK NEAR FRANKLIN, NC</td>
+      <td>NWIS</td>
+      <td>ST</td>
+      <td>37</td>
+      <td>{'uses_dst': True, 'dst_tz': {'abbreviation': ...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Final cleanups, improvements</span>
+<span class="n">nwis_sites_df</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">nwis_sites_df</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">nwis_sites_df</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">nwis_sites_df</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">nwis_sites_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;location&#39;</span><span class="p">,</span> <span class="s1">&#39;timezone_info&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">nwis_sites_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>agency</th>
+      <th>code</th>
+      <th>county</th>
+      <th>huc</th>
+      <th>latitude</th>
+      <th>longitude</th>
+      <th>name</th>
+      <th>network</th>
+      <th>site_type</th>
+      <th>state_code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>03500000</th>
+      <td>USGS</td>
+      <td>03500000</td>
+      <td>37113</td>
+      <td>06010202</td>
+      <td>35.150000</td>
+      <td>-83.379722</td>
+      <td>LITTLE TENNESSEE RIVER NEAR PRENTISS, NC</td>
+      <td>NWIS</td>
+      <td>ST</td>
+      <td>37</td>
+    </tr>
+    <tr>
+      <th>03500240</th>
+      <td>USGS</td>
+      <td>03500240</td>
+      <td>37113</td>
+      <td>06010202</td>
+      <td>35.158889</td>
+      <td>-83.394167</td>
+      <td>CARTOOGECHAYE CREEK NEAR FRANKLIN, NC</td>
+      <td>NWIS</td>
+      <td>ST</td>
+      <td>37</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p><em>What’s that “site_type”?</em> Summarize all values</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">nwis_sites_df</span><span class="p">[</span><span class="s1">&#39;site_type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+ST    17
+AT     3
+Name: site_type, dtype: int64
+</pre></div></div>
+</div>
+<p>Site type codes are defined at <a class="reference external" href="http://help.waterdata.usgs.gov/site_tp_cd">http://help.waterdata.usgs.gov/site_tp_cd</a>. For our purposes: - ST: Stream - AT: Atmosphere</p>
+<p>We could also have issued the <code class="docutils literal notranslate"><span class="pre">nwis.get_sites</span></code> query by passing a <code class="docutils literal notranslate"><span class="pre">site_type</span></code> value or list, like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nwis_sits</span> <span class="o">=</span> <span class="n">ulmo</span><span class="o">.</span><span class="n">usgs</span><span class="o">.</span><span class="n">nwis</span><span class="o">.</span><span class="n">get_sites</span><span class="p">(</span><span class="n">huc</span><span class="o">=</span><span class="n">HUC8code</span><span class="p">,</span> <span class="n">site_type</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;ST&#39;</span><span class="p">],</span> <span class="n">service</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="Let’s-map-the-sites-on-an-interactive-map,-with-Folium">
+<h2>Let’s map the sites on an interactive map, with Folium<a class="headerlink" href="#Let’s-map-the-sites-on-an-interactive-map,-with-Folium" title="Permalink to this headline">¶</a></h2>
+<p>Colored by site type.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">m</span> <span class="o">=</span> <span class="n">folium</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">tiles</span><span class="o">=</span><span class="s1">&#39;Stamen terrain&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">nwis_sites_df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">folium</span><span class="o">.</span><span class="n">Marker</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">]],</span>
+                  <span class="n">icon</span><span class="o">=</span><span class="n">folium</span><span class="o">.</span><span class="n">Icon</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span> <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;site_type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;ST&#39;</span> <span class="k">else</span> <span class="s1">&#39;gray&#39;</span><span class="p">),</span>
+                  <span class="n">popup</span><span class="o">=</span><span class="s2">&quot;&lt;b&gt;</span><span class="si">{0}</span><span class="s2">&lt;/b&gt; </span><span class="si">{1}</span><span class="s2">. Site type: </span><span class="si">{2}</span><span class="s2">. </span><span class="si">{3}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                      <span class="n">row</span><span class="p">[</span><span class="s1">&#39;code&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;site_type&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;network&#39;</span><span class="p">])</span>
+                 <span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+<span class="c1"># Set the map extent (bounds) to the extent of the sites</span>
+<span class="n">m</span><span class="o">.</span><span class="n">fit_bounds</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">get_bounds</span><span class="p">())</span>
+
+<span class="n">m</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,PCFET0NUWVBFIGh0bWw+CjxoZWFkPiAgICAKICAgIDxtZXRhIGh0dHAtZXF1aXY9ImNvbnRlbnQtdHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PVVURi04IiAvPgogICAgPHNjcmlwdD5MX1BSRUZFUl9DQU5WQVM9ZmFsc2U7IExfTk9fVE9VQ0g9ZmFsc2U7IExfRElTQUJMRV8zRD1mYWxzZTs8L3NjcmlwdD4KICAgIDxzY3JpcHQgc3JjPSJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL2xlYWZsZXRAMS4zLjQvZGlzdC9sZWFmbGV0LmpzIj48L3NjcmlwdD4KICAgIDxzY3JpcHQgc3JjPSJodHRwczovL2FqYXguZ29vZ2xlYXBpcy5jb20vYWpheC9saWJzL2pxdWVyeS8xLjExLjEvanF1ZXJ5Lm1pbi5qcyI+PC9zY3JpcHQ+CiAgICA8c2NyaXB0IHNyYz0iaHR0cHM6Ly9tYXhjZG4uYm9vdHN0cmFwY2RuLmNvbS9ib290c3RyYXAvMy4yLjAvanMvYm9vdHN0cmFwLm1pbi5qcyI+PC9zY3JpcHQ+CiAgICA8c2NyaXB0IHNyYz0iaHR0cHM6Ly9jZG5qcy5jbG91ZGZsYXJlLmNvbS9hamF4L2xpYnMvTGVhZmxldC5hd2Vzb21lLW1hcmtlcnMvMi4wLjIvbGVhZmxldC5hd2Vzb21lLW1hcmtlcnMuanMiPjwvc2NyaXB0PgogICAgPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL2xlYWZsZXRAMS4zLjQvZGlzdC9sZWFmbGV0LmNzcyIvPgogICAgPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJodHRwczovL21heGNkbi5ib290c3RyYXBjZG4uY29tL2Jvb3RzdHJhcC8zLjIuMC9jc3MvYm9vdHN0cmFwLm1pbi5jc3MiLz4KICAgIDxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iaHR0cHM6Ly9tYXhjZG4uYm9vdHN0cmFwY2RuLmNvbS9ib290c3RyYXAvMy4yLjAvY3NzL2Jvb3RzdHJhcC10aGVtZS5taW4uY3NzIi8+CiAgICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Imh0dHBzOi8vbWF4Y2RuLmJvb3RzdHJhcGNkbi5jb20vZm9udC1hd2Vzb21lLzQuNi4zL2Nzcy9mb250LWF3ZXNvbWUubWluLmNzcyIvPgogICAgPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJodHRwczovL2NkbmpzLmNsb3VkZmxhcmUuY29tL2FqYXgvbGlicy9MZWFmbGV0LmF3ZXNvbWUtbWFya2Vycy8yLjAuMi9sZWFmbGV0LmF3ZXNvbWUtbWFya2Vycy5jc3MiLz4KICAgIDxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iaHR0cHM6Ly9yYXdjZG4uZ2l0aGFjay5jb20vcHl0aG9uLXZpc3VhbGl6YXRpb24vZm9saXVtL21hc3Rlci9mb2xpdW0vdGVtcGxhdGVzL2xlYWZsZXQuYXdlc29tZS5yb3RhdGUuY3NzIi8+CiAgICA8c3R5bGU+aHRtbCwgYm9keSB7d2lkdGg6IDEwMCU7aGVpZ2h0OiAxMDAlO21hcmdpbjogMDtwYWRkaW5nOiAwO308L3N0eWxlPgogICAgPHN0eWxlPiNtYXAge3Bvc2l0aW9uOmFic29sdXRlO3RvcDowO2JvdHRvbTowO3JpZ2h0OjA7bGVmdDowO308L3N0eWxlPgogICAgCiAgICA8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLAogICAgICAgIGluaXRpYWwtc2NhbGU9MS4wLCBtYXhpbXVtLXNjYWxlPTEuMCwgdXNlci1zY2FsYWJsZT1ubyIgLz4KICAgIDxzdHlsZT4jbWFwXzIxNmJkYmQ3MDVjYzRhYWM5ZDkzYzg3OTJmYzgyMTE4IHsKICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7CiAgICAgICAgd2lkdGg6IDEwMC4wJTsKICAgICAgICBoZWlnaHQ6IDEwMC4wJTsKICAgICAgICBsZWZ0OiAwLjAlOwogICAgICAgIHRvcDogMC4wJTsKICAgICAgICB9CiAgICA8L3N0eWxlPgo8L2hlYWQ+Cjxib2R5PiAgICAKICAgIAogICAgPGRpdiBjbGFzcz0iZm9saXVtLW1hcCIgaWQ9Im1hcF8yMTZiZGJkNzA1Y2M0YWFjOWQ5M2M4NzkyZmM4MjExOCIgPjwvZGl2Pgo8L2JvZHk+CjxzY3JpcHQ+ICAgIAogICAgCiAgICAKICAgICAgICB2YXIgYm91bmRzID0gbnVsbDsKICAgIAoKICAgIHZhciBtYXBfMjE2YmRiZDcwNWNjNGFhYzlkOTNjODc5MmZjODIxMTggPSBMLm1hcCgKICAgICAgICAnbWFwXzIxNmJkYmQ3MDVjYzRhYWM5ZDkzYzg3OTJmYzgyMTE4JywgewogICAgICAgIGNlbnRlcjogWzAsIDBdLAogICAgICAgIHpvb206IDEsCiAgICAgICAgbWF4Qm91bmRzOiBib3VuZHMsCiAgICAgICAgbGF5ZXJzOiBbXSwKICAgICAgICB3b3JsZENvcHlKdW1wOiBmYWxzZSwKICAgICAgICBjcnM6IEwuQ1JTLkVQU0czODU3LAogICAgICAgIHpvb21Db250cm9sOiB0cnVlLAogICAgICAgIH0pOwoKICAgIAogICAgCiAgICB2YXIgdGlsZV9sYXllcl8wMTY1MWRmNjhiZDM0ZWU4YmJlODg0NzU2Yzc0NDI1ZiA9IEwudGlsZUxheWVyKAogICAgICAgICdodHRwczovL3N0YW1lbi10aWxlcy17c30uYS5zc2wuZmFzdGx5Lm5ldC90ZXJyYWluL3t6fS97eH0ve3l9LmpwZycsCiAgICAgICAgewogICAgICAgICJhdHRyaWJ1dGlvbiI6IG51bGwsCiAgICAgICAgImRldGVjdFJldGluYSI6IGZhbHNlLAogICAgICAgICJtYXhOYXRpdmVab29tIjogMTgsCiAgICAgICAgIm1heFpvb20iOiAxOCwKICAgICAgICAibWluWm9vbSI6IDAsCiAgICAgICAgIm5vV3JhcCI6IGZhbHNlLAogICAgICAgICJvcGFjaXR5IjogMSwKICAgICAgICAic3ViZG9tYWlucyI6ICJhYmMiLAogICAgICAgICJ0bXMiOiBmYWxzZQp9KS5hZGRUbyhtYXBfMjE2YmRiZDcwNWNjNGFhYzlkOTNjODc5MmZjODIxMTgpOwogICAgCiAgICAgICAgdmFyIG1hcmtlcl9mZTc3OTg3ZjIyNzA0NDI1YTQyN2RhZmFkOWRjMjQ2YSA9IEwubWFya2VyKAogICAgICAgICAgICBbMzUuMTUsIC04My4zNzk3MjIyXSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgaWNvbjogbmV3IEwuSWNvbi5EZWZhdWx0KCkKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKS5hZGRUbyhtYXBfMjE2YmRiZDcwNWNjNGFhYzlkOTNjODc5MmZjODIxMTgpOwogICAgICAgIAogICAgCgogICAgICAgICAgICAgICAgdmFyIGljb25fYTZhMmIwYzYwN2ExNDVkMTg5Yjk1M2NmNmFmNTExNWUgPSBMLkF3ZXNvbWVNYXJrZXJzLmljb24oewogICAgICAgICAgICAgICAgICAgIGljb246ICdpbmZvLXNpZ24nLAogICAgICAgICAgICAgICAgICAgIGljb25Db2xvcjogJ3doaXRlJywKICAgICAgICAgICAgICAgICAgICBtYXJrZXJDb2xvcjogJ2JsdWUnLAogICAgICAgICAgICAgICAgICAgIHByZWZpeDogJ2dseXBoaWNvbicsCiAgICAgICAgICAgICAgICAgICAgZXh0cmFDbGFzc2VzOiAnZmEtcm90YXRlLTAnCiAgICAgICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgICAgICBtYXJrZXJfZmU3Nzk4N2YyMjcwNDQyNWE0MjdkYWZhZDlkYzI0NmEuc2V0SWNvbihpY29uX2E2YTJiMGM2MDdhMTQ1ZDE4OWI5NTNjZjZhZjUxMTVlKTsKICAgICAgICAgICAgCiAgICAKICAgICAgICAgICAgdmFyIHBvcHVwX2U3MmY2MzQ0MmU5MTRmMjFhZGVjMTgzNmU0MzgzMTVhID0gTC5wb3B1cCh7bWF4V2lkdGg6ICczMDAnCiAgICAgICAgICAgIAogICAgICAgICAgICB9KTsKCiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgdmFyIGh0bWxfZTJiMTY4OTdjYzBlNDVmNzkyYmUxNzQxYzliNDg0MTMgPSAkKGA8ZGl2IGlkPSJodG1sX2UyYjE2ODk3Y2MwZTQ1Zjc5MmJlMTc0MWM5YjQ4NDEzIiBzdHlsZT0id2lkdGg6IDEwMC4wJTsgaGVpZ2h0OiAxMDAuMCU7Ij48Yj4wMzUwMDAwMDwvYj4gTElUVExFIFRFTk5FU1NFRSBSSVZFUiBORUFSIFBSRU5USVNTLCBOQy4gU2l0ZSB0eXBlOiBTVC4gTldJUzwvZGl2PmApWzBdOwogICAgICAgICAgICAgICAgcG9wdXBfZTcyZjYzNDQyZTkxNGYyMWFkZWMxODM2ZTQzODMxNWEuc2V0Q29udGVudChodG1sX2UyYjE2ODk3Y2MwZTQ1Zjc5MmJlMTc0MWM5YjQ4NDEzKTsKICAgICAgICAgICAgCgogICAgICAgICAgICBtYXJrZXJfZmU3Nzk4N2YyMjcwNDQyNWE0MjdkYWZhZDlkYzI0NmEuYmluZFBvcHVwKHBvcHVwX2U3MmY2MzQ0MmU5MTRmMjFhZGVjMTgzNmU0MzgzMTVhKQogICAgICAgICAgICA7CgogICAgICAgICAgICAKICAgICAgICAKICAgIAogICAgICAgIHZhciBtYXJrZXJfNGNiZmU5NzhmYzk5NDY1Njg0YjUwYjQ1ZmFjN2Q0OWYgPSBMLm1hcmtlcigKICAgICAgICAgICAgWzM1LjE1ODg4ODg5LCAtODMuMzk0MTY2N10sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGljb246IG5ldyBMLkljb24uRGVmYXVsdCgpCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICkuYWRkVG8obWFwXzIxNmJkYmQ3MDVjYzRhYWM5ZDkzYzg3OTJmYzgyMTE4KTsKICAgICAgICAKICAgIAoKICAgICAgICAgICAgICAgIHZhciBpY29uXzRjMjdiYTM3M2VmZTQ3YTRiY2JkNWU2MGZiMDc1Yjk2ID0gTC5Bd2Vzb21lTWFya2Vycy5pY29uKHsKICAgICAgICAgICAgICAgICAgICBpY29uOiAnaW5mby1zaWduJywKICAgICAgICAgICAgICAgICAgICBpY29uQ29sb3I6ICd3aGl0ZScsCiAgICAgICAgICAgICAgICAgICAgbWFya2VyQ29sb3I6ICdibHVlJywKICAgICAgICAgICAgICAgICAgICBwcmVmaXg6ICdnbHlwaGljb24nLAogICAgICAgICAgICAgICAgICAgIGV4dHJhQ2xhc3NlczogJ2ZhLXJvdGF0ZS0wJwogICAgICAgICAgICAgICAgICAgIH0pOwogICAgICAgICAgICAgICAgbWFya2VyXzRjYmZlOTc4ZmM5OTQ2NTY4NGI1MGI0NWZhYzdkNDlmLnNldEljb24oaWNvbl80YzI3YmEzNzNlZmU0N2E0YmNiZDVlNjBmYjA3NWI5Nik7CiAgICAgICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciBwb3B1cF83ODU2MjkxMmQ0ZjU0YzdhYjcxZmIwYmE2MTY1YmVhNiA9IEwucG9wdXAoe21heFdpZHRoOiAnMzAwJwogICAgICAgICAgICAKICAgICAgICAgICAgfSk7CgogICAgICAgICAgICAKICAgICAgICAgICAgICAgIHZhciBodG1sXzMxOTE1NGRlNzYxNTQ3NDViNTc3NDdlNWQ1YjM2NDI1ID0gJChgPGRpdiBpZD0iaHRtbF8zMTkxNTRkZTc2MTU0NzQ1YjU3NzQ3ZTVkNWIzNjQyNSIgc3R5bGU9IndpZHRoOiAxMDAuMCU7IGhlaWdodDogMTAwLjAlOyI+PGI+MDM1MDAyNDA8L2I+IENBUlRPT0dFQ0hBWUUgQ1JFRUsgTkVBUiBGUkFOS0xJTiwgTkMuIFNpdGUgdHlwZTogU1QuIE5XSVM8L2Rpdj5gKVswXTsKICAgICAgICAgICAgICAgIHBvcHVwXzc4NTYyOTEyZDRmNTRjN2FiNzFmYjBiYTYxNjViZWE2LnNldENvbnRlbnQoaHRtbF8zMTkxNTRkZTc2MTU0NzQ1YjU3NzQ3ZTVkNWIzNjQyNSk7CiAgICAgICAgICAgIAoKICAgICAgICAgICAgbWFya2VyXzRjYmZlOTc4ZmM5OTQ2NTY4NGI1MGI0NWZhYzdkNDlmLmJpbmRQb3B1cChwb3B1cF83ODU2MjkxMmQ0ZjU0YzdhYjcxZmIwYmE2MTY1YmVhNikKICAgICAgICAgICAgOwoKICAgICAgICAgICAgCiAgICAgICAgCiAgICAKICAgICAgICB2YXIgbWFya2VyX2UzZTEwMGIxMmYwMDRmMTY4ZTFjNDIxYWEwMmY4OTMwID0gTC5tYXJrZXIoCiAgICAgICAgICAgIFszNS4wNzA2NDczNywgLTgzLjIzMjM3MzZdLAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBpY29uOiBuZXcgTC5JY29uLkRlZmF1bHQoKQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICApLmFkZFRvKG1hcF8yMTZiZGJkNzA1Y2M0YWFjOWQ5M2M4NzkyZmM4MjExOCk7CiAgICAgICAgCiAgICAKCiAgICAgICAgICAgICAgICB2YXIgaWNvbl9hZmVmZGE3NDIxM2M0YjliYmUyMjRlOTU4MDMxYjFiYiA9IEwuQXdlc29tZU1hcmtlcnMuaWNvbih7CiAgICAgICAgICAgICAgICAgICAgaWNvbjogJ2luZm8tc2lnbicsCiAgICAgICAgICAgICAgICAgICAgaWNvbkNvbG9yOiAnd2hpdGUnLAogICAgICAgICAgICAgICAgICAgIG1hcmtlckNvbG9yOiAnYmx1ZScsCiAgICAgICAgICAgICAgICAgICAgcHJlZml4OiAnZ2x5cGhpY29uJywKICAgICAgICAgICAgICAgICAgICBleHRyYUNsYXNzZXM6ICdmYS1yb3RhdGUtMCcKICAgICAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIG1hcmtlcl9lM2UxMDBiMTJmMDA0ZjE2OGUxYzQyMWFhMDJmODkzMC5zZXRJY29uKGljb25fYWZlZmRhNzQyMTNjNGI5YmJlMjI0ZTk1ODAzMWIxYmIpOwogICAgICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgcG9wdXBfODljZGJiN2RiYmQwNGJkNTgyZTM1NTJmOTQwOTQxZDAgPSBMLnBvcHVwKHttYXhXaWR0aDogJzMwMCcKICAgICAgICAgICAgCiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgCiAgICAgICAgICAgICAgICB2YXIgaHRtbF80OThmZDcyMjZkNzU0OGVmYjc4MGRhMDRmODhlMDg4YyA9ICQoYDxkaXYgaWQ9Imh0bWxfNDk4ZmQ3MjI2ZDc1NDhlZmI3ODBkYTA0Zjg4ZTA4OGMiIHN0eWxlPSJ3aWR0aDogMTAwLjAlOyBoZWlnaHQ6IDEwMC4wJTsiPjxiPjAzNTAwNTAwPC9iPiBDVUxMQVNBSkEgUklWRVIgQVQgSElHSExBTkRTLCBOQy4gU2l0ZSB0eXBlOiBTVC4gTldJUzwvZGl2PmApWzBdOwogICAgICAgICAgICAgICAgcG9wdXBfODljZGJiN2RiYmQwNGJkNTgyZTM1NTJmOTQwOTQxZDAuc2V0Q29udGVudChodG1sXzQ5OGZkNzIyNmQ3NTQ4ZWZiNzgwZGEwNGY4OGUwODhjKTsKICAgICAgICAgICAgCgogICAgICAgICAgICBtYXJrZXJfZTNlMTAwYjEyZjAwNGYxNjhlMWM0MjFhYTAyZjg5MzAuYmluZFBvcHVwKHBvcHVwXzg5Y2RiYjdkYmJkMDRiZDU4MmUzNTUyZjk0MDk0MWQwKQogICAgICAgICAgICA7CgogICAgICAgICAgICAKICAgICAgICAKICAgIAogICAgICAgIHZhciBtYXJrZXJfZGQwNDFhYjljZWY2NDNiZWFiNWQ2N2NlN2UxOTdlODEgPSBMLm1hcmtlcigKICAgICAgICAgICAgWzM1LjA3NjExMTEsIC04My4yNDg4ODg4OV0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGljb246IG5ldyBMLkljb24uRGVmYXVsdCgpCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICkuYWRkVG8obWFwXzIxNmJkYmQ3MDVjYzRhYWM5ZDkzYzg3OTJmYzgyMTE4KTsKICAgICAgICAKICAgIAoKICAgICAgICAgICAgICAgIHZhciBpY29uXzIwMTdkMjc0ZWI1ODRkN2JhYjUwNTFiMGZiZWVmMjgyID0gTC5Bd2Vzb21lTWFya2Vycy5pY29uKHsKICAgICAgICAgICAgICAgICAgICBpY29uOiAnaW5mby1zaWduJywKICAgICAgICAgICAgICAgICAgICBpY29uQ29sb3I6ICd3aGl0ZScsCiAgICAgICAgICAgICAgICAgICAgbWFya2VyQ29sb3I6ICdibHVlJywKICAgICAgICAgICAgICAgICAgICBwcmVmaXg6ICdnbHlwaGljb24nLAogICAgICAgICAgICAgICAgICAgIGV4dHJhQ2xhc3NlczogJ2ZhLXJvdGF0ZS0wJwogICAgICAgICAgICAgICAgICAgIH0pOwogICAgICAgICAgICAgICAgbWFya2VyX2RkMDQxYWI5Y2VmNjQzYmVhYjVkNjdjZTdlMTk3ZTgxLnNldEljb24oaWNvbl8yMDE3ZDI3NGViNTg0ZDdiYWI1MDUxYjBmYmVlZjI4Mik7CiAgICAgICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciBwb3B1cF9iYTgzZTM2ZmU2YmQ0ODUwYWRiMTgwMTVjOTFjMWI3YSA9IEwucG9wdXAoe21heFdpZHRoOiAnMzAwJwogICAgICAgICAgICAKICAgICAgICAgICAgfSk7CgogICAgICAgICAgICAKICAgICAgICAgICAgICAgIHZhciBodG1sX2JlMTAzZWY3ODIwZjQxMWRiMWNmNWFlMDc2MmZhOTk2ID0gJChgPGRpdiBpZD0iaHRtbF9iZTEwM2VmNzgyMGY0MTFkYjFjZjVhZTA3NjJmYTk5NiIgc3R5bGU9IndpZHRoOiAxMDAuMCU7IGhlaWdodDogMTAwLjAlOyI+PGI+MDM1MDA1NjA1MDwvYj4gQ1VMTEFTQUpBIFJJVkVSIEFUIFNSIDE2MjAgTkVBUiBISUdITEFORFMsIE5DLiBTaXRlIHR5cGU6IFNULiBOV0lTPC9kaXY+YClbMF07CiAgICAgICAgICAgICAgICBwb3B1cF9iYTgzZTM2ZmU2YmQ0ODUwYWRiMTgwMTVjOTFjMWI3YS5zZXRDb250ZW50KGh0bWxfYmUxMDNlZjc4MjBmNDExZGIxY2Y1YWUwNzYyZmE5OTYpOwogICAgICAgICAgICAKCiAgICAgICAgICAgIG1hcmtlcl9kZDA0MWFiOWNlZjY0M2JlYWI1ZDY3Y2U3ZTE5N2U4MS5iaW5kUG9wdXAocG9wdXBfYmE4M2UzNmZlNmJkNDg1MGFkYjE4MDE1YzkxYzFiN2EpCiAgICAgICAgICAgIDsKCiAgICAgICAgICAgIAogICAgICAgIAogICAgCiAgICAgICAgdmFyIG1hcmtlcl9kOGViYTU2MDAxOTg0MjkzOTM0MjBlOTIwNGJmMWE1ZSA9IEwubWFya2VyKAogICAgICAgICAgICBbMzUuMTY2NDg0LCAtODMuMzIzNDg1NDldLAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBpY29uOiBuZXcgTC5JY29uLkRlZmF1bHQoKQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICApLmFkZFRvKG1hcF8yMTZiZGJkNzA1Y2M0YWFjOWQ5M2M4NzkyZmM4MjExOCk7CiAgICAgICAgCiAgICAKCiAgICAgICAgICAgICAgICB2YXIgaWNvbl84ODY1YmJjMDdmNzg0ZmYxYjNhOWMwOGFiNWE5OGY2MyA9IEwuQXdlc29tZU1hcmtlcnMuaWNvbih7CiAgICAgICAgICAgICAgICAgICAgaWNvbjogJ2luZm8tc2lnbicsCiAgICAgICAgICAgICAgICAgICAgaWNvbkNvbG9yOiAnd2hpdGUnLAogICAgICAgICAgICAgICAgICAgIG1hcmtlckNvbG9yOiAnYmx1ZScsCiAgICAgICAgICAgICAgICAgICAgcHJlZml4OiAnZ2x5cGhpY29uJywKICAgICAgICAgICAgICAgICAgICBleHRyYUNsYXNzZXM6ICdmYS1yb3RhdGUtMCcKICAgICAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIG1hcmtlcl9kOGViYTU2MDAxOTg0MjkzOTM0MjBlOTIwNGJmMWE1ZS5zZXRJY29uKGljb25fODg2NWJiYzA3Zjc4NGZmMWIzYTljMDhhYjVhOThmNjMpOwogICAgICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgcG9wdXBfNzY1OTQwZmJhODdjNDRiMzk3YmEwMWNkN2ViOTFmMDIgPSBMLnBvcHVwKHttYXhXaWR0aDogJzMwMCcKICAgICAgICAgICAgCiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgCiAgICAgICAgICAgICAgICB2YXIgaHRtbF9jMGNmOTU2ZTNkNjg0NDk3YjVlZWM2NGE3NzVkODFkMCA9ICQoYDxkaXYgaWQ9Imh0bWxfYzBjZjk1NmUzZDY4NDQ5N2I1ZWVjNjRhNzc1ZDgxZDAiIHN0eWxlPSJ3aWR0aDogMTAwLjAlOyBoZWlnaHQ6IDEwMC4wJTsiPjxiPjAzNTAxMDAwPC9iPiBDVUxMQVNBSkEgUklWRVIgQVQgQ1VMTEFTQUpBLCBOQy4gU2l0ZSB0eXBlOiBTVC4gTldJUzwvZGl2PmApWzBdOwogICAgICAgICAgICAgICAgcG9wdXBfNzY1OTQwZmJhODdjNDRiMzk3YmEwMWNkN2ViOTFmMDIuc2V0Q29udGVudChodG1sX2MwY2Y5NTZlM2Q2ODQ0OTdiNWVlYzY0YTc3NWQ4MWQwKTsKICAgICAgICAgICAgCgogICAgICAgICAgICBtYXJrZXJfZDhlYmE1NjAwMTk4NDI5MzkzNDIwZTkyMDRiZjFhNWUuYmluZFBvcHVwKHBvcHVwXzc2NTk0MGZiYTg3YzQ0YjM5N2JhMDFjZDdlYjkxZjAyKQogICAgICAgICAgICA7CgogICAgICAgICAgICAKICAgICAgICAKICAgIAogICAgICAgIHZhciBtYXJrZXJfNGFkN2Q0ZjNlMjYwNDU1MTgxMDQwNzQzNWM2MzE4NDUgPSBMLm1hcmtlcigKICAgICAgICAgICAgWzM1LjE4NTkyODQ2LCAtODMuMzcxMjY0N10sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGljb246IG5ldyBMLkljb24uRGVmYXVsdCgpCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICkuYWRkVG8obWFwXzIxNmJkYmQ3MDVjYzRhYWM5ZDkzYzg3OTJmYzgyMTE4KTsKICAgICAgICAKICAgIAoKICAgICAgICAgICAgICAgIHZhciBpY29uX2RmNGMyYzg1NzAwYTQ2Y2I4OWZjMjk1MGM4MjIwOGYwID0gTC5Bd2Vzb21lTWFya2Vycy5pY29uKHsKICAgICAgICAgICAgICAgICAgICBpY29uOiAnaW5mby1zaWduJywKICAgICAgICAgICAgICAgICAgICBpY29uQ29sb3I6ICd3aGl0ZScsCiAgICAgICAgICAgICAgICAgICAgbWFya2VyQ29sb3I6ICdibHVlJywKICAgICAgICAgICAgICAgICAgICBwcmVmaXg6ICdnbHlwaGljb24nLAogICAgICAgICAgICAgICAgICAgIGV4dHJhQ2xhc3NlczogJ2ZhLXJvdGF0ZS0wJwogICAgICAgICAgICAgICAgICAgIH0pOwogICAgICAgICAgICAgICAgbWFya2VyXzRhZDdkNGYzZTI2MDQ1NTE4MTA0MDc0MzVjNjMxODQ1LnNldEljb24oaWNvbl9kZjRjMmM4NTcwMGE0NmNiODlmYzI5NTBjODIyMDhmMCk7CiAgICAgICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciBwb3B1cF84MTkxMDI3ZWY3MDk0YTBhYjcxMmQ1ZmM1YmU3MDkwZiA9IEwucG9wdXAoe21heFdpZHRoOiAnMzAwJwogICAgICAgICAgICAKICAgICAgICAgICAgfSk7CgogICAgICAgICAgICAKICAgICAgICAgICAgICAgIHZhciBodG1sXzFmYzJlODFmM2M5NjRiOGQ4NzA1Yjg2OGI0MjVhNTg2ID0gJChgPGRpdiBpZD0iaHRtbF8xZmMyZTgxZjNjOTY0YjhkODcwNWI4NjhiNDI1YTU4NiIgc3R5bGU9IndpZHRoOiAxMDAuMCU7IGhlaWdodDogMTAwLjAlOyI+PGI+MDM1MDE1MDA8L2I+IExJVFRMRSBURU5ORVNTRUUgUiBBVCBGUkFOS0xJTiwgTkMuIFNpdGUgdHlwZTogU1QuIE5XSVM8L2Rpdj5gKVswXTsKICAgICAgICAgICAgICAgIHBvcHVwXzgxOTEwMjdlZjcwOTRhMGFiNzEyZDVmYzViZTcwOTBmLnNldENvbnRlbnQoaHRtbF8xZmMyZTgxZjNjOTY0YjhkODcwNWI4NjhiNDI1YTU4Nik7CiAgICAgICAgICAgIAoKICAgICAgICAgICAgbWFya2VyXzRhZDdkNGYzZTI2MDQ1NTE4MTA0MDc0MzVjNjMxODQ1LmJpbmRQb3B1cChwb3B1cF84MTkxMDI3ZWY3MDk0YTBhYjcxMmQ1ZmM1YmU3MDkwZikKICAgICAgICAgICAgOwoKICAgICAgICAgICAgCiAgICAgICAgCiAgICAKICAgICAgICB2YXIgbWFya2VyX2NmZWY1MzcwMjI2OTQ3YTFiZDBkYjFjZTdmMGJiZjdkID0gTC5tYXJrZXIoCiAgICAgICAgICAgIFszNS4yMzI4NjExLCAtODMuMzkxNDcyMl0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGljb246IG5ldyBMLkljb24uRGVmYXVsdCgpCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICkuYWRkVG8obWFwXzIxNmJkYmQ3MDVjYzRhYWM5ZDkzYzg3OTJmYzgyMTE4KTsKICAgICAgICAKICAgIAoKICAgICAgICAgICAgICAgIHZhciBpY29uXzRlMTZkZTM2YmM5ODQxMDBhOGZkMzJlYWFlMjdlZWM1ID0gTC5Bd2Vzb21lTWFya2Vycy5pY29uKHsKICAgICAgICAgICAgICAgICAgICBpY29uOiAnaW5mby1zaWduJywKICAgICAgICAgICAgICAgICAgICBpY29uQ29sb3I6ICd3aGl0ZScsCiAgICAgICAgICAgICAgICAgICAgbWFya2VyQ29sb3I6ICdibHVlJywKICAgICAgICAgICAgICAgICAgICBwcmVmaXg6ICdnbHlwaGljb24nLAogICAgICAgICAgICAgICAgICAgIGV4dHJhQ2xhc3NlczogJ2ZhLXJvdGF0ZS0wJwogICAgICAgICAgICAgICAgICAgIH0pOwogICAgICAgICAgICAgICAgbWFya2VyX2NmZWY1MzcwMjI2OTQ3YTFiZDBkYjFjZTdmMGJiZjdkLnNldEljb24oaWNvbl80ZTE2ZGUzNmJjOTg0MTAwYThmZDMyZWFhZTI3ZWVjNSk7CiAgICAgICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciBwb3B1cF9jNzMzYjUxYjI4N2E0YWQyYmU5M2Y5ODlkMGY0YTQ5NCA9IEwucG9wdXAoe21heFdpZHRoOiAnMzAwJwogICAgICAgICAgICAKICAgICAgICAgICAgfSk7CgogICAgICAgICAgICAKICAgICAgICAgICAgICAgIHZhciBodG1sX2IxOWYzMmU3YTgxZjQ0M2M5ZGY0MTNmZjExOGY3MGI0ID0gJChgPGRpdiBpZD0iaHRtbF9iMTlmMzJlN2E4MWY0NDNjOWRmNDEzZmYxMThmNzBiNCIgc3R5bGU9IndpZHRoOiAxMDAuMCU7IGhlaWdodDogMTAwLjAlOyI+PGI+MDM1MDE5NzU8L2I+IExJVFRMRSBURU5ORVNTRUUgUklWRVIgQUIgTkMgSFdZIDI4IEFUIElPVExBLCBOQy4gU2l0ZSB0eXBlOiBTVC4gTldJUzwvZGl2PmApWzBdOwogICAgICAgICAgICAgICAgcG9wdXBfYzczM2I1MWIyODdhNGFkMmJlOTNmOTg5ZDBmNGE0OTQuc2V0Q29udGVudChodG1sX2IxOWYzMmU3YTgxZjQ0M2M5ZGY0MTNmZjExOGY3MGI0KTsKICAgICAgICAgICAgCgogICAgICAgICAgICBtYXJrZXJfY2ZlZjUzNzAyMjY5NDdhMWJkMGRiMWNlN2YwYmJmN2QuYmluZFBvcHVwKHBvcHVwX2M3MzNiNTFiMjg3YTRhZDJiZTkzZjk4OWQwZjRhNDk0KQogICAgICAgICAgICA7CgogICAgICAgICAgICAKICAgICAgICAKICAgIAogICAgICAgIHZhciBtYXJrZXJfM2Q1MTllZjA5YTFmNGRiM2E3YTQwMWQ0MWQ1YTFhMDYgPSBMLm1hcmtlcigKICAgICAgICAgICAgWzM1LjI3ODQyODUsIC04My40NDg0OTAyXSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgaWNvbjogbmV3IEwuSWNvbi5EZWZhdWx0KCkKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKS5hZGRUbyhtYXBfMjE2YmRiZDcwNWNjNGFhYzlkOTNjODc5MmZjODIxMTgpOwogICAgICAgIAogICAgCgogICAgICAgICAgICAgICAgdmFyIGljb25fYzFjZGY2YWQyNDM4NDI3MGE0NzFlOGE4ZmMwNjE1ZGYgPSBMLkF3ZXNvbWVNYXJrZXJzLmljb24oewogICAgICAgICAgICAgICAgICAgIGljb246ICdpbmZvLXNpZ24nLAogICAgICAgICAgICAgICAgICAgIGljb25Db2xvcjogJ3doaXRlJywKICAgICAgICAgICAgICAgICAgICBtYXJrZXJDb2xvcjogJ2JsdWUnLAogICAgICAgICAgICAgICAgICAgIHByZWZpeDogJ2dseXBoaWNvbicsCiAgICAgICAgICAgICAgICAgICAgZXh0cmFDbGFzc2VzOiAnZmEtcm90YXRlLTAnCiAgICAgICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgICAgICBtYXJrZXJfM2Q1MTllZjA5YTFmNGRiM2E3YTQwMWQ0MWQ1YTFhMDYuc2V0SWNvbihpY29uX2MxY2RmNmFkMjQzODQyNzBhNDcxZThhOGZjMDYxNWRmKTsKICAgICAgICAgICAgCiAgICAKICAgICAgICAgICAgdmFyIHBvcHVwXzk3ZTlhZGI1YmIzMTQ2NmY4Yjg0YjRmODg5M2I1NzY0ID0gTC5wb3B1cCh7bWF4V2lkdGg6ICczMDAnCiAgICAgICAgICAgIAogICAgICAgICAgICB9KTsKCiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgdmFyIGh0bWxfNzdmYjQzMjYyODdmNGY2NzhiZTVmZWVjOGIwZGQwMGUgPSAkKGA8ZGl2IGlkPSJodG1sXzc3ZmI0MzI2Mjg3ZjRmNjc4YmU1ZmVlYzhiMGRkMDBlIiBzdHlsZT0id2lkdGg6IDEwMC4wJTsgaGVpZ2h0OiAxMDAuMCU7Ij48Yj4wMzUwMjUwMDwvYj4gTElUVExFIFRFTk5FU1NFRSBSSVZFUiBBVCBFVE5BLCBOQy4gU2l0ZSB0eXBlOiBTVC4gTldJUzwvZGl2PmApWzBdOwogICAgICAgICAgICAgICAgcG9wdXBfOTdlOWFkYjViYjMxNDY2ZjhiODRiNGY4ODkzYjU3NjQuc2V0Q29udGVudChodG1sXzc3ZmI0MzI2Mjg3ZjRmNjc4YmU1ZmVlYzhiMGRkMDBlKTsKICAgICAgICAgICAgCgogICAgICAgICAgICBtYXJrZXJfM2Q1MTllZjA5YTFmNGRiM2E3YTQwMWQ0MWQ1YTFhMDYuYmluZFBvcHVwKHBvcHVwXzk3ZTlhZGI1YmIzMTQ2NmY4Yjg0YjRmODg5M2I1NzY0KQogICAgICAgICAgICA7CgogICAgICAgICAgICAKICAgICAgICAKICAgIAogICAgICAgIHZhciBtYXJrZXJfYWJkYmUzOGU5OWEzNDgyNWJlODcxYzUyODJiZWM2NDggPSBMLm1hcmtlcigKICAgICAgICAgICAgWzM1LjMzNjM4ODg5LCAtODMuNTI2OTQ0NF0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGljb246IG5ldyBMLkljb24uRGVmYXVsdCgpCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICkuYWRkVG8obWFwXzIxNmJkYmQ3MDVjYzRhYWM5ZDkzYzg3OTJmYzgyMTE4KTsKICAgICAgICAKICAgIAoKICAgICAgICAgICAgICAgIHZhciBpY29uXzkwYjJjM2E1MDhiOTQ2NzlhMDBjOTZjMmQ4Y2YxNTQ0ID0gTC5Bd2Vzb21lTWFya2Vycy5pY29uKHsKICAgICAgICAgICAgICAgICAgICBpY29uOiAnaW5mby1zaWduJywKICAgICAgICAgICAgICAgICAgICBpY29uQ29sb3I6ICd3aGl0ZScsCiAgICAgICAgICAgICAgICAgICAgbWFya2VyQ29sb3I6ICdibHVlJywKICAgICAgICAgICAgICAgICAgICBwcmVmaXg6ICdnbHlwaGljb24nLAogICAgICAgICAgICAgICAgICAgIGV4dHJhQ2xhc3NlczogJ2ZhLXJvdGF0ZS0wJwogICAgICAgICAgICAgICAgICAgIH0pOwogICAgICAgICAgICAgICAgbWFya2VyX2FiZGJlMzhlOTlhMzQ4MjViZTg3MWM1MjgyYmVjNjQ4LnNldEljb24oaWNvbl85MGIyYzNhNTA4Yjk0Njc5YTAwYzk2YzJkOGNmMTU0NCk7CiAgICAgICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciBwb3B1cF8yYjkzYWY1MGYzMTc0NDc2OGM5NWE2YTNjNDNlMmYwMCA9IEwucG9wdXAoe21heFdpZHRoOiAnMzAwJwogICAgICAgICAgICAKICAgICAgICAgICAgfSk7CgogICAgICAgICAgICAKICAgICAgICAgICAgICAgIHZhciBodG1sX2YyZjc4MDMyODUzMzRkNjU4Y2Q5OTA2MGY1OGE0NDQ4ID0gJChgPGRpdiBpZD0iaHRtbF9mMmY3ODAzMjg1MzM0ZDY1OGNkOTkwNjBmNThhNDQ0OCIgc3R5bGU9IndpZHRoOiAxMDAuMCU7IGhlaWdodDogMTAwLjAlOyI+PGI+MDM1MDMwMDA8L2I+IExJVFRMRSBURU5ORVNTRUUgUklWRVIgQVQgTkVFRE1PUkUsIE5DLiBTaXRlIHR5cGU6IFNULiBOV0lTPC9kaXY+YClbMF07CiAgICAgICAgICAgICAgICBwb3B1cF8yYjkzYWY1MGYzMTc0NDc2OGM5NWE2YTNjNDNlMmYwMC5zZXRDb250ZW50KGh0bWxfZjJmNzgwMzI4NTMzNGQ2NThjZDk5MDYwZjU4YTQ0NDgpOwogICAgICAgICAgICAKCiAgICAgICAgICAgIG1hcmtlcl9hYmRiZTM4ZTk5YTM0ODI1YmU4NzFjNTI4MmJlYzY0OC5iaW5kUG9wdXAocG9wdXBfMmI5M2FmNTBmMzE3NDQ3NjhjOTVhNmEzYzQzZTJmMDApCiAgICAgICAgICAgIDsKCiAgICAgICAgICAgIAogICAgICAgIAogICAgCiAgICAgICAgdmFyIG1hcmtlcl8wZDJmODA4YjRiNzg0OTY3YjZkZjQ3YWY0ODg1ZWExMSA9IEwubWFya2VyKAogICAgICAgICAgICBbMzUuMzgxNDgyMjksIC04My41NTM0OTY4XSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgaWNvbjogbmV3IEwuSWNvbi5EZWZhdWx0KCkKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKS5hZGRUbyhtYXBfMjE2YmRiZDcwNWNjNGFhYzlkOTNjODc5MmZjODIxMTgpOwogICAgICAgIAogICAgCgogICAgICAgICAgICAgICAgdmFyIGljb25fYzVlN2ZkMzNmNzM1NGZiMmFjZGUyNDc5MTUxMjMzNzYgPSBMLkF3ZXNvbWVNYXJrZXJzLmljb24oewogICAgICAgICAgICAgICAgICAgIGljb246ICdpbmZvLXNpZ24nLAogICAgICAgICAgICAgICAgICAgIGljb25Db2xvcjogJ3doaXRlJywKICAgICAgICAgICAgICAgICAgICBtYXJrZXJDb2xvcjogJ2JsdWUnLAogICAgICAgICAgICAgICAgICAgIHByZWZpeDogJ2dseXBoaWNvbicsCiAgICAgICAgICAgICAgICAgICAgZXh0cmFDbGFzc2VzOiAnZmEtcm90YXRlLTAnCiAgICAgICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgICAgICBtYXJrZXJfMGQyZjgwOGI0Yjc4NDk2N2I2ZGY0N2FmNDg4NWVhMTEuc2V0SWNvbihpY29uX2M1ZTdmZDMzZjczNTRmYjJhY2RlMjQ3OTE1MTIzMzc2KTsKICAgICAgICAgICAgCiAgICAKICAgICAgICAgICAgdmFyIHBvcHVwXzA2MzEyOTIwYzEzNDQ4Njk4OTVhOGIyMmE4MTRiMGI2ID0gTC5wb3B1cCh7bWF4V2lkdGg6ICczMDAnCiAgICAgICAgICAgIAogICAgICAgICAgICB9KTsKCiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgdmFyIGh0bWxfMDJiYjMzZTRkN2ZhNDI5ZWFiZDMzNDFjMWE1MTBjOWMgPSAkKGA8ZGl2IGlkPSJodG1sXzAyYmIzM2U0ZDdmYTQyOWVhYmQzMzQxYzFhNTEwYzljIiBzdHlsZT0id2lkdGg6IDEwMC4wJTsgaGVpZ2h0OiAxMDAuMCU7Ij48Yj4wMzUwMzUwMDwvYj4gTElUVExFIFRFTk5FU1NFRSBSIEFUIEFMTU9ORCwgTkMuIFNpdGUgdHlwZTogU1QuIE5XSVM8L2Rpdj5gKVswXTsKICAgICAgICAgICAgICAgIHBvcHVwXzA2MzEyOTIwYzEzNDQ4Njk4OTVhOGIyMmE4MTRiMGI2LnNldENvbnRlbnQoaHRtbF8wMmJiMzNlNGQ3ZmE0MjllYWJkMzM0MWMxYTUxMGM5Yyk7CiAgICAgICAgICAgIAoKICAgICAgICAgICAgbWFya2VyXzBkMmY4MDhiNGI3ODQ5NjdiNmRmNDdhZjQ4ODVlYTExLmJpbmRQb3B1cChwb3B1cF8wNjMxMjkyMGMxMzQ0ODY5ODk1YThiMjJhODE0YjBiNikKICAgICAgICAgICAgOwoKICAgICAgICAgICAgCiAgICAgICAgCiAgICAKICAgICAgICB2YXIgbWFya2VyXzhiN2E4Mjc3NDBjNzQ3YzNiY2JjMTliODNjNTVmYmQxID0gTC5tYXJrZXIoCiAgICAgICAgICAgIFszNS4xMjc1LCAtODMuNjE4NjExMV0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGljb246IG5ldyBMLkljb24uRGVmYXVsdCgpCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICkuYWRkVG8obWFwXzIxNmJkYmQ3MDVjYzRhYWM5ZDkzYzg3OTJmYzgyMTE4KTsKICAgICAgICAKICAgIAoKICAgICAgICAgICAgICAgIHZhciBpY29uX2U0NTYyYThkMmI1MzRlOTFiMzkxYTZlMzFhNjM5YzA5ID0gTC5Bd2Vzb21lTWFya2Vycy5pY29uKHsKICAgICAgICAgICAgICAgICAgICBpY29uOiAnaW5mby1zaWduJywKICAgICAgICAgICAgICAgICAgICBpY29uQ29sb3I6ICd3aGl0ZScsCiAgICAgICAgICAgICAgICAgICAgbWFya2VyQ29sb3I6ICdibHVlJywKICAgICAgICAgICAgICAgICAgICBwcmVmaXg6ICdnbHlwaGljb24nLAogICAgICAgICAgICAgICAgICAgIGV4dHJhQ2xhc3NlczogJ2ZhLXJvdGF0ZS0wJwogICAgICAgICAgICAgICAgICAgIH0pOwogICAgICAgICAgICAgICAgbWFya2VyXzhiN2E4Mjc3NDBjNzQ3YzNiY2JjMTliODNjNTVmYmQxLnNldEljb24oaWNvbl9lNDU2MmE4ZDJiNTM0ZTkxYjM5MWE2ZTMxYTYzOWMwOSk7CiAgICAgICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciBwb3B1cF82M2UxMjhmOTdiYzE0MmQwOTMyY2VhMGQxM2RkOWQ3MyA9IEwucG9wdXAoe21heFdpZHRoOiAnMzAwJwogICAgICAgICAgICAKICAgICAgICAgICAgfSk7CgogICAgICAgICAgICAKICAgICAgICAgICAgICAgIHZhciBodG1sXzczYmYyNTRkODBjNjQ4ODdhYzY2NjkwODk0NTcyYjRkID0gJChgPGRpdiBpZD0iaHRtbF83M2JmMjU0ZDgwYzY0ODg3YWM2NjY5MDg5NDU3MmI0ZCIgc3R5bGU9IndpZHRoOiAxMDAuMCU7IGhlaWdodDogMTAwLjAlOyI+PGI+MDM1MDQwMDA8L2I+IE5BTlRBSEFMQSBSSVZFUiBORUFSIFJBSU5CT1cgU1BSSU5HUywgTkMuIFNpdGUgdHlwZTogU1QuIE5XSVM8L2Rpdj5gKVswXTsKICAgICAgICAgICAgICAgIHBvcHVwXzYzZTEyOGY5N2JjMTQyZDA5MzJjZWEwZDEzZGQ5ZDczLnNldENvbnRlbnQoaHRtbF83M2JmMjU0ZDgwYzY0ODg3YWM2NjY5MDg5NDU3MmI0ZCk7CiAgICAgICAgICAgIAoKICAgICAgICAgICAgbWFya2VyXzhiN2E4Mjc3NDBjNzQ3YzNiY2JjMTliODNjNTVmYmQxLmJpbmRQb3B1cChwb3B1cF82M2UxMjhmOTdiYzE0MmQwOTMyY2VhMGQxM2RkOWQ3MykKICAgICAgICAgICAgOwoKICAgICAgICAgICAgCiAgICAgICAgCiAgICAKICAgICAgICB2YXIgbWFya2VyXzgxNDhhMjY4ZGZiNTQzNWI5M2NlMWI1NTE4Mjk4ZjRlID0gTC5tYXJrZXIoCiAgICAgICAgICAgIFszNS4yOTg3MDIzNywgLTgzLjY1NTcyNDA5XSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgaWNvbjogbmV3IEwuSWNvbi5EZWZhdWx0KCkKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKS5hZGRUbyhtYXBfMjE2YmRiZDcwNWNjNGFhYzlkOTNjODc5MmZjODIxMTgpOwogICAgICAgIAogICAgCgogICAgICAgICAgICAgICAgdmFyIGljb25fMzU5Mjg5YmQ0NGRlNDc1MWI3Yzc4NjliOGJhNzhjOWUgPSBMLkF3ZXNvbWVNYXJrZXJzLmljb24oewogICAgICAgICAgICAgICAgICAgIGljb246ICdpbmZvLXNpZ24nLAogICAgICAgICAgICAgICAgICAgIGljb25Db2xvcjogJ3doaXRlJywKICAgICAgICAgICAgICAgICAgICBtYXJrZXJDb2xvcjogJ2JsdWUnLAogICAgICAgICAgICAgICAgICAgIHByZWZpeDogJ2dseXBoaWNvbicsCiAgICAgICAgICAgICAgICAgICAgZXh0cmFDbGFzc2VzOiAnZmEtcm90YXRlLTAnCiAgICAgICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgICAgICBtYXJrZXJfODE0OGEyNjhkZmI1NDM1YjkzY2UxYjU1MTgyOThmNGUuc2V0SWNvbihpY29uXzM1OTI4OWJkNDRkZTQ3NTFiN2M3ODY5YjhiYTc4YzllKTsKICAgICAgICAgICAgCiAgICAKICAgICAgICAgICAgdmFyIHBvcHVwX2JlMzc2OTNhNDIyZTRmYjc5ODA4YjRhMTRhMjAxMDZiID0gTC5wb3B1cCh7bWF4V2lkdGg6ICczMDAnCiAgICAgICAgICAgIAogICAgICAgICAgICB9KTsKCiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgdmFyIGh0bWxfZDA4NmI0NTY4YTgyNGE5YTk1ZGJmZjkxMGU0MDM3MjEgPSAkKGA8ZGl2IGlkPSJodG1sX2QwODZiNDU2OGE4MjRhOWE5NWRiZmY5MTBlNDAzNzIxIiBzdHlsZT0id2lkdGg6IDEwMC4wJTsgaGVpZ2h0OiAxMDAuMCU7Ij48Yj4wMzUwNTUwMDwvYj4gTkFOVEFIQUxBIFJJVkVSIEFUIE5BTlRBSEFMQSwgTkMuIFNpdGUgdHlwZTogU1QuIE5XSVM8L2Rpdj5gKVswXTsKICAgICAgICAgICAgICAgIHBvcHVwX2JlMzc2OTNhNDIyZTRmYjc5ODA4YjRhMTRhMjAxMDZiLnNldENvbnRlbnQoaHRtbF9kMDg2YjQ1NjhhODI0YTlhOTVkYmZmOTEwZTQwMzcyMSk7CiAgICAgICAgICAgIAoKICAgICAgICAgICAgbWFya2VyXzgxNDhhMjY4ZGZiNTQzNWI5M2NlMWI1NTE4Mjk4ZjRlLmJpbmRQb3B1cChwb3B1cF9iZTM3NjkzYTQyMmU0ZmI3OTgwOGI0YTE0YTIwMTA2YikKICAgICAgICAgICAgOwoKICAgICAgICAgICAgCiAgICAgICAgCiAgICAKICAgICAgICB2YXIgbWFya2VyX2Q4YzExODA0Yzk0NzQxZDZiMGE1ZjcyMzNkYzQ0Zjc5ID0gTC5tYXJrZXIoCiAgICAgICAgICAgIFszNS4zMDUsIC04My42NTIyMjIyXSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgaWNvbjogbmV3IEwuSWNvbi5EZWZhdWx0KCkKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKS5hZGRUbyhtYXBfMjE2YmRiZDcwNWNjNGFhYzlkOTNjODc5MmZjODIxMTgpOwogICAgICAgIAogICAgCgogICAgICAgICAgICAgICAgdmFyIGljb25fNzY0NjZjNGYwYjg2NGYyZGJkNDU2ZDY1NjY4NDQwYmMgPSBMLkF3ZXNvbWVNYXJrZXJzLmljb24oewogICAgICAgICAgICAgICAgICAgIGljb246ICdpbmZvLXNpZ24nLAogICAgICAgICAgICAgICAgICAgIGljb25Db2xvcjogJ3doaXRlJywKICAgICAgICAgICAgICAgICAgICBtYXJrZXJDb2xvcjogJ2JsdWUnLAogICAgICAgICAgICAgICAgICAgIHByZWZpeDogJ2dseXBoaWNvbicsCiAgICAgICAgICAgICAgICAgICAgZXh0cmFDbGFzc2VzOiAnZmEtcm90YXRlLTAnCiAgICAgICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgICAgICBtYXJrZXJfZDhjMTE4MDRjOTQ3NDFkNmIwYTVmNzIzM2RjNDRmNzkuc2V0SWNvbihpY29uXzc2NDY2YzRmMGI4NjRmMmRiZDQ1NmQ2NTY2ODQ0MGJjKTsKICAgICAgICAgICAgCiAgICAKICAgICAgICAgICAgdmFyIHBvcHVwXzFlOTQzNThjZGEwNzRhNjk4MTM0ZDEwNmI5YTdkMDMzID0gTC5wb3B1cCh7bWF4V2lkdGg6ICczMDAnCiAgICAgICAgICAgIAogICAgICAgICAgICB9KTsKCiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgdmFyIGh0bWxfMjZkMjM5MmI3OWQ2NDI4MTk0N2E4M2JhOGYwNmQ1N2YgPSAkKGA8ZGl2IGlkPSJodG1sXzI2ZDIzOTJiNzlkNjQyODE5NDdhODNiYThmMDZkNTdmIiBzdHlsZT0id2lkdGg6IDEwMC4wJTsgaGVpZ2h0OiAxMDAuMCU7Ij48Yj4wMzUwNTU1MDwvYj4gTkFOVEFIQUxBIFJJVkVSIE5FQVIgSEVXSVRULCBOQy4gU2l0ZSB0eXBlOiBTVC4gTldJUzwvZGl2PmApWzBdOwogICAgICAgICAgICAgICAgcG9wdXBfMWU5NDM1OGNkYTA3NGE2OTgxMzRkMTA2YjlhN2QwMzMuc2V0Q29udGVudChodG1sXzI2ZDIzOTJiNzlkNjQyODE5NDdhODNiYThmMDZkNTdmKTsKICAgICAgICAgICAgCgogICAgICAgICAgICBtYXJrZXJfZDhjMTE4MDRjOTQ3NDFkNmIwYTVmNzIzM2RjNDRmNzkuYmluZFBvcHVwKHBvcHVwXzFlOTQzNThjZGEwNzRhNjk4MTM0ZDEwNmI5YTdkMDMzKQogICAgICAgICAgICA7CgogICAgICAgICAgICAKICAgICAgICAKICAgIAogICAgICAgIHZhciBtYXJrZXJfMWEwZDdmMTk1ZTY2NDNiODgzMzk4MjFmOWM4ZjhlNGEgPSBMLm1hcmtlcigKICAgICAgICAgICAgWzM1LjM3NTY0ODY4LCAtODMuNTY2Mjc1Ml0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGljb246IG5ldyBMLkljb24uRGVmYXVsdCgpCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICkuYWRkVG8obWFwXzIxNmJkYmQ3MDVjYzRhYWM5ZDkzYzg3OTJmYzgyMTE4KTsKICAgICAgICAKICAgIAoKICAgICAgICAgICAgICAgIHZhciBpY29uX2EzZWQ3ZjY3N2VhNTQ3MGY5YTc0MWI2ZjdjOGY5ODk3ID0gTC5Bd2Vzb21lTWFya2Vycy5pY29uKHsKICAgICAgICAgICAgICAgICAgICBpY29uOiAnaW5mby1zaWduJywKICAgICAgICAgICAgICAgICAgICBpY29uQ29sb3I6ICd3aGl0ZScsCiAgICAgICAgICAgICAgICAgICAgbWFya2VyQ29sb3I6ICdibHVlJywKICAgICAgICAgICAgICAgICAgICBwcmVmaXg6ICdnbHlwaGljb24nLAogICAgICAgICAgICAgICAgICAgIGV4dHJhQ2xhc3NlczogJ2ZhLXJvdGF0ZS0wJwogICAgICAgICAgICAgICAgICAgIH0pOwogICAgICAgICAgICAgICAgbWFya2VyXzFhMGQ3ZjE5NWU2NjQzYjg4MzM5ODIxZjljOGY4ZTRhLnNldEljb24oaWNvbl9hM2VkN2Y2NzdlYTU0NzBmOWE3NDFiNmY3YzhmOTg5Nyk7CiAgICAgICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciBwb3B1cF85Mjk4NGQyYTY5MDc0MzEzOTBmMDEzOTIwNDFjNGU4ZCA9IEwucG9wdXAoe21heFdpZHRoOiAnMzAwJwogICAgICAgICAgICAKICAgICAgICAgICAgfSk7CgogICAgICAgICAgICAKICAgICAgICAgICAgICAgIHZhciBodG1sX2U0ODg1NTJjZjFlYTQyN2RhYmVkNjEyNWQ3MzQ0N2E1ID0gJChgPGRpdiBpZD0iaHRtbF9lNDg4NTUyY2YxZWE0MjdkYWJlZDYxMjVkNzM0NDdhNSIgc3R5bGU9IndpZHRoOiAxMDAuMCU7IGhlaWdodDogMTAwLjAlOyI+PGI+MDM1MDY1MDA8L2I+IE5BTlRBSEFMQSBSSVZFUiBBVCBBTE1PTkQsIE5DLiBTaXRlIHR5cGU6IFNULiBOV0lTPC9kaXY+YClbMF07CiAgICAgICAgICAgICAgICBwb3B1cF85Mjk4NGQyYTY5MDc0MzEzOTBmMDEzOTIwNDFjNGU4ZC5zZXRDb250ZW50KGh0bWxfZTQ4ODU1MmNmMWVhNDI3ZGFiZWQ2MTI1ZDczNDQ3YTUpOwogICAgICAgICAgICAKCiAgICAgICAgICAgIG1hcmtlcl8xYTBkN2YxOTVlNjY0M2I4ODMzOTgyMWY5YzhmOGU0YS5iaW5kUG9wdXAocG9wdXBfOTI5ODRkMmE2OTA3NDMxMzkwZjAxMzkyMDQxYzRlOGQpCiAgICAgICAgICAgIDsKCiAgICAgICAgICAgIAogICAgICAgIAogICAgCiAgICAgICAgdmFyIG1hcmtlcl9kNDhjZGQ5NWU5Mzg0MDdmYTMxOWUwNWFmOWQ4M2MwZCA9IEwubWFya2VyKAogICAgICAgICAgICBbMzUuNDA4NDI2NywgLTgzLjU1NzEwODRdLAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBpY29uOiBuZXcgTC5JY29uLkRlZmF1bHQoKQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICApLmFkZFRvKG1hcF8yMTZiZGJkNzA1Y2M0YWFjOWQ5M2M4NzkyZmM4MjExOCk7CiAgICAgICAgCiAgICAKCiAgICAgICAgICAgICAgICB2YXIgaWNvbl9mMTU1ZmNjMGE3YzQ0Y2IwOTA0OTk1Y2UyMTdlZWE1MiA9IEwuQXdlc29tZU1hcmtlcnMuaWNvbih7CiAgICAgICAgICAgICAgICAgICAgaWNvbjogJ2luZm8tc2lnbicsCiAgICAgICAgICAgICAgICAgICAgaWNvbkNvbG9yOiAnd2hpdGUnLAogICAgICAgICAgICAgICAgICAgIG1hcmtlckNvbG9yOiAnYmx1ZScsCiAgICAgICAgICAgICAgICAgICAgcHJlZml4OiAnZ2x5cGhpY29uJywKICAgICAgICAgICAgICAgICAgICBleHRyYUNsYXNzZXM6ICdmYS1yb3RhdGUtMCcKICAgICAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIG1hcmtlcl9kNDhjZGQ5NWU5Mzg0MDdmYTMxOWUwNWFmOWQ4M2MwZC5zZXRJY29uKGljb25fZjE1NWZjYzBhN2M0NGNiMDkwNDk5NWNlMjE3ZWVhNTIpOwogICAgICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgcG9wdXBfOWUzYWVkMTdhOGE3NGY1OGFhZTA4NjU5YTJmODNmNDAgPSBMLnBvcHVwKHttYXhXaWR0aDogJzMwMCcKICAgICAgICAgICAgCiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgCiAgICAgICAgICAgICAgICB2YXIgaHRtbF8zZDQyMTFkZjgwODM0YzQ1YmE5YTc2M2E1ZjIzM2Q0NSA9ICQoYDxkaXYgaWQ9Imh0bWxfM2Q0MjExZGY4MDgzNGM0NWJhOWE3NjNhNWYyMzNkNDUiIHN0eWxlPSJ3aWR0aDogMTAwLjAlOyBoZWlnaHQ6IDEwMC4wJTsiPjxiPjAzNTA3MDAwPC9iPiBMSVRUTEUgVEVOTkVTU0VFIFJJVkVSIEFUIEpVRFNPTiwgTkMuIFNpdGUgdHlwZTogU1QuIE5XSVM8L2Rpdj5gKVswXTsKICAgICAgICAgICAgICAgIHBvcHVwXzllM2FlZDE3YThhNzRmNThhYWUwODY1OWEyZjgzZjQwLnNldENvbnRlbnQoaHRtbF8zZDQyMTFkZjgwODM0YzQ1YmE5YTc2M2E1ZjIzM2Q0NSk7CiAgICAgICAgICAgIAoKICAgICAgICAgICAgbWFya2VyX2Q0OGNkZDk1ZTkzODQwN2ZhMzE5ZTA1YWY5ZDgzYzBkLmJpbmRQb3B1cChwb3B1cF85ZTNhZWQxN2E4YTc0ZjU4YWFlMDg2NTlhMmY4M2Y0MCkKICAgICAgICAgICAgOwoKICAgICAgICAgICAgCiAgICAgICAgCiAgICAKICAgICAgICB2YXIgbWFya2VyXzQ0YjM1YTQzMmY5YjQ5Y2ZiNDcyYWQ4YTM0OTRiZjJiID0gTC5tYXJrZXIoCiAgICAgICAgICAgIFszNS40ODQ4MTcwNSwgLTgzLjUwNDA1MTVdLAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBpY29uOiBuZXcgTC5JY29uLkRlZmF1bHQoKQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICApLmFkZFRvKG1hcF8yMTZiZGJkNzA1Y2M0YWFjOWQ5M2M4NzkyZmM4MjExOCk7CiAgICAgICAgCiAgICAKCiAgICAgICAgICAgICAgICB2YXIgaWNvbl9lY2RkNmRmY2UwYzY0ZTdlYjEzZWQ0NDFkMzlmZDQyYyA9IEwuQXdlc29tZU1hcmtlcnMuaWNvbih7CiAgICAgICAgICAgICAgICAgICAgaWNvbjogJ2luZm8tc2lnbicsCiAgICAgICAgICAgICAgICAgICAgaWNvbkNvbG9yOiAnd2hpdGUnLAogICAgICAgICAgICAgICAgICAgIG1hcmtlckNvbG9yOiAnYmx1ZScsCiAgICAgICAgICAgICAgICAgICAgcHJlZml4OiAnZ2x5cGhpY29uJywKICAgICAgICAgICAgICAgICAgICBleHRyYUNsYXNzZXM6ICdmYS1yb3RhdGUtMCcKICAgICAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIG1hcmtlcl80NGIzNWE0MzJmOWI0OWNmYjQ3MmFkOGEzNDk0YmYyYi5zZXRJY29uKGljb25fZWNkZDZkZmNlMGM2NGU3ZWIxM2VkNDQxZDM5ZmQ0MmMpOwogICAgICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgcG9wdXBfNGU0NTM4YTBkZDgwNGU5NWI3MzU3YmMyZTI4ODJmNmYgPSBMLnBvcHVwKHttYXhXaWR0aDogJzMwMCcKICAgICAgICAgICAgCiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgCiAgICAgICAgICAgICAgICB2YXIgaHRtbF85MGUxZmVhNGZkNzM0ZjBiYjdiYzc5NjRmMmU1NGQwOSA9ICQoYDxkaXYgaWQ9Imh0bWxfOTBlMWZlYTRmZDczNGYwYmI3YmM3OTY0ZjJlNTRkMDkiIHN0eWxlPSJ3aWR0aDogMTAwLjAlOyBoZWlnaHQ6IDEwMC4wJTsiPjxiPjAzNTEzNTAwPC9iPiBOT0xBTkQgQ1JFRUsgTkVBUiBCUllTT04gQ0lUWSwgTkMuIFNpdGUgdHlwZTogU1QuIE5XSVM8L2Rpdj5gKVswXTsKICAgICAgICAgICAgICAgIHBvcHVwXzRlNDUzOGEwZGQ4MDRlOTViNzM1N2JjMmUyODgyZjZmLnNldENvbnRlbnQoaHRtbF85MGUxZmVhNGZkNzM0ZjBiYjdiYzc5NjRmMmU1NGQwOSk7CiAgICAgICAgICAgIAoKICAgICAgICAgICAgbWFya2VyXzQ0YjM1YTQzMmY5YjQ5Y2ZiNDcyYWQ4YTM0OTRiZjJiLmJpbmRQb3B1cChwb3B1cF80ZTQ1MzhhMGRkODA0ZTk1YjczNTdiYzJlMjg4MmY2ZikKICAgICAgICAgICAgOwoKICAgICAgICAgICAgCiAgICAgICAgCiAgICAKICAgICAgICB2YXIgbWFya2VyX2RlNGViZDE5ZTcwMzRkZTU5Y2NlYWU4NDNiZmFlMWY3ID0gTC5tYXJrZXIoCiAgICAgICAgICAgIFszNS40NzczMTIyLCAtODMuNzE2MDA0N10sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGljb246IG5ldyBMLkljb24uRGVmYXVsdCgpCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICkuYWRkVG8obWFwXzIxNmJkYmQ3MDVjYzRhYWM5ZDkzYzg3OTJmYzgyMTE4KTsKICAgICAgICAKICAgIAoKICAgICAgICAgICAgICAgIHZhciBpY29uXzU5NDIwNTgyMzI4MjQyZTI4YjUwZGYzMDVhMTQ4ZTc2ID0gTC5Bd2Vzb21lTWFya2Vycy5pY29uKHsKICAgICAgICAgICAgICAgICAgICBpY29uOiAnaW5mby1zaWduJywKICAgICAgICAgICAgICAgICAgICBpY29uQ29sb3I6ICd3aGl0ZScsCiAgICAgICAgICAgICAgICAgICAgbWFya2VyQ29sb3I6ICdibHVlJywKICAgICAgICAgICAgICAgICAgICBwcmVmaXg6ICdnbHlwaGljb24nLAogICAgICAgICAgICAgICAgICAgIGV4dHJhQ2xhc3NlczogJ2ZhLXJvdGF0ZS0wJwogICAgICAgICAgICAgICAgICAgIH0pOwogICAgICAgICAgICAgICAgbWFya2VyX2RlNGViZDE5ZTcwMzRkZTU5Y2NlYWU4NDNiZmFlMWY3LnNldEljb24oaWNvbl81OTQyMDU4MjMyODI0MmUyOGI1MGRmMzA1YTE0OGU3Nik7CiAgICAgICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciBwb3B1cF9mYmYxNDg4MDY5ZDA0ODBmOGQ4YzVjMWJmZDBjMTg2OSA9IEwucG9wdXAoe21heFdpZHRoOiAnMzAwJwogICAgICAgICAgICAKICAgICAgICAgICAgfSk7CgogICAgICAgICAgICAKICAgICAgICAgICAgICAgIHZhciBodG1sXzNiNGE5MDA3NGQyYTQwYmI4ODAyNDhjMDhkYjQyYzY2ID0gJChgPGRpdiBpZD0iaHRtbF8zYjRhOTAwNzRkMmE0MGJiODgwMjQ4YzA4ZGI0MmM2NiIgc3R5bGU9IndpZHRoOiAxMDAuMCU7IGhlaWdodDogMTAwLjAlOyI+PGI+MDM1MTQwMDA8L2I+IEhBWkVMIENSRUVLIEFUIFBST0NUT1IsIE5DLiBTaXRlIHR5cGU6IFNULiBOV0lTPC9kaXY+YClbMF07CiAgICAgICAgICAgICAgICBwb3B1cF9mYmYxNDg4MDY5ZDA0ODBmOGQ4YzVjMWJmZDBjMTg2OS5zZXRDb250ZW50KGh0bWxfM2I0YTkwMDc0ZDJhNDBiYjg4MDI0OGMwOGRiNDJjNjYpOwogICAgICAgICAgICAKCiAgICAgICAgICAgIG1hcmtlcl9kZTRlYmQxOWU3MDM0ZGU1OWNjZWFlODQzYmZhZTFmNy5iaW5kUG9wdXAocG9wdXBfZmJmMTQ4ODA2OWQwNDgwZjhkOGM1YzFiZmQwYzE4NjkpCiAgICAgICAgICAgIDsKCiAgICAgICAgICAgIAogICAgICAgIAogICAgCiAgICAgICAgdmFyIG1hcmtlcl9lN2E0NWZiMjgzYzc0N2ZmODY5ZjhkNTc1ZDk2ZDNmNSA9IEwubWFya2VyKAogICAgICAgICAgICBbMzUuMDcwMjc3NzgsIC04My4yMTY2NjY3XSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgaWNvbjogbmV3IEwuSWNvbi5EZWZhdWx0KCkKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKS5hZGRUbyhtYXBfMjE2YmRiZDcwNWNjNGFhYzlkOTNjODc5MmZjODIxMTgpOwogICAgICAgIAogICAgCgogICAgICAgICAgICAgICAgdmFyIGljb25fNWNmYzUzYzJhODlkNDI5NGEwZGIzYmFiMzQxMTE0M2QgPSBMLkF3ZXNvbWVNYXJrZXJzLmljb24oewogICAgICAgICAgICAgICAgICAgIGljb246ICdpbmZvLXNpZ24nLAogICAgICAgICAgICAgICAgICAgIGljb25Db2xvcjogJ3doaXRlJywKICAgICAgICAgICAgICAgICAgICBtYXJrZXJDb2xvcjogJ2dyYXknLAogICAgICAgICAgICAgICAgICAgIHByZWZpeDogJ2dseXBoaWNvbicsCiAgICAgICAgICAgICAgICAgICAgZXh0cmFDbGFzc2VzOiAnZmEtcm90YXRlLTAnCiAgICAgICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgICAgICBtYXJrZXJfZTdhNDVmYjI4M2M3NDdmZjg2OWY4ZDU3NWQ5NmQzZjUuc2V0SWNvbihpY29uXzVjZmM1M2MyYTg5ZDQyOTRhMGRiM2JhYjM0MTExNDNkKTsKICAgICAgICAgICAgCiAgICAKICAgICAgICAgICAgdmFyIHBvcHVwXzI3MmYyOWNkMjQ5YzRhNTZhNzgwMjJmY2YzNTcxMTU3ID0gTC5wb3B1cCh7bWF4V2lkdGg6ICczMDAnCiAgICAgICAgICAgIAogICAgICAgICAgICB9KTsKCiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgdmFyIGh0bWxfNWMzZGY5NjcwMGIzNDYwNTliMGExNGNjNjEwNTZiZjAgPSAkKGA8ZGl2IGlkPSJodG1sXzVjM2RmOTY3MDBiMzQ2MDU5YjBhMTRjYzYxMDU2YmYwIiBzdHlsZT0id2lkdGg6IDEwMC4wJTsgaGVpZ2h0OiAxMDAuMCU7Ij48Yj4zNTA0MTMwODMxMzAwNDU8L2I+IFJBSU5HQUdFIEFUIEhJR0hMQU5EUywgTkMuIFNpdGUgdHlwZTogQVQuIE5XSVM8L2Rpdj5gKVswXTsKICAgICAgICAgICAgICAgIHBvcHVwXzI3MmYyOWNkMjQ5YzRhNTZhNzgwMjJmY2YzNTcxMTU3LnNldENvbnRlbnQoaHRtbF81YzNkZjk2NzAwYjM0NjA1OWIwYTE0Y2M2MTA1NmJmMCk7CiAgICAgICAgICAgIAoKICAgICAgICAgICAgbWFya2VyX2U3YTQ1ZmIyODNjNzQ3ZmY4NjlmOGQ1NzVkOTZkM2Y1LmJpbmRQb3B1cChwb3B1cF8yNzJmMjljZDI0OWM0YTU2YTc4MDIyZmNmMzU3MTE1NykKICAgICAgICAgICAgOwoKICAgICAgICAgICAgCiAgICAgICAgCiAgICAKICAgICAgICB2YXIgbWFya2VyXzE3Y2FmY2Q0YTg0NzRhZGE4MDRlZGJlOWY2Zjc2OWJhID0gTC5tYXJrZXIoCiAgICAgICAgICAgIFszNS4wOTkxNjY2NywgLTgzLjU0OTQ0NDRdLAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBpY29uOiBuZXcgTC5JY29uLkRlZmF1bHQoKQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICApLmFkZFRvKG1hcF8yMTZiZGJkNzA1Y2M0YWFjOWQ5M2M4NzkyZmM4MjExOCk7CiAgICAgICAgCiAgICAKCiAgICAgICAgICAgICAgICB2YXIgaWNvbl81Y2U1YzBlOThiMzI0ZmQxYjYyMDk2OTE2ZTgzYjFkYSA9IEwuQXdlc29tZU1hcmtlcnMuaWNvbih7CiAgICAgICAgICAgICAgICAgICAgaWNvbjogJ2luZm8tc2lnbicsCiAgICAgICAgICAgICAgICAgICAgaWNvbkNvbG9yOiAnd2hpdGUnLAogICAgICAgICAgICAgICAgICAgIG1hcmtlckNvbG9yOiAnZ3JheScsCiAgICAgICAgICAgICAgICAgICAgcHJlZml4OiAnZ2x5cGhpY29uJywKICAgICAgICAgICAgICAgICAgICBleHRyYUNsYXNzZXM6ICdmYS1yb3RhdGUtMCcKICAgICAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIG1hcmtlcl8xN2NhZmNkNGE4NDc0YWRhODA0ZWRiZTlmNmY3NjliYS5zZXRJY29uKGljb25fNWNlNWMwZTk4YjMyNGZkMWI2MjA5NjkxNmU4M2IxZGEpOwogICAgICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgcG9wdXBfN2MxOTQ1MmQ0MjdlNDE3N2JkMDdjNjA4YTc5NDAyYjEgPSBMLnBvcHVwKHttYXhXaWR0aDogJzMwMCcKICAgICAgICAgICAgCiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgCiAgICAgICAgICAgICAgICB2YXIgaHRtbF85MzRjOGRmMjE5M2I0OGJjOGY5YTQwZDg2MGExMzIzMiA9ICQoYDxkaXYgaWQ9Imh0bWxfOTM0YzhkZjIxOTNiNDhiYzhmOWE0MGQ4NjBhMTMyMzIiIHN0eWxlPSJ3aWR0aDogMTAwLjAlOyBoZWlnaHQ6IDEwMC4wJTsiPjxiPjM1MDU1NzA4MzMyNTg0NTwvYj4gUkFJTkdBR0UgQVQgV0FMTEFDRSBHQVAuIFNpdGUgdHlwZTogQVQuIE5XSVM8L2Rpdj5gKVswXTsKICAgICAgICAgICAgICAgIHBvcHVwXzdjMTk0NTJkNDI3ZTQxNzdiZDA3YzYwOGE3OTQwMmIxLnNldENvbnRlbnQoaHRtbF85MzRjOGRmMjE5M2I0OGJjOGY5YTQwZDg2MGExMzIzMik7CiAgICAgICAgICAgIAoKICAgICAgICAgICAgbWFya2VyXzE3Y2FmY2Q0YTg0NzRhZGE4MDRlZGJlOWY2Zjc2OWJhLmJpbmRQb3B1cChwb3B1cF83YzE5NDUyZDQyN2U0MTc3YmQwN2M2MDhhNzk0MDJiMSkKICAgICAgICAgICAgOwoKICAgICAgICAgICAgCiAgICAgICAgCiAgICAKICAgICAgICB2YXIgbWFya2VyXzg3ZWZjNTVhOTY4NjQ3ZjViYjY3Njk0ZDJhMjY5MGIxID0gTC5tYXJrZXIoCiAgICAgICAgICAgIFszNS4yLCAtODMuMzgwNTU1Nl0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGljb246IG5ldyBMLkljb24uRGVmYXVsdCgpCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICkuYWRkVG8obWFwXzIxNmJkYmQ3MDVjYzRhYWM5ZDkzYzg3OTJmYzgyMTE4KTsKICAgICAgICAKICAgIAoKICAgICAgICAgICAgICAgIHZhciBpY29uX2M4YzllODMyOWMwYTRhM2M4YzA5OWFmOTgxYTkyNDU3ID0gTC5Bd2Vzb21lTWFya2Vycy5pY29uKHsKICAgICAgICAgICAgICAgICAgICBpY29uOiAnaW5mby1zaWduJywKICAgICAgICAgICAgICAgICAgICBpY29uQ29sb3I6ICd3aGl0ZScsCiAgICAgICAgICAgICAgICAgICAgbWFya2VyQ29sb3I6ICdncmF5JywKICAgICAgICAgICAgICAgICAgICBwcmVmaXg6ICdnbHlwaGljb24nLAogICAgICAgICAgICAgICAgICAgIGV4dHJhQ2xhc3NlczogJ2ZhLXJvdGF0ZS0wJwogICAgICAgICAgICAgICAgICAgIH0pOwogICAgICAgICAgICAgICAgbWFya2VyXzg3ZWZjNTVhOTY4NjQ3ZjViYjY3Njk0ZDJhMjY5MGIxLnNldEljb24oaWNvbl9jOGM5ZTgzMjljMGE0YTNjOGMwOTlhZjk4MWE5MjQ1Nyk7CiAgICAgICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciBwb3B1cF8zYjU1Yzk1N2Y1YjM0Y2MxYmZjNWNiMTFkMzczMjhkOCA9IEwucG9wdXAoe21heFdpZHRoOiAnMzAwJwogICAgICAgICAgICAKICAgICAgICAgICAgfSk7CgogICAgICAgICAgICAKICAgICAgICAgICAgICAgIHZhciBodG1sXzViMGU4NDU0NTkzYTQ2ZmFiOTM1NzM0NmNkMGY4NzlkID0gJChgPGRpdiBpZD0iaHRtbF81YjBlODQ1NDU5M2E0NmZhYjkzNTczNDZjZDBmODc5ZCIgc3R5bGU9IndpZHRoOiAxMDAuMCU7IGhlaWdodDogMTAwLjAlOyI+PGI+MzUxMjA1MDgzMjEzNTQ1PC9iPiBSQUlOR0FHRSBBVCBGUkFOS0xJTiwgTkMuIFNpdGUgdHlwZTogQVQuIE5XSVM8L2Rpdj5gKVswXTsKICAgICAgICAgICAgICAgIHBvcHVwXzNiNTVjOTU3ZjViMzRjYzFiZmM1Y2IxMWQzNzMyOGQ4LnNldENvbnRlbnQoaHRtbF81YjBlODQ1NDU5M2E0NmZhYjkzNTczNDZjZDBmODc5ZCk7CiAgICAgICAgICAgIAoKICAgICAgICAgICAgbWFya2VyXzg3ZWZjNTVhOTY4NjQ3ZjViYjY3Njk0ZDJhMjY5MGIxLmJpbmRQb3B1cChwb3B1cF8zYjU1Yzk1N2Y1YjM0Y2MxYmZjNWNiMTFkMzczMjhkOCkKICAgICAgICAgICAgOwoKICAgICAgICAgICAgCiAgICAgICAgCiAgICAKICAgICAgICAgICAgICAgIAoKICAgICAgICAgICAgICAgIG1hcF8yMTZiZGJkNzA1Y2M0YWFjOWQ5M2M4NzkyZmM4MjExOC5maXRCb3VuZHMoCiAgICAgICAgICAgICAgICAgICAgW1szNS4wNzAyNzc3OCwgLTgzLjcxNjAwNDddLCBbMzUuNDg0ODE3MDUsIC04My4yMTY2NjY3XV0sCiAgICAgICAgICAgICAgICAgICAge30KICAgICAgICAgICAgICAgICAgICApOwogICAgICAgICAgICAKPC9zY3JpcHQ+" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
+</div>
+<p>The previous use case notebook from Yifan illustrated how to pull the time series data from nwis using ulmo, by specifying the site code and parameter code.</p>
+</div>
+</div>
+<div class="section" id="How-does-this-NWIS-view-compare-to-what-we-can-find-on-that-HUC8-using-the-ModelMyWatershed-App?">
+<h1>How does this NWIS view compare to what we can find on that HUC8 using the <strong>ModelMyWatershed App?</strong><a class="headerlink" href="#How-does-this-NWIS-view-compare-to-what-we-can-find-on-that-HUC8-using-the-ModelMyWatershed-App?" title="Permalink to this headline">¶</a></h1>
+<p>Let’s go there and do some querying and browsing. <a class="reference external" href="https://modelmywatershed.org">https://modelmywatershed.org</a>. We can navigate to the specific HUC8, or upload a GeoJSON spatial file for the HUC8, generated in advance.</p>
+<p>Also, I wonder what data are available near the <strong>Coweeta</strong> LTER station …</p>
+</div>
+<div class="section" id="Use-ulmo.cuahsi.wof-to-pull-time-series-data-from-a-nearby-site-on-CUAHSI-HIS">
+<h1>Use <code class="docutils literal notranslate"><span class="pre">ulmo.cuahsi.wof</span></code> to pull time series data from a nearby site on CUAHSI HIS<a class="headerlink" href="#Use-ulmo.cuahsi.wof-to-pull-time-series-data-from-a-nearby-site-on-CUAHSI-HIS" title="Permalink to this headline">¶</a></h1>
+<p>For examples of CUAHSI HIS catalog “spatial querying” (based on a bounding box) analogous to the NWIS spatial querying we’ve presented, go to <a class="reference external" href="https://www.hydroshare.org/resource/c184323fc95c4c3e85c663f519b47084/">this CUAHSI resource on HydroShare</a>. It includes a Jupyter notebook and a presentation on the CUAHI HIS Central API.</p>
+<div class="section" id="Explore-relevant-sites-on-HydroClient">
+<h2>Explore relevant sites on <strong>HydroClient</strong><a class="headerlink" href="#Explore-relevant-sites-on-HydroClient" title="Permalink to this headline">¶</a></h2>
+<p>I want to find a site “nearby”, even if it’s not in that HUC8, that meets these criteria: - Has dissolved oxygen - Is from a source other than the big federal agencies</p>
+<p>To do this, let’s go to HydroClient. <a class="reference external" href="http://data.cuahsi.org">http://data.cuahsi.org</a>. There, we can also visualize the time series using the HydroShare TimeSeries Viewer App, or download the data.</p>
+</div>
+<div class="section" id="Back-to-the-code,-to-pull-in-the-site’s-time-series-data">
+<h2>Back to the code, to pull in the site’s time series data<a class="headerlink" href="#Back-to-the-code,-to-pull-in-the-site’s-time-series-data" title="Permalink to this headline">¶</a></h2>
+<p>I got <code class="docutils literal notranslate"><span class="pre">networkcd</span></code>, <code class="docutils literal notranslate"><span class="pre">sitecd</span></code> and <code class="docutils literal notranslate"><span class="pre">varcd</span></code> from the HydroClient results.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># http://hiscentral.cuahsi.org/pub_network.aspx?n=5639</span>
+<span class="n">networkcd</span> <span class="o">=</span> <span class="s1">&#39;ORSANCO_HAB&#39;</span>
+
+<span class="c1"># The &quot;WSDL URL&quot; (CUAHSI WaterOneFlow web service endpoint)</span>
+<span class="n">wsdlurl</span> <span class="o">=</span> <span class="s2">&quot;http://hydroportal.cuahsi.org/</span><span class="si">{}</span><span class="s2">/cuahsi_1_1.asmx?WSDL&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">networkcd</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">sitecd</span> <span class="o">=</span> <span class="s1">&#39;RCByrd&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="But-first-let’s-explore-site-information-(metadata,-data-availability)">
+<h2>But first let’s explore site information (metadata, data availability)<a class="headerlink" href="#But-first-let’s-explore-site-information-(metadata,-data-availability)" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">siteinfo</span> <span class="o">=</span> <span class="n">ulmo</span><span class="o">.</span><span class="n">cuahsi</span><span class="o">.</span><span class="n">wof</span><span class="o">.</span><span class="n">get_site_info</span><span class="p">(</span><span class="n">wsdlurl</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">:</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">networkcd</span><span class="p">,</span> <span class="n">sitecd</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">siteinfo</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+dict_keys([&#39;code&#39;, &#39;name&#39;, &#39;network&#39;, &#39;location&#39;, &#39;series&#39;])
+</pre></div></div>
+</div>
+<p>The response is in <strong>CUAHSI WaterML 1.1 format</strong>, transformed by <code class="docutils literal notranslate"><span class="pre">ulmo</span></code> from the original XML into a Python dictionary for easier access.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">siteinfo</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;code&#39;: &#39;RCByrd&#39;,
+ &#39;name&#39;: &#39;Robert C. Byrd Locks and Dam&#39;,
+ &#39;network&#39;: &#39;ORSANCO_HAB&#39;,
+ &#39;location&#39;: {&#39;latitude&#39;: &#39;38.685029&#39;,
+  &#39;longitude&#39;: &#39;-82.183691&#39;,
+  &#39;srs&#39;: &#39;EPSG:4269&#39;},
+ &#39;series&#39;: {&#39;ORSANCO_HAB:Bat_30&#39;: {&#39;variable&#39;: {&#39;value_type&#39;: &#39;Field Observation&#39;,
+    &#39;data_type&#39;: &#39;Regular Sampling&#39;,
+    &#39;general_category&#39;: &#39;Water Quality&#39;,
+    &#39;sample_medium&#39;: &#39;Surface water&#39;,
+    &#39;no_data_value&#39;: &#39;-9999&#39;,
+    &#39;speciation&#39;: &#39;Not Applicable&#39;,
+    &#39;code&#39;: &#39;Bat_30&#39;,
+    &#39;id&#39;: &#39;59&#39;,
+    &#39;name&#39;: &#39;Battery voltage&#39;,
+    &#39;vocabulary&#39;: &#39;ORSANCO_HAB&#39;,
+    &#39;time&#39;: {&#39;is_regular&#39;: True,
+     &#39;interval&#39;: &#39;30&#39;,
+     &#39;units&#39;: {&#39;abbreviation&#39;: &#39;min&#39;,
+      &#39;code&#39;: &#39;102&#39;,
+      &#39;name&#39;: &#39;minute&#39;,
+      &#39;type&#39;: &#39;Time&#39;}},
+    &#39;units&#39;: {&#39;abbreviation&#39;: &#39;V&#39;,
+     &#39;code&#39;: &#39;168&#39;,
+     &#39;name&#39;: &#39;volts&#39;,
+     &#39;type&#39;: &#39;Potential Difference&#39;}},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}method&#39;: {&#39;method_id&#39;: &#39;81&#39;,
+    &#39;method_description&#39;: &#39;Data was collected in-situ at regular intervals by datasonde&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}source&#39;: {&#39;source_id&#39;: &#39;53&#39;,
+    &#39;organization&#39;: &#39;Marshall College &#39;,
+    &#39;source_description&#39;: &#39;Marshall College&#39;,
+    &#39;citation&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}quality_control_level&#39;: {&#39;quality_control_level_id&#39;: &#39;-9999&#39;,
+    &#39;quality_control_level_code&#39;: &#39;-9999&#39;,
+    &#39;definition&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}variable_time_interval&#39;: {&#39;variable_time_interval_type&#39;: &#39;TimeIntervalType&#39;,
+    &#39;begin_date_time&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time&#39;: &#39;2017-09-05T12:00:00&#39;,
+    &#39;begin_date_time_utc&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time_utc&#39;: &#39;2017-09-05T12:00:00&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}value_count&#39;: {&#39;value_count&#39;: &#39;1927&#39;}},
+  &#39;ORSANCO_HAB:Temp_30&#39;: {&#39;variable&#39;: {&#39;value_type&#39;: &#39;Field Observation&#39;,
+    &#39;data_type&#39;: &#39;Regular Sampling&#39;,
+    &#39;general_category&#39;: &#39;Water Quality&#39;,
+    &#39;sample_medium&#39;: &#39;Surface water&#39;,
+    &#39;no_data_value&#39;: &#39;-9999&#39;,
+    &#39;speciation&#39;: &#39;Not Applicable&#39;,
+    &#39;code&#39;: &#39;Temp_30&#39;,
+    &#39;id&#39;: &#39;60&#39;,
+    &#39;name&#39;: &#39;Temperature, sensor&#39;,
+    &#39;vocabulary&#39;: &#39;ORSANCO_HAB&#39;,
+    &#39;time&#39;: {&#39;is_regular&#39;: True,
+     &#39;interval&#39;: &#39;30&#39;,
+     &#39;units&#39;: {&#39;abbreviation&#39;: &#39;min&#39;,
+      &#39;code&#39;: &#39;102&#39;,
+      &#39;name&#39;: &#39;minute&#39;,
+      &#39;type&#39;: &#39;Time&#39;}},
+    &#39;units&#39;: {&#39;abbreviation&#39;: &#39;degC&#39;,
+     &#39;code&#39;: &#39;96&#39;,
+     &#39;name&#39;: &#39;degree celsius&#39;,
+     &#39;type&#39;: &#39;Temperature&#39;}},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}method&#39;: {&#39;method_id&#39;: &#39;81&#39;,
+    &#39;method_description&#39;: &#39;Data was collected in-situ at regular intervals by datasonde&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}source&#39;: {&#39;source_id&#39;: &#39;53&#39;,
+    &#39;organization&#39;: &#39;Marshall College &#39;,
+    &#39;source_description&#39;: &#39;Marshall College&#39;,
+    &#39;citation&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}quality_control_level&#39;: {&#39;quality_control_level_id&#39;: &#39;-9999&#39;,
+    &#39;quality_control_level_code&#39;: &#39;-9999&#39;,
+    &#39;definition&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}variable_time_interval&#39;: {&#39;variable_time_interval_type&#39;: &#39;TimeIntervalType&#39;,
+    &#39;begin_date_time&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time&#39;: &#39;2017-09-05T12:00:00&#39;,
+    &#39;begin_date_time_utc&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time_utc&#39;: &#39;2017-09-05T12:00:00&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}value_count&#39;: {&#39;value_count&#39;: &#39;1927&#39;}},
+  &#39;ORSANCO_HAB:Sp_Cond_30&#39;: {&#39;variable&#39;: {&#39;value_type&#39;: &#39;Field Observation&#39;,
+    &#39;data_type&#39;: &#39;Regular Sampling&#39;,
+    &#39;general_category&#39;: &#39;Water Quality&#39;,
+    &#39;sample_medium&#39;: &#39;Surface water&#39;,
+    &#39;no_data_value&#39;: &#39;-9999&#39;,
+    &#39;speciation&#39;: &#39;Not Applicable&#39;,
+    &#39;code&#39;: &#39;Sp_Cond_30&#39;,
+    &#39;id&#39;: &#39;61&#39;,
+    &#39;name&#39;: &#39;Specific Conductance&#39;,
+    &#39;vocabulary&#39;: &#39;ORSANCO_HAB&#39;,
+    &#39;time&#39;: {&#39;is_regular&#39;: True,
+     &#39;interval&#39;: &#39;30&#39;,
+     &#39;units&#39;: {&#39;abbreviation&#39;: &#39;min&#39;,
+      &#39;code&#39;: &#39;102&#39;,
+      &#39;name&#39;: &#39;minute&#39;,
+      &#39;type&#39;: &#39;Time&#39;}},
+    &#39;units&#39;: {&#39;abbreviation&#39;: &#39;uS/cm&#39;,
+     &#39;code&#39;: &#39;192&#39;,
+     &#39;name&#39;: &#39;microsiemens per centimeter&#39;,
+     &#39;type&#39;: &#39;Electrical Conductivity&#39;}},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}method&#39;: {&#39;method_id&#39;: &#39;81&#39;,
+    &#39;method_description&#39;: &#39;Data was collected in-situ at regular intervals by datasonde&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}source&#39;: {&#39;source_id&#39;: &#39;53&#39;,
+    &#39;organization&#39;: &#39;Marshall College &#39;,
+    &#39;source_description&#39;: &#39;Marshall College&#39;,
+    &#39;citation&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}quality_control_level&#39;: {&#39;quality_control_level_id&#39;: &#39;-9999&#39;,
+    &#39;quality_control_level_code&#39;: &#39;-9999&#39;,
+    &#39;definition&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}variable_time_interval&#39;: {&#39;variable_time_interval_type&#39;: &#39;TimeIntervalType&#39;,
+    &#39;begin_date_time&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time&#39;: &#39;2017-09-05T12:00:00&#39;,
+    &#39;begin_date_time_utc&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time_utc&#39;: &#39;2017-09-05T12:00:00&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}value_count&#39;: {&#39;value_count&#39;: &#39;1927&#39;}},
+  &#39;ORSANCO_HAB:pH_30&#39;: {&#39;variable&#39;: {&#39;value_type&#39;: &#39;Field Observation&#39;,
+    &#39;data_type&#39;: &#39;Regular Sampling&#39;,
+    &#39;general_category&#39;: &#39;Water Quality&#39;,
+    &#39;sample_medium&#39;: &#39;Surface water&#39;,
+    &#39;no_data_value&#39;: &#39;-9999&#39;,
+    &#39;speciation&#39;: &#39;Not Applicable&#39;,
+    &#39;code&#39;: &#39;pH_30&#39;,
+    &#39;id&#39;: &#39;62&#39;,
+    &#39;name&#39;: &#39;pH&#39;,
+    &#39;vocabulary&#39;: &#39;ORSANCO_HAB&#39;,
+    &#39;time&#39;: {&#39;is_regular&#39;: True,
+     &#39;interval&#39;: &#39;30&#39;,
+     &#39;units&#39;: {&#39;abbreviation&#39;: &#39;min&#39;,
+      &#39;code&#39;: &#39;102&#39;,
+      &#39;name&#39;: &#39;minute&#39;,
+      &#39;type&#39;: &#39;Time&#39;}},
+    &#39;units&#39;: {&#39;abbreviation&#39;: &#39;pH&#39;,
+     &#39;code&#39;: &#39;309&#39;,
+     &#39;name&#39;: &#39;pH Unit&#39;,
+     &#39;type&#39;: &#39;Dimensionless&#39;}},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}method&#39;: {&#39;method_id&#39;: &#39;81&#39;,
+    &#39;method_description&#39;: &#39;Data was collected in-situ at regular intervals by datasonde&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}source&#39;: {&#39;source_id&#39;: &#39;53&#39;,
+    &#39;organization&#39;: &#39;Marshall College &#39;,
+    &#39;source_description&#39;: &#39;Marshall College&#39;,
+    &#39;citation&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}quality_control_level&#39;: {&#39;quality_control_level_id&#39;: &#39;-9999&#39;,
+    &#39;quality_control_level_code&#39;: &#39;-9999&#39;,
+    &#39;definition&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}variable_time_interval&#39;: {&#39;variable_time_interval_type&#39;: &#39;TimeIntervalType&#39;,
+    &#39;begin_date_time&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time&#39;: &#39;2017-09-05T12:00:00&#39;,
+    &#39;begin_date_time_utc&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time_utc&#39;: &#39;2017-09-05T12:00:00&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}value_count&#39;: {&#39;value_count&#39;: &#39;1927&#39;}},
+  &#39;ORSANCO_HAB:Turb_30&#39;: {&#39;variable&#39;: {&#39;value_type&#39;: &#39;Field Observation&#39;,
+    &#39;data_type&#39;: &#39;Regular Sampling&#39;,
+    &#39;general_category&#39;: &#39;Water Quality&#39;,
+    &#39;sample_medium&#39;: &#39;Surface water&#39;,
+    &#39;no_data_value&#39;: &#39;-9999&#39;,
+    &#39;speciation&#39;: &#39;Not Applicable&#39;,
+    &#39;code&#39;: &#39;Turb_30&#39;,
+    &#39;id&#39;: &#39;63&#39;,
+    &#39;name&#39;: &#39;Turbidity&#39;,
+    &#39;vocabulary&#39;: &#39;ORSANCO_HAB&#39;,
+    &#39;time&#39;: {&#39;is_regular&#39;: True,
+     &#39;interval&#39;: &#39;30&#39;,
+     &#39;units&#39;: {&#39;abbreviation&#39;: &#39;min&#39;,
+      &#39;code&#39;: &#39;102&#39;,
+      &#39;name&#39;: &#39;minute&#39;,
+      &#39;type&#39;: &#39;Time&#39;}},
+    &#39;units&#39;: {&#39;abbreviation&#39;: &#39;NTU&#39;,
+     &#39;code&#39;: &#39;221&#39;,
+     &#39;name&#39;: &#39;nephelometric turbidity units&#39;,
+     &#39;type&#39;: &#39;Turbidity&#39;}},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}method&#39;: {&#39;method_id&#39;: &#39;81&#39;,
+    &#39;method_description&#39;: &#39;Data was collected in-situ at regular intervals by datasonde&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}source&#39;: {&#39;source_id&#39;: &#39;53&#39;,
+    &#39;organization&#39;: &#39;Marshall College &#39;,
+    &#39;source_description&#39;: &#39;Marshall College&#39;,
+    &#39;citation&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}quality_control_level&#39;: {&#39;quality_control_level_id&#39;: &#39;-9999&#39;,
+    &#39;quality_control_level_code&#39;: &#39;-9999&#39;,
+    &#39;definition&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}variable_time_interval&#39;: {&#39;variable_time_interval_type&#39;: &#39;TimeIntervalType&#39;,
+    &#39;begin_date_time&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time&#39;: &#39;2017-09-05T12:00:00&#39;,
+    &#39;begin_date_time_utc&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time_utc&#39;: &#39;2017-09-05T12:00:00&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}value_count&#39;: {&#39;value_count&#39;: &#39;1927&#39;}},
+  &#39;ORSANCO_HAB:ODOSat_30&#39;: {&#39;variable&#39;: {&#39;value_type&#39;: &#39;Field Observation&#39;,
+    &#39;data_type&#39;: &#39;Regular Sampling&#39;,
+    &#39;general_category&#39;: &#39;Water Quality&#39;,
+    &#39;sample_medium&#39;: &#39;Surface water&#39;,
+    &#39;no_data_value&#39;: &#39;-9999&#39;,
+    &#39;speciation&#39;: &#39;O2&#39;,
+    &#39;code&#39;: &#39;ODOSat_30&#39;,
+    &#39;id&#39;: &#39;64&#39;,
+    &#39;name&#39;: &#39;Oxygen, dissolved&#39;,
+    &#39;vocabulary&#39;: &#39;ORSANCO_HAB&#39;,
+    &#39;time&#39;: {&#39;is_regular&#39;: True,
+     &#39;interval&#39;: &#39;30&#39;,
+     &#39;units&#39;: {&#39;abbreviation&#39;: &#39;min&#39;,
+      &#39;code&#39;: &#39;102&#39;,
+      &#39;name&#39;: &#39;minute&#39;,
+      &#39;type&#39;: &#39;Time&#39;}},
+    &#39;units&#39;: {&#39;abbreviation&#39;: &#39;%&#39;,
+     &#39;code&#39;: &#39;1&#39;,
+     &#39;name&#39;: &#39;percent&#39;,
+     &#39;type&#39;: &#39;Dimensionless&#39;}},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}method&#39;: {&#39;method_id&#39;: &#39;81&#39;,
+    &#39;method_description&#39;: &#39;Data was collected in-situ at regular intervals by datasonde&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}source&#39;: {&#39;source_id&#39;: &#39;53&#39;,
+    &#39;organization&#39;: &#39;Marshall College &#39;,
+    &#39;source_description&#39;: &#39;Marshall College&#39;,
+    &#39;citation&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}quality_control_level&#39;: {&#39;quality_control_level_id&#39;: &#39;-9999&#39;,
+    &#39;quality_control_level_code&#39;: &#39;-9999&#39;,
+    &#39;definition&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}variable_time_interval&#39;: {&#39;variable_time_interval_type&#39;: &#39;TimeIntervalType&#39;,
+    &#39;begin_date_time&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time&#39;: &#39;2017-09-05T12:00:00&#39;,
+    &#39;begin_date_time_utc&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time_utc&#39;: &#39;2017-09-05T12:00:00&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}value_count&#39;: {&#39;value_count&#39;: &#39;1927&#39;}},
+  &#39;ORSANCO_HAB:ODO_30&#39;: {&#39;variable&#39;: {&#39;value_type&#39;: &#39;Field Observation&#39;,
+    &#39;data_type&#39;: &#39;Regular Sampling&#39;,
+    &#39;general_category&#39;: &#39;Water Quality&#39;,
+    &#39;sample_medium&#39;: &#39;Surface water&#39;,
+    &#39;no_data_value&#39;: &#39;-9999&#39;,
+    &#39;speciation&#39;: &#39;O2&#39;,
+    &#39;code&#39;: &#39;ODO_30&#39;,
+    &#39;id&#39;: &#39;65&#39;,
+    &#39;name&#39;: &#39;Oxygen, dissolved&#39;,
+    &#39;vocabulary&#39;: &#39;ORSANCO_HAB&#39;,
+    &#39;time&#39;: {&#39;is_regular&#39;: True,
+     &#39;interval&#39;: &#39;30&#39;,
+     &#39;units&#39;: {&#39;abbreviation&#39;: &#39;min&#39;,
+      &#39;code&#39;: &#39;102&#39;,
+      &#39;name&#39;: &#39;minute&#39;,
+      &#39;type&#39;: &#39;Time&#39;}},
+    &#39;units&#39;: {&#39;abbreviation&#39;: &#39;mg/L&#39;,
+     &#39;code&#39;: &#39;199&#39;,
+     &#39;name&#39;: &#39;milligrams per liter&#39;,
+     &#39;type&#39;: &#39;Concentration&#39;}},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}method&#39;: {&#39;method_id&#39;: &#39;81&#39;,
+    &#39;method_description&#39;: &#39;Data was collected in-situ at regular intervals by datasonde&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}source&#39;: {&#39;source_id&#39;: &#39;53&#39;,
+    &#39;organization&#39;: &#39;Marshall College &#39;,
+    &#39;source_description&#39;: &#39;Marshall College&#39;,
+    &#39;citation&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}quality_control_level&#39;: {&#39;quality_control_level_id&#39;: &#39;-9999&#39;,
+    &#39;quality_control_level_code&#39;: &#39;-9999&#39;,
+    &#39;definition&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}variable_time_interval&#39;: {&#39;variable_time_interval_type&#39;: &#39;TimeIntervalType&#39;,
+    &#39;begin_date_time&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time&#39;: &#39;2017-09-05T12:00:00&#39;,
+    &#39;begin_date_time_utc&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time_utc&#39;: &#39;2017-09-05T12:00:00&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}value_count&#39;: {&#39;value_count&#39;: &#39;1927&#39;}},
+  &#39;ORSANCO_HAB:Chlorophyll_30&#39;: {&#39;variable&#39;: {&#39;value_type&#39;: &#39;Field Observation&#39;,
+    &#39;data_type&#39;: &#39;Regular Sampling&#39;,
+    &#39;general_category&#39;: &#39;Water Quality&#39;,
+    &#39;sample_medium&#39;: &#39;Surface water&#39;,
+    &#39;no_data_value&#39;: &#39;-9999&#39;,
+    &#39;speciation&#39;: &#39;Not Applicable&#39;,
+    &#39;code&#39;: &#39;Chlorophyll_30&#39;,
+    &#39;id&#39;: &#39;66&#39;,
+    &#39;name&#39;: &#39;Chlorophyll (a+b+c)&#39;,
+    &#39;vocabulary&#39;: &#39;ORSANCO_HAB&#39;,
+    &#39;time&#39;: {&#39;is_regular&#39;: True,
+     &#39;interval&#39;: &#39;30&#39;,
+     &#39;units&#39;: {&#39;abbreviation&#39;: &#39;min&#39;,
+      &#39;code&#39;: &#39;102&#39;,
+      &#39;name&#39;: &#39;minute&#39;,
+      &#39;type&#39;: &#39;Time&#39;}},
+    &#39;units&#39;: {&#39;abbreviation&#39;: &#39;ug/L&#39;,
+     &#39;code&#39;: &#39;204&#39;,
+     &#39;name&#39;: &#39;micrograms per liter&#39;,
+     &#39;type&#39;: &#39;Concentration&#39;}},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}method&#39;: {&#39;method_id&#39;: &#39;81&#39;,
+    &#39;method_description&#39;: &#39;Data was collected in-situ at regular intervals by datasonde&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}source&#39;: {&#39;source_id&#39;: &#39;53&#39;,
+    &#39;organization&#39;: &#39;Marshall College &#39;,
+    &#39;source_description&#39;: &#39;Marshall College&#39;,
+    &#39;citation&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}quality_control_level&#39;: {&#39;quality_control_level_id&#39;: &#39;-9999&#39;,
+    &#39;quality_control_level_code&#39;: &#39;-9999&#39;,
+    &#39;definition&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}variable_time_interval&#39;: {&#39;variable_time_interval_type&#39;: &#39;TimeIntervalType&#39;,
+    &#39;begin_date_time&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time&#39;: &#39;2017-09-05T12:00:00&#39;,
+    &#39;begin_date_time_utc&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time_utc&#39;: &#39;2017-09-05T12:00:00&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}value_count&#39;: {&#39;value_count&#39;: &#39;1927&#39;}},
+  &#39;ORSANCO_HAB:Chl_RFU_30&#39;: {&#39;variable&#39;: {&#39;value_type&#39;: &#39;Field Observation&#39;,
+    &#39;data_type&#39;: &#39;Regular Sampling&#39;,
+    &#39;general_category&#39;: &#39;Water Quality&#39;,
+    &#39;sample_medium&#39;: &#39;Surface water&#39;,
+    &#39;no_data_value&#39;: &#39;-9999&#39;,
+    &#39;speciation&#39;: &#39;Cl&#39;,
+    &#39;code&#39;: &#39;Chl_RFU_30&#39;,
+    &#39;id&#39;: &#39;67&#39;,
+    &#39;name&#39;: &#39;Chlorine, dissolved&#39;,
+    &#39;vocabulary&#39;: &#39;ORSANCO_HAB&#39;,
+    &#39;time&#39;: {&#39;is_regular&#39;: True,
+     &#39;interval&#39;: &#39;30&#39;,
+     &#39;units&#39;: {&#39;abbreviation&#39;: &#39;min&#39;,
+      &#39;code&#39;: &#39;102&#39;,
+      &#39;name&#39;: &#39;minute&#39;,
+      &#39;type&#39;: &#39;Time&#39;}},
+    &#39;units&#39;: {&#39;abbreviation&#39;: &#39;RFU&#39;,
+     &#39;code&#39;: &#39;332&#39;,
+     &#39;name&#39;: &#39;relative fluorescence units&#39;,
+     &#39;type&#39;: &#39;Fluorescence&#39;}},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}method&#39;: {&#39;method_id&#39;: &#39;81&#39;,
+    &#39;method_description&#39;: &#39;Data was collected in-situ at regular intervals by datasonde&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}source&#39;: {&#39;source_id&#39;: &#39;53&#39;,
+    &#39;organization&#39;: &#39;Marshall College &#39;,
+    &#39;source_description&#39;: &#39;Marshall College&#39;,
+    &#39;citation&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}quality_control_level&#39;: {&#39;quality_control_level_id&#39;: &#39;-9999&#39;,
+    &#39;quality_control_level_code&#39;: &#39;-9999&#39;,
+    &#39;definition&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}variable_time_interval&#39;: {&#39;variable_time_interval_type&#39;: &#39;TimeIntervalType&#39;,
+    &#39;begin_date_time&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time&#39;: &#39;2017-09-05T12:00:00&#39;,
+    &#39;begin_date_time_utc&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time_utc&#39;: &#39;2017-09-05T12:00:00&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}value_count&#39;: {&#39;value_count&#39;: &#39;1927&#39;}},
+  &#39;ORSANCO_HAB:BGA-PC_RAW_30&#39;: {&#39;variable&#39;: {&#39;value_type&#39;: &#39;Field Observation&#39;,
+    &#39;data_type&#39;: &#39;Regular Sampling&#39;,
+    &#39;general_category&#39;: &#39;Water Quality&#39;,
+    &#39;sample_medium&#39;: &#39;Surface water&#39;,
+    &#39;no_data_value&#39;: &#39;-9999&#39;,
+    &#39;speciation&#39;: &#39;Not Applicable&#39;,
+    &#39;code&#39;: &#39;BGA-PC_RAW_30&#39;,
+    &#39;id&#39;: &#39;68&#39;,
+    &#39;name&#39;: &#39;Blue-green algae (cyanobacteria), phycocyanin&#39;,
+    &#39;vocabulary&#39;: &#39;ORSANCO_HAB&#39;,
+    &#39;time&#39;: {&#39;is_regular&#39;: True,
+     &#39;interval&#39;: &#39;30&#39;,
+     &#39;units&#39;: {&#39;abbreviation&#39;: &#39;min&#39;,
+      &#39;code&#39;: &#39;102&#39;,
+      &#39;name&#39;: &#39;minute&#39;,
+      &#39;type&#39;: &#39;Time&#39;}},
+    &#39;units&#39;: {&#39;abbreviation&#39;: &#39;-&#39;,
+     &#39;code&#39;: &#39;137&#39;,
+     &#39;name&#39;: &#39;dimensionless&#39;,
+     &#39;type&#39;: &#39;Dimensionless&#39;}},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}method&#39;: {&#39;method_id&#39;: &#39;81&#39;,
+    &#39;method_description&#39;: &#39;Data was collected in-situ at regular intervals by datasonde&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}source&#39;: {&#39;source_id&#39;: &#39;53&#39;,
+    &#39;organization&#39;: &#39;Marshall College &#39;,
+    &#39;source_description&#39;: &#39;Marshall College&#39;,
+    &#39;citation&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}quality_control_level&#39;: {&#39;quality_control_level_id&#39;: &#39;-9999&#39;,
+    &#39;quality_control_level_code&#39;: &#39;-9999&#39;,
+    &#39;definition&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}variable_time_interval&#39;: {&#39;variable_time_interval_type&#39;: &#39;TimeIntervalType&#39;,
+    &#39;begin_date_time&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time&#39;: &#39;2017-09-05T12:00:00&#39;,
+    &#39;begin_date_time_utc&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time_utc&#39;: &#39;2017-09-05T12:00:00&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}value_count&#39;: {&#39;value_count&#39;: &#39;1927&#39;}},
+  &#39;ORSANCO_HAB:BGA-PC_30&#39;: {&#39;variable&#39;: {&#39;value_type&#39;: &#39;Field Observation&#39;,
+    &#39;data_type&#39;: &#39;Regular Sampling&#39;,
+    &#39;general_category&#39;: &#39;Water Quality&#39;,
+    &#39;sample_medium&#39;: &#39;Surface water&#39;,
+    &#39;no_data_value&#39;: &#39;-9999&#39;,
+    &#39;speciation&#39;: &#39;Not Applicable&#39;,
+    &#39;code&#39;: &#39;BGA-PC_30&#39;,
+    &#39;id&#39;: &#39;69&#39;,
+    &#39;name&#39;: &#39;Blue-green algae (cyanobacteria), phycocyanin&#39;,
+    &#39;vocabulary&#39;: &#39;ORSANCO_HAB&#39;,
+    &#39;time&#39;: {&#39;is_regular&#39;: True,
+     &#39;interval&#39;: &#39;30&#39;,
+     &#39;units&#39;: {&#39;abbreviation&#39;: &#39;min&#39;,
+      &#39;code&#39;: &#39;102&#39;,
+      &#39;name&#39;: &#39;minute&#39;,
+      &#39;type&#39;: &#39;Time&#39;}},
+    &#39;units&#39;: {&#39;abbreviation&#39;: &#39;ug/L&#39;,
+     &#39;code&#39;: &#39;204&#39;,
+     &#39;name&#39;: &#39;micrograms per liter&#39;,
+     &#39;type&#39;: &#39;Concentration&#39;}},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}method&#39;: {&#39;method_id&#39;: &#39;81&#39;,
+    &#39;method_description&#39;: &#39;Data was collected in-situ at regular intervals by datasonde&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}source&#39;: {&#39;source_id&#39;: &#39;53&#39;,
+    &#39;organization&#39;: &#39;Marshall College &#39;,
+    &#39;source_description&#39;: &#39;Marshall College&#39;,
+    &#39;citation&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}quality_control_level&#39;: {&#39;quality_control_level_id&#39;: &#39;-9999&#39;,
+    &#39;quality_control_level_code&#39;: &#39;-9999&#39;,
+    &#39;definition&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}variable_time_interval&#39;: {&#39;variable_time_interval_type&#39;: &#39;TimeIntervalType&#39;,
+    &#39;begin_date_time&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time&#39;: &#39;2017-09-05T12:00:00&#39;,
+    &#39;begin_date_time_utc&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time_utc&#39;: &#39;2017-09-05T12:00:00&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}value_count&#39;: {&#39;value_count&#39;: &#39;1927&#39;}},
+  &#39;ORSANCO_HAB:Depth_30&#39;: {&#39;variable&#39;: {&#39;value_type&#39;: &#39;Field Observation&#39;,
+    &#39;data_type&#39;: &#39;Regular Sampling&#39;,
+    &#39;general_category&#39;: &#39;Water Quality&#39;,
+    &#39;sample_medium&#39;: &#39;Surface water&#39;,
+    &#39;no_data_value&#39;: &#39;-9999&#39;,
+    &#39;speciation&#39;: &#39;Not Applicable&#39;,
+    &#39;code&#39;: &#39;Depth_30&#39;,
+    &#39;id&#39;: &#39;70&#39;,
+    &#39;name&#39;: &#39;Water depth&#39;,
+    &#39;vocabulary&#39;: &#39;ORSANCO_HAB&#39;,
+    &#39;time&#39;: {&#39;is_regular&#39;: True,
+     &#39;interval&#39;: &#39;30&#39;,
+     &#39;units&#39;: {&#39;abbreviation&#39;: &#39;min&#39;,
+      &#39;code&#39;: &#39;102&#39;,
+      &#39;name&#39;: &#39;minute&#39;,
+      &#39;type&#39;: &#39;Time&#39;}},
+    &#39;units&#39;: {&#39;abbreviation&#39;: &#39;m&#39;,
+     &#39;code&#39;: &#39;52&#39;,
+     &#39;name&#39;: &#39;meter&#39;,
+     &#39;type&#39;: &#39;Length&#39;}},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}method&#39;: {&#39;method_id&#39;: &#39;81&#39;,
+    &#39;method_description&#39;: &#39;Data was collected in-situ at regular intervals by datasonde&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}source&#39;: {&#39;source_id&#39;: &#39;53&#39;,
+    &#39;organization&#39;: &#39;Marshall College &#39;,
+    &#39;source_description&#39;: &#39;Marshall College&#39;,
+    &#39;citation&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}quality_control_level&#39;: {&#39;quality_control_level_id&#39;: &#39;-9999&#39;,
+    &#39;quality_control_level_code&#39;: &#39;-9999&#39;,
+    &#39;definition&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}variable_time_interval&#39;: {&#39;variable_time_interval_type&#39;: &#39;TimeIntervalType&#39;,
+    &#39;begin_date_time&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time&#39;: &#39;2017-09-05T12:00:00&#39;,
+    &#39;begin_date_time_utc&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time_utc&#39;: &#39;2017-09-05T12:00:00&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}value_count&#39;: {&#39;value_count&#39;: &#39;1927&#39;}},
+  &#39;ORSANCO_HAB:Wiper_Pos_30&#39;: {&#39;variable&#39;: {&#39;value_type&#39;: &#39;Field Observation&#39;,
+    &#39;data_type&#39;: &#39;Regular Sampling&#39;,
+    &#39;general_category&#39;: &#39;Water Quality&#39;,
+    &#39;sample_medium&#39;: &#39;Surface water&#39;,
+    &#39;no_data_value&#39;: &#39;-9999&#39;,
+    &#39;speciation&#39;: &#39;Not Applicable&#39;,
+    &#39;code&#39;: &#39;Wiper_Pos_30&#39;,
+    &#39;id&#39;: &#39;71&#39;,
+    &#39;name&#39;: &#39;Position&#39;,
+    &#39;vocabulary&#39;: &#39;ORSANCO_HAB&#39;,
+    &#39;time&#39;: {&#39;is_regular&#39;: True,
+     &#39;interval&#39;: &#39;30&#39;,
+     &#39;units&#39;: {&#39;abbreviation&#39;: &#39;min&#39;,
+      &#39;code&#39;: &#39;102&#39;,
+      &#39;name&#39;: &#39;minute&#39;,
+      &#39;type&#39;: &#39;Time&#39;}},
+    &#39;units&#39;: {&#39;abbreviation&#39;: &#39;-&#39;,
+     &#39;code&#39;: &#39;1379&#39;,
+     &#39;name&#39;: &#39;Boolean&#39;,
+     &#39;type&#39;: &#39;Dimensionless&#39;}},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}method&#39;: {&#39;method_id&#39;: &#39;81&#39;,
+    &#39;method_description&#39;: &#39;Data was collected in-situ at regular intervals by datasonde&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}source&#39;: {&#39;source_id&#39;: &#39;53&#39;,
+    &#39;organization&#39;: &#39;Marshall College &#39;,
+    &#39;source_description&#39;: &#39;Marshall College&#39;,
+    &#39;citation&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}quality_control_level&#39;: {&#39;quality_control_level_id&#39;: &#39;-9999&#39;,
+    &#39;quality_control_level_code&#39;: &#39;-9999&#39;,
+    &#39;definition&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}variable_time_interval&#39;: {&#39;variable_time_interval_type&#39;: &#39;TimeIntervalType&#39;,
+    &#39;begin_date_time&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time&#39;: &#39;2017-09-05T12:00:00&#39;,
+    &#39;begin_date_time_utc&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time_utc&#39;: &#39;2017-09-05T12:00:00&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}value_count&#39;: {&#39;value_count&#39;: &#39;1927&#39;}},
+  &#39;ORSANCO_HAB:Cable_Pwr_30&#39;: {&#39;variable&#39;: {&#39;value_type&#39;: &#39;Field Observation&#39;,
+    &#39;data_type&#39;: &#39;Regular Sampling&#39;,
+    &#39;general_category&#39;: &#39;Water Quality&#39;,
+    &#39;sample_medium&#39;: &#39;Surface water&#39;,
+    &#39;no_data_value&#39;: &#39;-9999&#39;,
+    &#39;speciation&#39;: &#39;Not Applicable&#39;,
+    &#39;code&#39;: &#39;Cable_Pwr_30&#39;,
+    &#39;id&#39;: &#39;72&#39;,
+    &#39;name&#39;: &#39;Electric Power&#39;,
+    &#39;vocabulary&#39;: &#39;ORSANCO_HAB&#39;,
+    &#39;time&#39;: {&#39;is_regular&#39;: True,
+     &#39;interval&#39;: &#39;30&#39;,
+     &#39;units&#39;: {&#39;abbreviation&#39;: &#39;min&#39;,
+      &#39;code&#39;: &#39;102&#39;,
+      &#39;name&#39;: &#39;minute&#39;,
+      &#39;type&#39;: &#39;Time&#39;}},
+    &#39;units&#39;: {&#39;abbreviation&#39;: &#39;V&#39;,
+     &#39;code&#39;: &#39;168&#39;,
+     &#39;name&#39;: &#39;volts&#39;,
+     &#39;type&#39;: &#39;Potential Difference&#39;}},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}method&#39;: {&#39;method_id&#39;: &#39;81&#39;,
+    &#39;method_description&#39;: &#39;Data was collected in-situ at regular intervals by datasonde&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}source&#39;: {&#39;source_id&#39;: &#39;53&#39;,
+    &#39;organization&#39;: &#39;Marshall College &#39;,
+    &#39;source_description&#39;: &#39;Marshall College&#39;,
+    &#39;citation&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}quality_control_level&#39;: {&#39;quality_control_level_id&#39;: &#39;-9999&#39;,
+    &#39;quality_control_level_code&#39;: &#39;-9999&#39;,
+    &#39;definition&#39;: &#39;Unknown&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}variable_time_interval&#39;: {&#39;variable_time_interval_type&#39;: &#39;TimeIntervalType&#39;,
+    &#39;begin_date_time&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time&#39;: &#39;2017-09-05T12:00:00&#39;,
+    &#39;begin_date_time_utc&#39;: &#39;2017-07-27T12:00:00&#39;,
+    &#39;end_date_time_utc&#39;: &#39;2017-09-05T12:00:00&#39;},
+   &#39;{http://www.cuahsi.org/water_ml/1.1/}value_count&#39;: {&#39;value_count&#39;: &#39;1927&#39;}}}}
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Request,-parse-and-plot-the-time-series">
+<h2>Request, parse and plot the time series<a class="headerlink" href="#Request,-parse-and-plot-the-time-series" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">varcd</span> <span class="o">=</span> <span class="s2">&quot;ORSANCO_HAB:ODO_30&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">siteinfo</span><span class="p">[</span><span class="s1">&#39;series&#39;</span><span class="p">][</span><span class="n">varcd</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;variable&#39;: {&#39;value_type&#39;: &#39;Field Observation&#39;,
+  &#39;data_type&#39;: &#39;Regular Sampling&#39;,
+  &#39;general_category&#39;: &#39;Water Quality&#39;,
+  &#39;sample_medium&#39;: &#39;Surface water&#39;,
+  &#39;no_data_value&#39;: &#39;-9999&#39;,
+  &#39;speciation&#39;: &#39;O2&#39;,
+  &#39;code&#39;: &#39;ODO_30&#39;,
+  &#39;id&#39;: &#39;65&#39;,
+  &#39;name&#39;: &#39;Oxygen, dissolved&#39;,
+  &#39;vocabulary&#39;: &#39;ORSANCO_HAB&#39;,
+  &#39;time&#39;: {&#39;is_regular&#39;: True,
+   &#39;interval&#39;: &#39;30&#39;,
+   &#39;units&#39;: {&#39;abbreviation&#39;: &#39;min&#39;,
+    &#39;code&#39;: &#39;102&#39;,
+    &#39;name&#39;: &#39;minute&#39;,
+    &#39;type&#39;: &#39;Time&#39;}},
+  &#39;units&#39;: {&#39;abbreviation&#39;: &#39;mg/L&#39;,
+   &#39;code&#39;: &#39;199&#39;,
+   &#39;name&#39;: &#39;milligrams per liter&#39;,
+   &#39;type&#39;: &#39;Concentration&#39;}},
+ &#39;{http://www.cuahsi.org/water_ml/1.1/}method&#39;: {&#39;method_id&#39;: &#39;81&#39;,
+  &#39;method_description&#39;: &#39;Data was collected in-situ at regular intervals by datasonde&#39;},
+ &#39;{http://www.cuahsi.org/water_ml/1.1/}source&#39;: {&#39;source_id&#39;: &#39;53&#39;,
+  &#39;organization&#39;: &#39;Marshall College &#39;,
+  &#39;source_description&#39;: &#39;Marshall College&#39;,
+  &#39;citation&#39;: &#39;Unknown&#39;},
+ &#39;{http://www.cuahsi.org/water_ml/1.1/}quality_control_level&#39;: {&#39;quality_control_level_id&#39;: &#39;-9999&#39;,
+  &#39;quality_control_level_code&#39;: &#39;-9999&#39;,
+  &#39;definition&#39;: &#39;Unknown&#39;},
+ &#39;{http://www.cuahsi.org/water_ml/1.1/}variable_time_interval&#39;: {&#39;variable_time_interval_type&#39;: &#39;TimeIntervalType&#39;,
+  &#39;begin_date_time&#39;: &#39;2017-07-27T12:00:00&#39;,
+  &#39;end_date_time&#39;: &#39;2017-09-05T12:00:00&#39;,
+  &#39;begin_date_time_utc&#39;: &#39;2017-07-27T12:00:00&#39;,
+  &#39;end_date_time_utc&#39;: &#39;2017-09-05T12:00:00&#39;},
+ &#39;{http://www.cuahsi.org/water_ml/1.1/}value_count&#39;: {&#39;value_count&#39;: &#39;1927&#39;}}
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">time_interval</span> <span class="o">=</span> <span class="n">siteinfo</span><span class="p">[</span><span class="s1">&#39;series&#39;</span><span class="p">][</span><span class="n">varcd</span><span class="p">][</span><span class="s1">&#39;{http://www.cuahsi.org/water_ml/1.1/}variable_time_interval&#39;</span><span class="p">]</span>
+<span class="n">time_interval</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;variable_time_interval_type&#39;: &#39;TimeIntervalType&#39;,
+ &#39;begin_date_time&#39;: &#39;2017-07-27T12:00:00&#39;,
+ &#39;end_date_time&#39;: &#39;2017-09-05T12:00:00&#39;,
+ &#39;begin_date_time_utc&#39;: &#39;2017-07-27T12:00:00&#39;,
+ &#39;end_date_time_utc&#39;: &#39;2017-09-05T12:00:00&#39;}
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">site_tsval</span> <span class="o">=</span> <span class="n">ulmo</span><span class="o">.</span><span class="n">cuahsi</span><span class="o">.</span><span class="n">wof</span><span class="o">.</span><span class="n">get_values</span><span class="p">(</span><span class="n">wsdlurl</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">:</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">networkcd</span><span class="p">,</span> <span class="n">sitecd</span><span class="p">),</span> <span class="n">varcd</span><span class="p">,</span>
+                                        <span class="n">start</span><span class="o">=</span><span class="n">time_interval</span><span class="p">[</span><span class="s1">&#39;begin_date_time_utc&#39;</span><span class="p">],</span>
+                                        <span class="n">end</span><span class="o">=</span><span class="n">time_interval</span><span class="p">[</span><span class="s1">&#39;end_date_time_utc&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">site_tsval</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+dict_keys([&#39;site&#39;, &#39;variable&#39;, &#39;values&#39;, &#39;censor_codes&#39;, &#39;methods&#39;, &#39;quality_control_levels&#39;, &#39;sources&#39;])
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">site_series_values_to_df</span><span class="p">(</span><span class="n">series_values</span><span class="p">,</span> <span class="n">variable_name</span><span class="p">):</span>
+    <span class="c1"># Create a clean timeseries list of (dt,val) tuples</span>
+    <span class="n">tsdt_tuplst</span> <span class="o">=</span> <span class="p">[(</span><span class="n">convert_datetime</span><span class="p">(</span><span class="n">valdict</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">tzinfo</span><span class="o">=</span><span class="n">pytz</span><span class="o">.</span><span class="n">utc</span><span class="p">),</span>
+                    <span class="nb">float</span><span class="p">(</span><span class="n">valdict</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]))</span>
+                   <span class="k">for</span> <span class="n">valdict</span> <span class="ow">in</span> <span class="n">series_values</span><span class="p">[</span><span class="s1">&#39;values&#39;</span><span class="p">]]</span>
+
+    <span class="n">dt</span><span class="p">,</span> <span class="n">val</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">tsdt_tuplst</span><span class="p">)</span>
+    <span class="n">ts_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;time&#39;</span><span class="p">:</span><span class="n">dt</span><span class="p">,</span> <span class="n">variable_name</span><span class="p">:</span><span class="n">val</span><span class="p">})</span>
+    <span class="n">ts_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">ts_df</span><span class="o">.</span><span class="n">sort_index</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ts_df</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">ts_df</span> <span class="o">=</span> <span class="n">site_series_values_to_df</span><span class="p">(</span><span class="n">site_tsval</span><span class="p">,</span> <span class="n">varcd</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">ts_df</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ORSANCO_HAB:ODO_30</th>
+    </tr>
+    <tr>
+      <th>time</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2017-09-05 10:00:00+00:00</th>
+      <td>5.23</td>
+    </tr>
+    <tr>
+      <th>2017-09-05 10:30:00+00:00</th>
+      <td>5.27</td>
+    </tr>
+    <tr>
+      <th>2017-09-05 11:00:00+00:00</th>
+      <td>5.22</td>
+    </tr>
+    <tr>
+      <th>2017-09-05 11:30:00+00:00</th>
+      <td>5.29</td>
+    </tr>
+    <tr>
+      <th>2017-09-05 12:00:00+00:00</th>
+      <td>5.40</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">varlabel</span> <span class="o">=</span> <span class="n">ts_df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ts_df</span><span class="p">[</span><span class="n">varlabel</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+
+<span class="n">sitevariable</span> <span class="o">=</span> <span class="n">siteinfo</span><span class="p">[</span><span class="s1">&#39;series&#39;</span><span class="p">][</span><span class="n">varcd</span><span class="p">][</span><span class="s1">&#39;variable&#39;</span><span class="p">]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> (</span><span class="si">{}</span><span class="s2">), </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sitevariable</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">varlabel</span><span class="p">,</span> <span class="n">sitevariable</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">][</span><span class="s1">&#39;abbreviation&#39;</span><span class="p">]))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">:</span><span class="si">{}</span><span class="s2"> | </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">networkcd</span><span class="p">,</span> <span class="n">sitecd</span><span class="p">,</span> <span class="n">siteinfo</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]));</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../../_images/gallery_Python_Instructional_Water_Hackweek_2019_Data_Access_and_Time-series_Statistics_Cyberseminar_notebooks_Part2-ulmo_nwis_and_cuahsi_45_0.png" src="../../../../../_images/gallery_Python_Instructional_Water_Hackweek_2019_Data_Access_and_Time-series_Statistics_Cyberseminar_notebooks_Part2-ulmo_nwis_and_cuahsi_45_0.png" />
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <!-- 
+This file modifies the default sphinx_rtd_theme footer
+-->
+
+
+
+<footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+  <!-- your html code here -->
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

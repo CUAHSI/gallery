@@ -1,0 +1,12 @@
+.. _author1@organization1.com:
+
+
+    email: author1@organization1.com
+
+    name: Author 1
+
+    organization: Organization 1
+
+    url: www.google.com
+
+    

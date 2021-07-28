@@ -1,0 +1,18 @@
+.. mytestpage:
+
+author1
+======
+
+Affiliation
+----
+
+The Tulane University of New Orleans 
+
+Content
+---
+
+:link-badge:`nlyons@tulane.edu,"Email",cls=badge-primary text-white`
+
+:link-badge:`https://hydroshare.org/user/2909/,"Webpage",cls=badge-primary text-white`
+
+     
