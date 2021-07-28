@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Reuse Ecohydrology Model with Gridded Hydrometeorology Forcing &mdash; BuildDocs version documentation</title>
+  <title>Reuse Ecohydrology Model with Gridded Hydrometeorology Forcing &mdash; CUAHSI Gallery</title>
   
 
   
@@ -15,10 +15,20 @@
   <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
   <link rel="stylesheet" href="../../../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/tooltipster.custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/tooltipster.bundle.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/micromodal.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/sphinx_rtd_theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../../../_static/css/custom.css" type="text/css" />
   <link rel="stylesheet" href="../../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
   <link rel="stylesheet" href="../../../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
   <link rel="stylesheet" href="../../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/contentui.css" type="text/css" />
   <link rel="stylesheet" href="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
 
   
@@ -39,6 +49,11 @@
         <script src="../../../../../_static/language_data.js"></script>
         <script src="../../../../../_static/clipboard.min.js"></script>
         <script src="../../../../../_static/copybutton.js"></script>
+        <script src="../../../../../_static/js/hoverxref.js"></script>
+        <script src="../../../../../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../../../../../_static/js/micromodal.min.js"></script>
+        <script src="../../../../../_static/js/custom.js"></script>
+        <script src="../../../../../_static/contentui.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
@@ -97,8 +112,19 @@
             
               <p class="caption"><span class="caption-text">Galleries</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#research-examples">Research Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#reproducible-science-examples">Reproducible Science Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../R/index.html">R</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../R/index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../RShiny/index.html">RShiny</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../RShiny/index.html#research-examples">Research Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../RShiny/index.html#instructional-examples">Instructional Examples</a></li>
 </ul>
 </li>
 </ul>
@@ -388,7 +414,7 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<p><img alt="8fa5ee1f76024dc1bd9766e4b60b9edd" src="https://avatars3.githubusercontent.com/u/7543483?s=200&amp;v=4" /></p>
+<p><img alt="682d7115353a45c2ab011684a6e4d06c" src="https://avatars3.githubusercontent.com/u/7543483?s=200&amp;v=4" /></p>
 <div class="section" id="Reuse-Ecohydrology-Model-with-Gridded-Hydrometeorology-Forcing">
 <h1>Reuse Ecohydrology Model with Gridded Hydrometeorology Forcing<a class="headerlink" href="#Reuse-Ecohydrology-Model-with-Gridded-Hydrometeorology-Forcing" title="Permalink to this headline">¶</a></h1>
 <ul>
@@ -514,7 +540,7 @@ files by running the notebook ‘observatory_gridmet_newmexico.ipynb’. These J
 <p>Low elevation = 1200 - 1700 m</p>
 <p>Mid elevation = 1700 - 2000 m</p>
 <p>High elevation = 2000 - 2500 m</p>
-<p><img alt="New Mexico Climate by ELevation" src="https://www.hydroshare.org/resource/70b977e22af544f8a7e5a803935c329c/data/contents/figures/NewMexico_elevationbands.JPG" /></p>
+<img alt="New Mexico Climate by ELevation" src="https://www.hydroshare.org/resource/70b977e22af544f8a7e5a803935c329c/data/contents/figures/NewMexico_elevationbands.JPG" />
 <center><p><strong>Figure 3.</strong> New Mexico climate bands by elevation correspond with high elevation (white) with trees (dark green in aerial photography).</p>
 </center><p>Let’s download the saved meteorological data (JSON files) into Python dictionaries. We create one dictionary for each elevation band. Each dictionary contains time series of 28 variables. These time series are stored as ‘key’:‘value’ pairs, where each variable name is a ‘key’ and the corresponding time series is the ‘value’.</p>
 <div class="nbinput nblast docutils container">

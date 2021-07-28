@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>R &mdash; BuildDocs version documentation</title>
+  <title>R &mdash; CUAHSI Gallery</title>
   
 
   
@@ -15,10 +15,20 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/tooltipster.custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/tooltipster.bundle.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/micromodal.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/sphinx_rtd_theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/contentui.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
 
   
@@ -39,6 +49,11 @@
         <script src="../../_static/language_data.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/js/hoverxref.js"></script>
+        <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../../_static/js/micromodal.min.js"></script>
+        <script src="../../_static/js/custom.js"></script>
+        <script src="../../_static/contentui.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
@@ -51,6 +66,7 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="RShiny" href="../RShiny/index.html" />
     <link rel="prev" title="Python" href="../Python/index.html" /> 
 </head>
 
@@ -106,6 +122,11 @@
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">R</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../RShiny/index.html">RShiny</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../RShiny/index.html#research-examples">Research Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RShiny/index.html#instructional-examples">Instructional Examples</a></li>
 </ul>
 </li>
 </ul>
@@ -177,9 +198,7 @@ The purpose of this template is to override (i.e. supress) the breadcrumbs that 
 <img alt="img-top" class="card-img-top pl-5 pr-5" src="../../_images/thumbnail-4efa9ed3578c437da6b29eacf9f4c0a5" />
 <div class="card-body docutils">
 <p class="card-text"><strong>Recurrence Intervals and Exceedance Probabilities</strong></p>
-<blockquote>
-<div><p class="card-text">This exercise will introduce the concepts of Recurrence Intervals and Exceedance Probability for the prediction of streamflow discharge.</p>
-</div></blockquote>
+<p class="card-text">This exercise will introduce the concepts of Recurrence Intervals and Exceedance Probability for the prediction of streamflow discharge.</p>
 <p class="card-text"><a class="sphinx-bs btn text-wrap btn-outline-primary btn-block stretched-link reference internal" href="Instructional/Recurrence%20Intervals%20and%20Exceedance%20Probability/index.html#efa9ed3578c437da6b29eacf9f4c0a5"><span class="std std-ref">Open Example</span></a></p>
 </div>
 </div>
@@ -189,9 +208,7 @@ The purpose of this template is to override (i.e. supress) the breadcrumbs that 
 <img alt="img-top" class="card-img-top pl-5 pr-5" src="../../_images/thumbnail-ee2a4c2151f24115a12e34d4d22d96fe" />
 <div class="card-body docutils">
 <p class="card-text"><strong>Introduction to Time Series Analysis</strong></p>
-<blockquote>
-<div><p class="card-text">This exercise will demonstrate how to create a time series object and decompose it into seasonal, trend and error components.</p>
-</div></blockquote>
+<p class="card-text">This exercise will demonstrate how to create a time series object and decompose it into seasonal, trend and error components.</p>
 <p class="card-text"><a class="sphinx-bs btn text-wrap btn-outline-primary btn-block stretched-link reference internal" href="Instructional/Introduction%20to%20Time%20Series%20Analysis%20for%20Hydrologic%20Data/index.html#ee2a4c2151f24115a12e34d4d22d96fe"><span class="std std-ref">Open Example</span></a></p>
 </div>
 </div>
@@ -201,9 +218,7 @@ The purpose of this template is to override (i.e. supress) the breadcrumbs that 
 <img alt="img-top" class="card-img-top pl-5 pr-5" src="../../_images/thumbnail-20dc4af8451e44b3950b182a8f506296" />
 <div class="card-body docutils">
 <p class="card-text"><strong>Querying Metadata and Discharge Data from NWIS and WQP</strong></p>
-<blockquote>
-<div><p class="card-text">This exercise will demonstrate how to approximate discharge by developing a rating curve for a stream at a given sampling point.</p>
-</div></blockquote>
+<p class="card-text">This exercise will demonstrate how to approximate discharge by developing a rating curve for a stream at a given sampling point.</p>
 <p class="card-text"><a class="sphinx-bs btn text-wrap btn-outline-primary btn-block stretched-link reference internal" href="Instructional/Querying%20Metadata%20and%20Discharge%20Data/index.html#dc4af8451e44b3950b182a8f506296"><span class="std std-ref">Open Example</span></a></p>
 </div>
 </div>
@@ -213,9 +228,7 @@ The purpose of this template is to override (i.e. supress) the breadcrumbs that 
 <img alt="img-top" class="card-img-top pl-5 pr-5" src="../../_images/thumbnail-f1a6d0346ba94337a247ac7c62f16a2a" />
 <div class="card-body docutils">
 <p class="card-text"><strong>High Frequency Flow Data: Introduction to Dygraphs</strong></p>
-<blockquote>
-<div><p class="card-text">This exercise will demonstrate how to create a dygraph using high frequency flow data to determine quickflow and baseflow after a storm event.</p>
-</div></blockquote>
+<p class="card-text">This exercise will demonstrate how to create a dygraph using high frequency flow data to determine quickflow and baseflow after a storm event.</p>
 <p class="card-text"><a class="sphinx-bs btn text-wrap btn-outline-primary btn-block stretched-link reference internal" href="Instructional/Calculating%20Baseflow%20and%20Quickflow/index.html#f1a6d0346ba94337a247ac7c62f16a2a"><span class="std std-ref">Open Example</span></a></p>
 </div>
 </div>
@@ -225,9 +238,7 @@ The purpose of this template is to override (i.e. supress) the breadcrumbs that 
 <img alt="img-top" class="card-img-top pl-5 pr-5" src="../../_images/thumbnail-106b934d0e4f40c98ba10b9fea773db5" />
 <div class="card-body docutils">
 <p class="card-text"><strong>Impacts of Mining on Specific Conductance and pH</strong></p>
-<blockquote>
-<div><p class="card-text">This exercise will execute queries to import NWIS and WQP data into R to analyze the effects of mining.</p>
-</div></blockquote>
+<p class="card-text">This exercise will execute queries to import NWIS and WQP data into R to analyze the effects of mining.</p>
 <p class="card-text"><a class="sphinx-bs btn text-wrap btn-outline-primary btn-block stretched-link reference internal" href="Instructional/Impact%20of%20Mining%20on%20River%20Water%20Quality/index.html#b934d0e4f40c98ba10b9fea773db5"><span class="std std-ref">Open Example</span></a></p>
 </div>
 </div>
@@ -237,9 +248,7 @@ The purpose of this template is to override (i.e. supress) the breadcrumbs that 
 <img alt="img-top" class="card-img-top pl-5 pr-5" src="../../_images/missing-thumbnail.png" />
 <div class="card-body docutils">
 <p class="card-text"><strong>Exploratory Data Analysis</strong></p>
-<blockquote>
-<div><p class="card-text">This lesson introduces exploratory data analysis using R statistical software in the context of the physical properties of lakes.</p>
-</div></blockquote>
+<p class="card-text">This lesson introduces exploratory data analysis using R statistical software in the context of the physical properties of lakes.</p>
 <p class="card-text"><a class="sphinx-bs btn text-wrap btn-outline-primary btn-block stretched-link reference internal" href="Instructional/Exploratory%20Data%20Analysis/index.html#f4ad39f8ec7d0bef351c7"><span class="std std-ref">Open Example</span></a></p>
 </div>
 </div>
@@ -249,9 +258,7 @@ The purpose of this template is to override (i.e. supress) the breadcrumbs that 
 <img alt="img-top" class="card-img-top pl-5 pr-5" src="../../_images/thumbnail-e22442bc4e4940609003b43747b366e0" />
 <div class="card-body docutils">
 <p class="card-text"><strong>Exploratory Data Visualization</strong></p>
-<blockquote>
-<div><p class="card-text">This exercise will introduce the proper visualization of lake stratification using data from the LTER station.</p>
-</div></blockquote>
+<p class="card-text">This exercise will introduce the proper visualization of lake stratification using data from the LTER station.</p>
 <p class="card-text"><a class="sphinx-bs btn text-wrap btn-outline-primary btn-block stretched-link reference internal" href="Instructional/Exploratory%20Data%20Visualization/index.html#e22442bc4e4940609003b43747b366e0"><span class="std std-ref">Open Example</span></a></p>
 </div>
 </div>
@@ -261,9 +268,7 @@ The purpose of this template is to override (i.e. supress) the breadcrumbs that 
 <img alt="img-top" class="card-img-top pl-5 pr-5" src="../../_images/thumbnail-179a844b41fe4a06807bef83667feccf" />
 <div class="card-body docutils">
 <p class="card-text"><strong>Introduction to LAGOSNE Database</strong></p>
-<blockquote>
-<div><p class="card-text">This exercise will demonstrate how to use the trophic state index to analyze lake water quality.</p>
-</div></blockquote>
+<p class="card-text">This exercise will demonstrate how to use the trophic state index to analyze lake water quality.</p>
 <p class="card-text"><a class="sphinx-bs btn text-wrap btn-outline-primary btn-block stretched-link reference internal" href="Instructional/Introduction%20to%20LAGOSNE/index.html#a844b41fe4a06807bef83667feccf"><span class="std std-ref">Open Example</span></a></p>
 </div>
 </div>
@@ -273,9 +278,7 @@ The purpose of this template is to override (i.e. supress) the breadcrumbs that 
 <img alt="img-top" class="card-img-top pl-5 pr-5" src="../../_images/thumbnail-1d8d52774c51462aac817d7dec209f14" />
 <div class="card-body docutils">
 <p class="card-text"><strong>Trend Detection and Forecasting</strong></p>
-<blockquote>
-<div><p class="card-text">This exercise will demonstrate linear interpolation, Season Mann Kendall tests, and Autoregressive and Moving Average Models.</p>
-</div></blockquote>
+<p class="card-text">This exercise will demonstrate linear interpolation, Season Mann Kendall tests, and Autoregressive and Moving Average Models.</p>
 <p class="card-text"><a class="sphinx-bs btn text-wrap btn-outline-primary btn-block stretched-link reference internal" href="Instructional/Trend%20Detection%20and%20Forecasting/index.html#d8d52774c51462aac817d7dec209f14"><span class="std std-ref">Open Example</span></a></p>
 </div>
 </div>
@@ -285,9 +288,7 @@ The purpose of this template is to override (i.e. supress) the breadcrumbs that 
 <img alt="img-top" class="card-img-top pl-5 pr-5" src="../../_images/thumbnail-4395d37cb2eb491f88d13bead2982855" />
 <div class="card-body docutils">
 <p class="card-text"><strong>Flashiness Index and Hysteresis Plots</strong></p>
-<blockquote>
-<div><p class="card-text">This exercise will introduce the calculation of the Richards-Baker Flashiness Index and graphing hysteresis plots.</p>
-</div></blockquote>
+<p class="card-text">This exercise will introduce the calculation of the Richards-Baker Flashiness Index and graphing hysteresis plots.</p>
 <p class="card-text"><a class="sphinx-bs btn text-wrap btn-outline-primary btn-block stretched-link reference internal" href="Instructional/Hysteresis%20Plots%20and%20Flashiness%20Index%20Value/index.html#d37cb2eb491f88d13bead2982855"><span class="std std-ref">Open Example</span></a></p>
 </div>
 </div>

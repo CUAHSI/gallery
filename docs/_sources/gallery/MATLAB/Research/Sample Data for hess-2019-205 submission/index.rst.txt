@@ -1,5 +1,7 @@
 .. _e3c159631acd470cbeef5fa1abe0142e:
 
+.. title:: Sample Data for Hess-2019-205 submission
+
 .. raw:: html
 
     <div class=example-title>
@@ -10,7 +12,8 @@
 
 
 
-.. container:: launch-container pb-1
+
+.. container:: container-lg launch-container pb-1
     
          
             :link-badge:`https://hydroshare.org/resource/e3c159631acd470cbeef5fa1abe0142e,"Open In HydroShare",cls=badge-primary text-white launch-badge`
@@ -23,35 +26,71 @@
     <hr>
     <br />&nbsp;
 
+    <h2> Authors </h2>
+
+    
+
+    <span class="NameHighlights">
+        <a href="javascript:;">Elizabeth Jachens</a>
+        
+        <div>
+
+            Oregon State University;CUAHSI Summer Institute 
+
+            <hr>
+
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:jachense@oregonstate.edu>
+                    <span>Email</span>
+                </a>
+            
+            
+
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/2927/>
+                    <span>Webpage</span>
+                </a>
+
+            
+
+        </div>
+    </span>
+
+
+
+
+
 .. raw:: html
 
+    <br />&nbsp;
+    <br />&nbsp;
+
     <div class=example-description>
-        <h2> Description </h2>
-        <p>This file contains the event magnitudes and spacing for Cases 1 & 3 presented in the submitted manuscript to HESS titled "Recession analysis 42 years later - work yet to be done".</p>
+    
+    <h2> Description </h2>
+
+    
+    
+    <p>This file contains the event magnitudes and spacing for Cases 1 & 3 presented in the submitted manuscript to HESS titled "Recession analysis 42 years later - work yet to be done".</p>
+    
+    
+    
     </div>
 
 
+.. raw:: html
 
-
-
+    <h2> Code </h2>
 
 
 .. panels::
-    :container: container pb-2 example-panels
+    :container: container pb-1 example-panels
     :card: shadow
     :column: col-lg-6 col-md-6 col-sm-12 col-xs-12 p-2
     :body: text-left
-
-
-    ---
-      **Authors**
-      ^^^^^
-    
-        :link-badge:`https://hydroshare.org/user/2927/,"Elizabeth Jachens",cls=badge-primary text-white`
-        - Oregon State University;CUAHSI Summer Institute 
-        (`contact <jachense@oregonstate.edu>`_)
-        
-
 
     ---
     

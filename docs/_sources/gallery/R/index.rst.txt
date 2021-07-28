@@ -1,5 +1,7 @@
 .. _Ug==:
 
+.. title:: R
+
 .. toctree::
    :caption: Table of Contents
    :name: mastertoc
@@ -34,9 +36,7 @@ Instructional Examples
     
     **Recurrence Intervals and Exceedance Probabilities**
 
-    
-        This exercise will introduce the concepts of Recurrence Intervals and Exceedance Probability for the prediction of streamflow discharge.
-    
+    This exercise will introduce the concepts of Recurrence Intervals and Exceedance Probability for the prediction of streamflow discharge.
 
     .. link-button:: 4efa9ed3578c437da6b29eacf9f4c0a5
         :type: ref
@@ -49,9 +49,7 @@ Instructional Examples
     
     **Introduction to Time Series Analysis**
 
-    
-        This exercise will demonstrate how to create a time series object and decompose it into seasonal, trend and error components.
-    
+    This exercise will demonstrate how to create a time series object and decompose it into seasonal, trend and error components.
 
     .. link-button:: ee2a4c2151f24115a12e34d4d22d96fe
         :type: ref
@@ -64,9 +62,7 @@ Instructional Examples
     
     **Querying Metadata and Discharge Data from NWIS and WQP**
 
-    
-        This exercise will demonstrate how to approximate discharge by developing a rating curve for a stream at a given sampling point.
-    
+    This exercise will demonstrate how to approximate discharge by developing a rating curve for a stream at a given sampling point.
 
     .. link-button:: 20dc4af8451e44b3950b182a8f506296
         :type: ref
@@ -79,9 +75,7 @@ Instructional Examples
     
     **High Frequency Flow Data: Introduction to Dygraphs**
 
-    
-        This exercise will demonstrate how to create a dygraph using high frequency flow data to determine quickflow and baseflow after a storm event.
-    
+    This exercise will demonstrate how to create a dygraph using high frequency flow data to determine quickflow and baseflow after a storm event.
 
     .. link-button:: f1a6d0346ba94337a247ac7c62f16a2a
         :type: ref
@@ -94,9 +88,7 @@ Instructional Examples
     
     **Impacts of Mining on Specific Conductance and pH**
 
-    
-        This exercise will execute queries to import NWIS and WQP data into R to analyze the effects of mining.
-    
+    This exercise will execute queries to import NWIS and WQP data into R to analyze the effects of mining.
 
     .. link-button:: 106b934d0e4f40c98ba10b9fea773db5
         :type: ref
@@ -109,9 +101,7 @@ Instructional Examples
     
     **Exploratory Data Analysis**
 
-    
-        This lesson introduces exploratory data analysis using R statistical software in the context of the physical properties of lakes.
-    
+    This lesson introduces exploratory data analysis using R statistical software in the context of the physical properties of lakes.
 
     .. link-button:: 42052357655f4ad39f8ec7d0bef351c7
         :type: ref
@@ -124,9 +114,7 @@ Instructional Examples
     
     **Exploratory Data Visualization**
 
-    
-        This exercise will introduce the proper visualization of lake stratification using data from the LTER station.
-    
+    This exercise will introduce the proper visualization of lake stratification using data from the LTER station.
 
     .. link-button:: e22442bc4e4940609003b43747b366e0
         :type: ref
@@ -139,9 +127,7 @@ Instructional Examples
     
     **Introduction to LAGOSNE Database**
 
-    
-        This exercise will demonstrate how to use the trophic state index to analyze lake water quality.
-    
+    This exercise will demonstrate how to use the trophic state index to analyze lake water quality.
 
     .. link-button:: 179a844b41fe4a06807bef83667feccf
         :type: ref
@@ -154,9 +140,7 @@ Instructional Examples
     
     **Trend Detection and Forecasting**
 
-    
-        This exercise will demonstrate linear interpolation, Season Mann Kendall tests, and Autoregressive and Moving Average Models.
-    
+    This exercise will demonstrate linear interpolation, Season Mann Kendall tests, and Autoregressive and Moving Average Models.
 
     .. link-button:: 1d8d52774c51462aac817d7dec209f14
         :type: ref
@@ -169,9 +153,7 @@ Instructional Examples
     
     **Flashiness Index and Hysteresis Plots**
 
-    
-        This exercise will introduce the calculation of the Richards-Baker Flashiness Index and graphing hysteresis plots.
-    
+    This exercise will introduce the calculation of the Richards-Baker Flashiness Index and graphing hysteresis plots.
 
     .. link-button:: 4395d37cb2eb491f88d13bead2982855
         :type: ref
