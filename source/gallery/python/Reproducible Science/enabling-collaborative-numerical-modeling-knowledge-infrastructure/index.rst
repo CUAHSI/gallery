@@ -13,13 +13,12 @@
 
 
 
-.. container:: launch-container pb-1
+.. container:: container-lg launch-container pb-1
     
          
             :link-badge:`https://www.hydroshare.org/resource/fdc3a06e6ad842abacfa5b896df73a76,"Open In HydroShare",cls=badge-primary text-white launch-badge`
         
     
-
 
 .. raw:: html
 
@@ -27,143 +26,270 @@
     <hr>
     <br />&nbsp;
 
-
-
-
-
-.. dropdown:: Nathan Lyons
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    The Tulane University of New Orleans 
+    <h2> Authors </h2>
 
     
-    :link-badge:`nlyons@tulane.edu,"Email",cls=badge-primary text-white`
-    
+
+    <span class="NameHighlights">
+        <a href="javascript:;">Nathan Lyons</a>
+        
+            , 
+        
+        <div>
+
+            The Tulane University of New Orleans 
+
+            <hr>
+
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:nlyons@tulane.edu>
+                    <span>Email</span>
+                </a>
+            
+            
+
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/2909/>
+                    <span>Webpage</span>
+                </a>
+
+            
+
+        </div>
+    </span>
 
     
-    :link-badge:`https://hydroshare.org/user/2909/,"Webpage",cls=badge-primary text-white`
-    
 
+    <span class="NameHighlights">
+        <a href="javascript:;">Sai Siddhartha Nudurupati</a>
+        
+            , 
+        
+        <div>
 
+            University of Washington - Seattle 
 
-.. dropdown:: Sai Siddhartha Nudurupati
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    University of Washington - Seattle 
+            <hr>
 
-    
-    :link-badge:`saisiddu@uw.edu,"Email",cls=badge-primary text-white`
-    
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:saisiddu@uw.edu>
+                    <span>Email</span>
+                </a>
+            
+            
 
-    
-    :link-badge:`https://hydroshare.org/user/431/,"Webpage",cls=badge-primary text-white`
-    
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/431/>
+                    <span>Webpage</span>
+                </a>
 
+            
 
-
-.. dropdown:: Christina Bandaragoda
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    University of Washington 
-
-    
-    :link-badge:`cband@uw.edu,"Email",cls=badge-primary text-white`
-    
-
-    
-    :link-badge:`https://hydroshare.org/user/259/,"Webpage",cls=badge-primary text-white`
-    
-
-
-
-.. dropdown:: Katherine Barnhart
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    University of Colorado at Boulder 
+        </div>
+    </span>
 
     
-    :link-badge:`katy.barnhart@gmail.com,"Email",cls=badge-primary text-white`
-    
+
+    <span class="NameHighlights">
+        <a href="javascript:;">Christina Bandaragoda</a>
+        
+            , 
+        
+        <div>
+
+            University of Washington 
+
+            <hr>
+
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:cband@uw.edu>
+                    <span>Email</span>
+                </a>
+            
+            
+
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/259/>
+                    <span>Webpage</span>
+                </a>
+
+            
+
+        </div>
+    </span>
 
     
-    :link-badge:`https://hydroshare.org/user/1211/,"Webpage",cls=badge-primary text-white`
-    
 
+    <span class="NameHighlights">
+        <a href="javascript:;">Katherine Barnhart</a>
+        
+            , 
+        
+        <div>
 
+            University of Colorado at Boulder 
 
-.. dropdown:: Erkan Istanbulluoglu
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    University of Washington 
+            <hr>
 
-    
-    :link-badge:`erkani@uw.edu,"Email",cls=badge-primary text-white`
-    
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:katy.barnhart@gmail.com>
+                    <span>Email</span>
+                </a>
+            
+            
 
-    
-    :link-badge:`https://hydroshare.org/user/521/,"Webpage",cls=badge-primary text-white`
-    
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/1211/>
+                    <span>Webpage</span>
+                </a>
 
+            
 
-
-.. dropdown:: Jimmy Phuong
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    University of Washington 
-
-    
-    :link-badge:`jphuong@uw.edu,"Email",cls=badge-primary text-white`
-    
-
-    
-    :link-badge:`https://hydroshare.org/user/536/,"Webpage",cls=badge-primary text-white`
-    
-
-
-
-.. dropdown:: Ronda Strauch
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    University of Washington 
+        </div>
+    </span>
 
     
-    :link-badge:`rstrauch@uw.edu,"Email",cls=badge-primary text-white`
-    
+
+    <span class="NameHighlights">
+        <a href="javascript:;">Erkan Istanbulluoglu</a>
+        
+            , 
+        
+        <div>
+
+            University of Washington 
+
+            <hr>
+
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:erkani@uw.edu>
+                    <span>Email</span>
+                </a>
+            
+            
+
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/521/>
+                    <span>Webpage</span>
+                </a>
+
+            
+
+        </div>
+    </span>
 
     
-    :link-badge:`https://hydroshare.org/user/362/,"Webpage",cls=badge-primary text-white`
+
+    <span class="NameHighlights">
+        <a href="javascript:;">Jimmy Phuong</a>
+        
+            , 
+        
+        <div>
+
+            University of Washington 
+
+            <hr>
+
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:jphuong@uw.edu>
+                    <span>Email</span>
+                </a>
+            
+            
+
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/536/>
+                    <span>Webpage</span>
+                </a>
+
+            
+
+        </div>
+    </span>
+
     
 
+    <span class="NameHighlights">
+        <a href="javascript:;">Ronda Strauch</a>
+        
+            , 
+        
+        <div>
 
+            University of Washington 
 
-.. dropdown:: Anthony Michael Castronova
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    CUAHSI 
+            <hr>
+
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:rstrauch@uw.edu>
+                    <span>Email</span>
+                </a>
+            
+            
+
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/362/>
+                    <span>Webpage</span>
+                </a>
+
+            
+
+        </div>
+    </span>
 
     
-    :link-badge:`castronova.anthony@gmail.com,"Email",cls=badge-primary text-white`
-    
 
-    
-    :link-badge:`https://hydroshare.org/user/11/,"Webpage",cls=badge-primary text-white`
-    
+    <span class="NameHighlights">
+        <a href="javascript:;">Anthony Michael Castronova</a>
+        
+        <div>
+
+            CUAHSI 
+
+            <hr>
+
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:castronova.anthony@gmail.com>
+                    <span>Email</span>
+                </a>
+            
+            
+
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/11/>
+                    <span>Webpage</span>
+                </a>
+
+            
+
+        </div>
+    </span>
+
 
 
 
@@ -184,6 +310,12 @@
     
     
     </div>
+
+
+.. raw:: html
+
+    <h2> Code </h2>
+
 
 .. panels::
     :container: container pb-1 example-panels

@@ -13,13 +13,12 @@
 
 
 
-.. container:: launch-container pb-1
+.. container:: container-lg launch-container pb-1
     
          
             :link-badge:`https://hydroshare.org/resource/7704a2fc3d5e4da89c042164c623ba4f,"Open In HydroShare",cls=badge-primary text-white launch-badge`
         
     
-
 
 .. raw:: html
 
@@ -27,24 +26,39 @@
     <hr>
     <br />&nbsp;
 
-
-
-
-
-.. dropdown:: Martin Roberge
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    Towson University 
+    <h2> Authors </h2>
 
     
-    :link-badge:`mroberge@towson.edu,"Email",cls=badge-primary text-white`
-    
 
-    
-    :link-badge:`https://hydroshare.org/user/1091/,"Webpage",cls=badge-primary text-white`
-    
+    <span class="NameHighlights">
+        <a href="javascript:;">Martin Roberge</a>
+        
+        <div>
+
+            Towson University 
+
+            <hr>
+
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:mroberge@towson.edu>
+                    <span>Email</span>
+                </a>
+            
+            
+
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/1091/>
+                    <span>Webpage</span>
+                </a>
+
+            
+
+        </div>
+    </span>
+
 
 
 
@@ -65,6 +79,12 @@
     
     
     </div>
+
+
+.. raw:: html
+
+    <h2> Code </h2>
+
 
 .. panels::
     :container: container pb-1 example-panels

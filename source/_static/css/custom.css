@@ -5,6 +5,7 @@
 }
 
 .launch-container {
+    margin-left: 0px !important;
 }
 
 /*.wy-nav-content {
@@ -46,5 +47,29 @@ div.example-panels > div > div > div > div > blockquote {
     margin: 5px;
 }
 .example-description {
-    float: left; /* so the author btns don't mess with it /*
+    float: left; /* so the author btns don't mess with it */
+}
+.NameHighlights {
+    position:relative;
+}
+
+.NameHighlights div {
+    display: none;
+}
+
+.NameHighlightsHover {
+    position:relative;
+}
+
+.NameHighlightsHover div {
+    display:block;
+    position:absolute;
+    width: 15em;
+    top:1.3em;
+    *top:20px;
+    left:70px;
+    z-index:1000;
+    background-color: #DDD;
+    padding: 5px;
+    border-radius: 4px;
 }

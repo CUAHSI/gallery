@@ -13,13 +13,12 @@
 
 
 
-.. container:: launch-container pb-1
+.. container:: container-lg launch-container pb-1
     
          
             :link-badge:`https://cuahsi.shinyapps.io/mtm_baseflow,"Run Application",cls=badge-primary text-white launch-badge`
         
     
-
 
 .. raw:: html
 
@@ -27,41 +26,72 @@
     <hr>
     <br />&nbsp;
 
-
-
-
-
-.. dropdown:: Tony Castronova
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    CUAHSI 
+    <h2> Authors </h2>
 
     
-    :link-badge:`acastronova@cuahsi.org,"Email",cls=badge-primary text-white`
-    
+
+    <span class="NameHighlights">
+        <a href="javascript:;">Tony Castronova</a>
+        
+            , 
+        
+        <div>
+
+            CUAHSI 
+
+            <hr>
+
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:acastronova@cuahsi.org>
+                    <span>Email</span>
+                </a>
+            
+            
+
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=www.google.com>
+                    <span>Webpage</span>
+                </a>
+
+            
+
+        </div>
+    </span>
 
     
-    :link-badge:`www.google.com,"Webpage",cls=badge-primary text-white`
-    
 
+    <span class="NameHighlights">
+        <a href="javascript:;">Test</a>
+        
+        <div>
 
+            USU 
 
-.. dropdown:: Test
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    USU 
+            <hr>
 
-    
-    :link-badge:`test@aol.com,"Email",cls=badge-primary text-white`
-    
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:test@aol.com>
+                    <span>Email</span>
+                </a>
+            
+            
 
-    
-    :link-badge:`test.com,"Webpage",cls=badge-primary text-white`
-    
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=test.com>
+                    <span>Webpage</span>
+                </a>
+
+            
+
+        </div>
+    </span>
+
 
 
 
@@ -82,6 +112,12 @@
     
     
     </div>
+
+
+.. raw:: html
+
+    <h2> Code </h2>
+
 
 .. panels::
     :container: container pb-1 example-panels

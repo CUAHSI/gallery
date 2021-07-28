@@ -13,13 +13,12 @@
 
 
 
-.. container:: launch-container pb-1
+.. container:: container-lg launch-container pb-1
     
          
             :link-badge:`https://hydroshare.org/resource/f8420c1447fe440eb93e656b2db0b64d,"Open In HydroShare",cls=badge-primary text-white launch-badge`
         
     
-
 
 .. raw:: html
 
@@ -27,75 +26,138 @@
     <hr>
     <br />&nbsp;
 
-
-
-
-
-.. dropdown:: Miguel C Leon
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    University of Pennslyvania 
+    <h2> Authors </h2>
 
     
-    :link-badge:`leonmi@sas.upenn.edu,"Email",cls=badge-primary text-white`
-    
+
+    <span class="NameHighlights">
+        <a href="javascript:;">Miguel C Leon</a>
+        
+            , 
+        
+        <div>
+
+            University of Pennslyvania 
+
+            <hr>
+
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:leonmi@sas.upenn.edu>
+                    <span>Email</span>
+                </a>
+            
+            
+
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/602/>
+                    <span>Webpage</span>
+                </a>
+
+            
+
+        </div>
+    </span>
 
     
-    :link-badge:`https://hydroshare.org/user/602/,"Webpage",cls=badge-primary text-white`
-    
 
+    <span class="NameHighlights">
+        <a href="javascript:;">James B Shanley</a>
+        
+            , 
+        
+        <div>
 
+             
 
-.. dropdown:: James B Shanley
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-     
+            <hr>
 
-    
-    :link-badge:`jshanley@usgs.gov,"Email",cls=badge-primary text-white`
-    
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:jshanley@usgs.gov>
+                    <span>Email</span>
+                </a>
+            
+            
 
-    
-    :link-badge:`https://hydroshare.org/user/1008/,"Webpage",cls=badge-primary text-white`
-    
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/1008/>
+                    <span>Webpage</span>
+                </a>
 
+            
 
-
-.. dropdown:: Adam Wymore
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    University of New Hampshire 
-
-    
-    :link-badge:`adam.wymore@unh.edu,"Email",cls=badge-primary text-white`
-    
-
-    
-    :link-badge:`https://hydroshare.org/user/4165/,"Webpage",cls=badge-primary text-white`
-    
-
-
-
-.. dropdown:: William H McDowell
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    University of New Hampshire Main Campus 
+        </div>
+    </span>
 
     
-    :link-badge:`bill.mcdowell@unh.edu,"Email",cls=badge-primary text-white`
-    
+
+    <span class="NameHighlights">
+        <a href="javascript:;">Adam Wymore</a>
+        
+            , 
+        
+        <div>
+
+            University of New Hampshire 
+
+            <hr>
+
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:adam.wymore@unh.edu>
+                    <span>Email</span>
+                </a>
+            
+            
+
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/4165/>
+                    <span>Webpage</span>
+                </a>
+
+            
+
+        </div>
+    </span>
 
     
-    :link-badge:`https://hydroshare.org/user/1009/,"Webpage",cls=badge-primary text-white`
-    
+
+    <span class="NameHighlights">
+        <a href="javascript:;">William H McDowell</a>
+        
+        <div>
+
+            University of New Hampshire Main Campus 
+
+            <hr>
+
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:bill.mcdowell@unh.edu>
+                    <span>Email</span>
+                </a>
+            
+            
+
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/1009/>
+                    <span>Webpage</span>
+                </a>
+
+            
+
+        </div>
+    </span>
+
 
 
 
@@ -116,6 +178,12 @@
     
     
     </div>
+
+
+.. raw:: html
+
+    <h2> Code </h2>
+
 
 .. panels::
     :container: container pb-1 example-panels

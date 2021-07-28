@@ -53,6 +53,9 @@ extensions = ['sphinx.ext.todo',
               'sphinxcontrib.bibtex',
               'sphinx_panels',
               'recommonmark', # markdown support
+#              'sphinx_togglebutton',
+              'sphinxcontrib.contentui',
+              'hoverxref.extension',
 ]
 
 
@@ -140,6 +143,7 @@ htmlhelp_basename= 'testdoc'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 html_css_files = ['css/custom.css']
+html_js_files = ['js/custom.js']
 
 # this is text that will be appended to ..title directives
 html_title = 'CUAHSI Gallery'

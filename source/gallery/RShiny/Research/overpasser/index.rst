@@ -13,13 +13,12 @@
 
 
 
-.. container:: launch-container pb-1
+.. container:: container-lg launch-container pb-1
     
          
             :link-badge:`https://cuahsi.shinyapps.io/Overpasser,"Run Application",cls=badge-primary text-white launch-badge`
         
     
-
 
 .. raw:: html
 
@@ -27,65 +26,108 @@
     <hr>
     <br />&nbsp;
 
-
-
-
-
-.. dropdown:: Andrew Buchanan
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    University of North Carolina at Chapel Hill 
-
-    
-    :link-badge:`ajb28@live.unc.edu,"Email",cls=badge-primary text-white`
-    
+    <h2> Authors </h2>
 
     
 
+    <span class="NameHighlights">
+        <a href="javascript:;">Andrew Buchanan</a>
+        
+            , 
+        
+        <div>
 
+            University of North Carolina at Chapel Hill 
 
-.. dropdown:: Simon Topp
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    University of North Carolina at Chapel Hill 
+            <hr>
 
-    
-    :link-badge:`sntopp@live.unc.edu,"Email",cls=badge-primary text-white`
-    
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:ajb28@live.unc.edu>
+                    <span>Email</span>
+                </a>
+            
+            
 
-    
+            
+            
 
-
-
-.. dropdown:: John Gardner
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    University of North Carolina at Chapel Hill 
-
-    
-    :link-badge:`johngardner87@gmail.com,"Email",cls=badge-primary text-white`
-    
+        </div>
+    </span>
 
     
 
+    <span class="NameHighlights">
+        <a href="javascript:;">Simon Topp</a>
+        
+            , 
+        
+        <div>
 
+            University of North Carolina at Chapel Hill 
 
-.. dropdown:: Tamlin Pavelsky
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
+            <hr>
+
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:sntopp@live.unc.edu>
+                    <span>Email</span>
+                </a>
+            
+            
+
+            
+            
+
+        </div>
+    </span>
+
     
-     
+
+    <span class="NameHighlights">
+        <a href="javascript:;">John Gardner</a>
+        
+            , 
+        
+        <div>
+
+            University of North Carolina at Chapel Hill 
+
+            <hr>
+
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:johngardner87@gmail.com>
+                    <span>Email</span>
+                </a>
+            
+            
+
+            
+            
+
+        </div>
+    </span>
 
     
 
-    
+    <span class="NameHighlights">
+        <a href="javascript:;">Tamlin Pavelsky</a>
+        
+        <div>
+
+             
+
+            <hr>
+
+            
+
+            
+            
+
+        </div>
+    </span>
+
 
 
 
@@ -106,6 +148,12 @@
     
     
     </div>
+
+
+.. raw:: html
+
+    <h2> Code </h2>
+
 
 .. panels::
     :container: container pb-1 example-panels

@@ -13,13 +13,12 @@
 
 
 
-.. container:: launch-container pb-1
+.. container:: container-lg launch-container pb-1
     
          
             :link-badge:`https://hydroshare.org/resource/a2b87a2f25d046958ac604e522f449c0,"Open In HydroShare",cls=badge-primary text-white launch-badge`
         
     
-
 
 .. raw:: html
 
@@ -27,22 +26,33 @@
     <hr>
     <br />&nbsp;
 
-
-
-
-
-.. dropdown:: Tian Gan
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    Utah State University 
+    <h2> Authors </h2>
 
     
-    :link-badge:`jamy127@foxmail.com,"Email",cls=badge-primary text-white`
-    
 
-    
+    <span class="NameHighlights">
+        <a href="javascript:;">Tian Gan</a>
+        
+        <div>
+
+            Utah State University 
+
+            <hr>
+
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:jamy127@foxmail.com>
+                    <span>Email</span>
+                </a>
+            
+            
+
+            
+            
+
+        </div>
+    </span>
+
 
 
 
@@ -63,6 +73,12 @@
     
     
     </div>
+
+
+.. raw:: html
+
+    <h2> Code </h2>
+
 
 .. panels::
     :container: container pb-1 example-panels

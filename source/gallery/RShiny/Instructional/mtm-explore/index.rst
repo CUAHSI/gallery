@@ -13,13 +13,12 @@
 
 
 
-.. container:: launch-container pb-1
+.. container:: container-lg launch-container pb-1
     
          
             :link-badge:`https://cuahsi.shinyapps.io/mtm_explore,"Run Application",cls=badge-primary text-white launch-badge`
         
     
-
 
 .. raw:: html
 
@@ -27,41 +26,72 @@
     <hr>
     <br />&nbsp;
 
-
-
-
-
-.. dropdown:: Author 1
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    Organization 1 
+    <h2> Authors </h2>
 
     
-    :link-badge:`author1@organization1.com,"Email",cls=badge-primary text-white`
-    
+
+    <span class="NameHighlights">
+        <a href="javascript:;">Author 1</a>
+        
+            , 
+        
+        <div>
+
+            Organization 1 
+
+            <hr>
+
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:author1@organization1.com>
+                    <span>Email</span>
+                </a>
+            
+            
+
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=www.google.com>
+                    <span>Webpage</span>
+                </a>
+
+            
+
+        </div>
+    </span>
 
     
-    :link-badge:`www.google.com,"Webpage",cls=badge-primary text-white`
-    
 
+    <span class="NameHighlights">
+        <a href="javascript:;">Author 2</a>
+        
+        <div>
 
+            Organization 2 
 
-.. dropdown:: Author 2
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    Organization 2 
+            <hr>
 
-    
-    :link-badge:`author2@organization2.com,"Email",cls=badge-primary text-white`
-    
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:author2@organization2.com>
+                    <span>Email</span>
+                </a>
+            
+            
 
-    
-    :link-badge:`www.google.com,"Webpage",cls=badge-primary text-white`
-    
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=www.google.com>
+                    <span>Webpage</span>
+                </a>
+
+            
+
+        </div>
+    </span>
+
 
 
 
@@ -82,6 +112,12 @@
     
     
     </div>
+
+
+.. raw:: html
+
+    <h2> Code </h2>
+
 
 .. panels::
     :container: container pb-1 example-panels

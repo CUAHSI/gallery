@@ -13,13 +13,12 @@
 
 
 
-.. container:: launch-container pb-1
+.. container:: container-lg launch-container pb-1
     
          
             :link-badge:`https://www.hydroshare.org/resource/abf67aad0eb64a53bf787d369afdcc84/,"Open In HydroShare",cls=badge-primary text-white launch-badge`
         
     
-
 
 .. raw:: html
 
@@ -27,58 +26,105 @@
     <hr>
     <br />&nbsp;
 
-
-
-
-
-.. dropdown:: Merwade, Venkatesh
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    Purdue University 
+    <h2> Authors </h2>
 
     
-    :link-badge:`vmerwade@purdue.edu,"Email",cls=badge-primary text-white`
-    
+
+    <span class="NameHighlights">
+        <a href="javascript:;">Merwade, Venkatesh</a>
+        
+            , 
+        
+        <div>
+
+            Purdue University 
+
+            <hr>
+
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:vmerwade@purdue.edu>
+                    <span>Email</span>
+                </a>
+            
+            
+
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/64/>
+                    <span>Webpage</span>
+                </a>
+
+            
+
+        </div>
+    </span>
 
     
-    :link-badge:`https://hydroshare.org/user/64/,"Webpage",cls=badge-primary text-white`
+
+    <span class="NameHighlights">
+        <a href="javascript:;">Dey, Sayan</a>
+        
+            , 
+        
+        <div>
+
+            Purdue University 
+
+            <hr>
+
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:dey6@purdue.edu>
+                    <span>Email</span>
+                </a>
+            
+            
+
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/2983/>
+                    <span>Webpage</span>
+                </a>
+
+            
+
+        </div>
+    </span>
+
     
 
+    <span class="NameHighlights">
+        <a href="javascript:;">Wang, Shizhang</a>
+        
+        <div>
 
+            Purdue 
 
-.. dropdown:: Dey, Sayan
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    Purdue University 
+            <hr>
 
-    
-    :link-badge:`dey6@purdue.edu,"Email",cls=badge-primary text-white`
-    
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:wang2846@purdue.edu>
+                    <span>Email</span>
+                </a>
+            
+            
 
-    
-    :link-badge:`https://hydroshare.org/user/2983/,"Webpage",cls=badge-primary text-white`
-    
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/6348/>
+                    <span>Webpage</span>
+                </a>
 
+            
 
+        </div>
+    </span>
 
-.. dropdown:: Wang, Shizhang
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    Purdue 
-
-    
-    :link-badge:`wang2846@purdue.edu,"Email",cls=badge-primary text-white`
-    
-
-    
-    :link-badge:`https://hydroshare.org/user/6348/,"Webpage",cls=badge-primary text-white`
-    
 
 
 
@@ -99,6 +145,12 @@
     
     
     </div>
+
+
+.. raw:: html
+
+    <h2> Code </h2>
+
 
 .. panels::
     :container: container pb-1 example-panels

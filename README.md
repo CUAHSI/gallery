@@ -77,3 +77,7 @@ launch_options:
 
 Create a PR to merge your example into the Gallery. 
 
+
+### Run Development Server
+
+  `python -m http.server --directory source/_build/html 9000`

@@ -13,13 +13,12 @@
 
 
 
-.. container:: launch-container pb-1
+.. container:: container-lg launch-container pb-1
     
          
             :link-badge:`https://hydroshare.org/resource/5db7884111fb4662a13f64707c0c6890,"Open In HydroShare",cls=badge-primary text-white launch-badge`
         
     
-
 
 .. raw:: html
 
@@ -27,24 +26,39 @@
     <hr>
     <br />&nbsp;
 
-
-
-
-
-.. dropdown:: Jeff  Sadler
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    University of Virginia 
+    <h2> Authors </h2>
 
     
-    :link-badge:`jms3fb@virginia.edu,"Email",cls=badge-primary text-white`
-    
 
-    
-    :link-badge:`https://hydroshare.org/user/320/,"Webpage",cls=badge-primary text-white`
-    
+    <span class="NameHighlights">
+        <a href="javascript:;">Jeff  Sadler</a>
+        
+        <div>
+
+            University of Virginia 
+
+            <hr>
+
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:jms3fb@virginia.edu>
+                    <span>Email</span>
+                </a>
+            
+            
+
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/320/>
+                    <span>Webpage</span>
+                </a>
+
+            
+
+        </div>
+    </span>
+
 
 
 
@@ -65,6 +79,12 @@
     
     
     </div>
+
+
+.. raw:: html
+
+    <h2> Code </h2>
+
 
 .. panels::
     :container: container pb-1 example-panels

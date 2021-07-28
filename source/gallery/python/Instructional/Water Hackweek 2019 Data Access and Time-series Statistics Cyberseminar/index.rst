@@ -13,13 +13,12 @@
 
 
 
-.. container:: launch-container pb-1
+.. container:: container-lg launch-container pb-1
     
          
             :link-badge:`https://hydroshare.org/resource/9985b3cb38c94cee872b28f6dcdef739,"Open In HydroShare",cls=badge-primary text-white launch-badge`
         
     
-
 
 .. raw:: html
 
@@ -27,41 +26,72 @@
     <hr>
     <br />&nbsp;
 
-
-
-
-
-.. dropdown:: Yifan Cheng
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-     
+    <h2> Authors </h2>
 
     
-    :link-badge:`yifanc6@uw.edu,"Email",cls=badge-primary text-white`
-    
+
+    <span class="NameHighlights">
+        <a href="javascript:;">Yifan Cheng</a>
+        
+            , 
+        
+        <div>
+
+             
+
+            <hr>
+
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:yifanc6@uw.edu>
+                    <span>Email</span>
+                </a>
+            
+            
+
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/1509/>
+                    <span>Webpage</span>
+                </a>
+
+            
+
+        </div>
+    </span>
 
     
-    :link-badge:`https://hydroshare.org/user/1509/,"Webpage",cls=badge-primary text-white`
-    
 
+    <span class="NameHighlights">
+        <a href="javascript:;">Emilio Mayorga</a>
+        
+        <div>
 
+            University of Washington 
 
-.. dropdown:: Emilio Mayorga
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    University of Washington 
+            <hr>
 
-    
-    :link-badge:`emiliom@uw.edu,"Email",cls=badge-primary text-white`
-    
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:emiliom@uw.edu>
+                    <span>Email</span>
+                </a>
+            
+            
 
-    
-    :link-badge:`https://hydroshare.org/user/672/,"Webpage",cls=badge-primary text-white`
-    
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/672/>
+                    <span>Webpage</span>
+                </a>
+
+            
+
+        </div>
+    </span>
+
 
 
 
@@ -82,6 +112,12 @@
     
     
     </div>
+
+
+.. raw:: html
+
+    <h2> Code </h2>
+
 
 .. panels::
     :container: container pb-1 example-panels

@@ -13,13 +13,12 @@
 
 
 
-.. container:: launch-container pb-1
+.. container:: container-lg launch-container pb-1
     
          
             :link-badge:`https://hydroshare.org/resource/bae3f93a5dc54dd886729265eecc784f,"Open In HydroShare",cls=badge-primary text-white launch-badge`
         
     
-
 
 .. raw:: html
 
@@ -27,24 +26,39 @@
     <hr>
     <br />&nbsp;
 
-
-
-
-
-.. dropdown:: John Volk
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    University of Nevada Reno 
+    <h2> Authors </h2>
 
     
-    :link-badge:`johnvolk08@gmail.com,"Email",cls=badge-primary text-white`
-    
 
-    
-    :link-badge:`https://hydroshare.org/user/3192/,"Webpage",cls=badge-primary text-white`
-    
+    <span class="NameHighlights">
+        <a href="javascript:;">John Volk</a>
+        
+        <div>
+
+            University of Nevada Reno 
+
+            <hr>
+
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:johnvolk08@gmail.com>
+                    <span>Email</span>
+                </a>
+            
+            
+
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/3192/>
+                    <span>Webpage</span>
+                </a>
+
+            
+
+        </div>
+    </span>
+
 
 
 
@@ -65,6 +79,12 @@
     
     
     </div>
+
+
+.. raw:: html
+
+    <h2> Code </h2>
+
 
 .. panels::
     :container: container pb-1 example-panels

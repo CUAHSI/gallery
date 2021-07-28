@@ -13,13 +13,12 @@
 
 
 
-.. container:: launch-container pb-1
+.. container:: container-lg launch-container pb-1
     
          
             :link-badge:`https://hydroshare.org/resource/0886014659d443d4a2b9b189c96bab68,"Open In HydroShare",cls=badge-primary text-white launch-badge`
         
     
-
 
 .. raw:: html
 
@@ -27,73 +26,132 @@
     <hr>
     <br />&nbsp;
 
-
-
-
-
-.. dropdown:: Anthony Aufdenkampe
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    LimnoTech 
-
-    
-    :link-badge:`aaufdenkampe@limno.com,"Email",cls=badge-primary text-white`
-    
-
-    
-    :link-badge:`https://hydroshare.org/user/987/,"Webpage",cls=badge-primary text-white`
-    
-
-
-
-.. dropdown:: Denis Newbold
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    Stroud Water Research Center 
-
-    
-    :link-badge:`newbold@stroudcenter.org,"Email",cls=badge-primary text-white`
-    
+    <h2> Authors </h2>
 
     
 
+    <span class="NameHighlights">
+        <a href="javascript:;">Anthony Aufdenkampe</a>
+        
+            , 
+        
+        <div>
 
+            LimnoTech 
 
-.. dropdown:: Sara Geleskie Damiano
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    Stroud Water Research Center 
+            <hr>
 
-    
-    :link-badge:`sdamiano@stroudcenter.org,"Email",cls=badge-primary text-white`
-    
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:aaufdenkampe@limno.com>
+                    <span>Email</span>
+                </a>
+            
+            
 
-    
-    :link-badge:`https://hydroshare.org/user/2079/,"Webpage",cls=badge-primary text-white`
-    
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/987/>
+                    <span>Webpage</span>
+                </a>
 
+            
 
-
-.. dropdown:: Charles Dow
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-     
-
-    
-    :link-badge:`cdow@stroudcenter.org,"Email",cls=badge-primary text-white`
-    
+        </div>
+    </span>
 
     
-    :link-badge:`https://hydroshare.org/user/1326/,"Webpage",cls=badge-primary text-white`
+
+    <span class="NameHighlights">
+        <a href="javascript:;">Denis Newbold</a>
+        
+            , 
+        
+        <div>
+
+            Stroud Water Research Center 
+
+            <hr>
+
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:newbold@stroudcenter.org>
+                    <span>Email</span>
+                </a>
+            
+            
+
+            
+            
+
+        </div>
+    </span>
+
     
+
+    <span class="NameHighlights">
+        <a href="javascript:;">Sara Geleskie Damiano</a>
+        
+            , 
+        
+        <div>
+
+            Stroud Water Research Center 
+
+            <hr>
+
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:sdamiano@stroudcenter.org>
+                    <span>Email</span>
+                </a>
+            
+            
+
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/2079/>
+                    <span>Webpage</span>
+                </a>
+
+            
+
+        </div>
+    </span>
+
+    
+
+    <span class="NameHighlights">
+        <a href="javascript:;">Charles Dow</a>
+        
+        <div>
+
+             
+
+            <hr>
+
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:cdow@stroudcenter.org>
+                    <span>Email</span>
+                </a>
+            
+            
+
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/1326/>
+                    <span>Webpage</span>
+                </a>
+
+            
+
+        </div>
+    </span>
+
 
 
 
@@ -114,6 +172,12 @@
     
     
     </div>
+
+
+.. raw:: html
+
+    <h2> Code </h2>
+
 
 .. panels::
     :container: container pb-1 example-panels

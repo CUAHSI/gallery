@@ -13,13 +13,12 @@
 
 
 
-.. container:: launch-container pb-1
+.. container:: container-lg launch-container pb-1
     
          
             :link-badge:`https://cuahsi.shinyapps.io/HBEF_Discharge,"Run Application",cls=badge-primary text-white launch-badge`
         
     
-
 
 .. raw:: html
 
@@ -27,22 +26,33 @@
     <hr>
     <br />&nbsp;
 
-
-
-
-
-.. dropdown:: JP Gannon
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    Virgina Polytechnic Institute and State University 
+    <h2> Authors </h2>
 
     
 
-    
-    :link-badge:`www.jpgannon.com,"Webpage",cls=badge-primary text-white`
-    
+    <span class="NameHighlights">
+        <a href="javascript:;">JP Gannon</a>
+        
+        <div>
+
+            Virgina Polytechnic Institute and State University 
+
+            <hr>
+
+            
+
+            
+            
+                
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=www.jpgannon.com>
+                    <span>Webpage</span>
+                </a>
+
+            
+
+        </div>
+    </span>
+
 
 
 
@@ -63,6 +73,12 @@
     
     
     </div>
+
+
+.. raw:: html
+
+    <h2> Code </h2>
+
 
 .. panels::
     :container: container pb-1 example-panels

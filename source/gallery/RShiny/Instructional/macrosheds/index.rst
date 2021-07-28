@@ -13,13 +13,12 @@
 
 
 
-.. container:: launch-container pb-1
+.. container:: container-lg launch-container pb-1
     
          
             :link-badge:`https://cuahsi.shinyapps.io/WaterBalanceVT,"Run Application",cls=badge-primary text-white launch-badge`
         
     
-
 
 .. raw:: html
 
@@ -27,111 +26,174 @@
     <hr>
     <br />&nbsp;
 
-
-
-
-
-.. dropdown:: Matt Ross
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    Colorado State University 
+    <h2> Authors </h2>
 
     
 
-    
+    <span class="NameHighlights">
+        <a href="javascript:;">Matt Ross</a>
+        
+            , 
+        
+        <div>
 
+            Colorado State University 
 
+            <hr>
 
-.. dropdown:: Emily Bernhardt
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    Duke University 
+            
 
-    
+            
+            
 
-    
-
-
-
-.. dropdown:: Jill Baron
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    Colorado State University, USGS 
+        </div>
+    </span>
 
     
 
-    
+    <span class="NameHighlights">
+        <a href="javascript:;">Emily Bernhardt</a>
+        
+            , 
+        
+        <div>
 
+            Duke University 
 
+            <hr>
 
-.. dropdown:: Elizabeth W. Boyer
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    Pennsylvania State University 
+            
 
-    
+            
+            
 
-    
-
-
-
-.. dropdown:: Emma J. Rosi
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    Cary Institute 
+        </div>
+    </span>
 
     
 
-    
+    <span class="NameHighlights">
+        <a href="javascript:;">Jill Baron</a>
+        
+            , 
+        
+        <div>
 
+            Colorado State University, USGS 
 
+            <hr>
 
-.. dropdown:: Nandita Basu
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    University of Waterloo 
+            
 
-    
+            
+            
 
-    
-
-
-
-.. dropdown:: Kaelin Cawley
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
-    
-    NEON 
+        </div>
+    </span>
 
     
 
+    <span class="NameHighlights">
+        <a href="javascript:;">Elizabeth W. Boyer</a>
+        
+            , 
+        
+        <div>
+
+            Pennsylvania State University 
+
+            <hr>
+
+            
+
+            
+            
+
+        </div>
+    </span>
+
     
 
+    <span class="NameHighlights">
+        <a href="javascript:;">Emma J. Rosi</a>
+        
+            , 
+        
+        <div>
 
+            Cary Institute 
 
-.. dropdown:: Megan Joins
-    :container: + shadow btn-author
-    :animate: fade-in-slide-down
-    :body: bg-light text-left
+            <hr>
+
+            
+
+            
+            
+
+        </div>
+    </span>
+
     
-    NEON 
+
+    <span class="NameHighlights">
+        <a href="javascript:;">Nandita Basu</a>
+        
+            , 
+        
+        <div>
+
+            University of Waterloo 
+
+            <hr>
+
+            
+
+            
+            
+
+        </div>
+    </span>
 
     
 
+    <span class="NameHighlights">
+        <a href="javascript:;">Kaelin Cawley</a>
+        
+            , 
+        
+        <div>
+
+            NEON 
+
+            <hr>
+
+            
+
+            
+            
+
+        </div>
+    </span>
+
     
+
+    <span class="NameHighlights">
+        <a href="javascript:;">Megan Joins</a>
+        
+        <div>
+
+            NEON 
+
+            <hr>
+
+            
+
+            
+            
+
+        </div>
+    </span>
+
 
 
 
@@ -152,6 +214,12 @@
     
     
     </div>
+
+
+.. raw:: html
+
+    <h2> Code </h2>
+
 
 .. panels::
     :container: container pb-1 example-panels
