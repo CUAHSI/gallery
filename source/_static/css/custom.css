@@ -66,10 +66,11 @@ div.example-panels > div > div > div > div > blockquote {
     position:absolute;
     width: 15em;
     top:1.3em;
-    *top:20px;
     left:70px;
     z-index:1000;
-    background-color: #DDD;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
     padding: 5px;
-    border-radius: 4px;
+    border-radius: 0.25em;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 /15%);
 }
