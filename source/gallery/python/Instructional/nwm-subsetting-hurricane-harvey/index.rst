@@ -14,53 +14,56 @@
 
 
 .. container:: container-lg launch-container pb-1
+
     
          
             :link-badge:`https://hydroshare.org/resource/3db192783bcb4599bab36d43fc3413db,"Open In HydroShare",cls=badge-primary text-white launch-badge`
         
     
 
-.. raw:: html
 
-    <br />&nbsp;
-    <hr>
-    <br />&nbsp;
 
-    <h2> Authors </h2>
-
+.. container:: container-lg launch-container pb-1 author-div
     
+    .. raw:: html
 
-    <span class="NameHighlights">
-        <a href="javascript:;">Anthony Castronova</a>
+        <br />&nbsp;
+        <hr>
+        <br />&nbsp;
+        <h2> Authors </h2>
+
+            
+
+            <span class="NameHighlights">
+                <a href="javascript:;">Anthony Castronova</a>
+                
+                <div>
+
+                    CUAHSI 
+
+                    <hr>
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:castronova.anthony@gmail.com>
+                            <span>Email</span>
+                        </a>
+
+                    
+
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/11/>
+                            <span>Webpage</span>
+                        </a>
+
+                    
+
+                </div>
+            </span>
+
         
-        <div>
-
-            CUAHSI 
-
-            <hr>
-
-            
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:castronova.anthony@gmail.com>
-                    <span>Email</span>
-                </a>
-            
-            
-
-            
-            
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/11/>
-                    <span>Webpage</span>
-                </a>
-
-            
-
-        </div>
-    </span>
-
-
-
 
 
 .. raw:: html

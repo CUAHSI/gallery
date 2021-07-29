@@ -14,53 +14,56 @@
 
 
 .. container:: container-lg launch-container pb-1
+
     
          
             :link-badge:`https://hydroshare.org/resource/41c8d8f8788c4ba0b0bfbb924fe1d403,"Open In HydroShare",cls=badge-primary text-white launch-badge`
         
     
 
-.. raw:: html
 
-    <br />&nbsp;
-    <hr>
-    <br />&nbsp;
 
-    <h2> Authors </h2>
-
+.. container:: container-lg launch-container pb-1 author-div
     
+    .. raw:: html
 
-    <span class="NameHighlights">
-        <a href="javascript:;">Jeff  Sadler</a>
+        <br />&nbsp;
+        <hr>
+        <br />&nbsp;
+        <h2> Authors </h2>
+
+            
+
+            <span class="NameHighlights">
+                <a href="javascript:;">Jeff  Sadler</a>
+                
+                <div>
+
+                    University of Virginia 
+
+                    <hr>
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:jms3fb@virginia.edu>
+                            <span>Email</span>
+                        </a>
+
+                    
+
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/320/>
+                            <span>Webpage</span>
+                        </a>
+
+                    
+
+                </div>
+            </span>
+
         
-        <div>
-
-            University of Virginia 
-
-            <hr>
-
-            
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:jms3fb@virginia.edu>
-                    <span>Email</span>
-                </a>
-            
-            
-
-            
-            
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/320/>
-                    <span>Webpage</span>
-                </a>
-
-            
-
-        </div>
-    </span>
-
-
-
 
 
 .. raw:: html

@@ -14,86 +14,89 @@
 
 
 .. container:: container-lg launch-container pb-1
+
     
          
             :link-badge:`https://hydroshare.org/resource/9985b3cb38c94cee872b28f6dcdef739,"Open In HydroShare",cls=badge-primary text-white launch-badge`
         
     
 
-.. raw:: html
 
-    <br />&nbsp;
-    <hr>
-    <br />&nbsp;
 
-    <h2> Authors </h2>
-
+.. container:: container-lg launch-container pb-1 author-div
     
+    .. raw:: html
 
-    <span class="NameHighlights">
-        <a href="javascript:;">Yifan Cheng</a>
+        <br />&nbsp;
+        <hr>
+        <br />&nbsp;
+        <h2> Authors </h2>
+
+            
+
+            <span class="NameHighlights">
+                <a href="javascript:;">Yifan Cheng</a>
+                
+                    , 
+                
+                <div>
+
+                     
+
+                    <hr>
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:yifanc6@uw.edu>
+                            <span>Email</span>
+                        </a>
+
+                    
+
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/1509/>
+                            <span>Webpage</span>
+                        </a>
+
+                    
+
+                </div>
+            </span>
+
+            
+
+            <span class="NameHighlights">
+                <a href="javascript:;">Emilio Mayorga</a>
+                
+                <div>
+
+                    University of Washington 
+
+                    <hr>
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:emiliom@uw.edu>
+                            <span>Email</span>
+                        </a>
+
+                    
+
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/672/>
+                            <span>Webpage</span>
+                        </a>
+
+                    
+
+                </div>
+            </span>
+
         
-            , 
-        
-        <div>
-
-             
-
-            <hr>
-
-            
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:yifanc6@uw.edu>
-                    <span>Email</span>
-                </a>
-            
-            
-
-            
-            
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/1509/>
-                    <span>Webpage</span>
-                </a>
-
-            
-
-        </div>
-    </span>
-
-    
-
-    <span class="NameHighlights">
-        <a href="javascript:;">Emilio Mayorga</a>
-        
-        <div>
-
-            University of Washington 
-
-            <hr>
-
-            
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:emiliom@uw.edu>
-                    <span>Email</span>
-                </a>
-            
-            
-
-            
-            
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/672/>
-                    <span>Webpage</span>
-                </a>
-
-            
-
-        </div>
-    </span>
-
-
-
 
 
 .. raw:: html

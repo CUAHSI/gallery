@@ -74,3 +74,7 @@ div.example-panels > div > div > div > div > blockquote {
     border-radius: 0.25em;
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 /15%);
 }
+
+.document {
+    margin-right: 100px;
+}

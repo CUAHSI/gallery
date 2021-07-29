@@ -14,188 +14,191 @@
 
 
 .. container:: container-lg launch-container pb-1
+
     
          
             :link-badge:`https://cuahsi.shinyapps.io/WaterBalanceVT,"Run Application",cls=badge-primary text-white launch-badge`
         
     
 
-.. raw:: html
 
-    <br />&nbsp;
-    <hr>
-    <br />&nbsp;
 
-    <h2> Authors </h2>
-
+.. container:: container-lg launch-container pb-1 author-div
     
+    .. raw:: html
 
-    <span class="NameHighlights">
-        <a href="javascript:;">Matt Ross</a>
+        <br />&nbsp;
+        <hr>
+        <br />&nbsp;
+        <h2> Authors </h2>
+
+            
+
+            <span class="NameHighlights">
+                <a href="javascript:;">Matt Ross</a>
+                
+                    , 
+                
+                <div>
+
+                    Colorado State University 
+
+                    <hr>
+
+                    
+
+
+                    
+
+                </div>
+            </span>
+
+            
+
+            <span class="NameHighlights">
+                <a href="javascript:;">Emily Bernhardt</a>
+                
+                    , 
+                
+                <div>
+
+                    Duke University 
+
+                    <hr>
+
+                    
+
+
+                    
+
+                </div>
+            </span>
+
+            
+
+            <span class="NameHighlights">
+                <a href="javascript:;">Jill Baron</a>
+                
+                    , 
+                
+                <div>
+
+                    Colorado State University, USGS 
+
+                    <hr>
+
+                    
+
+
+                    
+
+                </div>
+            </span>
+
+            
+
+            <span class="NameHighlights">
+                <a href="javascript:;">Elizabeth W. Boyer</a>
+                
+                    , 
+                
+                <div>
+
+                    Pennsylvania State University 
+
+                    <hr>
+
+                    
+
+
+                    
+
+                </div>
+            </span>
+
+            
+
+            <span class="NameHighlights">
+                <a href="javascript:;">Emma J. Rosi</a>
+                
+                    , 
+                
+                <div>
+
+                    Cary Institute 
+
+                    <hr>
+
+                    
+
+
+                    
+
+                </div>
+            </span>
+
+            
+
+            <span class="NameHighlights">
+                <a href="javascript:;">Nandita Basu</a>
+                
+                    , 
+                
+                <div>
+
+                    University of Waterloo 
+
+                    <hr>
+
+                    
+
+
+                    
+
+                </div>
+            </span>
+
+            
+
+            <span class="NameHighlights">
+                <a href="javascript:;">Kaelin Cawley</a>
+                
+                    , 
+                
+                <div>
+
+                    NEON 
+
+                    <hr>
+
+                    
+
+
+                    
+
+                </div>
+            </span>
+
+            
+
+            <span class="NameHighlights">
+                <a href="javascript:;">Megan Joins</a>
+                
+                <div>
+
+                    NEON 
+
+                    <hr>
+
+                    
+
+
+                    
+
+                </div>
+            </span>
+
         
-            , 
-        
-        <div>
-
-            Colorado State University 
-
-            <hr>
-
-            
-
-            
-            
-
-        </div>
-    </span>
-
-    
-
-    <span class="NameHighlights">
-        <a href="javascript:;">Emily Bernhardt</a>
-        
-            , 
-        
-        <div>
-
-            Duke University 
-
-            <hr>
-
-            
-
-            
-            
-
-        </div>
-    </span>
-
-    
-
-    <span class="NameHighlights">
-        <a href="javascript:;">Jill Baron</a>
-        
-            , 
-        
-        <div>
-
-            Colorado State University, USGS 
-
-            <hr>
-
-            
-
-            
-            
-
-        </div>
-    </span>
-
-    
-
-    <span class="NameHighlights">
-        <a href="javascript:;">Elizabeth W. Boyer</a>
-        
-            , 
-        
-        <div>
-
-            Pennsylvania State University 
-
-            <hr>
-
-            
-
-            
-            
-
-        </div>
-    </span>
-
-    
-
-    <span class="NameHighlights">
-        <a href="javascript:;">Emma J. Rosi</a>
-        
-            , 
-        
-        <div>
-
-            Cary Institute 
-
-            <hr>
-
-            
-
-            
-            
-
-        </div>
-    </span>
-
-    
-
-    <span class="NameHighlights">
-        <a href="javascript:;">Nandita Basu</a>
-        
-            , 
-        
-        <div>
-
-            University of Waterloo 
-
-            <hr>
-
-            
-
-            
-            
-
-        </div>
-    </span>
-
-    
-
-    <span class="NameHighlights">
-        <a href="javascript:;">Kaelin Cawley</a>
-        
-            , 
-        
-        <div>
-
-            NEON 
-
-            <hr>
-
-            
-
-            
-            
-
-        </div>
-    </span>
-
-    
-
-    <span class="NameHighlights">
-        <a href="javascript:;">Megan Joins</a>
-        
-        <div>
-
-            NEON 
-
-            <hr>
-
-            
-
-            
-            
-
-        </div>
-    </span>
-
-
-
 
 
 .. raw:: html

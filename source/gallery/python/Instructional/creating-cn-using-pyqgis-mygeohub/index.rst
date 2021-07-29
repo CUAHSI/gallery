@@ -14,119 +14,122 @@
 
 
 .. container:: container-lg launch-container pb-1
+
     
          
             :link-badge:`https://www.hydroshare.org/resource/abf67aad0eb64a53bf787d369afdcc84/,"Open In HydroShare",cls=badge-primary text-white launch-badge`
         
     
 
-.. raw:: html
 
-    <br />&nbsp;
-    <hr>
-    <br />&nbsp;
 
-    <h2> Authors </h2>
-
+.. container:: container-lg launch-container pb-1 author-div
     
+    .. raw:: html
 
-    <span class="NameHighlights">
-        <a href="javascript:;">Merwade, Venkatesh</a>
+        <br />&nbsp;
+        <hr>
+        <br />&nbsp;
+        <h2> Authors </h2>
+
+            
+
+            <span class="NameHighlights">
+                <a href="javascript:;">Merwade, Venkatesh</a>
+                
+                    , 
+                
+                <div>
+
+                    Purdue University 
+
+                    <hr>
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:vmerwade@purdue.edu>
+                            <span>Email</span>
+                        </a>
+
+                    
+
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/64/>
+                            <span>Webpage</span>
+                        </a>
+
+                    
+
+                </div>
+            </span>
+
+            
+
+            <span class="NameHighlights">
+                <a href="javascript:;">Dey, Sayan</a>
+                
+                    , 
+                
+                <div>
+
+                    Purdue University 
+
+                    <hr>
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:dey6@purdue.edu>
+                            <span>Email</span>
+                        </a>
+
+                    
+
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/2983/>
+                            <span>Webpage</span>
+                        </a>
+
+                    
+
+                </div>
+            </span>
+
+            
+
+            <span class="NameHighlights">
+                <a href="javascript:;">Wang, Shizhang</a>
+                
+                <div>
+
+                    Purdue 
+
+                    <hr>
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:wang2846@purdue.edu>
+                            <span>Email</span>
+                        </a>
+
+                    
+
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/6348/>
+                            <span>Webpage</span>
+                        </a>
+
+                    
+
+                </div>
+            </span>
+
         
-            , 
-        
-        <div>
-
-            Purdue University 
-
-            <hr>
-
-            
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:vmerwade@purdue.edu>
-                    <span>Email</span>
-                </a>
-            
-            
-
-            
-            
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/64/>
-                    <span>Webpage</span>
-                </a>
-
-            
-
-        </div>
-    </span>
-
-    
-
-    <span class="NameHighlights">
-        <a href="javascript:;">Dey, Sayan</a>
-        
-            , 
-        
-        <div>
-
-            Purdue University 
-
-            <hr>
-
-            
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:dey6@purdue.edu>
-                    <span>Email</span>
-                </a>
-            
-            
-
-            
-            
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/2983/>
-                    <span>Webpage</span>
-                </a>
-
-            
-
-        </div>
-    </span>
-
-    
-
-    <span class="NameHighlights">
-        <a href="javascript:;">Wang, Shizhang</a>
-        
-        <div>
-
-            Purdue 
-
-            <hr>
-
-            
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:wang2846@purdue.edu>
-                    <span>Email</span>
-                </a>
-            
-            
-
-            
-            
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/6348/>
-                    <span>Webpage</span>
-                </a>
-
-            
-
-        </div>
-    </span>
-
-
-
 
 
 .. raw:: html

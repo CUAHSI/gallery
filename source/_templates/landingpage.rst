@@ -14,6 +14,7 @@
 
 
 .. container:: container-lg launch-container pb-1
+
     {% for option in launch_options %}
         {% if 'tooltip' in option %}
             :link-badge:`{{ option['url'] }},"{{ option['name'] }}",cls=badge-primary text-white launch-badge, tooltip={{ option['tooltip'] }}`
@@ -22,49 +23,51 @@
         {% endif %}
     {% endfor %}
 
-.. raw:: html
 
-    <br />&nbsp;
-    <hr>
-    <br />&nbsp;
 
-    <h2> Authors </h2>
+.. container:: container-lg launch-container pb-1 author-div
+    
+    .. raw:: html
 
-{% for i in range(0, authors|length) %}    
+        <br />&nbsp;
+        <hr>
+        <br />&nbsp;
+        <h2> Authors </h2>
 
-    <span class="NameHighlights">
-        <a href="javascript:;">{{ authors[i]['name'] }}</a>
-        {% if i < authors|length - 1 %}
-            , 
-        {% endif %}
-        <div>
+        {% for i in range(0, authors|length) %}    
 
-            {{ authors[i]['organization'] }} 
+            <span class="NameHighlights">
+                <a href="javascript:;">{{ authors[i]['name'] }}</a>
+                {% if i < authors|length - 1 %}
+                    , 
+                {% endif %}
+                <div>
 
-            <hr>
+                    {{ authors[i]['organization'] }} 
 
-            {% if 'email' in authors[i] %}
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:{{ authors[i]['email'] }}>
-                    <span>Email</span>
-                </a>
-            
-            {% endif %}
+                    <hr>
 
-            
-            {% if 'url' in authors[i] %}
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href={{ authors[i]['url'] }}>
-                    <span>Webpage</span>
-                </a>
+                    {% if 'email' in authors[i] %}
 
-            {% endif %}
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:{{ authors[i]['email'] }}>
+                            <span>Email</span>
+                        </a>
 
-        </div>
-    </span>
+                    {% endif %}
 
-{% endfor %}
 
+                    {% if 'url' in authors[i] %}
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href={{ authors[i]['url'] }}>
+                            <span>Webpage</span>
+                        </a>
+
+                    {% endif %}
+
+                </div>
+            </span>
+
+        {% endfor %}
 
 
 .. raw:: html

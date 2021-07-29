@@ -14,122 +14,125 @@
 
 
 .. container:: container-lg launch-container pb-1
+
     
          
             :link-badge:`https://cuahsi.shinyapps.io/Overpasser,"Run Application",cls=badge-primary text-white launch-badge`
         
     
 
-.. raw:: html
 
-    <br />&nbsp;
-    <hr>
-    <br />&nbsp;
 
-    <h2> Authors </h2>
-
+.. container:: container-lg launch-container pb-1 author-div
     
+    .. raw:: html
 
-    <span class="NameHighlights">
-        <a href="javascript:;">Andrew Buchanan</a>
-        
-            , 
-        
-        <div>
-
-            University of North Carolina at Chapel Hill 
-
-            <hr>
+        <br />&nbsp;
+        <hr>
+        <br />&nbsp;
+        <h2> Authors </h2>
 
             
+
+            <span class="NameHighlights">
+                <a href="javascript:;">Andrew Buchanan</a>
                 
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:ajb28@live.unc.edu>
-                    <span>Email</span>
-                </a>
-            
-            
-
-            
-            
-
-        </div>
-    </span>
-
-    
-
-    <span class="NameHighlights">
-        <a href="javascript:;">Simon Topp</a>
-        
-            , 
-        
-        <div>
-
-            University of North Carolina at Chapel Hill 
-
-            <hr>
-
-            
+                    , 
                 
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:sntopp@live.unc.edu>
-                    <span>Email</span>
-                </a>
-            
-            
+                <div>
+
+                    University of North Carolina at Chapel Hill 
+
+                    <hr>
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:ajb28@live.unc.edu>
+                            <span>Email</span>
+                        </a>
+
+                    
+
+
+                    
+
+                </div>
+            </span>
 
             
-            
 
-        </div>
-    </span>
-
-    
-
-    <span class="NameHighlights">
-        <a href="javascript:;">John Gardner</a>
-        
-            , 
-        
-        <div>
-
-            University of North Carolina at Chapel Hill 
-
-            <hr>
-
-            
+            <span class="NameHighlights">
+                <a href="javascript:;">Simon Topp</a>
                 
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:johngardner87@gmail.com>
-                    <span>Email</span>
-                </a>
-            
-            
+                    , 
+                
+                <div>
+
+                    University of North Carolina at Chapel Hill 
+
+                    <hr>
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:sntopp@live.unc.edu>
+                            <span>Email</span>
+                        </a>
+
+                    
+
+
+                    
+
+                </div>
+            </span>
 
             
+
+            <span class="NameHighlights">
+                <a href="javascript:;">John Gardner</a>
+                
+                    , 
+                
+                <div>
+
+                    University of North Carolina at Chapel Hill 
+
+                    <hr>
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:johngardner87@gmail.com>
+                            <span>Email</span>
+                        </a>
+
+                    
+
+
+                    
+
+                </div>
+            </span>
+
             
 
-        </div>
-    </span>
+            <span class="NameHighlights">
+                <a href="javascript:;">Tamlin Pavelsky</a>
+                
+                <div>
 
-    
+                     
 
-    <span class="NameHighlights">
-        <a href="javascript:;">Tamlin Pavelsky</a>
+                    <hr>
+
+                    
+
+
+                    
+
+                </div>
+            </span>
+
         
-        <div>
-
-             
-
-            <hr>
-
-            
-
-            
-            
-
-        </div>
-    </span>
-
-
-
 
 
 .. raw:: html

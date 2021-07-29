@@ -14,47 +14,50 @@
 
 
 .. container:: container-lg launch-container pb-1
+
     
          
             :link-badge:`https://hydroshare.org/resource/a2b87a2f25d046958ac604e522f449c0,"Open In HydroShare",cls=badge-primary text-white launch-badge`
         
     
 
-.. raw:: html
 
-    <br />&nbsp;
-    <hr>
-    <br />&nbsp;
 
-    <h2> Authors </h2>
-
+.. container:: container-lg launch-container pb-1 author-div
     
+    .. raw:: html
 
-    <span class="NameHighlights">
-        <a href="javascript:;">Tian Gan</a>
-        
-        <div>
-
-            Utah State University 
-
-            <hr>
+        <br />&nbsp;
+        <hr>
+        <br />&nbsp;
+        <h2> Authors </h2>
 
             
+
+            <span class="NameHighlights">
+                <a href="javascript:;">Tian Gan</a>
                 
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:jamy127@foxmail.com>
-                    <span>Email</span>
-                </a>
-            
-            
+                <div>
 
-            
-            
+                    Utah State University 
 
-        </div>
-    </span>
+                    <hr>
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:jamy127@foxmail.com>
+                            <span>Email</span>
+                        </a>
+
+                    
 
 
+                    
 
+                </div>
+            </span>
+
+        
 
 
 .. raw:: html

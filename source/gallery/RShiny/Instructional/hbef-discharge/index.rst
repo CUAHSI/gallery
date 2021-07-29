@@ -14,47 +14,50 @@
 
 
 .. container:: container-lg launch-container pb-1
+
     
          
             :link-badge:`https://cuahsi.shinyapps.io/HBEF_Discharge,"Run Application",cls=badge-primary text-white launch-badge`
         
     
 
-.. raw:: html
 
-    <br />&nbsp;
-    <hr>
-    <br />&nbsp;
 
-    <h2> Authors </h2>
-
+.. container:: container-lg launch-container pb-1 author-div
     
+    .. raw:: html
 
-    <span class="NameHighlights">
-        <a href="javascript:;">JP Gannon</a>
-        
-        <div>
-
-            Virgina Polytechnic Institute and State University 
-
-            <hr>
+        <br />&nbsp;
+        <hr>
+        <br />&nbsp;
+        <h2> Authors </h2>
 
             
 
-            
-            
+            <span class="NameHighlights">
+                <a href="javascript:;">JP Gannon</a>
                 
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=www.jpgannon.com>
-                    <span>Webpage</span>
-                </a>
+                <div>
 
-            
+                    Virgina Polytechnic Institute and State University 
 
-        </div>
-    </span>
+                    <hr>
 
+                    
 
 
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=www.jpgannon.com>
+                            <span>Webpage</span>
+                        </a>
+
+                    
+
+                </div>
+            </span>
+
+        
 
 
 .. raw:: html

@@ -14,146 +14,149 @@
 
 
 .. container:: container-lg launch-container pb-1
+
     
          
             :link-badge:`https://hydroshare.org/resource/0886014659d443d4a2b9b189c96bab68,"Open In HydroShare",cls=badge-primary text-white launch-badge`
         
     
 
-.. raw:: html
 
-    <br />&nbsp;
-    <hr>
-    <br />&nbsp;
 
-    <h2> Authors </h2>
-
+.. container:: container-lg launch-container pb-1 author-div
     
+    .. raw:: html
 
-    <span class="NameHighlights">
-        <a href="javascript:;">Anthony Aufdenkampe</a>
-        
-            , 
-        
-        <div>
-
-            LimnoTech 
-
-            <hr>
+        <br />&nbsp;
+        <hr>
+        <br />&nbsp;
+        <h2> Authors </h2>
 
             
+
+            <span class="NameHighlights">
+                <a href="javascript:;">Anthony Aufdenkampe</a>
                 
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:aaufdenkampe@limno.com>
-                    <span>Email</span>
-                </a>
-            
-            
-
-            
-            
+                    , 
                 
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/987/>
-                    <span>Webpage</span>
-                </a>
+                <div>
+
+                    LimnoTech 
+
+                    <hr>
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:aaufdenkampe@limno.com>
+                            <span>Email</span>
+                        </a>
+
+                    
+
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/987/>
+                            <span>Webpage</span>
+                        </a>
+
+                    
+
+                </div>
+            </span>
 
             
 
-        </div>
-    </span>
+            <span class="NameHighlights">
+                <a href="javascript:;">Denis Newbold</a>
+                
+                    , 
+                
+                <div>
 
-    
+                    Stroud Water Research Center 
 
-    <span class="NameHighlights">
-        <a href="javascript:;">Denis Newbold</a>
+                    <hr>
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:newbold@stroudcenter.org>
+                            <span>Email</span>
+                        </a>
+
+                    
+
+
+                    
+
+                </div>
+            </span>
+
+            
+
+            <span class="NameHighlights">
+                <a href="javascript:;">Sara Geleskie Damiano</a>
+                
+                    , 
+                
+                <div>
+
+                    Stroud Water Research Center 
+
+                    <hr>
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:sdamiano@stroudcenter.org>
+                            <span>Email</span>
+                        </a>
+
+                    
+
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/2079/>
+                            <span>Webpage</span>
+                        </a>
+
+                    
+
+                </div>
+            </span>
+
+            
+
+            <span class="NameHighlights">
+                <a href="javascript:;">Charles Dow</a>
+                
+                <div>
+
+                     
+
+                    <hr>
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:cdow@stroudcenter.org>
+                            <span>Email</span>
+                        </a>
+
+                    
+
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/1326/>
+                            <span>Webpage</span>
+                        </a>
+
+                    
+
+                </div>
+            </span>
+
         
-            , 
-        
-        <div>
-
-            Stroud Water Research Center 
-
-            <hr>
-
-            
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:newbold@stroudcenter.org>
-                    <span>Email</span>
-                </a>
-            
-            
-
-            
-            
-
-        </div>
-    </span>
-
-    
-
-    <span class="NameHighlights">
-        <a href="javascript:;">Sara Geleskie Damiano</a>
-        
-            , 
-        
-        <div>
-
-            Stroud Water Research Center 
-
-            <hr>
-
-            
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:sdamiano@stroudcenter.org>
-                    <span>Email</span>
-                </a>
-            
-            
-
-            
-            
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/2079/>
-                    <span>Webpage</span>
-                </a>
-
-            
-
-        </div>
-    </span>
-
-    
-
-    <span class="NameHighlights">
-        <a href="javascript:;">Charles Dow</a>
-        
-        <div>
-
-             
-
-            <hr>
-
-            
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:cdow@stroudcenter.org>
-                    <span>Email</span>
-                </a>
-            
-            
-
-            
-            
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/1326/>
-                    <span>Webpage</span>
-                </a>
-
-            
-
-        </div>
-    </span>
-
-
-
 
 
 .. raw:: html
