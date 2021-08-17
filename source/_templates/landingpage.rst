@@ -25,6 +25,9 @@
 
 
 
+Authors
+*******
+
 .. container:: container-lg launch-container pb-1 author-div
     
     .. raw:: html
@@ -92,42 +95,32 @@
     </div>
 
 
-.. raw:: html
+******
+Code
+******
 
-    <h2> Code </h2>
-
-
-.. panels::
-    :container: container pb-1 example-panels
-    :card: shadow
-    :column: col-lg-6 col-md-6 col-sm-12 col-xs-12 p-2
-    :body: text-left
-
-    ---
-    {% if code_path %}
-
-       **Source Code**
-       ^^^^^^^^^^^
-     .. toctree::
+{% if code_path %}
+    .. toctree::
         :maxdepth: 1
         :titlesonly:
         :glob:
-        
+     
         {% if code_path %}
-        {{ code_path }}/**
+            {{ code_path }}/**
         {% else %}
-        data/**
+            data/**
         {% endif %}
-     {% endif %}
-     {% if notebooks %}
-       **Source Code**
-       ^^^^^^^^^^^
-     .. toctree::
-        :titlesonly:
-        :maxdepth: 1
 
-        {% for item in notebooks %}
-        {{ item['label'] }} <{{ item['name'] }}>
-        {% endfor %}
-     {% endif %}
+{% endif %}
+
+{% if notebooks %}
+    .. toctree::
+       :titlesonly:
+       :maxdepth: 1
+
+       {% for item in notebooks %}
+           {{ item['label'] }} <{{ item['name'] }}>
+       {% endfor %}
+
+{% endif %}
 

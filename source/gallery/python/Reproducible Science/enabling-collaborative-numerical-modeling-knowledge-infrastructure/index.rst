@@ -23,6 +23,9 @@
 
 
 
+Authors
+*******
+
 .. container:: container-lg launch-container pb-1 author-div
     
     .. raw:: html
@@ -296,6 +299,20 @@
 
         
 
+.. tabs::
+
+   .. tab:: Apples
+
+      Apples are green, or sometimes red.
+
+   .. tab:: Pears
+
+      Pears are green.
+
+   .. tab:: Oranges
+
+      Oranges are orange.
+
 
 .. raw:: html
 
@@ -315,29 +332,21 @@
     </div>
 
 
-.. raw:: html
+******
+Code
+******
 
-    <h2> Code </h2>
 
 
-.. panels::
-    :container: container pb-1 example-panels
-    :card: shadow
-    :column: col-lg-6 col-md-6 col-sm-12 col-xs-12 p-2
-    :body: text-left
 
-    ---
-    
-     
-       **Source Code**
-       ^^^^^^^^^^^
-     .. toctree::
-        :titlesonly:
-        :maxdepth: 1
+    .. toctree::
+       :titlesonly:
+       :maxdepth: 1
 
-        
-        Explore Routing Tutorial <./notebooks/explore_routing_tutorial.ipynb>
-        
-        Replicate Landslide Model for Fire <./notebooks/replicate_landslide_model_for_fire.ipynb>
-        
-     
+       
+           Explore Routing Tutorial <./notebooks/explore_routing_tutorial.ipynb>
+       
+           Replicate Landslide Model for Fire <./notebooks/replicate_landslide_model_for_fire.ipynb>
+       
+
+

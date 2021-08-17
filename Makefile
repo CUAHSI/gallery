@@ -1,6 +1,11 @@
 # Makefile for Sphinx documentation
 #
 
+
+# Oneshell means I can run multiple lines in a recipe in the same shell, so I don't have to
+# chain commands together with semicolon
+.ONESHELL:
+
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
@@ -11,6 +16,12 @@ BUILDDIR      = source/_build
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
 ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) ./source
+
+# anaconda support
+SHELL=/bin/bash
+# Note that the extra activate is needed to ensure that the activate floats env to the front of PATH
+CONDA_ACTIVATE=source $$(conda info --base)/etc/profile.d/conda.sh ; conda activate ; conda activate
+
 
 .PHONY: help clean html github
 
@@ -26,16 +37,16 @@ clean:
 	-rm -rf $(BUILDDIR)/*
 
 html:
-	python make-gallery-pages.py -g ./source/gallery
+	$(CONDA_ACTIVATE) gallery; python make-gallery-pages.py -g ./source/gallery
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
 rebuild: 
-	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
+	$(CONDA_ACTIVATE) gallery; $(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 
 cache:
-	python make-gallery-pages.py -g ./source/gallery --cache
+	$(CONDA_ACTIVATE) gallery; python make-gallery-pages.py -g ./source/gallery --cache
 	@make rebuild
 
 github:

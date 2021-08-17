@@ -23,6 +23,9 @@
 
 
 
+Authors
+*******
+
 .. container:: container-lg launch-container pb-1 author-div
     
     .. raw:: html
@@ -84,29 +87,20 @@
     </div>
 
 
-.. raw:: html
+******
+Code
+******
 
-    <h2> Code </h2>
 
-
-.. panels::
-    :container: container pb-1 example-panels
-    :card: shadow
-    :column: col-lg-6 col-md-6 col-sm-12 col-xs-12 p-2
-    :body: text-left
-
-    ---
-    
-
-       **Source Code**
-       ^^^^^^^^^^^
-     .. toctree::
+    .. toctree::
         :maxdepth: 1
         :titlesonly:
         :glob:
-        
-        
-        ./data/**
-        
      
-     
+        
+            ./data/**
+        
+
+
+
+

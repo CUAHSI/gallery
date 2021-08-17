@@ -56,9 +56,11 @@ extensions = ['sphinx.ext.todo',
 #              'sphinx_togglebutton',
               'sphinxcontrib.contentui',
               'hoverxref.extension',
+              'sphinx_tabs.tabs'
 ]
 
-
+# sphinx-tabs configuration
+sphinx_tabs_disable_tab_closing = True
 
 # Generate Autosummary even if no references
 autosummary_generate = True
