@@ -64,7 +64,6 @@
             </span>
 
         
-    .. raw:: html
 
 
 .. raw:: html
@@ -72,7 +71,6 @@
     <br />&nbsp;
     <br />&nbsp;
 
-.. raw:: html
 
 .. tabs::
     
@@ -82,9 +80,8 @@
     
         .. raw:: html
         
-        This notebook demonstrates how to use the Python package "hydrofunctions" to download stream discharge data from the NWIS and plot a stream hydrograph and a flow duration chart.
+            This notebook demonstrates how to use the Python package "hydrofunctions" to download stream discharge data from the NWIS and plot a stream hydrograph and a flow duration chart.
 
-        .. raw:: html
     
         
 
@@ -98,7 +95,7 @@
             :glob:
      
             
-                ./notebooks/**
+            ./notebooks/**
             
 
         

@@ -50,12 +50,12 @@ extensions = ['sphinx.ext.todo',
               'nbsphinx',
               'sphinx.ext.mathjax',
               'sphinx_copybutton',
-              'sphinxcontrib.bibtex',
+#              'sphinxcontrib.bibtex',
               'sphinx_panels',
               'recommonmark', # markdown support
 #              'sphinx_togglebutton',
               'sphinxcontrib.contentui',
-              'hoverxref.extension',
+#              'hoverxref.extension',
               'sphinx_tabs.tabs'
 ]
 
@@ -116,11 +116,7 @@ html_theme_options = {
     # suppress 'next' and 'previous' page buttons
     'prev_next_buttons_location': None,
 
-
-  
-   
 }
-
 
 html_sidebars = {
    '**': ['globaltoc.html', 'sourcelink.html', 'relations.html', 'searchbox.html'],
@@ -157,9 +153,6 @@ pygments_style = 'sphinx'
 highlight_language= 'python3' 
 
 
-
-
-
 # Nbsphinx Configuration
 
 ## Use this kernel instead of the one stored in the notebook metadata
@@ -184,4 +177,4 @@ def setup(app):
     app.add_directive('mdinclude', MdInclude)
 
 
-bibtex_bibfiles = ['refs.bib']
+# bibtex_bibfiles = ['refs.bib']

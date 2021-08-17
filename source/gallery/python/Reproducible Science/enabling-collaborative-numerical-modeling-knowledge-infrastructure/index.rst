@@ -295,7 +295,6 @@
             </span>
 
         
-    .. raw:: html
 
 
 .. raw:: html
@@ -303,7 +302,6 @@
     <br />&nbsp;
     <br />&nbsp;
 
-.. raw:: html
 
 .. tabs::
     
@@ -326,16 +324,13 @@
                :maxdepth: 1
 
                
-                   Explore Routing Tutorial <./notebooks/explore_routing_tutorial.ipynb>
+               Explore Routing Tutorial <./notebooks/explore_routing_tutorial.ipynb>
                
-                   Replicate Landslide Model for Fire <./notebooks/replicate_landslide_model_for_fire.ipynb>
+               Replicate Landslide Model for Fire <./notebooks/replicate_landslide_model_for_fire.ipynb>
+               
+               Reuse Ecohydrology Model with Gridded Hydrometeorology Forcing <./notebooks/reuse_ecohydrology_gridhydromet.ipynb>
                
 
         
-
-    
-    .. tab:: Additional Information
-
-        This is additional info from yaml
 
     

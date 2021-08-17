@@ -97,7 +97,6 @@
             </span>
 
         
-    .. raw:: html
 
 
 .. raw:: html
@@ -105,7 +104,6 @@
     <br />&nbsp;
     <br />&nbsp;
 
-.. raw:: html
 
 .. tabs::
     
@@ -115,9 +113,8 @@
     
         .. raw:: html
         
-        The application demonstrates how to discover and retrieve water quality data.
+            The application demonstrates how to discover and retrieve water quality data.
 
-        .. raw:: html
     
         
 

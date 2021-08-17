@@ -4,7 +4,7 @@
 
 .. toctree::
    :caption: Table of Contents
-   :name: mastertoc
+   :name: Python-toc
    :hidden:
    :glob:
 
@@ -188,11 +188,11 @@ Instructional Examples
     ---
     :img-top: /_static/missing-thumbnail.png
     
-    **Creating Curve Number Grid using PyQGIS**
+    **Waterhackweek 2019 Data Cyberseminar**
 
-    A template for creating a curve number grid raster file using PyQGIS and Pandas.
+    This seminar focuses on time series data from sites commonly represented as fixed geographical points.
 
-    .. link-button:: abf67aad0eb64a53bf787d369afdcc84
+    .. link-button:: 9985b3cb38c94cee872b28f6dcdef739
         :type: ref
         :text: Open Example
         :classes: btn-outline-primary btn-block stretched-link
@@ -201,11 +201,11 @@ Instructional Examples
     ---
     :img-top: /_static/missing-thumbnail.png
     
-    **Waterhackweek 2019 Data Cyberseminar**
+    **Creating Curve Number Grid using PyQGIS**
 
-    This seminar focuses on time series data from sites commonly represented as fixed geographical points.
+    A template for creating a curve number grid raster file using PyQGIS and Pandas.
 
-    .. link-button:: 9985b3cb38c94cee872b28f6dcdef739
+    .. link-button:: abf67aad0eb64a53bf787d369afdcc84
         :type: ref
         :text: Open Example
         :classes: btn-outline-primary btn-block stretched-link

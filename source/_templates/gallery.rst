@@ -4,7 +4,7 @@
 
 .. toctree::
    :caption: Table of Contents
-   :name: mastertoc
+   :name: {{ gallery_title }}-toc
    :hidden:
    :glob:
 

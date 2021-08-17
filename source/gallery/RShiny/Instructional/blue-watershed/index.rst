@@ -97,7 +97,6 @@
             </span>
 
         
-    .. raw:: html
 
 
 .. raw:: html
@@ -105,7 +104,6 @@
     <br />&nbsp;
     <br />&nbsp;
 
-.. raw:: html
 
 .. tabs::
     
@@ -115,9 +113,8 @@
     
         .. raw:: html
         
-        In this teaching module, you will explore changing water quality in the Snake River Watershed (near Keystone Ski Area, in red) and Upper Blue River Watershed (near Breckenridge, in blue). We will look at a 50-year record of concentration of key nutrients, pollutants, and discharge, to gain a better understanding of the factors (land use, discharge, pH) that influence water quality in high mountain watersheds. Markers on map show location of WQ monitoring sites. Code, a lesson summary, and data for this web application can be found at my Github site
+            In this teaching module, you will explore changing water quality in the Snake River Watershed (near Keystone Ski Area, in red) and Upper Blue River Watershed (near Breckenridge, in blue). We will look at a 50-year record of concentration of key nutrients, pollutants, and discharge, to gain a better understanding of the factors (land use, discharge, pH) that influence water quality in high mountain watersheds. Markers on map show location of WQ monitoring sites. Code, a lesson summary, and data for this web application can be found at my Github site
 
-        .. raw:: html
     
         
 

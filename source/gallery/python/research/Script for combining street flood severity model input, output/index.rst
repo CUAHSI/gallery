@@ -64,7 +64,6 @@
             </span>
 
         
-    .. raw:: html
 
 
 .. raw:: html
@@ -72,7 +71,6 @@
     <br />&nbsp;
     <br />&nbsp;
 
-.. raw:: html
 
 .. tabs::
     
@@ -82,9 +80,8 @@
     
         .. raw:: html
         
-        Script and accompanying notebook written in Python 2.7 for combining flood report data (output) and environmental data (input) into a format suitable for a data-driven model. These data used as target values for street data-driven flood prediction severity modeling for Norfolk, VA 2010-2016. This modeling is described in this Journal of Hydrology paper: https://doi.org/10.1016/j.jhydrol.2018.01.044.
+            Script and accompanying notebook written in Python 2.7 for combining flood report data (output) and environmental data (input) into a format suitable for a data-driven model. These data used as target values for street data-driven flood prediction severity modeling for Norfolk, VA 2010-2016. This modeling is described in this Journal of Hydrology paper: https://doi.org/10.1016/j.jhydrol.2018.01.044.
 
-        .. raw:: html
     
         
 
@@ -98,7 +95,7 @@
             :glob:
      
             
-                ./data/**
+            ./data/**
             
 
         

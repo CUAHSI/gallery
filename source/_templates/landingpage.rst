@@ -68,7 +68,6 @@
             </span>
 
         {% endfor %}
-    .. raw:: html
 
 
 .. raw:: html
@@ -76,7 +75,6 @@
     <br />&nbsp;
     <br />&nbsp;
 
-.. raw:: html
 
 .. tabs::
     
@@ -90,9 +88,8 @@
     
         .. raw:: html
         
-        {{ description }}
+            {{ description }}
 
-        .. raw:: html
     
         {% endif %}
 
@@ -106,9 +103,9 @@
             :glob:
      
             {% if code_path %}
-                {{ code_path }}/**
+            {{ code_path }}/**
             {% else %}
-                data/**
+            data/**
             {% endif %}
 
         {% endif %}
@@ -119,7 +116,7 @@
                :maxdepth: 1
 
                {% for item in notebooks %}
-                   {{ item['label'] }} <{{ item['name'] }}>
+               {{ item['label'] }} <{{ item['name'] }}>
                {% endfor %}
 
         {% endif %}

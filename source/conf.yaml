@@ -18,10 +18,9 @@ galleries:
     gallery_path: ./source/gallery/RShiny
     description: Community contributed, interactive, web applications developed with the R Shiny package. 
   
-  
   - display_name: MATLAB
     thumbnail: /_static/matlab-logo.jpeg
-    gallery_path: ./source/gallery/matlab
+    gallery_path: ./source/gallery/Matlab
     description: Community examples using the MATLAB programming language. This includes MATLAB scripts as well as MATLAB Live scripts.
 
 #########################################

@@ -58,7 +58,6 @@
             </span>
 
         
-    .. raw:: html
 
 
 .. raw:: html
@@ -66,7 +65,6 @@
     <br />&nbsp;
     <br />&nbsp;
 
-.. raw:: html
 
 .. tabs::
     
@@ -76,9 +74,8 @@
     
         .. raw:: html
         
-        In this app you can explore Precipitation and Streamflow in Several HBEF watersheds.
+            In this app you can explore Precipitation and Streamflow in Several HBEF watersheds.
 
-        .. raw:: html
     
         
 

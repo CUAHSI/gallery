@@ -97,7 +97,6 @@
             </span>
 
         
-    .. raw:: html
 
 
 .. raw:: html
@@ -105,7 +104,6 @@
     <br />&nbsp;
     <br />&nbsp;
 
-.. raw:: html
 
 .. tabs::
     
@@ -115,9 +113,8 @@
     
         .. raw:: html
         
-        This application shows how mining has changed the slope and elevation profiles of landscapes in West Virginia, along with providing an estimate of total spoil volume deposited into headwater valleys as a result of mining. The number that shows up when you click on a watershed is an estimate of how deeply mine spoil would bury the watershed if the spoil were spread evenly across it.
+            This application shows how mining has changed the slope and elevation profiles of landscapes in West Virginia, along with providing an estimate of total spoil volume deposited into headwater valleys as a result of mining. The number that shows up when you click on a watershed is an estimate of how deeply mine spoil would bury the watershed if the spoil were spread evenly across it.
 
-        .. raw:: html
     
         
 

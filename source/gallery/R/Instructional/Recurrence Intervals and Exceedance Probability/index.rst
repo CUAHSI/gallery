@@ -97,7 +97,6 @@
             </span>
 
         
-    .. raw:: html
 
 
 .. raw:: html
@@ -105,7 +104,6 @@
     <br />&nbsp;
     <br />&nbsp;
 
-.. raw:: html
 
 .. tabs::
     
@@ -115,9 +113,8 @@
     
         .. raw:: html
         
-        Physical Properties of Rivers: Calculating Recurrence Interval and Exceedance Probability<br><br>This lesson was adapted from educational material written by Dr. Kateri Salk for her Fall 2019 Hydrologic Data Analysis course at Duke University. This is the first part of a two-part exercise focusing on the physical properties of rivers. <br><br>Introduction<br><br>Rivers are bodies of freshwater flowing from higher elevations to lower elevations due to the force of gravity. One of the most important physical characteristics of a stream or river is discharge, the volume of water moving through the river or stream over a given amount of time. This exercise will introduce the concepts of Recurrence Intervals and Exceedance Probability for the prediction of streamflow discharge. <br><br> Learning Objectives <br><br>After successfully completing this exercise, you will be able to:<br><br>1. Execute queries to pull a variety of National Water Information System (NWIS) and Water Quality Portal (WQP) data into R.<br>2. Calculate recurrence interval and exceedance probability from daily discharge data.
+            Physical Properties of Rivers: Calculating Recurrence Interval and Exceedance Probability<br><br>This lesson was adapted from educational material written by Dr. Kateri Salk for her Fall 2019 Hydrologic Data Analysis course at Duke University. This is the first part of a two-part exercise focusing on the physical properties of rivers. <br><br>Introduction<br><br>Rivers are bodies of freshwater flowing from higher elevations to lower elevations due to the force of gravity. One of the most important physical characteristics of a stream or river is discharge, the volume of water moving through the river or stream over a given amount of time. This exercise will introduce the concepts of Recurrence Intervals and Exceedance Probability for the prediction of streamflow discharge. <br><br> Learning Objectives <br><br>After successfully completing this exercise, you will be able to:<br><br>1. Execute queries to pull a variety of National Water Information System (NWIS) and Water Quality Portal (WQP) data into R.<br>2. Calculate recurrence interval and exceedance probability from daily discharge data.
 
-        .. raw:: html
     
         
 
@@ -131,7 +128,7 @@
             :glob:
      
             
-                ./notebooks/**
+            ./notebooks/**
             
 
         
