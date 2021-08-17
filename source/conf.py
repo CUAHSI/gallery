@@ -19,12 +19,12 @@ from m2r import MdInclude
 
 # -- Project information -----------------------------------------------------
 
-project = 'BuildDocs'
+project = 'CUAHSI Gallery'
 copyright = '2020'
-author = 'Gaby Garcia'
+author = 'Anthony Castronova, et al.'
 
 # The full version, including alpha/beta/rc tags
-version = '3.7.2'
+version = '0.1'
 release = 'version'
 
 
@@ -59,7 +59,7 @@ extensions = ['sphinx.ext.todo',
               'sphinx_tabs.tabs'
 ]
 
-# sphinx-tabs configuration
+## sphinx-tabs configuration
 sphinx_tabs_disable_tab_closing = True
 
 # Generate Autosummary even if no references

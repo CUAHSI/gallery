@@ -23,9 +23,6 @@
 
 
 
-Authors
-*******
-
 .. container:: container-lg launch-container pb-1 author-div
     
     .. raw:: html
@@ -67,6 +64,7 @@ Authors
             </span>
 
         
+    .. raw:: html
 
 
 .. raw:: html
@@ -74,33 +72,37 @@ Authors
     <br />&nbsp;
     <br />&nbsp;
 
-    <div class=example-description>
-    
-    <h2> Description </h2>
+.. raw:: html
 
+.. tabs::
     
+    .. tab:: Description
+
+        
     
-    <p>This resource includes hourly precipitation data collected by National Oceanic and Atmospheric Administration's (NOAA's) and downloaded from the National Climate Data Center (NCDC) from station located in Beltsville, MD. These data were collected to with the purpose of obtain important inputs for some further research about hydrologic modeling. Samples were collected automatically through code in Python. Methods implemented for sample collection and analysis are described within the resource.</p>
+        .. raw:: html
+        
+        This resource includes hourly precipitation data collected by National Oceanic and Atmospheric Administration's (NOAA's) and downloaded from the National Climate Data Center (NCDC) from station located in Beltsville, MD. These data were collected to with the purpose of obtain important inputs for some further research about hydrologic modeling. Samples were collected automatically through code in Python. Methods implemented for sample collection and analysis are described within the resource.
+
+        .. raw:: html
     
-    
-    
-    </div>
+        
+
+    .. tab:: Code 
 
 
-******
-Code
-******
-
-
-    .. toctree::
-        :maxdepth: 1
-        :titlesonly:
-        :glob:
+        
+        .. toctree::
+            :maxdepth: 1
+            :titlesonly:
+            :glob:
      
+            
+                ./notebooks/**
+            
+
         
-            ./notebooks/**
+
         
 
-
-
-
+    

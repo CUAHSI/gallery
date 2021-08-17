@@ -23,9 +23,6 @@
 
 
 
-Authors
-*******
-
 .. container:: container-lg launch-container pb-1 author-div
     
     .. raw:: html
@@ -298,20 +295,7 @@ Authors
             </span>
 
         
-
-.. tabs::
-
-   .. tab:: Apples
-
-      Apples are green, or sometimes red.
-
-   .. tab:: Pears
-
-      Pears are green.
-
-   .. tab:: Oranges
-
-      Oranges are orange.
+    .. raw:: html
 
 
 .. raw:: html
@@ -319,34 +303,39 @@ Authors
     <br />&nbsp;
     <br />&nbsp;
 
-    <div class=example-description>
+.. raw:: html
+
+.. tabs::
     
-    <h2> Description </h2>
+    .. tab:: Description
+
+        
+    
+        .. mdinclude:: readme.md
+    
+        
+
+    .. tab:: Code 
+
+
+        
+
+        
+            .. toctree::
+               :titlesonly:
+               :maxdepth: 1
+
+               
+                   Explore Routing Tutorial <./notebooks/explore_routing_tutorial.ipynb>
+               
+                   Replicate Landslide Model for Fire <./notebooks/replicate_landslide_model_for_fire.ipynb>
+               
+
+        
 
     
+    .. tab:: Additional Information
+
+        This is additional info from yaml
+
     
-    <p><p>The ability to test hypotheses about hydrology, geomorphology, and atmospheric processes is invaluable to research in the Earth and planetary sciences. To swiftly develop experiments using community resources is an extraordinary emerging opportunity to accelerate the rate of scientific advancement. Knowledge infrastructure is an intellectual framework to understand how people are creating, sharing, and distributing knowledge &#8212; which has dramatically changed and is continually transformed by Internet technologies. We are actively designing a knowledge infrastructure system for earth surface investigations. In this paper, we illustrate how this infrastructure can be utilized to lower common barriers to reproducing modeling experiments. These barriers include: developing education and training materials for classroom use, publishing research that can be replicated by reviewers and readers, and advancing collaborative research by re-using earth surface models in new locations or in new applications. We outline six critical elements to this infrastructure: </p> <ol class=text-ol> <li> design of workflows for ease of use by new users </li> <li> a community-supported collaborative web platform that supports publishing and privacy </li> <li> data storage that may be distributed to different locations; 4) a software environment </li> <li> a personalized cloud-based high performance computing (<span class="caps">HPC</span>) platform </li> <li> a standardized modeling framework that is growing with open source contributions </li> </ol><p> Our methodology uses the following tools to meet the above functional requirements. Landlab is an open-source modeling toolkit for building, coupling, and exploring two-dimensional numerical models. The Consortium of Universities Allied for Hydrologic Science (<span class="caps">CUAHSI</span>) supports the development and maintenance of a JupyterHub server that provides the software environment for the system. Data storage and web access are provided by HydroShare, an online collaborative environment for sharing data and models. The knowledge infrastructure system accelerates knowledge development by providing a suite of modular and interoperable process components that can be combined to create an integrated model. Online collaboration functions provide multiple levels of sharing and privacy settings, open source license options, and <span class="caps">DOI</span> publishing, and cloud access to high-speed processing. This allows students, domain experts, collaborators, researcher, and sponsors to interactively execute and explore shared data and modeling resources. Our system is designed to support the user experiences on the continuum from fully developed modeling applications to prototyping new science tools. We have provided three computational narratives for readers to interact with hands-on, problem-based research demonstrations &#8211; these are publicly available Jupyter Notebooks available on HydroShare.</p>To contibute to this work, see: <a href="https://github.com/ChristinaB/pub_bandaragoda_etal_ems">GitHub</a> or <a href="https://zenodo.org/badge/latestdoi/187289993">Zenodo</a></p></p>
-    
-    
-    
-    </div>
-
-
-******
-Code
-******
-
-
-
-
-    .. toctree::
-       :titlesonly:
-       :maxdepth: 1
-
-       
-           Explore Routing Tutorial <./notebooks/explore_routing_tutorial.ipynb>
-       
-           Replicate Landslide Model for Fire <./notebooks/replicate_landslide_model_for_fire.ipynb>
-       
-
-

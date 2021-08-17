@@ -23,9 +23,6 @@
 
 
 
-Authors
-*******
-
 .. container:: container-lg launch-container pb-1 author-div
     
     .. raw:: html
@@ -136,6 +133,7 @@ Authors
             </span>
 
         
+    .. raw:: html
 
 
 .. raw:: html
@@ -143,23 +141,27 @@ Authors
     <br />&nbsp;
     <br />&nbsp;
 
-    <div class=example-description>
+.. raw:: html
+
+.. tabs::
     
-    <h2> Description </h2>
+    .. tab:: Description
+
+        
+    
+        .. raw:: html
+        
+        Overpasser was designed for integrating satellite remote sensing and field data collection. It is an interactive tool that visualizes the location and footprint of satellite overpasses (or tiles, such as Landsat 7, 8, and Sentinel 2A/B) as well as date/times. Overpasser can help researchers plan field campaigns during satellite overpasses as well as to simply visualize the spatial and temporal coverage of satellite images over study areas.Directions:1. Select your preferred satellites.2. Click on the map (in as many locations as desired) or manually enter coordinates to see overpass locations on map and a table of dates. (The table can be interactively sorted by different columns by clicking the header).3. Click the “Download” button at the bottom to generate a .csv file of the table of overpass dates.4. Hit “Reset” to clear selections and start over.
+
+        .. raw:: html
+    
+        
+
+    .. tab:: Code 
+
+
+        
+
+        
 
     
-    
-    <p>Overpasser was designed for integrating satellite remote sensing and field data collection. It is an interactive tool that visualizes the location and footprint of satellite overpasses (or tiles, such as Landsat 7, 8, and Sentinel 2A/B) as well as date/times. Overpasser can help researchers plan field campaigns during satellite overpasses as well as to simply visualize the spatial and temporal coverage of satellite images over study areas.Directions:1. Select your preferred satellites.2. Click on the map (in as many locations as desired) or manually enter coordinates to see overpass locations on map and a table of dates. (The table can be interactively sorted by different columns by clicking the header).3. Click the “Download” button at the bottom to generate a .csv file of the table of overpass dates.4. Hit “Reset” to clear selections and start over.</p>
-    
-    
-    
-    </div>
-
-
-******
-Code
-******
-
-
-
-

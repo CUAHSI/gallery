@@ -25,9 +25,6 @@
 
 
 
-Authors
-*******
-
 .. container:: container-lg launch-container pb-1 author-div
     
     .. raw:: html
@@ -71,6 +68,7 @@ Authors
             </span>
 
         {% endfor %}
+    .. raw:: html
 
 
 .. raw:: html
@@ -78,49 +76,57 @@ Authors
     <br />&nbsp;
     <br />&nbsp;
 
-    <div class=example-description>
-    
-    <h2> Description </h2>
+.. raw:: html
 
-    {% if markdown %}
+.. tabs::
     
-    .. mdinclude:: {{ markdown }}
-    
-    {% else %}
-    
-    <p>{{ description }}</p>
-    
-    {% endif %}
-    
-    </div>
+    .. tab:: Description
 
-
-******
-Code
-******
-
-{% if code_path %}
-    .. toctree::
-        :maxdepth: 1
-        :titlesonly:
-        :glob:
-     
-        {% if code_path %}
-            {{ code_path }}/**
+        {% if markdown %}
+    
+        .. mdinclude:: {{ markdown }}
+    
         {% else %}
-            data/**
+    
+        .. raw:: html
+        
+        {{ description }}
+
+        .. raw:: html
+    
         {% endif %}
 
-{% endif %}
+    .. tab:: Code 
 
-{% if notebooks %}
-    .. toctree::
-       :titlesonly:
-       :maxdepth: 1
 
-       {% for item in notebooks %}
-           {{ item['label'] }} <{{ item['name'] }}>
-       {% endfor %}
+        {% if code_path %}
+        .. toctree::
+            :maxdepth: 1
+            :titlesonly:
+            :glob:
+     
+            {% if code_path %}
+                {{ code_path }}/**
+            {% else %}
+                data/**
+            {% endif %}
 
-{% endif %}
+        {% endif %}
 
+        {% if notebooks %}
+            .. toctree::
+               :titlesonly:
+               :maxdepth: 1
+
+               {% for item in notebooks %}
+                   {{ item['label'] }} <{{ item['name'] }}>
+               {% endfor %}
+
+        {% endif %}
+
+    {% if additional_info %}
+    .. tab:: Additional Information
+
+        {{ additional_info }}
+
+    {% endif %}

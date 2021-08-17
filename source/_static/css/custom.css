@@ -75,23 +75,24 @@ div.example-panels > div > div > div > div > blockquote {
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 /15%);
 }
 
-.document {
-    margin-right: 100px;
+.author-div {
+    /* this is to ensure that hover boxes don't appear off the right
+    side of the screen. */
+    padding-right: 100px !important;
 }
 
-ol {
+/* styling for lists on example landing pages */
+.document ol {
     margin: 10px;
-    padding: 30px;
-}
-ol  li {
-    list-style-type: decimal;
     padding: 0.25em;
 }
 
-ul {
+.document ul {
     margin: 10px;
-    padding: 30px;
+    padding: 0.25em;
 }
-ul  li {
+
+.document li {
+    list-style-type: decimal;
     padding: 0.25em;
 }

@@ -23,9 +23,6 @@
 
 
 
-Authors
-*******
-
 .. container:: container-lg launch-container pb-1 author-div
     
     .. raw:: html
@@ -127,6 +124,7 @@ Authors
             </span>
 
         
+    .. raw:: html
 
 
 .. raw:: html
@@ -134,33 +132,37 @@ Authors
     <br />&nbsp;
     <br />&nbsp;
 
-    <div class=example-description>
-    
-    <h2> Description </h2>
+.. raw:: html
 
+.. tabs::
     
+    .. tab:: Description
+
+        
     
-    <p>Chemical Properties of Rivers: Impacts of Mining on Specific Conductance and pH<br><br>This lesson was adapted from educational material written by Dr. Kateri Salk and Cathy Chamberlin for the Fall 2019 Hydrologic Data Analysis course at Duke University. <br><br>Introduction<br><br>The hydrologic impacts on mining can cause cause damage to a landscape in an area much larger than the mining site itself. Water-pollution problems caused by mining include acid mine drainage, metal contamination, and increased sediment levels. The devastating effects of mining impact fisheries, swimming, domestic water supply, irrigation, and other uses of streams. For more information on the environmental impacts of mining, please visit http://www.pollutionissues.com/Li-Na/Mining.html#ixzz6jGlfrX9m<br><br>Learning Objectives <br><br>After successfully completing this exercise, you will be able to:<br><br>1. Execute queries to pull a variety of National Water Information System (NWIS) and Water Quality Portal (WQP) data into R.<br>2. Analyze inorganic aspects of water quality following a watershed disturbance such as mining.</p>
+        .. raw:: html
+        
+        Chemical Properties of Rivers: Impacts of Mining on Specific Conductance and pH<br><br>This lesson was adapted from educational material written by Dr. Kateri Salk and Cathy Chamberlin for the Fall 2019 Hydrologic Data Analysis course at Duke University. <br><br>Introduction<br><br>The hydrologic impacts on mining can cause cause damage to a landscape in an area much larger than the mining site itself. Water-pollution problems caused by mining include acid mine drainage, metal contamination, and increased sediment levels. The devastating effects of mining impact fisheries, swimming, domestic water supply, irrigation, and other uses of streams. For more information on the environmental impacts of mining, please visit http://www.pollutionissues.com/Li-Na/Mining.html#ixzz6jGlfrX9m<br><br>Learning Objectives <br><br>After successfully completing this exercise, you will be able to:<br><br>1. Execute queries to pull a variety of National Water Information System (NWIS) and Water Quality Portal (WQP) data into R.<br>2. Analyze inorganic aspects of water quality following a watershed disturbance such as mining.
+
+        .. raw:: html
     
-    
-    
-    </div>
+        
+
+    .. tab:: Code 
 
 
-******
-Code
-******
-
-
-    .. toctree::
-        :maxdepth: 1
-        :titlesonly:
-        :glob:
+        
+        .. toctree::
+            :maxdepth: 1
+            :titlesonly:
+            :glob:
      
+            
+                ./notebooks/**
+            
+
         
-            ./notebooks/**
+
         
 
-
-
-
+    

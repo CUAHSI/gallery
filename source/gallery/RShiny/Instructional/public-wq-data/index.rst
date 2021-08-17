@@ -23,9 +23,6 @@
 
 
 
-Authors
-*******
-
 .. container:: container-lg launch-container pb-1 author-div
     
     .. raw:: html
@@ -100,6 +97,7 @@ Authors
             </span>
 
         
+    .. raw:: html
 
 
 .. raw:: html
@@ -107,23 +105,27 @@ Authors
     <br />&nbsp;
     <br />&nbsp;
 
-    <div class=example-description>
+.. raw:: html
+
+.. tabs::
     
-    <h2> Description </h2>
+    .. tab:: Description
+
+        
+    
+        .. raw:: html
+        
+        The application demonstrates how to discover and retrieve water quality data.
+
+        .. raw:: html
+    
+        
+
+    .. tab:: Code 
+
+
+        
+
+        
 
     
-    
-    <p>The application demonstrates how to discover and retrieve water quality data.</p>
-    
-    
-    
-    </div>
-
-
-******
-Code
-******
-
-
-
-
