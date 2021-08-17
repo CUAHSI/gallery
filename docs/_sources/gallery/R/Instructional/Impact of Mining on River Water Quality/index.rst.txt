@@ -14,156 +14,155 @@
 
 
 .. container:: container-lg launch-container pb-1
+
     
          
             :link-badge:`https://hydroshare.org/resource/106b934d0e4f40c98ba10b9fea773db5,"Open In HydroShare",cls=badge-primary text-white launch-badge`
         
     
 
-.. raw:: html
 
-    <br />&nbsp;
-    <hr>
-    <br />&nbsp;
 
-    <h2> Authors </h2>
-
+.. container:: container-lg launch-container pb-1 author-div
     
+    .. raw:: html
 
-    <span class="NameHighlights">
-        <a href="javascript:;">Salk, Kateri</a>
-        
-            , 
-        
-        <div>
-
-            Duke University 
-
-            <hr>
+        <br />&nbsp;
+        <hr>
+        <br />&nbsp;
+        <h2> Authors </h2>
 
             
+
+            <span class="NameHighlights">
+                <a href="javascript:;">Salk, Kateri</a>
                 
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:kateri.salk@duke.edu>
-                    <span>Email</span>
-                </a>
-            
-            
-
-            
-            
+                    , 
                 
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/4912/>
-                    <span>Webpage</span>
-                </a>
+                <div>
+
+                    Duke University 
+
+                    <hr>
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:kateri.salk@duke.edu>
+                            <span>Email</span>
+                        </a>
+
+                    
+
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/4912/>
+                            <span>Profile</span>
+                        </a>
+
+                    
+                    <!-- TODO: Include personal webpages from conf.yaml -->
+
+                </div>
+            </span>
 
             
 
-        </div>
-    </span>
+            <span class="NameHighlights">
+                <a href="javascript:;">Cathy Chamberlin</a>
+                
+                    , 
+                
+                <div>
 
-    
+                    Duke University 
 
-    <span class="NameHighlights">
-        <a href="javascript:;">Cathy Chamberlin</a>
+                    <hr>
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:catherine.chamberlin@duke.edu>
+                            <span>Email</span>
+                        </a>
+
+                    
+
+
+                    
+                    <!-- TODO: Include personal webpages from conf.yaml -->
+
+                </div>
+            </span>
+
+            
+
+            <span class="NameHighlights">
+                <a href="javascript:;">Garcia, Gabriela</a>
+                
+                <div>
+
+                    Duke University 
+
+                    <hr>
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:gabriela.garcia@duke.edu>
+                            <span>Email</span>
+                        </a>
+
+                    
+
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/7399/>
+                            <span>Profile</span>
+                        </a>
+
+                    
+                    <!-- TODO: Include personal webpages from conf.yaml -->
+
+                </div>
+            </span>
+
         
-            , 
-        
-        <div>
-
-            Duke University 
-
-            <hr>
-
-            
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:catherine.chamberlin@duke.edu>
-                    <span>Email</span>
-                </a>
-            
-            
-
-            
-            
-
-        </div>
-    </span>
-
-    
-
-    <span class="NameHighlights">
-        <a href="javascript:;">Garcia, Gabriela</a>
-        
-        <div>
-
-            Duke University 
-
-            <hr>
-
-            
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:gabriela.garcia@duke.edu>
-                    <span>Email</span>
-                </a>
-            
-            
-
-            
-            
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/7399/>
-                    <span>Webpage</span>
-                </a>
-
-            
-
-        </div>
-    </span>
-
-
-
-
-
-.. raw:: html
-
-    <br />&nbsp;
-    <br />&nbsp;
-
-    <div class=example-description>
-    
-    <h2> Description </h2>
-
-    
-    
-    <p>Chemical Properties of Rivers: Impacts of Mining on Specific Conductance and pH<br><br>This lesson was adapted from educational material written by Dr. Kateri Salk and Cathy Chamberlin for the Fall 2019 Hydrologic Data Analysis course at Duke University. <br><br>Introduction<br><br>The hydrologic impacts on mining can cause cause damage to a landscape in an area much larger than the mining site itself. Water-pollution problems caused by mining include acid mine drainage, metal contamination, and increased sediment levels. The devastating effects of mining impact fisheries, swimming, domestic water supply, irrigation, and other uses of streams. For more information on the environmental impacts of mining, please visit http://www.pollutionissues.com/Li-Na/Mining.html#ixzz6jGlfrX9m<br><br>Learning Objectives <br><br>After successfully completing this exercise, you will be able to:<br><br>1. Execute queries to pull a variety of National Water Information System (NWIS) and Water Quality Portal (WQP) data into R.<br>2. Analyze inorganic aspects of water quality following a watershed disturbance such as mining.</p>
-    
-    
-    
-    </div>
 
 
 .. raw:: html
 
-    <h2> Code </h2>
+    <br />&nbsp;
+    <br />&nbsp;
 
 
-.. panels::
-    :container: container pb-1 example-panels
-    :card: shadow
-    :column: col-lg-6 col-md-6 col-sm-12 col-xs-12 p-2
-    :body: text-left
-
-    ---
+.. tabs::
     
+    .. tab:: Description
 
-       **Source Code**
-       ^^^^^^^^^^^
-     .. toctree::
-        :maxdepth: 1
-        :titlesonly:
-        :glob:
         
+    
+        .. raw:: html
         
-        ./notebooks/**
+            Chemical Properties of Rivers: Impacts of Mining on Specific Conductance and pH<br><br>This lesson was adapted from educational material written by Dr. Kateri Salk and Cathy Chamberlin for the Fall 2019 Hydrologic Data Analysis course at Duke University. <br><br>Introduction<br><br>The hydrologic impacts on mining can cause cause damage to a landscape in an area much larger than the mining site itself. Water-pollution problems caused by mining include acid mine drainage, metal contamination, and increased sediment levels. The devastating effects of mining impact fisheries, swimming, domestic water supply, irrigation, and other uses of streams. For more information on the environmental impacts of mining, please visit http://www.pollutionissues.com/Li-Na/Mining.html#ixzz6jGlfrX9m<br><br>Learning Objectives <br><br>After successfully completing this exercise, you will be able to:<br><br>1. Execute queries to pull a variety of National Water Information System (NWIS) and Water Quality Portal (WQP) data into R.<br>2. Analyze inorganic aspects of water quality following a watershed disturbance such as mining.
+
+    
         
+
+    .. tab:: Code 
+
+
+        
+        .. toctree::
+            :maxdepth: 1
+            :titlesonly:
+            :glob:
      
-     
+            
+            ./notebooks/**
+            
+
+        
+
+        
+
+    

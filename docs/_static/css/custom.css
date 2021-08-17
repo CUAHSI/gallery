@@ -66,10 +66,33 @@ div.example-panels > div > div > div > div > blockquote {
     position:absolute;
     width: 15em;
     top:1.3em;
-    *top:20px;
     left:70px;
     z-index:1000;
-    background-color: #DDD;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
     padding: 5px;
-    border-radius: 4px;
+    border-radius: 0.25em;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 /15%);
+}
+
+.author-div {
+    /* this is to ensure that hover boxes don't appear off the right
+    side of the screen. */
+    padding-right: 100px !important;
+}
+
+/* styling for lists on example landing pages */
+.document ol {
+    margin: 10px;
+    padding: 0.25em;
+}
+
+.document ul {
+    margin: 10px;
+    padding: 0.25em;
+}
+
+.document li {
+    list-style-type: decimal;
+    padding: 0.25em;
 }

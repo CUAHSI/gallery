@@ -15,15 +15,7 @@
   <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
   <link rel="stylesheet" href="../../../../../_static/copybutton.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../../_static/css/tooltipster.custom.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../../_static/css/tooltipster.bundle.min.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../../_static/css/micromodal.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../../_static/css/sphinx_rtd_theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/tabs.css" type="text/css" />
   <link rel="stylesheet" href="../../../../../_static/css/custom.css" type="text/css" />
   <link rel="stylesheet" href="../../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
   <link rel="stylesheet" href="../../../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
@@ -49,9 +41,6 @@
         <script src="../../../../../_static/language_data.js"></script>
         <script src="../../../../../_static/clipboard.min.js"></script>
         <script src="../../../../../_static/copybutton.js"></script>
-        <script src="../../../../../_static/js/hoverxref.js"></script>
-        <script src="../../../../../_static/js/tooltipster.bundle.min.js"></script>
-        <script src="../../../../../_static/js/micromodal.min.js"></script>
         <script src="../../../../../_static/js/custom.js"></script>
         <script src="../../../../../_static/contentui.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -142,7 +131,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../../../../index.html">BuildDocs</a>
+          <a href="../../../../../index.html">CUAHSI Gallery</a>
         
       </nav>
 
@@ -414,7 +403,7 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<p><img alt="682d7115353a45c2ab011684a6e4d06c" src="https://avatars3.githubusercontent.com/u/7543483?s=200&amp;v=4" /></p>
+<p><img alt="image.png" src="../../../../../_images/enabling-collaborative-landlab.png" /> <img alt="image1" src="../../../../../_images/enabling-collaborative-udub.png" /></p>
 <div class="section" id="Reuse-Ecohydrology-Model-with-Gridded-Hydrometeorology-Forcing">
 <h1>Reuse Ecohydrology Model with Gridded Hydrometeorology Forcing<a class="headerlink" href="#Reuse-Ecohydrology-Model-with-Gridded-Hydrometeorology-Forcing" title="Permalink to this headline">¶</a></h1>
 <ul>
@@ -424,29 +413,36 @@ div.rendered_html tbody tr:hover {
 <li><p>Observe sensitivity to climate by comparing the watershed model results.</p>
 <hr></li>
 </ul>
-</div>
 <div class="section" id="To-run-this-notebook:">
-<h1>To run this notebook:<a class="headerlink" href="#To-run-this-notebook:" title="Permalink to this headline">¶</a></h1>
+<h2>To run this notebook:<a class="headerlink" href="#To-run-this-notebook:" title="Permalink to this headline">¶</a></h2>
 <p>Click in or on each shaded code block below and use <strong>shift + enter</strong> or <strong>shift + return</strong> keys. Alternatively, you can run groups of cells by clicking <strong>Cell</strong> on the menu above and selecting among the various run options. This is also where you can clear outputs from previous runs.</p>
 <p>If an error occurs, click on <strong>Kernel</strong> and then select <strong>Restart and Clear Outputs</strong> in the menu above. While exiting the notebook, click <strong>File</strong> and then select <strong>Close and Halt</strong>. For more instructions on how to run an interactive IPython notebook, click here: <a class="reference external" href="https://github.com/landlab/tutorials/blob/master/README.md">https://github.com/landlab/tutorials/blob/master/README.md</a> For tutorials on learning Landlab, click here: <a class="reference external" href="https://github.com/landlab/landlab/wiki/Tutorials">https://github.com/landlab/landlab/wiki/Tutorials</a> For the unexpanded version to download and run, click here:
 <a class="reference external" href="http://nbviewer.jupyter.org/github/landlab/tutorials/blob/master/ecohydrology/cellular_automaton_vegetation_DEM/cellular_automaton_vegetation_DEM_unexpanded.ipynb">http://nbviewer.jupyter.org/github/landlab/tutorials/blob/master/ecohydrology/cellular_automaton_vegetation_DEM/cellular_automaton_vegetation_DEM_unexpanded.ipynb</a></p>
 </div>
 <div class="section" id="1.-Introduction">
-<h1>1. Introduction<a class="headerlink" href="#1.-Introduction" title="Permalink to this headline">¶</a></h1>
+<h2>1. Introduction<a class="headerlink" href="#1.-Introduction" title="Permalink to this headline">¶</a></h2>
 <p><strong>1.1 Landlab Ecohydrology Model</strong></p>
 <p>In this tutorial you will explore the role of climatology on the spatial development of tree, shrub, and grass Plant Functional Types (PFTs) in a semiarid setting. You will run an ecohydrologic vegetation dynamics model, written using Landlab - a python toolkit for modeling earth surface processes, on a hypothetical flat watershed with varied climatology. The ecohydrologic vegetation dynamics model you will use is based on CATGraSS, a discrete time cellular automata (CA) model for spatial
 evolution of PFTs [Zhou et al., 2013]. Each cell in the domain can be occupied by a single PFT: Tree, Shrub, Grass or left unoccupied as bare soil. The model couples local ecohydrologic vegetation dynamics, which simulate biomass production based on local soil moisture and actual evapotranspiration, with spatial processes for plant establishment and mortality controlled by seed dispersal rules, water stress tolerance, and space availability (Figure 1). Tree and shrub plants disperse seeds to
 their neighbors. Grass seeds are assumed to be available at each cell. Establishment of plants in empty cells is determined probabilistically based on water stress of each PFT. Plants with lower water stress have higher probability of establishment. Plant mortality is simulated probabilistically as a result of aging and drought stress.</p>
-<p><img alt="CATGraSSFlowChart" src="https://www.hydroshare.org/resource/70b977e22af544f8a7e5a803935c329c/data/contents/figures/CATGraSSFlowChart.jpeg" /></p>
-<center><p>Figure 1. Ecohydrologic vegetation dynamics model [Modified from Zhou et al., 2013]</p>
-</center><p>The model is driven by rainfall pulses (observed or generated), solar radiation and temperature. The latter two variables can also be used to prescribe a seasonal potential evapotranspiration input. In Landlab, the model is implemented as a set of interacting components, each describing a different element of the coupled system: PrecipitationDistribution, Radiation, PotentialEvapotranspiration, SoilMoisture, Vegetation (component for local vegetation growth), and VegCA (component for cellular
+<div><center><p><img alt="9999282973084600bae7d6b093cf0640" class="no-scaled-link" src="../../../../../_images/enabling-collaborative-CATGraSSFlowChart.jpeg" style="width: 500px;" /></p>
+</center></div><p><strong>Figure 1. Ecohydrologic vegetation dynamics model [Modified from Zhou et al., 2013]</strong></p>
+<p>The model is driven by rainfall pulses (observed or generated), solar radiation and temperature. The latter two variables can also be used to prescribe a seasonal potential evapotranspiration input. In Landlab, the model is implemented as a set of interacting components, each describing a different element of the coupled system: PrecipitationDistribution, Radiation, PotentialEvapotranspiration, SoilMoisture, Vegetation (component for local vegetation growth), and VegCA (component for cellular
 automaton establishment and mortality of PFTs, i.e. spatial dynamics of vegetation pattern evolution). Each process can also operate in isolation, outside the context of this example model. Landlab components and the flow chart used to couple the components in the model driver is given below [Hobley et al., 2017].</p>
-<p><img alt="CATGraSSComponents" src="https://www.hydroshare.org/resource/70b977e22af544f8a7e5a803935c329c/data/contents/figures/CATGraSSComponents.jpg" /></p>
-<center><p>Figure 2. Landlab components (left column) and the flow chart of their implementation in Landlab to develop the cellular automaton plant competition model [Hobley et al. 2017]</p>
-</center><p>This model is available as a function ‘run_ecohydrology_model’, that can be imported from python script ‘supporting_files/ecohydrology_model_functions.py’. It contains [Ref. Figure 2]: - A local vegetation dynamics model that simulates storm and inter-storm water balance and ecohydrologic fluxes (ET, runoff), and plant biomass dynamics by coupling the following components: - PrecipitationDistribution - Radiation - PotentialEvapotranspiration - SoilMoisture - Vegetation</p>
-<ul class="simple">
-<li><p>A spatially explicit probabilistic cellular automaton component that simulates plant competition by tracking establishment and mortality of plants based on soil moisture stress: - VegCA</p></li>
-</ul>
+<img alt="CATGraSSComponents" src="../../../../../_images/enabling-collaborative-CATGraSSComponents.jpg" />
+<p><strong>Figure 2. Landlab components (left column) and the flow chart of their implementation in Landlab to develop the cellular automaton plant competition model [Hobley et al. 2017]</strong></p>
+<p>This model is available as a function <code class="docutils literal notranslate"><span class="pre">run_ecohydrology_model</span></code>, that can be imported from python script <code class="docutils literal notranslate"><span class="pre">supporting_files/ecohydrology_model_functions.py</span></code>. It contains:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">A</span> <span class="n">local</span> <span class="n">vegetation</span> <span class="n">dynamics</span> <span class="n">model</span> <span class="n">that</span> <span class="n">simulates</span> <span class="n">storm</span> <span class="ow">and</span> <span class="n">inter</span><span class="o">-</span><span class="n">storm</span> <span class="n">water</span> <span class="n">balance</span> <span class="ow">and</span> <span class="n">ecohydrologic</span> <span class="n">fluxes</span> <span class="p">(</span><span class="n">ET</span><span class="p">,</span> <span class="n">runoff</span><span class="p">),</span> <span class="ow">and</span> <span class="n">plant</span> <span class="n">biomass</span> <span class="n">dynamics</span> <span class="n">by</span> <span class="n">coupling</span> <span class="n">the</span> <span class="n">following</span> <span class="n">components</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">PrecipitationDistribution</span>
+    <span class="o">-</span> <span class="n">Radiation</span>
+    <span class="o">-</span> <span class="n">PotentialEvapotranspiration</span>
+    <span class="o">-</span> <span class="n">SoilMoisture</span>
+    <span class="o">-</span> <span class="n">Vegetation</span>
+
+ <span class="o">-</span> <span class="n">A</span> <span class="n">spatially</span> <span class="n">explicit</span> <span class="n">probabilistic</span> <span class="n">cellular</span> <span class="n">automaton</span> <span class="n">component</span> <span class="n">that</span> <span class="n">simulates</span> <span class="n">plant</span> <span class="n">competition</span> <span class="n">by</span> <span class="n">tracking</span> <span class="n">establishment</span> <span class="ow">and</span> <span class="n">mortality</span> <span class="n">of</span> <span class="n">plants</span> <span class="n">based</span> <span class="n">on</span> <span class="n">soil</span> <span class="n">moisture</span> <span class="n">stress</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">VegCA</span>
+</pre></div>
+</div>
 <p><strong>For Acknowledgements, citation information and References, please see the end of this notebook</strong>:</p>
 <p><strong>1.2 Landscape</strong></p>
 <p>In this tutorial, we are going to work with a hypothetical rectangular domain over which we will impose elevation-dependent climatology from New Mexico, USA to simulate vegetation patterns using the ecohydrologic model discussed in Figure 1 and 2. The climate in this area is semi-arid with Mean Annual Precipitation (MAP) in the range 200 - 350 mm depending on the elevation.</p>
@@ -457,7 +453,7 @@ automaton establishment and mortality of PFTs, i.e. spatial dynamics of vegetat
 <p>Remember that you can always go to the <em>Kernel</em> pulldown menu at the top and choose <em>Restart &amp; Clear Output</em> or <em>Restart &amp; Run All</em> if you change things and want to start afresh.</p>
 </div>
 <div class="section" id="2.0-Data-Science-&amp;-Cyberinfrastructure-Methods">
-<h1>2.0 Data Science &amp; Cyberinfrastructure Methods<a class="headerlink" href="#2.0-Data-Science-&-Cyberinfrastructure-Methods" title="Permalink to this headline">¶</a></h1>
+<h2>2.0 Data Science &amp; Cyberinfrastructure Methods<a class="headerlink" href="#2.0-Data-Science-&-Cyberinfrastructure-Methods" title="Permalink to this headline">¶</a></h2>
 <p>Update or add libraries that are not installed on the CUAHSI JupyterHub server. At the time of publication, the Landlab library was dependent on a different numpy library than installed in the software environment. The code block below was added as an example of how to update a library to a new version and restart the notebook kernel. If this update is not needed, comment with a &lt;#&gt;. If other updates are needed, add them below.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
@@ -472,7 +468,7 @@ automaton establishment and mortality of PFTs, i.e. spatial dynamics of vegetat
 </div>
 </div>
 <div class="section" id="2.1-Data-Science-Methods">
-<h2>2.1 Data Science Methods<a class="headerlink" href="#2.1-Data-Science-Methods" title="Permalink to this headline">¶</a></h2>
+<h3>2.1 Data Science Methods<a class="headerlink" href="#2.1-Data-Science-Methods" title="Permalink to this headline">¶</a></h3>
 <p><strong>2.1.1 Import Landlab components, functions for importing data, plotting tools, and HydroShare utilities</strong></p>
 <p>To run this notebook, we must import several libraries. The hs_utils library provides functions for interacting with HydroShare, including resource querying, dowloading. and creation. Additional libraries support the functions of Landlab.</p>
 <div class="nbinput nblast docutils container">
@@ -531,7 +527,7 @@ automaton establishment and mortality of PFTs, i.e. spatial dynamics of vegetat
 </div>
 </div>
 <div class="section" id="3.-Climate-Science-Methods">
-<h1>3. Climate Science Methods<a class="headerlink" href="#3.-Climate-Science-Methods" title="Permalink to this headline">¶</a></h1>
+<h2>3. Climate Science Methods<a class="headerlink" href="#3.-Climate-Science-Methods" title="Permalink to this headline">¶</a></h2>
 <p><strong>3.1.1 Read in climate data that has been processed (in a separate notebook for convenience)</strong></p>
 <p>In this test case, we want to demonstrate how to download existing downscaled gridded national/global datasets for a region and run ecohydrology model for hypothetical flat watersheds at different elevation bands. We used the Linvneh et al.(2015) gridded hydrometeorological data in this example. ‘ogh’, a conda package, is used to download the data for the state of New Mexico. We then bin the data into three elevation ranges and within each bin daily precipitation (mm), minimum and maximum
 temperature (oC) data are spatially averaged for every day. This led to time series of daily precipitation (mm), minimum and maximum temperature in each elevation band. To keep this notebook concise (and to focus on data processing and ecohydrology model implementation), we placed the code used for this hydrometeorological data processing in a separate notebook called: ‘observatory_gridmet_newmexico.ipynb’, available in the sub-folder ogh_newmexico. We saved synthesized data into JSONs (‘.json’)
@@ -540,9 +536,9 @@ files by running the notebook ‘observatory_gridmet_newmexico.ipynb’. These J
 <p>Low elevation = 1200 - 1700 m</p>
 <p>Mid elevation = 1700 - 2000 m</p>
 <p>High elevation = 2000 - 2500 m</p>
-<img alt="New Mexico Climate by ELevation" src="https://www.hydroshare.org/resource/70b977e22af544f8a7e5a803935c329c/data/contents/figures/NewMexico_elevationbands.JPG" />
-<center><p><strong>Figure 3.</strong> New Mexico climate bands by elevation correspond with high elevation (white) with trees (dark green in aerial photography).</p>
-</center><p>Let’s download the saved meteorological data (JSON files) into Python dictionaries. We create one dictionary for each elevation band. Each dictionary contains time series of 28 variables. These time series are stored as ‘key’:‘value’ pairs, where each variable name is a ‘key’ and the corresponding time series is the ‘value’.</p>
+<img alt="New Mexico Climate by ELevation" src="../../../../../_images/enabling-collaborative-NewMexico_elevationbands.JPG" />
+<p><strong>Figure 3. New Mexico climate bands by elevation correspond with high elevation (white) with trees (dark green in aerial photography).</strong></p>
+<p>Let’s download the saved meteorological data (JSON files) into Python dictionaries. We create one dictionary for each elevation band. Each dictionary contains time series of 28 variables. These time series are stored as ‘key’:‘value’ pairs, where each variable name is a ‘key’ and the corresponding time series is the ‘value’.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
@@ -618,10 +614,11 @@ files by running the notebook ‘observatory_gridmet_newmexico.ipynb’. These J
 <p><strong>3.1.4 Bias Correction</strong></p>
 <p>From prior experience of working with watersheds in New Mexico, we suspect that MAP values obtained from downscaled climate data product are higher than observations, especially in low elevations, indicating a wetter bias. It is common to find biases in downscaled climate products. Therefore, we downloaded precipitation data from meteorological stations located in Sevilleta LTER, New Mexico [Moore 2011]. Table below lists these meteorological stations and MAP calculated from the precipitation
 data that extends over multiple years at respective stations. We can immediately note that MAP values derived from Livneh dataset, reported above, are higher than the observed MAP values at meteorological stations in Sevilleta.</p>
-<center><p>Table 1. MAP and elevation data gathered from meteorological stations in Sevilleta LTER [Moore 2011] <img alt="TableBiasCorrection" src="https://www.hydroshare.org/resource/70b977e22af544f8a7e5a803935c329c/data/contents/figures/TableBiasCorrection.PNG" /></p>
+<p><strong>Table 1. MAP and elevation data gathered from meteorological stations in Sevilleta LTER [Moore 2011]</strong></p>
+<img alt="TableBiasCorrection" src="../../../../../_images/enabling-collaborative-TableBiasCorrection.PNG" />
 <p>One approach to deal with the incoherence between the gridded hydrometeorological data and observations is to correct any biases that might exist in the gridded data. For this purpose we can use a linear relationship derived from observations. In the figure below, MAP from each meterological station is plotted with respect to elevation and the linear relationship between MAP at a location and it’s elevation is obtained.</p>
-<p><img alt="BiasCorrectionPlot" src="https://www.hydroshare.org/resource/70b977e22af544f8a7e5a803935c329c/data/contents/figures/BiasCorrectionPlot.PNG" /></p>
-<center><p><strong>Figure 4.</strong> Plotting MAP at meteorological stations in Sevilleta LTER [Table 1] with respect to elevation</p>
+<div><p><img alt="b7962193db0843c488c16ecf2836e012" class="no-scaled-link" src="../../../../../_images/enabling-collaborative-BiasCorrectionPlot.PNG" style="width: 400px;" /></p>
+</div><p><strong>Figure 4. Plotting MAP at meteorological stations in Sevilleta LTER [Table 1] with respect to elevation</strong></p>
 <p>We will rearrange this model to represent <strong>MAP at a location</strong> in terms of the <strong>difference between it’s elevation</strong> and <strong>minimum elevation of all hypothetical meteorological stations (centroids of the cells in gridded dataset) of New Mexico</strong>, and <strong>MAP at the location with minimum elevation</strong>.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
@@ -779,7 +776,7 @@ time series for 9600 years preserving the historical climate.</p>
 </div>
 </div>
 <div class="section" id="4.-Ecohydrology-Modeling-using-Landlab">
-<h1>4. Ecohydrology Modeling using Landlab<a class="headerlink" href="#4.-Ecohydrology-Modeling-using-Landlab" title="Permalink to this headline">¶</a></h1>
+<h2>4. Ecohydrology Modeling using Landlab<a class="headerlink" href="#4.-Ecohydrology-Modeling-using-Landlab" title="Permalink to this headline">¶</a></h2>
 <p>With all the input forcings prepared, we can now run the <strong>ecohydrology model</strong>. To run the <em>model</em>, we need the following:</p>
 <ul class="simple">
 <li><p>a Landlab grid to represent the domain/watershed</p></li>
@@ -987,7 +984,7 @@ can get large in size for longer simulations. - yrs_elevation-band: the total nu
 </ul>
 </div>
 <div class="section" id="5.0.-Save-the-results-back-into-HydroShare">
-<h1>5.0. Save the results back into HydroShare<a class="headerlink" href="#5.0.-Save-the-results-back-into-HydroShare" title="Permalink to this headline">¶</a></h1>
+<h2>5.0. Save the results back into HydroShare<a class="headerlink" href="#5.0.-Save-the-results-back-into-HydroShare" title="Permalink to this headline">¶</a></h2>
 <p>Using the <code class="docutils literal notranslate"><span class="pre">hs_utils</span></code> library, the results of the Geoprocessing steps above can be saved back into HydroShare. First, define all of the required metadata for resource creation, i.e. <em>title</em>, <em>abstract</em>, <em>keywords</em>, <em>content files</em>. In addition, we must define the type of resource that will be created, in this case <em>genericresource</em>.</p>
 <p><strong>Note:</strong> Make sure you save the notebook at this point, so that all notebook changes will be saved into the new HydroShare resource.</p>
 <p><strong>Option A</strong> : define the resource from which this “NEW” content has been derived. This is one method for tracking resource provenance.</p>
@@ -1051,10 +1048,10 @@ can get large in size for longer simulations. - yrs_elevation-band: the total nu
 </div>
 </div>
 <div class="section" id="Click-here-for-more-Landlab-tutorials">
-<h2>Click here for more Landlab tutorials<a class="headerlink" href="#Click-here-for-more-Landlab-tutorials" title="Permalink to this headline">¶</a></h2>
+<h3>Click here for more Landlab tutorials<a class="headerlink" href="#Click-here-for-more-Landlab-tutorials" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="References">
-<h2>References<a class="headerlink" href="#References" title="Permalink to this headline">¶</a></h2>
+<h3>References<a class="headerlink" href="#References" title="Permalink to this headline">¶</a></h3>
 <p>Hobley, D. E. J., Adams, J. M., Nudurupati, S. S., Hutton, E. W. H., Gasparini, N. M., Istanbulluoglu, E., and Tucker, G. E. (2017). Creative computing with Landlab: an open-source toolkit for building, coupling, and exploring two-dimensional numerical models of Earth-surface dynamics, Earth Surf. Dynam. doi:10.5194/esurf-5-21-2017.</p>
 <p>Livneh B., T.J. Bohn, D.S. Pierce, F. Munoz-Ariola, B. Nijssen, R. Vose, D. Cayan, and Brekke, L.D. (2015). A spatially comprehensive, hydrometeorological data set for Mexico, the U.S., and southern Canada 1950-2013, Nature Scientific Data, 5:150042, doi:10.1038/sdata.2015.42.</p>
 <p>Middleton, N. J., and Thomas, D. S. G., (1997)., World Atlas of Desertification, UNEP Edward Arnold, London, UK, 2nd edition.</p>
@@ -1063,7 +1060,7 @@ can get large in size for longer simulations. - yrs_elevation-band: the total nu
 <p>Zhou, X., Istanbulluoglu, E., &amp; Vivoni, E. R. (2013). Modeling the ecohydrological role of aspect‐controlled radiation on tree‐grass‐shrub coexistence in a semiarid climate. Water Resources Research, 49(5), 2872-2895.</p>
 </div>
 <div class="section" id="Acknowledgements">
-<h2>Acknowledgements<a class="headerlink" href="#Acknowledgements" title="Permalink to this headline">¶</a></h2>
+<h3>Acknowledgements<a class="headerlink" href="#Acknowledgements" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://zenodo.org/badge/latestdoi/187289993"><img alt="DOI" src="https://zenodo.org/badge/187289993.svg" /></a></p>
 <p>This Notebooks serves as content for:</p>
 <p>Bandaragoda, C. J., A. Castronova, E. Istanbulluoglu, R. Strauch, S. S. Nudurupati, J. Phuong, J. M. Adams, et al. “Enabling Collaborative Numerical Modeling in Earth Sciences Using Knowledge Infrastructure.” Environmental Modelling &amp; Software, April 24, 2019. <a class="reference external" href="https://doi.org/10.1016/j.envsoft.2019.03.020">https://doi.org/10.1016/j.envsoft.2019.03.020</a>.</p>
@@ -1071,14 +1068,6 @@ can get large in size for longer simulations. - yrs_elevation-band: the total nu
 <p>Bandaragoda, C., A. M. Castronova, J. Phuong, E. Istanbulluoglu, S. S. Nudurupati, R. Strauch, N. Lyons, K. Barnhart (2019). Enabling Collaborative Numerical Modeling in Earth Sciences using Knowledge Infrastructure: Landlab Notebooks, HydroShare, <a class="reference external" href="http://www.hydroshare.org/resource/fdc3a06e6ad842abacfa5b896df73a76">http://www.hydroshare.org/resource/fdc3a06e6ad842abacfa5b896df73a76</a></p>
 <p>This notebook was developed from code written by Sai Siddhartha Nudurupathi as part of his Ph.D. disseration at the University of Washington.</p>
 <p>Use or citation of this notebook should also reference the forthcoming PhD Dissertation and publications by Nudurupathi et al. (2019).</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>
-</pre></div>
-</div>
 </div>
 </div>
 </div>

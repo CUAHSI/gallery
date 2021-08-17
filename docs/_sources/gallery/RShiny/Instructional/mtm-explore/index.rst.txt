@@ -14,86 +14,79 @@
 
 
 .. container:: container-lg launch-container pb-1
+
     
          
             :link-badge:`https://cuahsi.shinyapps.io/mtm_explore,"Run Application",cls=badge-primary text-white launch-badge`
         
     
 
-.. raw:: html
 
-    <br />&nbsp;
-    <hr>
-    <br />&nbsp;
 
-    <h2> Authors </h2>
-
+.. container:: container-lg launch-container pb-1 author-div
     
+    .. raw:: html
 
-    <span class="NameHighlights">
-        <a href="javascript:;">Author 1</a>
+        <br />&nbsp;
+        <hr>
+        <br />&nbsp;
+        <h2> Authors </h2>
+
+            
+
+            <span class="NameHighlights">
+                <a href="javascript:;">Author 1</a>
+                
+                    , 
+                
+                <div>
+
+                    Organization 1 
+
+                    <hr>
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:author1@organization1.com>
+                            <span>Email</span>
+                        </a>
+
+                    
+
+
+                    
+                    <!-- TODO: Include personal webpages from conf.yaml -->
+
+                </div>
+            </span>
+
+            
+
+            <span class="NameHighlights">
+                <a href="javascript:;">Author 2</a>
+                
+                <div>
+
+                    Organization 2 
+
+                    <hr>
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:author2@organization2.com>
+                            <span>Email</span>
+                        </a>
+
+                    
+
+
+                    
+                    <!-- TODO: Include personal webpages from conf.yaml -->
+
+                </div>
+            </span>
+
         
-            , 
-        
-        <div>
-
-            Organization 1 
-
-            <hr>
-
-            
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:author1@organization1.com>
-                    <span>Email</span>
-                </a>
-            
-            
-
-            
-            
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=www.google.com>
-                    <span>Webpage</span>
-                </a>
-
-            
-
-        </div>
-    </span>
-
-    
-
-    <span class="NameHighlights">
-        <a href="javascript:;">Author 2</a>
-        
-        <div>
-
-            Organization 2 
-
-            <hr>
-
-            
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:author2@organization2.com>
-                    <span>Email</span>
-                </a>
-            
-            
-
-            
-            
-                
-                <a class="sphinx-bs badge badge-primary text-white reference external" href=www.google.com>
-                    <span>Webpage</span>
-                </a>
-
-            
-
-        </div>
-    </span>
-
-
-
 
 
 .. raw:: html
@@ -101,30 +94,25 @@
     <br />&nbsp;
     <br />&nbsp;
 
-    <div class=example-description>
+
+.. tabs::
     
-    <h2> Description </h2>
+    .. tab:: Description
+
+        
+    
+        .. raw:: html
+        
+            This application shows how mining has changed the slope and elevation profiles of landscapes in West Virginia, along with providing an estimate of total spoil volume deposited into headwater valleys as a result of mining. The number that shows up when you click on a watershed is an estimate of how deeply mine spoil would bury the watershed if the spoil were spread evenly across it.
 
     
+        
+
+    .. tab:: Code 
+
+
+        
+
+        
+
     
-    <p>This application shows how mining has changed the slope and elevation profiles of landscapes in West Virginia, along with providing an estimate of total spoil volume deposited into headwater valleys as a result of mining. The number that shows up when you click on a watershed is an estimate of how deeply mine spoil would bury the watershed if the spoil were spread evenly across it.</p>
-    
-    
-    
-    </div>
-
-
-.. raw:: html
-
-    <h2> Code </h2>
-
-
-.. panels::
-    :container: container pb-1 example-panels
-    :card: shadow
-    :column: col-lg-6 col-md-6 col-sm-12 col-xs-12 p-2
-    :body: text-left
-
-    ---
-    
-     

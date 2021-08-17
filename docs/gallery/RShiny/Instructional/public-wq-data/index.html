@@ -15,15 +15,7 @@
   <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/copybutton.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../_static/css/tooltipster.custom.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../_static/css/tooltipster.bundle.min.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../_static/css/micromodal.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../_static/css/sphinx_rtd_theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/tabs.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
@@ -49,9 +41,7 @@
         <script src="../../../../_static/language_data.js"></script>
         <script src="../../../../_static/clipboard.min.js"></script>
         <script src="../../../../_static/copybutton.js"></script>
-        <script src="../../../../_static/js/hoverxref.js"></script>
-        <script src="../../../../_static/js/tooltipster.bundle.min.js"></script>
-        <script src="../../../../_static/js/micromodal.min.js"></script>
+        <script src="../../../../_static/tabs.js"></script>
         <script src="../../../../_static/js/custom.js"></script>
         <script src="../../../../_static/contentui.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -142,7 +132,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../../../index.html">BuildDocs</a>
+          <a href="../../../../index.html">CUAHSI Gallery</a>
         
       </nav>
 
@@ -188,97 +178,68 @@ The purpose of this template is to override (i.e. supress) the breadcrumbs that 
 </div><div class="container-lg launch-container pb-1 docutils container">
 <p><a class="sphinx-bs badge badge-primary text-white launch-badge reference external" href="https://cuahsi.shinyapps.io/Public_WQ_Data"><span>Run Application</span></a></p>
 </div>
+<div class="container-lg launch-container pb-1 author-div docutils container">
 <br />&nbsp;
 <hr>
 <br />&nbsp;
-
 <h2> Authors </h2>
 
 
 
-<span class="NameHighlights">
-    <a href="javascript:;">Author 1</a>
+    <span class="NameHighlights">
+        <a href="javascript:;">Author 1</a>
 
-        ,
+            ,
 
-    <div>
+        <div>
 
-        Organization 1
+            Organization 1
 
-        <hr>
-
-
-
-            <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:author1@organization1.com>
-                <span>Email</span>
-            </a>
+            <hr>
 
 
 
-
-
-
-            <a class="sphinx-bs badge badge-primary text-white reference external" href=www.google.com>
-                <span>Webpage</span>
-            </a>
-
-
-
-    </div>
-</span>
-
-
-
-<span class="NameHighlights">
-    <a href="javascript:;">Author 2</a>
-
-    <div>
-
-        Organization 2
-
-        <hr>
-
-
-
-            <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:author2@organization2.com>
-                <span>Email</span>
-            </a>
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:author1@organization1.com>
+                    <span>Email</span>
+                </a>
 
 
 
 
 
+            <!-- TODO: Include personal webpages from conf.yaml -->
 
-            <a class="sphinx-bs badge badge-primary text-white reference external" href=www.google.com>
-                <span>Webpage</span>
-            </a>
+        </div>
+    </span>
 
 
 
-    </div>
-</span><br />&nbsp;
+    <span class="NameHighlights">
+        <a href="javascript:;">Author 2</a>
+
+        <div>
+
+            Organization 2
+
+            <hr>
+
+
+
+                <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:author2@organization2.com>
+                    <span>Email</span>
+                </a>
+
+
+
+
+
+            <!-- TODO: Include personal webpages from conf.yaml -->
+
+        </div>
+    </span></div>
 <br />&nbsp;
-
-<div class=example-description>
-
-<h2> Description </h2>
-
-
-
-<p>The application demonstrates how to discover and retrieve water quality data.</p>
-
-
-
-</div><h2> Code </h2><div class="sphinx-bs container pb-1 example-panels docutils">
-<div class="row docutils">
-<div class="d-flex col-lg-6 col-md-6 col-sm-12 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body text-left docutils">
-</div>
-</div>
-</div>
-</div>
-</div>
+<br />&nbsp;<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">Description</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">Code</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0">The application demonstrates how to discover and retrieve water quality data.</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"></div></div>
 
 
            </div>

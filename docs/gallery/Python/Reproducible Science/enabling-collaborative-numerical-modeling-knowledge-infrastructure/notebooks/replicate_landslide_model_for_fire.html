@@ -15,15 +15,7 @@
   <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
   <link rel="stylesheet" href="../../../../../_static/copybutton.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../../_static/css/tooltipster.custom.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../../_static/css/tooltipster.bundle.min.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../../_static/css/micromodal.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../../_static/css/sphinx_rtd_theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/tabs.css" type="text/css" />
   <link rel="stylesheet" href="../../../../../_static/css/custom.css" type="text/css" />
   <link rel="stylesheet" href="../../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
   <link rel="stylesheet" href="../../../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
@@ -49,9 +41,6 @@
         <script src="../../../../../_static/language_data.js"></script>
         <script src="../../../../../_static/clipboard.min.js"></script>
         <script src="../../../../../_static/copybutton.js"></script>
-        <script src="../../../../../_static/js/hoverxref.js"></script>
-        <script src="../../../../../_static/js/tooltipster.bundle.min.js"></script>
-        <script src="../../../../../_static/js/micromodal.min.js"></script>
         <script src="../../../../../_static/js/custom.js"></script>
         <script src="../../../../../_static/contentui.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -142,7 +131,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../../../../index.html">BuildDocs</a>
+          <a href="../../../../../index.html">CUAHSI Gallery</a>
         
       </nav>
 
@@ -414,11 +403,10 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<p><img alt="123da9942f7c4faba29c5afd70c4469f" src="http://landlab.github.io/assets/Landlab-logo.png" /></p>
+<p><img alt="image.png" src="../../../../../_images/enabling-collaborative-landlab.png" /> <img alt="image1" src="../../../../../_images/enabling-collaborative-udub.png" /></p>
 <div class="section" id="Reuse-a-published-regional-Landlab-shallow-landslide-model-to-explore-changes-in-forest-cover-at-a-subcatchment-within-the-study-area">
 <h1>Reuse a published regional Landlab shallow landslide model to explore changes in forest cover at a subcatchment within the study area<a class="headerlink" href="#Reuse-a-published-regional-Landlab-shallow-landslide-model-to-explore-changes-in-forest-cover-at-a-subcatchment-within-the-study-area" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="You-will-explore-how-to-reuse-model-code-and-data-in-a-subregion-within-a-larger-region-where-the-model-was-developed">
-<h2>You will explore how to reuse model code and data in a subregion within a larger region where the model was developed<a class="headerlink" href="#You-will-explore-how-to-reuse-model-code-and-data-in-a-subregion-within-a-larger-region-where-the-model-was-developed" title="Permalink to this headline">¶</a></h2>
+<p><strong>You will explore how to reuse model code and data in a subregion within a larger region where the model was developed</strong></p>
 <ul class="simple">
 <li><p>Load data from a regional Landlab landslide model (Strauch et al., 2018) developed for the North Cascades National Park, WA USA, published on HydroShare.</p></li>
 <li><p>Define a geographic subset (Thunder Creek watershed) within the study region.</p></li>
@@ -426,36 +414,37 @@ div.rendered_html tbody tr:hover {
 <li><p>Save results to a new HydroShare resource.</p></li>
 </ul>
 <p>The shallow landslide model you will is based on a spatially distributed Monte Carlo solution of the infinite slope stability model. Detailes of the model and the study site are described in Strauch et al. (2018). Please see the end of this Notebook for Acknowledgements and Citation information.</p>
-<p><img alt="843cff4fe6b24a838558e73b1d84b090" src="https://www.washington.edu/brand/files/2014/09/W-Logo_Purple_Hex.png" /></p>
-<div class="section" id="To-run-this-notebook:">
-<h3>To run this notebook:<a class="headerlink" href="#To-run-this-notebook:" title="Permalink to this headline">¶</a></h3>
+<p><strong>To run this notebook:</strong></p>
 <p>Click in each shaded cell below and “shift + enter” to run each code block. Alternatively, you can run groups of cells by clicking “Cell” on the menu above and selecting your run options from the pull-down menu. This is also where you can clear outputs from previous runs.</p>
 <p>If an error occurs, click on <em>Kernal</em> and <em>Restart and Clear Outputs</em> in the menu above.</p>
-</div>
 <div class="section" id="1.-Introduction">
-<h3>1. Introduction<a class="headerlink" href="#1.-Introduction" title="Permalink to this headline">¶</a></h3>
-<p>** 1.1 Infinite Slope Factor of Safety Equation **</p>
+<h2>1. Introduction<a class="headerlink" href="#1.-Introduction" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="1.1-Infinite-Slope-Factor-of-Safety-Equation">
+<h3>1.1 Infinite Slope Factor of Safety Equation<a class="headerlink" href="#1.1-Infinite-Slope-Factor-of-Safety-Equation" title="Permalink to this headline">¶</a></h3>
 <p>This equation predicts the ratio of stabilizing to destabilizing forces on a hillslope plane. The properties are assumed to represent an infinte plane, neglecting the boundary conditions around the landslide location. When FS&lt;1, the slope is instable.</p>
-<img alt="image.png" src="gallery/Python/Reproducible Science/enabling-collaborative-numerical-modeling-knowledge-infrastructure/notebooks/attachment:image.png" />
-<img alt="image.png" src="gallery/Python/Reproducible Science/enabling-collaborative-numerical-modeling-knowledge-infrastructure/notebooks/attachment:image.png" />
+<img alt="image.png" src="../../../../../_images/enabling-collaborative-eq1.png" />
+<img alt="image.png" src="../../../../../_images/enabling-collaborative-eq1-text.png" />
 <p>C* can be calculated by the ratio of the sum of root cohesion, Cr, and soil cohesion, Cs, to the product of soil depth, density, and gravity.</p>
-<img alt="image.png" src="gallery/Python/Reproducible Science/enabling-collaborative-numerical-modeling-knowledge-infrastructure/notebooks/attachment:image.png" />
+<img alt="image.png" src="../../../../../_images/enabling-collaborative-eq2.png" />
 <p>Relative wetness is the ratio of depth of water subsurface flow above an impervious layer to the depth of soil.</p>
-<img alt="image.png" src="gallery/Python/Reproducible Science/enabling-collaborative-numerical-modeling-knowledge-infrastructure/notebooks/attachment:image.png" />
+<img alt="image.png" src="../../../../../_images/enabling-collaborative-eq3.png" />
 <p>R: recharge rate to water table (m/d) T: soil transmissivity (m^2/d) a: specific catchment area (m).</p>
-<p>** 1.2 Monte Carlo solution of the FS equation **</p>
-<p>Below the Monte Carlo approach used by Strauch et al. (2018) is illustrated in a figure. At each node of the model grid variables for soil and vegetation are generated from triangular distributions. Recharge to water table is obtained from hydrologic model simulations by selecting the largest daily value for each year. Probability of shallow landslide initiation is defined as the ratio of number of times FS&lt;1 to the total sample size of FS calculations.</p>
-<img alt="image.png" src="gallery/Python/Reproducible Science/enabling-collaborative-numerical-modeling-knowledge-infrastructure/notebooks/attachment:image.png" />
 </div>
+<div class="section" id="1.2-Monte-Carlo-solution-of-the-FS-equation">
+<h3>1.2 Monte Carlo solution of the FS equation<a class="headerlink" href="#1.2-Monte-Carlo-solution-of-the-FS-equation" title="Permalink to this headline">¶</a></h3>
+<p>Below the Monte Carlo approach used by Strauch et al. (2018) is illustrated in a figure. At each node of the model grid variables for soil and vegetation are generated from triangular distributions. Recharge to water table is obtained from hydrologic model simulations by selecting the largest daily value for each year. Probability of shallow landslide initiation is defined as the ratio of number of times FS&lt;1 to the total sample size of FS calculations.</p>
+<img alt="image.png" src="../../../../../_images/enabling-collaborative-diagram1.png" />
 </div>
 <div class="section" id="Module-overview-for-a-Landlab-Modeling-Toolkit-Landslide-Introduction">
-<h2>Module overview for a Landlab Modeling Toolkit Landslide Introduction<a class="headerlink" href="#Module-overview-for-a-Landlab-Modeling-Toolkit-Landslide-Introduction" title="Permalink to this headline">¶</a></h2>
+<h3>Module overview for a Landlab Modeling Toolkit Landslide Introduction<a class="headerlink" href="#Module-overview-for-a-Landlab-Modeling-Toolkit-Landslide-Introduction" title="Permalink to this headline">¶</a></h3>
 <p>This Jupyter Notebook runs the Landlab LandslideProbability component on a 30-m digital elevation model (DEM) for Thunder Creek, a subwaterhsed in the larger study domain developed by Strauch et al. (2018), using <em>data driven spatial</em> recharge distribution as described in the paper (<a class="reference external" href="https://www.earth-surf-dynam.net/6/1/2018/">https://www.earth-surf-dynam.net/6/1/2018/</a>).</p>
 <p>To run a landslide demonstration using the paper data and approach we will: 1) Import data from North Cascades National Park (NOCA: study area) 2) Review data needed as input for the landslide model 3) Create a RasterModelGrid based on a 30-m DEM - subset to Thunder Creek watershed 4) Assign data fields used to calculate landslide probability 5) Specify recharge option as <em>data driven spatial</em> and access Python dictionaries to generate recharge distributions 6) Set Number of iterations to run
 Monte Carlo simulation 7) Run Landlab LandslideProbability component 8) Run the model again to simulate post-fire conditions, 9) Display and visualize results of stability analysis 10) Save Notebook and Results back to HydroShare</p>
 <p>The estimated time to run this Notebook is 30-60 minutes with 20 minutes of computation time.</p>
+</div>
+</div>
 <div class="section" id="2.0-Data-Science-&amp;-Cyberinfrastructure-Methods">
-<h3>2.0 Data Science &amp; Cyberinfrastructure Methods<a class="headerlink" href="#2.0-Data-Science-&-Cyberinfrastructure-Methods" title="Permalink to this headline">¶</a></h3>
+<h2>2.0 Data Science &amp; Cyberinfrastructure Methods<a class="headerlink" href="#2.0-Data-Science-&-Cyberinfrastructure-Methods" title="Permalink to this headline">¶</a></h2>
 <p>Update or add libraries that are not installed on the CUAHSI JupyterHub server. At the time of publication, the Landlab library was dependent on a different numpy library than installed in the software environment. The code block below was added as an example of how to update a library to a new version and restart the notebook kernel. If this update is not needed, comment with a &lt;#&gt;. If other updates are needed, add them below.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
@@ -469,18 +458,15 @@ Monte Carlo simulation 7) Run Landlab LandslideProbability component 8) Run the 
 </pre></div>
 </div>
 </div>
-</div>
-</div>
 <div class="section" id="2.1-Data-Science-Methods">
-<h2>2.1 Data Science Methods<a class="headerlink" href="#2.1-Data-Science-Methods" title="Permalink to this headline">¶</a></h2>
-</div>
+<h3>2.1 Data Science Methods<a class="headerlink" href="#2.1-Data-Science-Methods" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="2.1.1-Import-Landlab-components,-functions-for-importing-data,-plotting-tools,-and-HydroShare-utilities">
-<h2>2.1.1 Import Landlab components, functions for importing data, plotting tools, and HydroShare utilities<a class="headerlink" href="#2.1.1-Import-Landlab-components,-functions-for-importing-data,-plotting-tools,-and-HydroShare-utilities" title="Permalink to this headline">¶</a></h2>
+<h4>2.1.1 Import Landlab components, functions for importing data, plotting tools, and HydroShare utilities<a class="headerlink" href="#2.1.1-Import-Landlab-components,-functions-for-importing-data,-plotting-tools,-and-HydroShare-utilities" title="Permalink to this headline">¶</a></h4>
 <p>To run this notebook, we must import several libraries. The hs_utils library provides functions for interacting with HydroShare, including resource querying, dowloading. and creation. Additional libraries support the functions of Landlab. The CUAHSI JupyterHub server provides many Python packages and libraries, but to add additional libraries to your personal user space, use the cell below. To request an Installation to the server, visit <a class="reference external" href="https://github.com/hydroshare/hydroshare-jupyterhub">https://github.com/hydroshare/hydroshare-jupyterhub</a>,
 create a New Issue, and add the label ‘Installation Request’.</p>
 </div>
 <div class="section" id="2.1.2-Import-Python-libraries">
-<h2>2.1.2 Import Python libraries<a class="headerlink" href="#2.1.2-Import-Python-libraries" title="Permalink to this headline">¶</a></h2>
+<h4>2.1.2 Import Python libraries<a class="headerlink" href="#2.1.2-Import-Python-libraries" title="Permalink to this headline">¶</a></h4>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
@@ -527,7 +513,7 @@ create a New Issue, and add the label ‘Installation Request’.</p>
 </div>
 </div>
 <div class="section" id="2.1.3-Connection-with-HydroShare">
-<h2>2.1.3 Connection with HydroShare<a class="headerlink" href="#2.1.3-Connection-with-HydroShare" title="Permalink to this headline">¶</a></h2>
+<h4>2.1.3 Connection with HydroShare<a class="headerlink" href="#2.1.3-Connection-with-HydroShare" title="Permalink to this headline">¶</a></h4>
 <p>After importing libraires, we now establish a secure connection with HydroShare by instantiating the hydroshare class that is defined within hs_utils. In addition to connecting with HydroShare, this command also sets and prints environment variables for several parameters that will be useful for saving work back to HydroShare.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
@@ -544,10 +530,13 @@ create a New Issue, and add the label ‘Installation Request’.</p>
 </div>
 <p>If you are curious about where the data is being downloaded, click on the Jupyter Notebook dashboard icon in upper rigth corner to see a File System view. The homedir directory location printed above is where you can find the data and contents you will download to a HydroShare JupyterHub server. At the end of this work session, you can migrate this data to the HydroShare iRods server as a Generic Resource.</p>
 </div>
-<div class="section" id="2.2.-Cyberinfrastructure-methods">
-<h2>2.2. Cyberinfrastructure methods<a class="headerlink" href="#2.2.-Cyberinfrastructure-methods" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="2.2-Cyberinfrastructure-methods">
+<h3>2.2 Cyberinfrastructure methods<a class="headerlink" href="#2.2-Cyberinfrastructure-methods" title="Permalink to this headline">¶</a></h3>
 <p>Strauch et al (2018) pre-processed the data for the North Cascades National Park Complex case study and is on HydroShare as <a class="reference external" href="https://www.hydroshare.org/resource/a5b52c0e1493401a815f4e77b09d352b/">Regional landslide hazard using Landlab - NOCA Data</a>. Here the first task is find this resource on Hydrohsare. We will click on the link to see the published data repository on HydroShare and collect the resource ID of the data. The resource ID can be found in the “How to cite” box, and it will be
 the series of numbers and letters following “hs.”. Here’s the copied resource: <a class="reference external" href="http://dx.doi.org/10.4211/hs.a5b52c0e1493401a815f4e77b09d352b">http://dx.doi.org/10.4211/hs.a5b52c0e1493401a815f4e77b09d352b</a> citation. Now we copy this ID and introduce it as “Data_ResourceID=” in the code below.</p>
+<div class="section" id="2.2.1-Set-DEM-data-download-variable-name">
+<h4>2.2.1 Set DEM data download variable name<a class="headerlink" href="#2.2.1-Set-DEM-data-download-variable-name" title="Permalink to this headline">¶</a></h4>
 <p>To learn more about this data visit <a class="reference external" href="https://www.hydroshare.org/resource/a5b52c0e1493401a815f4e77b09d352b/">Regional landslide hazard using Landlab - NOCA Data</a></p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
@@ -558,6 +547,9 @@ the series of numbers and letters following “hs.”. Here’s the copied resou
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="2.2.2-Download-Data">
+<h4>2.2.2 Download Data<a class="headerlink" href="#2.2.2-Download-Data" title="Permalink to this headline">¶</a></h4>
 <p>We will execute the next cell to download data from HydroShare iRods database to your personal user space - this may take a few minutes.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
@@ -606,12 +598,15 @@ the series of numbers and letters following “hs.”. Here’s the copied resou
 </div>
 <p>Now we will establish a RasterModelGrid based on a DEM for assigning our variables to. Nodes are the center point of grid cells or pixels that are 30 m by 30 m in this example.</p>
 </div>
+</div>
 <div class="section" id="2.4.-Create-a-watershed-subset-using-a-regional-RasterModelGrid">
-<h2>2.4. Create a watershed subset using a regional RasterModelGrid<a class="headerlink" href="#2.4.-Create-a-watershed-subset-using-a-regional-RasterModelGrid" title="Permalink to this headline">¶</a></h2>
+<h3>2.4. Create a watershed subset using a regional RasterModelGrid<a class="headerlink" href="#2.4.-Create-a-watershed-subset-using-a-regional-RasterModelGrid" title="Permalink to this headline">¶</a></h3>
 <p>The shapefile that you will download is a GIS point file with a table containing a grid_code for each 30m DEM cell in the Thunder Creek watershed. We import this table to generate a list of locations we want to keep “Open” as active nodes in this Landlab application for Thunder Creek.</p>
 <p>Here we will establish the watershed domain for our modeling study. In step 2.2.2, we have downloaded the DEM of the entire NOCA study region of Strauch et al. (2018) as well as other input data. This includes NoData resource that was created using a mask of Thunder Creek will be downladed and used to set no data nodes as inactive nodes (e.g., -9999). This step will establish boundary conditions. In your final run when you output modeled probability of landslide initiation, you will notice gaps
 in the model results at some ridge tops and peaks. This results from excluding glaciated areas and bedrock. This might take a few minutes as the park is large (2,757 km2).</p>
 <p>This shapefile resource was uploaded to HydroShare to generate an interoperable Notebook. To learn more about this data visit <a class="reference external" href="https://www.hydroshare.org/resource/8bf8de77227c4dcba4816dbe15e55687/">Thunder Creek Landlab Node ID Point Shapefile</a></p>
+<div class="section" id="2.4.1-Get-shapefile-of-ThunderCreek-watershed">
+<h4>2.4.1 Get shapefile of ThunderCreek watershed<a class="headerlink" href="#2.4.1-Get-shapefile-of-ThunderCreek-watershed" title="Permalink to this headline">¶</a></h4>
 <p>The shapefile table contains Landlab Gridcode value and Albers Conical X and Y values, spatial projection is WGS84.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
@@ -653,6 +648,9 @@ in the model results at some ridge tops and peaks. This results from excluding g
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="Load-spatial-landslide-model-inputs-from-ASCII-textfile-(ArcGIS-raster-conversion)-into-Landlab-grid">
+<h4>Load spatial landslide model inputs from ASCII textfile (ArcGIS raster conversion) into Landlab grid<a class="headerlink" href="#Load-spatial-landslide-model-inputs-from-ASCII-textfile-(ArcGIS-raster-conversion)-into-Landlab-grid" title="Permalink to this headline">¶</a></h4>
 <p>Create Landlab RasterModelGrid using DEM grid with elevation - this takes approximately 60 sec for the North Cascades National Park (NOCA).</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
@@ -736,15 +734,14 @@ in the model results at some ridge tops and peaks. This results from excluding g
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="2.5.-Attach-data-(e.g.,-soil-and-vegetation-variables)-to-the-Landlab-rastermodelgrid">
-<h2>2.5. Attach data (e.g., soil and vegetation variables) to the Landlab rastermodelgrid<a class="headerlink" href="#2.5.-Attach-data-(e.g.,-soil-and-vegetation-variables)-to-the-Landlab-rastermodelgrid" title="Permalink to this headline">¶</a></h2>
+<h3>2.5. Attach data (e.g., soil and vegetation variables) to the Landlab rastermodelgrid<a class="headerlink" href="#2.5.-Attach-data-(e.g.,-soil-and-vegetation-variables)-to-the-Landlab-rastermodelgrid" title="Permalink to this headline">¶</a></h3>
 <p>This will be used to calculate shallow landslide probability and set boundary conditions. THe data we attach in this step was downloaded in Step 2.2.2.</p>
-<ol class="arabic simple">
-<li><p>Load data from ascii text file</p></li>
-<li><p>Add this data as node variable to the Thunder Creek grid</p></li>
-<li><p>Set boundary conditions</p></li>
-</ol>
+<p><strong>For each input below</strong> 1. Load data from ascii text file 2. Add this data as node variable to the Thunder Creek grid 3. Set boundary conditions</p>
 <p>For the entire NOCA extent, this takes ~60 sec to load each file using the CUAHSI JupyterHub server.</p>
+<div class="section" id="2.5.1-Load-slope">
+<h4>2.5.1 Load slope<a class="headerlink" href="#2.5.1-Load-slope" title="Permalink to this headline">¶</a></h4>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
@@ -767,6 +764,9 @@ in the model results at some ridge tops and peaks. This results from excluding g
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="2.5.2-Load-contributing-area">
+<h4>2.5.2 Load contributing area<a class="headerlink" href="#2.5.2-Load-contributing-area" title="Permalink to this headline">¶</a></h4>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
@@ -778,6 +778,9 @@ in the model results at some ridge tops and peaks. This results from excluding g
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="2.5.3-Load-transmissivity">
+<h4>2.5.3 Load transmissivity<a class="headerlink" href="#2.5.3-Load-transmissivity" title="Permalink to this headline">¶</a></h4>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
@@ -789,6 +792,9 @@ in the model results at some ridge tops and peaks. This results from excluding g
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="2.5.4-Load-cohesion-(mode,-min,-and-max)">
+<h4>2.5.4 Load cohesion (mode, min, and max)<a class="headerlink" href="#2.5.4-Load-cohesion-(mode,-min,-and-max)" title="Permalink to this headline">¶</a></h4>
 <p>This takes ~3 minutes because 3 cohesion fields are provided to create more flexibility in how cohesion is distributed on the landscape with different vegetation.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
@@ -810,6 +816,9 @@ in the model results at some ridge tops and peaks. This results from excluding g
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="2.5.5-Load-internal-angle-of-friction">
+<h4>2.5.5 Load internal angle of friction<a class="headerlink" href="#2.5.5-Load-internal-angle-of-friction" title="Permalink to this headline">¶</a></h4>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
@@ -821,6 +830,9 @@ in the model results at some ridge tops and peaks. This results from excluding g
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="2.5.6-Set-soil-density-values">
+<h4>2.5.6 Set soil density values<a class="headerlink" href="#2.5.6-Set-soil-density-values" title="Permalink to this headline">¶</a></h4>
 <p>In this example, we assign all nodes a constant value.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
@@ -831,6 +843,9 @@ in the model results at some ridge tops and peaks. This results from excluding g
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="2.5.7-Load-soil-thickness">
+<h4>2.5.7 Load soil thickness<a class="headerlink" href="#2.5.7-Load-soil-thickness" title="Permalink to this headline">¶</a></h4>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
@@ -842,6 +857,9 @@ in the model results at some ridge tops and peaks. This results from excluding g
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="2.5.8-Load-observed-landslide-inventory.-Class-1-5-are-landslides,-8-is-no-landslide-mapped-for-later-plotting">
+<h4>2.5.8 Load observed landslide inventory. Class 1-5 are landslides, 8 is no landslide mapped for later plotting<a class="headerlink" href="#2.5.8-Load-observed-landslide-inventory.-Class-1-5-are-landslides,-8-is-no-landslide-mapped-for-later-plotting" title="Permalink to this headline">¶</a></h4>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
@@ -853,9 +871,12 @@ in the model results at some ridge tops and peaks. This results from excluding g
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="2.6.-Specify-recharge-option-as-data-driven-spatial-and-access-Python-dictionaries-to-generate-recharge-distributions">
-<h2>2.6. Specify recharge option as <em>data driven spatial</em> and access Python dictionaries to generate recharge distributions<a class="headerlink" href="#2.6.-Specify-recharge-option-as-data-driven-spatial-and-access-Python-dictionaries-to-generate-recharge-distributions" title="Permalink to this headline">¶</a></h2>
+<h3>2.6. Specify recharge option as <em>data driven spatial</em> and access Python dictionaries to generate recharge distributions<a class="headerlink" href="#2.6.-Specify-recharge-option-as-data-driven-spatial-and-access-Python-dictionaries-to-generate-recharge-distributions" title="Permalink to this headline">¶</a></h3>
 <p>Recharge in this model represents the annual maximum recharge in mm/day generated within the upslope contributing area of each model element. This corresponds to the wettest conditions expected annually, which would provide the highest pore-water pressure in a year. Details of this approach can be found in Strauch et al. (2018).</p>
+<div class="section" id="2.6.1-Select-recharge-method-from-the-component">
+<h4>2.6.1 Select recharge method from the component<a class="headerlink" href="#2.6.1-Select-recharge-method-from-the-component" title="Permalink to this headline">¶</a></h4>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
@@ -865,6 +886,9 @@ in the model results at some ridge tops and peaks. This results from excluding g
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="2.6.2-Load-pre-processed-routed-flows-dictionaries">
+<h4>2.6.2 Load pre-processed routed flows dictionaries<a class="headerlink" href="#2.6.2-Load-pre-processed-routed-flows-dictionaries" title="Permalink to this headline">¶</a></h4>
 <p>These contain HSD_id and fractional drainage at each node and recharge dictionaries. HSD is the Hydrologic Source Domain, which is the VIC hydrologic model data in this case study at ~5x6 km2 grid size. The ‘pickle’ utility loads existing dictionaries.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
@@ -880,6 +904,9 @@ in the model results at some ridge tops and peaks. This results from excluding g
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="2.6.3-Combine-dictionaries-into-ordered-parameters">
+<h4>2.6.3 Combine dictionaries into <strong>ordered</strong> parameters<a class="headerlink" href="#2.6.3-Combine-dictionaries-into-ordered-parameters" title="Permalink to this headline">¶</a></h4>
 <p>This sequence of parameters is required for <em>data driven spatial</em> distribution in the component. Recharge is this model is unique to each node represented by an array.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
@@ -891,8 +918,9 @@ in the model results at some ridge tops and peaks. This results from excluding g
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="2.7.-Set-Number-of-iterations-to-run-Monte-Carlo-simulation">
-<h2>2.7. Set Number of iterations to run Monte Carlo simulation<a class="headerlink" href="#2.7.-Set-Number-of-iterations-to-run-Monte-Carlo-simulation" title="Permalink to this headline">¶</a></h2>
+<h3>2.7. Set Number of iterations to run Monte Carlo simulation<a class="headerlink" href="#2.7.-Set-Number-of-iterations-to-run-Monte-Carlo-simulation" title="Permalink to this headline">¶</a></h3>
 <p>The landslide component employes the infinite slope model to calculate factor-of-safety index values using a Monte Carlo simulation, which randomly selects input values from parameter distributions. You can specify the number of Monte Carlo samples, but the default is 250. The larger the Monte Carlos sample size, the longer the program runs, but the more precise the probability of failure results become. Strauch et al. (2018) sampled 3,000 times for each parameter in each model grid.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
@@ -903,12 +931,14 @@ in the model results at some ridge tops and peaks. This results from excluding g
 </pre></div>
 </div>
 </div>
+</div>
+</div>
 <div class="section" id="3.-Results">
-<h3>3. Results<a class="headerlink" href="#3.-Results" title="Permalink to this headline">¶</a></h3>
-</div>
-</div>
+<h2>3. Results<a class="headerlink" href="#3.-Results" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="3.1.-Run-the-Landlab-LandslideProbability-Component-in-Thunder-Creek-for-pre-fire-conditions">
-<h2>3.1. Run the Landlab LandslideProbability Component in Thunder Creek for pre-fire conditions<a class="headerlink" href="#3.1.-Run-the-Landlab-LandslideProbability-Component-in-Thunder-Creek-for-pre-fire-conditions" title="Permalink to this headline">¶</a></h2>
+<h3>3.1. Run the Landlab LandslideProbability Component in Thunder Creek for pre-fire conditions<a class="headerlink" href="#3.1.-Run-the-Landlab-LandslideProbability-Component-in-Thunder-Creek-for-pre-fire-conditions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="3.1.1-Initialize-Pre-fire">
+<h4>3.1.1 Initialize Pre-fire<a class="headerlink" href="#3.1.1-Initialize-Pre-fire" title="Permalink to this headline">¶</a></h4>
 <p>To run the landslide model, we first instantiate the LandslideProbability component with the above parameters, as well as the grid and number of samples we specified before. Instantiation creates an instance of a class called LS_prob.</p>
 <p>No outputs are generated by this command as it is setting up the recharge and instantiating the component.</p>
 <div class="nbinput nblast docutils container">
@@ -923,6 +953,9 @@ in the model results at some ridge tops and peaks. This results from excluding g
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="3.1.2-Run-the-Pre-fire-model">
+<h4>3.1.2 Run the Pre-fire model<a class="headerlink" href="#3.1.2-Run-the-Pre-fire-model" title="Permalink to this headline">¶</a></h4>
 <p>Once the component has been instantiated, we generate outputs from running the component by calling the component’s ‘calculate_landslide_probability’ method using the class instance (e.g., LS_prob). The cell below runs the model; in the following section we will assessing the results. These calculations will take a few minutes given the size of the modeling domain represented by core nodes.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
@@ -976,10 +1009,13 @@ in the model results at some ridge tops and peaks. This results from excluding g
 </div>
 <p>-9999 means there is no data for that cell, it is a closed node.</p>
 </div>
+</div>
 <div class="section" id="3.2.-Run-the-Landlab-LandslideProbability-Component-in-Thunder-Creek-for-fire-conditions">
-<h2>3.2. Run the Landlab LandslideProbability Component in Thunder Creek for fire conditions<a class="headerlink" href="#3.2.-Run-the-Landlab-LandslideProbability-Component-in-Thunder-Creek-for-fire-conditions" title="Permalink to this headline">¶</a></h2>
+<h3>3.2. Run the Landlab LandslideProbability Component in Thunder Creek for fire conditions<a class="headerlink" href="#3.2.-Run-the-Landlab-LandslideProbability-Component-in-Thunder-Creek-for-fire-conditions" title="Permalink to this headline">¶</a></h3>
 <p>Make a ‘grid_fire’ version of ‘grid’ for which we will give post-fire cohesion parameter values 30% of the original cohesion. This is a crude estimation of the lowest root cohesion after tree removal based on a combined decay and regrowth model (e.g., Sidle, 1992).</p>
 <p>Sidle, R. C. (1992), A theoretical model of the effects of timber harvesting on slope stability, Water Resour. Res., 28(7), 1897–1910.</p>
+<div class="section" id="3.2.1-Make-a-Post-fire-copy-of-the-grid">
+<h4>3.2.1 Make a Post-fire copy of the grid<a class="headerlink" href="#3.2.1-Make-a-Post-fire-copy-of-the-grid" title="Permalink to this headline">¶</a></h4>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
@@ -993,6 +1029,9 @@ in the model results at some ridge tops and peaks. This results from excluding g
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="3.2.2-Change-the-Post-fire-cohesion-values">
+<h4>3.2.2 Change the Post-fire cohesion values<a class="headerlink" href="#3.2.2-Change-the-Post-fire-cohesion-values" title="Permalink to this headline">¶</a></h4>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
@@ -1009,6 +1048,9 @@ in the model results at some ridge tops and peaks. This results from excluding g
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="3.2.3-Initialize-the-Post-fire-model">
+<h4>3.2.3 Initialize the Post-fire model<a class="headerlink" href="#3.2.3-Initialize-the-Post-fire-model" title="Permalink to this headline">¶</a></h4>
 <p>Now we’ll run the landslide component with the adjusted cohesion, everything else kept constant.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
@@ -1022,6 +1064,9 @@ in the model results at some ridge tops and peaks. This results from excluding g
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="3.2.4-Run-the-Post-fire-model">
+<h4>3.2.4 Run the Post-fire model<a class="headerlink" href="#3.2.4-Run-the-Post-fire-model" title="Permalink to this headline">¶</a></h4>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
@@ -1062,8 +1107,9 @@ in the model results at some ridge tops and peaks. This results from excluding g
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="3.3.-Display-and-visualize-results-of-stability-analysis">
-<h2>3.3. Display and visualize results of stability analysis<a class="headerlink" href="#3.3.-Display-and-visualize-results-of-stability-analysis" title="Permalink to this headline">¶</a></h2>
+<h3>3.3. Display and visualize results of stability analysis<a class="headerlink" href="#3.3.-Display-and-visualize-results-of-stability-analysis" title="Permalink to this headline">¶</a></h3>
 <p>Set plotting parameters</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
@@ -1276,8 +1322,10 @@ in the model results at some ridge tops and peaks. This results from excluding g
 </pre></div>
 </div>
 </div>
+</div>
+</div>
 <div class="section" id="4.0.-Save-the-results-back-into-HydroShare">
-<h3>4.0. Save the results back into HydroShare<a class="headerlink" href="#4.0.-Save-the-results-back-into-HydroShare" title="Permalink to this headline">¶</a></h3>
+<h2>4.0. Save the results back into HydroShare<a class="headerlink" href="#4.0.-Save-the-results-back-into-HydroShare" title="Permalink to this headline">¶</a></h2>
 <p>Using the <code class="docutils literal notranslate"><span class="pre">hs_utils</span></code> library, the results of the Geoprocessing steps above can be saved back into HydroShare. First, define all of the required metadata for resource creation, i.e. <em>title</em>, <em>abstract</em>, <em>keywords</em>, <em>content files</em>. In addition, we must define the type of resource that will be created, in this case <em>genericresource</em>.</p>
 <p><strong>Note:</strong> Make sure you save the notebook at this point, so that all notebook changes will be saved into the new HydroShare resource.</p>
 <p><strong>Option A</strong> : define the resource from which this “NEW” content has been derived. This is one method for tracking resource provenance.</p>
@@ -1341,10 +1389,8 @@ in the model results at some ridge tops and peaks. This results from excluding g
 </pre></div>
 </div>
 </div>
-</div>
-</div>
 <div class="section" id="Acknowledgements">
-<h2>Acknowledgements<a class="headerlink" href="#Acknowledgements" title="Permalink to this headline">¶</a></h2>
+<h3>Acknowledgements<a class="headerlink" href="#Acknowledgements" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://zenodo.org/badge/latestdoi/187289993"><img alt="DOI" src="https://zenodo.org/badge/187289993.svg" /></a></p>
 <p>This Notebooks serves as content for:</p>
 <p>Bandaragoda, C. J., A. Castronova, E. Istanbulluoglu, R. Strauch, S. S. Nudurupati, J. Phuong, J. M. Adams, et al. “Enabling Collaborative Numerical Modeling in Earth Sciences Using Knowledge Infrastructure.” Environmental Modelling &amp; Software, April 24, 2019. <a class="reference external" href="https://doi.org/10.1016/j.envsoft.2019.03.020">https://doi.org/10.1016/j.envsoft.2019.03.020</a>.</p>
@@ -1353,14 +1399,6 @@ in the model results at some ridge tops and peaks. This results from excluding g
 <p>This notebook was developed from code written by Ronda Strauch as part of her Ph.D. disseration at the University of Washington.</p>
 <p>Use or citation of this notebook should also reference:</p>
 <p>Strauch R., Istanbulluoglu E., Nudurupati S.S., Bandaragoda C., Gasparini N.M., and G.E. Tucker (2018). A hydro-climatological approach to predicting regional landslide probability using Landlab. Earth Surf. Dynam., 6, 1–26. <a class="reference external" href="https://www.earth-surf-dynam.net/6/1/2018/">https://www.earth-surf-dynam.net/6/1/2018/</a></p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>
-</pre></div>
-</div>
 </div>
 </div>
 </div>

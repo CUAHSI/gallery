@@ -4,28 +4,37 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "<img src=\"http://landlab.github.io/assets/Landlab-logo.png\"\n",
-    "style=\"float:left;width:150px;padding:0px\">  \n",
-    "\n",
-    "<br /> \n",
-    "\n",
-    "# Reuse a published regional Landlab shallow landslide model to explore changes in forest cover at a subcatchment within the study area<br /> \n",
-    "### You will explore how to reuse model code and data in a subregion within a larger region where the model was developed \n",
-    "* Load data from a regional Landlab landslide model (Strauch et al., 2018) developed for the North Cascades National Park, WA USA, published on HydroShare. <br />\n",
-    "* Define a geographic subset (Thunder Creek watershed) within the study region.\n",
-    "* Explore landslide probability sensitivity to fire by adjusting the cohesion parameter for Thunder Creek.\n",
-    "* Save results to a new HydroShare resource.  <br />\n",
-    "\n",
-    "The shallow landslide model you will is based on a spatially distributed Monte Carlo solution of the infinite slope stability model. Detailes of the model and the study site are described in Strauch et al. (2018). Please see the end of this Notebook for Acknowledgements and Citation information. \n",
-    "\n",
-    " <br /> <img src=\"https://www.washington.edu/brand/files/2014/09/W-Logo_Purple_Hex.png\" style=\"float:right;width:120px;padding:10px\">   "
+    "![image.png](img/enabling-collaborative-landlab.png)\n",
+    "![image.png](img/enabling-collaborative-udub.png)\n",
+    "  "
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## To run this notebook:\n",
+    "# Reuse a published regional Landlab shallow landslide model to explore changes in forest cover at a subcatchment within the study area"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**You will explore how to reuse model code and data in a subregion within a larger region where the model was developed**\n",
+    "\n",
+    "* Load data from a regional Landlab landslide model (Strauch et al., 2018) developed for the North Cascades National Park, WA USA, published on HydroShare. <br />\n",
+    "* Define a geographic subset (Thunder Creek watershed) within the study region.\n",
+    "* Explore landslide probability sensitivity to fire by adjusting the cohesion parameter for Thunder Creek.\n",
+    "* Save results to a new HydroShare resource.  <br />\n",
+    "\n",
+    "The shallow landslide model you will is based on a spatially distributed Monte Carlo solution of the infinite slope stability model. Detailes of the model and the study site are described in Strauch et al. (2018). Please see the end of this Notebook for Acknowledgements and Citation information. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**To run this notebook:**\n",
     "\n",
     "Click in each shaded cell below and \"shift + enter\" to run each code block. Alternatively, you can run groups of cells by clicking \"Cell\" on the menu above and selecting your run options from the pull-down menu. This is also where you can clear outputs from previous runs.\n",
     "\n",
@@ -43,11 +52,11 @@
    "source": [
     "## 1. Introduction\n",
     "\n",
-    "** 1.1 Infinite Slope Factor of Safety Equation **\n",
+    "### 1.1 Infinite Slope Factor of Safety Equation\n",
     "\n",
     "This equation predicts the ratio of stabilizing to destabilizing forces on a hillslope plane. The properties are assumed to represent an infinte plane, neglecting the boundary conditions around the landslide location. When FS<1, the slope is instable.\n",
     "\n",
-    "![image.png](attachment:image.png)"
+    "![image.png](img/enabling-collaborative-eq1.png)"
    ]
   },
   {
@@ -59,7 +68,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "![image.png](attachment:image.png)"
+    "![image.png](img/enabling-collaborative-eq1-text.png)"
    ]
   },
   {
@@ -78,7 +87,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "![image.png](attachment:image.png)"
+    "![image.png](img/enabling-collaborative-eq2.png)"
    ]
   },
   {
@@ -97,7 +106,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "![image.png](attachment:image.png)"
+    "![image.png](img/enabling-collaborative-eq3.png)"
    ]
   },
   {
@@ -113,7 +122,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "** 1.2 Monte Carlo solution of the FS equation **\n",
+    "### 1.2 Monte Carlo solution of the FS equation\n",
     "\n",
     "Below the Monte Carlo approach used by Strauch et al. (2018) is illustrated in a figure. At each node of the model grid variables for soil and vegetation are generated from triangular distributions. Recharge to water table is obtained from hydrologic model simulations by selecting the largest daily value for each year. Probability of shallow landslide initiation is defined as the ratio of number of times FS<1 to the total sample size of FS calculations."
    ]
@@ -127,7 +136,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "![image.png](attachment:image.png)"
+    "![image.png](img/enabling-collaborative-diagram1.png)"
    ]
   },
   {
@@ -182,7 +191,7 @@
    "source": [
     "### 2.1 Data Science Methods\n",
     "\n",
-    "### 2.1.1 Import Landlab components, functions for importing data, plotting tools, and HydroShare utilities\n",
+    "#### 2.1.1 Import Landlab components, functions for importing data, plotting tools, and HydroShare utilities\n",
     "\n",
     "To run this notebook, we must import several libraries.\n",
     "The hs_utils library provides functions for interacting with HydroShare, including resource querying, dowloading. and creation. Additional libraries support the functions of Landlab.   The CUAHSI JupyterHub server provides many Python packages and libraries, but to add additional libraries to your personal user space, use the cell below.  To request an Installation to the server, visit https://github.com/hydroshare/hydroshare-jupyterhub, create a New Issue, and add the label 'Installation Request'. "
@@ -192,7 +201,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "### 2.1.2 Import Python libraries"
+    "#### 2.1.2 Import Python libraries"
    ]
   },
   {
@@ -243,7 +252,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "### 2.1.3 Connection with HydroShare\n",
+    "#### 2.1.3 Connection with HydroShare\n",
     "After importing libraires, we now establish a secure connection with HydroShare by instantiating the hydroshare class that is defined within hs_utils. In addition to connecting with HydroShare, this command also sets and prints environment variables for several parameters that will be useful for saving work back to HydroShare."
    ]
   },
@@ -271,7 +280,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "### 2.2. Cyberinfrastructure methods\n",
+    "### 2.2 Cyberinfrastructure methods\n",
     "Strauch et al (2018) pre-processed the data for the North Cascades National Park Complex case study and is on HydroShare as [Regional landslide hazard using Landlab - NOCA Data](https://www.hydroshare.org/resource/a5b52c0e1493401a815f4e77b09d352b/). Here the first task is find this resource on Hydrohsare. We will click on the link to see the published data repository on HydroShare and collect the resource ID of the data. The resource ID can be found in the \"How to cite\" box, and it will be the series of numbers and letters following \"hs.\". Here's the copied resource: http://dx.doi.org/10.4211/hs.a5b52c0e1493401a815f4e77b09d352b citation. Now we copy this ID and introduce it as \"Data_ResourceID=\" in the code below. \n",
     "\n",
     "#### 2.2.1 Set DEM data download variable name\n",
@@ -582,7 +591,7 @@
     "### 2.5. Attach data (e.g., soil and vegetation variables) to the Landlab rastermodelgrid\n",
     "This will be used to calculate shallow landslide probability and set boundary conditions. THe data we attach in this step was downloaded in Step 2.2.2. \n",
     "\n",
-    "#### For each input below\n",
+    "**For each input below**\n",
     "1. Load data from ascii text file\n",
     "2. Add this data as node variable to the Thunder Creek grid\n",
     "3. Set boundary conditions\n",
@@ -1477,9 +1486,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "metadata": {
-    "scrolled": false
-   },
+   "metadata": {},
    "outputs": [],
    "source": [
     "# Save the results back to HydroShare\n",
@@ -1529,19 +1536,12 @@
     "Strauch R., Istanbulluoglu E., Nudurupati S.S., Bandaragoda C., Gasparini N.M., and G.E. Tucker (2018). A hydro-climatological approach to predicting regional landslide probability using Landlab. Earth Surf. Dynam., 6, 1–26. \n",
     "https://www.earth-surf-dynam.net/6/1/2018/"
    ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
   }
  ],
  "metadata": {
   "anaconda-cloud": {},
   "kernelspec": {
-   "display_name": "Python 3",
+   "display_name": "Python3",
    "language": "python",
    "name": "python3"
   },
@@ -1559,5 +1559,5 @@
   }
  },
  "nbformat": 4,
- "nbformat_minor": 1
+ "nbformat_minor": 4
 }

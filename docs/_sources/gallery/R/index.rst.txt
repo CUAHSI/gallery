@@ -4,7 +4,7 @@
 
 .. toctree::
    :caption: Table of Contents
-   :name: mastertoc
+   :name: R-toc
    :hidden:
    :glob:
 
