@@ -55,12 +55,7 @@
 
 
                     
-
-                        <a class="sphinx-bs badge badge-primary text-white reference external" href=www.google.com>
-                            <span>Webpage</span>
-                        </a>
-
-                    
+                    <!-- TODO: Include personal webpages from conf.yaml -->
 
                 </div>
             </span>
@@ -86,12 +81,7 @@
 
 
                     
-
-                        <a class="sphinx-bs badge badge-primary text-white reference external" href=test.com>
-                            <span>Webpage</span>
-                        </a>
-
-                    
+                    <!-- TODO: Include personal webpages from conf.yaml -->
 
                 </div>
             </span>

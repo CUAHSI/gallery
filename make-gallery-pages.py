@@ -43,7 +43,6 @@ def get_metadata_from_hs(hsguid):
 
         # parse into lxml object
         root = etree.fromstring(txt)
-
         creators = root.findall(".//dc:creator", root.nsmap)
         data["authors"] = []
 
@@ -58,7 +57,7 @@ def get_metadata_from_hs(hsguid):
             # save the user's profile page if it exists
             user_url = terms.find(f'hsterms:description',root.nsmap)
             if user_url is not None:
-                d['url'] = f'https://hydroshare.org{user_url.text}'
+                d['hs-profile'] = f'https://hydroshare.org{user_url.text}'
 
             data["authors"].append(d)
 

@@ -56,13 +56,14 @@
                     {% endif %}
 
 
-                    {% if 'url' in authors[i] %}
+                    {% if 'hs-profile' in authors[i] %}
 
-                        <a class="sphinx-bs badge badge-primary text-white reference external" href={{ authors[i]['url'] }}>
-                            <span>Webpage</span>
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href={{ authors[i]['hs-profile'] }}>
+                            <span>Profile</span>
                         </a>
 
                     {% endif %}
+                    <!-- TODO: Include personal webpages from conf.yaml -->
 
                 </div>
             </span>

@@ -47,12 +47,7 @@
 
 
                     
-
-                        <a class="sphinx-bs badge badge-primary text-white reference external" href=www.jpgannon.com>
-                            <span>Webpage</span>
-                        </a>
-
-                    
+                    <!-- TODO: Include personal webpages from conf.yaml -->
 
                 </div>
             </span>

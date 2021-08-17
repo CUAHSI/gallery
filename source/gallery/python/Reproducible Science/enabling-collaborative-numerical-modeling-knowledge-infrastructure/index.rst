@@ -57,10 +57,11 @@
                     
 
                         <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/2909/>
-                            <span>Webpage</span>
+                            <span>Profile</span>
                         </a>
 
                     
+                    <!-- TODO: Include personal webpages from conf.yaml -->
 
                 </div>
             </span>
@@ -90,10 +91,11 @@
                     
 
                         <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/431/>
-                            <span>Webpage</span>
+                            <span>Profile</span>
                         </a>
 
                     
+                    <!-- TODO: Include personal webpages from conf.yaml -->
 
                 </div>
             </span>
@@ -123,10 +125,11 @@
                     
 
                         <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/259/>
-                            <span>Webpage</span>
+                            <span>Profile</span>
                         </a>
 
                     
+                    <!-- TODO: Include personal webpages from conf.yaml -->
 
                 </div>
             </span>
@@ -156,10 +159,11 @@
                     
 
                         <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/1211/>
-                            <span>Webpage</span>
+                            <span>Profile</span>
                         </a>
 
                     
+                    <!-- TODO: Include personal webpages from conf.yaml -->
 
                 </div>
             </span>
@@ -189,10 +193,11 @@
                     
 
                         <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/521/>
-                            <span>Webpage</span>
+                            <span>Profile</span>
                         </a>
 
                     
+                    <!-- TODO: Include personal webpages from conf.yaml -->
 
                 </div>
             </span>
@@ -222,10 +227,11 @@
                     
 
                         <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/536/>
-                            <span>Webpage</span>
+                            <span>Profile</span>
                         </a>
 
                     
+                    <!-- TODO: Include personal webpages from conf.yaml -->
 
                 </div>
             </span>
@@ -255,10 +261,11 @@
                     
 
                         <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/362/>
-                            <span>Webpage</span>
+                            <span>Profile</span>
                         </a>
 
                     
+                    <!-- TODO: Include personal webpages from conf.yaml -->
 
                 </div>
             </span>
@@ -286,10 +293,11 @@
                     
 
                         <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/11/>
-                            <span>Webpage</span>
+                            <span>Profile</span>
                         </a>
 
                     
+                    <!-- TODO: Include personal webpages from conf.yaml -->
 
                 </div>
             </span>

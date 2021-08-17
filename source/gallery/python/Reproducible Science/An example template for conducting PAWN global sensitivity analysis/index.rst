@@ -55,10 +55,11 @@
                     
 
                         <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/3192/>
-                            <span>Webpage</span>
+                            <span>Profile</span>
                         </a>
 
                     
+                    <!-- TODO: Include personal webpages from conf.yaml -->
 
                 </div>
             </span>
