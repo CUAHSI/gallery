@@ -1,0 +1,402 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Data Access and Time-series Statistics &mdash; CUAHSI Gallery</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/contentui.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/language_data.js"></script>
+        <script src="../../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../../_static/copybutton.js"></script>
+        <script src="../../../../../_static/js/custom.js"></script>
+        <script src="../../../../../_static/contentui.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../../../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html">
+          
+
+          
+            
+            <img src="../../../../../_static/cuahsi-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Galleries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#research-examples">Research Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#reproducible-science-examples">Reproducible Science Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../R/index.html">R</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../R/index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../RShiny/index.html">RShiny</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../RShiny/index.html#research-examples">Research Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../RShiny/index.html#instructional-examples">Instructional Examples</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">CUAHSI Gallery</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          <!--
+The purpose of this template is to override (i.e. supress) the breadcrumbs that appear at the top of each page.
+-->
+
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Data-Access-and-Time-series-Statistics">
+<h1>Data Access and Time-series Statistics<a class="headerlink" href="#Data-Access-and-Time-series-Statistics" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><strong>Emilio Mayorga</strong>, University of Washington - APL</p></li>
+<li><p><strong>Yifan Cheng</strong>, University of Washington - CEE</p></li>
+</ul>
+<p><a class="reference external" href="https://waterhackweek.github.io">WaterHackWeek</a> Cyberseminar.       February 7, 2019</p>
+<div class="section" id="Data-types-and-this-seminar">
+<h2>Data types and this seminar<a class="headerlink" href="#Data-types-and-this-seminar" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Spatial representation? Point, gridded, etc.</p></li>
+<li><p>Long time series, near-real-time data, high-frequency sensor data?</p></li>
+<li><p>USA, International, Global?</p></li>
+<li><p>Academic research or government monitoring and research?</p></li>
+<li><p>Atmospheric, surface water, groundwater? Variables of interest?</p></li>
+</ul>
+<ul class="simple">
+<li><p><strong>Seminar focused on time series data from sites commonly represented as fixed geographical points.</strong> And we’ll emphasize surface waters.</p></li>
+</ul>
+</div>
+<div class="section" id="Where-do-I-find-the-data-I-need?-Google?">
+<h2>Where do I find the data I need? Google?<a class="headerlink" href="#Where-do-I-find-the-data-I-need?-Google?" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Google Search.</strong></p>
+<ul>
+<li><p>Overwhelming. Many irrelevant results.</p></li>
+</ul>
+</li>
+<li><p><strong>Google Earth Engine.</strong> <a class="reference external" href="https://earthengine.google.com/">https://earthengine.google.com/</a></p>
+<ul>
+<li><p>Fantastic for remote sensing data and processing. Not yet there for site time series, site data</p></li>
+</ul>
+</li>
+<li><p><strong>Google Dataset Search.</strong> <a class="reference external" href="https://toolbox.google.com/datasetsearch">https://toolbox.google.com/datasetsearch</a></p>
+<ul>
+<li><p>New, promising. Probably a good place to start.</p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p>No single catalog will meet all your needs for search, discovery, and convenient access to data, equally well, in all domains of water research!</p></li>
+</ul>
+<ul class="simple">
+<li><p>But some systems are good, broad starting points.</p></li>
+<li><p>Some make it easier to identify, ingest and use the <em>“granular”</em> data consistently across sources, while some only target the <em>“dataset”</em> and metadata level.</p></li>
+<li><p>See this nice (but a bit dated) <a class="reference external" href="http://gleon.org/data/repositories">GLEON page comparing DataONE and CUAHSI HIS-HydroClient</a>. Valuable comparison beyond those two systems.</p></li>
+<li><p>All have pros and cons.</p></li>
+</ul>
+</div>
+<div class="section" id="Catalogs:-User-Interface-vs-APIs">
+<h2>Catalogs: User Interface vs APIs<a class="headerlink" href="#Catalogs:-User-Interface-vs-APIs" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Most catalog systems provide both a user interface (UI) for interactive browsing, and an <em>Application Programming Interface (API)</em> for remote programmatic access through the web. The UI is typically easier to use, but the API facilitates repeated tasks, large queries, reuse, and reproducibility.</p></li>
+</ul>
+</div>
+<div class="section" id="Data-Search-Strategies,-Considerations">
+<h2>Data Search Strategies, Considerations<a class="headerlink" href="#Data-Search-Strategies,-Considerations" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Clarify the type of data your research question requires</p></li>
+<li><p>Ask your colleagues about sources of relevant data!</p></li>
+<li><p>Do try Google. But also use specialized (Earth Sciences, hydrology, etc) but still broad catalogs.</p></li>
+<li><p>Does the catalog make it easier to access data in consistent data formats across data sources? Or is it focused on “datasets”?</p></li>
+<li><p>Go to each individual data provider’s web site, or try to find a system or tool that spans multiple data sets?</p></li>
+</ul>
+<div class="section" id="…-continued">
+<h3>… continued<a class="headerlink" href="#…-continued" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Manual file downloading, or programmatic access (“web services”; say, from Python)?</p></li>
+<li><p>What options does the data provider have? Manual file downloads, custom or standards-based web service API, custom or standards-based data formats?</p></li>
+<li><p>Are there multi-dataset code packages that can handle the dataset you want? Is the package fairly easy to use, well documented, with plenty of examples, and does it have an active community of users and developers (say, on GitHub)?</p></li>
+<li><p>Are parameters (“water temperature”, “stream discharge”, “rainfall”, etc) well described? Do different data sources use different parameter names, meanings, and units?</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="Searching-for-Data:-Useful-systems/catalogs-we’ll-explore">
+<h2>Searching for Data: Useful systems/catalogs we’ll explore<a class="headerlink" href="#Searching-for-Data:-Useful-systems/catalogs-we’ll-explore" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p><strong>CUAHSI HIS-HydroClient.</strong> <a class="reference external" href="https://www.cuahsi.org/data-models">https://www.cuahsi.org/data-models</a>. HydroClient, <a class="reference external" href="http://data.cuahsi.org">http://data.cuahsi.org</a>, is a web application providing discovery, visualization and download capability for site time series from many different sources accessible through the CUAHSI “HIS Central” catalog <a class="reference external" href="http://his.cuahsi.org/">http://his.cuahsi.org/</a></p></li>
+<li><p><strong>CUAHSI HydroShare.</strong> <a class="reference external" href="https://www.hydroshare.org/search/">https://www.hydroshare.org/search/</a> (already discussed in previous seminars)</p></li>
+<li><p><strong>USGS NWIS.</strong> National Water Information System - USGS Water Data for the Nation: <a class="reference external" href="https://waterdata.usgs.gov/nwis">https://waterdata.usgs.gov/nwis</a>. Water quantity and quality from surface waters and groundwater.</p></li>
+<li><p><strong>Observatories, Field site networks.</strong> <a class="reference external" href="https://www.neonscience.org">NEON (National Ecological Observatory Network)</a>, <a class="reference external" href="https://lternet.edu/">LTER</a>, <a class="reference external" href="http://criticalzone.org/national/">CZO</a>, <a class="reference external" href="http://gleon.org/">GLEON</a>, USDA watersheds.</p></li>
+<li><p><strong>MonitorMyWatershed / ModelMyWatershed web application.</strong> <a class="reference external" href="https://modelmywatershed.org">https://modelmywatershed.org</a>. Provides user-friendly search capabilities across 4 catalogs: HydroShare, CUAHSI HIS-HydroClient, CINERGI, and Water Quality Portal; plus integration with HydroShare.</p></li>
+</ol>
+<div class="section" id="…-Other-Systems-(explore-on-your-own)">
+<h3>… Other Systems (explore on your own)<a class="headerlink" href="#…-Other-Systems-(explore-on-your-own)" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://DataDiscoveryStudio.org">EarthCube Data Discovery Studio (formerly “CINERGI”)</a>. Broad “meta” catalog that integrates and harmonizes many different catalogs across the Earth Sciences. Operates at the dataset level.</p></li>
+<li><p><a class="reference external" href="https://search.dataone.org">DataONE</a>. Broad catalog operating at the dataset level, with a diverse range of “Earth observational” data, including water data. US based and strongest for US data, but integrates datasets from other regions.</p></li>
+<li><p><a class="reference external" href="https://www.pangaea.de">PANGEA</a>. “archiving, publishing and distributing georeferenced data from earth system research”. Based in Germany, PANGEA operates at the dataset level and archives both large and small datasets, often via agreements with journals.</p></li>
+<li><p><a class="reference external" href="https://www.waterqualitydata.us">Water Quality Portal</a>. “A cooperative service sponsored by USGS, EPA and the National Water Quality Monitoring Council (NWQMC) that integrates publicly available water quality data from USGS NWIS, the EPA STORET Data Warehouse, and USDA STEWARDS.”</p></li>
+<li><p><strong>NOAA NCDC.</strong> Climate data – next slide.</p></li>
+<li><p>US agencies</p>
+<ul>
+<li><p>Other federal agencies (Army Corps. Eng., DOE, USDA)</p></li>
+<li><p>State agencies (and local agencies!)</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="Climate-Data">
+<h2>Climate Data<a class="headerlink" href="#Climate-Data" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.ncdc.noaa.gov/data-access/land-based-station-data">NOAA NCDC Land-based station data (US and Global)</a></p>
+<ul>
+<li><p>Multiple datasets by a single agency provider</p></li>
+<li><p>Multiple access mechanisms (custom REST API; standards-based APIs; etc)</p></li>
+<li><p>Access for a subset of datasets via independent, specialized tool: CUAHSI HIS/HydroClient, <code class="docutils literal notranslate"><span class="pre">ulmo</span></code></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://daymet.ornl.gov">NASA ORNL Daymet (US)</a></p>
+<ul>
+<li><p>1km x 1km gridded daily data, including query access via lat-lon points</p></li>
+<li><p>Multiple access mechanisms</p></li>
+<li><p>Access via independent, specialized tools: <code class="docutils literal notranslate"><span class="pre">ulmo</span></code>, <a class="reference external" href="http://khufkens.github.io/daymetpy/">daymetpy</a></p></li>
+</ul>
+</li>
+</ul>
+<p><em>Brief NCDC drill in online:</em> - NCDC Land-Based Station Data pages (Datasets, <a class="reference external" href="https://www.ncdc.noaa.gov/cdo-web/">CDO</a>, <a class="reference external" href="https://www.ncdc.noaa.gov/cdo-web/webservices/ncdcwebservices">web services</a>, <a class="reference external" href="https://www.ncdc.noaa.gov/cdo-web/webservices/v2">CDO REST API</a>): <a class="reference external" href="https://www.ncdc.noaa.gov/data-access/land-based-station-data">https://www.ncdc.noaa.gov/data-access/land-based-station-data</a> - <code class="docutils literal notranslate"><span class="pre">ulmo</span></code> NCDC <a class="reference external" href="https://ulmo.readthedocs.io/en/latest/api.html#module-ulmo.ncdc.ghcn_daily">Global Historical Climate Network Daily (GHCN) plugin</a>. Also NCDC
+GSOD, CRIS plugins.</p>
+</div>
+<div class="section" id="Python">
+<h2>Python<a class="headerlink" href="#Python" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Pandas</strong> is the backbone. “DataFrame” tabular data structure. Incorporates lots of functionality and core Python tools: read/write, data organization, data exploration, cleaning, and summarizing; Numpy, matplotlib plotting</p></li>
+<li><p><strong>GeoPandas.</strong> Geospatially enabled Pandas, incorporating several useful geospatial tools.</p></li>
+<li><p>Matplotlib plotting.</p></li>
+<li><p><strong>ulmo</strong> data access package. <a class="reference external" href="https://ulmo.readthedocs.io">https://ulmo.readthedocs.io</a></p></li>
+<li><p>Python datetime handling.</p>
+<ul>
+<li><p>Beware of different Python datetime types: Python standard <code class="docutils literal notranslate"><span class="pre">datetime</span></code> type; Numpy datetime; Pandas <code class="docutils literal notranslate"><span class="pre">Timestamp</span></code></p></li>
+<li><p>Timezone handling; datetime utilities, conversion</p></li>
+<li><p>See <a class="reference external" href="https://medium.com/jbennetcodes/dealing-with-datetimes-like-a-pro-in-pandas-b80d3d808a7f">this</a> and <a class="reference external" href="https://medium.com/jbennetcodes/dealing-with-datetimes-like-a-pro-in-python-fb3ac0feb94b">that</a> blog posts</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="Data-access-and-ingest.-Common-approaches,-tools">
+<h2>Data access and ingest. Common approaches, tools<a class="headerlink" href="#Data-access-and-ingest.-Common-approaches,-tools" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Manual browsing, donwloads, and reading local files (but issues of reproducibility, efficiency, thorougness)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">`requests</span></code> Python package &lt;<a class="reference external" href="https://stackabuse.com/the-python-requests-module/">https://stackabuse.com/the-python-requests-module/</a>&gt;`__ (and <code class="docutils literal notranslate"><span class="pre">wget</span></code>, <code class="docutils literal notranslate"><span class="pre">curl</span></code>): generic remote access through the web.</p></li>
+<li><p>Pandas <code class="docutils literal notranslate"><span class="pre">read_csv</span></code> function. Not just local files, but also remote files.</p></li>
+<li><p>Custom web APIs (often called “REST” APIs) from the data provider (eg, NEON). Often fairly easy to use, but highly variable across systems.</p></li>
+<li><p>Standards-based resources:</p>
+<ul>
+<li><p>APIs: OPeNDAP, Open Geospatial Consortium (OGC) Web Services (WFS, SOS, etc), <strong>CUAHSI WaterOneFlow</strong></p></li>
+<li><p>Formats: WaterML (<strong>CUAHSI WaterML 1.x</strong> vs OGC WaterML 2.0), NetCDF (3 “classic” vs 4), Metadata standards</p></li>
+<li><p>See this <a class="reference external" href="http://his.cuahsi.org/wofws.html">old but still very useful descriptions of CUAHSI “HIS” standards</a></p></li>
+<li><p>Standards enable reusability across multiple data sources, systems</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ulmo</span></code>. Water and climate data. Wraps a lot of the underlying complexity into simpler, more user-friendly Python APIs.</p></li>
+</ul>
+<div class="section" id="…-Other-Python-packages">
+<h3>… Other Python packages<a class="headerlink" href="#…-Other-Python-packages" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>We won’t discuss these, but you can explore them</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">`climata</span></code> &lt;<a class="reference external" href="https://github.com/heigeo/climata">https://github.com/heigeo/climata</a>&gt;`__</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">`MetPy</span></code> &lt;<a class="reference external" href="https://github.com/Unidata/MetP">https://github.com/Unidata/MetP</a>&gt;`__</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">`obsio</span></code> &lt;<a class="reference external" href="https://github.com/jaredwo/obsio">https://github.com/jaredwo/obsio</a>&gt;`__</p></li>
+<li><p>provider-specific packages, such as <code class="docutils literal notranslate"><span class="pre">daymetpy</span></code></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="Next:-Use-cases-with-Python-examples">
+<h2>Next: Use cases with Python examples<a class="headerlink" href="#Next:-Use-cases-with-Python-examples" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Southeast US (Yifan’s research area)</p></li>
+<li><p>Surface water temperature, discharge and water quality</p></li>
+<li><p>Running Python code: <a class="reference external" href="https://geohackweek.github.io/datasharing/01-conda-tutorial/">conda</a>, conda environment, and Jupyter notebooks</p></li>
+<li><p>All materials available on GitHub repository, <a class="reference external" href="https://github.com/waterhackweek/tsdata_access">https://github.com/waterhackweek/tsdata_access</a></p></li>
+<li><p>Use cases</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://nbviewer.jupyter.org/github/waterhackweek/tsdata_access/blob/master/Part1-ulmo_nwis_reservoirtemperature.ipynb">River and reservoir water temperature.</a> Yifan</p></li>
+<li><p>Search, access and initial look. <a class="reference external" href="https://nbviewer.jupyter.org/github/waterhackweek/tsdata_access/blob/master/Part2-ulmo_nwis_and_cuahsi.ipynb">Notebook 1</a>, and <a class="reference external" href="https://nbviewer.jupyter.org/github/waterhackweek/tsdata_access/blob/master/Part2-NEON_and_Observatories_RESTAPI.ipynb">notebook 2</a>. Emilio</p></li>
+</ol>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <!-- 
+This file modifies the default sphinx_rtd_theme footer
+-->
+
+
+
+<footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+  <!-- your html code here -->
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
