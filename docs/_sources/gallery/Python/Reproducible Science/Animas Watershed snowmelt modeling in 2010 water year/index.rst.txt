@@ -15,11 +15,15 @@
 
 .. container:: container-lg launch-container pb-1
 
-    
-         
-            :link-badge:`https://hydroshare.org/resource/a2b87a2f25d046958ac604e522f449c0,"Open In HydroShare",cls=badge-primary text-white launch-badge`
+    .. raw:: html
+
         
-    
+         
+        <a class="badge launch" target='_blank' href=https://hydroshare.org/resource/a2b87a2f25d046958ac604e522f449c0>
+            <span>Open In HydroShare</span>
+        </a>
+        
+        
 
 
 

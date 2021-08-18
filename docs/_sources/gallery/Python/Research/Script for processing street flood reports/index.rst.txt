@@ -15,11 +15,15 @@
 
 .. container:: container-lg launch-container pb-1
 
-    
-         
-            :link-badge:`https://hydroshare.org/resource/38a4ce62960942b4ad8398ee58a777cf,"Open In HydroShare",cls=badge-primary text-white launch-badge`
+    .. raw:: html
+
         
-    
+         
+        <a class="badge launch" target='_blank' href=https://hydroshare.org/resource/38a4ce62960942b4ad8398ee58a777cf>
+            <span>Open In HydroShare</span>
+        </a>
+        
+        
 
 
 
@@ -54,7 +58,7 @@
 
                     
 
-                        <a class="sphinx-bs badge badge-primary text-white reference external" href=https://hydroshare.org/user/320/>
+                        <a class="sphinx-bs badge badge-primary text-white reference external" target='_blank' href=https://hydroshare.org/user/320/>
                             <span>Profile</span>
                         </a>
 
