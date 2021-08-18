@@ -15,13 +15,19 @@
 
 .. container:: container-lg launch-container pb-1
 
-    {% for option in launch_options %}
+    .. raw:: html
+
+        {% for option in launch_options %}
         {% if 'tooltip' in option %}
-            :link-badge:`{{ option['url'] }},"{{ option['name'] }}",cls=badge-primary text-white launch-badge, tooltip={{ option['tooltip'] }}`
+        <a class="badge launch" target='_blank' href={{ option['url'] }} title={{ option['tooltip'] }}>
+            <span>{{ option['name'] }}</span>
+        </a>
         {% else %} 
-            :link-badge:`{{ option['url'] }},"{{ option['name'] }}",cls=badge-primary text-white launch-badge`
+        <a class="badge launch" target='_blank' href={{ option['url']  }}>
+            <span>{{ option['name'] }}</span>
+        </a>
         {% endif %}
-    {% endfor %}
+        {% endfor %}
 
 
 
@@ -58,7 +64,7 @@
 
                     {% if 'hs-profile' in authors[i] %}
 
-                        <a class="sphinx-bs badge badge-primary text-white reference external" href={{ authors[i]['hs-profile'] }}>
+                        <a class="sphinx-bs badge badge-primary text-white reference external" target='_blank' href={{ authors[i]['hs-profile'] }}>
                             <span>Profile</span>
                         </a>
 

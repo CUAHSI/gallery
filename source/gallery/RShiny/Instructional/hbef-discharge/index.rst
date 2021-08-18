@@ -15,11 +15,15 @@
 
 .. container:: container-lg launch-container pb-1
 
-    
-         
-            :link-badge:`https://cuahsi.shinyapps.io/HBEF_Discharge,"Run Application",cls=badge-primary text-white launch-badge`
+    .. raw:: html
+
         
-    
+         
+        <a class="badge launch" target='_blank' href=https://cuahsi.shinyapps.io/HBEF_Discharge>
+            <span>Run Application</span>
+        </a>
+        
+        
 
 
 
