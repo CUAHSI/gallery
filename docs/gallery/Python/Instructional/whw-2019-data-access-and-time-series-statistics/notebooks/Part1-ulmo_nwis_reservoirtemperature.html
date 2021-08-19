@@ -433,29 +433,28 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-</div>
 <div class="section" id="Outline">
-<h1>Outline<a class="headerlink" href="#Outline" title="Permalink to this headline">¶</a></h1>
+<h2>Outline<a class="headerlink" href="#Outline" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>In previous sections, we covered how to access data from different portals.</p></li>
-<li><p>Next, I will cover basic statistics and how we calculate it in python through a simple study case on regulated river temperatures.</p>
+<li><p>In previous sections, we covered how to <strong>access data</strong> from different portals.</p></li>
+<li><p>Next, I will cover <strong>basic statistics</strong> and how we calculate it in python through a simple study case on <em>regulated river temperatures</em>.</p>
 <ul>
-<li><p>` 1. Introduction &lt;#1-introduction&gt;`__</p></li>
-<li><p>` 2. Research Question &lt;#2-question&gt;`__</p></li>
-<li><p>` 3. Study Area &lt;#3-studyarea&gt;`__</p></li>
-<li><p>` 4. Data &lt;#4-data&gt;`__</p>
+<li><p><a class="reference external" href="#1-introduction">1. Introduction</a></p></li>
+<li><p><a class="reference external" href="#2.-Research-Question">2. Research Question</a></p></li>
+<li><p><a class="reference external" href="#3-studyarea">3. Study Area</a></p></li>
+<li><p><a class="reference external" href="#4-data">4. Data</a></p>
 <ul>
-<li><p>` 4.1. Mapping USGS sites (recap of visualization) &lt;#4.1-datamap&gt;`__</p></li>
-<li><p>` 4.2. Download USGS data &lt;#4.2-datadownload&gt;`__</p></li>
+<li><p><a class="reference external" href="#4.1-datamap">4.1. Mapping USGS sites (recap of visualization)</a></p></li>
+<li><p><a class="reference external" href="#4.2-datadownload">4.2. Download USGS data</a></p></li>
 </ul>
 </li>
-<li><p>` 5. Analysis &lt;#5-analysis&gt;`__</p>
+<li><p><a class="reference external" href="#5-analysis">5. Analysis</a></p>
 <ul>
-<li><p>` 5.1. Time Series Plot &lt;#5.1-timeseries&gt;`__</p></li>
-<li><p>` 5.2. Data Selecting and Indexing &lt;#5.2-indexing&gt;`__</p></li>
-<li><p>` 5.3. Basic Statistics &lt;#5.3-basicstat&gt;`__</p></li>
-<li><p>` 5.4. Data Aggregation (Groupby/Resample) &lt;#5.4-aggregation&gt;`__</p></li>
-<li><p>` 5.5. Comprehensive Implementation &lt;#5.5-implement&gt;`__</p></li>
+<li><p><a class="reference external" href="#5.1-timeseries">5.1. Time Series Plot</a></p></li>
+<li><p><a class="reference external" href="#5.2-indexing">5.2. Data Selecting and Indexing</a></p></li>
+<li><p><a class="reference external" href="#5.3-basicstat">5.3. Basic Statistics</a></p></li>
+<li><p><a class="reference external" href="#5.4-aggregation">5.4. Data Aggregation (Groupby/Resample)</a></p></li>
+<li><p><a class="reference external" href="#5.5-implement">5.5. Comprehensive Implementation</a></p></li>
 </ul>
 </li>
 </ul>
@@ -463,19 +462,44 @@ div.rendered_html tbody tr:hover {
 </ul>
 </div>
 <div class="section" id="Study-case">
-<h1>Study case<a class="headerlink" href="#Study-case" title="Permalink to this headline">¶</a></h1>
-<p>## 1. Introduction</p>
+<h2>Study case<a class="headerlink" href="#Study-case" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="1.-Introduction">
+<h3>1. Introduction<a class="headerlink" href="#1.-Introduction" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p><strong>Seasonal thermal stratification</strong> is an important thermal pattern in deep reservoirs. During warm seasons, reservoir will be thermally stratified into a <em>warmer top layer</em> - <strong>epilimnion</strong> and a <em>colder bottom layer</em> - <strong>hypolimnion</strong>.</p></li>
+<li><p>Seasonal thermal stratification is an important thermal pattern in deep reservoirs. During warm seasons, reservoir will be thermally stratified into a <em>warmer top layer</em> - <strong>epilimnion</strong> and a <em>colder bottom layer</em> - <strong>hypolimnion</strong>.</p></li>
 <li><p>Reservoirs with hypolimnetic releases will have large impacts on downstream river temperatures.</p></li>
 </ul>
-<p><img alt="drawing" src="gallery/Python/Instructional/whw-2019-data-access-and-time-series-statistics/notebooks/plot/demo_two_layer.png" /></p>
-<center><p>Figure 1: Demonstration of thermal stratification</p>
-</center><p>## 2. Research Question * How is reservoir thermal stratification affect downstream river temperature?</p>
-<p>## 3. Study Area * <strong>Buford Dam</strong> * Buford Dam (Lake Lanier) provides hydroelectricity, navigation, and flood control of the Chattahoochee River, and water supply for the city of Atlanta.</p>
-<p><img alt="drawing" src="gallery/Python/Instructional/whw-2019-data-access-and-time-series-statistics/notebooks/plot/map_buford_reservoir.png" /></p>
-<center><p>Figure 2: Google map of Buford Reservoir</p>
-</center><p>## 4. Data * USGS data * One site upstream of Buford Dam: 02333500 * Four sites downstream of Buford Dam: 02334430, 02334654, 02335000, 02335450</p>
+<div style="width:500px;"><p><img alt="demo-two-layer" src="../../../../../_images/demo_two_layer.png" /></p>
+</div><p>Figure 1: Demonstration of thermal stratification</p>
+</div>
+<div class="section" id="2.-Research-Question">
+<h3>2. Research Question<a class="headerlink" href="#2.-Research-Question" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>How is reservoir thermal stratification affect downstream river temperature?</p></li>
+</ul>
+</div>
+<div class="section" id="3.-Study-Area">
+<h3>3. Study Area<a class="headerlink" href="#3.-Study-Area" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Buford Dam</p>
+<ul>
+<li><p>Buford Dam (Lake Lanier) provides hydroelectricity, navigation, and flood control of the Chattahoochee River, and water supply for the city of Atlanta.</p></li>
+</ul>
+</li>
+</ul>
+<div style="width:500px;"><p><img alt="map-buford-reservoir" src="../../../../../_images/map_buford_reservoir.png" /></p>
+</div><p>Figure 2: Google map of Buford Reservoir</p>
+</div>
+<div class="section" id="4.-Data">
+<h3>4. Data<a class="headerlink" href="#4.-Data" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>USGS data</p>
+<ul>
+<li><p>One site upstream of Buford Dam: 02333500</p></li>
+<li><p>Four sites downstream of Buford Dam: 02334430, 02334654, 02335000, 02335450</p></li>
+</ul>
+</li>
+</ul>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
@@ -533,7 +557,8 @@ processing data from request: https://waterservices.usgs.gov/nwis/iv/?format=wat
   &#39;state_code&#39;: &#39;13&#39;}}
 </pre></div></div>
 </div>
-<p>### 4.1. Mapping USGS Sites (recap of visualization)</p>
+<div class="section" id="4.1.-Mapping-USGS-Sites-(recap-of-visualization)">
+<h4>4.1. Mapping USGS Sites (recap of visualization)<a class="headerlink" href="#4.1.-Mapping-USGS-Sites-(recap-of-visualization)" title="Permalink to this headline">¶</a></h4>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
@@ -682,8 +707,30 @@ processing data from request: https://waterservices.usgs.gov/nwis/iv/?format=wat
 <img alt="../../../../../_images/gallery_Python_Instructional_whw-2019-data-access-and-time-series-statistics_notebooks_Part1-ulmo_nwis_reservoirtemperature_13_1.png" src="../../../../../_images/gallery_Python_Instructional_whw-2019-data-access-and-time-series-statistics_notebooks_Part1-ulmo_nwis_reservoirtemperature_13_1.png" />
 </div>
 </div>
-<p>### 4.2. Download USGS Data * Use functions from ulmo: ulmo.usgs.nwis.get_site_data() * site_code: USGS site number (str) * parameter_code: Variable code (str) (<a class="reference external" href="https://help.waterdata.usgs.gov/codes-and-parameters/parameters">Link to all USGS parameter code</a>,<a class="reference external" href="https://help.waterdata.usgs.gov/parameter_cd?group_cd=PHY">Link to USGS parameters commonly used in hydrology</a>) * 00010: Temperature, water, degrees Celsius * 00011: Temperature, water, degrees Fahrenheit * 00060:
-Discharge, cubic feet per second * statistic_code: Statistic code (str) (<a class="reference external" href="https://help.waterdata.usgs.gov/stat_code">Link to all USGS statistic code</a>) * 00001: Maximum * 00002: Minimum * 00003: Mean</p>
+</div>
+<div class="section" id="4.2.-Download-USGS-Data">
+<h4>4.2. Download USGS Data<a class="headerlink" href="#4.2.-Download-USGS-Data" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Use functions from ulmo: *ulmo.usgs.nwis.get_site_data()</p>
+<ul>
+<li><p>site_code: USGS site number (str)</p></li>
+<li><p>parameter_code: Variable code (str) (<a class="reference external" href="https://help.waterdata.usgs.gov/codes-and-parameters/parameters">Link to all USGS parameter code</a>, <a class="reference external" href="https://help.waterdata.usgs.gov/parameter_cd?group_cd=PHY">Link to USGS parameters commonly used in hydrology</a>)</p>
+<ul>
+<li><p>00010: Temperature, water, degrees Celsius</p></li>
+<li><p>00011: Temperature, water, degrees Fahrenheit</p></li>
+<li><p>00060: Discharge, cubic feet per second</p></li>
+</ul>
+</li>
+<li><p>statistic_code: Statistic code (str) (<a class="reference external" href="https://help.waterdata.usgs.gov/stat_code">Link to all USGS statistic code</a>)</p>
+<ul>
+<li><p>00001: Maximum</p></li>
+<li><p>00002: Minimum</p></li>
+<li><p>00003: Mean</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
@@ -927,8 +974,21 @@ processing data from request: https://waterservices.usgs.gov/nwis/dv/?format=wat
 </table>
 </div></div>
 </div>
-<p># 5. Analysis</p>
-<p>## 5.1. Time Series Plot * Line plot (<em>plt.plot(x,y)</em>) * Scatter plot (plt.scatter(x,y)) * recommend scatter plot when data is discontinuous</p>
+</div>
+</div>
+</div>
+<div class="section" id="5.-Analysis">
+<h2>5. Analysis<a class="headerlink" href="#5.-Analysis" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="5.1.-Time-Series-Plot">
+<h3>5.1. Time Series Plot<a class="headerlink" href="#5.1.-Time-Series-Plot" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Line plot <code class="docutils literal notranslate"><span class="pre">plt.plot(x,y)</span></code></p></li>
+<li><p>Scatter plot <code class="docutils literal notranslate"><span class="pre">plt.scatter(x,y)</span></code></p>
+<ul>
+<li><p>recommend scatter plot when data is discontinuous</p></li>
+</ul>
+</li>
+</ul>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
@@ -969,7 +1029,24 @@ Text(0, 0.5, &#39;stream temp [deg C]&#39;)
 <img alt="../../../../../_images/gallery_Python_Instructional_whw-2019-data-access-and-time-series-statistics_notebooks_Part1-ulmo_nwis_reservoirtemperature_23_1.png" src="../../../../../_images/gallery_Python_Instructional_whw-2019-data-access-and-time-series-statistics_notebooks_Part1-ulmo_nwis_reservoirtemperature_23_1.png" />
 </div>
 </div>
-<p>## 5.2. Data Selecting and Indexing * select column * single column: df[“col name”] * multiple columns: df[list of column names] * select index (df.loc[index]) * single index: df.loc[single date] * list of indexes: df.loc[date list] * slice of date: df.loc[slice(start date, end date)]</p>
+</div>
+<div class="section" id="5.2.-Data-Selecting-and-Indexing">
+<h3>5.2. Data Selecting and Indexing<a class="headerlink" href="#5.2.-Data-Selecting-and-Indexing" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>select column</p>
+<ul>
+<li><p>single column: <code class="docutils literal notranslate"><span class="pre">df[&quot;col</span> <span class="pre">name&quot;]</span></code></p></li>
+<li><p>multiple columns: <code class="docutils literal notranslate"><span class="pre">df[list</span> <span class="pre">of</span> <span class="pre">column</span> <span class="pre">names]</span></code></p></li>
+</ul>
+</li>
+<li><p>select index <code class="docutils literal notranslate"><span class="pre">df.loc[index]</span></code></p>
+<ul>
+<li><p>single index: <code class="docutils literal notranslate"><span class="pre">df.loc[single</span> <span class="pre">date]</span></code></p></li>
+<li><p>list of indexes: <code class="docutils literal notranslate"><span class="pre">df.loc[date</span> <span class="pre">list]</span></code></p></li>
+<li><p>slice of date: <code class="docutils literal notranslate"><span class="pre">df.loc[slice(start</span> <span class="pre">date,</span> <span class="pre">end</span> <span class="pre">date)]</span></code></p></li>
+</ul>
+</li>
+</ul>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
@@ -1925,7 +2002,22 @@ Name: 2016-01-01 00:00:00, dtype: float64
 <p>429 rows × 5 columns</p>
 </div></div>
 </div>
-<p>## 5.3. Basic Statistics * Metrics: * Maximum, Minimum, Mean, Median, Standard Deviation. etc. * Along row or column: * metric in single column: axis = 0 (e.g., maximum temperature in each site) * metric in single row: axis = 1 (e.g., maximum temperature at a specific date)</p>
+</div>
+<div class="section" id="5.3.-Basic-Statistics">
+<h3>5.3. Basic Statistics<a class="headerlink" href="#5.3.-Basic-Statistics" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Metrics:</p>
+<ul>
+<li><p>Maximum, Minimum, Mean, Median, Standard Deviation. etc.</p></li>
+</ul>
+</li>
+<li><p>Along row or column:</p>
+<ul>
+<li><p>metric in single column: axis = 0 (e.g., maximum temperature in each site)</p></li>
+<li><p>metric in single row: axis = 1 (e.g., maximum temperature at a specific date)</p></li>
+</ul>
+</li>
+</ul>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
@@ -1976,21 +2068,18 @@ date
 dtype: float64
 </pre></div></div>
 </div>
-<p>## 5.4. Data Aggregation (Groupby/Resample)</p>
+</div>
+<div class="section" id="5.4.-Data-Aggregation-(Groupby/Resample)">
+<h3>5.4. Data Aggregation (Groupby/Resample)<a class="headerlink" href="#5.4.-Data-Aggregation-(Groupby/Resample)" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>Resample versus Groupby</p></li>
-</ul>
-<blockquote>
-<div><ul class="simple">
+<li><p>Resample versus Groupby</p>
+<ul>
 <li><p>Resample: upscale the temporal resolution (frequency conversion), e.g., from daily to monthly</p></li>
 <li><p>Groupby: split whole time series into different groups based on some metric. e.g., same month, same day of year etc., and then combine the results in the same group together</p></li>
 </ul>
-</div></blockquote>
-<ul class="simple">
-<li><p>Example</p></li>
-</ul>
-<blockquote>
-<div><ul class="simple">
+</li>
+<li><p>Example</p>
+<ul>
 <li><p>Calculate mean monthly temperature (Resample)</p>
 <ul>
 <li><p>For each month in each year, calculate the mean stream temperature</p></li>
@@ -2007,7 +2096,8 @@ dtype: float64
 </ul>
 </li>
 </ul>
-</div></blockquote>
+</li>
+</ul>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
@@ -2402,8 +2492,11 @@ dtype: float64
 </table>
 </div></div>
 </div>
-<p>## 5.5. Comprehensive Implementation</p>
-<p>### 5.5.1. Interannual variability</p>
+</div>
+<div class="section" id="5.5.-Comprehensive-Implementation">
+<h3>5.5. Comprehensive Implementation<a class="headerlink" href="#5.5.-Comprehensive-Implementation" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="5.5.1.-Interannual-variability">
+<h4>5.5.1. Interannual variability<a class="headerlink" href="#5.5.1.-Interannual-variability" title="Permalink to this headline">¶</a></h4>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
@@ -2438,7 +2531,9 @@ dtype: float64
 <img alt="../../../../../_images/gallery_Python_Instructional_whw-2019-data-access-and-time-series-statistics_notebooks_Part1-ulmo_nwis_reservoirtemperature_39_1.png" src="../../../../../_images/gallery_Python_Instructional_whw-2019-data-access-and-time-series-statistics_notebooks_Part1-ulmo_nwis_reservoirtemperature_39_1.png" />
 </div>
 </div>
-<p>### 5.5.2. Seasonality</p>
+</div>
+<div class="section" id="5.5.2.-Seasonality">
+<h4>5.5.2. Seasonality<a class="headerlink" href="#5.5.2.-Seasonality" title="Permalink to this headline">¶</a></h4>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
@@ -2479,13 +2574,7 @@ dtype: float64
 <img alt="../../../../../_images/gallery_Python_Instructional_whw-2019-data-access-and-time-series-statistics_notebooks_Part1-ulmo_nwis_reservoirtemperature_41_1.png" src="../../../../../_images/gallery_Python_Instructional_whw-2019-data-access-and-time-series-statistics_notebooks_Part1-ulmo_nwis_reservoirtemperature_41_1.png" />
 </div>
 </div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>
-</pre></div>
 </div>
 </div>
 </div>

@@ -428,9 +428,8 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-</div>
 <div class="section" id="Request-and-explore-NWIS-sites-in-a-HUC8-subbasin">
-<h1>Request and explore NWIS sites in a HUC8 subbasin<a class="headerlink" href="#Request-and-explore-NWIS-sites-in-a-HUC8-subbasin" title="Permalink to this headline">¶</a></h1>
+<h2>Request and explore NWIS sites in a HUC8 subbasin<a class="headerlink" href="#Request-and-explore-NWIS-sites-in-a-HUC8-subbasin" title="Permalink to this headline">¶</a></h2>
 <p>Upper Little Tennessee HUC8 Subbasin 06010202. See <a class="reference external" href="https://github.com/waterhackweek/tsdata_access/blob/master/UpperLittleTennessee_HUC-8Subbasin_ID06010202.geojson">an interactive map on our GitHub repository.</a></p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
@@ -442,7 +441,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <div class="section" id="Issue-the-ulmo-nwis.get_sites-request,-then-cleanup-and-examine-the-results">
-<h2>Issue the <code class="docutils literal notranslate"><span class="pre">ulmo</span> <span class="pre">nwis.get_sites</span></code> request, then cleanup and examine the results<a class="headerlink" href="#Issue-the-ulmo-nwis.get_sites-request,-then-cleanup-and-examine-the-results" title="Permalink to this headline">¶</a></h2>
+<h3>Issue the <code class="docutils literal notranslate"><span class="pre">ulmo</span> <span class="pre">nwis.get_sites</span></code> request, then cleanup and examine the results<a class="headerlink" href="#Issue-the-ulmo-nwis.get_sites-request,-then-cleanup-and-examine-the-results" title="Permalink to this headline">¶</a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
@@ -919,7 +918,7 @@ Name: site_type, dtype: int64
 </div>
 </div>
 <div class="section" id="Let’s-map-the-sites-on-an-interactive-map,-with-Folium">
-<h2>Let’s map the sites on an interactive map, with Folium<a class="headerlink" href="#Let’s-map-the-sites-on-an-interactive-map,-with-Folium" title="Permalink to this headline">¶</a></h2>
+<h3>Let’s map the sites on an interactive map, with Folium<a class="headerlink" href="#Let’s-map-the-sites-on-an-interactive-map,-with-Folium" title="Permalink to this headline">¶</a></h3>
 <p>Colored by site type.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
@@ -953,20 +952,20 @@ Name: site_type, dtype: int64
 </div>
 </div>
 <div class="section" id="How-does-this-NWIS-view-compare-to-what-we-can-find-on-that-HUC8-using-the-ModelMyWatershed-App?">
-<h1>How does this NWIS view compare to what we can find on that HUC8 using the <strong>ModelMyWatershed App?</strong><a class="headerlink" href="#How-does-this-NWIS-view-compare-to-what-we-can-find-on-that-HUC8-using-the-ModelMyWatershed-App?" title="Permalink to this headline">¶</a></h1>
+<h2>How does this NWIS view compare to what we can find on that HUC8 using the <strong>ModelMyWatershed App?</strong><a class="headerlink" href="#How-does-this-NWIS-view-compare-to-what-we-can-find-on-that-HUC8-using-the-ModelMyWatershed-App?" title="Permalink to this headline">¶</a></h2>
 <p>Let’s go there and do some querying and browsing. <a class="reference external" href="https://modelmywatershed.org">https://modelmywatershed.org</a>. We can navigate to the specific HUC8, or upload a GeoJSON spatial file for the HUC8, generated in advance.</p>
 <p>Also, I wonder what data are available near the <strong>Coweeta</strong> LTER station …</p>
 </div>
 <div class="section" id="Use-ulmo.cuahsi.wof-to-pull-time-series-data-from-a-nearby-site-on-CUAHSI-HIS">
-<h1>Use <code class="docutils literal notranslate"><span class="pre">ulmo.cuahsi.wof</span></code> to pull time series data from a nearby site on CUAHSI HIS<a class="headerlink" href="#Use-ulmo.cuahsi.wof-to-pull-time-series-data-from-a-nearby-site-on-CUAHSI-HIS" title="Permalink to this headline">¶</a></h1>
+<h2>Use <code class="docutils literal notranslate"><span class="pre">ulmo.cuahsi.wof</span></code> to pull time series data from a nearby site on CUAHSI HIS<a class="headerlink" href="#Use-ulmo.cuahsi.wof-to-pull-time-series-data-from-a-nearby-site-on-CUAHSI-HIS" title="Permalink to this headline">¶</a></h2>
 <p>For examples of CUAHSI HIS catalog “spatial querying” (based on a bounding box) analogous to the NWIS spatial querying we’ve presented, go to <a class="reference external" href="https://www.hydroshare.org/resource/c184323fc95c4c3e85c663f519b47084/">this CUAHSI resource on HydroShare</a>. It includes a Jupyter notebook and a presentation on the CUAHI HIS Central API.</p>
 <div class="section" id="Explore-relevant-sites-on-HydroClient">
-<h2>Explore relevant sites on <strong>HydroClient</strong><a class="headerlink" href="#Explore-relevant-sites-on-HydroClient" title="Permalink to this headline">¶</a></h2>
+<h3>Explore relevant sites on <strong>HydroClient</strong><a class="headerlink" href="#Explore-relevant-sites-on-HydroClient" title="Permalink to this headline">¶</a></h3>
 <p>I want to find a site “nearby”, even if it’s not in that HUC8, that meets these criteria: - Has dissolved oxygen - Is from a source other than the big federal agencies</p>
 <p>To do this, let’s go to HydroClient. <a class="reference external" href="http://data.cuahsi.org">http://data.cuahsi.org</a>. There, we can also visualize the time series using the HydroShare TimeSeries Viewer App, or download the data.</p>
 </div>
 <div class="section" id="Back-to-the-code,-to-pull-in-the-site’s-time-series-data">
-<h2>Back to the code, to pull in the site’s time series data<a class="headerlink" href="#Back-to-the-code,-to-pull-in-the-site’s-time-series-data" title="Permalink to this headline">¶</a></h2>
+<h3>Back to the code, to pull in the site’s time series data<a class="headerlink" href="#Back-to-the-code,-to-pull-in-the-site’s-time-series-data" title="Permalink to this headline">¶</a></h3>
 <p>I got <code class="docutils literal notranslate"><span class="pre">networkcd</span></code>, <code class="docutils literal notranslate"><span class="pre">sitecd</span></code> and <code class="docutils literal notranslate"><span class="pre">varcd</span></code> from the HydroClient results.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
@@ -992,7 +991,7 @@ Name: site_type, dtype: int64
 </div>
 </div>
 <div class="section" id="But-first-let’s-explore-site-information-(metadata,-data-availability)">
-<h2>But first let’s explore site information (metadata, data availability)<a class="headerlink" href="#But-first-let’s-explore-site-information-(metadata,-data-availability)" title="Permalink to this headline">¶</a></h2>
+<h3>But first let’s explore site information (metadata, data availability)<a class="headerlink" href="#But-first-let’s-explore-site-information-(metadata,-data-availability)" title="Permalink to this headline">¶</a></h3>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
@@ -1536,7 +1535,7 @@ dict_keys([&#39;code&#39;, &#39;name&#39;, &#39;network&#39;, &#39;location&#39;
 </div>
 </div>
 <div class="section" id="Request,-parse-and-plot-the-time-series">
-<h2>Request, parse and plot the time series<a class="headerlink" href="#Request,-parse-and-plot-the-time-series" title="Permalink to this headline">¶</a></h2>
+<h3>Request, parse and plot the time series<a class="headerlink" href="#Request,-parse-and-plot-the-time-series" title="Permalink to this headline">¶</a></h3>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
@@ -1771,6 +1770,7 @@ dict_keys([&#39;site&#39;, &#39;variable&#39;, &#39;values&#39;, &#39;censor_cod
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>

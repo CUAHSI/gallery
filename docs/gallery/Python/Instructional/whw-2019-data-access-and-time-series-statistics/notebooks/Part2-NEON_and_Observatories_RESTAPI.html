@@ -442,9 +442,8 @@ the domains and sites.</a></p>
 </pre></div>
 </div>
 </div>
-</div>
 <div class="section" id="Get-NEON-site-data-using-REST-API">
-<h1>Get NEON site data using REST API<a class="headerlink" href="#Get-NEON-site-data-using-REST-API" title="Permalink to this headline">¶</a></h1>
+<h2>Get NEON site data using REST API<a class="headerlink" href="#Get-NEON-site-data-using-REST-API" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">sites</span></code> is the REST API “end point”. The API returns a JSON string.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
@@ -604,7 +603,7 @@ D07 Walker Branch Site, CORE: -84.279251, 35.957378
 </div>
 </div>
 <div class="section" id="Ingest-and-examine-selected-NEON-sites-into-a-GeoDataFrame">
-<h1>Ingest and examine selected NEON sites into a GeoDataFrame<a class="headerlink" href="#Ingest-and-examine-selected-NEON-sites-into-a-GeoDataFrame" title="Permalink to this headline">¶</a></h1>
+<h2>Ingest and examine selected NEON sites into a GeoDataFrame<a class="headerlink" href="#Ingest-and-examine-selected-NEON-sites-into-a-GeoDataFrame" title="Permalink to this headline">¶</a></h2>
 <p>Then filter based on availability of desired aquatic <a class="reference external" href="http://data.neonscience.org/data-product-catalog">NEON Data Products</a>: dissolved oxygen (water quality), stream stage (water height) and stream discharge. The “base” data product codes are <code class="docutils literal notranslate"><span class="pre">DP1.20288</span></code>, <code class="docutils literal notranslate"><span class="pre">DP1.20016</span></code> and <code class="docutils literal notranslate"><span class="pre">DP4.00130</span></code>. Here’s the documentation for one of them: <a class="reference external" href="http://data.neonscience.org/data-product-view?dpCode=DP1.20016.001">http://data.neonscience.org/data-product-view?dpCode=DP1.20016.001</a></p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
@@ -842,7 +841,7 @@ D07 Walker Branch Site, CORE: -84.279251, 35.957378
 </div>
 </div>
 <div class="section" id="Get-LTER-sites-and-single-GLEON-site">
-<h1>Get LTER sites and single GLEON site<a class="headerlink" href="#Get-LTER-sites-and-single-GLEON-site" title="Permalink to this headline">¶</a></h1>
+<h2>Get LTER sites and single GLEON site<a class="headerlink" href="#Get-LTER-sites-and-single-GLEON-site" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://lternet.edu">LTER</a> Sites dataset: <a class="reference external" href="https://portal.edirepository.org/nis/mapbrowse?packageid=edi.138.3">https://portal.edirepository.org/nis/mapbrowse?packageid=edi.138.3</a></p></li>
 <li><p><a class="reference external" href="http://gleon.org">GLEON</a> site information for Kentucky Lake: <a class="reference external" href="http://gleon.org/lakes/kentucky-lake">http://gleon.org/lakes/kentucky-lake</a>. GLEON doesn’t offer a sites dataset or a convenient presentation of latitude and longitude coordinates, so I had to search around. The best resource was <a class="reference external" href="http://gleon.org/members/lakes/map">this interactive map</a>. The coordinates for Kentucky Lake are latitude 36.733533, longitude -88.11666</p></li>
@@ -943,7 +942,7 @@ D07 Walker Branch Site, CORE: -84.279251, 35.957378
 </div>
 </div>
 <div class="section" id="Map-all-sites-with-Folium">
-<h1>Map all sites with Folium<a class="headerlink" href="#Map-all-sites-with-Folium" title="Permalink to this headline">¶</a></h1>
+<h2>Map all sites with Folium<a class="headerlink" href="#Map-all-sites-with-Folium" title="Permalink to this headline">¶</a></h2>
 <p>From the three observation networks</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
@@ -1021,9 +1020,10 @@ D07 Walker Branch Site, CORE: -84.279251, 35.957378
 </div>
 </div>
 <div class="section" id="EXTRA-CREDIT:-Read-in-time-series-data-for-a-NEON-site">
-<h1>EXTRA CREDIT: Read in time series data for a NEON site<a class="headerlink" href="#EXTRA-CREDIT:-Read-in-time-series-data-for-a-NEON-site" title="Permalink to this headline">¶</a></h1>
+<h2>EXTRA CREDIT: Read in time series data for a NEON site<a class="headerlink" href="#EXTRA-CREDIT:-Read-in-time-series-data-for-a-NEON-site" title="Permalink to this headline">¶</a></h2>
 <p><strong>This is pretty involved, so I won’t go into it. You can look at it on your own if you’re interested in NEON data or in probing further at an interaction with a REST API.</strong></p>
 <p>Extract and list all the “Data Products” for one of the 3 selected NEON stream sites. Borrowed heavily from <a class="reference external" href="https://nbviewer.jupyter.org/gist/jzollerneon/3d0519e1f26db80b755cc865ef218d58">https://nbviewer.jupyter.org/gist/jzollerneon/3d0519e1f26db80b755cc865ef218d58</a></p>
+</div>
 <div class="section" id="Select-the-site,-data-product-and-time-period">
 <h2>Select the site, data product and time period<a class="headerlink" href="#Select-the-site,-data-product-and-time-period" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput nblast docutils container">
