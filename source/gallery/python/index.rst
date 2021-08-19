@@ -186,11 +186,11 @@ Instructional Examples
 
     
     ---
-    :img-top: /_static/missing-thumbnail.png
+    :img-top: /_static/thumbnail-9985b3cb38c94cee872b28f6dcdef739
     
-    **Waterhackweek 2019 Data Cyberseminar**
+    **Data Access and Time-series Statistics**
 
-    This seminar focuses on time series data from sites commonly represented as fixed geographical points.
+    Data about water are found in many types of formats distributed by many different sources and depicting different spatial representations such as poin...
 
     .. link-button:: 9985b3cb38c94cee872b28f6dcdef739
         :type: ref

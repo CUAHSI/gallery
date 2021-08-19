@@ -18,8 +18,8 @@
     .. raw:: html
 
         
-        
-        <a class="badge launch" target='_blank' href=https://www.hydroshare.org/resource/fdc3a06e6ad842abacfa5b896df73a76 title=this is a tool tip>
+         
+        <a class="badge launch" target='_blank' href=https://www.hydroshare.org/resource/fdc3a06e6ad842abacfa5b896df73a76>
             <span>Open In HydroShare</span>
         </a>
         

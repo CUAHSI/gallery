@@ -1,9 +1,17 @@
 hydroshare:
   id: 9985b3cb38c94cee872b28f6dcdef739
-code_path: ./notebooks
-short_description: This seminar focuses on time series data from sites commonly represented as fixed geographical points. 
-short_title: Waterhackweek 2019 Data Cyberseminar
-thumbnail: ./thumbnail.png
+title: Data Access and Time-series Statistics
+notebooks:
+  - name: ./notebooks/Intro-Presentation-DataAccessTimeSeries.ipynb
+    label: "Introduction to Data Access and Time Series"
+  - name: ./notebooks/Part1-ulmo_nwis_reservoirtemperature.ipynb
+    label: "Use Case 1 - Basic statistics on time series data"
+  - name: ./notebooks/Part2-ulmo_nwis_and_cuahsi.ipynb
+    label: "Use Case 2 - Part 1: Using ulmo to explore USGS NWIS and CUAHSI HIS Dat"  
+  - name: ./notebooks/Part2-NEON_and_Observatories_RESTAPI.ipynb
+    label: "Use Case 2 - Part 2: NEON Web Services REST API (and LTER & GLEON)"
+markdown: description.md
+thumbnail: thumbnail.png
 launch_options:
   - name: Open In HydroShare
     url: https://hydroshare.org/resource/9985b3cb38c94cee872b28f6dcdef739

@@ -2,7 +2,8 @@ The ability to test hypotheses about hydrology, geomorphology, and atmospheric p
 
   - design of workflows for ease of use by new users 
   - a community-supported collaborative web platform that supports publishing and privacy 
-  - data storage that may be distributed to different locations; 4) a software environment 
+  - data storage that may be distributed to different locations
+  - a software environment 
   - a personalized cloud-based high performance computing HPC platform 
   - a standardized modeling framework that is growing with open source contributions
 
