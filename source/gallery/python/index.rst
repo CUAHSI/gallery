@@ -111,19 +111,6 @@ Reproducible Science Examples
     ---
     :img-top: /_static/missing-thumbnail.png
     
-    **Conducting PAWN global sensitivity analysis**
-
-    This resource applies a GSA method for parameters of the well-known Preceipitation-Runoff Modeling System (PRMS) hydrologic model.
-
-    .. link-button:: bae3f93a5dc54dd886729265eecc784f
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
-    
-     
-    ---
-    :img-top: /_static/missing-thumbnail.png
-    
     **Hourly Precipitation Data for Beltsville, MD, USA**
 
     This resource includes hourly precipitation data collected by NOAA and downloaded from the NCDC to obtain hydrologic analysis.
@@ -199,19 +186,6 @@ Instructional Examples
     
      
     ---
-    :img-top: /_static/missing-thumbnail.png
-    
-    **Creating Curve Number Grid using PyQGIS**
-
-    A template for creating a curve number grid raster file using PyQGIS and Pandas.
-
-    .. link-button:: abf67aad0eb64a53bf787d369afdcc84
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
-    
-     
-    ---
     :img-top: /_static/thumbnail-3db192783bcb4599bab36d43fc3413db
     
     **Hurricane Harvey NWM Subsetting Exercise**
@@ -219,6 +193,19 @@ Instructional Examples
     An introduction to collecting and processing National Water Model operational forecast data using THREDDs and OpenDAP.
 
     .. link-button:: 3db192783bcb4599bab36d43fc3413db
+        :type: ref
+        :text: Open Example
+        :classes: btn-outline-primary btn-block stretched-link
+    
+     
+    ---
+    :img-top: /_static/thumbnail-bae3f93a5dc54dd886729265eecc784f
+    
+    **Conducting PAWN global sensitivity analysis**
+
+    This resource applies a GSA method for parameters of the well-known Preceipitation-Runoff Modeling System (PRMS) hydrologic model.
+
+    .. link-button:: bae3f93a5dc54dd886729265eecc784f
         :type: ref
         :text: Open Example
         :classes: btn-outline-primary btn-block stretched-link
