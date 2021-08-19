@@ -77,34 +77,36 @@
     <br />&nbsp;
 
 
-.. tabs::
-    
-    .. tab:: Description
+.. container:: container-lg page-content-div
 
-        
-    
-        .. raw:: html
-        
-            Script and accompanying ipython notebook written in Python 2.7 for aggregating sub-daily environmental data (rainfall, tide, wind, groundwater) to a daily timescale. The input data are from Norfolk, Virginia. Several different methods of aggregation are used including averages and maximums.  The processed/aggregated data are combined with street flood report data to be used in data-driven, predictive modeling. The script in this resource was used in the analysis described in this Journal of Hydrology paper: https://doi.org/10.1016/j.jhydrol.2018.01.044.
+    .. tabs::
 
-    
-        
+        .. tab:: Description
 
-    .. tab:: Code 
-
-
-        
-        .. toctree::
-            :maxdepth: 1
-            :titlesonly:
-            :glob:
-     
-            
-            ./data/**
             
 
-        
+            .. raw:: html
+
+                Script and accompanying ipython notebook written in Python 2.7 for aggregating sub-daily environmental data (rainfall, tide, wind, groundwater) to a daily timescale. The input data are from Norfolk, Virginia. Several different methods of aggregation are used including averages and maximums.  The processed/aggregated data are combined with street flood report data to be used in data-driven, predictive modeling. The script in this resource was used in the analysis described in this Journal of Hydrology paper: https://doi.org/10.1016/j.jhydrol.2018.01.044.
+
+
+            
+
+        .. tab:: Code 
+
+
+            
+            .. toctree::
+                :maxdepth: 1
+                :titlesonly:
+                :glob:
+
+                
+                ./data/**
+                
+
+            
+
+            
 
         
-
-    

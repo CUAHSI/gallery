@@ -99,24 +99,26 @@
     <br />&nbsp;
 
 
-.. tabs::
-    
-    .. tab:: Description
+.. container:: container-lg page-content-div
+
+    .. tabs::
+
+        .. tab:: Description
+
+            
+
+            .. raw:: html
+
+                The app presents the results of a water balance model, calculated based on the average monthly temperature and precipitation (NOAA NCEI; Arguez et al., 2012), soil water holding capacity (NRCS gNATSGO; Soil Survey Staff, 2020), and latitude of the site. There is more informaton about the model below, and a diagram of the conceptual model in the “Model Diagram” tab.
+
+
+            
+
+        .. tab:: Code 
+
+
+            
+
+            
 
         
-    
-        .. raw:: html
-        
-            The app presents the results of a water balance model, calculated based on the average monthly temperature and precipitation (NOAA NCEI; Arguez et al., 2012), soil water holding capacity (NRCS gNATSGO; Soil Survey Staff, 2020), and latitude of the site. There is more informaton about the model below, and a diagram of the conceptual model in the “Model Diagram” tab.
-
-    
-        
-
-    .. tab:: Code 
-
-
-        
-
-        
-
-    

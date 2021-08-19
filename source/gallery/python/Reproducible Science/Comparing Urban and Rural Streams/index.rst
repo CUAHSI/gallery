@@ -77,34 +77,36 @@
     <br />&nbsp;
 
 
-.. tabs::
-    
-    .. tab:: Description
+.. container:: container-lg page-content-div
 
-        
-    
-        .. raw:: html
-        
-            This notebook demonstrates how to use the Python package "hydrofunctions" to download stream discharge data from the NWIS and plot a stream hydrograph and a flow duration chart.
+    .. tabs::
 
-    
-        
+        .. tab:: Description
 
-    .. tab:: Code 
-
-
-        
-        .. toctree::
-            :maxdepth: 1
-            :titlesonly:
-            :glob:
-     
-            
-            ./notebooks/**
             
 
-        
+            .. raw:: html
+
+                This notebook demonstrates how to use the Python package "hydrofunctions" to download stream discharge data from the NWIS and plot a stream hydrograph and a flow duration chart.
+
+
+            
+
+        .. tab:: Code 
+
+
+            
+            .. toctree::
+                :maxdepth: 1
+                :titlesonly:
+                :glob:
+
+                
+                ./notebooks/**
+                
+
+            
+
+            
 
         
-
-    

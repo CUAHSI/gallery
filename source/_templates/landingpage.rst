@@ -83,54 +83,56 @@
     <br />&nbsp;
 
 
-.. tabs::
-    
-    .. tab:: Description
+.. container:: container-lg page-content-div
 
-        {% if markdown %}
-    
-        .. mdinclude:: {{ markdown }}
-    
-        {% else %}
-    
-        .. raw:: html
-        
-            {{ description }}
+    .. tabs::
 
-    
-        {% endif %}
+        .. tab:: Description
 
-    .. tab:: Code 
+            {% if markdown %}
 
+            .. mdinclude:: {{ markdown }}
 
-        {% if code_path %}
-        .. toctree::
-            :maxdepth: 1
-            :titlesonly:
-            :glob:
-     
-            {% if code_path %}
-            {{ code_path }}/**
             {% else %}
-            data/**
+
+            .. raw:: html
+
+                {{ description }}
+
+
             {% endif %}
 
-        {% endif %}
+        .. tab:: Code 
 
-        {% if notebooks %}
+
+            {% if code_path %}
             .. toctree::
-               :titlesonly:
-               :maxdepth: 1
+                :maxdepth: 1
+                :titlesonly:
+                :glob:
 
-               {% for item in notebooks %}
-               {{ item['label'] }} <{{ item['name'] }}>
-               {% endfor %}
+                {% if code_path %}
+                {{ code_path }}/**
+                {% else %}
+                data/**
+                {% endif %}
+
+            {% endif %}
+
+            {% if notebooks %}
+                .. toctree::
+                   :titlesonly:
+                   :maxdepth: 1
+
+                   {% for item in notebooks %}
+                   {{ item['label'] }} <{{ item['name'] }}>
+                   {% endfor %}
+
+            {% endif %}
+
+        {% if additional_info %}
+        .. tab:: Additional Information
+
+            {{ additional_info }}
 
         {% endif %}
-
-    {% if additional_info %}
-    .. tab:: Additional Information
-
-        {{ additional_info }}
-
-    {% endif %}

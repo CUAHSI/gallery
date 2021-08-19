@@ -65,24 +65,26 @@
     <br />&nbsp;
 
 
-.. tabs::
-    
-    .. tab:: Description
+.. container:: container-lg page-content-div
+
+    .. tabs::
+
+        .. tab:: Description
+
+            
+
+            .. raw:: html
+
+                In this app you can explore Precipitation and Streamflow in Several HBEF watersheds.
+
+
+            
+
+        .. tab:: Code 
+
+
+            
+
+            
 
         
-    
-        .. raw:: html
-        
-            In this app you can explore Precipitation and Streamflow in Several HBEF watersheds.
-
-    
-        
-
-    .. tab:: Code 
-
-
-        
-
-        
-
-    

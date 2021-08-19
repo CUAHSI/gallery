@@ -315,34 +315,36 @@
     <br />&nbsp;
 
 
-.. tabs::
-    
-    .. tab:: Description
+.. container:: container-lg page-content-div
+
+    .. tabs::
+
+        .. tab:: Description
+
+            
+
+            .. mdinclude:: readme.md
+
+            
+
+        .. tab:: Code 
+
+
+            
+
+            
+                .. toctree::
+                   :titlesonly:
+                   :maxdepth: 1
+
+                   
+                   Explore Routing Tutorial <./notebooks/explore_routing_tutorial.ipynb>
+                   
+                   Replicate Landslide Model for Fire <./notebooks/replicate_landslide_model_for_fire.ipynb>
+                   
+                   Reuse Ecohydrology Model with Gridded Hydrometeorology Forcing <./notebooks/reuse_ecohydrology_gridhydromet.ipynb>
+                   
+
+            
 
         
-    
-        .. mdinclude:: readme.md
-    
-        
-
-    .. tab:: Code 
-
-
-        
-
-        
-            .. toctree::
-               :titlesonly:
-               :maxdepth: 1
-
-               
-               Explore Routing Tutorial <./notebooks/explore_routing_tutorial.ipynb>
-               
-               Replicate Landslide Model for Fire <./notebooks/replicate_landslide_model_for_fire.ipynb>
-               
-               Reuse Ecohydrology Model with Gridded Hydrometeorology Forcing <./notebooks/reuse_ecohydrology_gridhydromet.ipynb>
-               
-
-        
-
-    

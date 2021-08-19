@@ -99,24 +99,26 @@
     <br />&nbsp;
 
 
-.. tabs::
-    
-    .. tab:: Description
+.. container:: container-lg page-content-div
+
+    .. tabs::
+
+        .. tab:: Description
+
+            
+
+            .. raw:: html
+
+                The application demonstrates how to discover and retrieve water quality data.
+
+
+            
+
+        .. tab:: Code 
+
+
+            
+
+            
 
         
-    
-        .. raw:: html
-        
-            The application demonstrates how to discover and retrieve water quality data.
-
-    
-        
-
-    .. tab:: Code 
-
-
-        
-
-        
-
-    

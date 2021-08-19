@@ -111,3 +111,8 @@ div.example-panels > div > div > div > div > blockquote {
     list-style-type: decimal;
     padding: 0.25em;
 }
+
+/* page content styling */
+.page-content-div {
+    margin-left: 0px !important;
+}

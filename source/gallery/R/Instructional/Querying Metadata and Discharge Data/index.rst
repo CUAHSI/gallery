@@ -111,34 +111,36 @@
     <br />&nbsp;
 
 
-.. tabs::
-    
-    .. tab:: Description
+.. container:: container-lg page-content-div
 
-        
-    
-        .. raw:: html
-        
-            Physical Properties of Rivers: Querying Metadata and Discharge Data<br><br>This lesson was adapted from educational material written by Dr. Kateri Salk for her Fall 2019 Hydrologic Data Analysis course at Duke University. This is the second part of a two-part exercise focusing on the physical properties of rivers. <br><br>Introduction<br><br>Rivers are bodies of freshwater flowing from higher elevations to lower elevations due to the force of gravity. One of the most important physical characteristics of a stream or river is discharge, the volume of water moving through the river or stream over a given amount of time. Discharge can be measured directly by measuring the velocity of flow in several spots in a stream and multiplying the flow velocity over the cross-sectional area of the stream. However, this method is effort-intensive. This exercise will demonstrate how to approximate discharge by developing a rating curve for a stream at a given sampling point. You will also learn to query metadata from and compare discharge patterns in climatically different regions of the United States. <br><br> Learning Objectives <br><br>After successfully completing this exercise, you will be able to:<br><br>1. Execute queries to pull a variety of National Water Information System (NWIS) and Water Quality Portal (WQP) data into R.<br>2. Analyze seasonal and interannual characteristics of stream discharge and compare discharge patterns in different regions of the United States
+    .. tabs::
 
-    
-        
+        .. tab:: Description
 
-    .. tab:: Code 
-
-
-        
-        .. toctree::
-            :maxdepth: 1
-            :titlesonly:
-            :glob:
-     
-            
-            ./notebooks/**
             
 
-        
+            .. raw:: html
+
+                Physical Properties of Rivers: Querying Metadata and Discharge Data<br><br>This lesson was adapted from educational material written by Dr. Kateri Salk for her Fall 2019 Hydrologic Data Analysis course at Duke University. This is the second part of a two-part exercise focusing on the physical properties of rivers. <br><br>Introduction<br><br>Rivers are bodies of freshwater flowing from higher elevations to lower elevations due to the force of gravity. One of the most important physical characteristics of a stream or river is discharge, the volume of water moving through the river or stream over a given amount of time. Discharge can be measured directly by measuring the velocity of flow in several spots in a stream and multiplying the flow velocity over the cross-sectional area of the stream. However, this method is effort-intensive. This exercise will demonstrate how to approximate discharge by developing a rating curve for a stream at a given sampling point. You will also learn to query metadata from and compare discharge patterns in climatically different regions of the United States. <br><br> Learning Objectives <br><br>After successfully completing this exercise, you will be able to:<br><br>1. Execute queries to pull a variety of National Water Information System (NWIS) and Water Quality Portal (WQP) data into R.<br>2. Analyze seasonal and interannual characteristics of stream discharge and compare discharge patterns in different regions of the United States
+
+
+            
+
+        .. tab:: Code 
+
+
+            
+            .. toctree::
+                :maxdepth: 1
+                :titlesonly:
+                :glob:
+
+                
+                ./notebooks/**
+                
+
+            
+
+            
 
         
-
-    
