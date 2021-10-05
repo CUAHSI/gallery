@@ -65,7 +65,7 @@
     <br />&nbsp;
 
 
-.. container:: container-lg page-content-div
+.. container:: container-lg example-content
 
     .. tabs::
 
@@ -82,6 +82,7 @@
 
         .. tab:: Code 
 
+            The following code files are included in this example: 
 
             
 

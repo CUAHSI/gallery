@@ -1,3 +1,27 @@
+/* badge styling */
+.badge {
+    border-radius: .25rem;
+    display: inline-block;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    padding: .25em .4em;
+    text-align: center;
+    vertical-align: baseline;
+    white-space: nowrap;
+}
+.launch {
+    float: left;
+    margin: 10px;
+    padding: 10px !important;
+    background-color: #ff4500ad;
+    color: white !important;
+}
+
+.launch-container {
+    margin-left: 0px !important;
+}
+
 .launch-badge {
     float: left;
     margin: 10px;
@@ -13,6 +37,7 @@
     width: 100%;
 }
 */
+
 .wy-nav-content-wrap {
     background: #fcfcfc;
 
@@ -25,6 +50,7 @@
 
 div.card {
     max-width: 400px;
+    height: fit-content;
 }
 
 .example-title {
@@ -45,11 +71,57 @@ div.example-panels > div > div > div > div > blockquote {
     float: left;
     margin: 5px;
 }
-}
 .example-description {
-    /* so the author btns don't mess with it */
-    float: left;
+    float: left; /* so the author btns don't mess with it */
 }
+.NameHighlights {
+    position:relative;
+}
+
+.NameHighlights div {
+    display: none;
+}
+
+.NameHighlightsHover {
+    position:relative;
+}
+
+.NameHighlightsHover div {
+    display:block;
+    position:absolute;
+    width: 15em;
+    top:1.3em;
+    left:70px;
+    z-index:1000;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    padding: 5px;
+    border-radius: 0.25em;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 /15%);
+}
+
+.author-div {
+    /* this is to ensure that hover boxes don't appear off the right
+    side of the screen. */
+    padding-right: 100px !important;
+}
+
+/* styling for lists on example landing pages */
+.document ol {
+    margin: 10px;
+    padding: 0.25em;
+}
+
+.document ul {
+    margin: 10px;
+    padding: 0.25em;
+}
+
+.document li {
+    list-style-type: decimal;
+    padding: 0.25em;
+}
+
 .panel-img {
 /* class for styling panel images */
     padding: 10px !important;
@@ -57,3 +129,11 @@ div.example-panels > div > div > div > div > blockquote {
     height: 50% !important;
     object-fit: scale-down !important;
 }
+.gallery-card {
+    max-width:500px !important;
+}
+.example-content {
+    float: left;
+    padding-left: 0px !important;
+}
+

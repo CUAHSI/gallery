@@ -77,7 +77,7 @@
     <br />&nbsp;
 
 
-.. container:: container-lg page-content-div
+.. container:: container-lg example-content
 
     .. tabs::
 
@@ -85,15 +85,13 @@
 
             
 
-            .. raw:: html
-
-                This notebook demonstrates how to use the Python package "hydrofunctions" to download stream discharge data from the NWIS and plot a stream hydrograph and a flow duration chart.
-
+            .. mdinclude:: description.md
 
             
 
         .. tab:: Code 
 
+            The following code files are included in this example: 
 
             
             .. toctree::

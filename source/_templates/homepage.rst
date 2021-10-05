@@ -21,7 +21,7 @@ CUAHSI Compute and Modeling Gallery
 .. panels::
     :card: shadow
     :img-top-cls: pl-3 pr-3 panel-img
-    :column: col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2
+    :column: col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 gallery-card
 
 {% for gallery in galleries %}
 
