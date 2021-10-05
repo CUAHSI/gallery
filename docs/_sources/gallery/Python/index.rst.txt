@@ -87,7 +87,7 @@ Instructional Examples
     
     **Data Access and Time-series Statistics**
 
-    Data about water are found in many types of formats distributed by many different sources and depicting different spatial representations such as poin...
+    Data about water are found in many types of formats distributed by many different sources and depicting different spatial representations such as poin
 
     .. link-button:: 9985b3cb38c94cee872b28f6dcdef739
         :type: ref

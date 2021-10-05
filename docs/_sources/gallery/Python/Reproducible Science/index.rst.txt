@@ -1,8 +1,10 @@
-.. _Reproducible Science_0ef3f6d93dc24a0c922963e6a2fb4d9b:
+.. _UmVwcm9kdWNpYmxlIFNjaWVuY2U=:
+
+.. title:: Reproducible Science Gallery
 
 .. toctree::
    :caption: Table of Contents
-   :name: mastertoc
+   :name: Reproducible Science Gallery-toc
    :hidden:
    :glob:
 
@@ -20,7 +22,7 @@ Reproducible Science Gallery
   For more details, see https://sphinx-panels.readthedocs.io/en/latest/
 
 
-Notebooks Examples
+enabling-collaborative-numerical-modeling-knowledge-infrastructure Examples
 ******************************
 
 .. panels::
@@ -30,15 +32,13 @@ Notebooks Examples
 
     
     ---
-    :img-top: /_static/thumbnail-enabling-collab
+    :img-top: /_static/thumbnail-fdc3a06e6ad842abacfa5b896df73a76
     
-    **Enabling Collaborative Numerical Modeling in Ea...**
+    **Enabling Collaborative Numerical Modeling using LandLab**
 
-    
-        The ability to test hypotheses about hydrology, geomorphology, and atmospheric processes is invaluable to research in the Earth and planetary scien...
-    
+    This exercise will apply a Landlab landslide model to explore changes in forest cover.
 
-    .. link-button:: enabling-collab
+    .. link-button:: fdc3a06e6ad842abacfa5b896df73a76
         :type: ref
         :text: Open Example
         :classes: btn-outline-primary btn-block stretched-link

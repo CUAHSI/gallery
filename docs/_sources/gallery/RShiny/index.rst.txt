@@ -122,7 +122,7 @@ Instructional Examples
     
      
     ---
-    :img-top: /_static/missing-thumbnail.png
+    :img-top: /_static/thumbnail-SEJFRiBEaXNjaGFyZ2U=
     
     **HBEF Discharge**
 

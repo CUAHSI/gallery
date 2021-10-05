@@ -123,9 +123,9 @@
 
                 Exploratory Data Analysis for the Physical Properties of Lakes<br><br>This lesson was adapted from educational material written by Dr. Kateri Salk for her Fall 2019 Hydrologic Data Analysis course at Duke University. This is the first part of a two-part exercise focusing on the physical properties of lakes. <br><br>Introduction<br><br>Lakes are dynamic, nonuniform bodies of water in which the physical, biological, and chemical properties interact. Lakes also contain the majority of Earth's fresh water supply. This lesson introduces exploratory data analysis using R statistical software in the context of the physical properties of lakes. <br><br>Learning Objectives<br><br>After successfully completing this exercise, you will be able to:<br><br>1. Apply exploratory data analytics skills to applied questions about physical properties of lakes<br>2. Communicate findings with peers through oral, visual, and written modes
 
-
             
 
+        
         .. tab:: Code 
 
             The following code files are included in this example: 
@@ -143,5 +143,7 @@
             
 
             
+        
 
+        
         
