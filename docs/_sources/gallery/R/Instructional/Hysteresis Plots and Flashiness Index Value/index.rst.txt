@@ -111,34 +111,37 @@
     <br />&nbsp;
 
 
-.. tabs::
-    
-    .. tab:: Description
+.. container:: container-lg example-content
 
-        
-    
-        .. raw:: html
-        
-            High Frequency Flow Data: Flashiness Index Value and Hysteresis Plots<br><br>This lesson was adapted from educational material written by Dr. Kateri Salk for her Fall 2019 Hydrologic Data Analysis course at Duke University. This is the second part of a two-part exercise focusing on high frequency flow data. <br><br> Introduction <br><br>Flashiness is how responsive a stream is to precipitation. Flashiness is an important characteristic of the stream hydrologic regime. A "flashy" stream is one that experiences a rapid increase in flow shortly after onset of a precipitation event, and an equally rapid return to base conditions shortly after the end of the precipitation event. A "flashy" stream will thus increase in stormflow much faster following a precipitation event.<br><br>Flashiness in a stream can be increased or decreased by a variety of land use/land cover changes in the stream's watershed. For example, an increase in impervious surfaces (urbanization) or agricultural land typically leads to an increase in flashiness. Land management practices that increase infiltration of precipitation into the soil, such as restoration of native vegetation, or implementation of best management practices like rain gardens, grass swales, and forested riparian buffers, typically decrease stream flashiness. Streams that experience an increase in flashiness will undergo a period of channel adjustment to accommodate the increased peak flows. This may include incision (downcutting) and widening of the stream channel, which affects in-stream and near-stream infrastructure as well as stream-adjacent lands.<br><br>Learning Objectives<br><br>After successfully completing this notebook, you will be able to:<br>1. Calculate the Flashiness Index Value of a river<br>2. Use a hysteresis plot to understand watershed dynamics<br>3. Communicate findings with peers through oral, visual, and written modes
+    .. tabs::
 
-    
-        
+        .. tab:: Description
 
-    .. tab:: Code 
-
-
-        
-        .. toctree::
-            :maxdepth: 1
-            :titlesonly:
-            :glob:
-     
-            
-            ./notebooks/**
             
 
-        
+            .. raw:: html
+
+                High Frequency Flow Data: Flashiness Index Value and Hysteresis Plots<br><br>This lesson was adapted from educational material written by Dr. Kateri Salk for her Fall 2019 Hydrologic Data Analysis course at Duke University. This is the second part of a two-part exercise focusing on high frequency flow data. <br><br> Introduction <br><br>Flashiness is how responsive a stream is to precipitation. Flashiness is an important characteristic of the stream hydrologic regime. A "flashy" stream is one that experiences a rapid increase in flow shortly after onset of a precipitation event, and an equally rapid return to base conditions shortly after the end of the precipitation event. A "flashy" stream will thus increase in stormflow much faster following a precipitation event.<br><br>Flashiness in a stream can be increased or decreased by a variety of land use/land cover changes in the stream's watershed. For example, an increase in impervious surfaces (urbanization) or agricultural land typically leads to an increase in flashiness. Land management practices that increase infiltration of precipitation into the soil, such as restoration of native vegetation, or implementation of best management practices like rain gardens, grass swales, and forested riparian buffers, typically decrease stream flashiness. Streams that experience an increase in flashiness will undergo a period of channel adjustment to accommodate the increased peak flows. This may include incision (downcutting) and widening of the stream channel, which affects in-stream and near-stream infrastructure as well as stream-adjacent lands.<br><br>Learning Objectives<br><br>After successfully completing this notebook, you will be able to:<br>1. Calculate the Flashiness Index Value of a river<br>2. Use a hysteresis plot to understand watershed dynamics<br>3. Communicate findings with peers through oral, visual, and written modes
+
+
+            
+
+        .. tab:: Code 
+
+            The following code files are included in this example: 
+
+            
+            .. toctree::
+                :maxdepth: 1
+                :titlesonly:
+                :glob:
+
+                
+                ./notebooks/**
+                
+
+            
+
+            
 
         
-
-    

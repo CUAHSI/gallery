@@ -77,24 +77,27 @@
     <br />&nbsp;
 
 
-.. tabs::
-    
-    .. tab:: Description
+.. container:: container-lg example-content
+
+    .. tabs::
+
+        .. tab:: Description
+
+            
+
+            .. raw:: html
+
+                This file contains the event magnitudes and spacing for Cases 1 & 3 presented in the submitted manuscript to HESS titled "Recession analysis 42 years later - work yet to be done".
+
+
+            
+
+        .. tab:: Code 
+
+            The following code files are included in this example: 
+
+            
+
+            
 
         
-    
-        .. raw:: html
-        
-            This file contains the event magnitudes and spacing for Cases 1 & 3 presented in the submitted manuscript to HESS titled "Recession analysis 42 years later - work yet to be done".
-
-    
-        
-
-    .. tab:: Code 
-
-
-        
-
-        
-
-    

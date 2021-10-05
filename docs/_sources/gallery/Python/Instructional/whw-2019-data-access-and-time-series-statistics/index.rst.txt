@@ -111,36 +111,39 @@
     <br />&nbsp;
 
 
-.. tabs::
-    
-    .. tab:: Description
+.. container:: container-lg example-content
+
+    .. tabs::
+
+        .. tab:: Description
+
+            
+
+            .. mdinclude:: description.md
+
+            
+
+        .. tab:: Code 
+
+            The following code files are included in this example: 
+
+            
+
+            
+                .. toctree::
+                   :titlesonly:
+                   :maxdepth: 1
+
+                   
+                   Introduction to Data Access and Time Series <./notebooks/Intro-Presentation-DataAccessTimeSeries.ipynb>
+                   
+                   Use Case 1 - Basic statistics on time series data <./notebooks/Part1-ulmo_nwis_reservoirtemperature.ipynb>
+                   
+                   Use Case 2 - Part 1: Using ulmo to explore USGS NWIS and CUAHSI HIS Dat <./notebooks/Part2-ulmo_nwis_and_cuahsi.ipynb>
+                   
+                   Use Case 2 - Part 2: NEON Web Services REST API (and LTER & GLEON) <./notebooks/Part2-NEON_and_Observatories_RESTAPI.ipynb>
+                   
+
+            
 
         
-    
-        .. mdinclude:: description.md
-    
-        
-
-    .. tab:: Code 
-
-
-        
-
-        
-            .. toctree::
-               :titlesonly:
-               :maxdepth: 1
-
-               
-               Introduction to Data Access and Time Series <./notebooks/Intro-Presentation-DataAccessTimeSeries.ipynb>
-               
-               Use Case 1 - Basic statistics on time series data <./notebooks/Part1-ulmo_nwis_reservoirtemperature.ipynb>
-               
-               Use Case 2 - Part 1: Using ulmo to explore USGS NWIS and CUAHSI HIS Dat <./notebooks/Part2-ulmo_nwis_and_cuahsi.ipynb>
-               
-               Use Case 2 - Part 2: NEON Web Services REST API (and LTER & GLEON) <./notebooks/Part2-NEON_and_Observatories_RESTAPI.ipynb>
-               
-
-        
-
-    

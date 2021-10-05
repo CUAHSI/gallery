@@ -77,24 +77,26 @@
     <br />&nbsp;
 
 
-.. tabs::
-    
-    .. tab:: Description
+.. container:: container-lg page-content-div
+
+    .. tabs::
+
+        .. tab:: Description
+
+            
+
+            .. raw:: html
+
+                Script and accompanying notebook written in Python 2.7 for processing street flood reports made by City of Norfolk staff. The output data from this script were used as target values for street data-driven flood prediction severity modeling. This modeling is described in this Journal of Hydrology paper: https://doi.org/10.1016/j.jhydrol.2018.01.044.
+
+
+            
+
+        .. tab:: Code 
+
+
+            
+
+            
 
         
-    
-        .. raw:: html
-        
-            Script and accompanying notebook written in Python 2.7 for processing street flood reports made by City of Norfolk staff. The output data from this script were used as target values for street data-driven flood prediction severity modeling. This modeling is described in this Journal of Hydrology paper: https://doi.org/10.1016/j.jhydrol.2018.01.044.
-
-    
-        
-
-    .. tab:: Code 
-
-
-        
-
-        
-
-    

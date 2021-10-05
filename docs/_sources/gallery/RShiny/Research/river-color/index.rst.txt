@@ -99,24 +99,27 @@
     <br />&nbsp;
 
 
-.. tabs::
-    
-    .. tab:: Description
+.. container:: container-lg example-content
+
+    .. tabs::
+
+        .. tab:: Description
+
+            
+
+            .. raw:: html
+
+                Rivers can appear as many different colors such as greens, blues, browns, and yellows. Water color, as perceived by the human eye, is intuitive, intergrative, and one of the oldest metrics of water quality. We can also measure water color using satellites such as Landsat. In a recent publication in Geophysical Research Letters, we used the Landsat record from 1984-2018 to measure the color of all large rivers in the continental USA. This website provides an interactive visualization of the color of rivers over space and time.By clicking on different rivers, you can visualize three main points:A map of the most common color, or modal color. Click on a river to show the full color distribution over time quantified as dominant wavelength on the visible spectrum (nm).A map of the dominant seasonal pattern in river color. Click on a river to show a graph of the mean seasonal pattern. Summer red-shift means river color is closer to the red end of the visible spectrum, or yellower, in the summer and spring red-shifted means river color is yellower in the spring.A map of the long-term trend. Click on a river to show the mean annual trend (colored line) and full data (gray circles). Red-shifted means the river is trending towards the red end of the spectrum over time. Blue-shifted means the river is trending towards the blue end of the spectrum over time. Steady means there is little change in color over time. Variable means there is no trend and river color changes frequently.
+
+
+            
+
+        .. tab:: Code 
+
+            The following code files are included in this example: 
+
+            
+
+            
 
         
-    
-        .. raw:: html
-        
-            Rivers can appear as many different colors such as greens, blues, browns, and yellows. Water color, as perceived by the human eye, is intuitive, intergrative, and one of the oldest metrics of water quality. We can also measure water color using satellites such as Landsat. In a recent publication in Geophysical Research Letters, we used the Landsat record from 1984-2018 to measure the color of all large rivers in the continental USA. This website provides an interactive visualization of the color of rivers over space and time.By clicking on different rivers, you can visualize three main points:A map of the most common color, or modal color. Click on a river to show the full color distribution over time quantified as dominant wavelength on the visible spectrum (nm).A map of the dominant seasonal pattern in river color. Click on a river to show a graph of the mean seasonal pattern. Summer red-shift means river color is closer to the red end of the visible spectrum, or yellower, in the summer and spring red-shifted means river color is yellower in the spring.A map of the long-term trend. Click on a river to show the mean annual trend (colored line) and full data (gray circles). Red-shifted means the river is trending towards the red end of the spectrum over time. Blue-shifted means the river is trending towards the blue end of the spectrum over time. Steady means there is little change in color over time. Variable means there is no trend and river color changes frequently.
-
-    
-        
-
-    .. tab:: Code 
-
-
-        
-
-        
-
-    

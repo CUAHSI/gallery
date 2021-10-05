@@ -99,24 +99,27 @@
     <br />&nbsp;
 
 
-.. tabs::
-    
-    .. tab:: Description
+.. container:: container-lg example-content
+
+    .. tabs::
+
+        .. tab:: Description
+
+            
+
+            .. raw:: html
+
+                The application demonstrates how to discover and retrieve water quality data.
+
+
+            
+
+        .. tab:: Code 
+
+            The following code files are included in this example: 
+
+            
+
+            
 
         
-    
-        .. raw:: html
-        
-            The application demonstrates how to discover and retrieve water quality data.
-
-    
-        
-
-    .. tab:: Code 
-
-
-        
-
-        
-
-    

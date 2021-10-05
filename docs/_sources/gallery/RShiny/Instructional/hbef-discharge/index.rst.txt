@@ -65,24 +65,27 @@
     <br />&nbsp;
 
 
-.. tabs::
-    
-    .. tab:: Description
+.. container:: container-lg example-content
+
+    .. tabs::
+
+        .. tab:: Description
+
+            
+
+            .. raw:: html
+
+                In this app you can explore Precipitation and Streamflow in Several HBEF watersheds.
+
+
+            
+
+        .. tab:: Code 
+
+            The following code files are included in this example: 
+
+            
+
+            
 
         
-    
-        .. raw:: html
-        
-            In this app you can explore Precipitation and Streamflow in Several HBEF watersheds.
-
-    
-        
-
-    .. tab:: Code 
-
-
-        
-
-        
-
-    
