@@ -163,12 +163,27 @@
 
             
 
-        .. tab:: Code 
+        
 
-            The following code files are included in this example: 
+        
+        
+        .. tab:: Tutorial
+            
+            
+            .. mdinclude:: tutorial.md
 
             
 
+
+
+        
+        .. tab:: Video
             
+
+            .. youtube:: sF70AQ8ZGHU
+
+            
+
+
 
         

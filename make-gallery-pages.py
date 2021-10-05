@@ -209,6 +209,7 @@ def build_example_page(example_path):
         print(colored("\u2713", "green"))
 
         # write the rST page for this example
+
         print("   creating rST file ", end="")
         render_page(
             os.path.join(template_dir, "landingpage.rst"),

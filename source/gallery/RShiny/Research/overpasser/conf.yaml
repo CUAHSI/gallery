@@ -10,6 +10,14 @@ description:
     3. Click the “Download” button at the bottom to generate a .csv file of the table of overpass dates.
     4. Hit “Reset” to clear selections and start over.
 
+additional_tabs:
+  - name: Tutorial
+    type: markdown
+    value: tutorial.md
+  - name: Video
+    type: youtube
+    value: sF70AQ8ZGHU
+
 short_description: Interactive visualization of the color of rivers over space and time
 thumbnail: ./thumbnail.png
 authors:

@@ -38,7 +38,6 @@ extensions = ['sphinx.ext.todo',
               'sphinx.ext.ifconfig',
               'sphinx.ext.viewcode',
               'sphinx.ext.extlinks',
-#              'sphinx.ext.githubpages',
               'sphinx.ext.napoleon',
               'sphinx.ext.graphviz',
               'sphinx.ext.intersphinx',
@@ -50,13 +49,11 @@ extensions = ['sphinx.ext.todo',
               'nbsphinx',
               'sphinx.ext.mathjax',
               'sphinx_copybutton',
-#              'sphinxcontrib.bibtex',
               'sphinx_panels',
               'recommonmark', # markdown support
-#              'sphinx_togglebutton',
               'sphinxcontrib.contentui',
-#              'hoverxref.extension',
-              'sphinx_tabs.tabs'
+              'sphinx_tabs.tabs',
+              'sphinxcontrib.youtube',
 ]
 
 ## sphinx-tabs configuration

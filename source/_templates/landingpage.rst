@@ -105,6 +105,7 @@
 
             {% endif %}
 
+        {% if code_path or notebooks %}
         .. tab:: Code 
 
             The following code files are included in this example: 
@@ -133,10 +134,27 @@
                    {% endfor %}
 
             {% endif %}
-
-        {% if additional_info %}
-        .. tab:: Additional Information
-
-            {{ additional_info }}
-
         {% endif %}
+
+        
+        {% for tab in additional_tabs %}
+        .. tab:: {{ tab['name'] }}
+            {% if tab['type'] == 'markdown' %}
+            
+            .. mdinclude:: {{ tab['value'] }}
+
+            {% elif tab['type'] == 'text' %}
+
+            .. raw:: html
+
+                {{ tab['value'] }}
+
+            {% elif tab['type'] == 'youtube' %}
+
+            .. youtube:: {{ tab['value'] }}
+
+            {% endif %}
+
+
+
+        {% endfor %}
