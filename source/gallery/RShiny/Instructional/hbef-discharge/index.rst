@@ -77,7 +77,6 @@
 
                 In this app you can explore Precipitation and Streamflow in Several HBEF watersheds.
 
-
             
 
         .. tab:: Code 

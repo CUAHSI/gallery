@@ -89,16 +89,19 @@
 
         .. tab:: Description
 
-            {% if markdown %}
+            {% if description['type'] == 'markdown' %}
 
-            .. mdinclude:: {{ markdown }}
+            .. mdinclude:: {{ description['value'] }}
 
-            {% else %}
+            {% elif description['type'] == 'text' %}
 
             .. raw:: html
 
-                {{ description }}
+                {{ description['value'] }}
 
+            {% else %}
+
+                description format is not supported.
 
             {% endif %}
 

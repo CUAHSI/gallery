@@ -111,7 +111,6 @@
 
                 The application demonstrates how to discover and retrieve water quality data.
 
-
             
 
         .. tab:: Code 

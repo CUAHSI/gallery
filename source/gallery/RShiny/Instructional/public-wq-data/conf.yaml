@@ -1,6 +1,8 @@
 title: Public WQ Data
-description: |
-  The application demonstrates how to discover and retrieve water quality data.
+description: 
+  type: text
+  value: |
+    The application demonstrates how to discover and retrieve water quality data.
 thumbnail: ./thumbnail.png
 authors:
   - name: Author 1

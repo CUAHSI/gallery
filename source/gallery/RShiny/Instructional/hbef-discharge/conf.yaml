@@ -1,6 +1,8 @@
 title: HBEF Discharge
-description: |
-  In this app you can explore Precipitation and Streamflow in Several HBEF watersheds.
+description:
+  type: text
+  value: |
+    In this app you can explore Precipitation and Streamflow in Several HBEF watersheds.
 thumbnail: ./thumbnail.png
 authors:
   - name: JP Gannon

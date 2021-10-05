@@ -89,7 +89,6 @@
 
                 This notebook provides a very brief introduction to the process of subsetting NWM forecast results for small watershed areas using Thredds and OpenDAP technologies. It was originally designed to be executed on the HydroShare-JupyterHub environment, but can also be executed offline.   This notebook was presented at the 2018 Summer Innovators program to stimulate a dialog about how forecast subsets can be used for hydrological analysis, methods for standardizing this basic approach so that it easily be applied to other watersheds, and executing similar code as a batch job for the entire CONUS.  For more information about the Hurricane Harvey dataset see: https://www.hydroshare.org/group/41 <br>
 
-
             
 
         .. tab:: Code 
