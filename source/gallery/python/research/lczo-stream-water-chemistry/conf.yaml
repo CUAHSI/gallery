@@ -1,9 +1,0 @@
-hydroshare:
-  id: f8420c1447fe440eb93e656b2db0b64d
-code_path: ./notebooks
-short_description: Here we examine high-frequency sensor-based specific conductance and turbidity data from multiple storm events across two watersheds in Puerto Rico.
-short_title: LCZO-Stream Water Chemistry, Streamflow / Discharge
-thumbnail: ./thumbnail.png
-launch_options:
-  - name: Open In HydroShare
-    url: https://hydroshare.org/resource/f8420c1447fe440eb93e656b2db0b64d

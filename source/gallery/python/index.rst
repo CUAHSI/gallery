@@ -22,83 +22,6 @@ Python
   For more details, see https://sphinx-panels.readthedocs.io/en/latest/
 
 
-Research Examples
-******************************
-
-.. panels::
-    :card: shadow
-    :img-top-cls: pl-5 pr-5
-    :column: col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2
-
-    
-    ---
-    :img-top: /_static/missing-thumbnail.png
-    
-    **Script for aggregating VA environmental data**
-
-    Script and accompanying ipython notebook written in Python 2.7 for aggregating sub-daily environmental data to a daily timescale.
-
-    .. link-button:: 41c8d8f8788c4ba0b0bfbb924fe1d403
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
-    
-     
-    ---
-    :img-top: /_static/missing-thumbnail.png
-    
-    **Combining street flood severity model input, output**
-
-    Script and accompanying notebook written in Python 2.7 for combining flood report data and environmental data into a format for a data-driven model.
-
-    .. link-button:: 5db7884111fb4662a13f64707c0c6890
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
-    
-     
-    ---
-    :img-top: /_static/missing-thumbnail.png
-    
-    **White Clay Creek - Stage, Streamflow / Discharge**
-
-    Continuous streamflow data collected by the Stroud Water Research Center within the 3rd-order research watershed, White Clay Creek above McCue Road.
-
-    .. link-button:: 0886014659d443d4a2b9b189c96bab68
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
-    
-     
-    ---
-    :img-top: /_static/missing-thumbnail.png
-    
-    **Script for processing street flood reports**
-
-    Script and accompanying notebook written in Python 2.7 for processing street flood reports made by City of Norfolk staff.
-
-    .. link-button:: 38a4ce62960942b4ad8398ee58a777cf
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
-    
-     
-    ---
-    :img-top: /_static/missing-thumbnail.png
-    
-    **LCZO-Stream Water Chemistry, Streamflow / Discharge**
-
-    Here we examine high-frequency sensor-based specific conductance and turbidity data from multiple storm events across two watersheds in Puerto Rico.
-
-    .. link-button:: f8420c1447fe440eb93e656b2db0b64d
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
-    
-     
-
-
-
 Reproducible Science Examples
 ******************************
 
@@ -109,20 +32,7 @@ Reproducible Science Examples
 
     
     ---
-    :img-top: /_static/missing-thumbnail.png
-    
-    **Hourly Precipitation Data for Beltsville, MD, USA**
-
-    This resource includes hourly precipitation data collected by NOAA and downloaded from the NCDC to obtain hydrologic analysis.
-
-    .. link-button:: 18a8a07f3f414563bca9def7a551a535
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
-    
-     
-    ---
-    :img-top: /_static/missing-thumbnail.png
+    :img-top: /_static/thumbnail-7704a2fc3d5e4da89c042164c623ba4f
     
     **Comparing Urban and Rural Streams**
 
@@ -135,7 +45,7 @@ Reproducible Science Examples
     
      
     ---
-    :img-top: /_static/missing-thumbnail.png
+    :img-top: /_static/thumbnail-a2b87a2f25d046958ac604e522f449c0
     
     **Animas watershed snowmelt modeling in 2010 water year**
 
