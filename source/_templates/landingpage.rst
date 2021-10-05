@@ -90,7 +90,7 @@
         .. tab:: Description
 
             {% if description['type'] == 'markdown' %}
-
+            
             .. mdinclude:: {{ description['value'] }}
 
             {% elif description['type'] == 'text' %}

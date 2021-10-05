@@ -9,7 +9,9 @@ notebooks:
     label: Reuse Ecohydrology Model with Gridded Hydrometeorology Forcing
 short_title: Enabling Collaborative Numerical Modeling using LandLab
 short_description: This exercise will apply a Landlab landslide model to explore changes in forest cover. 
-markdown: readme.md
+description:
+  type: markdown
+  value: readme.md
 thumbnail: ./thumbnail.png
 launch_options:
   - name: Open In HydroShare

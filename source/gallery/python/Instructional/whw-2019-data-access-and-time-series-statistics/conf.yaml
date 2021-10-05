@@ -10,7 +10,9 @@ notebooks:
     label: "Use Case 2 - Part 1: Using ulmo to explore USGS NWIS and CUAHSI HIS Dat"  
   - name: ./notebooks/Part2-NEON_and_Observatories_RESTAPI.ipynb
     label: "Use Case 2 - Part 2: NEON Web Services REST API (and LTER & GLEON)"
-markdown: description.md
+description:
+  type: markdown
+  value: description.md
 thumbnail: thumbnail.png
 launch_options:
   - name: Open In HydroShare

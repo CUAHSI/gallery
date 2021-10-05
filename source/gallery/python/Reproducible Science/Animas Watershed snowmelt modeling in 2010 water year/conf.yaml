@@ -6,7 +6,9 @@ short_description: This resource contains the use case results of web-based simu
 short_title:  Animas watershed snowmelt modeling in 2010 water year
 title:  Animas watershed snowmelt modeling in 2010 water year
 thumbnail: ./thumbnail.png
-markdown: description.md
+description:
+  type: markdown
+  value: description.md
 launch_options:
   - name: Open In HydroShare
     url: https://hydroshare.org/resource/a2b87a2f25d046958ac604e522f449c0
