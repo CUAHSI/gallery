@@ -4,9 +4,17 @@
 **Authors:**  
 **Version:**  
 
+## Index  
+
+[Overview](#overview)  
+[Functional Description](#functional-description)  
+[Goals and Milestones](#goals-and-milestones)  
+[Requirements](#requirements)  
+[Technical Details](#technical-details)  
+[Implementation Plan](#implementation-plan)  
 
 
-## Project Opportunity/ Description/ Summarized Business Case:
+##  Overview
 
 The purpose of the CUAHSI Compute Gallery is threefold:
 
@@ -15,7 +23,7 @@ The purpose of the CUAHSI Compute Gallery is threefold:
 - The third element is to establish a public web platform for our community members to collaborate around instructional and reproducible content. 
 
 
-## Alignment with CUAHSI’s strategic objectives?
+### Alignment with CUAHSI’s strategic objectives?
 
 This work contributes to the following strategic objectives:
 
@@ -39,3 +47,15 @@ A goal of this project is to establish a platform that will enable code sharing 
   - Increase direct engagement of CUAHSI staff with the user community through seminars, workshops, conferences, etc. to increase visibility and to provide training.
 
 The outcome of this project will connect the scientists with CUAHSI staff and community activities by providing a platform to publicly host material from seminars, workshops, conference presentations, teaching events, and research projects. This platform can be leveraged throughout CUAHSI’s community events as a central location for archiving and sharing content that leverages past CUAHSI investments in data and computational software.
+
+
+## Functional Description
+
+## Goals and Milestones
+
+## Requirements
+
+## Technical Details
+
+## Implementation Plan
+
