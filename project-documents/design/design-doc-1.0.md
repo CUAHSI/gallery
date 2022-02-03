@@ -6,7 +6,7 @@
 
 ## Index  
 
-[Overview](#overview)  
+[Executive Summary](#1.-executive-summary)  
 [Functional Description](#functional-description)  
 [Goals and Milestones](#goals-and-milestones)  
 [Requirements](#requirements)  
@@ -14,16 +14,18 @@
 [Implementation Plan](#implementation-plan)  
 
 
-##  Overview
+## 1. Executive Summary
 
-The purpose of the CUAHSI Compute Gallery is threefold:
+The rate of advancement in the field of hydroinformatics, specifically advancements in cyberinfrastructure capabilities and software libraries, requires  scientists to continuously explore and evaluate new tools and approaches for working with water science data and models. While documentation for most of these tools is readily available in their respective software repositories, e.g. GitHub, we often rely on our professional network and published literature to stay informed regarding best practices and new approaches. There have been efforts in neighboring communities ([CyberGISX](https://cybergis.illinois.edu/notebooks/), [Pangeo](https://gallery.pangeo.io/)) and individual software projects (e.g. [Matplotlib](https://matplotlib.org/2.0.2/gallery.html), [Python Graph Gallery](https://www.python-graph-gallery.com/)), our community lacks a central location to collate hydrology-specific code examples.
 
-- The first element is to establish a web presence (i.e. homepage) for all of CUAHSI’s compute and modeling activities. The gallery helps us accomplish this by providing a portal that links code and modeling workflows with our compute, modeling, and data repositories. 
-- The second element is to provide a centralized collection of code and modeling workflows that exist within (and outside of) HydroShare, organized in a manner that makes them easy to navigate for instructional and continuing educational applications. 
-- The third element is to establish a public web platform for our community members to collaborate around instructional and reproducible content. 
+The CUAHSI Gallery is a web interface that provides customizable landing pages for scientific coding examples, research workflows, and educational material that are stored in community repositories such as HydroShare. By grouping and organizing gallery content based on application, theme, and/or programming language, it enables scientists to easily share and disseminate code. Current efforts are aimed at (1) providing web readable and executable code in the form of Jupyter Notebooks and MATLAB Livescripts, as well as landing pages for web applications that CUAHSI hosts on behalf of the community. The primary objectives are to:
+
+  - Establish a web interface for all of CUAHSI’s compute and modeling activities. The gallery helps us accomplish this by providing a portal that links code and modeling workflows with our compute, modeling, and data repositories. 
+  - Provide a centralized collection of code and modeling workflows that exist within (and outside of) HydroShare, organized in a manner that makes them easy to navigate for instructional and research applications.
+  - Create web landing pages for all CUAHSI-hosted web applications.
 
 
-### Alignment with CUAHSI’s strategic objectives?
+### 1.1 Alignment with CUAHSI’s strategic objectives?
 
 This work contributes to the following strategic objectives:
 
@@ -48,10 +50,15 @@ A goal of this project is to establish a platform that will enable code sharing 
 
 The outcome of this project will connect the scientists with CUAHSI staff and community activities by providing a platform to publicly host material from seminars, workshops, conference presentations, teaching events, and research projects. This platform can be leveraged throughout CUAHSI’s community events as a central location for archiving and sharing content that leverages past CUAHSI investments in data and computational software.
 
-
 ## Functional Description
 
+This section outlines to primary functions of the CUAHSI Gallery and the general scope of work.
+
 ## Goals and Milestones
+
+## Target Market Overview
+
+TODO
 
 ## Requirements
 
