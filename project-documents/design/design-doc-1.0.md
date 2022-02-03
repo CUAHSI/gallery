@@ -52,7 +52,24 @@ The outcome of this project will connect the scientists with CUAHSI staff and co
 
 ## Functional Description
 
-This section outlines to primary functions of the CUAHSI Gallery and the general scope of work.
+This section outlines to primary functions and components of the CUAHSI Gallery.
+
+### Gallery Interface
+
+The gallery interface encompasses all of the web pages and categories that are displayed on webpage. Example content should be grouped into categories for easy searching and discovery. Most importantly, the core gallery code shouldn't require manual intervention (e.g. compiling and re-deploying) to include additional community-contributed examples. The key components of this interface are listed below:
+
+  - Support both high-level categories (e.g. programming language) as well as theme/topic-based categories (e.g. educational, national water model, etc.). 
+  - Mechanism for community scientists to easily contribute examples that are stored in repositories such as HydroShare.
+
+### Example Landing Page
+
+### Example Storage and Hosting
+
+
+
+### Community Contribution
+
+
 
 ## Goals and Milestones
 
