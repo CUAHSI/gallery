@@ -28,6 +28,22 @@ Selling Points / Key Features
 - a way to highlight apps/code that is different from HydroShare discover. Also more general than HS since content can "live" in various repositories.
 - distinguish between high and low quality content.
 
+End Goal(s)
+
+- lightweight
+- CUAHSI Gallery is a "Hub"
+- linking to other repos
+- community contribution (web form?)
+- launching in CUAHSI compute services (JH, MO)
+- Example categories
+  - Python, R
+  - Apps (python, r, etc)
+  - MATLAB
+  - Event/program based content (CVU, WHW)
+- Featured examples (FAIR, most used, etc.). Community spotlight.
+
+
+
 ### 1.1 Inspiration
 
 - matplotlib gallery
