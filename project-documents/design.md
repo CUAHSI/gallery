@@ -24,6 +24,10 @@ The CUAHSI Gallery is a web interface that provides customized landing pages for
   - Provide a mechanism to host and advertise CUAHSI technical services and initiatives. 
   - Provide web landing pages for all CUAHSI-hosted web applications.
 
+Selling Points / Key Features
+- a way to highlight apps/code that is different from HydroShare discover. Also more general than HS since content can "live" in various repositories.
+- distinguish between high and low quality content.
+
 ### 1.1 Inspiration
 
 - matplotlib gallery
