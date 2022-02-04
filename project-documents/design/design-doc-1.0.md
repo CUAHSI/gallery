@@ -24,8 +24,21 @@ The CUAHSI Gallery is a web interface that provides customizable landing pages f
   - Provide a centralized collection of code and modeling workflows that exist within (and outside of) HydroShare, organized in a manner that makes them easy to navigate for instructional and research applications.
   - Create web landing pages for all CUAHSI-hosted web applications.
 
+### 1.1 Inspiration
 
-### 1.1 Alignment with CUAHSI’s strategic objectives.
+- matplotlib gallery
+- pangeo gallery
+- cybergisX
+- 
+
+### 1.2 Alignment with CUAHSI Services
+
+- Hydroshare: discovery for high quality code
+- Virtiual University code modules
+- App hosting landing pages
+- Advertisement for cloud computing services; JH, MO, etc.
+
+### 1.3 Alignment with CUAHSI’s strategic objectives.
 
 This work contributes to the following strategic objectives ([CUAHSI Strategic Plan](https://www.cuahsi.org/uploads/pages/img/StrategicPlan_SinglePages.pdf):
 
