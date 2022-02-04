@@ -34,9 +34,9 @@ The CUAHSI Gallery is a web interface that provides customized landing pages for
 ### 1.2 Alignment with CUAHSI Services
 
 - Hydroshare: discovery for high quality code
-- Virtiual University code modules
 - App hosting landing pages
 - Advertisement for cloud computing services; JH, MO, etc.
+- CUAHSI runs many programs that combine scientific training with coding. Virtual University code modules...
 
 ### 1.3 Alignment with CUAHSI’s strategic objectives.
 
