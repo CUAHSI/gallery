@@ -16,7 +16,7 @@
 
 ## 1. Executive Summary
 
-The rate of advancement in the field of hydroinformatics, specifically advancements in cyberinfrastructure capabilities and software libraries, requires  scientists to continuously explore and evaluate new tools and approaches for working with water science data and models. While documentation for most of these tools is readily available in their respective software repositories, e.g. GitHub, we often rely on our professional network and published literature to stay informed regarding best practices and new approaches. There have been efforts in neighboring communities ([CyberGISX](https://cybergis.illinois.edu/notebooks/), [Pangeo](https://gallery.pangeo.io/)) and individual software projects (e.g. [Matplotlib](https://matplotlib.org/2.0.2/gallery.html), [Python Graph Gallery](https://www.python-graph-gallery.com/)), our community lacks a central location to collate hydrology-specific code examples.
+The rate of advancement in the field of hydroinformatics, specifically advancements in cyberinfrastructure capabilities and associated software libraries, requires scientists to continuously explore and evaluate new tools and approaches for working with water science data and models. While documentation for most of these tools is readily available in their respective software repositories, e.g. GitHub, we often rely on our professional network and published literature to stay informed regarding best practices and new approaches. There have been efforts in neighboring communities ([CyberGISX](https://cybergis.illinois.edu/notebooks/), [Pangeo](https://gallery.pangeo.io/)) and individual software projects (e.g. [Matplotlib](https://matplotlib.org/2.0.2/gallery.html), [Python Graph Gallery](https://www.python-graph-gallery.com/)), to consolidate examples, tutorials, and best practices, however the water science community lacks a central location to collate hydrology-specific code examples. As an NSF facility CUAHSI tasked with fostering reserch and education in the water science community via shared scientific infrastructure, and is well positioned to lead an initiative to construct (and maintain/host) a web interface for integrating such community gallery efforts while also engaging the water science community to establish a self-currated library of scientific code examples that execute in CUAHSI and partner computing environments.
 
 The CUAHSI Gallery is a web interface that provides customizable landing pages for scientific coding examples, research workflows, and educational material that are stored in community repositories such as HydroShare. By grouping and organizing gallery content based on application, theme, and/or programming language, it enables scientists to easily share and disseminate code. Current efforts are aimed at (1) providing web readable and executable code in the form of Jupyter Notebooks and MATLAB Livescripts, as well as landing pages for web applications that CUAHSI hosts on behalf of the community. The primary objectives are to:
 
@@ -75,6 +75,7 @@ The gallery interface encompasses all of the web pages and categories that are d
   - Mechanism for community scientists to easily contribute examples that are stored in repositories such as HydroShare.
 
 ### Example Landing Page
+
 
 ### Example Storage and Hosting
 
