@@ -2,82 +2,103 @@
 A community gallery of code and web applications that run in the CUAHSI Cloud.
 
 
-## Conda environment
+## Install and Prepare the Python Environment
 
+*These development instructions consist of commands that should be executed in a
+bash terminal.*
+
+While there are several options for creating a Python environment, we recommend
+using Anaconda. To install anaconda on MacOS, follow the instructions
+[here](https://docs.anaconda.com/anaconda/install/mac-os/). 
+
+After installing and configuring Anaconda, create a new environment for the
+gallery project. This environment will encapsulate all software dependencies.
+We can create a new environment and install dependencies simultaneously using
+the following command:
+
+``` bash
+conda env create -f environment.yml
 ```
-$ conda env create -f environment.yml
+
+After this command completes, you should have a Python environment with all the
+Gallery dependencies installed in it. Before proceeding with the local build
+steps (below), activate the environment with the following command.
+
+``` bash
+conda activate gallery
 ```
 
-## Build Instructions
+This will modify your terminal to look something like this:
 
-To list all options: 
-
+``` bash
+(gallery): ~$ 
 ```
+
+## Local Development Instructions
+
+### QuickStart
+To assist with building the Gallery in a local setting, this project makes use
+of a `Makefile`. Simply put, this enables us to run a series of build
+commands/options using the `make` keyword.
+
+To list all available options:
+
+``` text
 $ make help
+
+Please use `make <target>' where <target> is one of
+  html       builds standalone HTML files
+  cache      builds standalone HTML files from cache whenever possible
+  github     builds website ready to be pushed to GitHub
+  rebuild    rebuilds the website in-place, without querying data from HydroShare
+  clean      cleans all local build files
+
 ```
 
-Build in development mode: 
+To build the gallery website for local development, run the following command:
 
-```
+``` text
 $ make html 
+
+...
+...
+The HTML pages are in source/_build/html.
+Copying contentui stylesheet/javascript... done
+
+Build finished. The HTML pages are in source/_build/html
 ```
 
-Build for publishing to GitHub pages:
+This command requires an internet connection because it queries metadata from
+HydroShare for some of the resources in the gallery. Once this command
+completes, the website files are written to `source/_build/html`. To view the
+gallery website you will need to start an http server using the following
+command:
 
-```
-$ make github
-```
-
-Cleaning
-
-```
-$ make clean
+``` text
+python -m http.server --directory source/_build/html 9000
 ```
 
-## How to add an Example to the Gallery
+Now you can navigate to `127.0.0.1:9000` in the web browser of your choice.
 
-### 1. Fork this repository
+### Additional Development Functions
 
-### 2. Create a directory
+Since the Gallery is deployed on `github.io`, we need to put the production
+files in a specific folder, i.e. `./docs`. The Makefile contains a helper
+function to move these files into the correct location for you.
 
-Your directory should be created within a subdirectory of `source/gallery`. The subdirectory you choose is dependent on the example and will define where it is displayed within the category. For example, a instructional example that demonstrates using the Python Pandas library for data science application would be located in:
+The following command will build the Gallery and then move files into the
+correct location for publishing to GitHub pages:
 
-```
-- source
-  - gallery
-    - Python
-      - Instructional
-        - <My Example>
-```
-
-### 3. Add a Thumbnail
-
-Add a thumbnail for your example which will be displayed in the gallery, e.g. `thumbnail.png`.
-
-### 4. Add code
-
-Create a directory for your code and/or notebooks (e.g. notebooks) and add all of your code here.
-
-### 5. Create the configuration file
-
-Create a file called `conf.yaml` to define the metadata associated with your example. Note, `code_path` and `thumbnail` must match the path/name defined in previous steps.  An example is shown below:
-
-`conf.yaml`
-```
-hydroshare:
-  id: 3db192783bcb4599bab36d43fc3413db
-code_path: ./notebooks
-thumbnail: ./thumbnail.png
-launch_options:
-  - name: Open In HydroShare
-    url: https://hydroshare.org/resource/3db192783bcb4599bab36d43fc3413d
+``` text
+make github
 ```
 
-### 6. Create a Pull Request
+After this command completes, the Gallery can be redeployed to github.io by
+invoking a `git push`.
 
-Create a PR to merge your example into the Gallery. 
+To speed up compilation, metadata is cached locally between builds. To remove
+these cached files run:
 
-
-### Run Development Server
-
-  `python -m http.server --directory source/_build/html 9000`
+``` text
+make clean
+```
