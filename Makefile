@@ -37,16 +37,16 @@ clean:
 	-rm -rf $(BUILDDIR)/*
 
 html:
-	$(CONDA_ACTIVATE) gallery; python make-gallery-pages.py -g ./source/gallery
+	$(CONDA_ACTIVATE) $(CONDA_DEFAULT_ENV); python make-gallery-pages.py -g ./source/gallery
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
 rebuild: 
-	$(CONDA_ACTIVATE) gallery; $(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
+	$(CONDA_ACTIVATE) $(CONDA_DEFAULT_ENV); $(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 
 cache:
-	$(CONDA_ACTIVATE) gallery; python make-gallery-pages.py -g ./source/gallery --cache
+	$(CONDA_ACTIVATE) $(CONDA_DEFAULT_ENV); python make-gallery-pages.py -g ./source/gallery --cache
 	@make rebuild
 
 github:
