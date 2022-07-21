@@ -55,7 +55,7 @@ populated it with the following files.
 
 1. `conf.yaml`: a yaml configuration file that is used to populate the metadata
    for your example on the website. The contents of this file are described in
-   detail in [configuration-options.md](./configuration-options.md).
+   detail in [configuration-options.md](./configuration-options.md). All links included in user defined fields should open in new tabs by default.
 
 2. A thumbnail image that will be displayed in the gallery, e.g.
    `thumbnail.png`. Use a eye-catching and visually appealing (but relevant)
