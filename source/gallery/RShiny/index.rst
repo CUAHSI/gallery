@@ -8,7 +8,7 @@
    :hidden:
    :glob:
 
-   index
+   *
 
 
 ========================
@@ -25,141 +25,81 @@ RShiny
 Research Examples
 ******************************
 
-.. panels::
-    :card: shadow
-    :img-top-cls: pl-5 pr-5
-    :column: col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2
+.. grid:: 1
 
     
-    ---
-    :img-top: /_static/thumbnail-T3ZlcnBhc3Nlcg==
-    
-    **Overpasser**
 
-    Interactive visualization of the color of rivers over space and time
-
-    .. link-button:: T3ZlcnBhc3Nlcg==
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
+      .. grid-item-card:: Overpasser
+          :link: Research/overpasser/index.html#T3ZlcnBhc3Nlcg== 
     
-     
-    ---
-    :img-top: /_static/thumbnail-VmlzdWFsaXppbmcgdGhlIGNvbG9yIG9mIHJpdmVycyBhY3Jvc3MgdGhlIFVTQQ==
-    
-    **Visualizing the color of rivers across the USA**
+          Interactive visualization of the color of rivers over space and time
 
-    Interactive visualization of the color of rivers over space and time
-
-    .. link-button:: VmlzdWFsaXppbmcgdGhlIGNvbG9yIG9mIHJpdmVycyBhY3Jvc3MgdGhlIFVTQQ==
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
     
-     
+
+      .. grid-item-card:: Visualizing the color of rivers across the USA
+          :link: Research/river-color/index.html#VmlzdWFsaXppbmcgdGhlIGNvbG9yIG9mIHJpdmVycyBhY3Jvc3MgdGhlIFVTQQ== 
+    
+          Interactive visualization of the color of rivers over space and time
+
+    
 
 
 
 Instructional Examples
 ******************************
 
-.. panels::
-    :card: shadow
-    :img-top-cls: pl-5 pr-5
-    :column: col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2
+.. grid:: 1
 
     
-    ---
-    :img-top: /_static/thumbnail-TVRNIEV4cGxvcmU=
-    
-    **MTM Explore**
 
-    This application shows how mining has changed the slope and elevation profiles of landscapes in West Virginia.
-
-    .. link-button:: TVRNIEV4cGxvcmU=
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
+      .. grid-item-card:: MTM Explore
+          :link: Instructional/mtm-explore/index.html#TVRNIEV4cGxvcmU= 
     
-     
-    ---
-    :img-top: /_static/thumbnail-TW91bnRhaW50b3AgTWluaW5nIGluIENlbnRyYWwgQXBwYWxhY2hpYQ==
-    
-    **Mountaintop Mining in Central Appalachia**
+          This application shows how mining has changed the slope and elevation profiles of landscapes in West Virginia.
 
-    This application shows how mountaintop mining in Central Appalachia has changed the hydrology and water chemistry of two catchments.
-
-    .. link-button:: TW91bnRhaW50b3AgTWluaW5nIGluIENlbnRyYWwgQXBwYWxhY2hpYQ==
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
     
-     
-    ---
-    :img-top: /_static/thumbnail-RXhwbG9yZSBXYXRlciBCYWxhbmNl
-    
-    **Explore Water Balance**
 
-    Interactively explore the results of a water balance model.
-
-    .. link-button:: RXhwbG9yZSBXYXRlciBCYWxhbmNl
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
+      .. grid-item-card:: Mountaintop Mining in Central Appalachia
+          :link: Instructional/mtm-baseflow/index.html#TW91bnRhaW50b3AgTWluaW5nIGluIENlbnRyYWwgQXBwYWxhY2hpYQ== 
     
-     
-    ---
-    :img-top: /_static/thumbnail-UHVibGljIFdRIERhdGE=
-    
-    **Public WQ Data**
+          This application shows how mountaintop mining in Central Appalachia has changed the hydrology and water chemistry of two catchments.
 
-    The application demonstrates how to discover and retrieve water quality data.
-
-    .. link-button:: UHVibGljIFdRIERhdGE=
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
     
-     
-    ---
-    :img-top: /_static/thumbnail-SEJFRiBEaXNjaGFyZ2U=
-    
-    **HBEF Discharge**
 
-    In this app you can explore Precipitation and Streamflow in Several HBEF watersheds.
-
-    .. link-button:: SEJFRiBEaXNjaGFyZ2U=
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
+      .. grid-item-card:: Explore Water Balance
+          :link: Instructional/waterbalance/index.html#RXhwbG9yZSBXYXRlciBCYWxhbmNl 
     
-     
-    ---
-    :img-top: /_static/thumbnail-TWFjcm9zaGVkcw==
-    
-    **Macrosheds**
+          Interactively explore the results of a water balance model.
 
-    Compare the flow and the chemistry of hundreds of streams throughout the United States and explore their watersheds.
-
-    .. link-button:: TWFjcm9zaGVkcw==
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
     
-     
-    ---
-    :img-top: /_static/thumbnail-Qmx1ZSBXYXRlcnNoZWQ=
-    
-    **Blue Watershed**
 
-    Explore changing water quality in the Snake River Watershed and Upper Blue River Watershed.
-
-    .. link-button:: Qmx1ZSBXYXRlcnNoZWQ=
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
+      .. grid-item-card:: Public WQ Data
+          :link: Instructional/public-wq-data/index.html#UHVibGljIFdRIERhdGE= 
     
-     
+          The application demonstrates how to discover and retrieve water quality data.
+
+    
+
+      .. grid-item-card:: HBEF Discharge
+          :link: Instructional/hbef-discharge/index.html#SEJFRiBEaXNjaGFyZ2U= 
+    
+          In this app you can explore Precipitation and Streamflow in Several HBEF watersheds.
+
+    
+
+      .. grid-item-card:: Macrosheds
+          :link: Instructional/macrosheds/index.html#TWFjcm9zaGVkcw== 
+    
+          Compare the flow and the chemistry of hundreds of streams throughout the United States and explore their watersheds.
+
+    
+
+      .. grid-item-card:: Blue Watershed
+          :link: Instructional/blue-watershed/index.html#Qmx1ZSBXYXRlcnNoZWQ= 
+    
+          Explore changing water quality in the Snake River Watershed and Upper Blue River Watershed.
+
+    
 
 
 

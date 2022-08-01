@@ -138,3 +138,7 @@ div.example-panels > div > div > div > div > blockquote {
     padding-left: 0px !important;
 }
 
+.home-card {
+    max-width:300px !important;
+}
+

@@ -8,7 +8,7 @@
    :hidden:
    :glob:
 
-   index
+   *
 
 
 ========================
@@ -25,25 +25,16 @@
 {{ category }} Examples
 ******************************
 
-.. panels::
-    :card: shadow
-    :img-top-cls: pl-5 pr-5
-    :column: col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2
+.. grid:: 1
 
     {% for example in cat_data %}
-    ---
-    :img-top: /_static/{{ example['thumbnail'] }}
-    
-    **{{ example['short_title'] }}**
 
-    {{ example['short_description'] }}
-
-    .. link-button:: {{ example['label'] }}
-        :type: ref
-        :text: Open Example
-        :classes: btn-outline-primary btn-block stretched-link
+      .. grid-item-card:: {{ example['short_title'] }}
+          :link: {{ example['ref'] }} 
     
-     {% endfor %}
+          {{ example['short_description'] }}
+
+    {% endfor %}
 
 {% endfor %}
 

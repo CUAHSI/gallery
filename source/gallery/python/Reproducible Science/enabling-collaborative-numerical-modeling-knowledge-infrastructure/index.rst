@@ -39,40 +39,6 @@
             
 
             <span class="NameHighlights">
-                <a href="javascript:;">Nathan Lyons</a>
-                
-                    , 
-                
-                <div>
-
-                    The Tulane University of New Orleans 
-
-                    <hr>
-
-                    
-
-                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:nlyons@tulane.edu>
-                            <span>Email</span>
-                        </a>
-
-                    
-
-
-                    
-
-                        <a class="sphinx-bs badge badge-primary text-white reference external" target='_blank' href=https://hydroshare.org/user/2909/>
-                            <span>Profile</span>
-                        </a>
-
-                    
-                    <!-- TODO: Include personal webpages from conf.yaml -->
-
-                </div>
-            </span>
-
-            
-
-            <span class="NameHighlights">
                 <a href="javascript:;">Sai Siddhartha Nudurupati</a>
                 
                     , 
@@ -141,41 +107,7 @@
             
 
             <span class="NameHighlights">
-                <a href="javascript:;">Katherine Barnhart</a>
-                
-                    , 
-                
-                <div>
-
-                    University of Colorado at Boulder 
-
-                    <hr>
-
-                    
-
-                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:katy.barnhart@gmail.com>
-                            <span>Email</span>
-                        </a>
-
-                    
-
-
-                    
-
-                        <a class="sphinx-bs badge badge-primary text-white reference external" target='_blank' href=https://hydroshare.org/user/1211/>
-                            <span>Profile</span>
-                        </a>
-
-                    
-                    <!-- TODO: Include personal webpages from conf.yaml -->
-
-                </div>
-            </span>
-
-            
-
-            <span class="NameHighlights">
-                <a href="javascript:;">Erkan Istanbulluoglu</a>
+                <a href="javascript:;">Ronda Strauch</a>
                 
                     , 
                 
@@ -187,7 +119,7 @@
 
                     
 
-                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:erkani@uw.edu>
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:rstrauch@uw.edu>
                             <span>Email</span>
                         </a>
 
@@ -196,7 +128,7 @@
 
                     
 
-                        <a class="sphinx-bs badge badge-primary text-white reference external" target='_blank' href=https://hydroshare.org/user/521/>
+                        <a class="sphinx-bs badge badge-primary text-white reference external" target='_blank' href=https://hydroshare.org/user/362/>
                             <span>Profile</span>
                         </a>
 
@@ -243,7 +175,7 @@
             
 
             <span class="NameHighlights">
-                <a href="javascript:;">Ronda Strauch</a>
+                <a href="javascript:;">Erkan Istanbulluoglu</a>
                 
                     , 
                 
@@ -255,7 +187,7 @@
 
                     
 
-                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:rstrauch@uw.edu>
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:erkani@uw.edu>
                             <span>Email</span>
                         </a>
 
@@ -264,7 +196,75 @@
 
                     
 
-                        <a class="sphinx-bs badge badge-primary text-white reference external" target='_blank' href=https://hydroshare.org/user/362/>
+                        <a class="sphinx-bs badge badge-primary text-white reference external" target='_blank' href=https://hydroshare.org/user/521/>
+                            <span>Profile</span>
+                        </a>
+
+                    
+                    <!-- TODO: Include personal webpages from conf.yaml -->
+
+                </div>
+            </span>
+
+            
+
+            <span class="NameHighlights">
+                <a href="javascript:;">Nathan Lyons</a>
+                
+                    , 
+                
+                <div>
+
+                    The Tulane University of New Orleans 
+
+                    <hr>
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:nlyons@tulane.edu>
+                            <span>Email</span>
+                        </a>
+
+                    
+
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" target='_blank' href=https://hydroshare.org/user/2909/>
+                            <span>Profile</span>
+                        </a>
+
+                    
+                    <!-- TODO: Include personal webpages from conf.yaml -->
+
+                </div>
+            </span>
+
+            
+
+            <span class="NameHighlights">
+                <a href="javascript:;">Katherine Barnhart</a>
+                
+                    , 
+                
+                <div>
+
+                    University of Colorado at Boulder 
+
+                    <hr>
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:katy.barnhart@gmail.com>
+                            <span>Email</span>
+                        </a>
+
+                    
+
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" target='_blank' href=https://hydroshare.org/user/1211/>
                             <span>Profile</span>
                         </a>
 

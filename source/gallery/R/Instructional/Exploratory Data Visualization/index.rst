@@ -39,41 +39,9 @@
             
 
             <span class="NameHighlights">
-                <a href="javascript:;">Salk, Kateri</a>
+                <a href="javascript:;">Garcia, Gabriela</a>
                 
                     , 
-                
-                <div>
-
-                    Duke University 
-
-                    <hr>
-
-                    
-
-                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:kateri.salk@duke.edu>
-                            <span>Email</span>
-                        </a>
-
-                    
-
-
-                    
-
-                        <a class="sphinx-bs badge badge-primary text-white reference external" target='_blank' href=https://hydroshare.org/user/4912/>
-                            <span>Profile</span>
-                        </a>
-
-                    
-                    <!-- TODO: Include personal webpages from conf.yaml -->
-
-                </div>
-            </span>
-
-            
-
-            <span class="NameHighlights">
-                <a href="javascript:;">Garcia, Gabriela</a>
                 
                 <div>
 
@@ -93,6 +61,38 @@
                     
 
                         <a class="sphinx-bs badge badge-primary text-white reference external" target='_blank' href=https://hydroshare.org/user/7399/>
+                            <span>Profile</span>
+                        </a>
+
+                    
+                    <!-- TODO: Include personal webpages from conf.yaml -->
+
+                </div>
+            </span>
+
+            
+
+            <span class="NameHighlights">
+                <a href="javascript:;">Salk, Kateri</a>
+                
+                <div>
+
+                    Duke University 
+
+                    <hr>
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" href=mailto:kateri.salk@duke.edu>
+                            <span>Email</span>
+                        </a>
+
+                    
+
+
+                    
+
+                        <a class="sphinx-bs badge badge-primary text-white reference external" target='_blank' href=https://hydroshare.org/user/4912/>
                             <span>Profile</span>
                         </a>
 
