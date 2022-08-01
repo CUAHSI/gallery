@@ -1,0 +1,14 @@
+sphinx
+m2r
+pyyaml
+lxml
+termcolor
+nbsphinx
+sphinx-copybutton
+sphinxcontrib.contentui
+sphinxcontrib.youtube
+sphinx_rtd_theme
+
+# the following libraries are to be removed and 
+# replaced with sphinx-design
+sphinx-tabs
