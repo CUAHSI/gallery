@@ -1,4 +1,4 @@
-.. _TW91bnRhaW50b3AgTWluaW5nIGluIENlbnRyYWwgQXBwYWxhY2hpYQ==:
+.. _tw91bnrhaw50b3agtwluaw5nigluienlbnryywwgqxbwywxhy2hpyq==:
 
 .. title:: Mountaintop Mining in Central Appalachia
 

@@ -25,7 +25,8 @@ CUAHSI Compute and Modeling Gallery
 
         .. grid-item-card:: Python
             :img-top: /_static/python-logo.jpeg
-            :link: gallery/Python/index.html#UHl0aG9u
+            :link: uhl0ag9u
+            :link-type: ref
             :shadow: lg
             :padding: 2
             :columns: 12 6 5 3
@@ -41,7 +42,8 @@ CUAHSI Compute and Modeling Gallery
 
         .. grid-item-card:: R
             :img-top: /_static/r-logo.jpeg
-            :link: gallery/R/index.html#Ug==
+            :link: ug==
+            :link-type: ref
             :shadow: lg
             :padding: 2
             :columns: 12 6 5 3
@@ -57,7 +59,8 @@ CUAHSI Compute and Modeling Gallery
 
         .. grid-item-card:: RShiny
             :img-top: /_static/rshiny-logo.png
-            :link: gallery/RShiny/index.html#UlNoaW55
+            :link: ulnoaw55
+            :link-type: ref
             :shadow: lg
             :padding: 2
             :columns: 12 6 5 3

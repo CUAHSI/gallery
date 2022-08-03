@@ -1,4 +1,4 @@
-.. _UlNoaW55:
+.. _ulnoaw55:
 
 .. title:: RShiny
 
@@ -30,14 +30,16 @@ Research Examples
     
 
       .. grid-item-card:: Overpasser
-          :link: Research/overpasser/index.html#T3ZlcnBhc3Nlcg== 
+          :link: t3zlcnbhc3nlcg== 
+          :link-type: ref
     
           Interactive visualization of the color of rivers over space and time
 
     
 
       .. grid-item-card:: Visualizing the color of rivers across the USA
-          :link: Research/river-color/index.html#VmlzdWFsaXppbmcgdGhlIGNvbG9yIG9mIHJpdmVycyBhY3Jvc3MgdGhlIFVTQQ== 
+          :link: vmlzdwfsaxppbmcgdghlignvbg9yig9mihjpdmvycybhy3jvc3mgdghlifvtqq== 
+          :link-type: ref
     
           Interactive visualization of the color of rivers over space and time
 
@@ -53,49 +55,56 @@ Instructional Examples
     
 
       .. grid-item-card:: MTM Explore
-          :link: Instructional/mtm-explore/index.html#TVRNIEV4cGxvcmU= 
+          :link: tvrniev4cgxvcmu= 
+          :link-type: ref
     
           This application shows how mining has changed the slope and elevation profiles of landscapes in West Virginia.
 
     
 
       .. grid-item-card:: Mountaintop Mining in Central Appalachia
-          :link: Instructional/mtm-baseflow/index.html#TW91bnRhaW50b3AgTWluaW5nIGluIENlbnRyYWwgQXBwYWxhY2hpYQ== 
+          :link: tw91bnrhaw50b3agtwluaw5nigluienlbnryywwgqxbwywxhy2hpyq== 
+          :link-type: ref
     
           This application shows how mountaintop mining in Central Appalachia has changed the hydrology and water chemistry of two catchments.
 
     
 
       .. grid-item-card:: Explore Water Balance
-          :link: Instructional/waterbalance/index.html#RXhwbG9yZSBXYXRlciBCYWxhbmNl 
+          :link: rxhwbg9yzsbxyxrlcibcywxhbmnl 
+          :link-type: ref
     
           Interactively explore the results of a water balance model.
 
     
 
       .. grid-item-card:: Public WQ Data
-          :link: Instructional/public-wq-data/index.html#UHVibGljIFdRIERhdGE= 
+          :link: uhvibgljifdrierhdge= 
+          :link-type: ref
     
           The application demonstrates how to discover and retrieve water quality data.
 
     
 
       .. grid-item-card:: HBEF Discharge
-          :link: Instructional/hbef-discharge/index.html#SEJFRiBEaXNjaGFyZ2U= 
+          :link: sejfribeaxnjagfyz2u= 
+          :link-type: ref
     
           In this app you can explore Precipitation and Streamflow in Several HBEF watersheds.
 
     
 
       .. grid-item-card:: Macrosheds
-          :link: Instructional/macrosheds/index.html#TWFjcm9zaGVkcw== 
+          :link: twfjcm9zagvkcw== 
+          :link-type: ref
     
           Compare the flow and the chemistry of hundreds of streams throughout the United States and explore their watersheds.
 
     
 
       .. grid-item-card:: Blue Watershed
-          :link: Instructional/blue-watershed/index.html#Qmx1ZSBXYXRlcnNoZWQ= 
+          :link: qmx1zsbxyxrlcnnozwq= 
+          :link-type: ref
     
           Explore changing water quality in the Snake River Watershed and Upper Blue River Watershed.
 

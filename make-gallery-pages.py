@@ -5,10 +5,8 @@ import yaml
 import shutil
 import base64
 import jinja2
-import pathlib
 import requests
 import argparse
-import urllib.parse
 from lxml import etree
 from termcolor import colored
 
@@ -18,6 +16,20 @@ source_dir = "./source"
 gallery_dir = f"./source/gallery"
 template_dir = f"./source/_templates"
 static_dir = f"./source/_static"
+
+
+def generate_page_label(text):
+    """
+    generates page labels/anchors from the provided text.
+    """
+
+    # set to a base64 encoding of the text string
+    # this label must be lowercase b/c uppercase letters are not
+    # supported in sphinx labels. I'm not sure if this is documented
+    # anywhere but it took lots of hair-pulling to figure out :|
+    return base64.b64encode(text.encode()).decode().lower()
+
+
 
 
 def render_page(template, data, outpath="./index.rst"):
@@ -111,7 +123,6 @@ def copy_static(data):
 
 def write_yaml_cache(outdir, data, filename=".cache.yaml"):
     """
-    import urllib.parse
     saves data to yaml file
     outdir: directory to save file
     filename: name of file, default .cache.yaml
@@ -131,21 +142,27 @@ def build_example_page(example_path):
     print(f"\n-- building example {os.path.basename(example_path)[0:50]}...")
     conf = os.path.join(example_path, "conf.yaml")
     with open(conf, "r") as f:
-        # load yaml data
+        
+        # load user provided yaml data
         yaml_data = yaml.load(f, Loader=yaml.FullLoader)
         hsdata = None
         hsid = yaml_data.get("hydroshare", {}).get("id")
+
         # collect hydroshare data if a resource id is provided
         # in the yaml file
         if hsid is not None:
+
             # load data from hydroshare
             print("   collecting data from HydroShare ", end="")
             hsdata = get_metadata_from_hs(hsid)
+
+            # check if there was an error collecting data from HydroShare
+            # if so, exit early
             if hsdata is None:
                 print(colored("\u2717", "red"))
                 print("   " + colored("ERROR: something bad happened, skipping", "red"))
-                # exit early
                 return None
+
             print(colored("\u2713", "green"))
 
         # combine hsdata and yaml data.
@@ -159,17 +176,8 @@ def build_example_page(example_path):
                 # set the label as the HS id if it exists
                 data["label"] = data["hydroshare"]["id"]
             except Exception:
-                # set to a base64 encoding of the title
-                data["label"] = base64.b64encode(data["title"].encode()).decode()
-       
-        # generate a link to the page. Not using refs/targets because These
-        # are not currently working in sphinx-design :( .
-        # TODO: this is a hack and needs to be fixed in the future.
-        p = pathlib.Path(example_path)
-        p = pathlib.Path(*p.parts[3:]) # drop the beginning of the path so that it's relative to the sub-gallery page
-        data['ref'] = urllib.parse.quote(str(p/"index.html"))
-        data['ref'] += f"#{data['label']}"
-
+                data["label"] = generate_page_label(data["title"])
+    
         # move text into yaml structure if it's coming directly
         # from HydroShare.
         if 'description' not in data.keys():
@@ -280,10 +288,12 @@ def build_subgallery_pages(conf):
         for sub, sub_data in subgalleries.items():
             # create a label for the subgallery page
             # set to a base64 encoding of the title
+            # this label must be lowercase b/c uppercase letters are not
+            # supported in sphinx labels. I'm not sure if this is documented
+            # anywhere but it took lots of hair-pulling to figure out :|
             print(f"   processing {sub} ", end="")
             subname = os.path.basename(sub)
-            id = base64.b64encode(subname.encode()).decode()
-            gallery_labels[sub] = id
+            gallery_labels[sub] = generate_page_label(subname)
 
             # generate page title. This is necessary for the TOC
             # get the title from the top-level conf if it exists,
@@ -295,10 +305,11 @@ def build_subgallery_pages(conf):
                     break
             if title is None:
                 title = f"{os.path.basename(sub)} Gallery"
-
-            render_page(
-                os.path.join(template_dir, "gallery.rst"),
-                {"label": id, "gallery_title": title, "categories": sub_data},
+            
+            render_page(os.path.join(template_dir, "gallery.rst"),
+                    {"label": gallery_labels[sub],
+                     "gallery_title": title,
+                     "categories": sub_data},
                 outpath=os.path.join(sub, "index.rst"),
             )
             print(colored("\u2713", "green"))
@@ -313,11 +324,7 @@ def build_homepage_panels(yaml_data, gallery_labels):
     for v in yaml_data["galleries"]:
         if v["gallery_path"] in gallery_labels:
             print(f'   processing {v["display_name"]} ', end="")
-            # set the label as a combination of relative path and
-            # anchor ID. This is to overcome the following issue
-            # in sphinx-design: https://github.com/executablebooks/sphinx-design/issues/77
-            abs_label = os.path.join(os.path.relpath(v['gallery_path'],'./source'),'index.html')
-            v["label"] = f'{abs_label}#{gallery_labels[v["gallery_path"]]}'
+            v["label"] = gallery_labels[v["gallery_path"]]
 
             # only render galleries on the homepage that have labels.
             # this will ignore any galleries defined in conf.yaml that

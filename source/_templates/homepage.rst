@@ -26,6 +26,7 @@ CUAHSI Compute and Modeling Gallery
         .. grid-item-card:: {{ gallery['display_name'] }}
             :img-top: {{ gallery['thumbnail'] }}
             :link: {{ gallery['label'] }}
+            :link-type: ref
             :shadow: lg
             :padding: 2
             :columns: 12 6 5 3

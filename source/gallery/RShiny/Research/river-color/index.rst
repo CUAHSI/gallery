@@ -1,4 +1,4 @@
-.. _VmlzdWFsaXppbmcgdGhlIGNvbG9yIG9mIHJpdmVycyBhY3Jvc3MgdGhlIFVTQQ==:
+.. _vmlzdwfsaxppbmcgdghlignvbg9yig9mihjpdmvycybhy3jvc3mgdghlifvtqq==:
 
 .. title:: Visualizing the color of rivers across the USA
 

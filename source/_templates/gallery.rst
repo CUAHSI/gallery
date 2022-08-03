@@ -30,7 +30,8 @@
     {% for example in cat_data %}
 
       .. grid-item-card:: {{ example['short_title'] }}
-          :link: {{ example['ref'] }} 
+          :link: {{ example['label'] }} 
+          :link-type: ref
     
           {{ example['short_description'] }}
 

@@ -1,4 +1,4 @@
-.. _SEJFRiBEaXNjaGFyZ2U=:
+.. _sejfribeaxnjagfyz2u=:
 
 .. title:: HBEF Discharge
 
