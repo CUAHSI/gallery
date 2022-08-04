@@ -1,5 +1,9 @@
 hydroshare: 
   id: fdc3a06e6ad842abacfa5b896df73a76
+tags:
+  - Python
+  - Landlab
+  - Ecohydrology
 notebooks:
   - name: ./notebooks/explore_routing_tutorial.ipynb
     label: Explore Routing Tutorial

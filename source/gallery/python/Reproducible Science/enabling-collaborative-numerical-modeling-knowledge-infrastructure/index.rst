@@ -26,18 +26,34 @@
         
 
 
-
-.. container:: container-lg launch-container pb-1 author-div
+.. raw:: html
     
+    <br />&nbsp;
+    <hr>
+
+
+    
+.. container:: container-lg launch-container pb-1 author-div
+
+
+    .. container:: landing-page-header
+
+        **Keywords:**
+        
+        :bdg-ref-info-line:`Python <Python>`:bdg-ref-info-line:`Landlab <Landlab>`:bdg-ref-info-line:`Ecohydrology <Ecohydrology>`
+
+
+    .. raw:: html
+    
+        <br />
+
+    .. container:: landing-page-header
+
+        **Authors:**  
+
     .. raw:: html
 
-        <br />&nbsp;
-        <hr>
-        <br />&nbsp;
-        <h2> Authors </h2>
-
             
-
             <span class="NameHighlights">
                 <a href="javascript:;">Sai Siddhartha Nudurupati</a>
                 
@@ -71,7 +87,6 @@
             </span>
 
             
-
             <span class="NameHighlights">
                 <a href="javascript:;">Christina Bandaragoda</a>
                 
@@ -105,7 +120,6 @@
             </span>
 
             
-
             <span class="NameHighlights">
                 <a href="javascript:;">Ronda Strauch</a>
                 
@@ -139,7 +153,6 @@
             </span>
 
             
-
             <span class="NameHighlights">
                 <a href="javascript:;">Jimmy Phuong</a>
                 
@@ -173,7 +186,6 @@
             </span>
 
             
-
             <span class="NameHighlights">
                 <a href="javascript:;">Erkan Istanbulluoglu</a>
                 
@@ -207,7 +219,6 @@
             </span>
 
             
-
             <span class="NameHighlights">
                 <a href="javascript:;">Nathan Lyons</a>
                 
@@ -241,7 +252,6 @@
             </span>
 
             
-
             <span class="NameHighlights">
                 <a href="javascript:;">Katherine Barnhart</a>
                 
@@ -275,7 +285,6 @@
             </span>
 
             
-
             <span class="NameHighlights">
                 <a href="javascript:;">Anthony Michael Castronova</a>
                 

@@ -26,18 +26,34 @@
         
 
 
-
-.. container:: container-lg launch-container pb-1 author-div
+.. raw:: html
     
+    <br />&nbsp;
+    <hr>
+
+
+    
+.. container:: container-lg launch-container pb-1 author-div
+
+
+    .. container:: landing-page-header
+
+        **Keywords:**
+        
+        
+
+
+    .. raw:: html
+    
+        <br />
+
+    .. container:: landing-page-header
+
+        **Authors:**  
+
     .. raw:: html
 
-        <br />&nbsp;
-        <hr>
-        <br />&nbsp;
-        <h2> Authors </h2>
-
             
-
             <span class="NameHighlights">
                 <a href="javascript:;">Garcia, Gabriela</a>
                 
@@ -71,7 +87,6 @@
             </span>
 
             
-
             <span class="NameHighlights">
                 <a href="javascript:;">Salk, Kateri</a>
                 
@@ -105,7 +120,6 @@
             </span>
 
             
-
             <span class="NameHighlights">
                 <a href="javascript:;">Cathy Chamberlin</a>
                 

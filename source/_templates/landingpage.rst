@@ -30,18 +30,38 @@
         {% endfor %}
 
 
-
-.. container:: container-lg launch-container pb-1 author-div
+.. raw:: html
     
+    <br />&nbsp;
+    <hr>
+
+
+    
+.. container:: container-lg launch-container pb-1 author-div
+
+
+    .. container:: landing-page-header
+
+        **Keywords:**
+        
+        {% for tag in tags -%}    
+
+           :bdg-ref-info-line:`{{ tag }} <{{ tag }}>`
+
+        {%- endfor %}
+
+
+    .. raw:: html
+    
+        <br />
+
+    .. container:: landing-page-header
+
+        **Authors:**  
+
     .. raw:: html
 
-        <br />&nbsp;
-        <hr>
-        <br />&nbsp;
-        <h2> Authors </h2>
-
         {% for i in range(0, authors|length) %}    
-
             <span class="NameHighlights">
                 <a href="javascript:;">{{ authors[i]['name'] }}</a>
                 {% if i < authors|length - 1 %}

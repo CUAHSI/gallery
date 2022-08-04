@@ -10,33 +10,20 @@
     vertical-align: baseline;
     white-space: nowrap;
 }
-.launch {
-    float: left;
-    margin: 10px;
-    padding: 10px !important;
-    background-color: #ff4500ad;
-    color: white !important;
-}
 
 .launch-container {
     margin-left: 0px !important;
 }
 
-.launch-badge {
+.launch-container .badge {
     float: left;
-    margin: 10px;
+    margin: 10px 10px 10px 0px;
     padding: 10px !important;
+    background-color: #ff4500ad;
+    color: white !important;
 }
 
-.launch-container {
-}
 
-/*.wy-nav-content {
-    max-width: none;
-    height: auto !important;
-    width: 100%;
-}
-*/
 
 .wy-nav-content-wrap {
     background: #fcfcfc;
@@ -142,3 +129,17 @@ div.example-panels > div > div > div > div > blockquote {
     max-width:300px !important;
 }
 
+/* Landing Page Header Styling*/
+
+.landing-page-header {
+    display:inline; /*suppresses newline after label (e.g. Authors) */
+}
+
+.landing-page-header p {
+    display:inline; /*suppresses newline after label (e.g. Authors) */
+    display:inline;
+}
+
+.landing-page-header .sd-badge {
+    margin: 0px 5px 0px 0px;
+}

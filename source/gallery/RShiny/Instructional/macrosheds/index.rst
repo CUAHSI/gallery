@@ -26,18 +26,34 @@
         
 
 
-
-.. container:: container-lg launch-container pb-1 author-div
+.. raw:: html
     
+    <br />&nbsp;
+    <hr>
+
+
+    
+.. container:: container-lg launch-container pb-1 author-div
+
+
+    .. container:: landing-page-header
+
+        **Keywords:**
+        
+        
+
+
+    .. raw:: html
+    
+        <br />
+
+    .. container:: landing-page-header
+
+        **Authors:**  
+
     .. raw:: html
 
-        <br />&nbsp;
-        <hr>
-        <br />&nbsp;
-        <h2> Authors </h2>
-
             
-
             <span class="NameHighlights">
                 <a href="javascript:;">Matt Ross</a>
                 
@@ -59,7 +75,6 @@
             </span>
 
             
-
             <span class="NameHighlights">
                 <a href="javascript:;">Emily Bernhardt</a>
                 
@@ -81,7 +96,6 @@
             </span>
 
             
-
             <span class="NameHighlights">
                 <a href="javascript:;">Jill Baron</a>
                 
@@ -103,7 +117,6 @@
             </span>
 
             
-
             <span class="NameHighlights">
                 <a href="javascript:;">Elizabeth W. Boyer</a>
                 
@@ -125,7 +138,6 @@
             </span>
 
             
-
             <span class="NameHighlights">
                 <a href="javascript:;">Emma J. Rosi</a>
                 
@@ -147,7 +159,6 @@
             </span>
 
             
-
             <span class="NameHighlights">
                 <a href="javascript:;">Nandita Basu</a>
                 
@@ -169,7 +180,6 @@
             </span>
 
             
-
             <span class="NameHighlights">
                 <a href="javascript:;">Kaelin Cawley</a>
                 
@@ -191,7 +201,6 @@
             </span>
 
             
-
             <span class="NameHighlights">
                 <a href="javascript:;">Megan Joins</a>
                 
