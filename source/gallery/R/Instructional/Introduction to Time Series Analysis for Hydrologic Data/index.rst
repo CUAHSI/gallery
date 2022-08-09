@@ -40,7 +40,7 @@
 
         **Keywords:**
         
-        
+        :bdg-ref-info-line:`R <R>`:bdg-ref-info-line:`Instructional <Instructional>`:bdg-ref-info-line:`Time Series Analysis <Time Series Analysis>`
 
 
     .. raw:: html

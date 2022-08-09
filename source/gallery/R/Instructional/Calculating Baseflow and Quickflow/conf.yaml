@@ -1,5 +1,11 @@
 hydroshare:
   id: f1a6d0346ba94337a247ac7c62f16a2a
+tags:
+  - R
+  - Ecohydrology
+  - Streamflow
+  - Baseflow
+  - Instructional
 code_path: ./notebooks
 short_description: This exercise will demonstrate how to create a dygraph using high frequency flow data to determine quickflow and baseflow after a storm event.
 thumbnail: ./thumbnail.png

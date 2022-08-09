@@ -40,7 +40,7 @@
 
         **Keywords:**
         
-        
+        :bdg-ref-info-line:`R <R>`:bdg-ref-info-line:`Instructional <Instructional>`:bdg-ref-info-line:`Hydrology Statistics <Hydrology Statistics>`:bdg-ref-info-line:`Trend Detection <Trend Detection>`
 
 
     .. raw:: html

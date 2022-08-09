@@ -1,5 +1,10 @@
 hydroshare:
   id: 42052357655f4ad39f8ec7d0bef351c7
+tags:
+  - R
+  - Ecohydrology
+  - Data Analysis
+  - Instructional
 code_path: ./notebooks
 thumbnail: ./thumbnail.png
 short_title: Exploratory Data Analysis

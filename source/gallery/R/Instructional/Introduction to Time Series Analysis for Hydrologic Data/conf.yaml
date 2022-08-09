@@ -1,5 +1,9 @@
 hydroshare:
   id: ee2a4c2151f24115a12e34d4d22d96fe
+tags:
+  - R
+  - Instructional
+  - Time Series Analysis
 code_path: ./notebooks
 thumbnail: ./thumbnail.png
 short_title: Introduction to Time Series Analysis

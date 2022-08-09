@@ -1,5 +1,9 @@
 hydroshare:
   id: 179a844b41fe4a06807bef83667feccf
+tags:
+  - R
+  - Lake
+  - Instructional
 code_path: ./notebooks
 thumbnail: ./thumbnail.png
 short_title: Introduction to LAGOSNE Database

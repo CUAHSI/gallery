@@ -40,7 +40,7 @@
 
         **Keywords:**
         
-        
+        :bdg-ref-info-line:`R <R>`:bdg-ref-info-line:`Ecohydrology <Ecohydrology>`:bdg-ref-info-line:`Streamflow <Streamflow>`:bdg-ref-info-line:`Baseflow <Baseflow>`:bdg-ref-info-line:`Instructional <Instructional>`
 
 
     .. raw:: html

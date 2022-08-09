@@ -1,5 +1,10 @@
 hydroshare:
   id: 1d8d52774c51462aac817d7dec209f14
+tags:
+  - R
+  - Instructional
+  - Hydrology Statistics
+  - Trend Detection
 code_path: ./notebooks
 thumbnail: ./thumbnail.png
 short_description: This exercise will demonstrate linear interpolation, Season Mann Kendall tests, and Autoregressive and Moving Average Models. 

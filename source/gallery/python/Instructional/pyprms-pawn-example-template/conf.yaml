@@ -1,5 +1,9 @@
 hydroshare:
   id: bae3f93a5dc54dd886729265eecc784f
+tags:
+  - Python
+  - PRMS
+  - Sensitivity Analysis
 title: Template for PAWN Global Sensitivity Analysis of PRMS
 code_path: ./notebooks
 short_description: This resource applies a GSA method for parameters of the well-known Preceipitation-Runoff Modeling System (PRMS) hydrologic model.

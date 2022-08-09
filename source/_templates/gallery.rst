@@ -15,15 +15,10 @@
 {{ gallery_title }}
 ========================
 
-
-
 ..
   This is where we construct the homepage thumbnail panels.
   For more details, see https://sphinx-panels.readthedocs.io/en/latest/
 {% for category, cat_data in categories.items() %}
-
-{{ category }} Examples
-******************************
 
 .. grid:: 1
 
@@ -32,27 +27,16 @@
       .. grid-item-card:: {{ example['short_title'] }}
           :link: {{ example['label'] }} 
           :link-type: ref
+        
+          {% if 'tags' in example %}
+           {% for tag in example['tags'] -%}
+            :bdg-ref-info-line:`{{ tag }} <{{ tag }}>`
+           {%- endfor %}
+          {% endif %}
+
     
           {{ example['short_description'] }}
 
     {% endfor %}
 
 {% endfor %}
-
-
-
-
-
-
-..
-    This is an example of a subgallery panel
-    ---
-    :img-top: _static/r-logo.jpeg
-
-
-    .. link-button:: examples/r
-        :type: ref
-        :text: Spatial Plotting with RGdal
-        :classes: btn-block stretched-link
-
-

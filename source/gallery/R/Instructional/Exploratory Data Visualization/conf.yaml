@@ -1,5 +1,11 @@
 hydroshare:
   id: e22442bc4e4940609003b43747b366e0
+tags:
+  - R
+  - Limnology
+  - Ecohydrology
+  - Data Visualization
+  - Instructional
 code_path: ./notebooks
 thumbnail: ./thumbnail.png
 short_title: Exploratory Data Visualization 

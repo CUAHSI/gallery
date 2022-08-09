@@ -1,5 +1,11 @@
 hydroshare:
   id: 20dc4af8451e44b3950b182a8f506296
+tags:
+  - R
+  - Instructional
+  - Streamflow
+  - Water Quality
+  - Web Services
 code_path: ./notebooks
 thumbnail: ./thumbnail.png
 short_title: Querying Metadata and Discharge Data from NWIS and WQP

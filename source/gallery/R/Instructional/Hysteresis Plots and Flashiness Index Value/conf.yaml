@@ -1,5 +1,9 @@
 hydroshare:
   id: 4395d37cb2eb491f88d13bead2982855
+tags:
+  - R
+  - Data Analysis
+  - Instructional
 code_path: ./notebooks
 thumbnail: ./thumbnail.png
 short_title: Flashiness Index and Hysteresis Plots

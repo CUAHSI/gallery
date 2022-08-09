@@ -1,5 +1,10 @@
 hydroshare:
   id: 9985b3cb38c94cee872b28f6dcdef739
+tags:
+  - ULMO
+  - WaterHackWeek
+  - Python
+  - Time Series Analysis
 title: Data Access and Time-series Statistics
 notebooks:
   - name: ./notebooks/Intro-Presentation-DataAccessTimeSeries.ipynb

@@ -1,6 +1,10 @@
 hydroshare:
   id: 4efa9ed3578c437da6b29eacf9f4c0a5
-
+tags:
+  - R
+  - Instructional
+  - Streamflow
+  - Hydrology Statistics
 code_path: ./notebooks
 thumbnail: ./thumbnail.png
 short_title: Recurrence Intervals and Exceedance Probabilities

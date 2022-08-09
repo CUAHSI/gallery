@@ -40,7 +40,7 @@
 
         **Keywords:**
         
-        
+        :bdg-ref-info-line:`R <R>`:bdg-ref-info-line:`Limnology <Limnology>`:bdg-ref-info-line:`Ecohydrology <Ecohydrology>`:bdg-ref-info-line:`Data Visualization <Data Visualization>`:bdg-ref-info-line:`Instructional <Instructional>`
 
 
     .. raw:: html

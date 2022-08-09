@@ -1,5 +1,9 @@
 hydroshare:
   id: 106b934d0e4f40c98ba10b9fea773db5
+tags:
+  - Water Quality
+  - Data Analysis
+  - Instructional
 code_path: ./notebooks
 thumbnail: ./thumbnail.png
 short_title: Impacts of Mining on Specific Conductance and pH
