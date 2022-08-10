@@ -15,18 +15,18 @@
 RShiny
 ========================
 
-..
-  This is where we construct the homepage thumbnail panels.
-  For more details, see https://sphinx-panels.readthedocs.io/en/latest/
-
 
 .. grid:: 1
 
     
 
+    
+
       .. grid-item-card:: Overpasser
+          :img-top: /_static/thumbnail-t3zlcnbhc3nlcg==
           :link: t3zlcnbhc3nlcg== 
           :link-type: ref
+          :class-card: gallery-example
         
           
 
@@ -36,8 +36,10 @@ RShiny
     
 
       .. grid-item-card:: Visualizing the color of rivers across the USA
+          :img-top: /_static/thumbnail-vmlzdwfsaxppbmcgdghlignvbg9yig9mihjpdmvycybhy3jvc3mgdghlifvtqq==
           :link: vmlzdwfsaxppbmcgdghlignvbg9yig9mihjpdmvycybhy3jvc3mgdghlifvtqq== 
           :link-type: ref
+          :class-card: gallery-example
         
           
 
@@ -46,15 +48,15 @@ RShiny
 
     
 
-
-
-.. grid:: 1
+    
 
     
 
       .. grid-item-card:: MTM Explore
+          :img-top: /_static/thumbnail-tvrniev4cgxvcmu=
           :link: tvrniev4cgxvcmu= 
           :link-type: ref
+          :class-card: gallery-example
         
           
 
@@ -64,8 +66,10 @@ RShiny
     
 
       .. grid-item-card:: Mountaintop Mining in Central Appalachia
+          :img-top: /_static/thumbnail-tw91bnrhaw50b3agtwluaw5nigluienlbnryywwgqxbwywxhy2hpyq==
           :link: tw91bnrhaw50b3agtwluaw5nigluienlbnryywwgqxbwywxhy2hpyq== 
           :link-type: ref
+          :class-card: gallery-example
         
           
 
@@ -75,8 +79,10 @@ RShiny
     
 
       .. grid-item-card:: Explore Water Balance
+          :img-top: /_static/thumbnail-rxhwbg9yzsbxyxrlcibcywxhbmnl
           :link: rxhwbg9yzsbxyxrlcibcywxhbmnl 
           :link-type: ref
+          :class-card: gallery-example
         
           
 
@@ -86,8 +92,10 @@ RShiny
     
 
       .. grid-item-card:: Public WQ Data
+          :img-top: /_static/thumbnail-uhvibgljifdrierhdge=
           :link: uhvibgljifdrierhdge= 
           :link-type: ref
+          :class-card: gallery-example
         
           
 
@@ -97,8 +105,10 @@ RShiny
     
 
       .. grid-item-card:: HBEF Discharge
+          :img-top: /_static/thumbnail-sejfribeaxnjagfyz2u=
           :link: sejfribeaxnjagfyz2u= 
           :link-type: ref
+          :class-card: gallery-example
         
           
 
@@ -108,8 +118,10 @@ RShiny
     
 
       .. grid-item-card:: Macrosheds
+          :img-top: /_static/thumbnail-twfjcm9zagvkcw==
           :link: twfjcm9zagvkcw== 
           :link-type: ref
+          :class-card: gallery-example
         
           
 
@@ -119,8 +131,10 @@ RShiny
     
 
       .. grid-item-card:: Blue Watershed
+          :img-top: /_static/thumbnail-qmx1zsbxyxrlcnnozwq=
           :link: qmx1zsbxyxrlcnnozwq= 
           :link-type: ref
+          :class-card: gallery-example
         
           
 
@@ -129,3 +143,4 @@ RShiny
 
     
 
+    

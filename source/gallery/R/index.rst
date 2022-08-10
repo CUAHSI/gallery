@@ -15,18 +15,18 @@
 R
 ========================
 
-..
-  This is where we construct the homepage thumbnail panels.
-  For more details, see https://sphinx-panels.readthedocs.io/en/latest/
-
 
 .. grid:: 1
 
     
 
+    
+
       .. grid-item-card:: Recurrence Intervals and Exceedance Probabilities
+          :img-top: /_static/thumbnail-4efa9ed3578c437da6b29eacf9f4c0a5
           :link: 4efa9ed3578c437da6b29eacf9f4c0a5 
           :link-type: ref
+          :class-card: gallery-example
         
           
            :bdg-ref-info-line:`R <R>`:bdg-ref-info-line:`Instructional <Instructional>`:bdg-ref-info-line:`Streamflow <Streamflow>`:bdg-ref-info-line:`Hydrology Statistics <Hydrology Statistics>`
@@ -38,8 +38,10 @@ R
     
 
       .. grid-item-card:: Introduction to Time Series Analysis
+          :img-top: /_static/thumbnail-ee2a4c2151f24115a12e34d4d22d96fe
           :link: ee2a4c2151f24115a12e34d4d22d96fe 
           :link-type: ref
+          :class-card: gallery-example
         
           
            :bdg-ref-info-line:`R <R>`:bdg-ref-info-line:`Instructional <Instructional>`:bdg-ref-info-line:`Time Series Analysis <Time Series Analysis>`
@@ -51,8 +53,10 @@ R
     
 
       .. grid-item-card:: Querying Metadata and Discharge Data from NWIS and WQP
+          :img-top: /_static/thumbnail-20dc4af8451e44b3950b182a8f506296
           :link: 20dc4af8451e44b3950b182a8f506296 
           :link-type: ref
+          :class-card: gallery-example
         
           
            :bdg-ref-info-line:`R <R>`:bdg-ref-info-line:`Instructional <Instructional>`:bdg-ref-info-line:`Streamflow <Streamflow>`:bdg-ref-info-line:`Water Quality <Water Quality>`:bdg-ref-info-line:`Web Services <Web Services>`
@@ -64,8 +68,10 @@ R
     
 
       .. grid-item-card:: High Frequency Flow Data: Introduction to Dygraphs
+          :img-top: /_static/thumbnail-f1a6d0346ba94337a247ac7c62f16a2a
           :link: f1a6d0346ba94337a247ac7c62f16a2a 
           :link-type: ref
+          :class-card: gallery-example
         
           
            :bdg-ref-info-line:`R <R>`:bdg-ref-info-line:`Ecohydrology <Ecohydrology>`:bdg-ref-info-line:`Streamflow <Streamflow>`:bdg-ref-info-line:`Baseflow <Baseflow>`:bdg-ref-info-line:`Instructional <Instructional>`
@@ -77,8 +83,10 @@ R
     
 
       .. grid-item-card:: Impacts of Mining on Specific Conductance and pH
+          :img-top: /_static/thumbnail-106b934d0e4f40c98ba10b9fea773db5
           :link: 106b934d0e4f40c98ba10b9fea773db5 
           :link-type: ref
+          :class-card: gallery-example
         
           
            :bdg-ref-info-line:`Water Quality <Water Quality>`:bdg-ref-info-line:`Data Analysis <Data Analysis>`:bdg-ref-info-line:`Instructional <Instructional>`
@@ -90,8 +98,10 @@ R
     
 
       .. grid-item-card:: Exploratory Data Analysis
+          :img-top: /_static/missing-thumbnail.png
           :link: 42052357655f4ad39f8ec7d0bef351c7 
           :link-type: ref
+          :class-card: gallery-example
         
           
            :bdg-ref-info-line:`R <R>`:bdg-ref-info-line:`Ecohydrology <Ecohydrology>`:bdg-ref-info-line:`Data Analysis <Data Analysis>`:bdg-ref-info-line:`Instructional <Instructional>`
@@ -103,8 +113,10 @@ R
     
 
       .. grid-item-card:: Exploratory Data Visualization
+          :img-top: /_static/thumbnail-e22442bc4e4940609003b43747b366e0
           :link: e22442bc4e4940609003b43747b366e0 
           :link-type: ref
+          :class-card: gallery-example
         
           
            :bdg-ref-info-line:`R <R>`:bdg-ref-info-line:`Limnology <Limnology>`:bdg-ref-info-line:`Ecohydrology <Ecohydrology>`:bdg-ref-info-line:`Data Visualization <Data Visualization>`:bdg-ref-info-line:`Instructional <Instructional>`
@@ -116,8 +128,10 @@ R
     
 
       .. grid-item-card:: Introduction to LAGOSNE Database
+          :img-top: /_static/thumbnail-179a844b41fe4a06807bef83667feccf
           :link: 179a844b41fe4a06807bef83667feccf 
           :link-type: ref
+          :class-card: gallery-example
         
           
            :bdg-ref-info-line:`R <R>`:bdg-ref-info-line:`Lake <Lake>`:bdg-ref-info-line:`Instructional <Instructional>`
@@ -129,8 +143,10 @@ R
     
 
       .. grid-item-card:: Trend Detection and Forecasting
+          :img-top: /_static/thumbnail-1d8d52774c51462aac817d7dec209f14
           :link: 1d8d52774c51462aac817d7dec209f14 
           :link-type: ref
+          :class-card: gallery-example
         
           
            :bdg-ref-info-line:`R <R>`:bdg-ref-info-line:`Instructional <Instructional>`:bdg-ref-info-line:`Hydrology Statistics <Hydrology Statistics>`:bdg-ref-info-line:`Trend Detection <Trend Detection>`
@@ -142,8 +158,10 @@ R
     
 
       .. grid-item-card:: Flashiness Index and Hysteresis Plots
+          :img-top: /_static/thumbnail-4395d37cb2eb491f88d13bead2982855
           :link: 4395d37cb2eb491f88d13bead2982855 
           :link-type: ref
+          :class-card: gallery-example
         
           
            :bdg-ref-info-line:`R <R>`:bdg-ref-info-line:`Data Analysis <Data Analysis>`:bdg-ref-info-line:`Instructional <Instructional>`
@@ -154,3 +172,4 @@ R
 
     
 
+    

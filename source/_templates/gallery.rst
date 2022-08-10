@@ -15,18 +15,18 @@
 {{ gallery_title }}
 ========================
 
-..
-  This is where we construct the homepage thumbnail panels.
-  For more details, see https://sphinx-panels.readthedocs.io/en/latest/
-{% for category, cat_data in categories.items() %}
 
 .. grid:: 1
+
+    {% for category, cat_data in categories.items() %}
 
     {% for example in cat_data %}
 
       .. grid-item-card:: {{ example['short_title'] }}
+          :img-top: /_static/{{ example['thumbnail'] }}
           :link: {{ example['label'] }} 
           :link-type: ref
+          :class-card: gallery-example
         
           {% if 'tags' in example %}
            {% for tag in example['tags'] -%}
@@ -39,4 +39,4 @@
 
     {% endfor %}
 
-{% endfor %}
+    {% endfor %}

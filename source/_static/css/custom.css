@@ -117,12 +117,34 @@ div.example-panels > div > div > div > div > blockquote {
     height: 50% !important;
     object-fit: scale-down !important;
 }
+
+/* class used for the category pages on the homepage */
 .gallery-card {
     max-width:500px !important;
 }
+
+/* class used for examples on the subgallery pages */
+.gallery-example {
+    margin: 5px 0px; /*adjust vertical spacing of elements*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.gallery-example img {
+    height: 80%;
+    max-height: 150px;
+    max-width: 150px;
+}
+
+.gallery-example div {
+    padding: 0px 5px; /*horizontal spacing between image and example description*/
+}
+
 .example-content {
     float: left;
     padding-left: 0px !important;
+    max-width: 1000px;
 }
 
 .home-card {
